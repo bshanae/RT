@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/rt.dir/main.c.o"
+  "CMakeFiles/rt.dir/vector3/vector3.c.o"
+  "CMakeFiles/rt.dir/camera/camera.c.o"
+  "CMakeFiles/rt.dir/rt/rt.c.o"
+  "CMakeFiles/rt.dir/ray/ray.c.o"
+  "CMakeFiles/rt.dir/scene/scene.c.o"
+  "CMakeFiles/rt.dir/shape/shape_sphere.c.o"
+  "CMakeFiles/rt.dir/scene/scene_shapes.c.o"
+  "CMakeFiles/rt.dir/scene/scene_lights.c.o"
+  "CMakeFiles/rt.dir/rt/rt_mlx.c.o"
+  "CMakeFiles/rt.dir/light/light.c.o"
+  "CMakeFiles/rt.dir/color/color.c.o"
+  "CMakeFiles/rt.dir/material/material.c.o"
+  "CMakeFiles/rt.dir/intersection/intersection.c.o"
+  "CMakeFiles/rt.dir/shape/shape_plane.c.o"
+  "CMakeFiles/rt.dir/shape/shape_cylinder.c.o"
+  "CMakeFiles/rt.dir/shape/shape.c.o"
+  "CMakeFiles/rt.dir/shape/shape_aabb.c.o"
+  "CMakeFiles/rt.dir/console/console.c.o"
+  "CMakeFiles/rt.dir/console/console_translate.c.o"
+  "CMakeFiles/rt.dir/console/console_reflect.c.o"
+  "CMakeFiles/rt.dir/shape/shape_cone.c.o"
+  "CMakeFiles/rt.dir/shape/shape_disk.c.o"
+  "CMakeFiles/rt.dir/console/console_diffuse.c.o"
+  "CMakeFiles/rt.dir/console/console_specular.c.o"
+  "CMakeFiles/rt.dir/console/console_shadows.c.o"
+  "CMakeFiles/rt.dir/console/console_refract.c.o"
+  "CMakeFiles/rt.dir/console/console_reset.c.o"
+  "CMakeFiles/rt.dir/console/cosnole_tshadows.c.o"
+  "CMakeFiles/rt.dir/rt/rt_consistent.c.o"
+  "CMakeFiles/rt.dir/rt/rt_parallel.c.o"
+  "CMakeFiles/rt.dir/console/console_parallel.c.o"
+  "CMakeFiles/rt.dir/open_cl/open_cl.c.o"
+  "rt.pdb"
+  "rt"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/rt.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
