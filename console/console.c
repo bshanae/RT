@@ -44,7 +44,7 @@ t_console			*console_new(void *mlx_ptr, void *win_ptr, void *img_ptr, int *img_d
 
 void				console_delete(t_console **me)
 {
-	int 			i;
+	u_long 			i;
 	t_console_string	*string;
 
 	i = 0;

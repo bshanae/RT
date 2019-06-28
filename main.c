@@ -26,7 +26,7 @@ int 				main()
 	red_material = material_new(*red, 1., .3, .0, .0);
 	blue_material = material_new(*blue, 1., 1.1, 0.5, 0.1);
 	mirror = material_new(*blue, .1, 4.1, .8, 0.);
-	glass = material_new(*white, .1, .9, 0., 0.95);
+	glass = material_new(*white, .1, .9, 0., 0.9);
 
 	rt = rt_new();
 
@@ -43,13 +43,13 @@ int 				main()
 
 	for (int i = 0; i < 2; i++)
 	{
-		FLOAT_MACRO p = (FLOAT_MACRO)i;
-		scene_shape_push(rt->scene, shape_sphere((t_vector3) {p, 0., 3.}, .3, mirror));
+		float p = (float)i;
+		scene_shape_push(rt->scene, shape_sphere((t_vector3) {p, 0., 3.}, .3, glass));
 	}
 
 	for (int i = 0; i < 2; i++)
 	{
-		FLOAT_MACRO p = (FLOAT_MACRO)i;
+		float p = (float)i;
 		scene_shape_push(rt->scene, shape_sphere((t_vector3) {p, 0., 4.}, .1, red_material));
 	}
 

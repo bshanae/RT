@@ -4,7 +4,7 @@
 
 void 					rt_parallel(t_rt *me)
 {
-	int 				i;
+	u_long				i;
 	t_shape				*shape_iter;
 	t_light				*light_iter;
 
@@ -33,7 +33,7 @@ void 					rt_parallel(t_rt *me)
 	{
 		shape_iter = scene_shape_at(me->scene, i);
 		ft_memcpy(me->open_cl->host.shape_data + i * SHAPE_SIZE_MAX, shape_iter->data, shape_iter->data_size);
-		t_sphere_data *d = me->open_cl->host.shape_data + i * SHAPE_SIZE_MAX;
+		//t_sphere_data *d = me->open_cl->host.shape_data + i * SHAPE_SIZE_MAX;
 		i++;
 	}
 

@@ -1,10 +1,10 @@
 #include "shape_list.h"
 
 
-static FLOAT_MACRO 		cylinder_caps_intersect(t_shape *shape, t_intersection *intersection)
+static float 		cylinder_caps_intersect(t_shape *shape, t_intersection *intersection)
 {
 	t_cylinder_data	*data;
-	FLOAT_MACRO 			t[2];
+	float 			t[2];
 
 	data = (t_cylinder_data *)shape->data;
 	if (!vector3_dot(&intersection->ray.direction, &data->axis))
@@ -30,11 +30,11 @@ int 			cylinder_intersect
 	(t_shape *shape, t_intersection *intersection)
 {
 	t_cylinder_data	*data;
-	FLOAT_MACRO 			k[3];
-	FLOAT_MACRO 			discriminant;
-	FLOAT_MACRO 			t[2];
+	float 			k[3];
+	float 			discriminant;
+	float 			t[2];
 	t_vector3		temp[2];
-	FLOAT_MACRO 			angle[2];
+	float 			angle[2];
 
 	data = (t_cylinder_data *)shape->data;
 	temp[0] = vector3_sub(&intersection->ray.origin, &data->bottom);
@@ -43,7 +43,7 @@ int 			cylinder_intersect
 	k[2] =  vector3_dot(temp, temp) - pow(vector3_dot(temp, &data->axis), 2.) - pow(data->radius, 2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - SQRT_MACRO(discriminant)) / (2 * k[0]);
+	t[0] = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
 	if (t[0] <= RAY_T_MIN || t[0] >= intersection->ray.t)
 		return (0);
 	temp[0] = vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0]));	// p
@@ -76,7 +76,7 @@ static void			cylinder_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_cylinder
-	(t_vector3 top, t_vector3 bottom, FLOAT_MACRO radius, const t_material *material)
+	(t_vector3 top, t_vector3 bottom, float radius, const t_material *material)
 {
 	t_shape			*shape;
 	t_cylinder_data	*data;

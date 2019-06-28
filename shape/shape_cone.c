@@ -1,9 +1,9 @@
 #include "shape_list.h"
 
-static FLOAT_MACRO       cone_cap_intersect(t_shape *shape, t_intersection *intersection)
+static float       cone_cap_intersect(t_shape *shape, t_intersection *intersection)
 {
 	t_cone_data	*data;
-	FLOAT_MACRO 			t;
+	float 			t;
 
 	data = (t_cone_data *)shape->data;
 	if (!vector3_dot(&intersection->ray.direction, &data->axis))
@@ -23,11 +23,11 @@ int 				cone_intersect
 		(t_shape *shape, t_intersection *intersection)
 {
 	t_cone_data	    *data;
-	FLOAT_MACRO 			k[3];
-	FLOAT_MACRO 			discriminant;
-	FLOAT_MACRO 			t[2];
+	float 			k[3];
+	float 			discriminant;
+	float 			t[2];
 	t_vector3		temp[3];
-	FLOAT_MACRO 			angle[2];
+	float 			angle[2];
 
 	data = (t_cone_data *)shape->data;
 	temp[0] = vector3_sub(&intersection->ray.origin, &data->top);
@@ -36,7 +36,7 @@ int 				cone_intersect
 	k[2] = vector3_dot(temp, temp) - (1 + data->tangens * data->tangens) * pow(vector3_dot(temp, &data->axis), 2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - SQRT_MACRO(discriminant)) / (2 * k[0]);
+	t[0] = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
 	if (t[0] <= RAY_T_MIN || t[0] >= intersection->ray.t)
 		return (0);
 	temp[1] = vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0])); // p
@@ -72,7 +72,7 @@ static void			cone_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_cone
-		(t_vector3 top, t_vector3 bottom, FLOAT_MACRO tangens, const t_material *material)
+		(t_vector3 top, t_vector3 bottom, float tangens, const t_material *material)
 {
 	t_shape			*shape;
 	t_cone_data	    *data;

@@ -15,14 +15,14 @@
 typedef struct 			s_sphere_data
 {
 	t_vector3			center;
-	FLOAT_MACRO 				radius;
+	float 				radius;
 }						t_sphere_data;
 
 int						sphere_intersect
 	(t_shape *shape, t_intersection *intersection);
 
 t_shape					*shape_sphere
-	(t_vector3 center, FLOAT_MACRO radius, const t_material *material);
+	(t_vector3 center, float radius, const t_material *material);
 
 /*
 ********************************************************************************
@@ -52,7 +52,7 @@ typedef struct 			s_cylinder_data
 {
 	t_vector3			top;
 	t_vector3			bottom;
-	FLOAT_MACRO 				radius;
+	float 				radius;
 	t_vector3			axis;
 }						t_cylinder_data;
 
@@ -60,7 +60,7 @@ int 					cylinder_intersect
 	(t_shape *shape, t_intersection *intersection);
 
 t_shape					*shape_cylinder
-	(t_vector3 top, t_vector3 bottom, FLOAT_MACRO radius, const t_material *material);
+	(t_vector3 top, t_vector3 bottom, float radius, const t_material *material);
 
 /*
 ********************************************************************************
@@ -90,8 +90,8 @@ typedef struct 			s_cone_data
 {
 	t_vector3			top;
 	t_vector3			bottom;
-	FLOAT_MACRO 				radius;
-	FLOAT_MACRO          	tangens;
+	float 				radius;
+	float          	tangens;
 	t_vector3			axis;
 }						t_cone_data;
 
@@ -99,7 +99,7 @@ int 					cone_intersect
 		(t_shape *shape, t_intersection *intersection);
 
 t_shape					*shape_cone
-	 (t_vector3 top, t_vector3 bottom, FLOAT_MACRO tangens, const t_material *material);
+	 (t_vector3 top, t_vector3 bottom, float tangens, const t_material *material);
 
 /*
 ********************************************************************************
@@ -111,13 +111,13 @@ typedef struct 			s_disk_data
 {
 	t_vector3			position;
 	t_vector3			normal;
-	FLOAT_MACRO 				radius;
+	float 				radius;
 }						t_disk_data;
 
 int 					disk_intersect(t_shape *shape, t_intersection *intersection);
 
 t_shape					*shape_disk
-	(t_vector3 position, t_vector3 normal, FLOAT_MACRO radius, const t_material *material);
+	(t_vector3 position, t_vector3 normal, float radius, const t_material *material);
 
 /*
 ********************************************************************************

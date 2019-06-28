@@ -24,16 +24,16 @@ void				intersection_refract(t_intersection *target, const t_intersection *sourc
 	t_vector3		refracted;
 	t_vector3		a, b;
 	t_vector3		m;
-	FLOAT_MACRO		sin_alpha;
-	FLOAT_MACRO		sin_beta;
-	FLOAT_MACRO		cos_beta;
+	float		sin_alpha;
+	float		sin_beta;
+	float		cos_beta;
 
 	m = vector3_mul(&source->normal, -1. * vector3_dot(&source->normal, &source->ray.direction));
 	vector3_add_eq(&m, &source->ray.direction);
 	vector3_normalize(&m);
 	sin_alpha = vector3_s_length(vector3_s_cross(vector3_mul(&source->ray.direction, -1.), source->normal));
-	sin_beta = sin_alpha / 1.5;
-	cos_beta = SQRT_MACRO(1 - sin_beta * sin_beta);
+	sin_beta = sin_alpha / 1.008;
+	cos_beta = sqrtf(1 - sin_beta * sin_beta);
 	a = vector3_mul(&source->normal, -1 * cos_beta);
 	b = vector3_mul(&m, sin_beta);
 	refracted = vector3_add(&a, &b);
@@ -58,7 +58,7 @@ t_vector3           intersection_light_direction(t_intersection *intersection, t
 
 void                intersection_lighting_diffuse(t_intersection *intersection, t_light *light, t_vector3 *light_direction)
 {
-	FLOAT_MACRO		dot;
+	float		dot;
 
 	if ((dot = vector3_dot(light_direction, &intersection->normal)) > 0.)
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material->diffuse * light->intensity * dot / vector3_length(light_direction);
@@ -68,7 +68,7 @@ void                intersection_lighting_diffuse(t_intersection *intersection, 
 void                intersection_lighting_specular(t_intersection *intersection, t_light *light, t_vector3 *light_direction)
 {
 	t_vector3       halfway;
-	FLOAT_MACRO		dot;
+	float		dot;
 
 	halfway = vector3_sub(light_direction, &intersection->ray.direction);
 	vector3_normalize(&halfway);

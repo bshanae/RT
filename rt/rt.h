@@ -33,12 +33,12 @@ typedef	struct 				s_rt
 	struct
 	{
 		int 				is_on;
-		int 				index;
+		u_long 				index;
 	}						light_ctrl;
 	struct
 	{
 		int 				is_on;
-		int 				index;
+		u_long				index;
 	}						object_ctrl;
 	struct s_rt				*clone;
 	t_console				*console;

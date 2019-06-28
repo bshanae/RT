@@ -3,7 +3,7 @@
 int 				disk_intersect(t_shape *shape, t_intersection *intersection)
 {
 	t_disk_data		*data;
-	FLOAT_MACRO 			t;
+	float 			t;
 
 	data = (t_disk_data *)shape->data;
 	if (!vector3_dot(&intersection->ray.direction, &data->normal))
@@ -30,7 +30,7 @@ static void			disk_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_disk
-	(t_vector3 position, t_vector3 normal, FLOAT_MACRO radius, const t_material *material)
+	(t_vector3 position, t_vector3 normal, float radius, const t_material *material)
 {
 	t_shape			*shape;
 	t_disk_data		*data;

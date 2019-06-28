@@ -11,11 +11,11 @@ typedef struct			s_intersection
 {
 	t_ray				ray;
 	t_vector3			normal;
-    FLOAT_MACRO         diffuse_intensity;
-	FLOAT_MACRO         specular_intensity;
+    float         diffuse_intensity;
+	float         specular_intensity;
 	t_vector3           color;
 	const t_material	*material;
-	FLOAT_MACRO 				shadow_ratio;
+	float 				shadow_ratio;
 	int 				*highlight;
 }						t_intersection;
 
@@ -23,11 +23,11 @@ typedef struct			s_intersection_cl
 {
 	t_ray				ray;
 	t_vector3			normal;
-	FLOAT_MACRO         diffuse_intensity;
-	FLOAT_MACRO         specular_intensity;
+	float         diffuse_intensity;
+	float         specular_intensity;
 	t_vector3           color;
 	t_material			material;
-	FLOAT_MACRO 		shadow_ratio;
+	float 		shadow_ratio;
 	int 				highlight;
 }						t_intersection_cl;
 

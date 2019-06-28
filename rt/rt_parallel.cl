@@ -1,5 +1,3 @@
-#include "float_macro.h"
-
 #define CONST           constant
 #define DEBUG           0
 #define BLINN           60
@@ -10,24 +8,24 @@
 
 typedef struct		    s_vector3
 {
-	FLOAT_MACRO 	    x;
-	FLOAT_MACRO 	    y;
-	FLOAT_MACRO 	    z;
+	float	 	    x;
+	float	 	    y;
+	float	 	    z;
 }					    t_vector3;
 
-static FLOAT_MACRO      vector3_length(const t_vector3 *me)
+static float	      vector3_length(const t_vector3 *me)
 {
-	return (SQRT_MACRO_CL(me->x * me->x + me->y * me->y + me->z * me->z));
+	return (sqrt(me->x * me->x + me->y * me->y + me->z * me->z));
 }
 
-static FLOAT_MACRO      vector3_s_length(const t_vector3 me)
+static float	      vector3_s_length(const t_vector3 me)
 {
-	return (SQRT_MACRO_CL(me.x * me.x + me.y * me.y + me.z * me.z));
+	return (sqrt(me.x * me.x + me.y * me.y + me.z * me.z));
 }
 
 static void				vector3_normalize(t_vector3 *me)
 {
-	FLOAT_MACRO			    length;
+	float				    length;
 
 	length = vector3_length(me);
 	me->x /= length;
@@ -37,7 +35,7 @@ static void				vector3_normalize(t_vector3 *me)
 
 static t_vector3        vector3_s_normalize(t_vector3 me)
 {
-	FLOAT_MACRO			    length;
+	float				    length;
 
 	length = vector3_length(&me);
 	me.x /= length;
@@ -55,12 +53,12 @@ static t_vector3		vector3_normalized(const t_vector3 *me)
 	return (result);
 }
 
-static FLOAT_MACRO 			vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
+static float	 			vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
 {
 	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
 }
 
-static FLOAT_MACRO 			vector3_s_dot(t_vector3 v1, t_vector3 v2)
+static float	 			vector3_s_dot(t_vector3 v1, t_vector3 v2)
 {
 	return (v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
 }
@@ -153,7 +151,7 @@ static void			    vector3_s_add_eq(t_vector3 *v1, t_vector3 v2)
 	v1->z += v2.z;
 }
 
-static t_vector3		vector3_mul(const t_vector3 *v1, FLOAT_MACRO k)
+static t_vector3		vector3_mul(const t_vector3 *v1, float	 k)
 {
 	t_vector3		    result;
 
@@ -163,7 +161,7 @@ static t_vector3		vector3_mul(const t_vector3 *v1, FLOAT_MACRO k)
 	return (result);
 }
 
-static t_vector3		vector3_s_mul(t_vector3 v1, FLOAT_MACRO k)
+static t_vector3		vector3_s_mul(t_vector3 v1, float	 k)
 {
 	v1.x *= k;
 	v1.y *= k;
@@ -171,14 +169,14 @@ static t_vector3		vector3_s_mul(t_vector3 v1, FLOAT_MACRO k)
 	return (v1);
 }
 
-static void			    vector3_mul_eq(t_vector3 *v1, FLOAT_MACRO k)
+static void			    vector3_mul_eq(t_vector3 *v1, float	 k)
 {
 	v1->x = v1->x * k;
 	v1->y = v1->y * k;
 	v1->z = v1->z * k;
 }
 
-static t_vector3		vector3_div(const t_vector3 *v1, FLOAT_MACRO k)
+static t_vector3		vector3_div(const t_vector3 *v1, float	 k)
 {
 	t_vector3		    result;
 
@@ -188,7 +186,7 @@ static t_vector3		vector3_div(const t_vector3 *v1, FLOAT_MACRO k)
 	return (result);
 }
 
-static t_vector3		vector3_s_div(t_vector3 v1, FLOAT_MACRO k)
+static t_vector3		vector3_s_div(t_vector3 v1, float	 k)
 {
 	t_vector3		    result;
 
@@ -198,36 +196,36 @@ static t_vector3		vector3_s_div(t_vector3 v1, FLOAT_MACRO k)
 	return (result);
 }
 
-static void				vector3_div_eq(t_vector3 *v1, FLOAT_MACRO k)
+static void				vector3_div_eq(t_vector3 *v1, float	 k)
 {
 	v1->x = v1->x / k;
 	v1->y = v1->y / k;
 	v1->z = v1->z / k;
 }
 
-static FLOAT_MACRO			*vector3_iter(t_vector3 *me, int i)
+static float				*vector3_iter(t_vector3 *me, int i)
 {
 	if (i < 0 || i > 3)
 		return (0);
 	return (&me->x + i);
 }
 
-static void				vector3_rotate_x(t_vector3 *me, FLOAT_MACRO theta)
+static void				vector3_rotate_x(t_vector3 *me, float	 theta)
 {
 	t_vector3		    copy;
 
 	copy = *me;
-	me->y = copy.y * COS_MACRO(theta) + copy.z * SIN_MACRO(theta);
-	me->z = -1 * copy.y * SIN_MACRO(theta) + copy.z * COS_MACRO(theta);
+	me->y = copy.y * cosf(theta) + copy.z * sinf(theta);
+	me->z = -1 * copy.y * sinf(theta) + copy.z * cosf(theta);
 }
 
-static void				vector3_rotate_y(t_vector3 *me, FLOAT_MACRO theta)
+static void				vector3_rotate_y(t_vector3 *me, float	 theta)
 {
 	t_vector3		    copy;
 
 	copy = *me;
-	me->x = copy.x * COS_MACRO(theta) + copy.z * SIN_MACRO(theta);
-	me->z = -1 * copy.x * SIN_MACRO(theta) + copy.z * COS_MACRO(theta);
+	me->x = copy.x * cosf(theta) + copy.z * sinf(theta);
+	me->z = -1 * copy.x * sinf(theta) + copy.z * cosf(theta);
 }
 
 // /////////////////////////////////////////////////////////////////////////////
@@ -251,9 +249,9 @@ typedef union			u_color
 static int              cl_color_unpack(t_vector3 vector)
 {
     t_color             color;
-	FLOAT_MACRO 	    *ptr;
+	float	 	    *ptr;
 	int 			    counter;
-	FLOAT_MACRO 	    left;
+	float	 	    left;
 
 	ptr = &vector.x;
 	counter = 0;
@@ -285,7 +283,7 @@ typedef	struct		    s_ray
 {
 	t_vector3		    origin;
 	t_vector3		    direction;
-	FLOAT_MACRO 		t;
+	float	 		t;
 }					    t_ray;
 
 static t_vector3		ray_intersect(const t_ray *me)
@@ -310,7 +308,7 @@ typedef enum		    e_light_type
 typedef	struct 		    s_light
 {
 	t_light_type	    type;
-	FLOAT_MACRO			    intensity;
+	float				    intensity;
 	t_vector3		    vector;
 }					    t_light;
 
@@ -321,10 +319,10 @@ typedef	struct 		    s_light
 typedef struct 		    s_material
 {
 	t_vector3		    color;
-	FLOAT_MACRO 	    diffuse;
-	FLOAT_MACRO 	    specular;
-	FLOAT_MACRO 	    reflect;
-	FLOAT_MACRO 	    refract;
+	float	 	    diffuse;
+	float	 	    specular;
+	float	 	    reflect;
+	float	 	    refract;
 }					    t_material;
 
 // //////////////////////////////////////////////////////////////////////////////
@@ -347,11 +345,11 @@ typedef struct			s_intersection_cl
 {
 	t_ray				ray;
 	t_vector3			normal;
-	FLOAT_MACRO         diffuse_intensity;
-	FLOAT_MACRO         specular_intensity;
+	float	         diffuse_intensity;
+	float	         specular_intensity;
 	t_vector3           color;
 	t_material			material;
-	FLOAT_MACRO 		shadow_ratio;
+	float	 		shadow_ratio;
 	int 				highlight;
 }						t_intersection_cl;
 
@@ -387,7 +385,7 @@ static t_vector3        intersection_light_direction
 typedef struct 			s_sphere_data
 {
 	t_vector3			center;
-	FLOAT_MACRO 		radius;
+	float	 		radius;
 }						t_sphere_data;
 
 static int     			cl_sphere_intersect
@@ -397,9 +395,9 @@ static int     			cl_sphere_intersect
 {
 	CONST t_sphere_data *ptr;
 	t_sphere_data		data;
-	FLOAT_MACRO 		k[3];
-	FLOAT_MACRO 		t;
-	FLOAT_MACRO 	    discriminant;
+float	 		k[3];
+float	 		t;
+float	 	    discriminant;
 	t_vector3			temp;
 
     ptr = (constant t_sphere_data *)data_ptr;
@@ -413,7 +411,7 @@ static int     			cl_sphere_intersect
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.)
 		return (0);
-	t = (-k[1] - SQRT_MACRO_CL(discriminant)) / (2 * k[0]);
+	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
 	if (t <= RAY_T_MIN || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
@@ -443,7 +441,7 @@ static int 			    cl_plane_intersect
 {
 	t_plane_data	    *data;
 	t_vector3		    temp[2];
-	FLOAT_MACRO 	    value[3];
+float	 	    value[3];
 
 	data = (t_plane_data *)data_ptr;
 	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
@@ -588,7 +586,7 @@ static void             cl_intersection_lighting_diffuse
                         constant t_light *light,
                         t_vector3 *light_direction)
 {
-	FLOAT_MACRO          dot;
+float	          dot;
 
 	if ((dot = vector3_dot(light_direction, &intersection->normal)) > 0.)
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material.diffuse * light->intensity * dot / vector3_length(light_direction);
@@ -600,7 +598,7 @@ static void             cl_intersection_lighting_specular
                         t_vector3 *light_direction)
 {
 	t_vector3            halfway;
-	FLOAT_MACRO          dot;
+float	          dot;
 
 	halfway = vector3_add(light_direction, &intersection->ray.direction);
 	vector3_normalize(&halfway);
@@ -688,7 +686,7 @@ static void             cl_reflect(
     t_vector3           result_color;
     t_intersection_cl   previous;
     t_intersection_cl   current;
-    FLOAT_MACRO         depth_ratio;
+float	         depth_ratio;
     int                 i;
 
     result_color = (t_vector3){0., 0., 0.};
@@ -726,16 +724,16 @@ static void				cl_intersection_refract
     t_vector3		refracted;
     t_vector3		a, b;
     t_vector3		m;
-    FLOAT_MACRO		sin_alpha;
-    FLOAT_MACRO		sin_beta;
-    FLOAT_MACRO		cos_beta;
+	float			sin_alpha;
+	float			sin_beta;
+	float			cos_beta;
 
     m = vector3_mul(&source->normal, -1. * vector3_dot(&source->normal, &source->ray.direction));
     vector3_add_eq(&m, &source->ray.direction);
     vector3_normalize(&m);
     sin_alpha = vector3_s_length(vector3_s_cross(vector3_mul(&source->ray.direction, -1.), source->normal));
-    sin_beta = sin_alpha / 1.5;
-    cos_beta = SQRT_MACRO(1 - sin_beta * sin_beta);
+    sin_beta = sin_alpha / 1.008;
+    cos_beta = sqrtf(1 - sin_beta * sin_beta);
     a = vector3_mul(&source->normal, -1 * cos_beta);
     b = vector3_mul(&m, sin_beta);
     refracted = vector3_add(&a, &b);
@@ -755,7 +753,7 @@ static void             cl_refract(
     t_vector3           result_color;
     t_intersection_cl   previous;
     t_intersection_cl   current;
-    FLOAT_MACRO         depth_ratio;
+float	         depth_ratio;
     int                 i;
 
     result_color = (t_vector3){0., 0., 0.};

@@ -58,7 +58,7 @@ void 				rt_reset(t_rt **me)
 
 void 				rt_clone(t_rt *me)
 {
-	int 			i;
+	u_long			i;
 	t_shape			*shape[2];
 	t_light			*light[2];
 

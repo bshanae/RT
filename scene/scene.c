@@ -18,7 +18,7 @@ t_scene             *scene_new(t_vector3 background)
 
 void				scene_delete(t_scene **me)
 {
-	int 			i;
+	u_long 			i;
 	t_shape			*shape;
 	t_light         *light;
 
@@ -43,7 +43,7 @@ void				scene_delete(t_scene **me)
 
 int 				scene_intersect(t_scene *me, t_intersection *intersection)
 {
-	int 			i;
+	u_long			i;
 	t_shape			*shape;
 	int 			result;
 
@@ -79,7 +79,7 @@ int                 scene_check_shadow(t_scene *me, t_intersection *intersection
 
 void				scene_light_up(t_scene *me, t_intersection *intersection)
 {
-	int             i;
+	u_long         i;
 	t_light         *light;
 	t_vector3       light_direction;
 

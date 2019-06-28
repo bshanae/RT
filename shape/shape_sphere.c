@@ -4,9 +4,9 @@ int					sphere_intersect
 	(t_shape *shape, t_intersection *intersection)
 {
 	t_sphere_data	*data;
-	FLOAT_MACRO 	k[3];
-	FLOAT_MACRO 	t;
-	FLOAT_MACRO 	discriminant;
+	float 	k[3];
+	float 	t;
+	float 	discriminant;
 	t_vector3		temp;
 
 	data = (t_sphere_data *)shape->data;
@@ -17,7 +17,7 @@ int					sphere_intersect
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.)
 		return (0);
-	t = (-k[1] - SQRT_MACRO(discriminant)) / (2 * k[0]);
+	t = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
 	if (t <= RAY_T_MIN || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
@@ -39,7 +39,7 @@ static void			sphere_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_sphere
-	(t_vector3 center, FLOAT_MACRO radius, const t_material *material)
+	(t_vector3 center, float radius, const t_material *material)
 {
 	t_shape			*shape;
 	t_sphere_data	*data;

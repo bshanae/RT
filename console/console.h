@@ -23,7 +23,7 @@ typedef struct			s_console_string
 typedef struct			s_console_history
 {
 	t_vector			data;
-	int 				index;
+	u_long 				index;
 	t_console_string	*string;
 }						t_console_history;
 

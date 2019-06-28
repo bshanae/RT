@@ -3,9 +3,9 @@
 
 # include "vector3.h"
 
-# if FLOAT_MACRO == float
+# if float == float
 #  define RAY_T_MIN 0.001f
-# elif FLOAT_MACRO == double
+# elif float == double
 #  define RAY_T_MIN 0.000001
 # endif
 
@@ -15,7 +15,7 @@ typedef	struct		s_ray
 {
 	t_vector3		origin;
 	t_vector3		direction;
-	FLOAT_MACRO 			t;
+	float 			t;
 }					t_ray;
 
 t_vector3			ray_intersect(const t_ray *me);
