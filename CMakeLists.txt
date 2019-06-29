@@ -38,7 +38,8 @@ add_executable(rt
         ./rt/rt_consistent.c
         ./rt/rt_parallel.c
         ./console/console_parallel.c
-        ./open_cl/open_cl.c)
+        ./open_cl/open_cl.c
+        ./test.c)
 
 target_include_directories(rt
         PRIVATE /usr/local/include

@@ -37,7 +37,7 @@ typedef struct 			s_plane_data
 }						t_plane_data;
 
 int 					plane_intersect
-	(t_shape *shape, t_intersection *intersection);
+	(t_shape *shape, t_intersection *iAntersection);
 
 t_shape					*shape_plane
 	(t_vector3 position, t_vector3 normal, const t_material *material);
@@ -91,7 +91,7 @@ typedef struct 			s_cone_data
 	t_vector3			top;
 	t_vector3			bottom;
 	float 				radius;
-	float          	tangens;
+	float          		tangens;
 	t_vector3			axis;
 }						t_cone_data;
 

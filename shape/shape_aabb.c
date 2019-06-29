@@ -11,6 +11,7 @@ int 			aabb_intersect
 	int 			i;
 	t_vector3		normal;
 
+	normal = (t_vector3){0., 0., 0.};
 	data = (t_aabb_data *)shape->data;
 	i = 0;
 	t_near = RAY_T_MIN;
@@ -22,12 +23,12 @@ int 			aabb_intersect
 		t[1] = (*vector3_iter(&data->max, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
 		if (inv_dir < 0.)
 			swap_memory(t, t + 1, sizeof(float));
-		if ((t_near = fmax(t[0], t_near)) == t[0])
+		if ((t_near = fmaxf(t[0], t_near)) == t[0])
 		{
 			normal = (t_vector3){0., 0., 0.};
 			*vector3_iter(&normal, i) = inv_dir < 0. ? 1. : -1.;
 		}
-		t_far = fmin(t[1], t_far);
+		t_far = fminf(t[1], t_far);
 		if (t_far <= t_near)
 			return (0);
 		i++;

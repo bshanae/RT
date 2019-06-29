@@ -36,6 +36,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bshanae/workspace/21_ray_tracer/shape/shape_disk.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/shape/shape_disk.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/shape/shape_plane.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/shape/shape_sphere.c.o"
+  "/Users/bshanae/workspace/21_ray_tracer/test.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/test.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
