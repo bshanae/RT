@@ -144,157 +144,189 @@ math.h
 stdlib.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/main.c
+/Users/ashari/norme1/camera/camera.c
+camera.h
+/Users/ashari/norme1/camera/camera.h
+
+/Users/ashari/norme1/camera/camera.h
+vector3.h
+/Users/ashari/norme1/camera/vector3.h
+ray.h
+/Users/ashari/norme1/camera/ray.h
+
+/Users/ashari/norme1/light/light.c
+light.h
+/Users/ashari/norme1/light/light.h
+
+/Users/ashari/norme1/light/light.h
+vector3.h
+/Users/ashari/norme1/light/vector3.h
+stdarg.h
+-
+
+/Users/ashari/norme1/main.c
 rt.h
-/Users/bshanae/workspace/21_ray_tracer/rt.h
+/Users/ashari/norme1/rt.h
 scene_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene_list.h
+/Users/ashari/norme1/scene_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.c
+/Users/ashari/norme1/open_cl/open_cl.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 OpenCL/CL.h
 -
 libft_ft_printf.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/libft_ft_printf.h
+/Users/ashari/norme1/open_cl/libft_ft_printf.h
 camera.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/camera.h
+/Users/ashari/norme1/open_cl/camera.h
 scene.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/scene.h
+/Users/ashari/norme1/open_cl/scene.h
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/shape_list.h
+/Users/ashari/norme1/open_cl/shape_list.h
 parameters.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/parameters.h
+/Users/ashari/norme1/open_cl/parameters.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_alloc_device_data.c
+/Users/ashari/norme1/open_cl/open_cl_alloc_device_data.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_context.c
+/Users/ashari/norme1/open_cl/open_cl_create_context.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_device.c
+/Users/ashari/norme1/open_cl/open_cl_create_device.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_kernel.c
+/Users/ashari/norme1/open_cl/open_cl_create_kernel.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_program.c
+/Users/ashari/norme1/open_cl/open_cl_create_program.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_queue.c
+/Users/ashari/norme1/open_cl/open_cl_create_queue.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_error.c
+/Users/ashari/norme1/open_cl/open_cl_error.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_set_arguments.c
+/Users/ashari/norme1/open_cl/open_cl_set_arguments.c
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+/Users/ashari/norme1/open_cl/open_cl.h
 
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.c
+/Users/ashari/norme1/rt/rt.c
 camera.h
 -
 rt.h
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+/Users/ashari/norme1/rt/rt.h
 
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+/Users/ashari/norme1/rt/rt.h
 mlx.h
-/Users/bshanae/workspace/21_ray_tracer/rt/mlx.h
+/Users/ashari/norme1/rt/mlx.h
 intersection.h
-/Users/bshanae/workspace/21_ray_tracer/rt/intersection.h
+/Users/ashari/norme1/rt/intersection.h
 scene.h
-/Users/bshanae/workspace/21_ray_tracer/rt/scene.h
+/Users/ashari/norme1/rt/scene.h
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/rt/shape_list.h
+/Users/ashari/norme1/rt/shape_list.h
 open_cl.h
-/Users/bshanae/workspace/21_ray_tracer/rt/open_cl.h
+/Users/ashari/norme1/rt/open_cl.h
 mlx_keys.h
-/Users/bshanae/workspace/21_ray_tracer/rt/mlx_keys.h
+/Users/ashari/norme1/rt/mlx_keys.h
 
-/Users/bshanae/workspace/21_ray_tracer/rt/rt_clone.c
+/Users/ashari/norme1/rt/rt_clone.c
 rt.h
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+/Users/ashari/norme1/rt/rt.h
 
-/Users/bshanae/workspace/21_ray_tracer/rt/rt_control.c
+/Users/ashari/norme1/rt/rt_control.c
 rt.h
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+/Users/ashari/norme1/rt/rt.h
 
-/Users/bshanae/workspace/21_ray_tracer/rt/rt_mlx.c
+/Users/ashari/norme1/rt/rt_mlx.c
 rt.h
-/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+/Users/ashari/norme1/rt/rt.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.c
+/Users/ashari/norme1/scene/scene.c
 scene.h
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+/Users/ashari/norme1/scene/scene.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+/Users/ashari/norme1/scene/scene.h
 parameters.h
-/Users/bshanae/workspace/21_ray_tracer/scene/parameters.h
+/Users/ashari/norme1/scene/parameters.h
 shape.h
-/Users/bshanae/workspace/21_ray_tracer/scene/shape.h
+/Users/ashari/norme1/scene/shape.h
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/shape_list.h
+/Users/ashari/norme1/scene/shape_list.h
 light.h
-/Users/bshanae/workspace/21_ray_tracer/scene/light.h
+/Users/ashari/norme1/scene/light.h
 libft_vector.h
-/Users/bshanae/workspace/21_ray_tracer/scene/libft_vector.h
+/Users/ashari/norme1/scene/libft_vector.h
 camera.h
-/Users/bshanae/workspace/21_ray_tracer/scene/camera.h
+/Users/ashari/norme1/scene/camera.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_a.c
+/Users/ashari/norme1/scene/scene_a.c
 scene_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+/Users/ashari/norme1/scene/scene_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+/Users/ashari/norme1/scene/scene_list.h
 scene.h
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+/Users/ashari/norme1/scene/scene.h
 material_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/material_list.h
+/Users/ashari/norme1/scene/material_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape.c
+/Users/ashari/norme1/shape/shape.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape.h
+/Users/ashari/norme1/shape/shape.h
 material.h
-/Users/bshanae/workspace/21_ray_tracer/shape/material.h
+/Users/ashari/norme1/shape/material.h
 intersection.h
-/Users/bshanae/workspace/21_ray_tracer/shape/intersection.h
+/Users/ashari/norme1/shape/intersection.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_aabb.c
+/Users/ashari/norme1/shape/shape_aabb.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_cone.c
+/Users/ashari/norme1/shape/shape_cone.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_cylinder.c
+/Users/ashari/norme1/shape/shape_cylinder.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 libft_standart.h
-/Users/bshanae/workspace/21_ray_tracer/shape/libft_standart.h
+/Users/ashari/norme1/shape/libft_standart.h
 vector3.h
-/Users/bshanae/workspace/21_ray_tracer/shape/vector3.h
+/Users/ashari/norme1/shape/vector3.h
 shape.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape.h
+/Users/ashari/norme1/shape/shape.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c
+/Users/ashari/norme1/shape/shape_plane.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c
+/Users/ashari/norme1/shape/shape_sphere.c
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+/Users/ashari/norme1/shape/shape_list.h
+
+/Users/ashari/norme1/vector3/vector3.c
+vector3.h
+/Users/ashari/norme1/vector3/vector3.h
+
+/Users/ashari/norme1/vector3/vector3.h
+stdarg.h
+-
+math.h
+-
+stdlib.h
+-
 

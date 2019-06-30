@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:12:51 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:12:52 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCENE_H
 # define SCENE_H
 
@@ -17,13 +29,13 @@ typedef	struct					s_scene
 {
 	t_camera					camera;
 	t_shape						shapes[SCENE_SHAPE_CAPACITY];
-	int 						shapes_length;
+	int							shapes_length;
 	t_light						lights[SCENE_LIGHT_CAPACITY];
-	int 						lights_length;
-	t_vector3       			background;
+	int							lights_length;
+	t_vector3					background;
 }								t_scene;
 
-t_scene             			*scene_new();
+t_scene							*scene_new();
 
 void							scene_delete(t_scene **me);
 

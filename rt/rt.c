@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:12:28 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:12:29 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <camera.h>
 #include "rt.h"
 
 t_rt				*rt_new(void)
 {
 	t_rt			*rt;
-
 	int				temp[3];
+
 	if (!(rt = (t_rt *)malloc(sizeof(t_rt))))
 		exit(21);
 	rt->mlx_ptr = mlx_init();
@@ -32,7 +44,7 @@ t_rt				*rt_new(void)
 
 void				rt_delete(t_rt **me)
 {
-	int 			i;
+	int				i;
 
 	i = 0;
 	while (i < (*me)->scenes.length)
@@ -47,9 +59,8 @@ void				rt_add_scene(t_rt *me, t_scene *scene)
 		me->scenes.data[me->scenes.length++] = scene;
 }
 
-void 				rt_render(t_rt *me)
+void				rt_render(t_rt *me)
 {
-
 	open_cl_run(me->open_cl, *me->scenes.current);
 	mlx_put_image_to_window(me->mlx_ptr, me->win_ptr, me->img_ptr, 0, 0);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt_control.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:12:14 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:12:15 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
 
 int					rt_ctrl_camera_move(t_rt *rt, int key)
@@ -6,13 +18,17 @@ int					rt_ctrl_camera_move(t_rt *rt, int key)
 
 	camera = &(*rt->scenes.current)->camera;
 	if (key == KEY_W)
-		vector3_s_sub_eq(&camera->position, vector3_s_mul(camera->axis_z, RT_CAMERA_POS_STEP));
+		vector3_s_sub_eq(&camera->position,
+		vector3_s_mul(camera->axis_z, RT_CAMERA_POS_STEP));
 	else if (key == KEY_S)
-		vector3_s_add_eq(&camera->position, vector3_s_mul(camera->axis_z, RT_CAMERA_POS_STEP));
+		vector3_s_add_eq(&camera->position,
+		vector3_s_mul(camera->axis_z, RT_CAMERA_POS_STEP));
 	else if (key == KEY_A)
-		vector3_s_sub_eq(&camera->position, vector3_s_mul(camera->axis_x, RT_CAMERA_POS_STEP));
+		vector3_s_sub_eq(&camera->position,
+		vector3_s_mul(camera->axis_x, RT_CAMERA_POS_STEP));
 	else if (key == KEY_D)
-		vector3_s_add_eq(&camera->position, vector3_s_mul(camera->axis_x, RT_CAMERA_POS_STEP));
+		vector3_s_add_eq(&camera->position,
+		vector3_s_mul(camera->axis_x, RT_CAMERA_POS_STEP));
 	else if (key == KEY_E)
 		camera->position.y -= RT_CAMERA_POS_STEP;
 	else if (key == KEY_Q)
@@ -38,7 +54,6 @@ int					rt_ctrl_camera_rotate(t_rt *rt, int key)
 	camera_recalculate(camera);
 	return (1);
 }
-
 
 void				rt_ctrl_light(t_rt *rt, int key)
 {

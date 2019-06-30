@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/X11/include -I/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes -I/Users/bshanae/workspace/21_ray_tracer/vector3 -I/Users/bshanae/workspace/21_ray_tracer/camera -I/Users/bshanae/workspace/21_ray_tracer/rt -I/Users/bshanae/workspace/21_ray_tracer/ray -I/Users/bshanae/workspace/21_ray_tracer/intersection -I/Users/bshanae/workspace/21_ray_tracer/scene -I/Users/bshanae/workspace/21_ray_tracer/color -I/Users/bshanae/workspace/21_ray_tracer/shape -I/Users/bshanae/workspace/21_ray_tracer/material -I/Users/bshanae/workspace/21_ray_tracer/light -I/Users/bshanae/workspace/21_ray_tracer/mlx -I/Users/bshanae/workspace/21_ray_tracer/open_cl -I/Users/bshanae/workspace/21_ray_tracer/float_macro -I/Users/bshanae/workspace/21_ray_tracer/. 
+C_INCLUDES = -I/usr/X11/include -I/Users/ashari/norme1/../21_libft/includes -I/Users/ashari/norme1/vector3 -I/Users/ashari/norme1/camera -I/Users/ashari/norme1/rt -I/Users/ashari/norme1/ray -I/Users/ashari/norme1/intersection -I/Users/ashari/norme1/scene -I/Users/ashari/norme1/color -I/Users/ashari/norme1/shape -I/Users/ashari/norme1/material -I/Users/ashari/norme1/light -I/Users/ashari/norme1/mlx -I/Users/ashari/norme1/open_cl -I/Users/ashari/norme1/float_macro -I/Users/ashari/norme1/. 
 

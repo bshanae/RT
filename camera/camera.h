@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   camera.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:10:30 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:10:31 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CAMERA_H
 # define CAMERA_H
 
@@ -14,11 +26,11 @@ typedef struct			s_camera
 	t_vector3			axis_z;
 	t_vector3			vp_axis_x;
 	t_vector3			vp_axis_y;
-	t_vector3       	angles;
+	t_vector3			angles;
 }						t_camera;
 
 t_camera				camera_build(float direction_length);
 
-void                	camera_recalculate(t_camera *me);
+void					camera_recalculate(t_camera *me);
 
 #endif

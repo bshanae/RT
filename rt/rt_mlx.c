@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt_mlx.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:12:24 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:12:25 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
-
-
 
 int					rt_key_press(int key, void *ptr)
 {
@@ -21,16 +31,24 @@ int					rt_key_press(int key, void *ptr)
 	{
 		(*(*rt)->scenes.current)->shapes[(*rt)->ctrl_shape.index].highlight = 1;
 		(*rt)->ctrl_shape.is_on = 1;
-//		rt_render((*rt));
 	}
-	else if ((*rt)->ctrl_light.is_on)
-		rt_ctrl_light((*rt), key);
-	else if ((*rt)->ctrl_shape.is_on)
-		rt_ctrl_shape((*rt), key);
+	else if (rt_key_light_is_on(key, *rt))
+		;
 	else
 		return (0);
 	rt_render((*rt));
 	return (0);
+}
+
+int					rt_key_light_is_on(int key, t_rt *rt)
+{
+	if (rt->ctrl_light.is_on)
+		rt_ctrl_light(rt, key);
+	else if (rt->ctrl_shape.is_on)
+		rt_ctrl_shape(rt, key);
+	else
+		return (0);
+	return (1);
 }
 
 int					rt_key_release(int key, void *ptr)

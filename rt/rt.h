@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt.h                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:12:32 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:12:33 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef RT_H
 # define RT_H
 
@@ -15,32 +27,32 @@
 
 typedef struct					s_control_light
 {
-	int 						is_on;
-	u_long 						index;
+	int							is_on;
+	u_long						index;
 }								t_control_light;
 
 typedef struct					s_control_shape
 {
-	int 						is_on;
+	int							is_on;
 	u_long						index;
 }								t_control_shape;
 
-typedef struct 					s_scenes
+typedef struct					s_scenes
 {
 	t_scene						*data[RT_SCENE_CAPACITY];
-	int 						length;
-	int 						index;
+	int							length;
+	int							index;
 	t_scene						**current;
 }								t_scenes;
 
-typedef	struct s_rt 			t_rt;
+typedef	struct s_rt				t_rt;
 
 struct							s_rt
 {
 	void						*mlx_ptr;
 	void						*win_ptr;
 	void						*img_ptr;
-	int 						*img_data;
+	int							*img_data;
 	t_scenes					scenes;
 	t_control_light				ctrl_light;
 	t_control_shape				ctrl_shape;
@@ -69,6 +81,8 @@ void							rt_ctrl_light(t_rt *rt, int key);
 void							rt_ctrl_shape(t_rt *rt, int key);
 
 int								rt_key_press(int key, void *ptr);
+
+int								rt_key_light_is_on(int key, t_rt *rt);
 
 int								rt_key_release(int key, void *ptr);
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   open_cl_create_program.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:11:36 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:11:37 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "open_cl.h"
 
 static void			read_program
@@ -20,7 +32,7 @@ static void			read_program
 		if (buffer_length + 64 > buffer_capacity)
 		{
 			ft_realloc((void **)&buffer,
-					   buffer_capacity, buffer_capacity * OCL_BUFF_MULT);
+			buffer_capacity, buffer_capacity * OCL_BUFF_MULT);
 			buffer_capacity *= OCL_BUFF_MULT;
 		}
 	}
@@ -43,7 +55,3 @@ void				open_cl_create_program(t_open_cl *me)
 	if (error < 0)
 		error_log(me, &me->program, error);
 }
-
-
-
-

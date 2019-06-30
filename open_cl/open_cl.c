@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   open_cl.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:11:54 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:11:55 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "open_cl.h"
 
 t_open_cl				*open_cl_new(int *image)
@@ -20,7 +32,7 @@ t_open_cl				*open_cl_new(int *image)
 	return (new);
 }
 
-void				open_cl_delete(t_open_cl **me)
+void					open_cl_delete(t_open_cl **me)
 {
 	clReleaseMemObject((*me)->data_device.image);
 	clReleaseMemObject((*me)->data_device.scene);
@@ -33,12 +45,12 @@ void				open_cl_delete(t_open_cl **me)
 	*me = NULL;
 }
 
-void 				open_cl_run(t_open_cl *me, t_scene *scene)
+void					open_cl_run(t_open_cl *me, t_scene *scene)
 {
-	int 			error;
+	int					error;
 
 	error = clEnqueueWriteBuffer(me->queue, me->data_device.scene, CL_TRUE,
-		 0, me->data_size.scene, scene, 0, NULL, NULL);
+		0, me->data_size.scene, scene, 0, NULL, NULL);
 	error_check(__LINE__, __FUNCTION__, error);
 	error = clEnqueueNDRangeKernel(me->queue, me->kernel, 1, NULL,
 		&me->total_size, NULL, 0, NULL, NULL);

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/ashari/norme1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/norme1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/norme1/cmake-build-debug/CMakeFiles /Users/ashari/norme1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/norme1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -798,6 +798,87 @@ vector3/vector3.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3.c.s
 .PHONY : vector3/vector3.c.s
 
+vector3/vector3_add_sub.o: vector3/vector3_add_sub.c.o
+
+.PHONY : vector3/vector3_add_sub.o
+
+# target to build an object file
+vector3/vector3_add_sub.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o
+.PHONY : vector3/vector3_add_sub.c.o
+
+vector3/vector3_add_sub.i: vector3/vector3_add_sub.c.i
+
+.PHONY : vector3/vector3_add_sub.i
+
+# target to preprocess a source file
+vector3/vector3_add_sub.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add_sub.c.i
+.PHONY : vector3/vector3_add_sub.c.i
+
+vector3/vector3_add_sub.s: vector3/vector3_add_sub.c.s
+
+.PHONY : vector3/vector3_add_sub.s
+
+# target to generate assembly for a file
+vector3/vector3_add_sub.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add_sub.c.s
+.PHONY : vector3/vector3_add_sub.c.s
+
+vector3/vector3_mul.o: vector3/vector3_mul.c.o
+
+.PHONY : vector3/vector3_mul.o
+
+# target to build an object file
+vector3/vector3_mul.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.o
+.PHONY : vector3/vector3_mul.c.o
+
+vector3/vector3_mul.i: vector3/vector3_mul.c.i
+
+.PHONY : vector3/vector3_mul.i
+
+# target to preprocess a source file
+vector3/vector3_mul.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.i
+.PHONY : vector3/vector3_mul.c.i
+
+vector3/vector3_mul.s: vector3/vector3_mul.c.s
+
+.PHONY : vector3/vector3_mul.s
+
+# target to generate assembly for a file
+vector3/vector3_mul.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.s
+.PHONY : vector3/vector3_mul.c.s
+
+vector3/vector3_rotate.o: vector3/vector3_rotate.c.o
+
+.PHONY : vector3/vector3_rotate.o
+
+# target to build an object file
+vector3/vector3_rotate.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_rotate.c.o
+.PHONY : vector3/vector3_rotate.c.o
+
+vector3/vector3_rotate.i: vector3/vector3_rotate.c.i
+
+.PHONY : vector3/vector3_rotate.i
+
+# target to preprocess a source file
+vector3/vector3_rotate.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_rotate.c.i
+.PHONY : vector3/vector3_rotate.c.i
+
+vector3/vector3_rotate.s: vector3/vector3_rotate.c.s
+
+.PHONY : vector3/vector3_rotate.s
+
+# target to generate assembly for a file
+vector3/vector3_rotate.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_rotate.c.s
+.PHONY : vector3/vector3_rotate.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -882,6 +963,15 @@ help:
 	@echo "... vector3/vector3.o"
 	@echo "... vector3/vector3.i"
 	@echo "... vector3/vector3.s"
+	@echo "... vector3/vector3_add_sub.o"
+	@echo "... vector3/vector3_add_sub.i"
+	@echo "... vector3/vector3_add_sub.s"
+	@echo "... vector3/vector3_mul.o"
+	@echo "... vector3/vector3_mul.i"
+	@echo "... vector3/vector3_mul.s"
+	@echo "... vector3/vector3_rotate.o"
+	@echo "... vector3/vector3_rotate.i"
+	@echo "... vector3/vector3_rotate.s"
 .PHONY : help
 
 

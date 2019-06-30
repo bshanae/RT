@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shape_cylinder.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:13:08 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:13:09 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "shape_list.h"
 
 void				cylinder_move(t_shape *shape, t_vector3 move)
@@ -25,4 +37,3 @@ t_shape				shape_cylinder
 	shape.highlight = 0;
 	return (shape);
 }
-

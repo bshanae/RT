@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shape_cone.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:13:04 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:13:05 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "shape_list.h"
 
 void				cone_move(t_shape *shape, t_vector3 move)
@@ -10,10 +22,10 @@ void				cone_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				shape_cone
-		(t_vector3 top, t_vector3 bottom, float tangens, t_material material)
+	(t_vector3 top, t_vector3 bottom, float tangens, t_material material)
 {
 	t_shape			shape;
-	t_cone_data	    *data;
+	t_cone_data		*data;
 
 	shape.id = SHAPE_ID_CONE;
 	data = (t_cone_data *)shape.data;

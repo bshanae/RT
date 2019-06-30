@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   light.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:10:58 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:10:59 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIGHT_H
 # define LIGHT_H
 
@@ -12,7 +24,7 @@ typedef enum		e_light_type
 	light_directional
 }					t_light_type;
 
-typedef	struct 		s_light
+typedef	struct		s_light
 {
 	t_light_type	type;
 	float			intensity;
@@ -20,6 +32,5 @@ typedef	struct 		s_light
 }					t_light;
 
 t_light				light_create(t_light_type type, ...);
-
 
 #endif

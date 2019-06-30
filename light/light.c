@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   light.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:10:54 by ashari            #+#    #+#             */
+/*   Updated: 2019/06/30 19:10:55 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "light.h"
 
 t_light				light_create(t_light_type type, ...)
 {
 	t_light			new;
-	va_list 		args;
+	va_list			args;
 
 	new.type = type;
 	va_start(args, type);
