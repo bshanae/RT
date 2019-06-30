@@ -1,28 +1,27 @@
-#define CONST           constant
-#define BLINN           60.f
+#include "parameters.h"
 
 // /////////////////////////////////////////////////////////////////////////////
-//						VECTOR3
+//							VECTOR3
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct		    s_vector3
+typedef struct		    	s_vector3
 {
-	float				x;
-	float				y;
-	float				z;
-}					    t_vector3;
+	float					x;
+	float					y;
+	float					z;
+}					    	t_vector3;
 
-static float	      vector3_length(const t_vector3 *me)
+static float				vector3_length(const t_vector3 *me)
 {
 	return (sqrt(me->x * me->x + me->y * me->y + me->z * me->z));
 }
 
-static float	      vector3_s_length(const t_vector3 me)
+static float				vector3_s_length(const t_vector3 me)
 {
 	return (sqrt(me.x * me.x + me.y * me.y + me.z * me.z));
 }
 
-static void				vector3_normalize(t_vector3 *me)
+static void					vector3_normalize(t_vector3 *me)
 {
 	float				    length;
 
@@ -32,7 +31,7 @@ static void				vector3_normalize(t_vector3 *me)
 	me->z /= length;
 }
 
-static t_vector3        vector3_s_normalize(t_vector3 me)
+static t_vector3			vector3_s_normalize(t_vector3 me)
 {
 	float				    length;
 
@@ -43,9 +42,9 @@ static t_vector3        vector3_s_normalize(t_vector3 me)
 	return (me);
 }
 
-static t_vector3		vector3_normalized(const t_vector3 *me)
+static t_vector3			vector3_normalized(const t_vector3 *me)
 {
-	t_vector3		    result;
+	t_vector3				result;
 
 	result = *me;
 	vector3_normalize(&result);
@@ -63,9 +62,9 @@ static float	 			vector3_s_dot(t_vector3 v1, t_vector3 v2)
 }
 
 
-static t_vector3	    vector3_cross(const t_vector3 *v1, const t_vector3 *v2)
+static t_vector3	    	vector3_cross(const t_vector3 *v1, const t_vector3 *v2)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1->y * v2->z - v1->z * v2->y;
 	result.y = v1->z * v2->x - v1->x * v2->z;
@@ -73,9 +72,9 @@ static t_vector3	    vector3_cross(const t_vector3 *v1, const t_vector3 *v2)
 	return (result);
 }
 
-static t_vector3		vector3_s_cross(t_vector3 v1, t_vector3 v2)
+static t_vector3			vector3_s_cross(t_vector3 v1, t_vector3 v2)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1.y * v2.z - v1.z * v2.y;
 	result.y = v1.z * v2.x - v1.x * v2.z;
@@ -83,7 +82,7 @@ static t_vector3		vector3_s_cross(t_vector3 v1, t_vector3 v2)
 	return (result);
 }
 
-static t_vector3	    vector3_sub(t_vector3 *v1, t_vector3 *v2)
+static t_vector3	    	vector3_sub(t_vector3 *v1, t_vector3 *v2)
 {
 	t_vector3		    result;
 
@@ -93,9 +92,9 @@ static t_vector3	    vector3_sub(t_vector3 *v1, t_vector3 *v2)
 	return (result);
 }
 
-static t_vector3		vector3_s_sub(t_vector3 v1, t_vector3 v2)
+static t_vector3			vector3_s_sub(t_vector3 v1, t_vector3 v2)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1.x - v2.x;
 	result.y = v1.y - v2.y;
@@ -103,14 +102,14 @@ static t_vector3		vector3_s_sub(t_vector3 v1, t_vector3 v2)
 	return (result);
 }
 
-static void				vector3_sub_eq(t_vector3 *v1, const t_vector3 *v2)
+static void					vector3_sub_eq(t_vector3 *v1, const t_vector3 *v2)
 {
 	v1->x -= v2->x;
 	v1->y -= v2->y;
 	v1->z -= v2->z;
 }
 
-static void			    vector3_s_sub_eq(t_vector3 *v1, t_vector3 v2)
+static void			    	vector3_s_sub_eq(t_vector3 *v1, t_vector3 v2)
 {
 	v1->x -= v2.x;
 	v1->y -= v2.y;
@@ -118,9 +117,9 @@ static void			    vector3_s_sub_eq(t_vector3 *v1, t_vector3 v2)
 }
 
 
-static t_vector3		vector3_add(const t_vector3 *v1, const t_vector3 *v2)
+static t_vector3			vector3_add(const t_vector3 *v1, const t_vector3 *v2)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1->x + v2->x;
 	result.y = v1->y + v2->y;
@@ -128,7 +127,7 @@ static t_vector3		vector3_add(const t_vector3 *v1, const t_vector3 *v2)
 	return (result);
 }
 
-static t_vector3		vector3_s_add(t_vector3 v1, t_vector3 v2)
+static t_vector3			vector3_s_add(t_vector3 v1, t_vector3 v2)
 {
 	v1.x += v2.x;
 	v1.y += v2.y;
@@ -136,23 +135,23 @@ static t_vector3		vector3_s_add(t_vector3 v1, t_vector3 v2)
 	return (v1);
 }
 
-static void				vector3_add_eq(t_vector3 *v1, const t_vector3 *v2)
+static void					vector3_add_eq(t_vector3 *v1, const t_vector3 *v2)
 {
 	v1->x += v2->x;
 	v1->y += v2->y;
 	v1->z += v2->z;
 }
 
-static void			    vector3_s_add_eq(t_vector3 *v1, t_vector3 v2)
+static void			    	vector3_s_add_eq(t_vector3 *v1, t_vector3 v2)
 {
 	v1->x += v2.x;
 	v1->y += v2.y;
 	v1->z += v2.z;
 }
 
-static t_vector3		vector3_mul(const t_vector3 *v1, float	 k)
+static t_vector3			vector3_mul(const t_vector3 *v1, float	 k)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1->x * k;
 	result.y = v1->y * k;
@@ -160,7 +159,7 @@ static t_vector3		vector3_mul(const t_vector3 *v1, float	 k)
 	return (result);
 }
 
-static t_vector3		vector3_s_mul(t_vector3 v1, float	 k)
+static t_vector3			vector3_s_mul(t_vector3 v1, float	 k)
 {
 	v1.x *= k;
 	v1.y *= k;
@@ -168,16 +167,16 @@ static t_vector3		vector3_s_mul(t_vector3 v1, float	 k)
 	return (v1);
 }
 
-static void			    vector3_mul_eq(t_vector3 *v1, float	 k)
+static void			    	vector3_mul_eq(t_vector3 *v1, float	 k)
 {
 	v1->x = v1->x * k;
 	v1->y = v1->y * k;
 	v1->z = v1->z * k;
 }
 
-static t_vector3		vector3_div(const t_vector3 *v1, float	 k)
+static t_vector3			vector3_div(const t_vector3 *v1, float	 k)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1->x / k;
 	result.y = v1->y / k;
@@ -185,9 +184,9 @@ static t_vector3		vector3_div(const t_vector3 *v1, float	 k)
 	return (result);
 }
 
-static t_vector3		vector3_s_div(t_vector3 v1, float	 k)
+static t_vector3			vector3_s_div(t_vector3 v1, float	 k)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1.x / k;
 	result.y = v1.y / k;
@@ -195,7 +194,7 @@ static t_vector3		vector3_s_div(t_vector3 v1, float	 k)
 	return (result);
 }
 
-static void				vector3_div_eq(t_vector3 *v1, float	 k)
+static void					vector3_div_eq(t_vector3 *v1, float	 k)
 {
 	v1->x = v1->x / k;
 	v1->y = v1->y / k;
@@ -209,48 +208,48 @@ static float				*vector3_iter(t_vector3 *me, int i)
 	return (&me->x + i);
 }
 
-static void				vector3_rotate_x(t_vector3 *me, float	 theta)
+static void					vector3_rotate_x(t_vector3 *me, float	 theta)
 {
-	t_vector3		    copy;
+	t_vector3		    	copy;
 
 	copy = *me;
-	me->y = copy.y * cosf(theta) + copy.z * sinf(theta);
-	me->z = -1 * copy.y * sinf(theta) + copy.z * cosf(theta);
+	me->y = copy.y * cos(theta) + copy.z * sin(theta);
+	me->z = -1 * copy.y * sin(theta) + copy.z * cos(theta);
 }
 
-static void				vector3_rotate_y(t_vector3 *me, float	 theta)
+static void					vector3_rotate_y(t_vector3 *me, float	 theta)
 {
-	t_vector3		    copy;
+	t_vector3		    	copy;
 
 	copy = *me;
-	me->x = copy.x * cosf(theta) + copy.z * sinf(theta);
-	me->z = -1 * copy.x * sinf(theta) + copy.z * cosf(theta);
+	me->x = copy.x * cos(theta) + copy.z * sin(theta);
+	me->z = -1 * copy.x * sin(theta) + copy.z * cos(theta);
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						COLOR
+//							COLOR
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct			s_rgb
+typedef struct			    s_rgb
 {
-	unsigned char		b;
-	unsigned char		g;
-	unsigned char		r;
-	unsigned char		a;
-}						t_rgb;
+	unsigned char		    b;
+	unsigned char		    g;
+	unsigned char		    r;
+	unsigned char		    a;
+}						    t_rgb;
 
-typedef union			u_color
+typedef union			    u_color
 {
-	int					mix;
-	t_rgb				rgb;
-}						t_color;
+	int					    mix;
+	t_rgb				    rgb;
+}						    t_color;
 
-static int              cl_color_unpack(t_vector3 vector)
+static int                  cl_color_unpack(t_vector3 vector)
 {
-    t_color             color;
-	float	 	    *ptr;
-	int 			    counter;
-	float	 	    left;
+    t_color                 color;
+	float	 	    	    *ptr;
+	int 			        counter;
+	float	 	    	    left;
 
 	ptr = &vector.x;
 	counter = 0;
@@ -272,87 +271,87 @@ static int              cl_color_unpack(t_vector3 vector)
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						RAY
+//							RAY
 // /////////////////////////////////////////////////////////////////////////////
 
-# define RAY_T_MIN	    0.001
-# define RAY_T_MAX	    INFINITY
+# define RAY_T_MIN	    	0.001
+# define RAY_T_MAX	    	INFINITY
 
-typedef	struct		    s_ray
+typedef	struct		    	s_ray
 {
-	t_vector3		    origin;
-	t_vector3		    direction;
-	float	 		t;
-}					    t_ray;
+	t_vector3		    	origin;
+	t_vector3		    	direction;
+	float	 				t;
+}					    	t_ray;
 
-static t_vector3		ray_intersect(const t_ray *me)
+static t_vector3		    ray_intersect(const t_ray *me)
 {
-	t_vector3		    tmp;
+	t_vector3		        tmp;
 
 	tmp = vector3_mul(&me->direction, me->t);
 	return (vector3_add(&me->origin, &tmp));
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						LIGHT
+//						    LIGHT
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef enum		    e_light_type
+typedef enum		        e_light_type
 {
 	light_ambient,
 	light_point,
 	light_directional
-}					    t_light_type;
+}					        t_light_type;
 
-typedef	struct 		    s_light
+typedef	struct 		        s_light
 {
-	t_light_type	    type;
+	t_light_type	        type;
 	float				    intensity;
-	t_vector3		    vector;
-}					    t_light;
+	t_vector3		        vector;
+}					        t_light;
 
 // /////////////////////////////////////////////////////////////////////////////
-//						MATERIAL
+//						    MATERIAL
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		    s_material
+typedef struct 		        s_material
 {
-	t_vector3		    color;
-	float	 	    diffuse;
-	float	 	    specular;
-	float	 	    reflect;
-	float	 	    refract;
-}					    t_material;
+	t_vector3		        color;
+	float	 	            diffuse;
+	float	 	            specular;
+	float	 	            reflect;
+	float	 	            refract;
+}					        t_material;
 
 // //////////////////////////////////////////////////////////////////////////////
-//						SHAPE
+//						    SHAPE
 // //////////////////////////////////////////////////////////////////////////////
 
-typedef	struct 			s_shape_cl
+typedef	struct 			    s_shape_cl
 {
-	int 				function_index;
-	const t_material	material;
-	int					highlight;
-}						t_shape_cl;
+	int 				    function_index;
+	const t_material	    material;
+	int					    highlight;
+}						    t_shape_cl;
 
 
 // /////////////////////////////////////////////////////////////////////////////
-//						INTERSECTION
+//						    INTERSECTION
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct			s_intersection_cl
+typedef struct				s_intersection
 {
-	t_ray				ray;
-	t_vector3			normal;
-	float	         diffuse_intensity;
-	float	         specular_intensity;
-	t_vector3           color;
-	t_material			material;
-	float	 		shadow_ratio;
-	int 				highlight;
-}						t_intersection_cl;
+	t_ray					ray;
+	t_vector3				normal;
+	float         			diffuse_intensity;
+	float         			specular_intensity;
+	t_vector3           	color;
+	const t_material		material;
+	float 					shadow_ratio;
+	int 					highlight;
+}							t_intersection;
 
-static void				cl_intersection_reset(t_intersection_cl *me)
+static void				    intersection_reset(t_intersection *me)
 {
 	me->ray.t = RAY_T_MAX;
 	me->diffuse_intensity = 0.;
@@ -360,11 +359,11 @@ static void				cl_intersection_reset(t_intersection_cl *me)
 	me->shadow_ratio = 1.;
 }
 
-static t_vector3        intersection_light_direction
-                        (t_intersection_cl *intersection,
-                        constant t_light *light)
+static t_vector3        	intersection_light_direction
+                        	(t_intersection *intersection,
+                        	constant t_light *light)
 {
-	t_vector3           temp[3];
+	t_vector3           	temp[3];
 
 	if (light->type == light_directional)
 		temp[0] = light->vector;
@@ -378,19 +377,19 @@ static t_vector3        intersection_light_direction
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						SPHERE
+//							SPHERE
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_sphere_data
+typedef struct 				s_sphere_data
 {
-	t_vector3			center;
-	float	 		radius;
-}						t_sphere_data;
+	t_vector3				center;
+	float	 				radius;
+}							t_sphere_data;
 
-static int     			cl_sphere_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static int     				cl_sphere_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
 	CONST t_sphere_data *ptr;
 	t_sphere_data		data;
@@ -423,23 +422,23 @@ float	 	    discriminant;
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						PLANE
+//							PLANE
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_plane_data
+typedef struct 				s_plane_data
 {
-	t_vector3			position;
-	t_vector3			normal;
-}						t_plane_data;
+	t_vector3				position;
+	t_vector3				normal;
+}							t_plane_data;
 
-static int 			    cl_plane_intersect
-	                    (constant t_shape_cl *shape,
-	                    constant void *data_ptr,
-	                    t_intersection_cl *intersection)
+static int 			    	cl_plane_intersect
+	                    	(constant t_shape_cl *shape,
+	                    	constant void *data_ptr,
+	                    	t_intersection_cl *intersection)
 {
-	t_plane_data	    *data;
-	t_vector3		    temp[2];
-	float	 	    	value[3];
+	t_plane_data	    	*data;
+	t_vector3		    	temp[2];
+	float	 	    		value[3];
 
 	data = (t_plane_data *)data_ptr;
 	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
@@ -457,24 +456,24 @@ static int 			    cl_plane_intersect
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						CYLINDER
+//							CYLINDER
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_cylinder_data
+typedef struct 				s_cylinder_data
 {
-	t_vector3			top;
-	t_vector3			bottom;
-	float 				radius;
-	t_vector3			axis;
-}						t_cylinder_data;
+	t_vector3				top;
+	t_vector3				bottom;
+	float 					radius;
+	t_vector3				axis;
+}							t_cylinder_data;
 
-static float			cl_cylinder_caps_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static float				cl_cylinder_caps_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
-	t_cylinder_data		*data;
-	float				t[2];
+	t_cylinder_data			*data;
+	float					t[2];
 
 	data = (t_cylinder_data *)data_ptr;
 	if (!vector3_dot(&intersection->ray.direction, &data->axis))
@@ -496,17 +495,17 @@ static float			cl_cylinder_caps_intersect
 	return (t[1]);
 }
 
-static int				cl_cylinder_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static int					cl_cylinder_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
-	t_cylinder_data		*data;
-	float				k[3];
-	float				discriminant;
-	float				t[2];
-	t_vector3			temp[2];
-	float				angle[2];
+	t_cylinder_data			*data;
+	float					k[3];
+	float					discriminant;
+	float					t[2];
+	t_vector3				temp[2];
+	float					angle[2];
 
 	data = (t_cylinder_data *)data_ptr;
 	temp[0] = vector3_sub(&intersection->ray.origin, &data->bottom);
@@ -540,29 +539,29 @@ static int				cl_cylinder_intersect
 
 
 // /////////////////////////////////////////////////////////////////////////////
-//						AABB
+//							AABB
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_aabb_data
+typedef struct 				s_aabb_data
 {
-	t_vector3			min;
-	t_vector3			max;
-}						t_aabb_data;
+	t_vector3				min;
+	t_vector3				max;
+}							t_aabb_data;
 
 
-static int 				cl_aabb_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static int 					cl_aabb_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
-	t_aabb_data			*data;
-	float				inv_dir;
-	float 				t[2];
-	float 				t_near;
-	float 				t_far;
-	float 				t_temp;
-	int 				i;
-	t_vector3			normal;
+	t_aabb_data				*data;
+	float					inv_dir;
+	float 					t[2];
+	float 					t_near;
+	float 					t_far;
+	float 					t_temp;
+	int 					i;
+	t_vector3				normal;
 
 	normal = (t_vector3){0., 0., 0.};
 	data = (t_aabb_data *)data_ptr;
@@ -602,26 +601,26 @@ static int 				cl_aabb_intersect
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						CONE
+//							CONE
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_cone_data
+typedef struct 				s_cone_data
 {
-	t_vector3			top;
-	t_vector3			bottom;
-	float 				radius;
-	float          		tangens;
-	t_vector3			axis;
-}						t_cone_data;
+	t_vector3				top;
+	t_vector3				bottom;
+	float 					radius;
+	float          			tangens;
+	t_vector3				axis;
+}							t_cone_data;
 
 
-static float			cl_cone_cap_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static float				cl_cone_cap_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
-	t_cone_data		*data;
-	float 			t;
+	t_cone_data				*data;
+	float 					t;
 
 	data = (t_cone_data *)data_ptr;
 	if (!vector3_dot(&intersection->ray.direction, &data->axis))
@@ -637,17 +636,17 @@ static float			cl_cone_cap_intersect
 
 }
 
-int 				cl_cone_intersect
-					(constant t_shape_cl *shape,
-					constant void *data_ptr,
-					t_intersection_cl *intersection)
+int 						cl_cone_intersect
+							(constant t_shape_cl *shape,
+							constant void *data_ptr,
+							t_intersection_cl *intersection)
 {
-	t_cone_data	    *data;
-	float 			k[3];
-	float 			discriminant;
-	float 			t[2];
-	t_vector3		temp[3];
-	float 			angle[2];
+	t_cone_data	    		*data;
+	float 					k[3];
+	float 					discriminant;
+	float 					t[2];
+	t_vector3				temp[3];
+	float 					angle[2];
 
 	data = (t_cone_data *)data_ptr;
 	temp[0] = vector3_sub(&intersection->ray.origin, &data->top);
@@ -683,60 +682,30 @@ int 				cl_cone_intersect
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						DISK
+//							CAMERA
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_disk_data
+typedef struct				s_camera
 {
-	t_vector3			position;
-	t_vector3			normal;
-	float 				radius;
-}						t_disk_data;
+	t_vector3				position;
+	float					direction_length;
+	t_vector3				direction;
+	t_vector3				axis_x;
+	t_vector3				axis_y;
+	t_vector3				axis_z;
+	t_vector3				vp_axis_x;
+	t_vector3				vp_axis_y;
+	t_vector3       		angles;
+}							t_camera;
 
-int 					cl_disk_intersect
-						(constant t_shape_cl *shape,
-						constant void *data_ptr,
-						t_intersection_cl *intersection)
+static t_ray            	camera_cast_ray
+                        	(constant t_camera *me,
+                        	t_vector3 *vp_values)
 {
-	t_disk_data			*data;
-	float 				t;
-
-	data = (t_disk_data *)data_ptr;
-	if (!vector3_dot(&intersection->ray.direction, &data->normal))
-		return (0);
-	t = vector3_s_dot(data->normal, vector3_sub(&data->position, &intersection->ray.origin)) / vector3_dot(&intersection->ray.direction, &data->normal);
-	if (vector3_s_length(vector3_s_sub(vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t)), data->position)) > data->radius)
-		return (0);
-	if (t <= RAY_T_MIN || t >= intersection->ray.t)
-		return (0);
-	intersection->ray.t = t;
-	intersection->normal = data->normal;
-	intersection->color = shape->material.color;
-	intersection->material = shape->material;
-	intersection->highlight = shape->highlight;
-	return (1);
-}
-
-// /////////////////////////////////////////////////////////////////////////////
-//						CAMERA
-// /////////////////////////////////////////////////////////////////////////////
-
-typedef struct			s_camera_cl
-{
-	t_vector3			position;
-	t_vector3			direction;
-	t_vector3			vp_axis_x;
-	t_vector3			vp_axis_y;
-}						t_camera_cl;
-
-static t_ray            cl_camera_cast_ray
-                        (global t_camera_cl *me,
-                        t_vector3 *vp_values)
-{
-	t_ray		        tmp;
-	t_vector3           up;
-	t_vector3           right;
-	t_vector3	        point;
+	t_ray		        	tmp;
+	t_vector3           	up;
+	t_vector3           	right;
+	t_vector3	        	point;
 
 	right = me->vp_axis_x;
 	up = me->vp_axis_y;
@@ -751,54 +720,40 @@ static t_ray            cl_camera_cast_ray
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						SCENE
+//							SCENE
 // /////////////////////////////////////////////////////////////////////////////
 
-typedef struct			s_scene_setting
+typedef struct				s_scene_setting
 {
-	int 				diffuse_light;
-	int 				specular_light;
-	int 				shadows;
-	int 				tshadows;
-}						t_scene_setting;
+	int 					diffuse_light;
+	int 					specular_light;
+	int 					shadows;
+	int 					tshadows;
+}							t_scene_setting;
 
-typedef	struct			s_scene_cl
+typedef	struct				s_scene_cl
 {
-	t_vector3       	background;
-	t_scene_setting		settings;
-	int 				shape_data_element_size;
-	int 				shape_type_number;
-	int 				shape_number;
-	int 				light_number;
-}						t_scene_cl;
+	t_vector3       		background;
+	t_scene_setting			settings;
+	int 					shape_data_element_size;
+	int 					shape_type_number;
+	int 					shape_number;
+	int 					light_number;
+}							t_scene_cl;
 
 // /////////////////////////////////////////////////////////////////////////////
-//						SCENE INTERSECTION
+//							SCENE INTERSECTION
 // /////////////////////////////////////////////////////////////////////////////
 
-#define CALL_INTERSECT(i, shape, ptr, inter, result)                            \
-    if (i == 0)                                                                 \
-        result += cl_sphere_intersect(shape, ptr, inter);                       \
-    else if (i == 1)                                                            \
-        result += cl_plane_intersect(shape, ptr, inter);						\
-	else if (i == 2)                                                            \
-        result += cl_cylinder_intersect(shape, ptr, inter);						\
-    else if (i == 3)															\
-    	result += cl_aabb_intersect(shape, ptr, inter);							\
-	else if (i == 4)															\
-    	result += cl_cone_intersect(shape, ptr, inter);							\
-	else if (i == 5)															\
-    	result += cl_disk_intersect(shape, ptr, inter);
-
-static int 				cl_scene_intersect
-                        (constant t_scene_cl *scene,
-						constant void *shape_data,
-					    constant t_shape_cl *shapes,
-					    t_intersection_cl *intersection)
+static int 					cl_scene_intersect
+                        	(constant t_scene_cl *scene,
+							constant void *shape_data,
+					    	constant t_shape_cl *shapes,
+					    	t_intersection_cl *intersection)
 {
-	int 				i;
-	constant void		*data;
-	int 				result;
+	int 					i;
+	constant void			*data;
+	int 					result;
 
 	i = 0;
 	result = 0;
@@ -816,14 +771,14 @@ static int 				cl_scene_intersect
 //						SHADOW
 // /////////////////////////////////////////////////////////////////////////////
 
-static int              cl_scene_check_shadow
-                        (constant t_scene_cl *scene,
-                        constant void *shape_data,
-                        constant t_shape_cl *shapes,
-                        t_intersection_cl *intersection,
-                        t_vector3 *light_direction)
+static int              	cl_scene_check_shadow
+                        	(constant t_scene_cl *scene,
+                        	constant void *shape_data,
+                        	constant t_shape_cl *shapes,
+                        	t_intersection_cl *intersection,
+                        	t_vector3 *light_direction)
 {
-	t_intersection_cl   shadow;
+	t_intersection_cl   	shadow;
 
 	cl_intersection_reset(&shadow);
 	shadow.ray.origin = ray_intersect(&intersection->ray);
@@ -842,28 +797,28 @@ static int              cl_scene_check_shadow
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						LIGHT TOOLS
+//							LIGHT TOOLS
 // /////////////////////////////////////////////////////////////////////////////
 
 
-static void             cl_intersection_lighting_diffuse
-                        (t_intersection_cl *intersection,
-                        constant t_light *light,
-                        t_vector3 *light_direction)
+static void             	cl_intersection_lighting_diffuse
+                        	(t_intersection_cl *intersection,
+                        	constant t_light *light,
+                        	t_vector3 *light_direction)
 {
-float	          dot;
+float	          			dot;
 
 	if ((dot = vector3_dot(light_direction, &intersection->normal)) > 0.)
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material.diffuse * light->intensity * dot / vector3_length(light_direction);
 }
 
-static void             cl_intersection_lighting_specular
-                        (t_intersection_cl *intersection,
-                        constant t_light *light,
-                        t_vector3 *light_direction)
+static void             	cl_intersection_lighting_specular
+                        	(t_intersection_cl *intersection,
+                        	constant t_light *light,
+                        	t_vector3 *light_direction)
 {
-	t_vector3            halfway;
-float	          dot;
+	t_vector3            	halfway;
+float	          			dot;
 
 	halfway = vector3_add(light_direction, &intersection->ray.direction);
 	vector3_normalize(&halfway);
@@ -872,10 +827,10 @@ float	          dot;
 
 }
 
-static void             cl_intersection_make_color
-                        (t_intersection_cl *intersection)
+static void             	cl_intersection_make_color
+                        	(t_intersection_cl *intersection)
 {
-	t_vector3		    white;
+	t_vector3		   		white;
 
 	white = (t_vector3){1., 1., 1.};
 	intersection->color = vector3_mul(&intersection->material.color, intersection->diffuse_intensity);
@@ -884,18 +839,18 @@ static void             cl_intersection_make_color
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						LIGHT
+//							LIGHT
 // /////////////////////////////////////////////////////////////////////////////
 
-static void				cl_scene_light_up
-                        (constant t_scene_cl *scene,
-                        constant void *shape_data,
-                        constant t_shape_cl *shapes,
-                        constant t_light *lights,
-                        t_intersection_cl *intersection)
+static void					cl_scene_light_up
+                        	(constant t_scene_cl *scene,
+                        	constant void *shape_data,
+                        	constant t_shape_cl *shapes,
+                        	constant t_light *lights,
+                        	t_intersection_cl *intersection)
 {
-	int                 i;
-	t_vector3           light_direction;
+	int                 	i;
+	t_vector3           	light_direction;
 
 	i = 0;
 
@@ -924,14 +879,14 @@ static void				cl_scene_light_up
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						REFLECTION
+//							REFLECTION
 // /////////////////////////////////////////////////////////////////////////////
 
-static void				cl_intersection_reflect
-                        (t_intersection_cl *target,
-                         const t_intersection_cl *source)
+static void					cl_intersection_reflect
+                        	(t_intersection_cl *target,
+                        	const t_intersection_cl *source)
 {
-	t_vector3		    temp;
+	t_vector3		    	temp;
 
 	temp = vector3_mul(&source->normal, -2. * vector3_dot(&source->normal, &source->ray.direction));
 	vector3_add_eq(&temp, &source->ray.direction);
@@ -940,19 +895,19 @@ static void				cl_intersection_reflect
 	target->ray.origin = ray_intersect(&source->ray);
 }
 
-static void             cl_reflect(
-                        t_intersection_cl *original,
-                        constant t_scene_cl *scene,
-                        constant void *shape_data,
-                        constant t_shape_cl *shapes,
-                        constant t_light *lights,
-                        int *depth)
+static void             	cl_reflect(
+                        	t_intersection_cl *original,
+                        	constant t_scene_cl *scene,
+                        	constant void *shape_data,
+                        	constant t_shape_cl *shapes,
+                        	constant t_light *lights,
+                        	int *depth)
 {
-    t_vector3           result_color;
-    t_intersection_cl   previous;
-    t_intersection_cl   current;
-float	         depth_ratio;
-    int                 i;
+    t_vector3           	result_color;
+    t_intersection_cl   	previous;
+    t_intersection_cl   	current;
+	float	         		depth_ratio;
+    int                 	i;
 
     result_color = (t_vector3){0., 0., 0.};
     previous = *original;
@@ -978,93 +933,19 @@ float	         depth_ratio;
 }
 
 // /////////////////////////////////////////////////////////////////////////////
-//						REFRACTION
-// /////////////////////////////////////////////////////////////////////////////
-
-static void				cl_intersection_refract
-                        (t_intersection_cl *target,
-                        const t_intersection_cl *source)
-{
-    t_vector3		refracted;
-    t_vector3		a, b;
-    t_vector3		m;
-	float			sin_alpha;
-	float			sin_beta;
-	float			cos_beta;
-
-    m = vector3_mul(&source->normal, -1. * vector3_dot(&source->normal, &source->ray.direction));
-    vector3_add_eq(&m, &source->ray.direction);
-    vector3_normalize(&m);
-    sin_alpha = vector3_s_length(vector3_s_cross(vector3_mul(&source->ray.direction, -1.), source->normal));
-    sin_beta = sin_alpha / 1.008;
-    cos_beta = sqrtf(1 - sin_beta * sin_beta);
-    a = vector3_mul(&source->normal, -1 * cos_beta);
-    b = vector3_mul(&m, sin_beta);
-    refracted = vector3_add(&a, &b);
-    vector3_normalize(&refracted);
-    target->ray.direction = refracted;
-    target->ray.origin = ray_intersect(&source->ray);
-}
-
-static void             cl_refract(
-                        t_intersection_cl *original,
-                        constant t_scene_cl *scene,
-                        constant void *shape_data,
-                        constant t_shape_cl *shapes,
-                        constant t_light *lights,
-                        int *depth)
-{
-    t_vector3           result_color;
-    t_intersection_cl   previous;
-    t_intersection_cl   current;
-float	         depth_ratio;
-    int                 i;
-
-    result_color = (t_vector3){0., 0., 0.};
-    previous = *original;
-    depth_ratio = original->material.refract;
-    i = 0;
-    while (i <= *depth && previous.material.refract)
-    {
-        cl_intersection_reset(&current);
-        cl_intersection_refract(&current, &previous);
-        if (cl_scene_intersect(scene, shape_data, shapes, &current))
-        {
-            cl_scene_light_up(scene, shape_data, shapes, lights, &current);
-            vector3_mul_eq(&current.color, depth_ratio);
-            vector3_add_eq(&result_color, &current.color);
-        }
-        else
-            vector3_s_add_eq(&result_color, vector3_s_mul(scene->background, depth_ratio));
-        previous = current;
-        depth_ratio *= original->material.refract;
-        i++;
-    }
-    vector3_add_eq(&original->color, &result_color);
-}
-
-// /////////////////////////////////////////////////////////////////////////////
-//						RAY_TRACER
+//							RAY_TRACER
 // /////////////////////////////////////////////////////////////////////////////
 
 
-kernel void				cl_trace_ray(
-                        global int *image,
-                        global t_camera_cl *camera,
-						constant t_scene_cl *scene,
-						constant void *shape_data,
-						constant t_shape_cl *shapes,
-						constant t_light *lights,
-						constant int *reflection_depth,
-						constant int *refraction_depth,
-						constant int *win_width,
-						constant int *win_height)
+kernel void					render
+							(global int *image,
+                        	constant t_scene *scene)
 {
-    int 				global_id;
-    t_vector3           screen;
-    t_vector3           vp;
-    t_intersection_cl	intersection;
-    int                 depth[2];
+    int 					global_id;
+    t_vector3           	screen;
+    t_vector3           	vp;
+    t_intersection			intersection;
+    int                 	depth[2];
 
 	global_id = get_global_id(0);
 
@@ -1074,7 +955,7 @@ kernel void				cl_trace_ray(
 	vp.x = screen.x - (*win_width - 1.) / 2.;
     vp.y = -1 * screen.y + (*win_height - 1.) / 2.;
 
-	intersection.ray = cl_camera_cast_ray(camera, &vp);
+	intersection.ray = camera_cast_ray(&scene->camera, &vp);
 
     depth[0] = *reflection_depth;
     depth[1] = *refraction_depth;

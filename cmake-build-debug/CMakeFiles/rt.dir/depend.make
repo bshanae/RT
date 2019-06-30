@@ -204,6 +204,44 @@ CMakeFiles/rt.dir/rt/rt.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.c
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.h
 
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../../21_libft/includes/libft_ft_printf.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../../21_libft/includes/libft_vector.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: .././parameters.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../camera/camera.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../color/color.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../intersection/intersection.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../light/light.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../material/material.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../mlx/mlx_keys.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../open_cl/open_cl.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../ray/ray.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../scene/scene.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../shape/shape.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../rt/rt.h
+CMakeFiles/rt.dir/rt/rt_clone.c.o: ../rt/rt_clone.c
+
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../../21_libft/includes/libft_ft_printf.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../../21_libft/includes/libft_vector.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: .././parameters.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../camera/camera.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../color/color.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../intersection/intersection.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../light/light.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../material/material.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../mlx/mlx_keys.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../open_cl/open_cl.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../ray/ray.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../scene/scene.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../shape/shape.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../rt/rt.h
+CMakeFiles/rt.dir/rt/rt_control.c.o: ../rt/rt_control.c
+
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_vector.h

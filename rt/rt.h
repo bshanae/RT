@@ -60,6 +60,10 @@ void							rt_add_scene(t_rt *me, t_scene *scene);
 
 void							rt_render(t_rt *me);
 
+int								rt_ctrl_camera_move(t_rt *rt, int key);
+
+int								rt_ctrl_camera_rotate(t_rt *rt, int key);
+
 void							rt_ctrl_light(t_rt *rt, int key);
 
 void							rt_ctrl_shape(t_rt *rt, int key);

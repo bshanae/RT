@@ -1,8 +1,6 @@
 #ifndef OPEN_CL_H
 # define OPEN_CL_H
 
-# define CL_SILENCE_DEPRECATION
-
 # include <OpenCL/CL.h>
 
 # include "libft_ft_printf.h"
@@ -12,9 +10,9 @@
 # include "shape_list.h"
 # include "parameters.h"
 
-# define CL_SOURCE		"../rt/rt_parallel.cl"
-# define CL_FUNCTION	"cl_trace_ray"
-# define CL_OPTIONS		"-I ../float_macro"
+# define CL_SOURCE		"../open_cl/program.cl"
+# define CL_FUNCTION	"render"
+# define CL_OPTIONS		"-I ../parameters.h"
 
 # define OCL_BUFF_INIT 1000
 # define OCL_BUFF_MULT 5

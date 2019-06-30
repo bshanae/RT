@@ -96,5 +96,12 @@ void					cone_move(t_shape *shape, t_vector3 move);
 t_shape					shape_cone
 	 (t_vector3 top, t_vector3 bottom, float tangens, t_material material);
 
+/*
+********************************************************************************
+**						MOVE
+********************************************************************************
+*/
+
+void					shape_move(t_shape *shape, t_vector3 step);
 
 #endif

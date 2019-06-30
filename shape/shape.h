@@ -9,8 +9,8 @@
 # define SHAPE_ID_SPHERE			0
 # define SHAPE_ID_PLANE				1
 # define SHAPE_ID_CYLINDER			2
-# define SHAPE_ID_AABB				3
-# define SHAPE_ID_CONE				4
+# define SHAPE_ID_CONE				3
+# define SHAPE_ID_AABB				4
 
 typedef	struct 						s_shape
 {
