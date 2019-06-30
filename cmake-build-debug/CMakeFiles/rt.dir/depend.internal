@@ -101,7 +101,6 @@ CMakeFiles/rt.dir/main.c.o
  ../shape/shape_list.h
  ../vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/main.c
- /Users/bshanae/workspace/21_ray_tracer/test.c
 CMakeFiles/rt.dir/material/material.c.o
  ../color/color.h
  ../vector3/vector3.h
@@ -316,9 +315,6 @@ CMakeFiles/rt.dir/shape/shape_sphere.c.o
  /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
  /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
  /Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c
-CMakeFiles/rt.dir/test.c.o
- ../../21_libft/includes/libft_standart.h
- /Users/bshanae/workspace/21_ray_tracer/test.c
 CMakeFiles/rt.dir/vector3/vector3.c.o
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.c
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h

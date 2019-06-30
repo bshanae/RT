@@ -241,9 +241,6 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/test.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3.c">
 			<Option target="rt"/>
 		</Unit>

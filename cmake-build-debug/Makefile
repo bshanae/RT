@@ -987,33 +987,6 @@ shape/shape_sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
-test.o: test.c.o
-
-.PHONY : test.o
-
-# target to build an object file
-test.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/test.c.o
-.PHONY : test.c.o
-
-test.i: test.c.i
-
-.PHONY : test.i
-
-# target to preprocess a source file
-test.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/test.c.i
-.PHONY : test.c.i
-
-test.s: test.c.s
-
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/test.c.s
-.PHONY : test.c.s
-
 vector3/vector3.o: vector3/vector3.c.o
 
 .PHONY : vector3/vector3.o
@@ -1146,9 +1119,6 @@ help:
 	@echo "... shape/shape_sphere.o"
 	@echo "... shape/shape_sphere.i"
 	@echo "... shape/shape_sphere.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 	@echo "... vector3/vector3.o"
 	@echo "... vector3/vector3.i"
 	@echo "... vector3/vector3.s"

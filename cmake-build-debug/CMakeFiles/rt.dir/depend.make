@@ -100,7 +100,6 @@ CMakeFiles/rt.dir/main.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/main.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/main.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/main.c.o: ../main.c
-CMakeFiles/rt.dir/main.c.o: ../test.c
 
 CMakeFiles/rt.dir/material/material.c.o: ../color/color.h
 CMakeFiles/rt.dir/material/material.c.o: ../vector3/vector3.h
@@ -315,9 +314,6 @@ CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
-
-CMakeFiles/rt.dir/test.c.o: ../../21_libft/includes/libft_standart.h
-CMakeFiles/rt.dir/test.c.o: ../test.c
 
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.c
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.h

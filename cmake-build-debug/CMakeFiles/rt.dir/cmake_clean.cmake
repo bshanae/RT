@@ -32,7 +32,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/rt/rt_parallel.c.o"
   "CMakeFiles/rt.dir/console/console_parallel.c.o"
   "CMakeFiles/rt.dir/open_cl/open_cl.c.o"
-  "CMakeFiles/rt.dir/test.c.o"
   "rt.pdb"
   "rt"
 )
