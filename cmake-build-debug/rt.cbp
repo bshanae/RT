@@ -56,10 +56,10 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/shape"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/material"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/light"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/console"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/mlx"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/open_cl"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/float_macro"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -93,10 +93,10 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/shape"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/material"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/light"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/console"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/mlx"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/open_cl"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/float_macro"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -118,49 +118,7 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/color/color.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/color/color.h">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console.h">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_diffuse.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_parallel.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_reflect.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_refract.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_reset.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_shadows.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_specular.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/console_translate.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/console/cosnole_tshadows.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/intersection/intersection.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/intersection/intersection.h">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/color/color_list.h">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/light/light.c">
@@ -172,10 +130,7 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/main.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/material/material.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/material/material.h">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/material/material_list.h">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.c">
@@ -184,10 +139,28 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/ray/ray.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_alloc_device_data.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/ray/ray.h">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_context.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_device.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_kernel.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_program.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_queue.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_error.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_set_arguments.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt.c">
@@ -196,13 +169,13 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt_consistent.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt_clone.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt_control.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt_mlx.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/rt/rt_parallel.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene.c">
@@ -211,10 +184,10 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_lights.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_a.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_shapes.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape.c">
@@ -230,9 +203,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_cylinder.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_disk.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c">

@@ -16,9 +16,9 @@ t_vector3			*vector3_new(int num_of_elements, ...);
 
 void				vector3_delete(t_vector3 **me);
 
-float 		vector3_length(const t_vector3 *me);
+float 				vector3_length(const t_vector3 *me);
 
-float 		vector3_s_length(const t_vector3 me);
+float 				vector3_s_length(const t_vector3 me);
 
 void				vector3_normalize(t_vector3 *me);
 

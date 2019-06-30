@@ -30,6 +30,8 @@ unistd.h
 libft_standart.h
 ../../21_libft/includes/libft_standart.h
 
+.././parameters.h
+
 ../camera/camera.h
 vector3.h
 ../camera/vector3.h
@@ -42,13 +44,7 @@ math.h
 vector3.h
 ../color/vector3.h
 
-../console/console.h
-libft_vector.h
-../console/libft_vector.h
-mlx_keys.h
-../console/mlx_keys.h
-mlx.h
-../console/mlx.h
+../color/color_list.h
 
 ../intersection/intersection.h
 ray.h
@@ -68,6 +64,10 @@ stdarg.h
 color.h
 ../material/color.h
 
+../material/material_list.h
+color_list.h
+../material/color_list.h
+
 ../mlx/mlx_keys.h
 
 ../open_cl/open_cl.h
@@ -81,6 +81,8 @@ scene.h
 ../open_cl/scene.h
 shape_list.h
 ../open_cl/shape_list.h
+parameters.h
+../open_cl/parameters.h
 
 ../ray/ray.h
 vector3.h
@@ -89,12 +91,8 @@ vector3.h
 ../rt/rt.h
 mlx.h
 ../rt/mlx.h
-console.h
-../rt/console.h
 intersection.h
 ../rt/intersection.h
-camera.h
-../rt/camera.h
 scene.h
 ../rt/scene.h
 shape_list.h
@@ -105,12 +103,24 @@ mlx_keys.h
 ../rt/mlx_keys.h
 
 ../scene/scene.h
+parameters.h
+../scene/parameters.h
 shape.h
 ../scene/shape.h
+shape_list.h
+../scene/shape_list.h
 light.h
 ../scene/light.h
 libft_vector.h
 ../scene/libft_vector.h
+camera.h
+../scene/camera.h
+
+../scene/scene_list.h
+scene.h
+../scene/scene.h
+material_list.h
+../scene/material_list.h
 
 ../shape/shape.h
 material.h
@@ -137,6 +147,30 @@ stdlib.h
 /Users/bshanae/workspace/21_ray_tracer/main.c
 rt.h
 /Users/bshanae/workspace/21_ray_tracer/rt.h
+scene_list.h
+/Users/bshanae/workspace/21_ray_tracer/scene_list.h
+
+/Users/bshanae/workspace/21_ray_tracer/rt/rt.c
+camera.h
+-
+rt.h
+/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+
+/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+mlx.h
+/Users/bshanae/workspace/21_ray_tracer/rt/mlx.h
+intersection.h
+/Users/bshanae/workspace/21_ray_tracer/rt/intersection.h
+scene.h
+/Users/bshanae/workspace/21_ray_tracer/rt/scene.h
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/shape_list.h
+/Users/bshanae/workspace/21_ray_tracer/rt/shape_list.h
+open_cl.h
+/Users/bshanae/workspace/21_ray_tracer/rt/open_cl.h
+mlx_keys.h
+/Users/bshanae/workspace/21_ray_tracer/rt/mlx_keys.h
+
+/Users/bshanae/workspace/21_ray_tracer/rt/rt_mlx.c
+rt.h
+/Users/bshanae/workspace/21_ray_tracer/rt/rt.h
 

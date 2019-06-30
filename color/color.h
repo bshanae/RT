@@ -18,8 +18,4 @@ typedef union			u_color
 	t_rgb				rgb;
 }						t_color;
 
-t_vector3				color_pack(int value);
-
-int                     color_unpack(t_vector3 vector);
-
 #endif

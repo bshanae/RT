@@ -150,330 +150,6 @@ camera/camera.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera.c.s
 .PHONY : camera/camera.c.s
 
-color/color.o: color/color.c.o
-
-.PHONY : color/color.o
-
-# target to build an object file
-color/color.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.o
-.PHONY : color/color.c.o
-
-color/color.i: color/color.c.i
-
-.PHONY : color/color.i
-
-# target to preprocess a source file
-color/color.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.i
-.PHONY : color/color.c.i
-
-color/color.s: color/color.c.s
-
-.PHONY : color/color.s
-
-# target to generate assembly for a file
-color/color.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.s
-.PHONY : color/color.c.s
-
-console/console.o: console/console.c.o
-
-.PHONY : console/console.o
-
-# target to build an object file
-console/console.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.o
-.PHONY : console/console.c.o
-
-console/console.i: console/console.c.i
-
-.PHONY : console/console.i
-
-# target to preprocess a source file
-console/console.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.i
-.PHONY : console/console.c.i
-
-console/console.s: console/console.c.s
-
-.PHONY : console/console.s
-
-# target to generate assembly for a file
-console/console.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.s
-.PHONY : console/console.c.s
-
-console/console_diffuse.o: console/console_diffuse.c.o
-
-.PHONY : console/console_diffuse.o
-
-# target to build an object file
-console/console_diffuse.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.o
-.PHONY : console/console_diffuse.c.o
-
-console/console_diffuse.i: console/console_diffuse.c.i
-
-.PHONY : console/console_diffuse.i
-
-# target to preprocess a source file
-console/console_diffuse.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.i
-.PHONY : console/console_diffuse.c.i
-
-console/console_diffuse.s: console/console_diffuse.c.s
-
-.PHONY : console/console_diffuse.s
-
-# target to generate assembly for a file
-console/console_diffuse.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.s
-.PHONY : console/console_diffuse.c.s
-
-console/console_parallel.o: console/console_parallel.c.o
-
-.PHONY : console/console_parallel.o
-
-# target to build an object file
-console/console_parallel.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.o
-.PHONY : console/console_parallel.c.o
-
-console/console_parallel.i: console/console_parallel.c.i
-
-.PHONY : console/console_parallel.i
-
-# target to preprocess a source file
-console/console_parallel.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.i
-.PHONY : console/console_parallel.c.i
-
-console/console_parallel.s: console/console_parallel.c.s
-
-.PHONY : console/console_parallel.s
-
-# target to generate assembly for a file
-console/console_parallel.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.s
-.PHONY : console/console_parallel.c.s
-
-console/console_reflect.o: console/console_reflect.c.o
-
-.PHONY : console/console_reflect.o
-
-# target to build an object file
-console/console_reflect.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.o
-.PHONY : console/console_reflect.c.o
-
-console/console_reflect.i: console/console_reflect.c.i
-
-.PHONY : console/console_reflect.i
-
-# target to preprocess a source file
-console/console_reflect.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.i
-.PHONY : console/console_reflect.c.i
-
-console/console_reflect.s: console/console_reflect.c.s
-
-.PHONY : console/console_reflect.s
-
-# target to generate assembly for a file
-console/console_reflect.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.s
-.PHONY : console/console_reflect.c.s
-
-console/console_refract.o: console/console_refract.c.o
-
-.PHONY : console/console_refract.o
-
-# target to build an object file
-console/console_refract.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.o
-.PHONY : console/console_refract.c.o
-
-console/console_refract.i: console/console_refract.c.i
-
-.PHONY : console/console_refract.i
-
-# target to preprocess a source file
-console/console_refract.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.i
-.PHONY : console/console_refract.c.i
-
-console/console_refract.s: console/console_refract.c.s
-
-.PHONY : console/console_refract.s
-
-# target to generate assembly for a file
-console/console_refract.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.s
-.PHONY : console/console_refract.c.s
-
-console/console_reset.o: console/console_reset.c.o
-
-.PHONY : console/console_reset.o
-
-# target to build an object file
-console/console_reset.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.o
-.PHONY : console/console_reset.c.o
-
-console/console_reset.i: console/console_reset.c.i
-
-.PHONY : console/console_reset.i
-
-# target to preprocess a source file
-console/console_reset.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.i
-.PHONY : console/console_reset.c.i
-
-console/console_reset.s: console/console_reset.c.s
-
-.PHONY : console/console_reset.s
-
-# target to generate assembly for a file
-console/console_reset.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.s
-.PHONY : console/console_reset.c.s
-
-console/console_shadows.o: console/console_shadows.c.o
-
-.PHONY : console/console_shadows.o
-
-# target to build an object file
-console/console_shadows.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.o
-.PHONY : console/console_shadows.c.o
-
-console/console_shadows.i: console/console_shadows.c.i
-
-.PHONY : console/console_shadows.i
-
-# target to preprocess a source file
-console/console_shadows.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.i
-.PHONY : console/console_shadows.c.i
-
-console/console_shadows.s: console/console_shadows.c.s
-
-.PHONY : console/console_shadows.s
-
-# target to generate assembly for a file
-console/console_shadows.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.s
-.PHONY : console/console_shadows.c.s
-
-console/console_specular.o: console/console_specular.c.o
-
-.PHONY : console/console_specular.o
-
-# target to build an object file
-console/console_specular.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.o
-.PHONY : console/console_specular.c.o
-
-console/console_specular.i: console/console_specular.c.i
-
-.PHONY : console/console_specular.i
-
-# target to preprocess a source file
-console/console_specular.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.i
-.PHONY : console/console_specular.c.i
-
-console/console_specular.s: console/console_specular.c.s
-
-.PHONY : console/console_specular.s
-
-# target to generate assembly for a file
-console/console_specular.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.s
-.PHONY : console/console_specular.c.s
-
-console/console_translate.o: console/console_translate.c.o
-
-.PHONY : console/console_translate.o
-
-# target to build an object file
-console/console_translate.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.o
-.PHONY : console/console_translate.c.o
-
-console/console_translate.i: console/console_translate.c.i
-
-.PHONY : console/console_translate.i
-
-# target to preprocess a source file
-console/console_translate.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.i
-.PHONY : console/console_translate.c.i
-
-console/console_translate.s: console/console_translate.c.s
-
-.PHONY : console/console_translate.s
-
-# target to generate assembly for a file
-console/console_translate.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.s
-.PHONY : console/console_translate.c.s
-
-console/cosnole_tshadows.o: console/cosnole_tshadows.c.o
-
-.PHONY : console/cosnole_tshadows.o
-
-# target to build an object file
-console/cosnole_tshadows.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.o
-.PHONY : console/cosnole_tshadows.c.o
-
-console/cosnole_tshadows.i: console/cosnole_tshadows.c.i
-
-.PHONY : console/cosnole_tshadows.i
-
-# target to preprocess a source file
-console/cosnole_tshadows.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.i
-.PHONY : console/cosnole_tshadows.c.i
-
-console/cosnole_tshadows.s: console/cosnole_tshadows.c.s
-
-.PHONY : console/cosnole_tshadows.s
-
-# target to generate assembly for a file
-console/cosnole_tshadows.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.s
-.PHONY : console/cosnole_tshadows.c.s
-
-intersection/intersection.o: intersection/intersection.c.o
-
-.PHONY : intersection/intersection.o
-
-# target to build an object file
-intersection/intersection.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.o
-.PHONY : intersection/intersection.c.o
-
-intersection/intersection.i: intersection/intersection.c.i
-
-.PHONY : intersection/intersection.i
-
-# target to preprocess a source file
-intersection/intersection.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.i
-.PHONY : intersection/intersection.c.i
-
-intersection/intersection.s: intersection/intersection.c.s
-
-.PHONY : intersection/intersection.s
-
-# target to generate assembly for a file
-intersection/intersection.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.s
-.PHONY : intersection/intersection.c.s
-
 light/light.o: light/light.c.o
 
 .PHONY : light/light.o
@@ -528,33 +204,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/main.c.s
 .PHONY : main.c.s
 
-material/material.o: material/material.c.o
-
-.PHONY : material/material.o
-
-# target to build an object file
-material/material.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.o
-.PHONY : material/material.c.o
-
-material/material.i: material/material.c.i
-
-.PHONY : material/material.i
-
-# target to preprocess a source file
-material/material.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.i
-.PHONY : material/material.c.i
-
-material/material.s: material/material.c.s
-
-.PHONY : material/material.s
-
-# target to generate assembly for a file
-material/material.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.s
-.PHONY : material/material.c.s
-
 open_cl/open_cl.o: open_cl/open_cl.c.o
 
 .PHONY : open_cl/open_cl.o
@@ -582,32 +231,221 @@ open_cl/open_cl.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.s
 .PHONY : open_cl/open_cl.c.s
 
-ray/ray.o: ray/ray.c.o
+open_cl/open_cl_alloc_device_data.o: open_cl/open_cl_alloc_device_data.c.o
 
-.PHONY : ray/ray.o
+.PHONY : open_cl/open_cl_alloc_device_data.o
 
 # target to build an object file
-ray/ray.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.o
-.PHONY : ray/ray.c.o
+open_cl/open_cl_alloc_device_data.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_alloc_device_data.c.o
+.PHONY : open_cl/open_cl_alloc_device_data.c.o
 
-ray/ray.i: ray/ray.c.i
+open_cl/open_cl_alloc_device_data.i: open_cl/open_cl_alloc_device_data.c.i
 
-.PHONY : ray/ray.i
+.PHONY : open_cl/open_cl_alloc_device_data.i
 
 # target to preprocess a source file
-ray/ray.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.i
-.PHONY : ray/ray.c.i
+open_cl/open_cl_alloc_device_data.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_alloc_device_data.c.i
+.PHONY : open_cl/open_cl_alloc_device_data.c.i
 
-ray/ray.s: ray/ray.c.s
+open_cl/open_cl_alloc_device_data.s: open_cl/open_cl_alloc_device_data.c.s
 
-.PHONY : ray/ray.s
+.PHONY : open_cl/open_cl_alloc_device_data.s
 
 # target to generate assembly for a file
-ray/ray.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.s
-.PHONY : ray/ray.c.s
+open_cl/open_cl_alloc_device_data.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_alloc_device_data.c.s
+.PHONY : open_cl/open_cl_alloc_device_data.c.s
+
+open_cl/open_cl_create_context.o: open_cl/open_cl_create_context.c.o
+
+.PHONY : open_cl/open_cl_create_context.o
+
+# target to build an object file
+open_cl/open_cl_create_context.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_context.c.o
+.PHONY : open_cl/open_cl_create_context.c.o
+
+open_cl/open_cl_create_context.i: open_cl/open_cl_create_context.c.i
+
+.PHONY : open_cl/open_cl_create_context.i
+
+# target to preprocess a source file
+open_cl/open_cl_create_context.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_context.c.i
+.PHONY : open_cl/open_cl_create_context.c.i
+
+open_cl/open_cl_create_context.s: open_cl/open_cl_create_context.c.s
+
+.PHONY : open_cl/open_cl_create_context.s
+
+# target to generate assembly for a file
+open_cl/open_cl_create_context.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_context.c.s
+.PHONY : open_cl/open_cl_create_context.c.s
+
+open_cl/open_cl_create_device.o: open_cl/open_cl_create_device.c.o
+
+.PHONY : open_cl/open_cl_create_device.o
+
+# target to build an object file
+open_cl/open_cl_create_device.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_device.c.o
+.PHONY : open_cl/open_cl_create_device.c.o
+
+open_cl/open_cl_create_device.i: open_cl/open_cl_create_device.c.i
+
+.PHONY : open_cl/open_cl_create_device.i
+
+# target to preprocess a source file
+open_cl/open_cl_create_device.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_device.c.i
+.PHONY : open_cl/open_cl_create_device.c.i
+
+open_cl/open_cl_create_device.s: open_cl/open_cl_create_device.c.s
+
+.PHONY : open_cl/open_cl_create_device.s
+
+# target to generate assembly for a file
+open_cl/open_cl_create_device.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_device.c.s
+.PHONY : open_cl/open_cl_create_device.c.s
+
+open_cl/open_cl_create_kernel.o: open_cl/open_cl_create_kernel.c.o
+
+.PHONY : open_cl/open_cl_create_kernel.o
+
+# target to build an object file
+open_cl/open_cl_create_kernel.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_kernel.c.o
+.PHONY : open_cl/open_cl_create_kernel.c.o
+
+open_cl/open_cl_create_kernel.i: open_cl/open_cl_create_kernel.c.i
+
+.PHONY : open_cl/open_cl_create_kernel.i
+
+# target to preprocess a source file
+open_cl/open_cl_create_kernel.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_kernel.c.i
+.PHONY : open_cl/open_cl_create_kernel.c.i
+
+open_cl/open_cl_create_kernel.s: open_cl/open_cl_create_kernel.c.s
+
+.PHONY : open_cl/open_cl_create_kernel.s
+
+# target to generate assembly for a file
+open_cl/open_cl_create_kernel.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_kernel.c.s
+.PHONY : open_cl/open_cl_create_kernel.c.s
+
+open_cl/open_cl_create_program.o: open_cl/open_cl_create_program.c.o
+
+.PHONY : open_cl/open_cl_create_program.o
+
+# target to build an object file
+open_cl/open_cl_create_program.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_program.c.o
+.PHONY : open_cl/open_cl_create_program.c.o
+
+open_cl/open_cl_create_program.i: open_cl/open_cl_create_program.c.i
+
+.PHONY : open_cl/open_cl_create_program.i
+
+# target to preprocess a source file
+open_cl/open_cl_create_program.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_program.c.i
+.PHONY : open_cl/open_cl_create_program.c.i
+
+open_cl/open_cl_create_program.s: open_cl/open_cl_create_program.c.s
+
+.PHONY : open_cl/open_cl_create_program.s
+
+# target to generate assembly for a file
+open_cl/open_cl_create_program.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_program.c.s
+.PHONY : open_cl/open_cl_create_program.c.s
+
+open_cl/open_cl_create_queue.o: open_cl/open_cl_create_queue.c.o
+
+.PHONY : open_cl/open_cl_create_queue.o
+
+# target to build an object file
+open_cl/open_cl_create_queue.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_queue.c.o
+.PHONY : open_cl/open_cl_create_queue.c.o
+
+open_cl/open_cl_create_queue.i: open_cl/open_cl_create_queue.c.i
+
+.PHONY : open_cl/open_cl_create_queue.i
+
+# target to preprocess a source file
+open_cl/open_cl_create_queue.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_queue.c.i
+.PHONY : open_cl/open_cl_create_queue.c.i
+
+open_cl/open_cl_create_queue.s: open_cl/open_cl_create_queue.c.s
+
+.PHONY : open_cl/open_cl_create_queue.s
+
+# target to generate assembly for a file
+open_cl/open_cl_create_queue.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_create_queue.c.s
+.PHONY : open_cl/open_cl_create_queue.c.s
+
+open_cl/open_cl_error.o: open_cl/open_cl_error.c.o
+
+.PHONY : open_cl/open_cl_error.o
+
+# target to build an object file
+open_cl/open_cl_error.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_error.c.o
+.PHONY : open_cl/open_cl_error.c.o
+
+open_cl/open_cl_error.i: open_cl/open_cl_error.c.i
+
+.PHONY : open_cl/open_cl_error.i
+
+# target to preprocess a source file
+open_cl/open_cl_error.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_error.c.i
+.PHONY : open_cl/open_cl_error.c.i
+
+open_cl/open_cl_error.s: open_cl/open_cl_error.c.s
+
+.PHONY : open_cl/open_cl_error.s
+
+# target to generate assembly for a file
+open_cl/open_cl_error.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_error.c.s
+.PHONY : open_cl/open_cl_error.c.s
+
+open_cl/open_cl_set_arguments.o: open_cl/open_cl_set_arguments.c.o
+
+.PHONY : open_cl/open_cl_set_arguments.o
+
+# target to build an object file
+open_cl/open_cl_set_arguments.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_set_arguments.c.o
+.PHONY : open_cl/open_cl_set_arguments.c.o
+
+open_cl/open_cl_set_arguments.i: open_cl/open_cl_set_arguments.c.i
+
+.PHONY : open_cl/open_cl_set_arguments.i
+
+# target to preprocess a source file
+open_cl/open_cl_set_arguments.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_set_arguments.c.i
+.PHONY : open_cl/open_cl_set_arguments.c.i
+
+open_cl/open_cl_set_arguments.s: open_cl/open_cl_set_arguments.c.s
+
+.PHONY : open_cl/open_cl_set_arguments.s
+
+# target to generate assembly for a file
+open_cl/open_cl_set_arguments.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl_set_arguments.c.s
+.PHONY : open_cl/open_cl_set_arguments.c.s
 
 rt/rt.o: rt/rt.c.o
 
@@ -636,32 +474,59 @@ rt/rt.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt.c.s
 .PHONY : rt/rt.c.s
 
-rt/rt_consistent.o: rt/rt_consistent.c.o
+rt/rt_clone.o: rt/rt_clone.c.o
 
-.PHONY : rt/rt_consistent.o
+.PHONY : rt/rt_clone.o
 
 # target to build an object file
-rt/rt_consistent.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.o
-.PHONY : rt/rt_consistent.c.o
+rt/rt_clone.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_clone.c.o
+.PHONY : rt/rt_clone.c.o
 
-rt/rt_consistent.i: rt/rt_consistent.c.i
+rt/rt_clone.i: rt/rt_clone.c.i
 
-.PHONY : rt/rt_consistent.i
+.PHONY : rt/rt_clone.i
 
 # target to preprocess a source file
-rt/rt_consistent.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.i
-.PHONY : rt/rt_consistent.c.i
+rt/rt_clone.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_clone.c.i
+.PHONY : rt/rt_clone.c.i
 
-rt/rt_consistent.s: rt/rt_consistent.c.s
+rt/rt_clone.s: rt/rt_clone.c.s
 
-.PHONY : rt/rt_consistent.s
+.PHONY : rt/rt_clone.s
 
 # target to generate assembly for a file
-rt/rt_consistent.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.s
-.PHONY : rt/rt_consistent.c.s
+rt/rt_clone.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_clone.c.s
+.PHONY : rt/rt_clone.c.s
+
+rt/rt_control.o: rt/rt_control.c.o
+
+.PHONY : rt/rt_control.o
+
+# target to build an object file
+rt/rt_control.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_control.c.o
+.PHONY : rt/rt_control.c.o
+
+rt/rt_control.i: rt/rt_control.c.i
+
+.PHONY : rt/rt_control.i
+
+# target to preprocess a source file
+rt/rt_control.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_control.c.i
+.PHONY : rt/rt_control.c.i
+
+rt/rt_control.s: rt/rt_control.c.s
+
+.PHONY : rt/rt_control.s
+
+# target to generate assembly for a file
+rt/rt_control.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_control.c.s
+.PHONY : rt/rt_control.c.s
 
 rt/rt_mlx.o: rt/rt_mlx.c.o
 
@@ -690,33 +555,6 @@ rt/rt_mlx.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_mlx.c.s
 .PHONY : rt/rt_mlx.c.s
 
-rt/rt_parallel.o: rt/rt_parallel.c.o
-
-.PHONY : rt/rt_parallel.o
-
-# target to build an object file
-rt/rt_parallel.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.o
-.PHONY : rt/rt_parallel.c.o
-
-rt/rt_parallel.i: rt/rt_parallel.c.i
-
-.PHONY : rt/rt_parallel.i
-
-# target to preprocess a source file
-rt/rt_parallel.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.i
-.PHONY : rt/rt_parallel.c.i
-
-rt/rt_parallel.s: rt/rt_parallel.c.s
-
-.PHONY : rt/rt_parallel.s
-
-# target to generate assembly for a file
-rt/rt_parallel.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.s
-.PHONY : rt/rt_parallel.c.s
-
 scene/scene.o: scene/scene.c.o
 
 .PHONY : scene/scene.o
@@ -744,59 +582,32 @@ scene/scene.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene.c.s
 .PHONY : scene/scene.c.s
 
-scene/scene_lights.o: scene/scene_lights.c.o
+scene/scene_a.o: scene/scene_a.c.o
 
-.PHONY : scene/scene_lights.o
-
-# target to build an object file
-scene/scene_lights.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.o
-.PHONY : scene/scene_lights.c.o
-
-scene/scene_lights.i: scene/scene_lights.c.i
-
-.PHONY : scene/scene_lights.i
-
-# target to preprocess a source file
-scene/scene_lights.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.i
-.PHONY : scene/scene_lights.c.i
-
-scene/scene_lights.s: scene/scene_lights.c.s
-
-.PHONY : scene/scene_lights.s
-
-# target to generate assembly for a file
-scene/scene_lights.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.s
-.PHONY : scene/scene_lights.c.s
-
-scene/scene_shapes.o: scene/scene_shapes.c.o
-
-.PHONY : scene/scene_shapes.o
+.PHONY : scene/scene_a.o
 
 # target to build an object file
-scene/scene_shapes.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.o
-.PHONY : scene/scene_shapes.c.o
+scene/scene_a.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_a.c.o
+.PHONY : scene/scene_a.c.o
 
-scene/scene_shapes.i: scene/scene_shapes.c.i
+scene/scene_a.i: scene/scene_a.c.i
 
-.PHONY : scene/scene_shapes.i
+.PHONY : scene/scene_a.i
 
 # target to preprocess a source file
-scene/scene_shapes.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.i
-.PHONY : scene/scene_shapes.c.i
+scene/scene_a.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_a.c.i
+.PHONY : scene/scene_a.c.i
 
-scene/scene_shapes.s: scene/scene_shapes.c.s
+scene/scene_a.s: scene/scene_a.c.s
 
-.PHONY : scene/scene_shapes.s
+.PHONY : scene/scene_a.s
 
 # target to generate assembly for a file
-scene/scene_shapes.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.s
-.PHONY : scene/scene_shapes.c.s
+scene/scene_a.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_a.c.s
+.PHONY : scene/scene_a.c.s
 
 shape/shape.o: shape/shape.c.o
 
@@ -906,33 +717,6 @@ shape/shape_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cylinder.c.s
 .PHONY : shape/shape_cylinder.c.s
 
-shape/shape_disk.o: shape/shape_disk.c.o
-
-.PHONY : shape/shape_disk.o
-
-# target to build an object file
-shape/shape_disk.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.o
-.PHONY : shape/shape_disk.c.o
-
-shape/shape_disk.i: shape/shape_disk.c.i
-
-.PHONY : shape/shape_disk.i
-
-# target to preprocess a source file
-shape/shape_disk.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.i
-.PHONY : shape/shape_disk.c.i
-
-shape/shape_disk.s: shape/shape_disk.c.s
-
-.PHONY : shape/shape_disk.s
-
-# target to generate assembly for a file
-shape/shape_disk.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.s
-.PHONY : shape/shape_disk.c.s
-
 shape/shape_plane.o: shape/shape_plane.c.o
 
 .PHONY : shape/shape_plane.o
@@ -1026,78 +810,57 @@ help:
 	@echo "... camera/camera.o"
 	@echo "... camera/camera.i"
 	@echo "... camera/camera.s"
-	@echo "... color/color.o"
-	@echo "... color/color.i"
-	@echo "... color/color.s"
-	@echo "... console/console.o"
-	@echo "... console/console.i"
-	@echo "... console/console.s"
-	@echo "... console/console_diffuse.o"
-	@echo "... console/console_diffuse.i"
-	@echo "... console/console_diffuse.s"
-	@echo "... console/console_parallel.o"
-	@echo "... console/console_parallel.i"
-	@echo "... console/console_parallel.s"
-	@echo "... console/console_reflect.o"
-	@echo "... console/console_reflect.i"
-	@echo "... console/console_reflect.s"
-	@echo "... console/console_refract.o"
-	@echo "... console/console_refract.i"
-	@echo "... console/console_refract.s"
-	@echo "... console/console_reset.o"
-	@echo "... console/console_reset.i"
-	@echo "... console/console_reset.s"
-	@echo "... console/console_shadows.o"
-	@echo "... console/console_shadows.i"
-	@echo "... console/console_shadows.s"
-	@echo "... console/console_specular.o"
-	@echo "... console/console_specular.i"
-	@echo "... console/console_specular.s"
-	@echo "... console/console_translate.o"
-	@echo "... console/console_translate.i"
-	@echo "... console/console_translate.s"
-	@echo "... console/cosnole_tshadows.o"
-	@echo "... console/cosnole_tshadows.i"
-	@echo "... console/cosnole_tshadows.s"
-	@echo "... intersection/intersection.o"
-	@echo "... intersection/intersection.i"
-	@echo "... intersection/intersection.s"
 	@echo "... light/light.o"
 	@echo "... light/light.i"
 	@echo "... light/light.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... material/material.o"
-	@echo "... material/material.i"
-	@echo "... material/material.s"
 	@echo "... open_cl/open_cl.o"
 	@echo "... open_cl/open_cl.i"
 	@echo "... open_cl/open_cl.s"
-	@echo "... ray/ray.o"
-	@echo "... ray/ray.i"
-	@echo "... ray/ray.s"
+	@echo "... open_cl/open_cl_alloc_device_data.o"
+	@echo "... open_cl/open_cl_alloc_device_data.i"
+	@echo "... open_cl/open_cl_alloc_device_data.s"
+	@echo "... open_cl/open_cl_create_context.o"
+	@echo "... open_cl/open_cl_create_context.i"
+	@echo "... open_cl/open_cl_create_context.s"
+	@echo "... open_cl/open_cl_create_device.o"
+	@echo "... open_cl/open_cl_create_device.i"
+	@echo "... open_cl/open_cl_create_device.s"
+	@echo "... open_cl/open_cl_create_kernel.o"
+	@echo "... open_cl/open_cl_create_kernel.i"
+	@echo "... open_cl/open_cl_create_kernel.s"
+	@echo "... open_cl/open_cl_create_program.o"
+	@echo "... open_cl/open_cl_create_program.i"
+	@echo "... open_cl/open_cl_create_program.s"
+	@echo "... open_cl/open_cl_create_queue.o"
+	@echo "... open_cl/open_cl_create_queue.i"
+	@echo "... open_cl/open_cl_create_queue.s"
+	@echo "... open_cl/open_cl_error.o"
+	@echo "... open_cl/open_cl_error.i"
+	@echo "... open_cl/open_cl_error.s"
+	@echo "... open_cl/open_cl_set_arguments.o"
+	@echo "... open_cl/open_cl_set_arguments.i"
+	@echo "... open_cl/open_cl_set_arguments.s"
 	@echo "... rt/rt.o"
 	@echo "... rt/rt.i"
 	@echo "... rt/rt.s"
-	@echo "... rt/rt_consistent.o"
-	@echo "... rt/rt_consistent.i"
-	@echo "... rt/rt_consistent.s"
+	@echo "... rt/rt_clone.o"
+	@echo "... rt/rt_clone.i"
+	@echo "... rt/rt_clone.s"
+	@echo "... rt/rt_control.o"
+	@echo "... rt/rt_control.i"
+	@echo "... rt/rt_control.s"
 	@echo "... rt/rt_mlx.o"
 	@echo "... rt/rt_mlx.i"
 	@echo "... rt/rt_mlx.s"
-	@echo "... rt/rt_parallel.o"
-	@echo "... rt/rt_parallel.i"
-	@echo "... rt/rt_parallel.s"
 	@echo "... scene/scene.o"
 	@echo "... scene/scene.i"
 	@echo "... scene/scene.s"
-	@echo "... scene/scene_lights.o"
-	@echo "... scene/scene_lights.i"
-	@echo "... scene/scene_lights.s"
-	@echo "... scene/scene_shapes.o"
-	@echo "... scene/scene_shapes.i"
-	@echo "... scene/scene_shapes.s"
+	@echo "... scene/scene_a.o"
+	@echo "... scene/scene_a.i"
+	@echo "... scene/scene_a.s"
 	@echo "... shape/shape.o"
 	@echo "... shape/shape.i"
 	@echo "... shape/shape.s"
@@ -1110,9 +873,6 @@ help:
 	@echo "... shape/shape_cylinder.o"
 	@echo "... shape/shape_cylinder.i"
 	@echo "... shape/shape_cylinder.s"
-	@echo "... shape/shape_disk.o"
-	@echo "... shape/shape_disk.i"
-	@echo "... shape/shape_disk.s"
 	@echo "... shape/shape_plane.o"
 	@echo "... shape/shape_plane.i"
 	@echo "... shape/shape_plane.s"

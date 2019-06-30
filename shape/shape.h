@@ -4,23 +4,20 @@
 # include "material.h"
 # include "intersection.h"
 
-typedef	struct 			s_shape
-{
-	void 				*data;
-	unsigned long		data_size;
-	int 				(*intersect)(struct s_shape *, t_intersection *);
-	void				(*move)(struct s_shape *, t_vector3 move);
-	const t_material	*material;
-	int					highlight;
-}						t_shape;
+# define SHAPE_DATA_SIZE_RESERVE	128
 
-typedef	struct 			s_shape_cl
-{
-	int 				function_index;
-	const t_material	material;
-	int					highlight;
-}						t_shape_cl;
+# define SHAPE_ID_SPHERE			0
+# define SHAPE_ID_PLANE				1
+# define SHAPE_ID_CYLINDER			2
+# define SHAPE_ID_AABB				3
+# define SHAPE_ID_CONE				4
 
-void					shape_delete(t_shape **me);
+typedef	struct 						s_shape
+{
+	int 							id;
+	unsigned char					data[SHAPE_DATA_SIZE_RESERVE];
+	t_material						material;
+	int								highlight;
+}									t_shape;
 
 #endif

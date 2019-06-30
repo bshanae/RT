@@ -2,87 +2,72 @@
 # define RT_H
 
 # include "mlx.h"
-
-# include "console.h"
 # include "intersection.h"
-# include "camera.h"
 # include "scene.h"
 # include "shape_list.h"
 # include "open_cl.h"
 # include "mlx_keys.h"
 
-# define WIN_WIDTH         1000
-# define WIN_HEIGHT        500
+# define RT_CAMERA_POS_STEP		0.15
+# define RT_CAMERA_DIR_STEP		0.01
 
+# define RT_SCENE_CAPACITY		8
 
-# define CAMERA_POS_STEP	0.15
-# define CAMERA_DIR_STEP	0.01
-# define DEF_BACKGROUND 	(t_vector3){.0, .3, .3}
-
-# define                    REFLECTION_DEPTH 2
-# define                    REFRACTION_DEPTH 3
-
-typedef	struct 				s_rt
+typedef struct					s_control_light
 {
-	void					*mlx_ptr;
-	void					*win_ptr;
-	void					*img_ptr;
-	int 					*img_data;
-	t_camera				*camera;
-	t_scene					*scene;
-	struct
-	{
-		int 				is_on;
-		u_long 				index;
-	}						light_ctrl;
-	struct
-	{
-		int 				is_on;
-		u_long				index;
-	}						object_ctrl;
-	struct s_rt				*clone;
-	t_console				*console;
-	struct
-	{
-		int 				parallel;
-		int 				reflection_depth;
-		int 				refraction_depth;
-		int 				*diffuse_light;
-		int 				*specular_light;
-		int 				*shadows;
-		int 				*tshadows;
-	}						settings;
-	t_open_cl				*open_cl;
-}							t_rt;
+	int 						is_on;
+	u_long 						index;
+}								t_control_light;
 
-t_rt						*rt_new();
+typedef struct					s_control_shape
+{
+	int 						is_on;
+	u_long						index;
+}								t_control_shape;
 
-void						rt_delete(t_rt **me);
+typedef struct 					s_scenes
+{
+	t_scene						*data[RT_SCENE_CAPACITY];
+	int 						length;
+	int 						index;
+	t_scene						**current;
+}								t_scenes;
 
-void						rt_clone(t_rt *me);
+typedef	struct s_rt 			t_rt;
 
-void						rt_reset(t_rt **rt);
+struct							s_rt
+{
+	void						*mlx_ptr;
+	void						*win_ptr;
+	void						*img_ptr;
+	int 						*img_data;
+	t_scenes					scenes;
+	t_control_light				ctrl_light;
+	t_control_shape				ctrl_shape;
+	t_rt						*clone;
+	t_open_cl					*open_cl;
+};
 
-t_vector3					rt_ray_trace(t_rt *me, t_intersection *original, int reflection_depth, int refraction_depth);
+t_rt							*rt_new();
 
-void						rt_render(t_rt *me);
+void							rt_delete(t_rt **me);
 
-void						rt_build_open_cl(t_rt *me);
+void							rt_clone(t_rt *me);
 
-void						rt_consistent(t_rt *me);
+void							rt_reset(t_rt **rt);
 
-void 						rt_parallel(t_rt *me);
+void							rt_add_scene(t_rt *me, t_scene *scene);
 
-void						rt_set_camera(t_rt *me, t_vector3 position);
+void							rt_render(t_rt *me);
 
-void						rt_set_background(t_rt *me, t_vector3 color);
+void							rt_ctrl_light(t_rt *rt, int key);
 
-void						rt_perform(t_rt **me);
+void							rt_ctrl_shape(t_rt *rt, int key);
 
-int							rt_key_press(int key, void *ptr);
+int								rt_key_press(int key, void *ptr);
 
-int							rt_key_release(int key, void *ptr);
+int								rt_key_release(int key, void *ptr);
 
-int							rt_exit(void *ptr);
+int								rt_exit(void *ptr);
 
 #endif

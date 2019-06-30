@@ -15,12 +15,11 @@ typedef enum		e_light_type
 typedef	struct 		s_light
 {
 	t_light_type	type;
-	float		intensity;
+	float			intensity;
 	t_vector3		vector;
 }					t_light;
 
-t_light				*light_new(t_light_type type, ...);
+t_light				light_create(t_light_type type, ...);
 
-void				light_delete(t_light **me);
 
 #endif

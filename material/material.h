@@ -3,15 +3,12 @@
 
 # include "color.h"
 
-typedef struct 		s_material
+typedef struct 				s_material
 {
-	t_vector3		color;
-	float 	diffuse;
-	float 	specular;
-	float 	reflect;
-	float 	refract;
-}					t_material;
-
-t_material			*material_new(t_vector3 color, float diffuse, float specular, float reflect, float refract);
+	t_vector3				color;
+	float 					diffuse;
+	float 					specular;
+	float 					reflect;
+}							t_material;
 
 #endif
