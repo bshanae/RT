@@ -31,6 +31,7 @@ CMakeFiles/rt.dir/main.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/main.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/main.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/main.c.o: ../main.c
+CMakeFiles/rt.dir/main.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../../21_libft/includes/libft_standart.h
@@ -203,6 +204,7 @@ CMakeFiles/rt.dir/rt/rt.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.c
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.h
+CMakeFiles/rt.dir/rt/rt.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rt.dir/rt/rt_clone.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_clone.c.o: ../../21_libft/includes/libft_standart.h
@@ -222,6 +224,7 @@ CMakeFiles/rt.dir/rt/rt_clone.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/rt/rt_clone.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_clone.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_clone.c.o: ../rt/rt_clone.c
+CMakeFiles/rt.dir/rt/rt_clone.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rt.dir/rt/rt_control.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_control.c.o: ../../21_libft/includes/libft_standart.h
@@ -241,6 +244,7 @@ CMakeFiles/rt.dir/rt/rt_control.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/rt/rt_control.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_control.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_control.c.o: ../rt/rt_control.c
+CMakeFiles/rt.dir/rt/rt_control.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_standart.h
@@ -260,6 +264,7 @@ CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../rt/rt_mlx.c
+CMakeFiles/rt.dir/rt/rt_mlx.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rt.dir/scene/scene.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/scene/scene.c.o: ../../21_libft/includes/libft_vector.h

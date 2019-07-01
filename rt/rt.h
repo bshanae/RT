@@ -28,13 +28,13 @@
 typedef struct					s_control_light
 {
 	int							is_on;
-	u_long						index;
+	int							index;
 }								t_control_light;
 
 typedef struct					s_control_shape
 {
 	int							is_on;
-	u_long						index;
+	int							index;
 }								t_control_shape;
 
 typedef struct					s_scenes
@@ -76,13 +76,9 @@ int								rt_ctrl_camera_move(t_rt *rt, int key);
 
 int								rt_ctrl_camera_rotate(t_rt *rt, int key);
 
-void							rt_ctrl_light(t_rt *rt, int key);
-
-void							rt_ctrl_shape(t_rt *rt, int key);
+int								rt_ctrl_scene(t_rt *rt, int key);
 
 int								rt_key_press(int key, void *ptr);
-
-int								rt_key_light_is_on(int key, t_rt *rt);
 
 int								rt_key_release(int key, void *ptr);
 

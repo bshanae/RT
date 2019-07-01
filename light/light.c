@@ -25,3 +25,8 @@ t_light				light_create(t_light_type type, ...)
 	va_end(args);
 	return (new);
 }
+
+void				light_move(t_light *light, t_vector3 step)
+{
+	vector3_add_eq(&light->vector, &step);
+}

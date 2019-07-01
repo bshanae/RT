@@ -21,34 +21,14 @@ int					rt_key_press(int key, void *ptr)
 		rt_exit(rt);
 	else if (key == KEY_R)
 		rt_reset(rt);
+	else if (rt_ctrl_scene(*rt, key))
+		;
 	else if (rt_ctrl_camera_move(*rt, key))
 		;
 	else if (rt_ctrl_camera_rotate(*rt, key))
 		;
-	else if (key == KEY_L)
-		(*rt)->ctrl_light.is_on = 1;
-	else if (key == KEY_O)
-	{
-		(*(*rt)->scenes.current)->shapes[(*rt)->ctrl_shape.index].highlight = 1;
-		(*rt)->ctrl_shape.is_on = 1;
-	}
-	else if (rt_key_light_is_on(key, *rt))
-		;
-	else
-		return (0);
 	rt_render((*rt));
 	return (0);
-}
-
-int					rt_key_light_is_on(int key, t_rt *rt)
-{
-	if (rt->ctrl_light.is_on)
-		rt_ctrl_light(rt, key);
-	else if (rt->ctrl_shape.is_on)
-		rt_ctrl_shape(rt, key);
-	else
-		return (0);
-	return (1);
 }
 
 int					rt_key_release(int key, void *ptr)

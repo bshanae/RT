@@ -13,6 +13,8 @@
 #ifndef OPEN_CL_H
 # define OPEN_CL_H
 
+# define CL_SILENCE_DEPRECATION
+
 # include <OpenCL/CL.h>
 
 # include "libft_ft_printf.h"

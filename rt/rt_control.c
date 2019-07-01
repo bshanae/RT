@@ -33,6 +33,8 @@ int					rt_ctrl_camera_move(t_rt *rt, int key)
 		camera->position.y -= RT_CAMERA_POS_STEP;
 	else if (key == KEY_Q)
 		camera->position.y += RT_CAMERA_POS_STEP;
+	else
+		return (0);
 	return (1);
 }
 
@@ -55,37 +57,34 @@ int					rt_ctrl_camera_rotate(t_rt *rt, int key)
 	return (1);
 }
 
-void				rt_ctrl_light(t_rt *rt, int key)
+static int			rt_ctrl_light
+	(t_rt *rt, t_camera *camera,t_light *light, int key)
 {
-	t_light			*light;
-
-	light = &(*rt->scenes.current)->lights[rt->ctrl_light.index];
 	if (key == KEY_W)
-		light->vector.z -= RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_z, -RT_CAMERA_POS_STEP));
 	else if (key == KEY_S)
-		light->vector.z += RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_z, RT_CAMERA_POS_STEP));
 	else if (key == KEY_A)
-		light->vector.x -= RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_x, -RT_CAMERA_POS_STEP));
 	else if (key == KEY_D)
-		light->vector.x += RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_x, RT_CAMERA_POS_STEP));
 	else if (key == KEY_E)
-		light->vector.y -= RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_y, -RT_CAMERA_POS_STEP));
 	else if (key == KEY_Q)
-		light->vector.y += RT_CAMERA_POS_STEP;
+		light_move(light, vector3_mul(&camera->axis_y, RT_CAMERA_POS_STEP));
 	else if (key == KEY_ENTER)
 	{
 		if (++rt->ctrl_light.index == (*rt->scenes.current)->lights_length)
 			rt->ctrl_light.index = 0;
 	}
+	else
+		return (0);
+	return (1);
 }
 
-void				rt_ctrl_shape(t_rt *rt, int key)
+static int			rt_ctrl_shape
+	(t_rt *rt, t_camera *camera,t_shape *shape, int key)
 {
-	t_shape			*shape;
-	t_camera		*camera;
-
-	shape = &(*rt->scenes.current)->shapes[rt->ctrl_shape.index];
-	camera = &(*rt->scenes.current)->camera;
 	if (key == KEY_W)
 		shape_move(shape, vector3_mul(&camera->axis_z, -RT_CAMERA_POS_STEP));
 	else if (key == KEY_S)
@@ -105,4 +104,32 @@ void				rt_ctrl_shape(t_rt *rt, int key)
 			rt->ctrl_shape.index = 0;
 		(*rt->scenes.current)->shapes[rt->ctrl_shape.index].highlight = 1;
 	}
+	else
+		return (0);
+	return (1);
+}
+
+int 				rt_ctrl_scene(t_rt *rt, int key)
+{
+	t_camera		*camera;
+	t_light			*light;
+	t_shape			*shape;
+
+	camera = &(*rt->scenes.current)->camera;
+	light = &(*rt->scenes.current)->lights[rt->ctrl_light.index];
+	shape = &(*rt->scenes.current)->shapes[rt->ctrl_shape.index];
+	if (key == KEY_L)
+		rt->ctrl_light.is_on = 1;
+	else if (key == KEY_O)
+	{
+		(*rt->scenes.current)->shapes[rt->ctrl_shape.index].highlight = 1;
+		rt->ctrl_shape.is_on = 1;
+	}
+	else if (rt->ctrl_light.is_on && rt_ctrl_light(rt, camera, light, key))
+		;
+	else if (rt->ctrl_shape.is_on && rt_ctrl_shape(rt, camera, shape, key))
+		;
+	else
+		return (0);
+	return (1);
 }

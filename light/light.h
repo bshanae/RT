@@ -33,4 +33,6 @@ typedef	struct		s_light
 
 t_light				light_create(t_light_type type, ...);
 
+void				light_move(t_light *light, t_vector3 step);
+
 #endif

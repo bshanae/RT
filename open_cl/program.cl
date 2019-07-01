@@ -644,7 +644,7 @@ static float				cl_cone_cap_intersect
 
 }
 
-int 						cl_cone_intersect
+int 						cone_intersect
 							(constant t_shape_cl *shape,
 							constant void *data_ptr,
 							t_intersection_cl *intersection)
@@ -801,7 +801,8 @@ static void             	intersection_lighting_diffuse
                         	constant t_light *light,
                         	t_vector3 *light_direction)
 {
-float	          			dot;
+    float	          		dot;
+
 
 	if ((dot = vector3_dot(light_direction, &intersection->normal)) > 0.)
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material.diffuse * light->intensity * dot / vector3_length(light_direction);
@@ -813,7 +814,7 @@ static void             	intersection_lighting_specular
                         	t_vector3 *light_direction)
 {
 	t_vector3            	halfway;
-float	          			dot;
+    float	          		dot;
 
 	halfway = vector3_add(light_direction, &intersection->ray.direction);
 	vector3_normalize(&halfway);
@@ -846,6 +847,12 @@ static void					scene_light_up
 
 	i = 0;
 
+	if (intersection->highlight)
+	{
+		intersection->color = (t_vector3){1., 1., 1.};
+		return ;
+	}
+
 	while(i < scene->lights_length)
 	{
 		intersection->shadow_ratio = 1.;
@@ -856,14 +863,14 @@ static void					scene_light_up
 			continue ;
 		}
 		else
-			light_direction = intersection_light_direction(intersection, scene->lights);
-//		if (scene_check_shadow(scene, intersection, &light_direction))
-//		{
-//		    i++;
-//			continue ;
-//		}
+			light_direction = intersection_light_direction(intersection, scene->lights + i);
+		if (scene_check_shadow(scene, intersection, &light_direction))
+		{
+		    i++;
+			continue ;
+		}
 		intersection_lighting_diffuse(intersection, scene->lights + i, &light_direction);
-//		intersection_lighting_specular(intersection, scene->lights + i, &light_direction);
+		intersection_lighting_specular(intersection, scene->lights + i, &light_direction);
 		i++;
 	}
 	intersection_make_color(intersection);
@@ -951,17 +958,11 @@ kernel void					render
 		return ;
 	}
 
-	if (intersection.highlight)
-	{
-		image[global_id] = color_unpack((t_vector3){1., 1., 1.});
-		return ;
-	}
-
 	scene_light_up(scene, &intersection);
 
-//	if (intersection.material.reflect)
-//	   reflect(scene, &intersection);
-//
+	if (intersection.material.reflect)
+	   reflect(scene, &intersection);
+
     image[global_id] = color_unpack(intersection.color);
 
 }
