@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:11:54 by ashari            #+#    #+#             */
-/*   Updated: 2019/06/30 19:11:55 by ashari           ###   ########.fr       */
+/*   Updated: 2019/07/01 12:08:35 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ t_open_cl				*open_cl_new(int *image)
 	open_cl_create_program(new);
 	open_cl_create_queue(new);
 	open_cl_create_kernel(new);
-	open_cl_alloc_device(new);
-	open_cl_set_arguments(new);
 	new->total_size = WINDOW_WIDTH * WINDOW_HEIGHT;
 	new->data_host.image = image;
 	new->data_size.image = sizeof(int) * WINDOW_WIDTH * WINDOW_HEIGHT;
 	new->data_size.scene = sizeof(t_scene);
+	open_cl_alloc_device(new);
+	open_cl_set_arguments(new);
 	return (new);
 }
 

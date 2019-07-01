@@ -1,8 +1,8 @@
 #include "parameters.h"
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							VECTOR3
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct		    	s_vector3
 {
@@ -84,7 +84,7 @@ static t_vector3			vector3_s_cross(t_vector3 v1, t_vector3 v2)
 
 static t_vector3	    	vector3_sub(t_vector3 *v1, t_vector3 *v2)
 {
-	t_vector3		    result;
+	t_vector3		    	result;
 
 	result.x = v1->x - v2->x;
 	result.y = v1->y - v2->y;
@@ -226,9 +226,9 @@ static void					vector3_rotate_y(t_vector3 *me, float	 theta)
 	me->z = -1 * copy.x * sin(theta) + copy.z * cos(theta);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							COLOR
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct			    s_rgb
 {
@@ -244,7 +244,7 @@ typedef union			    u_color
 	t_rgb				    rgb;
 }						    t_color;
 
-static int                  cl_color_unpack(t_vector3 vector)
+static int                  color_unpack(t_vector3 vector)
 {
     t_color                 color;
 	float	 	    	    *ptr;
@@ -270,9 +270,9 @@ static int                  cl_color_unpack(t_vector3 vector)
     return (color.mix);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							RAY
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # define RAY_T_MIN	    	0.001
 # define RAY_T_MAX	    	INFINITY
@@ -292,9 +292,9 @@ static t_vector3		    ray_intersect(const t_ray *me)
 	return (vector3_add(&me->origin, &tmp));
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //						    LIGHT
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef enum		        e_light_type
 {
@@ -310,9 +310,9 @@ typedef	struct 		        s_light
 	t_vector3		        vector;
 }					        t_light;
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //						    MATERIAL
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		        s_material
 {
@@ -320,24 +320,31 @@ typedef struct 		        s_material
 	float	 	            diffuse;
 	float	 	            specular;
 	float	 	            reflect;
-	float	 	            refract;
 }					        t_material;
 
-// //////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //						    SHAPE
-// //////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef	struct 			    s_shape_cl
+
+# define SHAPE_ID_SPHERE	0
+# define SHAPE_ID_PLANE		1
+# define SHAPE_ID_CYLINDER	2
+# define SHAPE_ID_CONE		3
+# define SHAPE_ID_AABB		4
+
+typedef	struct 				s_shape
 {
-	int 				    function_index;
-	const t_material	    material;
-	int					    highlight;
-}						    t_shape_cl;
+	int 					id;
+	unsigned char			data[SHAPE_DATA_SIZE_RESERVE];
+	t_material				material;
+	int						highlight;
+}							t_shape;
 
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //						    INTERSECTION
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct				s_intersection
 {
@@ -346,7 +353,7 @@ typedef struct				s_intersection
 	float         			diffuse_intensity;
 	float         			specular_intensity;
 	t_vector3           	color;
-	const t_material		material;
+	t_material				material;
 	float 					shadow_ratio;
 	int 					highlight;
 }							t_intersection;
@@ -376,9 +383,9 @@ static t_vector3        	intersection_light_direction
 	return (temp[0]);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							SPHERE
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 				s_sphere_data
 {
@@ -386,19 +393,18 @@ typedef struct 				s_sphere_data
 	float	 				radius;
 }							t_sphere_data;
 
-static int     				cl_sphere_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
+static int     				sphere_intersect
+							(constant t_shape *shape,
+							t_intersection *intersection)
 {
-	CONST t_sphere_data *ptr;
-	t_sphere_data		data;
-float	 		k[3];
-float	 		t;
-float	 	    discriminant;
-	t_vector3			temp;
+	constant t_sphere_data	*ptr;
+	t_sphere_data			data;
+	float					k[3];
+	float					t;
+	float					discriminant;
+	t_vector3				temp;
 
-    ptr = (constant t_sphere_data *)data_ptr;
+    ptr = (constant t_sphere_data *)shape->data;
     data.center = ptr->center;
     data.radius = ptr->radius;
 	k[0] = vector3_dot(&intersection->ray.direction, &intersection->ray.direction);
@@ -406,7 +412,7 @@ float	 	    discriminant;
 	k[1] = 2 * vector3_dot(&temp, &intersection->ray.direction);
 	k[2] = vector3_dot(&temp, &temp) - data.radius * data.radius;
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
-	if (discriminant < 0.)
+	if (discriminant < 0.f)
 		return (0);
 	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
 	if (t <= RAY_T_MIN || t >= intersection->ray.t)
@@ -421,9 +427,11 @@ float	 	    discriminant;
 	return (1);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+/*
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							PLANE
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 				s_plane_data
 {
@@ -455,9 +463,9 @@ static int 			    	cl_plane_intersect
 	return (1);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							CYLINDER
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 				s_cylinder_data
 {
@@ -538,9 +546,9 @@ static int					cl_cylinder_intersect
 }
 
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							AABB
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 				s_aabb_data
 {
@@ -600,9 +608,9 @@ static int 					cl_aabb_intersect
 
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							CONE
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 				s_cone_data
 {
@@ -681,9 +689,11 @@ int 						cl_cone_intersect
 	return (1);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+ */
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							CAMERA
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct				s_camera
 {
@@ -719,90 +729,75 @@ static t_ray            	camera_cast_ray
 	return (tmp);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							SCENE
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct				s_scene_setting
+typedef	struct				s_scene
 {
-	int 					diffuse_light;
-	int 					specular_light;
-	int 					shadows;
-	int 					tshadows;
-}							t_scene_setting;
-
-typedef	struct				s_scene_cl
-{
+	t_camera				camera;
+	t_shape					shapes[SCENE_SHAPE_CAPACITY];
+	int 					shapes_length;
+	t_light					lights[SCENE_LIGHT_CAPACITY];
+	int 					lights_length;
 	t_vector3       		background;
-	t_scene_setting			settings;
-	int 					shape_data_element_size;
-	int 					shape_type_number;
-	int 					shape_number;
-	int 					light_number;
-}							t_scene_cl;
+}							t_scene;
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							SCENE INTERSECTION
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static int 					cl_scene_intersect
-                        	(constant t_scene_cl *scene,
-							constant void *shape_data,
-					    	constant t_shape_cl *shapes,
-					    	t_intersection_cl *intersection)
+static int 					call_intersection
+							(constant t_shape *shape,
+							t_intersection *intersection)
+{
+	if (shape->id == SHAPE_ID_SPHERE)
+		return (sphere_intersect(shape, intersection));
+}
+
+static int 					scene_intersect
+                        	(constant t_scene *scene,
+							t_intersection *intersection)
 {
 	int 					i;
-	constant void			*data;
 	int 					result;
 
 	i = 0;
 	result = 0;
-	while (i < scene->shape_number)
+	while (i < scene->shapes_length)
 	{
-		data = shape_data + scene->shape_data_element_size * i;
-		CALL_INTERSECT(shapes[i].function_index, shapes + i, data, intersection, result)
+		result += call_intersection(scene->shapes + i, intersection);
 		i++;
 	}
 
 	return (result != 0);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
-//						SHADOW
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//							SHADOW
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static int              	cl_scene_check_shadow
-                        	(constant t_scene_cl *scene,
-                        	constant void *shape_data,
-                        	constant t_shape_cl *shapes,
-                        	t_intersection_cl *intersection,
+static int              	scene_check_shadow
+                        	(constant t_scene *scene,
+                        	t_intersection *intersection,
                         	t_vector3 *light_direction)
 {
-	t_intersection_cl   	shadow;
+	t_intersection   	shadow;
 
-	cl_intersection_reset(&shadow);
+	intersection_reset(&shadow);
 	shadow.ray.origin = ray_intersect(&intersection->ray);
 	shadow.ray.direction = *light_direction;
-	cl_scene_intersect(scene, shape_data, shapes, &shadow);
-	if (shadow.ray.t >= RAY_T_MIN && shadow.ray.t <= vector3_length(light_direction))
-	{
-		if (scene->settings.tshadows && shadow.material.refract)
-		{
-		    intersection->shadow_ratio = shadow.material.refract;
-			return (0);
-		}
-		return (1);
-	}
-	return (0);
+	scene_intersect(scene, &shadow);
+	return (shadow.ray.t >= RAY_T_MIN && shadow.ray.t <= vector3_length(light_direction));
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							LIGHT TOOLS
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-static void             	cl_intersection_lighting_diffuse
-                        	(t_intersection_cl *intersection,
+static void             	intersection_lighting_diffuse
+                        	(t_intersection *intersection,
                         	constant t_light *light,
                         	t_vector3 *light_direction)
 {
@@ -812,8 +807,8 @@ float	          			dot;
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material.diffuse * light->intensity * dot / vector3_length(light_direction);
 }
 
-static void             	cl_intersection_lighting_specular
-                        	(t_intersection_cl *intersection,
+static void             	intersection_lighting_specular
+                        	(t_intersection *intersection,
                         	constant t_light *light,
                         	t_vector3 *light_direction)
 {
@@ -827,8 +822,8 @@ float	          			dot;
 
 }
 
-static void             	cl_intersection_make_color
-                        	(t_intersection_cl *intersection)
+static void             	intersection_make_color
+                        	(t_intersection *intersection)
 {
 	t_vector3		   		white;
 
@@ -838,53 +833,49 @@ static void             	cl_intersection_make_color
 	vector3_add_eq(&intersection->color, &white);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							LIGHT
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static void					cl_scene_light_up
-                        	(constant t_scene_cl *scene,
-                        	constant void *shape_data,
-                        	constant t_shape_cl *shapes,
-                        	constant t_light *lights,
-                        	t_intersection_cl *intersection)
+static void					scene_light_up
+                        	(constant t_scene *scene,
+                        	t_intersection *intersection)
 {
 	int                 	i;
 	t_vector3           	light_direction;
 
 	i = 0;
 
-	while(i < scene->light_number)
+	while(i < scene->lights_length)
 	{
 		intersection->shadow_ratio = 1.;
-		if (lights[i].type == light_ambient)
+		if (scene->lights[i].type == light_ambient)
 		{
-			intersection->diffuse_intensity += lights[i].intensity;
+			intersection->diffuse_intensity += scene->lights[i].intensity;
+			i++;
 			continue ;
 		}
 		else
-			light_direction = intersection_light_direction(intersection, lights);
-		if (scene->settings.shadows && cl_scene_check_shadow(scene, shape_data, shapes, intersection, &light_direction))
-		{
-		    i++;
-			continue ;
-		}
-		if (scene->settings.diffuse_light)
-			cl_intersection_lighting_diffuse(intersection, lights + i, &light_direction);
-		if (scene->settings.specular_light)
-			cl_intersection_lighting_specular(intersection, lights + i, &light_direction);
+			light_direction = intersection_light_direction(intersection, scene->lights);
+//		if (scene_check_shadow(scene, intersection, &light_direction))
+//		{
+//		    i++;
+//			continue ;
+//		}
+		intersection_lighting_diffuse(intersection, scene->lights + i, &light_direction);
+//		intersection_lighting_specular(intersection, scene->lights + i, &light_direction);
 		i++;
 	}
-	cl_intersection_make_color(intersection);
+	intersection_make_color(intersection);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							REFLECTION
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static void					cl_intersection_reflect
-                        	(t_intersection_cl *target,
-                        	const t_intersection_cl *source)
+static void					intersection_reflect
+                        	(t_intersection *target,
+                        	const t_intersection *source)
 {
 	t_vector3		    	temp;
 
@@ -895,17 +886,13 @@ static void					cl_intersection_reflect
 	target->ray.origin = ray_intersect(&source->ray);
 }
 
-static void             	cl_reflect(
-                        	t_intersection_cl *original,
-                        	constant t_scene_cl *scene,
-                        	constant void *shape_data,
-                        	constant t_shape_cl *shapes,
-                        	constant t_light *lights,
-                        	int *depth)
+static void             	reflect
+							(constant t_scene *scene,
+							t_intersection *original)
 {
     t_vector3           	result_color;
-    t_intersection_cl   	previous;
-    t_intersection_cl   	current;
+    t_intersection   		previous;
+    t_intersection   		current;
 	float	         		depth_ratio;
     int                 	i;
 
@@ -913,13 +900,13 @@ static void             	cl_reflect(
     previous = *original;
     depth_ratio = original->material.reflect;
     i = 0;
-    while (i <= *depth && previous.material.reflect)
+    while (i <= REFLECTION_DEPTH && previous.material.reflect)
     {
-        cl_intersection_reset(&current);
-        cl_intersection_reflect(&current, &previous);
-        if (cl_scene_intersect(scene, shape_data, shapes, &current))
+        intersection_reset(&current);
+        intersection_reflect(&current, &previous);
+        if (scene_intersect(scene, &current))
         {
-            cl_scene_light_up(scene, shape_data, shapes, lights, &current);
+            scene_light_up(scene, &current);
             vector3_mul_eq(&current.color, depth_ratio);
             vector3_add_eq(&result_color, &current.color);
         }
@@ -932,9 +919,9 @@ static void             	cl_reflect(
     vector3_add_eq(&original->color, &result_color);
 }
 
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							RAY_TRACER
-// /////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 kernel void					render
@@ -945,43 +932,36 @@ kernel void					render
     t_vector3           	screen;
     t_vector3           	vp;
     t_intersection			intersection;
-    int                 	depth[2];
 
 	global_id = get_global_id(0);
 
-    screen.x = global_id % *win_width;
-	screen.y = global_id / *win_width;
+    screen.x = global_id % WINDOW_WIDTH;
+	screen.y = global_id / WINDOW_WIDTH;
 
-	vp.x = screen.x - (*win_width - 1.) / 2.;
-    vp.y = -1 * screen.y + (*win_height - 1.) / 2.;
+	vp.x = screen.x - (WINDOW_WIDTH - 1.) / 2.;
+    vp.y = -1 * screen.y + (WINDOW_HEIGHT - 1.) / 2.;
 
 	intersection.ray = camera_cast_ray(&scene->camera, &vp);
 
-    depth[0] = *reflection_depth;
-    depth[1] = *refraction_depth;
+	intersection_reset(&intersection);
 
-	cl_intersection_reset(&intersection);
-
-   if (!cl_scene_intersect(scene, shape_data, shapes, &intersection))
+   if (!scene_intersect(scene, &intersection))
 	{
-		image[global_id] = cl_color_unpack((t_vector3)scene->background);
+		image[global_id] = color_unpack((t_vector3)scene->background);
 		return ;
 	}
 
 	if (intersection.highlight)
 	{
-		image[global_id] = cl_color_unpack((t_vector3){1., 1., 1.});
+		image[global_id] = color_unpack((t_vector3){1., 1., 1.});
 		return ;
 	}
 
-	cl_scene_light_up(scene, shape_data, shapes, lights, &intersection);
+	scene_light_up(scene, &intersection);
 
-	if (intersection.material.reflect && *reflection_depth > 0)
-	   cl_reflect(&intersection, scene, shape_data, shapes, lights, depth + 0);
-
-    if (intersection.material.refract && *refraction_depth > 0)
-        cl_refract(&intersection, scene, shape_data, shapes, lights, depth + 1);
-
-    image[global_id] = cl_color_unpack(intersection.color);
+//	if (intersection.material.reflect)
+//	   reflect(scene, &intersection);
+//
+    image[global_id] = color_unpack(intersection.color);
 
 }

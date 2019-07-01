@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:12:51 by ashari            #+#    #+#             */
-/*   Updated: 2019/06/30 19:12:52 by ashari           ###   ########.fr       */
+/*   Updated: 2019/07/01 12:07:47 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 # include "libft_vector.h"
 # include "camera.h"
 
-# define SCENE_SHAPE_CAPACITY	16
-# define SCENE_LIGHT_CAPACITY	16
 # define SCENE_DEF_BACKGROUND 	(t_vector3){.0, .3, .3}
 
 typedef	struct					s_scene

@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:11:58 by ashari            #+#    #+#             */
-/*   Updated: 2019/06/30 19:11:58 by ashari           ###   ########.fr       */
+/*   Updated: 2019/07/01 12:05:47 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 # define CL_SOURCE		"../open_cl/program.cl"
 # define CL_FUNCTION	"render"
-# define CL_OPTIONS		"-I ../parameters.h"
+# define CL_OPTIONS		"-I ../"
 
 # define OCL_BUFF_INIT 1000
 # define OCL_BUFF_MULT 5

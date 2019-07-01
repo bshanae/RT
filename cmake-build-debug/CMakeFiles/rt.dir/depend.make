@@ -295,6 +295,7 @@ CMakeFiles/rt.dir/scene/scene_a.c.o: ../scene/scene_a.c
 CMakeFiles/rt.dir/scene/scene_a.c.o: ../scene/scene_list.h
 
 CMakeFiles/rt.dir/shape/shape.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../light/light.h
@@ -306,6 +307,7 @@ CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape_list.h
 
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_aabb.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../light/light.h
@@ -317,6 +319,7 @@ CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_aabb.c
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_list.h
 
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_cone.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../light/light.h
@@ -328,6 +331,7 @@ CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_cone.c
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_list.h
 
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_cylinder.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../light/light.h
@@ -339,6 +343,7 @@ CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_cylinder.c
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_list.h
 
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_plane.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../light/light.h
@@ -350,6 +355,7 @@ CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_list.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_plane.c
 
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_sphere.c.o: .././parameters.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../color/color.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../light/light.h
@@ -362,4 +368,13 @@ CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
 
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.c
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.h
+
+CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o: ../vector3/vector3_add_sub.c
+
+CMakeFiles/rt.dir/vector3/vector3_mul.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/vector3/vector3_mul.c.o: ../vector3/vector3_mul.c
+
+CMakeFiles/rt.dir/vector3/vector3_rotate.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/vector3/vector3_rotate.c.o: ../vector3/vector3_rotate.c
 

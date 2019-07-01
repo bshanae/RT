@@ -6,23 +6,17 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:13:27 by ashari            #+#    #+#             */
-/*   Updated: 2019/06/30 19:13:28 by ashari           ###   ########.fr       */
+/*   Updated: 2019/07/01 12:05:47 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHAPE_H
 # define SHAPE_H
 
+# include "parameters.h"
+
 # include "material.h"
 # include "intersection.h"
-
-# define SHAPE_DATA_SIZE_RESERVE	128
-
-# define SHAPE_ID_SPHERE			0
-# define SHAPE_ID_PLANE				1
-# define SHAPE_ID_CYLINDER			2
-# define SHAPE_ID_CONE				3
-# define SHAPE_ID_AABB				4
 
 typedef	struct						s_shape
 {
