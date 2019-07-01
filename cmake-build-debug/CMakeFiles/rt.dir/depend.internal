@@ -294,6 +294,78 @@ CMakeFiles/rt.dir/scene/scene_a.c.o
  /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
  /Users/bshanae/workspace/21_ray_tracer/scene/scene_a.c
  /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+CMakeFiles/rt.dir/scene/scene_b.c.o
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././parameters.h
+ ../camera/camera.h
+ ../color/color.h
+ ../color/color_list.h
+ ../intersection/intersection.h
+ ../light/light.h
+ ../material/material.h
+ ../material/material_list.h
+ ../ray/ray.h
+ ../shape/shape.h
+ ../shape/shape_list.h
+ ../vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+CMakeFiles/rt.dir/scene/scene_c.c.o
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././parameters.h
+ ../camera/camera.h
+ ../color/color.h
+ ../color/color_list.h
+ ../intersection/intersection.h
+ ../light/light.h
+ ../material/material.h
+ ../material/material_list.h
+ ../ray/ray.h
+ ../shape/shape.h
+ ../shape/shape_list.h
+ ../vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+CMakeFiles/rt.dir/scene/scene_d.c.o
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././parameters.h
+ ../camera/camera.h
+ ../color/color.h
+ ../color/color_list.h
+ ../intersection/intersection.h
+ ../light/light.h
+ ../material/material.h
+ ../material/material_list.h
+ ../ray/ray.h
+ ../shape/shape.h
+ ../shape/shape_list.h
+ ../vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+CMakeFiles/rt.dir/scene/scene_e.c.o
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././parameters.h
+ ../camera/camera.h
+ ../color/color.h
+ ../color/color_list.h
+ ../intersection/intersection.h
+ ../light/light.h
+ ../material/material.h
+ ../material/material_list.h
+ ../ray/ray.h
+ ../shape/shape.h
+ ../shape/shape_list.h
+ ../vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rt.dir/shape/shape.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h

@@ -421,6 +421,58 @@ CMakeFiles/rt.dir/vector3/vector3_add_sub.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_add_sub.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add_sub.c -o CMakeFiles/rt.dir/vector3/vector3_add_sub.c.s
 
+CMakeFiles/rt.dir/scene/scene_b.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/scene/scene_b.c.o: ../scene/scene_b.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/rt.dir/scene/scene_b.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_b.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c
+
+CMakeFiles/rt.dir/scene/scene_b.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_b.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c > CMakeFiles/rt.dir/scene/scene_b.c.i
+
+CMakeFiles/rt.dir/scene/scene_b.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_b.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c -o CMakeFiles/rt.dir/scene/scene_b.c.s
+
+CMakeFiles/rt.dir/scene/scene_c.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/scene/scene_c.c.o: ../scene/scene_c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/rt.dir/scene/scene_c.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_c.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c
+
+CMakeFiles/rt.dir/scene/scene_c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_c.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c > CMakeFiles/rt.dir/scene/scene_c.c.i
+
+CMakeFiles/rt.dir/scene/scene_c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_c.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c -o CMakeFiles/rt.dir/scene/scene_c.c.s
+
+CMakeFiles/rt.dir/scene/scene_d.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/scene/scene_d.c.o: ../scene/scene_d.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/rt.dir/scene/scene_d.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_d.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c
+
+CMakeFiles/rt.dir/scene/scene_d.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_d.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c > CMakeFiles/rt.dir/scene/scene_d.c.i
+
+CMakeFiles/rt.dir/scene/scene_d.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_d.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c -o CMakeFiles/rt.dir/scene/scene_d.c.s
+
+CMakeFiles/rt.dir/scene/scene_e.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/scene/scene_e.c.o: ../scene/scene_e.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/rt.dir/scene/scene_e.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_e.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c
+
+CMakeFiles/rt.dir/scene/scene_e.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_e.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c > CMakeFiles/rt.dir/scene/scene_e.c.i
+
+CMakeFiles/rt.dir/scene/scene_e.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_e.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c -o CMakeFiles/rt.dir/scene/scene_e.c.s
+
 # Object files for target rt
 rt_OBJECTS = \
 "CMakeFiles/rt.dir/main.c.o" \
@@ -450,7 +502,11 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/rt/rt_control.c.o" \
 "CMakeFiles/rt.dir/vector3/vector3_rotate.c.o" \
 "CMakeFiles/rt.dir/vector3/vector3_mul.c.o" \
-"CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o"
+"CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o" \
+"CMakeFiles/rt.dir/scene/scene_b.c.o" \
+"CMakeFiles/rt.dir/scene/scene_c.c.o" \
+"CMakeFiles/rt.dir/scene/scene_d.c.o" \
+"CMakeFiles/rt.dir/scene/scene_e.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -483,9 +539,13 @@ rt: CMakeFiles/rt.dir/rt/rt_control.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_rotate.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_mul.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o
+rt: CMakeFiles/rt.dir/scene/scene_b.c.o
+rt: CMakeFiles/rt.dir/scene/scene_c.c.o
+rt: CMakeFiles/rt.dir/scene/scene_d.c.o
+rt: CMakeFiles/rt.dir/scene/scene_e.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

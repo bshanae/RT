@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:12:14 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/01 12:05:47 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/07/01 14:46:36 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int					rt_ctrl_camera_rotate(t_rt *rt, int key)
 }
 
 static int			rt_ctrl_light
-	(t_rt *rt, t_camera *camera,t_light *light, int key)
+	(t_rt *rt, t_camera *camera, t_light *light, int key)
 {
 	if (key == KEY_W)
 		light_move(light, vector3_mul(&camera->axis_z, -RT_CAMERA_POS_STEP));
@@ -83,7 +83,7 @@ static int			rt_ctrl_light
 }
 
 static int			rt_ctrl_shape
-	(t_rt *rt, t_camera *camera,t_shape *shape, int key)
+	(t_rt *rt, t_camera *camera, t_shape *shape, int key)
 {
 	if (key == KEY_W)
 		shape_move(shape, vector3_mul(&camera->axis_z, -RT_CAMERA_POS_STEP));
@@ -109,7 +109,7 @@ static int			rt_ctrl_shape
 	return (1);
 }
 
-int 				rt_ctrl_scene(t_rt *rt, int key)
+int					rt_ctrl_scene(t_rt *rt, int key)
 {
 	t_camera		*camera;
 	t_light			*light;

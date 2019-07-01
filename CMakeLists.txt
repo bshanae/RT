@@ -19,7 +19,7 @@ add_executable(rt
         ./shape/shape.c
         ./shape/shape_aabb.c
         ./shape/shape_cone.c
-        ./open_cl/open_cl.c scene/scene_a.c material/material_list.h color/color_list.h scene/scene_list.h open_cl/open_cl_error.c open_cl/open_cl_create_program.c open_cl/open_cl_create_context.c open_cl/open_cl_create_device.c open_cl/open_cl_create_queue.c open_cl/open_cl_create_kernel.c open_cl/open_cl_alloc_device_data.c open_cl/open_cl_set_arguments.c rt/rt_clone.c rt/rt_control.c vector3/vector3_rotate.c vector3/vector3_mul.c vector3/vector3_add_sub.c)
+        ./open_cl/open_cl.c scene/scene_a.c material/material_list.h color/color_list.h scene/scene_list.h open_cl/open_cl_error.c open_cl/open_cl_create_program.c open_cl/open_cl_create_context.c open_cl/open_cl_create_device.c open_cl/open_cl_create_queue.c open_cl/open_cl_create_kernel.c open_cl/open_cl_alloc_device_data.c open_cl/open_cl_set_arguments.c rt/rt_clone.c rt/rt_control.c vector3/vector3_rotate.c vector3/vector3_mul.c vector3/vector3_add_sub.c scene/scene_b.c scene/scene_c.c scene/scene_d.c scene/scene_e.c)
 
 target_include_directories(rt
         PRIVATE /usr/local/include

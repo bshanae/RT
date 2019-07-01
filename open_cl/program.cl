@@ -427,8 +427,6 @@ static int     				sphere_intersect
 	return (1);
 }
 
-/*
-
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							PLANE
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -439,112 +437,86 @@ typedef struct 				s_plane_data
 	t_vector3				normal;
 }							t_plane_data;
 
-static int 			    	cl_plane_intersect
-	                    	(constant t_shape_cl *shape,
-	                    	constant void *data_ptr,
-	                    	t_intersection_cl *intersection)
+static int 			    	plane_intersect
+	                    	(constant t_shape *shape,
+	                    	t_intersection *intersection)
 {
-	t_plane_data	    	*data;
+	constant t_plane_data	*ptr;
+	t_plane_data            data;
 	t_vector3		    	temp[2];
 	float	 	    		value[3];
 
-	data = (t_plane_data *)data_ptr;
-	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
+    ptr = (constant t_plane_data *)shape->data;
+    data.position = ptr->position;
+    data.normal = ptr->normal;
+	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data.normal)))
 		return (0);
-	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
-	value[1] = vector3_dot(temp, &data->normal) / value[0];
+	temp[0] = vector3_sub(&data.position, &intersection->ray.origin);
+	value[1] = vector3_dot(temp, &data.normal) / value[0];
 	if (value[1] <= RAY_T_MIN || value[1] >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = value[1];
-	intersection->normal = data->normal;
+	intersection->normal = data.normal;
 	intersection->color = shape->material.color;
 	intersection->material = shape->material;
 	intersection->highlight = shape->highlight;
 	return (1);
 }
 
+
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							CYLINDER
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 				s_cylinder_data
+typedef struct 					s_cylinder_data
 {
-	t_vector3				top;
-	t_vector3				bottom;
-	float 					radius;
-	t_vector3				axis;
-}							t_cylinder_data;
+	t_vector3					top;
+	t_vector3					bottom;
+	float 						radius;
+	t_vector3					axis;
+}								t_cylinder_data;
 
-static float				cl_cylinder_caps_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
+static int						cylinder_intersect
+								(constant t_shape *shape,
+								t_intersection *intersection)
 {
-	t_cylinder_data			*data;
-	float					t[2];
+	constant t_cylinder_data    *ptr;
+    t_cylinder_data             data;
+	float				        k[3];
+	float				        discriminant;
+	float				        t[2];
+	float 				        tmp;
+	t_vector3			        temp[2];
 
-	data = (t_cylinder_data *)data_ptr;
-	if (!vector3_dot(&intersection->ray.direction, &data->axis))
-		return (INFINITY);
-	t[0] = vector3_s_dot(vector3_sub(&data->top, &intersection->ray.origin), data->axis) / vector3_dot(&intersection->ray.direction, &data->axis);
-	if (t[0] <= RAY_T_MIN)
-		return (INFINITY);
-	if (vector3_s_length(vector3_s_sub(data->top, vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0])))) < data->radius)
-		intersection->normal = data->axis;
-	else
-		t[0] = INFINITY;
-	t[1] = vector3_s_dot(vector3_sub(&data->bottom, &intersection->ray.origin), data->axis) / vector3_dot(&intersection->ray.direction, &data->axis);
-	if (t[1] <= RAY_T_MIN)
-		return (INFINITY);
-	if (vector3_s_length(vector3_s_sub(data->bottom, vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[1])))) < data->radius && t[1] < t[0])
-		intersection->normal = vector3_mul(&data->axis, -1);
-	else
-		return (t[0]);
-	return (t[1]);
-}
+	ptr = (constant t_cylinder_data *)shape->data;
+	data.top = ptr->top;
+	data.bottom = ptr->bottom;
+	data.radius = ptr->radius;
+	data.axis = ptr->axis;
 
-static int					cl_cylinder_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
-{
-	t_cylinder_data			*data;
-	float					k[3];
-	float					discriminant;
-	float					t[2];
-	t_vector3				temp[2];
-	float					angle[2];
+	temp[0] = vector3_sub(&intersection->ray.origin, &data.bottom);
+	k[0] = vector3_dot(&intersection->ray.direction, &intersection->ray.direction)
+	        - pow(vector3_dot(&intersection->ray.direction, &data.axis), 2.f);
+	k[1] = 2 * (vector3_dot(&intersection->ray.direction, temp)
+	        - vector3_dot(&intersection->ray.direction, &data.axis) *  vector3_dot(temp, &data.axis));
+	k[2] =  vector3_dot(temp, temp) - pow(vector3_dot(temp, &data.axis), 2.f) - pow(data.radius, 2.f);
 
-	data = (t_cylinder_data *)data_ptr;
-	temp[0] = vector3_sub(&intersection->ray.origin, &data->bottom);
-	k[0] = vector3_dot(&intersection->ray.direction, &intersection->ray.direction) - pow(vector3_dot(&intersection->ray.direction, &data->axis), 2.f);
-	k[1] = 2 * (vector3_dot(&intersection->ray.direction, temp) - vector3_dot(&intersection->ray.direction, &data->axis) *  vector3_dot(temp, &data->axis));
-	k[2] =  vector3_dot(temp, temp) - pow(vector3_dot(temp, &data->axis), 2.f) - pow(data->radius, 2.f);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
+	t[0] = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
 	if (t[0] <= RAY_T_MIN || t[0] >= intersection->ray.t)
 		return (0);
-	temp[0] = vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0]));	// p
-	angle[0] = vector3_s_dot(vector3_sub(temp, &data->top), data->axis);
-	angle[1] = vector3_s_dot(vector3_sub(temp, &data->bottom), data->axis);
-	t[1] = cl_cylinder_caps_intersect(shape, data_ptr, intersection);
-	if ((angle[0] > 0. || angle[1] < 0.) && t[1] != INFINITY)
-		t[0] = t[1];
-	else if (!(angle[0] > 0. || angle[1] < 0.))
-	{
-		temp[1] = vector3_sub(temp, &data->bottom); // p - b
-		intersection->normal = vector3_s_sub(temp[1], vector3_mul(&data->axis, vector3_dot(temp + 1, &data->axis)));
-	}
-	else
-		return (0);
+	temp[1] = vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0]));	// p
+	tmp = vector3_s_dot(intersection->ray.direction, vector3_s_mul(data.axis, t[0])) + vector3_s_dot(temp[0], data.axis);
+	intersection->normal = vector3_s_sub(vector3_s_sub(temp[1], data.bottom), vector3_s_mul(data.axis, tmp));
+	vector3_normalize(&intersection->normal);
+
 	intersection->ray.t = t[0];
 	intersection->color = shape->material.color;
 	intersection->material = shape->material;
 	intersection->highlight = shape->highlight;
 	return (1);
 }
-
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							AABB
@@ -557,12 +529,12 @@ typedef struct 				s_aabb_data
 }							t_aabb_data;
 
 
-static int 					cl_aabb_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
+static int 					aabb_intersect
+							(constant t_shape *shape,
+							t_intersection *intersection)
 {
-	t_aabb_data				*data;
+	constant t_aabb_data	*ptr;
+ 	t_aabb_data				data;
 	float					inv_dir;
 	float 					t[2];
 	float 					t_near;
@@ -571,28 +543,31 @@ static int 					cl_aabb_intersect
 	int 					i;
 	t_vector3				normal;
 
+	ptr = (constant t_aabb_data *)shape->data;
+	data.min = ptr->min;
+	data.max = ptr->max;
+
 	normal = (t_vector3){0., 0., 0.};
-	data = (t_aabb_data *)data_ptr;
 	i = 0;
 	t_near = RAY_T_MIN;
 	t_far = RAY_T_MAX;
 	while (i < 3)
 	{
 		inv_dir = 1. / *vector3_iter(&intersection->ray.direction, i);
-		t[0] = (*vector3_iter(&data->min, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
-		t[1] = (*vector3_iter(&data->max, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
+		t[0] = (*vector3_iter(&data.min, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
+		t[1] = (*vector3_iter(&data.max, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
 		if (inv_dir < 0.)
 		{
 			t_temp = t[0];
 			t[0] = t[1];
 			t[1] = t_temp;
 		}
-		if ((t_near = fmaxf(t[0], t_near)) == t[0])
+		if ((t_near = fmax(t[0], t_near)) == t[0])
 		{
 			normal = (t_vector3){0., 0., 0.};
 			*vector3_iter(&normal, i) = inv_dir < 0. ? 1. : -1.;
 		}
-		t_far = fminf(t[1], t_far);
+		t_far = fmin(t[1], t_far);
 		if (t_far <= t_near)
 			return (0);
 		i++;
@@ -621,75 +596,49 @@ typedef struct 				s_cone_data
 	t_vector3				axis;
 }							t_cone_data;
 
-
-static float				cl_cone_cap_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
+static int 					cone_intersect
+							(constant t_shape *shape,
+							t_intersection *intersection)
 {
-	t_cone_data				*data;
-	float 					t;
+	constant t_cone_data	*ptr;
+	t_cone_data				data;
+	float 			        k[3];
+	float 			        discriminant;
+	float 			        t[2];
+	t_vector3		        temp[3];
+	float 			        angle[2];
 
-	data = (t_cone_data *)data_ptr;
-	if (!vector3_dot(&intersection->ray.direction, &data->axis))
-		return (INFINITY);
-	t = vector3_s_dot(vector3_sub(&data->bottom, &intersection->ray.origin), data->axis) / vector3_dot(&intersection->ray.direction, &data->axis);
-	if (t <= RAY_T_MIN)
-		return (INFINITY);
-	if (vector3_s_length(vector3_s_sub(data->bottom, vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t)))) < data->radius)
-		intersection->normal = vector3_mul(&data->axis, -1);
-	else
-		return (INFINITY);
-	return (t);
+	ptr = (constant t_cone_data *)shape->data;
+	data.top = ptr->top;
+	data.bottom = ptr->bottom;
+	data.radius = ptr->radius;
+	data.tangens = ptr->tangens;
+	data.axis = ptr->axis;
 
-}
+	temp[0] = vector3_sub(&intersection->ray.origin, &data.top);
+	k[0] = vector3_dot(&intersection->ray.direction, &intersection->ray.direction)
+			- pow(vector3_dot(&intersection->ray.direction, &data.axis), 2.f) * (1 + data.tangens * data.tangens);
+	k[1] = 2 * (vector3_dot(temp, &intersection->ray.direction) - (1 + data.tangens * data.tangens)
+			* vector3_dot(&intersection->ray.direction, &data.axis) * vector3_dot(temp, &data.axis));
+	k[2] = vector3_dot(temp, temp) - (1 + data.tangens * data.tangens) * pow(vector3_dot(temp, &data.axis), 2.f);
 
-int 						cone_intersect
-							(constant t_shape_cl *shape,
-							constant void *data_ptr,
-							t_intersection_cl *intersection)
-{
-	t_cone_data	    		*data;
-	float 					k[3];
-	float 					discriminant;
-	float 					t[2];
-	t_vector3				temp[3];
-	float 					angle[2];
-
-	data = (t_cone_data *)data_ptr;
-	temp[0] = vector3_sub(&intersection->ray.origin, &data->top);
-	k[0] = vector3_dot(&intersection->ray.direction, &intersection->ray.direction) - pow(vector3_dot(&intersection->ray.direction, &data->axis), 2.f) * (1 + data->tangens * data->tangens);
-	k[1] = 2 * (vector3_dot(temp, &intersection->ray.direction) - (1 + data->tangens * data->tangens) * vector3_dot(&intersection->ray.direction, &data->axis) * vector3_dot(temp, &data->axis));
-	k[2] = vector3_dot(temp, temp) - (1 + data->tangens * data->tangens) * pow(vector3_dot(temp, &data->axis), 2.f);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
+	t[0] = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
 	if (t[0] <= RAY_T_MIN || t[0] >= intersection->ray.t)
 		return (0);
+
 	temp[1] = vector3_s_add(intersection->ray.origin, vector3_mul(&intersection->ray.direction, t[0])); // p
-	temp[2] = vector3_sub(temp + 1, &data->bottom);
-	angle[0] = vector3_s_dot(vector3_sub(temp + 1, &data->top), data->axis);
-	angle[1] = vector3_s_dot(vector3_sub(temp + 1, &data->bottom), data->axis);
-	int is_inf = (vector3_s_length(temp[2]) > vector3_s_length(vector3_sub(&data->top, &data->bottom)) || vector3_dot(temp + 2, &data->axis) > 0.);
-	t[1] = cl_cone_cap_intersect(shape, data_ptr, intersection);
-	if (t[1] != INFINITY && is_inf)
-		t[0] = t[1];
-	else if (!is_inf)
-	{
-		t[1] = vector3_dot(&intersection->ray.direction, &data->axis) * t[0] + vector3_dot(temp, &data->axis);
-		intersection->normal = vector3_s_sub(vector3_s_sub(temp[1], data->top), vector3_s_mul(data->axis, (1 + data->tangens * data->tangens) * t[1]));
-		vector3_normalize(&intersection->normal);
-	}
-	else
-		return (0);
+	t[1] = vector3_dot(&intersection->ray.direction, &data.axis) * t[0] + vector3_dot(temp, &data.axis);
+	intersection->normal = vector3_s_sub(vector3_s_sub(temp[1], data.top), vector3_s_mul(data.axis, (1 + data.tangens * data.tangens) * t[1]));
+
+	vector3_normalize(&intersection->normal);
 	intersection->ray.t = t[0];
 	intersection->color = shape->material.color;
 	intersection->material = shape->material;
 	intersection->highlight = shape->highlight;
 	return (1);
 }
-
- */
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //							CAMERA
@@ -753,6 +702,14 @@ static int 					call_intersection
 {
 	if (shape->id == SHAPE_ID_SPHERE)
 		return (sphere_intersect(shape, intersection));
+	if (shape->id == SHAPE_ID_PLANE)
+		return (plane_intersect(shape, intersection));
+	if (shape->id == SHAPE_ID_CYLINDER)
+		return (cylinder_intersect(shape, intersection));
+	if (shape->id == SHAPE_ID_CONE)
+		return (cone_intersect(shape, intersection));
+	if (shape->id == SHAPE_ID_AABB)
+		return (aabb_intersect(shape, intersection));
 }
 
 static int 					scene_intersect
@@ -918,7 +875,10 @@ static void             	reflect
             vector3_add_eq(&result_color, &current.color);
         }
         else
+        {
             vector3_s_add_eq(&result_color, vector3_s_mul((t_vector3)scene->background, depth_ratio));
+            break ;
+        }
         previous = current;
         depth_ratio *= original->material.reflect;
         i++;

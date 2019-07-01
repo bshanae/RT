@@ -187,6 +187,18 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_a.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h">
 			<Option target="rt"/>
 		</Unit>

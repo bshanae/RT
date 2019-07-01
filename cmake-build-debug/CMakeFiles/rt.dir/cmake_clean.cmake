@@ -27,6 +27,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/vector3/vector3_rotate.c.o"
   "CMakeFiles/rt.dir/vector3/vector3_mul.c.o"
   "CMakeFiles/rt.dir/vector3/vector3_add_sub.c.o"
+  "CMakeFiles/rt.dir/scene/scene_b.c.o"
+  "CMakeFiles/rt.dir/scene/scene_c.c.o"
+  "CMakeFiles/rt.dir/scene/scene_d.c.o"
+  "CMakeFiles/rt.dir/scene/scene_e.c.o"
   "rt.pdb"
   "rt"
 )
