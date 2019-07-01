@@ -79,7 +79,8 @@ COMPILE_BINARY = gcc $(GCC_FRAMEWORKS) $(GCC_LIBFT) $(addprefix -I, $(INCLUDES))
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS)
-	$(COMPILE_BINARY)
+	@$(COMPILE_BINARY)
+	@echo "I'm done"
 
 $(LIBFT) :
 	make -C $(LIBFT_DIRECTORY)
@@ -88,7 +89,8 @@ $(OBJECTS_DIRECTORY) :
 	mkdir -p $(OBJECTS_DIRECTORY)
 
 $(OBJECTS) : $(SOURCES)
-	$(foreach SOURCE,$(SOURCES), $(call COMPILE_OBJECT, $(SOURCE)); $(call MOVE_TO_OBJECTS_DIRECTORY, $(SOURCE));)
+	@$(foreach SOURCE,$(SOURCES), $(call COMPILE_OBJECT, $(SOURCE)); $(call MOVE_TO_OBJECTS_DIRECTORY, $(SOURCE));)
+	@echo "I'm done"
 
 clean :
 	rm -rf $(OBJECTS_DIRECTORY)

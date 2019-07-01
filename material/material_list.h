@@ -17,5 +17,8 @@
 
 # define MATERIAL_MIRROR	(t_material){COLOR_WHITE, .1, 3.1, .8}
 # define MATERIAL_RED		(t_material){COLOR_RED, 1., .3, .0}
+# define MATERIAL_GREEN		(t_material){COLOR_GREEN, 1., .3, .0}
+# define MATERIAL_BLUE		(t_material){COLOR_BLUE_1, 1., .3, .0}
+# define MATERIAL_GREY		(t_material){COLOR_GREY, 1., .3, .0}
 
 #endif

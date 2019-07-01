@@ -12,6 +12,23 @@
 
 #include "rt.h"
 
+int					rt_ctrl_choose_scene(t_rt *rt, int key)
+{
+	if (key == KEY_1)
+		rt->scenes.current = &rt->scenes.data[0];
+	else if (key == KEY_2)
+		rt->scenes.current = &rt->scenes.data[1];
+	else if (key == KEY_3)
+		rt->scenes.current = &rt->scenes.data[2];
+	else if (key == KEY_4)
+		rt->scenes.current = &rt->scenes.data[3];
+	else if (key == KEY_5)
+		rt->scenes.current = &rt->scenes.data[4];
+	else
+		return (0);
+	return (1);
+}
+
 int					rt_key_press(int key, void *ptr)
 {
 	t_rt			**rt;
@@ -26,6 +43,8 @@ int					rt_key_press(int key, void *ptr)
 	else if (rt_ctrl_camera_move(*rt, key))
 		;
 	else if (rt_ctrl_camera_rotate(*rt, key))
+		;
+	else if (rt_ctrl_choose_scene(*rt, key))
 		;
 	rt_render((*rt));
 	return (0);

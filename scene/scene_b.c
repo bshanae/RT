@@ -15,10 +15,10 @@
 t_scene				*scene_b(void)
 {
 	t_scene			*scene;
-	int 			i;
+	int				i;
 
 	scene = scene_new();
-	scene->camera.position = (t_vector3) {0., .5, 8.};
+	scene->camera.position = (t_vector3) {1.7, .5, 8.};
 	scene_add_light(scene,
 		light_create(light_ambient, .1));
 	scene_add_light(scene,
@@ -26,10 +26,16 @@ t_scene				*scene_b(void)
 	scene_add_light(scene,
 		light_create(light_point, .7, (t_vector3) {0., 5., 5.}));
 	i = -5;
-	while (i < 5)
+	while (i < 10)
 	{
-		scene_add_shape(scene, shape_cylinder((t_vector3) {(float)i, 0., 1.},
-			(t_vector3){(float)i, 1., 0.}, .2, MATERIAL_RED));
+		if (i % 2)
+			scene_add_shape(scene,
+				shape_cylinder((t_vector3){(float)i, 1.5, 0.},
+				(t_vector3){(float)i, 1., 0.}, .2, MATERIAL_RED));
+		else
+			scene_add_shape(scene,
+				shape_cylinder((t_vector3) {(float)i, 1.5, 0.},
+				(t_vector3){(float)i, 1., 0.}, .2, MATERIAL_BLUE));
 		i++;
 	}
 	return (scene);

@@ -605,6 +605,7 @@ static int 					cone_intersect
 	float 			        k[3];
 	float 			        discriminant;
 	float 			        t[2];
+	t_vector3				tip_point;
 	t_vector3		        temp[3];
 	float 			        angle[2];
 

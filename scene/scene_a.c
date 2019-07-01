@@ -17,13 +17,13 @@ t_scene				*scene_a(void)
 	t_scene			*scene;
 
 	scene = scene_new();
-	scene->camera.position = (t_vector3) {0., .5, 8.};
+	scene->camera.position = (t_vector3) {0., .3, 9.};
 	scene_add_light(scene,
 		light_create(light_ambient, .1));
 	scene_add_light(scene,
 		light_create(light_point, .3, (t_vector3){2., 0., 10.}));
 	scene_add_light(scene,
-		light_create(light_point, .7, (t_vector3) {0., 5., 5.}));
+		light_create(light_point, .4, (t_vector3) {0., 5., 5.}));
 	scene_add_shape(scene,
 		shape_sphere((t_vector3) {-.7, -.5, 1.}, .3, MATERIAL_RED));
 	scene_add_shape(scene,

@@ -18,4 +18,12 @@
 
 t_scene				*scene_a(void);
 
+t_scene				*scene_b(void);
+
+t_scene				*scene_c(void);
+
+t_scene				*scene_d(void);
+
+t_scene				*scene_e(void);
+
 #endif

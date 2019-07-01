@@ -19,6 +19,10 @@ int					main(void)
 
 	rt = rt_new();
 	rt_add_scene(rt, scene_a());
+	rt_add_scene(rt, scene_b());
+	rt_add_scene(rt, scene_c());
+	rt_add_scene(rt, scene_d());
+	rt_add_scene(rt, scene_e());
 	rt_render(rt);
 	mlx_hook(rt->win_ptr, 2, 1, rt_key_press, &rt);
 	mlx_hook(rt->win_ptr, 3, 1, rt_key_release, &rt);
