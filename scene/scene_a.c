@@ -21,7 +21,7 @@ t_scene				*scene_a(void)
 	scene->camera.position = (t_vector3) {0., .5, 8.};
 
 	scene_add_light(scene, light_create(light_ambient, .1));
-	scene_add_light(scene, light_create(light_point, ., (t_vector3){2., 0., 10.}));
+	scene_add_light(scene, light_create(light_point, .3, (t_vector3){2., 0., 10.}));
 	scene_add_light(scene, light_create(light_point, .7, (t_vector3) {0., 5., 5.}));
 
 	//scene_add_shape(scene, shape_aabb((t_vector3){0., 0., 0.}, (t_vector3){1., 1., 1.}, MATERIAL_MIRROR));
