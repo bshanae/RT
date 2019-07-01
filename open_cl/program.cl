@@ -918,7 +918,7 @@ static void             	reflect
             vector3_add_eq(&result_color, &current.color);
         }
         else
-            vector3_s_add_eq(&result_color, vector3_s_mul(scene->background, depth_ratio));
+            vector3_s_add_eq(&result_color, vector3_s_mul((t_vector3)scene->background, depth_ratio));
         previous = current;
         depth_ratio *= original->material.reflect;
         i++;
