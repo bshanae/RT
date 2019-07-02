@@ -23,6 +23,7 @@ int					main(void)
 	rt_add_scene(rt, scene_c());
 	rt_add_scene(rt, scene_d());
 	rt_add_scene(rt, scene_e());
+	rt_add_scene(rt, scene_f());
 	rt_clone(rt);
 	rt_render(rt);
 	mlx_hook(rt->win_ptr, 2, 1, rt_key_press, &rt);

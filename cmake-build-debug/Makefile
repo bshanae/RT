@@ -717,6 +717,33 @@ scene/scene_e.c.s:
 	$(MAKE) -f CMakeFiles/rtv1.dir/build.make CMakeFiles/rtv1.dir/scene/scene_e.c.s
 .PHONY : scene/scene_e.c.s
 
+scene/scene_f.o: scene/scene_f.c.o
+
+.PHONY : scene/scene_f.o
+
+# target to build an object file
+scene/scene_f.c.o:
+	$(MAKE) -f CMakeFiles/rtv1.dir/build.make CMakeFiles/rtv1.dir/scene/scene_f.c.o
+.PHONY : scene/scene_f.c.o
+
+scene/scene_f.i: scene/scene_f.c.i
+
+.PHONY : scene/scene_f.i
+
+# target to preprocess a source file
+scene/scene_f.c.i:
+	$(MAKE) -f CMakeFiles/rtv1.dir/build.make CMakeFiles/rtv1.dir/scene/scene_f.c.i
+.PHONY : scene/scene_f.c.i
+
+scene/scene_f.s: scene/scene_f.c.s
+
+.PHONY : scene/scene_f.s
+
+# target to generate assembly for a file
+scene/scene_f.c.s:
+	$(MAKE) -f CMakeFiles/rtv1.dir/build.make CMakeFiles/rtv1.dir/scene/scene_f.c.s
+.PHONY : scene/scene_f.c.s
+
 shape/shape.o: shape/shape.c.o
 
 .PHONY : shape/shape.o
@@ -1062,6 +1089,9 @@ help:
 	@echo "... scene/scene_e.o"
 	@echo "... scene/scene_e.i"
 	@echo "... scene/scene_e.s"
+	@echo "... scene/scene_f.o"
+	@echo "... scene/scene_f.i"
+	@echo "... scene/scene_f.s"
 	@echo "... shape/shape.o"
 	@echo "... shape/shape.i"
 	@echo "... shape/shape.s"

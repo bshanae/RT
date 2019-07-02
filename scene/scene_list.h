@@ -26,4 +26,6 @@ t_scene				*scene_d(void);
 
 t_scene				*scene_e(void);
 
+t_scene				*scene_f(void);
+
 #endif

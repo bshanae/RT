@@ -27,6 +27,6 @@
 # define SHAPE_ID_CONE				3
 # define SHAPE_ID_AABB				4
 
-# define SCENE_SHAPE_CAPACITY		16
+# define SCENE_SHAPE_CAPACITY		32
 # define SCENE_LIGHT_CAPACITY		16
 #endif

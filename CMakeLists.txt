@@ -40,7 +40,7 @@ add_executable(rtv1
         ./scene/scene_b.c
         ./scene/scene_c.c
         ./scene/scene_d.c
-        ./scene/scene_e.c)
+        ./scene/scene_e.c scene/scene_f.c)
 
 target_include_directories(rtv1
         PRIVATE /usr/local/include

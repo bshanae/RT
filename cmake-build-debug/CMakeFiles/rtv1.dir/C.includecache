@@ -102,7 +102,7 @@ libft_vector.h
 camera.h
 /Users/bshanae/workspace/21_ray_tracer/scene/camera.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c
+/Users/bshanae/workspace/21_ray_tracer/scene/scene_f.c
 scene_list.h
 /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
 

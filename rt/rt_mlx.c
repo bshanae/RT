@@ -24,6 +24,8 @@ static int			rt_choose_scene(t_rt *rt, int key)
 		rt->scenes.current = &rt->scenes.data[3];
 	else if (key == KEY_5)
 		rt->scenes.current = &rt->scenes.data[4];
+	else if (key == KEY_6)
+		rt->scenes.current = &rt->scenes.data[5];
 	else
 		return (0);
 	return (1);

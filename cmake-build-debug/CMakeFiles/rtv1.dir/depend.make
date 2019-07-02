@@ -366,6 +366,24 @@ CMakeFiles/rtv1.dir/scene/scene_e.c.o: ../scene/scene.h
 CMakeFiles/rtv1.dir/scene/scene_e.c.o: ../scene/scene_e.c
 CMakeFiles/rtv1.dir/scene/scene_e.c.o: ../scene/scene_list.h
 
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../../21_libft/includes/libft_vector.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: .././parameters.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../camera/camera.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../color/color.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../color/color_list.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../intersection/intersection.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../light/light.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../material/material.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../material/material_list.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../ray/ray.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../shape/shape.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../shape/shape_list.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../vector3/vector3.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../scene/scene.h
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../scene/scene_f.c
+CMakeFiles/rtv1.dir/scene/scene_f.c.o: ../scene/scene_list.h
+
 CMakeFiles/rtv1.dir/shape/shape.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rtv1.dir/shape/shape.c.o: .././parameters.h
 CMakeFiles/rtv1.dir/shape/shape.c.o: ../color/color.h

@@ -31,6 +31,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rtv1.dir/scene/scene_c.c.o"
   "CMakeFiles/rtv1.dir/scene/scene_d.c.o"
   "CMakeFiles/rtv1.dir/scene/scene_e.c.o"
+  "CMakeFiles/rtv1.dir/scene/scene_f.c.o"
   "rtv1.pdb"
   "rtv1"
 )

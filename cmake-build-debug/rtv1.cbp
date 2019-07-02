@@ -199,6 +199,9 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c">
 			<Option target="rtv1"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_f.c">
+			<Option target="rtv1"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h">
 			<Option target="rtv1"/>
 		</Unit>

@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:12:32 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/02 11:17:32 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/07/02 12:59:53 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include "mlx_keys.h"
 
 # define RT_CAMERA_POS_STEP		0.15
-# define RT_CAMERA_DIR_STEP		0.01
+# define RT_CAMERA_DIR_STEP		0.03
 
 # define RT_SCENE_CAPACITY		8
 
