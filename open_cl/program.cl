@@ -274,7 +274,7 @@ static int                  color_unpack(t_vector3 vector)
 //							RAY
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# define RAY_T_MIN	    	0.0001
+# define RAY_T_MIN	    	0.00001
 # define RAY_T_MAX	    	INFINITY
 
 typedef	struct		    	s_ray

@@ -88,27 +88,27 @@ math.h
 stdlib.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+/Users/ashari/21_ray_tracer/scene/scene.h
 parameters.h
-/Users/bshanae/workspace/21_ray_tracer/scene/parameters.h
+/Users/ashari/21_ray_tracer/scene/parameters.h
 shape.h
-/Users/bshanae/workspace/21_ray_tracer/scene/shape.h
+/Users/ashari/21_ray_tracer/scene/shape.h
 shape_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/shape_list.h
+/Users/ashari/21_ray_tracer/scene/shape_list.h
 light.h
-/Users/bshanae/workspace/21_ray_tracer/scene/light.h
+/Users/ashari/21_ray_tracer/scene/light.h
 libft_vector.h
-/Users/bshanae/workspace/21_ray_tracer/scene/libft_vector.h
+/Users/ashari/21_ray_tracer/scene/libft_vector.h
 camera.h
-/Users/bshanae/workspace/21_ray_tracer/scene/camera.h
+/Users/ashari/21_ray_tracer/scene/camera.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_f.c
+/Users/ashari/21_ray_tracer/scene/scene_f.c
 scene_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+/Users/ashari/21_ray_tracer/scene/scene_list.h
 
-/Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+/Users/ashari/21_ray_tracer/scene/scene_list.h
 scene.h
-/Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+/Users/ashari/21_ray_tracer/scene/scene.h
 material_list.h
-/Users/bshanae/workspace/21_ray_tracer/scene/material_list.h
+/Users/ashari/21_ray_tracer/scene/material_list.h
 

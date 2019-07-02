@@ -48,6 +48,7 @@ SOURCES =                                       \
     ./scene/scene_c.c                           \
     ./scene/scene_d.c                           \
     ./scene/scene_e.c                           \
+    ./scene/scene_f.c                           \
     ./shape/shape.c                             \
     ./shape/shape_aabb.c                        \
     ./shape/shape_cone.c                        \
@@ -79,8 +80,7 @@ COMPILE_BINARY = gcc $(GCC_FRAMEWORKS) $(GCC_LIBFT) $(addprefix -I, $(INCLUDES))
 all : $(NAME)
 
 $(NAME) : $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS)
-	@$(COMPILE_BINARY)
-	@echo "I'm done"
+	$(COMPILE_BINARY)
 
 $(LIBFT) :
 	make -C $(LIBFT_DIRECTORY)
@@ -89,8 +89,7 @@ $(OBJECTS_DIRECTORY) :
 	mkdir -p $(OBJECTS_DIRECTORY)
 
 $(OBJECTS) : $(SOURCES)
-	@$(foreach SOURCE,$(SOURCES), $(call COMPILE_OBJECT, $(SOURCE)); $(call MOVE_TO_OBJECTS_DIRECTORY, $(SOURCE));)
-	@echo "I'm done"
+	$(foreach SOURCE,$(SOURCES), $(call COMPILE_OBJECT, $(SOURCE)); $(call MOVE_TO_OBJECTS_DIRECTORY, $(SOURCE));)
 
 clean :
 	rm -rf $(OBJECTS_DIRECTORY)

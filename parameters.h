@@ -29,4 +29,5 @@
 
 # define SCENE_SHAPE_CAPACITY		32
 # define SCENE_LIGHT_CAPACITY		16
+
 #endif

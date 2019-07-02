@@ -24,9 +24,9 @@
 # include "shape_list.h"
 # include "parameters.h"
 
-# define CL_SOURCE		"../open_cl/program.cl"
+# define CL_SOURCE		"./open_cl/program.cl"
 # define CL_FUNCTION	"render"
-# define CL_OPTIONS		"-I ../"
+# define CL_OPTIONS		"-I ./"
 
 # define OCL_BUFF_INIT 1000
 # define OCL_BUFF_MULT 5

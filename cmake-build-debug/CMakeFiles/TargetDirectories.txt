@@ -1,3 +1,3 @@
-/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rtv1.dir
+/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rtv1.dir

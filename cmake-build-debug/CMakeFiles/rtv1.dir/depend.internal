@@ -4,12 +4,12 @@
 CMakeFiles/rtv1.dir/camera/camera.c.o
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/camera/camera.c
- /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
+ /Users/ashari/21_ray_tracer/camera/camera.c
+ /Users/ashari/21_ray_tracer/camera/camera.h
 CMakeFiles/rtv1.dir/light/light.c.o
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/light/light.c
- /Users/bshanae/workspace/21_ray_tracer/light/light.h
+ /Users/ashari/21_ray_tracer/light/light.c
+ /Users/ashari/21_ray_tracer/light/light.h
 CMakeFiles/rtv1.dir/main.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -31,7 +31,7 @@ CMakeFiles/rtv1.dir/main.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/main.c
+ /Users/ashari/21_ray_tracer/main.c
 CMakeFiles/rtv1.dir/open_cl/open_cl.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -47,8 +47,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.c
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
 CMakeFiles/rtv1.dir/open_cl/open_cl_alloc_device_data.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -64,8 +64,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_alloc_device_data.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_alloc_device_data.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_alloc_device_data.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_create_context.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -81,8 +81,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_create_context.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_context.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_create_context.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_create_device.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -98,8 +98,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_create_device.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_device.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_create_device.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_create_kernel.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -115,8 +115,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_create_kernel.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_kernel.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_create_kernel.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_create_program.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -132,8 +132,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_create_program.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_program.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_create_program.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_create_queue.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -149,8 +149,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_create_queue.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_create_queue.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_create_queue.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_error.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -166,8 +166,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_error.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_error.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_error.c
 CMakeFiles/rtv1.dir/open_cl/open_cl_set_arguments.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -183,8 +183,8 @@ CMakeFiles/rtv1.dir/open_cl/open_cl_set_arguments.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl.h
- /Users/bshanae/workspace/21_ray_tracer/open_cl/open_cl_set_arguments.c
+ /Users/ashari/21_ray_tracer/open_cl/open_cl.h
+ /Users/ashari/21_ray_tracer/open_cl/open_cl_set_arguments.c
 CMakeFiles/rtv1.dir/rt/rt.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -202,8 +202,8 @@ CMakeFiles/rtv1.dir/rt/rt.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt.c
- /Users/bshanae/workspace/21_ray_tracer/rt/rt.h
+ /Users/ashari/21_ray_tracer/rt/rt.c
+ /Users/ashari/21_ray_tracer/rt/rt.h
 CMakeFiles/rtv1.dir/rt/rt_clone.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -221,8 +221,8 @@ CMakeFiles/rtv1.dir/rt/rt_clone.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt_clone.c
+ /Users/ashari/21_ray_tracer/rt/rt.h
+ /Users/ashari/21_ray_tracer/rt/rt_clone.c
 CMakeFiles/rtv1.dir/rt/rt_control.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -240,8 +240,8 @@ CMakeFiles/rtv1.dir/rt/rt_control.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt_control.c
+ /Users/ashari/21_ray_tracer/rt/rt.h
+ /Users/ashari/21_ray_tracer/rt/rt_control.c
 CMakeFiles/rtv1.dir/rt/rt_mlx.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -259,8 +259,8 @@ CMakeFiles/rtv1.dir/rt/rt_mlx.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt.h
- /Users/bshanae/workspace/21_ray_tracer/rt/rt_mlx.c
+ /Users/ashari/21_ray_tracer/rt/rt.h
+ /Users/ashari/21_ray_tracer/rt/rt_mlx.c
 CMakeFiles/rtv1.dir/scene/scene.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -274,8 +274,8 @@ CMakeFiles/rtv1.dir/scene/scene.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene.c
+ /Users/ashari/21_ray_tracer/scene/scene.h
 CMakeFiles/rtv1.dir/scene/scene_a.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -291,9 +291,9 @@ CMakeFiles/rtv1.dir/scene/scene_a.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_a.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_a.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/scene/scene_b.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -309,9 +309,9 @@ CMakeFiles/rtv1.dir/scene/scene_b.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_b.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_b.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/scene/scene_c.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -327,9 +327,9 @@ CMakeFiles/rtv1.dir/scene/scene_c.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_c.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_c.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/scene/scene_d.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -345,9 +345,9 @@ CMakeFiles/rtv1.dir/scene/scene_d.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_d.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_d.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/scene/scene_e.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -363,9 +363,9 @@ CMakeFiles/rtv1.dir/scene/scene_e.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_e.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_e.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/scene/scene_f.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -381,9 +381,9 @@ CMakeFiles/rtv1.dir/scene/scene_f.c.o
  ../shape/shape.h
  ../shape/shape_list.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_f.c
- /Users/bshanae/workspace/21_ray_tracer/scene/scene_list.h
+ /Users/ashari/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene_f.c
+ /Users/ashari/21_ray_tracer/scene/scene_list.h
 CMakeFiles/rtv1.dir/shape/shape.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -393,9 +393,9 @@ CMakeFiles/rtv1.dir/shape/shape.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.c
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rtv1.dir/shape/shape_aabb.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -405,9 +405,9 @@ CMakeFiles/rtv1.dir/shape/shape_aabb.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_aabb.c
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_aabb.c
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rtv1.dir/shape/shape_cone.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -417,9 +417,9 @@ CMakeFiles/rtv1.dir/shape/shape_cone.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_cone.c
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_cone.c
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rtv1.dir/shape/shape_cylinder.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -429,9 +429,9 @@ CMakeFiles/rtv1.dir/shape/shape_cylinder.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_cylinder.c
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_cylinder.c
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rtv1.dir/shape/shape_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -441,9 +441,9 @@ CMakeFiles/rtv1.dir/shape/shape_plane.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape_plane.c
 CMakeFiles/rtv1.dir/shape/shape_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././parameters.h
@@ -453,18 +453,18 @@ CMakeFiles/rtv1.dir/shape/shape_sphere.c.o
  ../material/material.h
  ../ray/ray.h
  ../vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
- /Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape_sphere.c
 CMakeFiles/rtv1.dir/vector3/vector3.c.o
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.c
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/ashari/21_ray_tracer/vector3/vector3.c
+ /Users/ashari/21_ray_tracer/vector3/vector3.h
 CMakeFiles/rtv1.dir/vector3/vector3_add_sub.c.o
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add_sub.c
+ /Users/ashari/21_ray_tracer/vector3/vector3.h
+ /Users/ashari/21_ray_tracer/vector3/vector3_add_sub.c
 CMakeFiles/rtv1.dir/vector3/vector3_mul.c.o
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c
+ /Users/ashari/21_ray_tracer/vector3/vector3.h
+ /Users/ashari/21_ray_tracer/vector3/vector3_mul.c
 CMakeFiles/rtv1.dir/vector3/vector3_rotate.c.o
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
- /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_rotate.c
+ /Users/ashari/21_ray_tracer/vector3/vector3.h
+ /Users/ashari/21_ray_tracer/vector3/vector3_rotate.c
