@@ -1,53 +1,34 @@
 #ifndef SCENE_H
 # define SCENE_H
 
+# include "parameters.h"
+
 # include "shape.h"
 # include "light.h"
 # include "libft_vector.h"
+# include "camera.h"
 
-typedef struct			s_scene_setting
+# define SCENE_DEF_BACKGROUND 	(t_vector3){.7, .7, .7}
+
+typedef	struct					s_scene
 {
-	int 				diffuse_light;
-	int 				specular_light;
-	int 				shadows;
-	int 				tshadows;
-}						t_scene_setting;
+	t_shape						shapes[SCENE_SHAPE_CAPACITY];
+	int							shapes_length;
+	t_light						lights[SCENE_LIGHT_CAPACITY];
+	int							lights_length;
+	t_vector3					background;
+}								t_scene;
 
-typedef	struct			s_scene
-{
-	t_vector			shapes;
-	t_vector			lights;
-	t_vector3       	background;
-	t_scene_setting		settings;
-}						t_scene;
+t_scene							*scene_new();
 
-typedef	struct			s_scene_cl
-{
-	t_vector3       	background;
-	t_scene_setting		settings;
-	int 				shape_data_element_size;
-	int 				shape_type_number;
-	int 				shape_number;
-	int 				light_number;
-}						t_scene_cl;
+void							scene_delete(t_scene **scene);
 
-t_scene             	*scene_new(t_vector3 background);
+void							scene_add_shape(t_scene *scene, t_shape shape);
 
-void					scene_delete(t_scene **me);
+void							scene_add_light(t_scene *scene, t_light light);
 
-int 					scene_intersect
-  (t_scene *me, t_intersection *intersection);
+int 							scene_intersect(t_scene *scene, t_intersection *intersection);
 
-void					scene_light_up
-   (t_scene *me, t_intersection *intersection);
-
-void					scene_shape_push
-  (t_scene *me, t_shape *shape);
-
-t_shape					*scene_shape_at(t_scene *me, int i);
-
-void					scene_light_push(t_scene *me, t_light *light);
-
-t_light					*scene_light_at(t_scene *me, int i);
+void							scene_light_up(t_scene *scene, t_intersection *intersection);
 
 #endif

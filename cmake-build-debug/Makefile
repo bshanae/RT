@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rt
+# Target rules for targets named rp
 
 # Build rule for target.
-rt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rt
-.PHONY : rt
+rp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rp
+.PHONY : rp
 
 # fast build rule for target.
-rt/fast:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/build
-.PHONY : rt/fast
+rp/fast:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/build
+.PHONY : rp/fast
 
 camera/camera.o: camera/camera.c.o
 
@@ -129,7 +129,7 @@ camera/camera.o: camera/camera.c.o
 
 # target to build an object file
 camera/camera.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.o
 .PHONY : camera/camera.c.o
 
 camera/camera.i: camera/camera.c.i
@@ -138,7 +138,7 @@ camera/camera.i: camera/camera.c.i
 
 # target to preprocess a source file
 camera/camera.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.i
 .PHONY : camera/camera.c.i
 
 camera/camera.s: camera/camera.c.s
@@ -147,7 +147,7 @@ camera/camera.s: camera/camera.c.s
 
 # target to generate assembly for a file
 camera/camera.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.s
 .PHONY : camera/camera.c.s
 
 color/color.o: color/color.c.o
@@ -156,7 +156,7 @@ color/color.o: color/color.c.o
 
 # target to build an object file
 color/color.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.o
 .PHONY : color/color.c.o
 
 color/color.i: color/color.c.i
@@ -165,7 +165,7 @@ color/color.i: color/color.c.i
 
 # target to preprocess a source file
 color/color.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.i
 .PHONY : color/color.c.i
 
 color/color.s: color/color.c.s
@@ -174,278 +174,8 @@ color/color.s: color/color.c.s
 
 # target to generate assembly for a file
 color/color.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/color/color.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.s
 .PHONY : color/color.c.s
-
-console/console.o: console/console.c.o
-
-.PHONY : console/console.o
-
-# target to build an object file
-console/console.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.o
-.PHONY : console/console.c.o
-
-console/console.i: console/console.c.i
-
-.PHONY : console/console.i
-
-# target to preprocess a source file
-console/console.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.i
-.PHONY : console/console.c.i
-
-console/console.s: console/console.c.s
-
-.PHONY : console/console.s
-
-# target to generate assembly for a file
-console/console.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console.c.s
-.PHONY : console/console.c.s
-
-console/console_diffuse.o: console/console_diffuse.c.o
-
-.PHONY : console/console_diffuse.o
-
-# target to build an object file
-console/console_diffuse.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.o
-.PHONY : console/console_diffuse.c.o
-
-console/console_diffuse.i: console/console_diffuse.c.i
-
-.PHONY : console/console_diffuse.i
-
-# target to preprocess a source file
-console/console_diffuse.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.i
-.PHONY : console/console_diffuse.c.i
-
-console/console_diffuse.s: console/console_diffuse.c.s
-
-.PHONY : console/console_diffuse.s
-
-# target to generate assembly for a file
-console/console_diffuse.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_diffuse.c.s
-.PHONY : console/console_diffuse.c.s
-
-console/console_parallel.o: console/console_parallel.c.o
-
-.PHONY : console/console_parallel.o
-
-# target to build an object file
-console/console_parallel.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.o
-.PHONY : console/console_parallel.c.o
-
-console/console_parallel.i: console/console_parallel.c.i
-
-.PHONY : console/console_parallel.i
-
-# target to preprocess a source file
-console/console_parallel.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.i
-.PHONY : console/console_parallel.c.i
-
-console/console_parallel.s: console/console_parallel.c.s
-
-.PHONY : console/console_parallel.s
-
-# target to generate assembly for a file
-console/console_parallel.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_parallel.c.s
-.PHONY : console/console_parallel.c.s
-
-console/console_reflect.o: console/console_reflect.c.o
-
-.PHONY : console/console_reflect.o
-
-# target to build an object file
-console/console_reflect.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.o
-.PHONY : console/console_reflect.c.o
-
-console/console_reflect.i: console/console_reflect.c.i
-
-.PHONY : console/console_reflect.i
-
-# target to preprocess a source file
-console/console_reflect.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.i
-.PHONY : console/console_reflect.c.i
-
-console/console_reflect.s: console/console_reflect.c.s
-
-.PHONY : console/console_reflect.s
-
-# target to generate assembly for a file
-console/console_reflect.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reflect.c.s
-.PHONY : console/console_reflect.c.s
-
-console/console_refract.o: console/console_refract.c.o
-
-.PHONY : console/console_refract.o
-
-# target to build an object file
-console/console_refract.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.o
-.PHONY : console/console_refract.c.o
-
-console/console_refract.i: console/console_refract.c.i
-
-.PHONY : console/console_refract.i
-
-# target to preprocess a source file
-console/console_refract.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.i
-.PHONY : console/console_refract.c.i
-
-console/console_refract.s: console/console_refract.c.s
-
-.PHONY : console/console_refract.s
-
-# target to generate assembly for a file
-console/console_refract.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_refract.c.s
-.PHONY : console/console_refract.c.s
-
-console/console_reset.o: console/console_reset.c.o
-
-.PHONY : console/console_reset.o
-
-# target to build an object file
-console/console_reset.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.o
-.PHONY : console/console_reset.c.o
-
-console/console_reset.i: console/console_reset.c.i
-
-.PHONY : console/console_reset.i
-
-# target to preprocess a source file
-console/console_reset.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.i
-.PHONY : console/console_reset.c.i
-
-console/console_reset.s: console/console_reset.c.s
-
-.PHONY : console/console_reset.s
-
-# target to generate assembly for a file
-console/console_reset.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_reset.c.s
-.PHONY : console/console_reset.c.s
-
-console/console_shadows.o: console/console_shadows.c.o
-
-.PHONY : console/console_shadows.o
-
-# target to build an object file
-console/console_shadows.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.o
-.PHONY : console/console_shadows.c.o
-
-console/console_shadows.i: console/console_shadows.c.i
-
-.PHONY : console/console_shadows.i
-
-# target to preprocess a source file
-console/console_shadows.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.i
-.PHONY : console/console_shadows.c.i
-
-console/console_shadows.s: console/console_shadows.c.s
-
-.PHONY : console/console_shadows.s
-
-# target to generate assembly for a file
-console/console_shadows.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_shadows.c.s
-.PHONY : console/console_shadows.c.s
-
-console/console_specular.o: console/console_specular.c.o
-
-.PHONY : console/console_specular.o
-
-# target to build an object file
-console/console_specular.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.o
-.PHONY : console/console_specular.c.o
-
-console/console_specular.i: console/console_specular.c.i
-
-.PHONY : console/console_specular.i
-
-# target to preprocess a source file
-console/console_specular.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.i
-.PHONY : console/console_specular.c.i
-
-console/console_specular.s: console/console_specular.c.s
-
-.PHONY : console/console_specular.s
-
-# target to generate assembly for a file
-console/console_specular.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_specular.c.s
-.PHONY : console/console_specular.c.s
-
-console/console_translate.o: console/console_translate.c.o
-
-.PHONY : console/console_translate.o
-
-# target to build an object file
-console/console_translate.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.o
-.PHONY : console/console_translate.c.o
-
-console/console_translate.i: console/console_translate.c.i
-
-.PHONY : console/console_translate.i
-
-# target to preprocess a source file
-console/console_translate.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.i
-.PHONY : console/console_translate.c.i
-
-console/console_translate.s: console/console_translate.c.s
-
-.PHONY : console/console_translate.s
-
-# target to generate assembly for a file
-console/console_translate.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/console_translate.c.s
-.PHONY : console/console_translate.c.s
-
-console/cosnole_tshadows.o: console/cosnole_tshadows.c.o
-
-.PHONY : console/cosnole_tshadows.o
-
-# target to build an object file
-console/cosnole_tshadows.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.o
-.PHONY : console/cosnole_tshadows.c.o
-
-console/cosnole_tshadows.i: console/cosnole_tshadows.c.i
-
-.PHONY : console/cosnole_tshadows.i
-
-# target to preprocess a source file
-console/cosnole_tshadows.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.i
-.PHONY : console/cosnole_tshadows.c.i
-
-console/cosnole_tshadows.s: console/cosnole_tshadows.c.s
-
-.PHONY : console/cosnole_tshadows.s
-
-# target to generate assembly for a file
-console/cosnole_tshadows.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/console/cosnole_tshadows.c.s
-.PHONY : console/cosnole_tshadows.c.s
 
 intersection/intersection.o: intersection/intersection.c.o
 
@@ -453,7 +183,7 @@ intersection/intersection.o: intersection/intersection.c.o
 
 # target to build an object file
 intersection/intersection.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.o
 .PHONY : intersection/intersection.c.o
 
 intersection/intersection.i: intersection/intersection.c.i
@@ -462,7 +192,7 @@ intersection/intersection.i: intersection/intersection.c.i
 
 # target to preprocess a source file
 intersection/intersection.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.i
 .PHONY : intersection/intersection.c.i
 
 intersection/intersection.s: intersection/intersection.c.s
@@ -471,35 +201,8 @@ intersection/intersection.s: intersection/intersection.c.s
 
 # target to generate assembly for a file
 intersection/intersection.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/intersection/intersection.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.s
 .PHONY : intersection/intersection.c.s
-
-light/light.o: light/light.c.o
-
-.PHONY : light/light.o
-
-# target to build an object file
-light/light.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/light/light.c.o
-.PHONY : light/light.c.o
-
-light/light.i: light/light.c.i
-
-.PHONY : light/light.i
-
-# target to preprocess a source file
-light/light.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/light/light.c.i
-.PHONY : light/light.c.i
-
-light/light.s: light/light.c.s
-
-.PHONY : light/light.s
-
-# target to generate assembly for a file
-light/light.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/light/light.c.s
-.PHONY : light/light.c.s
 
 main.o: main.c.o
 
@@ -507,7 +210,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/main.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -516,7 +219,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/main.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -525,62 +228,8 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/main.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.s
 .PHONY : main.c.s
-
-material/material.o: material/material.c.o
-
-.PHONY : material/material.o
-
-# target to build an object file
-material/material.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.o
-.PHONY : material/material.c.o
-
-material/material.i: material/material.c.i
-
-.PHONY : material/material.i
-
-# target to preprocess a source file
-material/material.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.i
-.PHONY : material/material.c.i
-
-material/material.s: material/material.c.s
-
-.PHONY : material/material.s
-
-# target to generate assembly for a file
-material/material.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.s
-.PHONY : material/material.c.s
-
-open_cl/open_cl.o: open_cl/open_cl.c.o
-
-.PHONY : open_cl/open_cl.o
-
-# target to build an object file
-open_cl/open_cl.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.o
-.PHONY : open_cl/open_cl.c.o
-
-open_cl/open_cl.i: open_cl/open_cl.c.i
-
-.PHONY : open_cl/open_cl.i
-
-# target to preprocess a source file
-open_cl/open_cl.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.i
-.PHONY : open_cl/open_cl.c.i
-
-open_cl/open_cl.s: open_cl/open_cl.c.s
-
-.PHONY : open_cl/open_cl.s
-
-# target to generate assembly for a file
-open_cl/open_cl.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.s
-.PHONY : open_cl/open_cl.c.s
 
 ray/ray.o: ray/ray.c.o
 
@@ -588,7 +237,7 @@ ray/ray.o: ray/ray.c.o
 
 # target to build an object file
 ray/ray.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.o
 .PHONY : ray/ray.c.o
 
 ray/ray.i: ray/ray.c.i
@@ -597,7 +246,7 @@ ray/ray.i: ray/ray.c.i
 
 # target to preprocess a source file
 ray/ray.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.i
 .PHONY : ray/ray.c.i
 
 ray/ray.s: ray/ray.c.s
@@ -606,116 +255,89 @@ ray/ray.s: ray/ray.c.s
 
 # target to generate assembly for a file
 ray/ray.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ray/ray.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.s
 .PHONY : ray/ray.c.s
 
-rt/rt.o: rt/rt.c.o
+rp/rp.o: rp/rp.c.o
 
-.PHONY : rt/rt.o
-
-# target to build an object file
-rt/rt.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt.c.o
-.PHONY : rt/rt.c.o
-
-rt/rt.i: rt/rt.c.i
-
-.PHONY : rt/rt.i
-
-# target to preprocess a source file
-rt/rt.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt.c.i
-.PHONY : rt/rt.c.i
-
-rt/rt.s: rt/rt.c.s
-
-.PHONY : rt/rt.s
-
-# target to generate assembly for a file
-rt/rt.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt.c.s
-.PHONY : rt/rt.c.s
-
-rt/rt_consistent.o: rt/rt_consistent.c.o
-
-.PHONY : rt/rt_consistent.o
+.PHONY : rp/rp.o
 
 # target to build an object file
-rt/rt_consistent.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.o
-.PHONY : rt/rt_consistent.c.o
+rp/rp.c.o:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.o
+.PHONY : rp/rp.c.o
 
-rt/rt_consistent.i: rt/rt_consistent.c.i
+rp/rp.i: rp/rp.c.i
 
-.PHONY : rt/rt_consistent.i
+.PHONY : rp/rp.i
 
 # target to preprocess a source file
-rt/rt_consistent.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.i
-.PHONY : rt/rt_consistent.c.i
+rp/rp.c.i:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.i
+.PHONY : rp/rp.c.i
 
-rt/rt_consistent.s: rt/rt_consistent.c.s
+rp/rp.s: rp/rp.c.s
 
-.PHONY : rt/rt_consistent.s
+.PHONY : rp/rp.s
 
 # target to generate assembly for a file
-rt/rt_consistent.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_consistent.c.s
-.PHONY : rt/rt_consistent.c.s
+rp/rp.c.s:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.s
+.PHONY : rp/rp.c.s
 
-rt/rt_mlx.o: rt/rt_mlx.c.o
+rp/rp_hooks.o: rp/rp_hooks.c.o
 
-.PHONY : rt/rt_mlx.o
+.PHONY : rp/rp_hooks.o
 
 # target to build an object file
-rt/rt_mlx.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_mlx.c.o
-.PHONY : rt/rt_mlx.c.o
+rp/rp_hooks.c.o:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.o
+.PHONY : rp/rp_hooks.c.o
 
-rt/rt_mlx.i: rt/rt_mlx.c.i
+rp/rp_hooks.i: rp/rp_hooks.c.i
 
-.PHONY : rt/rt_mlx.i
+.PHONY : rp/rp_hooks.i
 
 # target to preprocess a source file
-rt/rt_mlx.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_mlx.c.i
-.PHONY : rt/rt_mlx.c.i
+rp/rp_hooks.c.i:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.i
+.PHONY : rp/rp_hooks.c.i
 
-rt/rt_mlx.s: rt/rt_mlx.c.s
+rp/rp_hooks.s: rp/rp_hooks.c.s
 
-.PHONY : rt/rt_mlx.s
+.PHONY : rp/rp_hooks.s
 
 # target to generate assembly for a file
-rt/rt_mlx.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_mlx.c.s
-.PHONY : rt/rt_mlx.c.s
+rp/rp_hooks.c.s:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.s
+.PHONY : rp/rp_hooks.c.s
 
-rt/rt_parallel.o: rt/rt_parallel.c.o
+rp/rp_render.o: rp/rp_render.c.o
 
-.PHONY : rt/rt_parallel.o
+.PHONY : rp/rp_render.o
 
 # target to build an object file
-rt/rt_parallel.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.o
-.PHONY : rt/rt_parallel.c.o
+rp/rp_render.c.o:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.o
+.PHONY : rp/rp_render.c.o
 
-rt/rt_parallel.i: rt/rt_parallel.c.i
+rp/rp_render.i: rp/rp_render.c.i
 
-.PHONY : rt/rt_parallel.i
+.PHONY : rp/rp_render.i
 
 # target to preprocess a source file
-rt/rt_parallel.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.i
-.PHONY : rt/rt_parallel.c.i
+rp/rp_render.c.i:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.i
+.PHONY : rp/rp_render.c.i
 
-rt/rt_parallel.s: rt/rt_parallel.c.s
+rp/rp_render.s: rp/rp_render.c.s
 
-.PHONY : rt/rt_parallel.s
+.PHONY : rp/rp_render.s
 
 # target to generate assembly for a file
-rt/rt_parallel.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/rt/rt_parallel.c.s
-.PHONY : rt/rt_parallel.c.s
+rp/rp_render.c.s:
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.s
+.PHONY : rp/rp_render.c.s
 
 scene/scene.o: scene/scene.c.o
 
@@ -723,7 +345,7 @@ scene/scene.o: scene/scene.c.o
 
 # target to build an object file
 scene/scene.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.o
 .PHONY : scene/scene.c.o
 
 scene/scene.i: scene/scene.c.i
@@ -732,7 +354,7 @@ scene/scene.i: scene/scene.c.i
 
 # target to preprocess a source file
 scene/scene.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.i
 .PHONY : scene/scene.c.i
 
 scene/scene.s: scene/scene.c.s
@@ -741,62 +363,8 @@ scene/scene.s: scene/scene.c.s
 
 # target to generate assembly for a file
 scene/scene.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.s
 .PHONY : scene/scene.c.s
-
-scene/scene_lights.o: scene/scene_lights.c.o
-
-.PHONY : scene/scene_lights.o
-
-# target to build an object file
-scene/scene_lights.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.o
-.PHONY : scene/scene_lights.c.o
-
-scene/scene_lights.i: scene/scene_lights.c.i
-
-.PHONY : scene/scene_lights.i
-
-# target to preprocess a source file
-scene/scene_lights.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.i
-.PHONY : scene/scene_lights.c.i
-
-scene/scene_lights.s: scene/scene_lights.c.s
-
-.PHONY : scene/scene_lights.s
-
-# target to generate assembly for a file
-scene/scene_lights.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_lights.c.s
-.PHONY : scene/scene_lights.c.s
-
-scene/scene_shapes.o: scene/scene_shapes.c.o
-
-.PHONY : scene/scene_shapes.o
-
-# target to build an object file
-scene/scene_shapes.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.o
-.PHONY : scene/scene_shapes.c.o
-
-scene/scene_shapes.i: scene/scene_shapes.c.i
-
-.PHONY : scene/scene_shapes.i
-
-# target to preprocess a source file
-scene/scene_shapes.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.i
-.PHONY : scene/scene_shapes.c.i
-
-scene/scene_shapes.s: scene/scene_shapes.c.s
-
-.PHONY : scene/scene_shapes.s
-
-# target to generate assembly for a file
-scene/scene_shapes.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_shapes.c.s
-.PHONY : scene/scene_shapes.c.s
 
 shape/shape.o: shape/shape.c.o
 
@@ -804,7 +372,7 @@ shape/shape.o: shape/shape.c.o
 
 # target to build an object file
 shape/shape.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.o
 .PHONY : shape/shape.c.o
 
 shape/shape.i: shape/shape.c.i
@@ -813,7 +381,7 @@ shape/shape.i: shape/shape.c.i
 
 # target to preprocess a source file
 shape/shape.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.i
 .PHONY : shape/shape.c.i
 
 shape/shape.s: shape/shape.c.s
@@ -822,7 +390,7 @@ shape/shape.s: shape/shape.c.s
 
 # target to generate assembly for a file
 shape/shape.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.s
 .PHONY : shape/shape.c.s
 
 shape/shape_aabb.o: shape/shape_aabb.c.o
@@ -831,7 +399,7 @@ shape/shape_aabb.o: shape/shape_aabb.c.o
 
 # target to build an object file
 shape/shape_aabb.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_aabb.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.o
 .PHONY : shape/shape_aabb.c.o
 
 shape/shape_aabb.i: shape/shape_aabb.c.i
@@ -840,7 +408,7 @@ shape/shape_aabb.i: shape/shape_aabb.c.i
 
 # target to preprocess a source file
 shape/shape_aabb.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_aabb.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.i
 .PHONY : shape/shape_aabb.c.i
 
 shape/shape_aabb.s: shape/shape_aabb.c.s
@@ -849,35 +417,8 @@ shape/shape_aabb.s: shape/shape_aabb.c.s
 
 # target to generate assembly for a file
 shape/shape_aabb.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_aabb.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.s
 .PHONY : shape/shape_aabb.c.s
-
-shape/shape_cone.o: shape/shape_cone.c.o
-
-.PHONY : shape/shape_cone.o
-
-# target to build an object file
-shape/shape_cone.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cone.c.o
-.PHONY : shape/shape_cone.c.o
-
-shape/shape_cone.i: shape/shape_cone.c.i
-
-.PHONY : shape/shape_cone.i
-
-# target to preprocess a source file
-shape/shape_cone.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cone.c.i
-.PHONY : shape/shape_cone.c.i
-
-shape/shape_cone.s: shape/shape_cone.c.s
-
-.PHONY : shape/shape_cone.s
-
-# target to generate assembly for a file
-shape/shape_cone.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cone.c.s
-.PHONY : shape/shape_cone.c.s
 
 shape/shape_cylinder.o: shape/shape_cylinder.c.o
 
@@ -885,7 +426,7 @@ shape/shape_cylinder.o: shape/shape_cylinder.c.o
 
 # target to build an object file
 shape/shape_cylinder.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cylinder.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.o
 .PHONY : shape/shape_cylinder.c.o
 
 shape/shape_cylinder.i: shape/shape_cylinder.c.i
@@ -894,7 +435,7 @@ shape/shape_cylinder.i: shape/shape_cylinder.c.i
 
 # target to preprocess a source file
 shape/shape_cylinder.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cylinder.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.i
 .PHONY : shape/shape_cylinder.c.i
 
 shape/shape_cylinder.s: shape/shape_cylinder.c.s
@@ -903,35 +444,8 @@ shape/shape_cylinder.s: shape/shape_cylinder.c.s
 
 # target to generate assembly for a file
 shape/shape_cylinder.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_cylinder.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.s
 .PHONY : shape/shape_cylinder.c.s
-
-shape/shape_disk.o: shape/shape_disk.c.o
-
-.PHONY : shape/shape_disk.o
-
-# target to build an object file
-shape/shape_disk.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.o
-.PHONY : shape/shape_disk.c.o
-
-shape/shape_disk.i: shape/shape_disk.c.i
-
-.PHONY : shape/shape_disk.i
-
-# target to preprocess a source file
-shape/shape_disk.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.i
-.PHONY : shape/shape_disk.c.i
-
-shape/shape_disk.s: shape/shape_disk.c.s
-
-.PHONY : shape/shape_disk.s
-
-# target to generate assembly for a file
-shape/shape_disk.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.s
-.PHONY : shape/shape_disk.c.s
 
 shape/shape_plane.o: shape/shape_plane.c.o
 
@@ -939,7 +453,7 @@ shape/shape_plane.o: shape/shape_plane.c.o
 
 # target to build an object file
 shape/shape_plane.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_plane.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.o
 .PHONY : shape/shape_plane.c.o
 
 shape/shape_plane.i: shape/shape_plane.c.i
@@ -948,7 +462,7 @@ shape/shape_plane.i: shape/shape_plane.c.i
 
 # target to preprocess a source file
 shape/shape_plane.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_plane.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.i
 .PHONY : shape/shape_plane.c.i
 
 shape/shape_plane.s: shape/shape_plane.c.s
@@ -957,7 +471,7 @@ shape/shape_plane.s: shape/shape_plane.c.s
 
 # target to generate assembly for a file
 shape/shape_plane.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_plane.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.s
 .PHONY : shape/shape_plane.c.s
 
 shape/shape_sphere.o: shape/shape_sphere.c.o
@@ -966,7 +480,7 @@ shape/shape_sphere.o: shape/shape_sphere.c.o
 
 # target to build an object file
 shape/shape_sphere.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_sphere.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.o
 .PHONY : shape/shape_sphere.c.o
 
 shape/shape_sphere.i: shape/shape_sphere.c.i
@@ -975,7 +489,7 @@ shape/shape_sphere.i: shape/shape_sphere.c.i
 
 # target to preprocess a source file
 shape/shape_sphere.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_sphere.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.i
 .PHONY : shape/shape_sphere.c.i
 
 shape/shape_sphere.s: shape/shape_sphere.c.s
@@ -984,7 +498,7 @@ shape/shape_sphere.s: shape/shape_sphere.c.s
 
 # target to generate assembly for a file
 shape/shape_sphere.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_sphere.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
 vector3/vector3.o: vector3/vector3.c.o
@@ -993,7 +507,7 @@ vector3/vector3.o: vector3/vector3.c.o
 
 # target to build an object file
 vector3/vector3.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3.c.o
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.o
 .PHONY : vector3/vector3.c.o
 
 vector3/vector3.i: vector3/vector3.c.i
@@ -1002,7 +516,7 @@ vector3/vector3.i: vector3/vector3.c.i
 
 # target to preprocess a source file
 vector3/vector3.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3.c.i
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.i
 .PHONY : vector3/vector3.c.i
 
 vector3/vector3.s: vector3/vector3.c.s
@@ -1011,7 +525,7 @@ vector3/vector3.s: vector3/vector3.c.s
 
 # target to generate assembly for a file
 vector3/vector3.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3.c.s
+	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.s
 .PHONY : vector3/vector3.c.s
 
 # Help Target
@@ -1022,97 +536,43 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... rt"
+	@echo "... rp"
 	@echo "... camera/camera.o"
 	@echo "... camera/camera.i"
 	@echo "... camera/camera.s"
 	@echo "... color/color.o"
 	@echo "... color/color.i"
 	@echo "... color/color.s"
-	@echo "... console/console.o"
-	@echo "... console/console.i"
-	@echo "... console/console.s"
-	@echo "... console/console_diffuse.o"
-	@echo "... console/console_diffuse.i"
-	@echo "... console/console_diffuse.s"
-	@echo "... console/console_parallel.o"
-	@echo "... console/console_parallel.i"
-	@echo "... console/console_parallel.s"
-	@echo "... console/console_reflect.o"
-	@echo "... console/console_reflect.i"
-	@echo "... console/console_reflect.s"
-	@echo "... console/console_refract.o"
-	@echo "... console/console_refract.i"
-	@echo "... console/console_refract.s"
-	@echo "... console/console_reset.o"
-	@echo "... console/console_reset.i"
-	@echo "... console/console_reset.s"
-	@echo "... console/console_shadows.o"
-	@echo "... console/console_shadows.i"
-	@echo "... console/console_shadows.s"
-	@echo "... console/console_specular.o"
-	@echo "... console/console_specular.i"
-	@echo "... console/console_specular.s"
-	@echo "... console/console_translate.o"
-	@echo "... console/console_translate.i"
-	@echo "... console/console_translate.s"
-	@echo "... console/cosnole_tshadows.o"
-	@echo "... console/cosnole_tshadows.i"
-	@echo "... console/cosnole_tshadows.s"
 	@echo "... intersection/intersection.o"
 	@echo "... intersection/intersection.i"
 	@echo "... intersection/intersection.s"
-	@echo "... light/light.o"
-	@echo "... light/light.i"
-	@echo "... light/light.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... material/material.o"
-	@echo "... material/material.i"
-	@echo "... material/material.s"
-	@echo "... open_cl/open_cl.o"
-	@echo "... open_cl/open_cl.i"
-	@echo "... open_cl/open_cl.s"
 	@echo "... ray/ray.o"
 	@echo "... ray/ray.i"
 	@echo "... ray/ray.s"
-	@echo "... rt/rt.o"
-	@echo "... rt/rt.i"
-	@echo "... rt/rt.s"
-	@echo "... rt/rt_consistent.o"
-	@echo "... rt/rt_consistent.i"
-	@echo "... rt/rt_consistent.s"
-	@echo "... rt/rt_mlx.o"
-	@echo "... rt/rt_mlx.i"
-	@echo "... rt/rt_mlx.s"
-	@echo "... rt/rt_parallel.o"
-	@echo "... rt/rt_parallel.i"
-	@echo "... rt/rt_parallel.s"
+	@echo "... rp/rp.o"
+	@echo "... rp/rp.i"
+	@echo "... rp/rp.s"
+	@echo "... rp/rp_hooks.o"
+	@echo "... rp/rp_hooks.i"
+	@echo "... rp/rp_hooks.s"
+	@echo "... rp/rp_render.o"
+	@echo "... rp/rp_render.i"
+	@echo "... rp/rp_render.s"
 	@echo "... scene/scene.o"
 	@echo "... scene/scene.i"
 	@echo "... scene/scene.s"
-	@echo "... scene/scene_lights.o"
-	@echo "... scene/scene_lights.i"
-	@echo "... scene/scene_lights.s"
-	@echo "... scene/scene_shapes.o"
-	@echo "... scene/scene_shapes.i"
-	@echo "... scene/scene_shapes.s"
 	@echo "... shape/shape.o"
 	@echo "... shape/shape.i"
 	@echo "... shape/shape.s"
 	@echo "... shape/shape_aabb.o"
 	@echo "... shape/shape_aabb.i"
 	@echo "... shape/shape_aabb.s"
-	@echo "... shape/shape_cone.o"
-	@echo "... shape/shape_cone.i"
-	@echo "... shape/shape_cone.s"
 	@echo "... shape/shape_cylinder.o"
 	@echo "... shape/shape_cylinder.i"
 	@echo "... shape/shape_cylinder.s"
-	@echo "... shape/shape_disk.o"
-	@echo "... shape/shape_disk.i"
-	@echo "... shape/shape_disk.s"
 	@echo "... shape/shape_plane.o"
 	@echo "... shape/shape_plane.i"
 	@echo "... shape/shape_plane.s"

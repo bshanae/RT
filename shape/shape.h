@@ -1,26 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shape.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:13:27 by ashari            #+#    #+#             */
+/*   Updated: 2019/07/02 18:26:11 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SHAPE_H
 # define SHAPE_H
+
+# include "parameters.h"
 
 # include "material.h"
 # include "intersection.h"
 
-typedef	struct 			s_shape
+typedef	struct			s_shape
 {
-	void 				*data;
-	unsigned long		data_size;
-	int 				(*intersect)(struct s_shape *, t_intersection *);
-	void				(*move)(struct s_shape *, t_vector3 move);
-	const t_material	*material;
-	int					highlight;
+	int					id;
+	unsigned char		data[SHAPE_DATA_SIZE_RESERVE];
+	t_material			material;
 }						t_shape;
 
-typedef	struct 			s_shape_cl
-{
-	int 				function_index;
-	const t_material	material;
-	int					highlight;
-}						t_shape_cl;
-
-void					shape_delete(t_shape **me);
+int						shape_intersect(t_shape *shape, t_intersection *intersection);
 
 #endif

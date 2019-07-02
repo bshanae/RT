@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shape_sphere.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/30 19:13:20 by ashari            #+#    #+#             */
+/*   Updated: 2019/07/02 11:17:32 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "shape_list.h"
 
-int					sphere_intersect
-	(t_shape *shape, t_intersection *intersection)
+int					sphere_intersect(t_shape *shape, t_intersection *intersection)
 {
 	t_sphere_data	*data;
 	float 	k[3];
@@ -24,13 +35,12 @@ int					sphere_intersect
 	temp = ray_intersect(&intersection->ray);
 	intersection->normal = vector3_sub(&temp, &data->center);
 	vector3_normalize(&intersection->normal);
-	intersection->color = shape->material->color;
+	intersection->color = shape->material.color;
 	intersection->material = shape->material;
-	intersection->highlight = &shape->highlight;
 	return (1);
 }
 
-static void			sphere_move(t_shape *shape, t_vector3 move)
+void				sphere_move(t_shape *shape, t_vector3 move)
 {
 	t_sphere_data	*data;
 
@@ -38,23 +48,16 @@ static void			sphere_move(t_shape *shape, t_vector3 move)
 	vector3_add_eq(&data->center, &move);
 }
 
-t_shape				*shape_sphere
-	(t_vector3 center, float radius, const t_material *material)
+t_shape				shape_sphere
+	(t_vector3 center, float radius, t_material material)
 {
-	t_shape			*shape;
+	t_shape			shape;
 	t_sphere_data	*data;
 
-	if (!(shape = (t_shape *)malloc(sizeof(t_shape))))
-		exit(21);
-	if (!(data = (t_sphere_data *)malloc(sizeof(t_sphere_data))))
-		exit(21);
+	shape.id = SHAPE_ID_SPHERE;
+	data = (t_sphere_data *)shape.data;
 	data->center = center;
 	data->radius = radius;
-	shape->material = material;
-	shape->data = (void *)data;
-	shape->data_size = sizeof(t_sphere_data);
-	shape->intersect = sphere_intersect;
-	shape->move = sphere_move;
-	shape->highlight = 0;
+	shape.material = material;
 	return (shape);
 }
