@@ -274,7 +274,7 @@ static int                  color_unpack(t_vector3 vector)
 //							RAY
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# define RAY_T_MIN	    	0.001
+# define RAY_T_MIN	    	0.0001
 # define RAY_T_MAX	    	INFINITY
 
 typedef	struct		    	s_ray
@@ -746,7 +746,7 @@ static int              	scene_check_shadow
 	shadow.ray.origin = ray_intersect(&intersection->ray);
 	shadow.ray.direction = *light_direction;
 	scene_intersect(scene, &shadow);
-	return (shadow.ray.t >= RAY_T_MIN && shadow.ray.t <= vector3_length(light_direction));
+	return (shadow.ray.t >= RAY_T_MIN && shadow.ray.t <= 1.);
 }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
