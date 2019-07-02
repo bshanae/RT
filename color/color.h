@@ -1,7 +1,6 @@
-#ifndef COLOR_H
-# define COLOR_H
+#ifndef RP_COLOR_H
+#define RP_COLOR_H
 
-# include "math.h"
 # include "vector3.h"
 
 typedef struct			s_rgb
@@ -17,8 +16,6 @@ typedef union			u_color
 	int					mix;
 	t_rgb				rgb;
 }						t_color;
-
-t_vector3				color_pack(int value);
 
 int                     color_unpack(t_vector3 vector);
 
