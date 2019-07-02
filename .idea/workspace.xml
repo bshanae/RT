@@ -259,7 +259,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="rt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rt" TARGET_NAME="rt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rt" RUN_TARGET_NAME="rt">
+    <configuration name="rp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rp" TARGET_NAME="rp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rp" RUN_TARGET_NAME="rp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

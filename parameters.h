@@ -9,7 +9,7 @@
 
 # define SHAPE_DATA_SIZE_RESERVE	128
 
-# define PATH_DEPTH					2
+# define PATH_DEPTH					1
 # define SAMPLE_NUMBER				8
 
 # define SHAPE_ID_SPHERE			0
