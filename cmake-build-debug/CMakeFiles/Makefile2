@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/rp.dir
+# Target rules for target CMakeFiles/rt.dir
 
 # All Build rule for target.
-CMakeFiles/rp.dir/all:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/depend
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target rp"
-.PHONY : CMakeFiles/rp.dir/all
+CMakeFiles/rt.dir/all:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/depend
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34 "Built target rt"
+.PHONY : CMakeFiles/rt.dir/all
 
 # Include target in all.
-all: CMakeFiles/rp.dir/all
+all: CMakeFiles/rt.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/rp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 16
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rp.dir/all
+CMakeFiles/rt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 34
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rp.dir/rule
+.PHONY : CMakeFiles/rt.dir/rule
 
 # Convenience name for target.
-rp: CMakeFiles/rp.dir/rule
+rt: CMakeFiles/rt.dir/rule
 
-.PHONY : rp
-
-# clean rule for target.
-CMakeFiles/rp.dir/clean:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/clean
-.PHONY : CMakeFiles/rp.dir/clean
+.PHONY : rt
 
 # clean rule for target.
-clean: CMakeFiles/rp.dir/clean
+CMakeFiles/rt.dir/clean:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/clean
+.PHONY : CMakeFiles/rt.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/rt.dir/clean
 
 .PHONY : clean
 

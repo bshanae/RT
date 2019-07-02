@@ -3,7 +3,12 @@
 
 # include "vector3.h"
 
-# define RAY_T_MIN	0.001f
+# if float == float
+#  define RAY_T_MIN 0.001f
+# elif float == double
+#  define RAY_T_MIN 0.000001
+# endif
+
 # define RAY_T_MAX	INFINITY
 
 typedef	struct		s_ray

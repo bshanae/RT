@@ -1,4 +1,4 @@
-# include "ray.h"
+#include "ray.h"
 
 t_vector3			ray_intersect(const t_ray *me)
 {

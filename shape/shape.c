@@ -1,34 +1,40 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   shape.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/30 19:13:23 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/02 18:31:19 by bshanae          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "shape_list.h"
 
-void				shape_move(t_shape *shape, t_vector3 step)
+void					shape_delete(t_shape **me)
 {
-	if (shape->id == SHAPE_ID_SPHERE)
-		sphere_move(shape, step);
-	else if (shape->id == SHAPE_ID_PLANE)
-		plane_move(shape, step);
-	else if (shape->id == SHAPE_ID_CYLINDER)
-		cylinder_move(shape, step);
-	else if (shape->id == SHAPE_ID_AABB)
-		aabb_move(shape, step);
+	free((*me)->data);
+	free(*me);
+	*me = NULL;
 }
 
-int					shape_intersect(t_shape *shape, t_intersection *intersection)
+t_intersection_function	shape_get_function_ptr(int i)
 {
-	if (shape->id == SHAPE_ID_SPHERE)
-		return (sphere_intersect(shape, intersection));
-	else if (shape->id == SHAPE_ID_PLANE)
-		return (plane_intersect(shape, intersection));
-	exit(2);
+	static t_intersection_function	array[SHAPE_TYPE_NUM];
+
+	if (!array[0])
+	{
+		array[0] = sphere_intersect;
+		array[1] = plane_intersect;
+		array[2] = cylinder_intersect;
+		array[3] = aabb_intersect;
+		array[4] = cone_intersect;
+		array[5] = disk_intersect;
+	}
+	if (i < 0 || i >= SHAPE_TYPE_NUM)
+		return (NULL);
+	return (array[i]);
+}
+
+int 						shape_find_function_ptr(t_intersection_function ptr)
+{
+	int 					i;
+
+	i = 0;
+	while(i < SHAPE_TYPE_NUM)
+	{
+		if (shape_get_function_ptr(i) == ptr)
+			return (i);
+		i++;
+	}
+	return (-1);
 }
