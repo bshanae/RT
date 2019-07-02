@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:12:28 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/01 12:05:47 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/07/02 11:52:03 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ t_rt				*rt_new(void)
 	rt->ctrl_light.index = 0;
 	rt->ctrl_shape.is_on = 0;
 	rt->ctrl_shape.index = 0;
-	rt_clone(rt);
 	rt->open_cl = open_cl_new(rt->img_data);
 	return (rt);
 }

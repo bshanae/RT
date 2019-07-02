@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
-project(rt C)
+project(rtv1 C)
 
 set(CMAKE_C_STANDARD 99)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra")
 
-add_executable(rt
+add_executable(rtv1
         ./main.c
         vector3/vector3.c
         ./camera/camera.c
@@ -19,9 +19,30 @@ add_executable(rt
         ./shape/shape.c
         ./shape/shape_aabb.c
         ./shape/shape_cone.c
-        ./open_cl/open_cl.c scene/scene_a.c material/material_list.h color/color_list.h scene/scene_list.h open_cl/open_cl_error.c open_cl/open_cl_create_program.c open_cl/open_cl_create_context.c open_cl/open_cl_create_device.c open_cl/open_cl_create_queue.c open_cl/open_cl_create_kernel.c open_cl/open_cl_alloc_device_data.c open_cl/open_cl_set_arguments.c rt/rt_clone.c rt/rt_control.c vector3/vector3_rotate.c vector3/vector3_mul.c vector3/vector3_add_sub.c scene/scene_b.c scene/scene_c.c scene/scene_d.c scene/scene_e.c)
+        ./open_cl/open_cl.c
+        ./scene/scene_a.c
+        ./material/material_list.h
+        ./color/color_list.h
+        ./open_cl/open_cl_error.c
+        ./open_cl/open_cl_create_program.c
+        ./open_cl/open_cl_create_context.c
+        ./open_cl/open_cl_create_device.c
+        ./open_cl/open_cl_create_queue.c
+        ./open_cl/open_cl_create_kernel.c
+        ./open_cl/open_cl_alloc_device_data.c
+        ./open_cl/open_cl_set_arguments.c
+        ./rt/rt_clone.c
+        ./rt/rt_control.c
+        ./vector3/vector3_rotate.c
+        ./vector3/vector3_mul.c
+        ./vector3/vector3_add_sub.c
+        ./scene/scene_list.h
+        ./scene/scene_b.c
+        ./scene/scene_c.c
+        ./scene/scene_d.c
+        ./scene/scene_e.c)
 
-target_include_directories(rt
+target_include_directories(rtv1
         PRIVATE /usr/local/include
         PRIVATE /usr/X11/include
         PRIVATE ../21_libft/includes
@@ -40,12 +61,12 @@ target_include_directories(rt
         PRIVATE float_macro
         PRIVATE ./)
 
-target_link_directories(rt
+target_link_directories(rtv1
         PRIVATE /usr/local/lib
         PRIVATE /usr/X11/lib
         PRIVATE ../21_libft/)
 
-target_link_libraries(rt
+target_link_libraries(rtv1
         "ft"
         "mlx"
         "-framework OpenGL"

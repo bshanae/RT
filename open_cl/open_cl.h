@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:11:58 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/01 12:05:47 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/07/02 11:17:41 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 # include "shape_list.h"
 # include "parameters.h"
 
-# define CL_SOURCE		"./open_cl/program.cl"
+# define CL_SOURCE		"../open_cl/program.cl"
 # define CL_FUNCTION	"render"
-# define CL_OPTIONS		"-I ./"
+# define CL_OPTIONS		"-I ../"
 
 # define OCL_BUFF_INIT 1000
 # define OCL_BUFF_MULT 5

@@ -15,7 +15,7 @@
 void				error_raise(int line, const char *function_name, int error)
 {
 	ft_printf("Error no. %d on line %d in %s\n", error, line, function_name);
-	exit(1);
+	exit(17);
 }
 
 void				error_check(int line, const char *function_name, int error)
