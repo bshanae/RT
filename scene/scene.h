@@ -8,7 +8,7 @@
 # include "libft_vector.h"
 # include "camera.h"
 
-# define SCENE_DEF_BACKGROUND 	(t_vector3){.7, .7, .7}
+# define SCENE_DEF_BACKGROUND 	(t_vector3){.4, .4, .4}
 
 typedef	struct					s_scene
 {

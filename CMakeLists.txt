@@ -23,6 +23,8 @@ add_executable(rp
         ./rp/rp_render.c)
 
 target_include_directories(rp
+        PRIVATE /usr/local/include
+        PRIVATE /usr/X11/include
         PRIVATE ../21_libft/includes
         PRIVATE ./
         PRIVATE ./vector3

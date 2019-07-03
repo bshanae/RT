@@ -5,7 +5,7 @@ static void			create_coordiante_system(const t_vector3 *normal, t_vector3 *nt, t
 	if (fabsf(normal->x) > fabsf(normal->y))
 		*nt = (t_vector3){normal->z, 0., -1.f * normal->x};
 	else
-		*nt = (t_vector3){0. -1.f * normal->z, normal->y};
+		*nt = (t_vector3){0., -1.f * normal->z, normal->y};
 	vector3_normalize(nt);
 	*nb = vector3_cross(normal, nt);
 }
@@ -77,35 +77,34 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	srand(time(NULL));
 	for (int i = 0; i < SAMPLE_NUMBER; i++)
 	{
-//		r1 = (float)rand() / (float)(RAND_MAX);
-//		r2 = (float)rand() / (float)(RAND_MAX);
-//
-//		sample_local = generate_sample(&r1, &r2);
-//
-//		sample_world = convert_sample(&me.normal, &sample_local, &nt, &nb);
-//
-//		child.ray.origin = vector3_s_add(hit, vector3_mul(&sample_world, BIAS));
-//		child.ray.direction = sample_world;
-//
-//		sample_color = rp_cast_ray(rp, child, depth);
-//		vector3_mul(&sample_color, r1);
-//
-//		vector3_add_eq(&light_indirect, &sample_color);
+		r1 = (float)rand() / (float)(RAND_MAX);
+		r2 = (float)rand() / (float)(RAND_MAX);
 
-		float theta = (float)rand() * M_PI / (float)(RAND_MAX) ;
+		sample_local = generate_sample(&r1, &r2);
 
-		float cos_theta = cosf(theta);
-		float sin_tehta = sinf(theta);
+		sample_world = convert_sample(&me.normal, &sample_local, &nt, &nb);
 
+		child.ray.origin = vector3_s_add(hit, vector3_mul(&sample_world, BIAS));
+		child.ray.direction = sample_world;
 
+		sample_color = rp_cast_ray(rp, child, depth);
+
+//		if (sample_color.x != 0.4f && sample_color.x != 0.f)
+//			printf("%f %f %f\n", sample_color.x, sample_color.y, sample_color.z);
+		vector3_mul_eq(&sample_color, r1 / pdf);
+//		if (sample_color.x != 0.4f && sample_color.x != 0.f)
+//			printf("%f %f %f\n\n", sample_color.x, sample_color.y, sample_color.z);
+
+		vector3_add_eq(&light_indirect, &sample_color);
 	}
-	vector3_div(&light_indirect, SAMPLE_NUMBER);
+	vector3_div_eq(&light_indirect, (float)SAMPLE_NUMBER);
 
 	color = vector3_s_add
 		(
-			vector3_mul(&light_direct, M_PI),
+			vector3_div(&light_direct, M_PI),
 			vector3_mul(&light_indirect, 2.f)
 		);
+	vector3_mul_eq(&color, .3f);
 	return (color);
 }
 

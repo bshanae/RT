@@ -27,6 +27,7 @@ CMakeFiles/rp.dir/main.c.o: .././intersection/intersection.h
 CMakeFiles/rp.dir/main.c.o: .././light/light.h
 CMakeFiles/rp.dir/main.c.o: .././material/material.h
 CMakeFiles/rp.dir/main.c.o: .././material/material_list.h
+CMakeFiles/rp.dir/main.c.o: .././mlx_keys.h
 CMakeFiles/rp.dir/main.c.o: .././parameters.h
 CMakeFiles/rp.dir/main.c.o: .././ray/ray.h
 CMakeFiles/rp.dir/main.c.o: .././rp/rp.h
@@ -35,6 +36,7 @@ CMakeFiles/rp.dir/main.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/main.c.o: .././shape/shape_list.h
 CMakeFiles/rp.dir/main.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/main.c.o: ../main.c
+CMakeFiles/rp.dir/main.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/ray/ray.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/ray/ray.c.o: ../ray/ray.c
@@ -48,6 +50,7 @@ CMakeFiles/rp.dir/rp/rp.c.o: .././color/color_list.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././intersection/intersection.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././light/light.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././material/material.h
+CMakeFiles/rp.dir/rp/rp.c.o: .././mlx_keys.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././parameters.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././ray/ray.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././scene/scene.h
@@ -55,6 +58,7 @@ CMakeFiles/rp.dir/rp/rp.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp.c.o: ../rp/rp.c
 CMakeFiles/rp.dir/rp/rp.c.o: ../rp/rp.h
+CMakeFiles/rp.dir/rp/rp.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../../21_libft/includes/libft_vector.h
@@ -64,6 +68,7 @@ CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././color/color_list.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././intersection/intersection.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././light/light.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././material/material.h
+CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././mlx_keys.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././parameters.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././ray/ray.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././scene/scene.h
@@ -71,6 +76,7 @@ CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../rp/rp.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../rp/rp_hooks.c
+CMakeFiles/rp.dir/rp/rp_hooks.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../../21_libft/includes/libft_vector.h
@@ -80,6 +86,7 @@ CMakeFiles/rp.dir/rp/rp_render.c.o: .././color/color_list.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././intersection/intersection.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././light/light.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././material/material.h
+CMakeFiles/rp.dir/rp/rp_render.c.o: .././mlx_keys.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././parameters.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././ray/ray.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././scene/scene.h
@@ -87,6 +94,7 @@ CMakeFiles/rp.dir/rp/rp_render.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../rp/rp.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../rp/rp_render.c
+CMakeFiles/rp.dir/rp/rp_render.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/scene/scene.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/scene/scene.c.o: ../../21_libft/includes/libft_vector.h
