@@ -2,63 +2,51 @@ NAME = RTv1
 
 LIBFT_DIRECTORY = ./libft/
 LIBFT = $(LIBFT_DIRECTORY)libft.a
-GCC_LIBFT =                                     \
-    -L ./libft                                  \
+GCC_LIBFT =                                         \
+    -L ./libft                                      \
     -l ft
 
-INCLUDES =                                      \
-    $(LIBFT_DIRECTORY)includes/                 \
-    ./                                          \
-    ./camera                                    \
-    ./color                                     \
-    ./intersection                              \
-    ./light                                     \
-    ./main.c                                    \
-    ./material                                  \
-    ./mlx                                       \
-    ./objects                                   \
-    ./open_cl                                   \
-    ./parameters.h                              \
-    ./ray                                       \
-    ./rt                                        \
-    ./scene                                     \
-    ./shape                                     \
-    ./vector3
+INCLUDES =                                          \
+    $(LIBFT_DIRECTORY)includes/                     \
+	./includes
 
-SOURCES =                                       \
-    ./camera/camera.c                           \
-    ./light/light.c                             \
-    ./main.c                                    \
-    ./open_cl/open_cl.c                         \
-    ./open_cl/open_cl_alloc_device_data.c       \
-    ./open_cl/open_cl_create_context.c          \
-    ./open_cl/open_cl_create_device.c           \
-    ./open_cl/open_cl_create_kernel.c           \
-    ./open_cl/open_cl_create_program.c          \
-    ./open_cl/open_cl_create_queue.c            \
-    ./open_cl/open_cl_error.c                   \
-    ./open_cl/open_cl_set_arguments.c           \
-    ./rt/rt.c                                   \
-    ./rt/rt_clone.c                             \
-    ./rt/rt_control.c                           \
-    ./rt/rt_mlx.c                               \
-    ./scene/scene.c                             \
-    ./scene/scene_a.c                           \
-    ./scene/scene_b.c                           \
-    ./scene/scene_c.c                           \
-    ./scene/scene_d.c                           \
-    ./scene/scene_e.c                           \
-    ./scene/scene_f.c                           \
-    ./shape/shape.c                             \
-    ./shape/shape_aabb.c                        \
-    ./shape/shape_cone.c                        \
-    ./shape/shape_cylinder.c                    \
-    ./shape/shape_plane.c                       \
-    ./shape/shape_sphere.c                      \
-    ./vector3/vector3.c                         \
-    ./vector3/vector3_add_sub.c                 \
-    ./vector3/vector3_mul.c                     \
-    ./vector3/vector3_rotate.c
+SOURCE_CL =										    \
+	./sources/open_cl/program.cl
+
+SOURCES =                                           \
+    ./sources/camera/camera.c						\
+    ./sources/light/light.c                         \
+    ./sources/main.c                                \
+    ./sources/open_cl/open_cl.c                     \
+    ./sources/open_cl/open_cl_alloc_device_data.c   \
+    ./sources/open_cl/open_cl_create_context.c      \
+    ./sources/open_cl/open_cl_create_device.c       \
+    ./sources/open_cl/open_cl_create_kernel.c       \
+    ./sources/open_cl/open_cl_create_program.c      \
+    ./sources/open_cl/open_cl_create_queue.c        \
+    ./sources/open_cl/open_cl_error.c               \
+    ./sources/open_cl/open_cl_set_arguments.c       \
+    ./sources/rt/rt.c                               \
+    ./sources/rt/rt_clone.c                         \
+    ./sources/rt/rt_control.c                       \
+    ./sources/rt/rt_mlx.c                           \
+    ./sources/scene/scene.c                         \
+    ./sources/scene/scene_a.c                       \
+    ./sources/scene/scene_b.c                       \
+    ./sources/scene/scene_c.c                       \
+    ./sources/scene/scene_d.c                       \
+    ./sources/scene/scene_e.c                       \
+    ./sources/scene/scene_f.c                       \
+    ./sources/shape/shape.c                         \
+    ./sources/shape/shape_aabb.c                    \
+    ./sources/shape/shape_cone.c                    \
+    ./sources/shape/shape_cylinder.c                \
+    ./sources/shape/shape_plane.c                   \
+    ./sources/shape/shape_sphere.c                  \
+    ./sources/vector3/vector3.c                     \
+    ./sources/vector3/vector3_add_sub.c             \
+    ./sources/vector3/vector3_mul.c                 \
+    ./sources/vector3/vector3_rotate.c
 
 OBJECTS_DIRECTORY = ./objects/
 OBJECTS = $(addprefix $(OBJECTS_DIRECTORY),$(notdir $(SOURCES:.c=.o)))
@@ -88,7 +76,7 @@ $(LIBFT) :
 $(OBJECTS_DIRECTORY) :
 	mkdir -p $(OBJECTS_DIRECTORY)
 
-$(OBJECTS) : $(SOURCES)
+$(OBJECTS) : $(SOURCES) $(SOURCE_CL)
 	$(foreach SOURCE,$(SOURCES), $(call COMPILE_OBJECT, $(SOURCE)); $(call MOVE_TO_OBJECTS_DIRECTORY, $(SOURCE));)
 
 clean :
