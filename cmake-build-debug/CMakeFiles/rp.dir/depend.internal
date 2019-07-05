@@ -5,19 +5,19 @@ CMakeFiles/rp.dir/camera/camera.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.c
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.h
+ /Users/ashari/21_ray_tracer/camera/camera.c
+ /Users/ashari/21_ray_tracer/camera/camera.h
 CMakeFiles/rp.dir/color/color.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/color/color.c
- /Users/vladimir/workspace/21_ray_tracer/color/color.h
+ /Users/ashari/21_ray_tracer/color/color.c
+ /Users/ashari/21_ray_tracer/color/color.h
 CMakeFiles/rp.dir/intersection/intersection.c.o
  .././light/light.h
  .././material/material.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.c
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
+ /Users/ashari/21_ray_tracer/intersection/intersection.c
+ /Users/ashari/21_ray_tracer/intersection/intersection.h
 CMakeFiles/rp.dir/main.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -36,12 +36,11 @@ CMakeFiles/rp.dir/main.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/main.c
- /usr/X11/include/mlx.h
+ /Users/ashari/21_ray_tracer/main.c
 CMakeFiles/rp.dir/ray/ray.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/ray/ray.c
- /Users/vladimir/workspace/21_ray_tracer/ray/ray.h
+ /Users/ashari/21_ray_tracer/ray/ray.c
+ /Users/ashari/21_ray_tracer/ray/ray.h
 CMakeFiles/rp.dir/rp/rp.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -57,9 +56,8 @@ CMakeFiles/rp.dir/rp/rp.c.o
  .././scene/scene.h
  .././shape/shape.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/rp/rp.c
- /Users/vladimir/workspace/21_ray_tracer/rp/rp.h
- /usr/X11/include/mlx.h
+ /Users/ashari/21_ray_tracer/rp/rp.c
+ /Users/ashari/21_ray_tracer/rp/rp.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -75,9 +73,8 @@ CMakeFiles/rp.dir/rp/rp_hooks.c.o
  .././scene/scene.h
  .././shape/shape.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/rp/rp.h
- /Users/vladimir/workspace/21_ray_tracer/rp/rp_hooks.c
- /usr/X11/include/mlx.h
+ /Users/ashari/21_ray_tracer/rp/rp.h
+ /Users/ashari/21_ray_tracer/rp/rp_hooks.c
 CMakeFiles/rp.dir/rp/rp_render.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -93,9 +90,8 @@ CMakeFiles/rp.dir/rp/rp_render.c.o
  .././scene/scene.h
  .././shape/shape.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/rp/rp.h
- /Users/vladimir/workspace/21_ray_tracer/rp/rp_render.c
- /usr/X11/include/mlx.h
+ /Users/ashari/21_ray_tracer/rp/rp.h
+ /Users/ashari/21_ray_tracer/rp/rp_render.c
 CMakeFiles/rp.dir/scene/scene.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
@@ -107,8 +103,8 @@ CMakeFiles/rp.dir/scene/scene.c.o
  .././ray/ray.h
  .././shape/shape.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/scene/scene.c
- /Users/vladimir/workspace/21_ray_tracer/scene/scene.h
+ /Users/ashari/21_ray_tracer/scene/scene.c
+ /Users/ashari/21_ray_tracer/scene/scene.h
 CMakeFiles/rp.dir/shape/shape.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -117,9 +113,9 @@ CMakeFiles/rp.dir/shape/shape.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.c
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rp.dir/shape/shape_aabb.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -128,9 +124,9 @@ CMakeFiles/rp.dir/shape/shape_aabb.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_aabb.c
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_aabb.c
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rp.dir/shape/shape_cylinder.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -139,9 +135,9 @@ CMakeFiles/rp.dir/shape/shape_cylinder.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_cylinder.c
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_cylinder.c
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
 CMakeFiles/rp.dir/shape/shape_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -150,9 +146,9 @@ CMakeFiles/rp.dir/shape/shape_plane.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_plane.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape_plane.c
 CMakeFiles/rp.dir/shape/shape_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -161,9 +157,9 @@ CMakeFiles/rp.dir/shape/shape_sphere.c.o
  .././parameters.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c
+ /Users/ashari/21_ray_tracer/shape/shape.h
+ /Users/ashari/21_ray_tracer/shape/shape_list.h
+ /Users/ashari/21_ray_tracer/shape/shape_sphere.c
 CMakeFiles/rp.dir/vector3/vector3.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.c
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/ashari/21_ray_tracer/vector3/vector3.c
+ /Users/ashari/21_ray_tracer/vector3/vector3.h

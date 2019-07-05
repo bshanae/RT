@@ -36,7 +36,6 @@ CMakeFiles/rp.dir/main.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/main.c.o: .././shape/shape_list.h
 CMakeFiles/rp.dir/main.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/main.c.o: ../main.c
-CMakeFiles/rp.dir/main.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/ray/ray.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/ray/ray.c.o: ../ray/ray.c
@@ -58,7 +57,6 @@ CMakeFiles/rp.dir/rp/rp.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp.c.o: ../rp/rp.c
 CMakeFiles/rp.dir/rp/rp.c.o: ../rp/rp.h
-CMakeFiles/rp.dir/rp/rp.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../../21_libft/includes/libft_vector.h
@@ -76,7 +74,6 @@ CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../rp/rp.h
 CMakeFiles/rp.dir/rp/rp_hooks.c.o: ../rp/rp_hooks.c
-CMakeFiles/rp.dir/rp/rp_hooks.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../../21_libft/includes/libft_vector.h
@@ -94,7 +91,6 @@ CMakeFiles/rp.dir/rp/rp_render.c.o: .././shape/shape.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: .././vector3/vector3.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../rp/rp.h
 CMakeFiles/rp.dir/rp/rp_render.c.o: ../rp/rp_render.c
-CMakeFiles/rp.dir/rp/rp_render.c.o: /usr/X11/include/mlx.h
 
 CMakeFiles/rp.dir/scene/scene.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp.dir/scene/scene.c.o: ../../21_libft/includes/libft_vector.h

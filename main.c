@@ -8,17 +8,17 @@ int 				main()
 
 	rp = rp_new();
 
-	scene_add_light(rp->scene, (t_light){.9, (t_vector3){0., 1., -3.}});
+	scene_add_light(rp->scene, (t_light){.4, (t_vector3){0., -.3, -4.}});
 
 	scene_add_shape(rp->scene, shape_sphere(
 			(t_vector3){0., 0., -5.},
-			.2,
-			MATERIAL_RED));
+			.5,
+			MATERIAL_WHITE));
 
 	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., -.25, 0.},
+			(t_vector3){0., -.51, 0.},
 			(t_vector3){0., 1., 0.},
-			MATERIAL_WHITE));
+			MATERIAL_RED));
 
 //	scene_add_shape(rp->scene, shape_plane(
 //			(t_vector3){0., .3, 0.},
@@ -30,7 +30,7 @@ int 				main()
 //			(t_vector3){1., 0., 0.},
 //			MATERIAL_WHITE));
 //
-//	scene_add_shape(rp->scene, shape_plane(
+//	scene_add_shape(rp->scene, shape_plane(x
 //			(t_vector3){.5, 0., 0.},
 //			(t_vector3){-1., 0., 0.},
 //			MATERIAL_WHITE));

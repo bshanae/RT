@@ -47,7 +47,7 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	if (!depth--)
 		return (COLOR_BLACK);
 	if (!scene_intersect(rp->scene, &me))
-		return (rp->scene->background);
+		return (COLOR_WHITE);
 
 	// direct
 
@@ -63,7 +63,7 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	t_vector3		nt;
 	t_vector3		nb;
 	t_vector3		hit;
-	float 			pdf;
+	float 			inv_pdf;
 	float 			r1;
 	float 			r2;
 	t_vector3		sample_local;
@@ -73,12 +73,11 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	light_indirect = COLOR_BLACK;
 	hit = ray_intersect(&me.ray);
 	create_coordiante_system(&me.normal, &nt, &nb);
-	pdf = 1 / (2.f * M_PI);
-	srand(time(NULL));
+	inv_pdf = 2.f * M_PI;
 	for (int i = 0; i < SAMPLE_NUMBER; i++)
 	{
-		r1 = (float)rand() / (float)(RAND_MAX);
-		r2 = (float)rand() / (float)(RAND_MAX);
+		r1 = (float)drand48();
+		r2 = (float)drand48();
 
 		sample_local = generate_sample(&r1, &r2);
 
@@ -89,11 +88,7 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 
 		sample_color = rp_cast_ray(rp, child, depth);
 
-//		if (sample_color.x != 0.4f && sample_color.x != 0.f)
-//			printf("%f %f %f\n", sample_color.x, sample_color.y, sample_color.z);
-		vector3_mul_eq(&sample_color, r1 / pdf);
-//		if (sample_color.x != 0.4f && sample_color.x != 0.f)
-//			printf("%f %f %f\n\n", sample_color.x, sample_color.y, sample_color.z);
+		vector3_mul_eq(&sample_color, r1 * inv_pdf);
 
 		vector3_add_eq(&light_indirect, &sample_color);
 	}
@@ -102,9 +97,11 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	color = vector3_s_add
 		(
 			vector3_div(&light_direct, M_PI),
-			vector3_mul(&light_indirect, 2.f)
+			vector3_mul(&light_indirect, 2.)
 		);
-	vector3_mul_eq(&color, .3f);
+	color.x *= me.color.x;
+	color.y *= me.color.y;
+	color.z *= me.color.z;
 	return (color);
 }
 
@@ -115,6 +112,7 @@ void 				rp_render(t_rp *rp)
 	t_vector3		vp;
 	t_intersection	intersection;
 
+	srand(42);
 	x = 0;
 	vp.z = 0;
 	while (x < WINDOW_WIDTH)
