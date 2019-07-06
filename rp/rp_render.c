@@ -101,7 +101,7 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 
 	color = vector3_s_add
 		(
-			vector3_div(&light_direct, M_PI),
+			vector3_div(&light_direct, 1.),
 			vector3_mul(&light_indirect, 2.)
 		);
 	color.x *= me.color.x;
