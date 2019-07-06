@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/X11/include -I/Users/ashari/21_ray_tracer/../21_libft/includes -I/Users/ashari/21_ray_tracer/. -I/Users/ashari/21_ray_tracer/./vector3 -I/Users/ashari/21_ray_tracer/./color -I/Users/ashari/21_ray_tracer/./ray -I/Users/ashari/21_ray_tracer/./light -I/Users/ashari/21_ray_tracer/sphere -I/Users/ashari/21_ray_tracer/./material -I/Users/ashari/21_ray_tracer/./camera -I/Users/ashari/21_ray_tracer/./intersection -I/Users/ashari/21_ray_tracer/./rp -I/Users/ashari/21_ray_tracer/./sphere -I/Users/ashari/21_ray_tracer/./scene -I/Users/ashari/21_ray_tracer/./shape 
+C_INCLUDES = -I/usr/X11/include -I/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes -I/Users/bshanae/workspace/21_ray_tracer/. -I/Users/bshanae/workspace/21_ray_tracer/./vector3 -I/Users/bshanae/workspace/21_ray_tracer/./color -I/Users/bshanae/workspace/21_ray_tracer/./ray -I/Users/bshanae/workspace/21_ray_tracer/./light -I/Users/bshanae/workspace/21_ray_tracer/sphere -I/Users/bshanae/workspace/21_ray_tracer/./material -I/Users/bshanae/workspace/21_ray_tracer/./camera -I/Users/bshanae/workspace/21_ray_tracer/./intersection -I/Users/bshanae/workspace/21_ray_tracer/./rp -I/Users/bshanae/workspace/21_ray_tracer/./sphere -I/Users/bshanae/workspace/21_ray_tracer/./scene -I/Users/bshanae/workspace/21_ray_tracer/./shape 
 

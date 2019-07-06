@@ -44,10 +44,18 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 
 	intersection_reset(&me);
 
-	if (!depth--)
+	if (--depth < 0)
 		return (COLOR_BLACK);
 	if (!scene_intersect(rp->scene, &me))
 		return (COLOR_WHITE);
+
+	float		u;
+	float 		max_color;
+
+	u = drand48();
+	max_color = fmaxf(fmaxf(me.color.x, me.color.y), me.color.z);
+	if (RUSSIAN_ROULETTE && depth < PATH_DEPTH - 1 && u > max_color)
+		return (COLOR_BLACK);
 
 	// direct
 
@@ -74,25 +82,22 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	hit = ray_intersect(&me.ray);
 	create_coordiante_system(&me.normal, &nt, &nb);
 	inv_pdf = 2.f * M_PI;
-	for (int i = 0; i < SAMPLE_NUMBER; i++)
-	{
-		r1 = (float)drand48();
-		r2 = (float)drand48();
 
-		sample_local = generate_sample(&r1, &r2);
+	r1 = (float)drand48();
+	r2 = (float)drand48();
 
-		sample_world = convert_sample(&me.normal, &sample_local, &nt, &nb);
+	sample_local = generate_sample(&r1, &r2);
 
-		child.ray.origin = vector3_s_add(hit, vector3_mul(&sample_world, BIAS));
-		child.ray.direction = sample_world;
+	sample_world = convert_sample(&me.normal, &sample_local, &nt, &nb);
 
-		sample_color = rp_cast_ray(rp, child, depth);
+	child.ray.origin = vector3_s_add(hit, vector3_mul(&sample_world, BIAS));
+	child.ray.direction = sample_world;
 
-		vector3_mul_eq(&sample_color, r1 * inv_pdf);
+	sample_color = rp_cast_ray(rp, child, depth);
 
-		vector3_add_eq(&light_indirect, &sample_color);
-	}
-	vector3_div_eq(&light_indirect, (float)SAMPLE_NUMBER);
+	vector3_mul_eq(&sample_color, r1 * inv_pdf);
+
+	vector3_add_eq(&light_indirect, &sample_color);
 
 	color = vector3_s_add
 		(
@@ -112,25 +117,24 @@ void 				rp_render(t_rp *rp)
 	t_vector3		vp;
 	t_intersection	intersection;
 
-	srand(42);
+	srand48(time(NULL));
 	x = 0;
 	vp.z = 0;
 	while (x < WINDOW_WIDTH)
 	{
-		if (!x || !((x + 1) % (WINDOW_WIDTH / 10)))
-			printf("[%s] : %d%% done\n", __FUNCTION__, x ? (x + 1) * 100 / WINDOW_WIDTH : 0);
-
 		y = 0;
 		while (y < WINDOW_HEIGHT)
 		{
 			vp.x = x - (WINDOW_WIDTH - 1) / 2.;
 			vp.y = -y + (WINDOW_HEIGHT - 1) / 2.;
 			intersection.ray = camera_cast_ray(rp->camera, &vp);
-			rp->img_data[x + y * WINDOW_WIDTH] = color_unpack(rp_cast_ray(rp, intersection, PATH_DEPTH));
+			vector3_s_add_eq(&rp->color_storage[x + y * WINDOW_WIDTH], rp_cast_ray(rp, intersection, PATH_DEPTH));
+			rp->img_data[x + y * WINDOW_WIDTH] =
+				color_unpack(vector3_div(&rp->color_storage[x + y * WINDOW_WIDTH], (float)rp->sample_counter));
 			y++;
 		}
 		x++;
 	}
 	mlx_put_image_to_window(rp->mlx_ptr, rp->win_ptr, rp->img_ptr, 0, 0);
-
+	printf("samples group no. %d\n", rp->sample_counter);
 }

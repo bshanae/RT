@@ -14,6 +14,9 @@ t_rp				*rp_new(void)
 	temp[1] = WINDOW_WIDTH * 4;
 	temp[2] = 0;
 	new->img_data = (int *)mlx_get_data_addr(new->img_ptr, temp, temp + 1, temp + 2);
+	new->color_storage = (t_vector3 *)malloc(sizeof(t_vector3) * WINDOW_WIDTH * WINDOW_HEIGHT);
+	ft_bzero(new->color_storage, sizeof(t_vector3) * WINDOW_WIDTH * WINDOW_HEIGHT);
+	new->sample_counter = 0;
 	new->camera = camera_new();
 	new->scene = scene_new();
 	return (new);

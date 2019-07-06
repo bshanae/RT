@@ -9,13 +9,14 @@
 
 # define SHAPE_DATA_SIZE_RESERVE	128
 
-# define PATH_DEPTH					3
-# define SAMPLE_NUMBER				128
+# define PATH_DEPTH					32
+# define SAMPLE_NUMBER				50
 
 # define SHAPE_ID_SPHERE			0
 # define SHAPE_ID_PLANE				1
 # define SHAPE_ID_CYLINDER			2
 # define SHAPE_ID_AABB				3
 
+# define RUSSIAN_ROULETTE			1
 
 #endif
