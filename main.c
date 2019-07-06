@@ -8,12 +8,13 @@ int 				main()
 
 	rp = rp_new();
 
-#define IDK
+#define cornell
 
 
 #ifdef IDK
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -3.}});
-	scene_add_light(rp->scene, (t_light){.2, (t_vector3){0., 0., 0.}});
+	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -6.}});
+	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0.4, -3.}});
+	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., 0.}});
 
 	scene_add_shape(rp->scene, shape_sphere(
 			(t_vector3){0., 0., -4.},
@@ -44,9 +45,43 @@ int 				main()
 
 #ifdef cornell
 
+	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -6.}});
+	//scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0.4, -3.}});
+	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -2.}});
+
 	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){.5, 0., 0.},
+			(t_vector3){-1.5, .0, 0.},
+			(t_vector3){1., 0., 0.},
+			MATERIAL_GREEN));
+
+	scene_add_shape(rp->scene, shape_plane(
+			(t_vector3){1.5, .0, 0.},
 			(t_vector3){-1., 0., 0.},
+			MATERIAL_GREEN));
+
+	scene_add_shape(rp->scene, shape_plane(
+			(t_vector3){0., -1.5, 0.},
+			(t_vector3){0., 1., 0.},
+			MATERIAL_WHITE));
+
+	scene_add_shape(rp->scene, shape_plane(
+			(t_vector3){0., 1.5, 0.},
+			(t_vector3){0., -1., 0.},
+			MATERIAL_WHITE));
+
+	scene_add_shape(rp->scene, shape_plane(
+			(t_vector3){0., 20., -12.},
+			(t_vector3){0., 0., 1.},
+			MATERIAL_WHITE));
+
+	scene_add_shape(rp->scene, shape_sphere(
+			(t_vector3){0.5, -.5, -3.5},
+			.3,
+			MATERIAL_RED));
+
+	scene_add_shape(rp->scene, shape_sphere(
+			(t_vector3){-0.5, -.5, -4.},
+			.3,
 			MATERIAL_WHITE));
 
 #endif

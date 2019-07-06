@@ -10,7 +10,7 @@
 # define SHAPE_DATA_SIZE_RESERVE	128
 
 # define PATH_DEPTH					4
-# define SAMPLE_NUMBER				10000
+# define SAMPLE_NUMBER				1000
 
 # define SHAPE_ID_SPHERE			0
 # define SHAPE_ID_PLANE				1

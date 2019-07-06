@@ -14,8 +14,7 @@ t_vector3           intersection_light_direction(t_intersection *intersection, t
 
 	temp[1] = ray_intersect(&intersection->ray);
 	temp[0] = vector3_sub(&light->position, temp + 1);
-	vector3_normalize(temp + 0);
-	return (temp[0]);
+	return (vector3_normalized(temp + 0));
 }
 
 void                intersection_lighting_diffuse(t_intersection *intersection, t_light *light, t_vector3 *light_direction)

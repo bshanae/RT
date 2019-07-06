@@ -14,13 +14,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/intersection/intersection.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/intersection/intersection.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_hooks.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_hooks.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_render.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_render.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/shape/shape_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/shape/shape_plane.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intersection/intersection.c" beforeDir="false" afterPath="$PROJECT_DIR$/intersection/intersection.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rp/rp_render.c" beforeDir="false" afterPath="$PROJECT_DIR$/rp/rp_render.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shape/shape_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/shape/shape_plane.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,38 +39,50 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44883388">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rp/rp_render.c">
+            <entry file="file://$PROJECT_DIR$/parameters.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="707">
-                  <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rp/rp.c">
+            <entry file="file://$PROJECT_DIR$/scene/scene.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-                  <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-                  <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+                <state relative-caret-position="806">
+                  <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main.c">
+            <entry file="file://$PROJECT_DIR$/intersection/intersection.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                    <element signature="e#874#991#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="360">
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/shape/shape_plane.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="480">
+                  <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -75,30 +92,13 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/parameters.h">
+            <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rp/rp_hooks.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rp/rp.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+                <state relative-caret-position="483">
+                  <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
                   <folding>
-                    <element signature="e#28#52#0" expanded="true" />
+                    <element signature="e#0#15#0" expanded="true" />
+                    <element signature="e#146#933#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -133,7 +133,6 @@
         <option value="$PROJECT_DIR$/vector3/vector3.h" />
         <option value="$PROJECT_DIR$/vector3/vector3.c" />
         <option value="$PROJECT_DIR$/rt/rt.c" />
-        <option value="$PROJECT_DIR$/shape/shape_sphere.c" />
         <option value="$PROJECT_DIR$/scene/scene.c" />
         <option value="$PROJECT_DIR$/rt/rt.h" />
         <option value="$PROJECT_DIR$/shape/shape_cylinder.c" />
@@ -143,22 +142,25 @@
         <option value="$PROJECT_DIR$/rt/rt_parallel.c" />
         <option value="$PROJECT_DIR$/console/console_spawn.c" />
         <option value="$PROJECT_DIR$/rt/rt_parallel.cl" />
-        <option value="$PROJECT_DIR$/intersection/intersection.c" />
         <option value="$PROJECT_DIR$/material/material_list.h" />
         <option value="$PROJECT_DIR$/scene/scene.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/rp/rp_hooks.c" />
         <option value="$PROJECT_DIR$/rp/rp.c" />
         <option value="$PROJECT_DIR$/rp/rp.h" />
+        <option value="$PROJECT_DIR$/rp/rp_hooks.c" />
         <option value="$PROJECT_DIR$/rp/rp_render.c" />
         <option value="$PROJECT_DIR$/parameters.h" />
+        <option value="$PROJECT_DIR$/shape/shape_sphere.c" />
+        <option value="$PROJECT_DIR$/shape/shape_plane.c" />
+        <option value="$PROJECT_DIR$/intersection/intersection.c" />
         <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="false" derivedClasses="false" />
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="918" />
-    <option name="width" value="1642" />
+    <option name="x" value="1101" />
+    <option name="width" value="1459" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -179,7 +181,32 @@
             <path>
               <item name="rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
+              <item name="intersection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
               <item name="rp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
+              <item name="shape" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,7 +238,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="rp" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rp" TARGET_NAME="rp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rp" RUN_TARGET_NAME="rp">
+    <configuration name="rp" type="CMakeRunConfiguration" factoryName="Application" singleton="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rp" TARGET_NAME="rp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rp" RUN_TARGET_NAME="rp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -235,7 +262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21633000" />
+    <option name="totallyTimeSpent" value="26433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -252,7 +279,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32846716" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.1321168" />
@@ -262,6 +289,28 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16420014" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967743" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36709678" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1683871" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.1321168" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.12967741" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -285,13 +334,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rt/rt.c" />
-    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt/rt_mlx.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt.h" />
     <entry file="file://$PROJECT_DIR$/shape/shape_cylinder.c">
@@ -308,13 +350,6 @@
     <entry file="file://$PROJECT_DIR$/console/console.c" />
     <entry file="file://$PROJECT_DIR$/console/console_shadows.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt_parallel.cl" />
-    <entry file="file://$PROJECT_DIR$/intersection/intersection.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt/rt_consistent.c" />
     <entry file="file://$PROJECT_DIR$/vector3/vector3.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -334,13 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/scene.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -375,13 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp_hooks.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rp/rp.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -391,27 +412,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp_render.c">
+    <entry file="file://$PROJECT_DIR$/parameters.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parameters.h">
+    <entry file="file://$PROJECT_DIR$/rp/rp_render.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        <state relative-caret-position="767">
+          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rp/rp_hooks.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape_plane.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/scene.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intersection/intersection.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="483">
+          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#874#991#0" expanded="true" />
+            <element signature="e#146#933#0" expanded="true" />
           </folding>
         </state>
       </provider>

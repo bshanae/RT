@@ -6,7 +6,7 @@
 /*   By: ashari <ashari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/30 19:13:16 by ashari            #+#    #+#             */
-/*   Updated: 2019/07/06 15:05:40 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/07/06 20:11:35 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int 			plane_intersect
 	float 			value[3];
 
 	data = (t_plane_data *)shape->data;
-	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
+	if (fabsf(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)) <= RAY_T_MIN)
 		return (0);
 	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
 	value[1] = vector3_dot(temp, &data->normal) / value[0];

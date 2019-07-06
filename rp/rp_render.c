@@ -40,8 +40,6 @@ static t_vector3	convert_sample(const t_vector3 *normal, const t_vector3 *sample
 
 t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 {
-	t_vector3		color;
-
 	intersection_reset(&me);
 
 	if (--depth < 0)
@@ -66,7 +64,6 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 
 	// indirect
 
-	t_vector3		light_indirect;
 	t_intersection	child;
 	t_vector3		nt;
 	t_vector3		nb;
@@ -76,38 +73,27 @@ t_vector3			rp_cast_ray(t_rp *rp, t_intersection me, int depth)
 	float 			r2;
 	t_vector3		sample_local;
 	t_vector3		sample_world;
-	t_vector3		sample_color;
+	t_vector3		light_indirect;
 
-	light_indirect = COLOR_BLACK;
 	hit = ray_intersect(&me.ray);
 	create_coordiante_system(&me.normal, &nt, &nb);
-	inv_pdf = 2.f * M_PI;
+//	inv_pdf = 2.f * M_PI;
 
 	r1 = (float)drand48();
 	r2 = (float)drand48();
 
 	sample_local = generate_sample(&r1, &r2);
-
 	sample_world = convert_sample(&me.normal, &sample_local, &nt, &nb);
-
 	child.ray.origin = vector3_s_add(hit, vector3_mul(&sample_world, BIAS));
 	child.ray.direction = sample_world;
+	light_indirect = rp_cast_ray(rp, child, depth);
 
-	sample_color = rp_cast_ray(rp, child, depth);
+//	vector3_mul_eq(&light_indirect, r1 * inv_pdf);
 
-	vector3_mul_eq(&sample_color, r1 * inv_pdf);
-
-	vector3_add_eq(&light_indirect, &sample_color);
-
-	color = vector3_s_add
-		(
-			vector3_div(&light_direct, 1.),
-			vector3_mul(&light_indirect, 2.)
-		);
-	color.x *= me.color.x;
-	color.y *= me.color.y;
-	color.z *= me.color.z;
-	return (color);
+	light_indirect.x *= me.color.x;
+	light_indirect.y *= me.color.y;
+	light_indirect.z *= me.color.z;
+	return (vector3_add(&light_direct, &light_indirect));
 }
 
 void 				rp_render(t_rp *rp)
