@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,98 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rp
+# Target rules for targets named rp_sdl
 
 # Build rule for target.
-rp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rp
-.PHONY : rp
+rp_sdl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rp_sdl
+.PHONY : rp_sdl
 
 # fast build rule for target.
-rp/fast:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/build
-.PHONY : rp/fast
-
-camera/camera.o: camera/camera.c.o
-
-.PHONY : camera/camera.o
-
-# target to build an object file
-camera/camera.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.o
-.PHONY : camera/camera.c.o
-
-camera/camera.i: camera/camera.c.i
-
-.PHONY : camera/camera.i
-
-# target to preprocess a source file
-camera/camera.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.i
-.PHONY : camera/camera.c.i
-
-camera/camera.s: camera/camera.c.s
-
-.PHONY : camera/camera.s
-
-# target to generate assembly for a file
-camera/camera.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/camera/camera.c.s
-.PHONY : camera/camera.c.s
-
-color/color.o: color/color.c.o
-
-.PHONY : color/color.o
-
-# target to build an object file
-color/color.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.o
-.PHONY : color/color.c.o
-
-color/color.i: color/color.c.i
-
-.PHONY : color/color.i
-
-# target to preprocess a source file
-color/color.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.i
-.PHONY : color/color.c.i
-
-color/color.s: color/color.c.s
-
-.PHONY : color/color.s
-
-# target to generate assembly for a file
-color/color.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/color/color.c.s
-.PHONY : color/color.c.s
-
-intersection/intersection.o: intersection/intersection.c.o
-
-.PHONY : intersection/intersection.o
-
-# target to build an object file
-intersection/intersection.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.o
-.PHONY : intersection/intersection.c.o
-
-intersection/intersection.i: intersection/intersection.c.i
-
-.PHONY : intersection/intersection.i
-
-# target to preprocess a source file
-intersection/intersection.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.i
-.PHONY : intersection/intersection.c.i
-
-intersection/intersection.s: intersection/intersection.c.s
-
-.PHONY : intersection/intersection.s
-
-# target to generate assembly for a file
-intersection/intersection.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/intersection/intersection.c.s
-.PHONY : intersection/intersection.c.s
+rp_sdl/fast:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/build
+.PHONY : rp_sdl/fast
 
 main.o: main.c.o
 
@@ -210,7 +129,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.o
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -219,7 +138,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.i
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -228,305 +147,116 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/main.c.s
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.s
 .PHONY : main.c.s
 
-ray/ray.o: ray/ray.c.o
+sdl_ctrl/cdl_ctrl_new.o: sdl_ctrl/cdl_ctrl_new.c.o
 
-.PHONY : ray/ray.o
-
-# target to build an object file
-ray/ray.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.o
-.PHONY : ray/ray.c.o
-
-ray/ray.i: ray/ray.c.i
-
-.PHONY : ray/ray.i
-
-# target to preprocess a source file
-ray/ray.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.i
-.PHONY : ray/ray.c.i
-
-ray/ray.s: ray/ray.c.s
-
-.PHONY : ray/ray.s
-
-# target to generate assembly for a file
-ray/ray.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/ray/ray.c.s
-.PHONY : ray/ray.c.s
-
-rp/rp.o: rp/rp.c.o
-
-.PHONY : rp/rp.o
+.PHONY : sdl_ctrl/cdl_ctrl_new.o
 
 # target to build an object file
-rp/rp.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.o
-.PHONY : rp/rp.c.o
+sdl_ctrl/cdl_ctrl_new.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
+.PHONY : sdl_ctrl/cdl_ctrl_new.c.o
 
-rp/rp.i: rp/rp.c.i
+sdl_ctrl/cdl_ctrl_new.i: sdl_ctrl/cdl_ctrl_new.c.i
 
-.PHONY : rp/rp.i
+.PHONY : sdl_ctrl/cdl_ctrl_new.i
 
 # target to preprocess a source file
-rp/rp.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.i
-.PHONY : rp/rp.c.i
+sdl_ctrl/cdl_ctrl_new.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.i
+.PHONY : sdl_ctrl/cdl_ctrl_new.c.i
 
-rp/rp.s: rp/rp.c.s
+sdl_ctrl/cdl_ctrl_new.s: sdl_ctrl/cdl_ctrl_new.c.s
 
-.PHONY : rp/rp.s
+.PHONY : sdl_ctrl/cdl_ctrl_new.s
 
 # target to generate assembly for a file
-rp/rp.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp.c.s
-.PHONY : rp/rp.c.s
+sdl_ctrl/cdl_ctrl_new.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.s
+.PHONY : sdl_ctrl/cdl_ctrl_new.c.s
 
-rp/rp_hooks.o: rp/rp_hooks.c.o
+sdl_ctrl/sdl_ctrl_delete.o: sdl_ctrl/sdl_ctrl_delete.c.o
 
-.PHONY : rp/rp_hooks.o
+.PHONY : sdl_ctrl/sdl_ctrl_delete.o
 
 # target to build an object file
-rp/rp_hooks.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.o
-.PHONY : rp/rp_hooks.c.o
+sdl_ctrl/sdl_ctrl_delete.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
+.PHONY : sdl_ctrl/sdl_ctrl_delete.c.o
 
-rp/rp_hooks.i: rp/rp_hooks.c.i
+sdl_ctrl/sdl_ctrl_delete.i: sdl_ctrl/sdl_ctrl_delete.c.i
 
-.PHONY : rp/rp_hooks.i
+.PHONY : sdl_ctrl/sdl_ctrl_delete.i
 
 # target to preprocess a source file
-rp/rp_hooks.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.i
-.PHONY : rp/rp_hooks.c.i
+sdl_ctrl/sdl_ctrl_delete.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.i
+.PHONY : sdl_ctrl/sdl_ctrl_delete.c.i
 
-rp/rp_hooks.s: rp/rp_hooks.c.s
+sdl_ctrl/sdl_ctrl_delete.s: sdl_ctrl/sdl_ctrl_delete.c.s
 
-.PHONY : rp/rp_hooks.s
+.PHONY : sdl_ctrl/sdl_ctrl_delete.s
 
 # target to generate assembly for a file
-rp/rp_hooks.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_hooks.c.s
-.PHONY : rp/rp_hooks.c.s
+sdl_ctrl/sdl_ctrl_delete.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.s
+.PHONY : sdl_ctrl/sdl_ctrl_delete.c.s
 
-rp/rp_render.o: rp/rp_render.c.o
+sdl_ctrl/sdl_ctrl_error.o: sdl_ctrl/sdl_ctrl_error.c.o
 
-.PHONY : rp/rp_render.o
+.PHONY : sdl_ctrl/sdl_ctrl_error.o
 
 # target to build an object file
-rp/rp_render.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.o
-.PHONY : rp/rp_render.c.o
+sdl_ctrl/sdl_ctrl_error.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
+.PHONY : sdl_ctrl/sdl_ctrl_error.c.o
 
-rp/rp_render.i: rp/rp_render.c.i
+sdl_ctrl/sdl_ctrl_error.i: sdl_ctrl/sdl_ctrl_error.c.i
 
-.PHONY : rp/rp_render.i
+.PHONY : sdl_ctrl/sdl_ctrl_error.i
 
 # target to preprocess a source file
-rp/rp_render.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.i
-.PHONY : rp/rp_render.c.i
+sdl_ctrl/sdl_ctrl_error.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.i
+.PHONY : sdl_ctrl/sdl_ctrl_error.c.i
 
-rp/rp_render.s: rp/rp_render.c.s
+sdl_ctrl/sdl_ctrl_error.s: sdl_ctrl/sdl_ctrl_error.c.s
 
-.PHONY : rp/rp_render.s
+.PHONY : sdl_ctrl/sdl_ctrl_error.s
 
 # target to generate assembly for a file
-rp/rp_render.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/rp/rp_render.c.s
-.PHONY : rp/rp_render.c.s
+sdl_ctrl/sdl_ctrl_error.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s
+.PHONY : sdl_ctrl/sdl_ctrl_error.c.s
 
-scene/scene.o: scene/scene.c.o
+sdl_ctrl/sdl_ctrl_init.o: sdl_ctrl/sdl_ctrl_init.c.o
 
-.PHONY : scene/scene.o
+.PHONY : sdl_ctrl/sdl_ctrl_init.o
 
 # target to build an object file
-scene/scene.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.o
-.PHONY : scene/scene.c.o
+sdl_ctrl/sdl_ctrl_init.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
+.PHONY : sdl_ctrl/sdl_ctrl_init.c.o
 
-scene/scene.i: scene/scene.c.i
+sdl_ctrl/sdl_ctrl_init.i: sdl_ctrl/sdl_ctrl_init.c.i
 
-.PHONY : scene/scene.i
-
-# target to preprocess a source file
-scene/scene.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.i
-.PHONY : scene/scene.c.i
-
-scene/scene.s: scene/scene.c.s
-
-.PHONY : scene/scene.s
-
-# target to generate assembly for a file
-scene/scene.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/scene/scene.c.s
-.PHONY : scene/scene.c.s
-
-shape/shape.o: shape/shape.c.o
-
-.PHONY : shape/shape.o
-
-# target to build an object file
-shape/shape.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.o
-.PHONY : shape/shape.c.o
-
-shape/shape.i: shape/shape.c.i
-
-.PHONY : shape/shape.i
+.PHONY : sdl_ctrl/sdl_ctrl_init.i
 
 # target to preprocess a source file
-shape/shape.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.i
-.PHONY : shape/shape.c.i
+sdl_ctrl/sdl_ctrl_init.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.i
+.PHONY : sdl_ctrl/sdl_ctrl_init.c.i
 
-shape/shape.s: shape/shape.c.s
+sdl_ctrl/sdl_ctrl_init.s: sdl_ctrl/sdl_ctrl_init.c.s
 
-.PHONY : shape/shape.s
-
-# target to generate assembly for a file
-shape/shape.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape.c.s
-.PHONY : shape/shape.c.s
-
-shape/shape_aabb.o: shape/shape_aabb.c.o
-
-.PHONY : shape/shape_aabb.o
-
-# target to build an object file
-shape/shape_aabb.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.o
-.PHONY : shape/shape_aabb.c.o
-
-shape/shape_aabb.i: shape/shape_aabb.c.i
-
-.PHONY : shape/shape_aabb.i
-
-# target to preprocess a source file
-shape/shape_aabb.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.i
-.PHONY : shape/shape_aabb.c.i
-
-shape/shape_aabb.s: shape/shape_aabb.c.s
-
-.PHONY : shape/shape_aabb.s
+.PHONY : sdl_ctrl/sdl_ctrl_init.s
 
 # target to generate assembly for a file
-shape/shape_aabb.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_aabb.c.s
-.PHONY : shape/shape_aabb.c.s
-
-shape/shape_cylinder.o: shape/shape_cylinder.c.o
-
-.PHONY : shape/shape_cylinder.o
-
-# target to build an object file
-shape/shape_cylinder.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.o
-.PHONY : shape/shape_cylinder.c.o
-
-shape/shape_cylinder.i: shape/shape_cylinder.c.i
-
-.PHONY : shape/shape_cylinder.i
-
-# target to preprocess a source file
-shape/shape_cylinder.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.i
-.PHONY : shape/shape_cylinder.c.i
-
-shape/shape_cylinder.s: shape/shape_cylinder.c.s
-
-.PHONY : shape/shape_cylinder.s
-
-# target to generate assembly for a file
-shape/shape_cylinder.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_cylinder.c.s
-.PHONY : shape/shape_cylinder.c.s
-
-shape/shape_plane.o: shape/shape_plane.c.o
-
-.PHONY : shape/shape_plane.o
-
-# target to build an object file
-shape/shape_plane.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.o
-.PHONY : shape/shape_plane.c.o
-
-shape/shape_plane.i: shape/shape_plane.c.i
-
-.PHONY : shape/shape_plane.i
-
-# target to preprocess a source file
-shape/shape_plane.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.i
-.PHONY : shape/shape_plane.c.i
-
-shape/shape_plane.s: shape/shape_plane.c.s
-
-.PHONY : shape/shape_plane.s
-
-# target to generate assembly for a file
-shape/shape_plane.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_plane.c.s
-.PHONY : shape/shape_plane.c.s
-
-shape/shape_sphere.o: shape/shape_sphere.c.o
-
-.PHONY : shape/shape_sphere.o
-
-# target to build an object file
-shape/shape_sphere.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.o
-.PHONY : shape/shape_sphere.c.o
-
-shape/shape_sphere.i: shape/shape_sphere.c.i
-
-.PHONY : shape/shape_sphere.i
-
-# target to preprocess a source file
-shape/shape_sphere.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.i
-.PHONY : shape/shape_sphere.c.i
-
-shape/shape_sphere.s: shape/shape_sphere.c.s
-
-.PHONY : shape/shape_sphere.s
-
-# target to generate assembly for a file
-shape/shape_sphere.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/shape/shape_sphere.c.s
-.PHONY : shape/shape_sphere.c.s
-
-vector3/vector3.o: vector3/vector3.c.o
-
-.PHONY : vector3/vector3.o
-
-# target to build an object file
-vector3/vector3.c.o:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.o
-.PHONY : vector3/vector3.c.o
-
-vector3/vector3.i: vector3/vector3.c.i
-
-.PHONY : vector3/vector3.i
-
-# target to preprocess a source file
-vector3/vector3.c.i:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.i
-.PHONY : vector3/vector3.c.i
-
-vector3/vector3.s: vector3/vector3.c.s
-
-.PHONY : vector3/vector3.s
-
-# target to generate assembly for a file
-vector3/vector3.c.s:
-	$(MAKE) -f CMakeFiles/rp.dir/build.make CMakeFiles/rp.dir/vector3/vector3.c.s
-.PHONY : vector3/vector3.c.s
+sdl_ctrl/sdl_ctrl_init.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.s
+.PHONY : sdl_ctrl/sdl_ctrl_init.c.s
 
 # Help Target
 help:
@@ -536,52 +266,22 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... rp"
-	@echo "... camera/camera.o"
-	@echo "... camera/camera.i"
-	@echo "... camera/camera.s"
-	@echo "... color/color.o"
-	@echo "... color/color.i"
-	@echo "... color/color.s"
-	@echo "... intersection/intersection.o"
-	@echo "... intersection/intersection.i"
-	@echo "... intersection/intersection.s"
+	@echo "... rp_sdl"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... ray/ray.o"
-	@echo "... ray/ray.i"
-	@echo "... ray/ray.s"
-	@echo "... rp/rp.o"
-	@echo "... rp/rp.i"
-	@echo "... rp/rp.s"
-	@echo "... rp/rp_hooks.o"
-	@echo "... rp/rp_hooks.i"
-	@echo "... rp/rp_hooks.s"
-	@echo "... rp/rp_render.o"
-	@echo "... rp/rp_render.i"
-	@echo "... rp/rp_render.s"
-	@echo "... scene/scene.o"
-	@echo "... scene/scene.i"
-	@echo "... scene/scene.s"
-	@echo "... shape/shape.o"
-	@echo "... shape/shape.i"
-	@echo "... shape/shape.s"
-	@echo "... shape/shape_aabb.o"
-	@echo "... shape/shape_aabb.i"
-	@echo "... shape/shape_aabb.s"
-	@echo "... shape/shape_cylinder.o"
-	@echo "... shape/shape_cylinder.i"
-	@echo "... shape/shape_cylinder.s"
-	@echo "... shape/shape_plane.o"
-	@echo "... shape/shape_plane.i"
-	@echo "... shape/shape_plane.s"
-	@echo "... shape/shape_sphere.o"
-	@echo "... shape/shape_sphere.i"
-	@echo "... shape/shape_sphere.s"
-	@echo "... vector3/vector3.o"
-	@echo "... vector3/vector3.i"
-	@echo "... vector3/vector3.s"
+	@echo "... sdl_ctrl/cdl_ctrl_new.o"
+	@echo "... sdl_ctrl/cdl_ctrl_new.i"
+	@echo "... sdl_ctrl/cdl_ctrl_new.s"
+	@echo "... sdl_ctrl/sdl_ctrl_delete.o"
+	@echo "... sdl_ctrl/sdl_ctrl_delete.i"
+	@echo "... sdl_ctrl/sdl_ctrl_delete.s"
+	@echo "... sdl_ctrl/sdl_ctrl_error.o"
+	@echo "... sdl_ctrl/sdl_ctrl_error.i"
+	@echo "... sdl_ctrl/sdl_ctrl_error.s"
+	@echo "... sdl_ctrl/sdl_ctrl_init.o"
+	@echo "... sdl_ctrl/sdl_ctrl_init.i"
+	@echo "... sdl_ctrl/sdl_ctrl_init.s"
 .PHONY : help
 
 

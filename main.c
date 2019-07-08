@@ -1,93 +1,44 @@
-#include "rp.h"
-#include "shape_list.h"
-#include "material_list.h"
+#include "sdl_ctrl.h"
 
-int 				main()
+// Tutorial : https://lazyfoo.net/tutorials/SDL/index.php#Getting%20an%20Image%20on%20the%20Screen
+
+int					main()
 {
-	t_rp			*rp;
+	t_sdl_ctrl		*sdl;
+	int 			index;
 
-	rp = rp_new();
+	sdl = sdl_ctrl_new();
+	sdl_init(sdl);
 
-#define cornell
+	index = 0;
+	while (!sdl->flags.quit)
+	{
+		SDL_PollEvent(&sdl->event);
+		if (sdl->event.type == SDL_QUIT)
+			sdl->flags.quit = 1;
+		else if (sdl->event.type == SDL_KEYDOWN)
+		{
+			if (sdl->event.key.keysym.sym == SDLK_LEFT)
+				index--;
+			else if (sdl->event.key.keysym.sym == SDLK_RIGHT)
+				index++;
+			else if (sdl->event.key.keysym.sym == SDLK_ESCAPE)
+				sdl->flags.quit = 1;
+			if (index > 1)
+				index = 0;
+			if (index == 0)
+				sdl->surface_temp = SDL_LoadBMP("../land.bmp");
+			else if (index == 1)
+				sdl->surface_temp = SDL_LoadBMP("../land2.bmp");
 
+			SDL_UpdateTexture(sdl->texture, NULL, sdl->frame, WINDOW_WIDTH * WINDOW_HEIGHT * sizeof(Uint32));
 
-#ifdef IDK
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -6.}});
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0.4, -3.}});
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., 0.}});
+			SDL_RenderClear(sdl->renderer);
+			SDL_RenderCopy(sdl->renderer, sdl->texture, NULL, NULL);
+			SDL_RenderPresent(sdl->renderer);  
+		}
+	}
 
-	scene_add_shape(rp->scene, shape_sphere(
-			(t_vector3){0., 0., -4.},
-			.3,
-			MATERIAL_RED));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., -.51, 0.},
-			(t_vector3){0., 1., 0.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., .3, 0.},
-			(t_vector3){0., -1., 0.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){-.5, 0., 0.},
-			(t_vector3){1., 0., 0.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){.5, 0., 0.},
-			(t_vector3){-1., 0., 0.},
-			MATERIAL_WHITE));
-	
-#endif
-
-#ifdef cornell
-
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -6.}});
-	//scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0.4, -3.}});
-	scene_add_light(rp->scene, (t_light){.5, (t_vector3){0., 0., -2.}});
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){-1.5, .0, 0.},
-			(t_vector3){1., 0., 0.},
-			MATERIAL_GREEN));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){1.5, .0, 0.},
-			(t_vector3){-1., 0., 0.},
-			MATERIAL_GREEN));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., -1.5, 0.},
-			(t_vector3){0., 1., 0.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., 1.5, 0.},
-			(t_vector3){0., -1., 0.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_plane(
-			(t_vector3){0., 20., -12.},
-			(t_vector3){0., 0., 1.},
-			MATERIAL_WHITE));
-
-	scene_add_shape(rp->scene, shape_sphere(
-			(t_vector3){0.5, -.5, -3.5},
-			.3,
-			MATERIAL_RED));
-
-	scene_add_shape(rp->scene, shape_sphere(
-			(t_vector3){-0.5, -.5, -4.},
-			.3,
-			MATERIAL_WHITE));
-
-#endif
-
-	mlx_loop_hook(rp->mlx_ptr, rp_render_loop, rp);
-	mlx_hook(rp->win_ptr, 2, 1, rp_key_press, rp);
-	mlx_hook(rp->win_ptr, 17u >> 1u, 1, rp_exit, rp);
-	mlx_loop(rp->mlx_ptr);
+	sdl_ctrl_delete(&sdl);
+	return (0);
 }
