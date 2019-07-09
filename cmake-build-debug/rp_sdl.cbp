@@ -8,146 +8,148 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rp_sdl">
-				<Option output="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/rp_sdl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/rp_sdl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/."/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./vector3"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./camera"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./filter"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./shape"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./light"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl_ctrl"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./filter"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./shape"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rp_sdl"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rp_sdl"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rp_sdl/fast">
-				<Option output="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/rp_sdl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/rp_sdl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/."/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./vector3"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./camera"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./filter"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./shape"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./light"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl_ctrl"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./filter"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./shape"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rp_sdl/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rp_sdl/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/filter/filter_jitter_sample.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/main.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/main.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_build_ray.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_delete.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_new.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_run.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_delete.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_delete.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/CMakeLists.txt">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

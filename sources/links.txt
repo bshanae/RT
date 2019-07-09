@@ -1,0 +1,14 @@
+The best :
+	https://www.scratchapixel.com
+
+Small_PT : 
+	http://www.kevinbeason.com/smallpt/
+
+SmallPT on ShaderToy :
+	https://www.shadertoy.com/view/lsy3WW
+
+Some guy’ blog :
+	https://blog.demofox.org/2016/09/21/path-tracing-getting-started-with-diffuse-and-emissive/
+
+Spherical light and importance sampling : 
+	https://schuttejoe.github.io/post/
