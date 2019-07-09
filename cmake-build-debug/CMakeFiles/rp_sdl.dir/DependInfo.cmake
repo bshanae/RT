@@ -4,11 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_new.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/main.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/main.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_delete.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
@@ -18,6 +28,14 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../21_libft/includes"
   "../."
   ".././sdl_ctrl"
+  ".././vector3"
+  ".././camera"
+  ".././filter"
+  ".././shape"
+  ".././light"
+  ".././scene"
+  ".././intersection"
+  ".././renderer"
   )
 
 # Targets to which this target links.

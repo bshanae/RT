@@ -11,7 +11,15 @@ include_directories(
         ./sdl2/2.0.9_1/include/SDL2
         ../21_libft/includes
         ./
-        ./sdl_ctrl/)
+        ./sdl_ctrl/
+        ./vector3/
+        ./camera
+        ./filter
+        ./shape
+        ./light
+        ./scene
+        ./intersection
+        ./renderer/)
 
 link_libraries(
         "SDL2"
@@ -22,5 +30,15 @@ add_executable(rp_sdl
         ./sdl_ctrl/cdl_ctrl_new.c
         ./sdl_ctrl/sdl_ctrl_init.c
         ./sdl_ctrl/sdl_ctrl_delete.c
-        ./sdl_ctrl/sdl_ctrl_error.c)
+        ./sdl_ctrl/sdl_ctrl_error.c
+        ./renderer/renderer_new.c
+        ./renderer/renderer_delete.c
+        ./renderer/renderer_run.c
+        ./camera/camera_new.c
+        ./camera/camera_delete.c
+        ./camera/camera_build_ray.c
+        ./vector3/vector3_mul.c
+        ./vector3/vector3_add.c
+        ./renderer/renderer_build_ray.c
+        ./filter/filter_jitter_sample.c)
 

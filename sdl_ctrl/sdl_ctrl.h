@@ -30,6 +30,6 @@ void 				sdl_ctrl_delete(t_sdl_ctrl **sdl);
 
 void 				sdl_ctrl_error(const char *function, int line);
 
-void				sdl_init(t_sdl_ctrl *sdl);
+void				sdl_ctrl_init(t_sdl_ctrl *sdl);
 
 #endif

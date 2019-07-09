@@ -1,7 +1,16 @@
 #ifndef PARAMETERS_H
 # define PARAMETERS_H
 
-# define WINDOW_WIDTH	720
-# define WINDOW_HEIGHT	480
+# define WINDOW_WIDTH			720
+# define WINDOW_HEIGHT			480
+
+# define SAMPLES				8
+
+# define SHAPE_DATA_CAPACITY	64
+# define SHAPE_ID_SPHERE		0
+# define SHAPE_ID_PLANE			1
+
+# define SCENE_SHAPES_CAPACITY	16
+# define SCENE_LIGHTS_CAPACITY	8
 
 #endif

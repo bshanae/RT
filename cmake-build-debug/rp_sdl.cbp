@@ -48,6 +48,14 @@
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/."/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./filter"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./shape"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./light"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -72,6 +80,14 @@
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/."/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./filter"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./shape"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./light"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -86,7 +102,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/main.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c">
@@ -99,6 +139,12 @@
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/CMakeLists.txt">

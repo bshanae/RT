@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk 
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/vladimir/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2 -I/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes -I/Users/vladimir/workspace/21_ray_tracer/. -I/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl 
+C_INCLUDES = -I/Users/vladimir/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2 -I/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes -I/Users/vladimir/workspace/21_ray_tracer/. -I/Users/vladimir/workspace/21_ray_tracer/./sdl_ctrl -I/Users/vladimir/workspace/21_ray_tracer/./vector3 -I/Users/vladimir/workspace/21_ray_tracer/./camera -I/Users/vladimir/workspace/21_ray_tracer/./filter -I/Users/vladimir/workspace/21_ray_tracer/./shape -I/Users/vladimir/workspace/21_ray_tracer/./light -I/Users/vladimir/workspace/21_ray_tracer/./scene -I/Users/vladimir/workspace/21_ray_tracer/./intersection -I/Users/vladimir/workspace/21_ray_tracer/./renderer 
 

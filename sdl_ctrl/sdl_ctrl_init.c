@@ -1,6 +1,6 @@
 #include "sdl_ctrl.h"
 
-void				sdl_init(t_sdl_ctrl *sdl)
+void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		sdl_ctrl_error(__FUNCTION__, __LINE__);

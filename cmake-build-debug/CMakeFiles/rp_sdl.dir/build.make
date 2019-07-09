@@ -122,13 +122,153 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c -o CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s
 
+CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: ../renderer/renderer_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o   -c /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c > CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.i
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c -o CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.s
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: ../renderer/renderer_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o   -c /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c > CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.i
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c -o CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.s
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o: ../renderer/renderer_run.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o   -c /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c > CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.i
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_run.c -o CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.s
+
+CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: ../camera/camera_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rp_sdl.dir/camera/camera_new.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/camera/camera_new.c.o   -c /Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c
+
+CMakeFiles/rp_sdl.dir/camera/camera_new.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/camera/camera_new.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c > CMakeFiles/rp_sdl.dir/camera/camera_new.c.i
+
+CMakeFiles/rp_sdl.dir/camera/camera_new.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/camera/camera_new.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c -o CMakeFiles/rp_sdl.dir/camera/camera_new.c.s
+
+CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: ../camera/camera_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o   -c /Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c
+
+CMakeFiles/rp_sdl.dir/camera/camera_delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/camera/camera_delete.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c > CMakeFiles/rp_sdl.dir/camera/camera_delete.c.i
+
+CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c -o CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s
+
+CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: ../camera/camera_build_ray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o   -c /Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c
+
+CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c > CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.i
+
+CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c -o CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.s
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o: ../vector3/vector3_mul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o   -c /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c > CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.i
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c -o CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.s
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3_add.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o   -c /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c > CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.i
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c -o CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.s
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: ../renderer/renderer_build_ray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o   -c /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c > CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.i
+
+CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c -o CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s
+
+CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o: ../filter/filter_jitter_sample.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o   -c /Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c
+
+CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c > CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.i
+
+CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c -o CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s
+
 # Object files for target rp_sdl
 rp_sdl_OBJECTS = \
 "CMakeFiles/rp_sdl.dir/main.c.o" \
 "CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o" \
 "CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o" \
 "CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o" \
-"CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o"
+"CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o" \
+"CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o" \
+"CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o" \
+"CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o" \
+"CMakeFiles/rp_sdl.dir/camera/camera_new.c.o" \
+"CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o" \
+"CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o" \
+"CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o" \
+"CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o" \
+"CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o" \
+"CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o"
 
 # External object files for target rp_sdl
 rp_sdl_EXTERNAL_OBJECTS =
@@ -138,9 +278,19 @@ rp_sdl: CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/camera/camera_new.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/build.make
 rp_sdl: CMakeFiles/rp_sdl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable rp_sdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C executable rp_sdl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rp_sdl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

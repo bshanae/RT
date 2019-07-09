@@ -123,6 +123,114 @@ rp_sdl/fast:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/build
 .PHONY : rp_sdl/fast
 
+camera/camera_build_ray.o: camera/camera_build_ray.c.o
+
+.PHONY : camera/camera_build_ray.o
+
+# target to build an object file
+camera/camera_build_ray.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o
+.PHONY : camera/camera_build_ray.c.o
+
+camera/camera_build_ray.i: camera/camera_build_ray.c.i
+
+.PHONY : camera/camera_build_ray.i
+
+# target to preprocess a source file
+camera/camera_build_ray.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.i
+.PHONY : camera/camera_build_ray.c.i
+
+camera/camera_build_ray.s: camera/camera_build_ray.c.s
+
+.PHONY : camera/camera_build_ray.s
+
+# target to generate assembly for a file
+camera/camera_build_ray.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.s
+.PHONY : camera/camera_build_ray.c.s
+
+camera/camera_delete.o: camera/camera_delete.c.o
+
+.PHONY : camera/camera_delete.o
+
+# target to build an object file
+camera/camera_delete.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o
+.PHONY : camera/camera_delete.c.o
+
+camera/camera_delete.i: camera/camera_delete.c.i
+
+.PHONY : camera/camera_delete.i
+
+# target to preprocess a source file
+camera/camera_delete.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.i
+.PHONY : camera/camera_delete.c.i
+
+camera/camera_delete.s: camera/camera_delete.c.s
+
+.PHONY : camera/camera_delete.s
+
+# target to generate assembly for a file
+camera/camera_delete.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s
+.PHONY : camera/camera_delete.c.s
+
+camera/camera_new.o: camera/camera_new.c.o
+
+.PHONY : camera/camera_new.o
+
+# target to build an object file
+camera/camera_new.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.o
+.PHONY : camera/camera_new.c.o
+
+camera/camera_new.i: camera/camera_new.c.i
+
+.PHONY : camera/camera_new.i
+
+# target to preprocess a source file
+camera/camera_new.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.i
+.PHONY : camera/camera_new.c.i
+
+camera/camera_new.s: camera/camera_new.c.s
+
+.PHONY : camera/camera_new.s
+
+# target to generate assembly for a file
+camera/camera_new.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.s
+.PHONY : camera/camera_new.c.s
+
+filter/filter_jitter_sample.o: filter/filter_jitter_sample.c.o
+
+.PHONY : filter/filter_jitter_sample.o
+
+# target to build an object file
+filter/filter_jitter_sample.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o
+.PHONY : filter/filter_jitter_sample.c.o
+
+filter/filter_jitter_sample.i: filter/filter_jitter_sample.c.i
+
+.PHONY : filter/filter_jitter_sample.i
+
+# target to preprocess a source file
+filter/filter_jitter_sample.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.i
+.PHONY : filter/filter_jitter_sample.c.i
+
+filter/filter_jitter_sample.s: filter/filter_jitter_sample.c.s
+
+.PHONY : filter/filter_jitter_sample.s
+
+# target to generate assembly for a file
+filter/filter_jitter_sample.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s
+.PHONY : filter/filter_jitter_sample.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -149,6 +257,114 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.s
 .PHONY : main.c.s
+
+renderer/renderer_build_ray.o: renderer/renderer_build_ray.c.o
+
+.PHONY : renderer/renderer_build_ray.o
+
+# target to build an object file
+renderer/renderer_build_ray.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o
+.PHONY : renderer/renderer_build_ray.c.o
+
+renderer/renderer_build_ray.i: renderer/renderer_build_ray.c.i
+
+.PHONY : renderer/renderer_build_ray.i
+
+# target to preprocess a source file
+renderer/renderer_build_ray.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.i
+.PHONY : renderer/renderer_build_ray.c.i
+
+renderer/renderer_build_ray.s: renderer/renderer_build_ray.c.s
+
+.PHONY : renderer/renderer_build_ray.s
+
+# target to generate assembly for a file
+renderer/renderer_build_ray.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s
+.PHONY : renderer/renderer_build_ray.c.s
+
+renderer/renderer_delete.o: renderer/renderer_delete.c.o
+
+.PHONY : renderer/renderer_delete.o
+
+# target to build an object file
+renderer/renderer_delete.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o
+.PHONY : renderer/renderer_delete.c.o
+
+renderer/renderer_delete.i: renderer/renderer_delete.c.i
+
+.PHONY : renderer/renderer_delete.i
+
+# target to preprocess a source file
+renderer/renderer_delete.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.i
+.PHONY : renderer/renderer_delete.c.i
+
+renderer/renderer_delete.s: renderer/renderer_delete.c.s
+
+.PHONY : renderer/renderer_delete.s
+
+# target to generate assembly for a file
+renderer/renderer_delete.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.s
+.PHONY : renderer/renderer_delete.c.s
+
+renderer/renderer_new.o: renderer/renderer_new.c.o
+
+.PHONY : renderer/renderer_new.o
+
+# target to build an object file
+renderer/renderer_new.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o
+.PHONY : renderer/renderer_new.c.o
+
+renderer/renderer_new.i: renderer/renderer_new.c.i
+
+.PHONY : renderer/renderer_new.i
+
+# target to preprocess a source file
+renderer/renderer_new.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.i
+.PHONY : renderer/renderer_new.c.i
+
+renderer/renderer_new.s: renderer/renderer_new.c.s
+
+.PHONY : renderer/renderer_new.s
+
+# target to generate assembly for a file
+renderer/renderer_new.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.s
+.PHONY : renderer/renderer_new.c.s
+
+renderer/renderer_run.o: renderer/renderer_run.c.o
+
+.PHONY : renderer/renderer_run.o
+
+# target to build an object file
+renderer/renderer_run.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.o
+.PHONY : renderer/renderer_run.c.o
+
+renderer/renderer_run.i: renderer/renderer_run.c.i
+
+.PHONY : renderer/renderer_run.i
+
+# target to preprocess a source file
+renderer/renderer_run.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.i
+.PHONY : renderer/renderer_run.c.i
+
+renderer/renderer_run.s: renderer/renderer_run.c.s
+
+.PHONY : renderer/renderer_run.s
+
+# target to generate assembly for a file
+renderer/renderer_run.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_run.c.s
+.PHONY : renderer/renderer_run.c.s
 
 sdl_ctrl/cdl_ctrl_new.o: sdl_ctrl/cdl_ctrl_new.c.o
 
@@ -258,6 +474,60 @@ sdl_ctrl/sdl_ctrl_init.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.s
 .PHONY : sdl_ctrl/sdl_ctrl_init.c.s
 
+vector3/vector3_add.o: vector3/vector3_add.c.o
+
+.PHONY : vector3/vector3_add.o
+
+# target to build an object file
+vector3/vector3_add.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o
+.PHONY : vector3/vector3_add.c.o
+
+vector3/vector3_add.i: vector3/vector3_add.c.i
+
+.PHONY : vector3/vector3_add.i
+
+# target to preprocess a source file
+vector3/vector3_add.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.i
+.PHONY : vector3/vector3_add.c.i
+
+vector3/vector3_add.s: vector3/vector3_add.c.s
+
+.PHONY : vector3/vector3_add.s
+
+# target to generate assembly for a file
+vector3/vector3_add.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.s
+.PHONY : vector3/vector3_add.c.s
+
+vector3/vector3_mul.o: vector3/vector3_mul.c.o
+
+.PHONY : vector3/vector3_mul.o
+
+# target to build an object file
+vector3/vector3_mul.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o
+.PHONY : vector3/vector3_mul.c.o
+
+vector3/vector3_mul.i: vector3/vector3_mul.c.i
+
+.PHONY : vector3/vector3_mul.i
+
+# target to preprocess a source file
+vector3/vector3_mul.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.i
+.PHONY : vector3/vector3_mul.c.i
+
+vector3/vector3_mul.s: vector3/vector3_mul.c.s
+
+.PHONY : vector3/vector3_mul.s
+
+# target to generate assembly for a file
+vector3/vector3_mul.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.s
+.PHONY : vector3/vector3_mul.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,9 +537,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... rp_sdl"
+	@echo "... camera/camera_build_ray.o"
+	@echo "... camera/camera_build_ray.i"
+	@echo "... camera/camera_build_ray.s"
+	@echo "... camera/camera_delete.o"
+	@echo "... camera/camera_delete.i"
+	@echo "... camera/camera_delete.s"
+	@echo "... camera/camera_new.o"
+	@echo "... camera/camera_new.i"
+	@echo "... camera/camera_new.s"
+	@echo "... filter/filter_jitter_sample.o"
+	@echo "... filter/filter_jitter_sample.i"
+	@echo "... filter/filter_jitter_sample.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... renderer/renderer_build_ray.o"
+	@echo "... renderer/renderer_build_ray.i"
+	@echo "... renderer/renderer_build_ray.s"
+	@echo "... renderer/renderer_delete.o"
+	@echo "... renderer/renderer_delete.i"
+	@echo "... renderer/renderer_delete.s"
+	@echo "... renderer/renderer_new.o"
+	@echo "... renderer/renderer_new.i"
+	@echo "... renderer/renderer_new.s"
+	@echo "... renderer/renderer_run.o"
+	@echo "... renderer/renderer_run.i"
+	@echo "... renderer/renderer_run.s"
 	@echo "... sdl_ctrl/cdl_ctrl_new.o"
 	@echo "... sdl_ctrl/cdl_ctrl_new.i"
 	@echo "... sdl_ctrl/cdl_ctrl_new.s"
@@ -282,6 +576,12 @@ help:
 	@echo "... sdl_ctrl/sdl_ctrl_init.o"
 	@echo "... sdl_ctrl/sdl_ctrl_init.i"
 	@echo "... sdl_ctrl/sdl_ctrl_init.s"
+	@echo "... vector3/vector3_add.o"
+	@echo "... vector3/vector3_add.i"
+	@echo "... vector3/vector3_add.s"
+	@echo "... vector3/vector3_mul.o"
+	@echo "... vector3/vector3_mul.i"
+	@echo "... vector3/vector3_mul.s"
 .PHONY : help
 
 

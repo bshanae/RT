@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="rp" targetName="rp" />
-      <config projectName="rp" targetName="rt" />
+      <config projectName="rp_sdl" targetName="rp_sdl" />
+      <config projectName="rp_sdl" targetName="rt" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -14,18 +14,23 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/intersection/intersection.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/intersection/intersection.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_hooks.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_hooks.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_render.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/rp/rp_render.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/shape/shape_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp.dir/shape/shape_plane.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intersection/intersection.c" beforeDir="false" afterPath="$PROJECT_DIR$/intersection/intersection.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rp_sdl.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rp_sdl.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rp/rp_render.c" beforeDir="false" afterPath="$PROJECT_DIR$/rp/rp_render.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shape/shape_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/shape/shape_plane.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,74 +44,50 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/parameters.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scene/scene.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="806">
-                  <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/intersection/intersection.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shape/shape_plane.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                    <element signature="e#146#933#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parameters.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/renderer/renderer.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+              <folding>
+                <element signature="e#40#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/montelight.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="411" column="72" lean-forward="true" selection-start-line="411" selection-start-column="72" selection-end-line="411" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camera/camera.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#42#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -130,9 +111,9 @@
         <option value="$PROJECT_DIR$/open_cl/open_cl.c" />
         <option value="$PROJECT_DIR$/open_cl/open_cl.h" />
         <option value="$PROJECT_DIR$/float_macro/float_macro.h" />
-        <option value="$PROJECT_DIR$/vector3/vector3.h" />
         <option value="$PROJECT_DIR$/vector3/vector3.c" />
         <option value="$PROJECT_DIR$/rt/rt.c" />
+        <option value="$PROJECT_DIR$/shape/shape_sphere.c" />
         <option value="$PROJECT_DIR$/scene/scene.c" />
         <option value="$PROJECT_DIR$/rt/rt.h" />
         <option value="$PROJECT_DIR$/shape/shape_cylinder.c" />
@@ -142,26 +123,38 @@
         <option value="$PROJECT_DIR$/rt/rt_parallel.c" />
         <option value="$PROJECT_DIR$/console/console_spawn.c" />
         <option value="$PROJECT_DIR$/rt/rt_parallel.cl" />
-        <option value="$PROJECT_DIR$/material/material_list.h" />
-        <option value="$PROJECT_DIR$/scene/scene.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/rp/rp.c" />
-        <option value="$PROJECT_DIR$/rp/rp.h" />
-        <option value="$PROJECT_DIR$/rp/rp_hooks.c" />
-        <option value="$PROJECT_DIR$/rp/rp_render.c" />
-        <option value="$PROJECT_DIR$/parameters.h" />
-        <option value="$PROJECT_DIR$/shape/shape_sphere.c" />
-        <option value="$PROJECT_DIR$/shape/shape_plane.c" />
         <option value="$PROJECT_DIR$/intersection/intersection.c" />
+        <option value="$PROJECT_DIR$/rp/rp_hooks.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/rp/rp_render.c" />
+        <option value="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c" />
+        <option value="$PROJECT_DIR$/renderer/renderer_new.c" />
+        <option value="$PROJECT_DIR$/camera/camera_new.c" />
+        <option value="$PROJECT_DIR$/camera/camera_delete.c" />
+        <option value="$PROJECT_DIR$/vector3/vector3.h" />
+        <option value="$PROJECT_DIR$/vector3/vector3_add.c" />
+        <option value="$PROJECT_DIR$/vector3/vector3_mul.c" />
+        <option value="$PROJECT_DIR$/renderer/renderer_delete.c" />
+        <option value="$PROJECT_DIR$/filter/filter.h" />
+        <option value="$PROJECT_DIR$/filter/filter_jitter_sample.c" />
+        <option value="$PROJECT_DIR$/shape/shape.h" />
+        <option value="$PROJECT_DIR$/intersection/intersection.h" />
+        <option value="$PROJECT_DIR$/parameters.h" />
+        <option value="$PROJECT_DIR$/scene/scene.h" />
+        <option value="$PROJECT_DIR$/light/light.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/renderer/renderer.h" />
+        <option value="$PROJECT_DIR$/renderer/renderer_run.c" />
+        <option value="$PROJECT_DIR$/montelight.cc" />
+        <option value="$PROJECT_DIR$/renderer/renderer_build_ray.c" />
+        <option value="$PROJECT_DIR$/camera/camera.h" />
+        <option value="$PROJECT_DIR$/camera/camera_build_ray.c" />
       </list>
     </option>
   </component>
-  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="false" derivedClasses="false" />
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1101" />
-    <option name="width" value="1459" />
-    <option name="height" value="1440" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -171,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,38 +175,22 @@
             <path>
               <item name="rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="intersection" type="462c0819:PsiDirectoryNode" />
+              <item name="camera" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="light" type="462c0819:PsiDirectoryNode" />
+              <item name="renderer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="material" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="rp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="scene" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="shape" type="462c0819:PsiDirectoryNode" />
+              <item name="vector3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,7 +201,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -238,7 +216,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="rp" type="CMakeRunConfiguration" factoryName="Application" singleton="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rp" TARGET_NAME="rp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rp" RUN_TARGET_NAME="rp">
+    <configuration name="rp_sdl" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rp_sdl" TARGET_NAME="rp_sdl" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rp_sdl" RUN_TARGET_NAME="rp_sdl">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -257,60 +235,41 @@
       <workItem from="1561189185217" duration="9000" />
       <workItem from="1561189212202" duration="423000" />
       <workItem from="1561732810971" duration="2779000" />
-      <workItem from="1562339991106" duration="4841000" />
+      <workItem from="1562578666618" duration="30000" />
+      <workItem from="1562604383245" duration="260000" />
+      <workItem from="1562657006421" duration="133000" />
+      <workItem from="1562663698437" duration="7198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26433000" />
+    <option name="totallyTimeSpent" value="16148000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16560763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17238913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31678832" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45620438" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41445783" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6084337" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32846716" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.1321168" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3270073" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16420014" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967743" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36709678" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1683871" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.1321168" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.12967741" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -319,30 +278,14 @@
     <entry file="file://$PROJECT_DIR$/open_cl/open_cl.h" />
     <entry file="file://$PROJECT_DIR$/open_cl/open_cl.c" />
     <entry file="file://$PROJECT_DIR$/mlx/mlx_keys.h" />
-    <entry file="file://$PROJECT_DIR$/shape/shape_aabb.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape_aabb.c" />
     <entry file="file://$PROJECT_DIR$/float_macro/float_macro.h" />
-    <entry file="file://$PROJECT_DIR$/vector3/vector3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt/rt.c" />
+    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c" />
+    <entry file="file://$PROJECT_DIR$/scene/scene.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt_mlx.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt.h" />
-    <entry file="file://$PROJECT_DIR$/shape/shape_cylinder.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape_cylinder.c" />
     <entry file="file://$PROJECT_DIR$/console/console.h" />
     <entry file="file://$PROJECT_DIR$/shape/shape_cone.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt_parallel.c" />
@@ -351,124 +294,190 @@
     <entry file="file://$PROJECT_DIR$/console/console_shadows.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt_parallel.cl" />
     <entry file="file://$PROJECT_DIR$/rt/rt_consistent.c" />
-    <entry file="file://$PROJECT_DIR$/vector3/vector3.c">
+    <entry file="file://$PROJECT_DIR$/rp/rp.h" />
+    <entry file="file://$PROJECT_DIR$/vector3/vector3.c" />
+    <entry file="file://$PROJECT_DIR$/camera/camera.c" />
+    <entry file="file://$PROJECT_DIR$/rp/rp_hooks.c" />
+    <entry file="file://$PROJECT_DIR$/color/color_list.h" />
+    <entry file="file://$PROJECT_DIR$/intersection/intersection.c" />
+    <entry file="file://$PROJECT_DIR$/material/material_list.h" />
+    <entry file="file://$PROJECT_DIR$/rp/rp_render.c" />
+    <entry file="file://$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="250" column="53" selection-start-line="250" selection-start-column="53" selection-end-line="250" selection-end-column="53" />
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camera/camera.c">
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_new.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/color/color_list.h">
+    <entry file="file://$PROJECT_DIR$/camera/camera_new.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/material/material_list.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene/scene.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="e#28#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parameters.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp_render.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rp/rp_hooks.c">
+    <entry file="file://$PROJECT_DIR$/camera/camera_delete.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
+    <entry file="file://$PROJECT_DIR$/vector3/vector3_mul.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shape/shape_plane.c">
+    <entry file="file://$PROJECT_DIR$/vector3/vector3_add.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scene/scene.c">
+    <entry file="file://$PROJECT_DIR$/vector3/vector3.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intersection/intersection.c">
+    <entry file="file://$PROJECT_DIR$/filter/filter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="e#36#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_delete.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/filter_jitter_sample.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#146#933#0" expanded="true" />
+            <element signature="e#34#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intersection/intersection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/light/light.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene/scene.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#34#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_run.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+          <folding>
+            <element signature="e#40#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_build_ray.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera/camera.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#42#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera/camera_build_ray.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montelight.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="411" column="72" lean-forward="true" selection-start-line="411" selection-start-column="72" selection-end-line="411" selection-end-column="72" />
         </state>
       </provider>
     </entry>

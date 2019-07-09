@@ -8,7 +8,7 @@ int					main()
 	int 			index;
 
 	sdl = sdl_ctrl_new();
-	sdl_init(sdl);
+	sdl_ctrl_init(sdl);
 
 	index = 0;
 	while (!sdl->flags.quit)
