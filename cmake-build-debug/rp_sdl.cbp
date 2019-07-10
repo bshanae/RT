@@ -5,7 +5,7 @@
 		<Option title="rp_sdl"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\.brew\;CMake Files\..\..\.brew\lib\;CMake Files\..\..\.brew\lib\cmake\;CMake Files\..\..\.brew\lib\cmake\SDL2\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug"/>
@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
+					<Add directory="/Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl_ctrl"/>
@@ -54,6 +54,8 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./shape"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./color"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./material"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
@@ -77,7 +79,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl2/2.0.9_1/include/SDL2"/>
+					<Add directory="/Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/."/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sdl_ctrl"/>
@@ -87,6 +89,8 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./shape"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./color"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./material"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/local/include"/>
@@ -113,7 +117,13 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c">
 			<Option target="rp_sdl"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/color/color_unpack.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/filter/filter_jitter_sample.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/intersection/intersection_calculate.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/main.c">
@@ -125,10 +135,25 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_delete.c">
 			<Option target="rp_sdl"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_loop.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_new.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_run.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_radiance.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_update_frame.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/renderer/renderer_write_radience.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene.h">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c">
@@ -143,14 +168,47 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c">
 			<Option target="rp_sdl"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_upload.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape.h">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c">
 			<Option target="rp_sdl"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/../../.brew/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.brew\lib\cmake\SDL2\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

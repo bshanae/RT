@@ -4,7 +4,11 @@
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
-# define SAMPLES				8
+# define SAMPLES				50
+# define PATH_DEPTH				1
+
+# define INTERSECTION_MIN		0.0001f
+# define INTERSECTION_MAX		INFINITY
 
 # define SHAPE_DATA_CAPACITY	64
 # define SHAPE_ID_SPHERE		0

@@ -21,5 +21,23 @@ t_vector3				vector3_add_cp(t_vector3, t_vector3);
 void					vector3_add_eq_ref(t_vector3 *, VECTOR3_REF);
 void					vector3_add_eq_cp(t_vector3 *, t_vector3);
 
+t_vector3				vector3_sub_ref(VECTOR3_REF, VECTOR3_REF);
+t_vector3				vector3_sub_cp(t_vector3, t_vector3);
+void					vector3_sub_eq_ref(t_vector3 *, VECTOR3_REF);
+void					vector3_sub_eq_cp(t_vector3 *, t_vector3);
+
+float 					vector3_dot_ref(VECTOR3_REF, VECTOR3_REF);
+float 					vector3_dot_cp(t_vector3, t_vector3);
+
+t_vector3				vector3_cross_ref(VECTOR3_REF, VECTOR3_REF);
+t_vector3				vector3_cross_cp(t_vector3, t_vector3);
+
+float 					vector3_length_ref(VECTOR3_REF);
+float 					vector3_length_cp(t_vector3);
+
+void					vector3_normalize(t_vector3 *);
+t_vector3				vector3_normalized_ref(VECTOR3_REF);
+t_vector3				vector3_normalized_cp(t_vector3);
+
 
 #endif

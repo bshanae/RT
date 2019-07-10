@@ -132,13 +132,13 @@ Algorithmic model
 [main subject model, computation mechanics principle]
 
 The simplest method of global illumination is pure monte-carlo path tracing. The
-camera samples the image plane with many independent rays. Each ray is a single
-chain of ray-steps between reflections. The chain is built recursively, each
+camera samples the image plane with many independent rays. Each direction is a single
+chain of direction-steps between reflections. The chain is built recursively, each
 step returning the emission at the reflection point plus the value of the next
 recursion.
 
 But this is too slow for small emitters and therefore indoor scenes. It must be
-augmented with emitter sampling: Each node sends a sample ray to an emitter
+augmented with emitter sampling: Each node sends a sample direction to an emitter
 position. Local emission is no longer included.
 
 Sampling is done with an ordinary random generator. This allows the rendering to
@@ -261,27 +261,27 @@ All modules/classes are constant, except for Image.
 
 * RayTracer
    * construct with Scene
-   * get radiance value with ray
+   * get radiance value with direction
 
 * SurfacePoint
    * construct with triangle and position
-   * get emission with ray
+   * get emission with direction
    * get reflection with in and out rays and in radiance
-   * get next ray step with ray
+   * get next direction step with direction
 
 * Scene
    * construct with file part (object definitions)
-   * get intersection with ray
+   * get intersection with direction
    * get emitter
    * get default emission
 
 * SpatialIndex
    * construct with triangles and eye position
-   * get intersection with ray
+   * get intersection with direction
 
 * Triangle
    * construct with file part (coords and attributes)
-   * get intersection with ray
+   * get intersection with direction
    * get sample point
    * get geometry and qualities
 
@@ -300,7 +300,7 @@ All modules/classes are constant, except for Image.
 5. do progressive render loop
    1. get frame of render from Camera
       1. do image sampling loop
-         1. make ray direction
+         1. make direction direction
          2. get light value from RayTracer
             1. get nearest intersection from Scene
                1. get nearest intersection from SpatialIndex

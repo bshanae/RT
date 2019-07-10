@@ -12,4 +12,14 @@ typedef struct 		s_scene
 	int 			lights_length;
 }					t_scene;
 
+t_scene				*scene_new();
+
+void				scene_delete(t_scene **scene);
+
+void				scene_add_shape(t_scene *scene, t_shape shape);
+
+void				scene_add_light(t_scene *scene, t_light light);
+
+int					scene_intersect(t_scene *scene, t_intersection *intersection);
+
 #endif

@@ -11,11 +11,10 @@ void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 		SDL_WINDOWPOS_UNDEFINED,
 		WINDOW_WIDTH,
 		WINDOW_HEIGHT,
-		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE
+		SDL_WINDOW_SHOWN
 	);
 	if (!sdl->window)
 		sdl_ctrl_error(__FUNCTION__, __LINE__);
-	sdl->surface_main = SDL_GetWindowSurface(sdl->window);
 	sdl->renderer = SDL_CreateRenderer
 	(
 		sdl->window,
@@ -30,5 +29,5 @@ void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 		WINDOW_WIDTH,
 		WINDOW_HEIGHT
 	);
-	sdl->frame = (Uint32 *)malloc(sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
+	sdl->data = (Uint32 *)malloc(sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
 }

@@ -45,19 +45,19 @@ Ray createCamRay(const int x_coord, const int y_coord, const int width, const in
 	/* determine position of pixel on screen */
 	float3 pixel_pos = (float3)(fx2, -fy2, 0.0f);
 
-	/* create camera ray*/
-	Ray ray;
-	ray.origin = (float3)(0.0f, 0.1f, 2.0f); /* fixed camera position */
-	ray.dir = normalize(pixel_pos - ray.origin); /* vector from camera to pixel on screen */
+	/* create camera direction*/
+	Ray direction;
+	direction.origin = (float3)(0.0f, 0.1f, 2.0f); /* fixed camera position */
+	direction.dir = normalize(pixel_pos - direction.origin); /* vector from camera to pixel on screen */
 
-	return ray;
+	return direction;
 }
 
-				/* (__global Sphere* sphere, const Ray* ray) */
-float intersect_sphere(const Sphere* sphere, const Ray* ray) /* version using local copy of sphere */
+				/* (__global Sphere* sphere, const Ray* direction) */
+float intersect_sphere(const Sphere* sphere, const Ray* direction) /* version using local copy of sphere */
 {
-	float3 rayToCenter = sphere->pos - ray->origin;
-	float b = dot(rayToCenter, ray->dir);
+	float3 rayToCenter = sphere->pos - direction->origin;
+	float b = dot(rayToCenter, direction->dir);
 	float c = dot(rayToCenter, rayToCenter) - sphere->radius*sphere->radius;
 	float disc = b * b - c;
 
@@ -70,7 +70,7 @@ float intersect_sphere(const Sphere* sphere, const Ray* ray) /* version using lo
 	return 0.0f;
 }
 
-bool intersect_scene(__constant Sphere* spheres, const Ray* ray, float* t, int* sphere_id, const int sphere_count)
+bool intersect_scene(__constant Sphere* spheres, const Ray* direction, float* t, int* sphere_id, const int sphere_count)
 {
 	/* initialise t to a very large number, 
 	so t will be guaranteed to be smaller
@@ -79,31 +79,31 @@ bool intersect_scene(__constant Sphere* spheres, const Ray* ray, float* t, int* 
 	float inf = 1e20f;
 	*t = inf;
 
-	/* check if the ray intersects each sphere in the scene */
+	/* check if the direction intersects each sphere in the scene */
 	for (int i = 0; i < sphere_count; i++)  {
 		
 		Sphere sphere = spheres[i]; /* create local copy of sphere */
 		
-		/* float hitdistance = intersect_sphere(&spheres[i], ray); */
-		float hitdistance = intersect_sphere(&sphere, ray);
+		/* float hitdistance = intersect_sphere(&spheres[i], direction); */
+		float hitdistance = intersect_sphere(&sphere, direction);
 		/* keep track of the closest intersection and hitobject found so far */
 		if (hitdistance != 0.0f && hitdistance < *t) {
 			*t = hitdistance;
 			*sphere_id = i;
 		}
 	}
-	return *t < inf; /* true when ray interesects the scene */
+	return *t < inf; /* true when direction interesects the scene */
 }
 
 
 /* the path tracing function */
 /* computes a path (starting from the camera) with a defined number of bounces, accumulates light/color at each bounce */
-/* each ray hitting a surface will be reflected in a random direction (by randomly sampling the hemisphere above the hitpoint) */
-/* small optimisation: diffuse ray directions are calculated using cosine weighted importance sampling */
+/* each direction hitting a surface will be reflected in a random direction (by randomly sampling the hemisphere above the hitpoint) */
+/* small optimisation: diffuse direction directions are calculated using cosine weighted importance sampling */
 
 float3 trace(__constant Sphere* spheres, const Ray* camray, const int sphere_count, const int* seed0, const int* seed1){
 
-	Ray ray = *camray;
+	Ray direction = *camray;
 
 	float3 accum_color = (float3)(0.0f, 0.0f, 0.0f);
 	float3 mask = (float3)(1.0f, 1.0f, 1.0f);
@@ -113,19 +113,19 @@ float3 trace(__constant Sphere* spheres, const Ray* camray, const int sphere_cou
 		float t;   /* distance to intersection */
 		int hitsphere_id = 0; /* index of intersected sphere */
 
-		/* if ray misses scene, return background colour */
-		if (!intersect_scene(spheres, &ray, &t, &hitsphere_id, sphere_count))
+		/* if direction misses scene, return background colour */
+		if (!intersect_scene(spheres, &direction, &t, &hitsphere_id, sphere_count))
 			return accum_color += mask * (float3)(0.15f, 0.15f, 0.25f);
 
 		/* else, we've got a hit! Fetch the closest hit sphere */
 		Sphere hitsphere = spheres[hitsphere_id]; /* version with local copy of sphere */
 
-		/* compute the hitpoint using the ray equation */
-		float3 hitpoint = ray.origin + ray.dir * t;
+		/* compute the hitpoint using the direction equation */
+		float3 hitpoint = direction.origin + direction.dir * t;
 		
-		/* compute the surface normal and flip it if necessary to face the incoming ray */
+		/* compute the surface normal and flip it if necessary to face the incoming direction */
 		float3 normal = normalize(hitpoint - hitsphere.pos); 
-		float3 normal_facing = dot(normal, ray.dir) < 0.0f ? normal : normal * (-1.0f);
+		float3 normal_facing = dot(normal, direction.dir) < 0.0f ? normal : normal * (-1.0f);
 
 		/* compute two random numbers to pick a random point on the hemisphere above the hitpoint*/
 		float rand1 = 2.0f * PI * get_random(seed0, seed1);
@@ -138,12 +138,12 @@ float3 trace(__constant Sphere* spheres, const Ray* camray, const int sphere_cou
 		float3 u = normalize(cross(axis, w));
 		float3 v = cross(w, u);
 
-		/* use the coordinte frame and random numbers to compute the next ray direction */
+		/* use the coordinte frame and random numbers to compute the next direction direction */
 		float3 newdir = normalize(u * cos(rand1)*rand2s + v*sin(rand1)*rand2s + w*sqrt(1.0f - rand2));
 
 		/* add a very small offset to the hitpoint to prevent self intersection */
-		ray.origin = hitpoint + normal_facing * EPSILON;
-		ray.dir = newdir;
+		direction.origin = hitpoint + normal_facing * EPSILON;
+		direction.dir = newdir;
 
 		/* add the colour and light contributions to the accumulated colour */
 		accum_color += mask * hitsphere.emission; 

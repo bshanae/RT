@@ -14,9 +14,9 @@ t_vector3				vector3_mul_cp(t_vector3 v, float f)
 {
 	return ((t_vector3)
 	{
-			.x = v.x * f,
-			.y = v.y * f,
-			.z = v.z * f
+		.x = v.x * f,
+		.y = v.y * f,
+		.z = v.z * f
 	});
 }
 

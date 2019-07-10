@@ -277,6 +277,8 @@ struct Tracer {
     Shape *hitObj = result.first;
     // Russian Roulette sampling based on reflectance of material
     double U = drand48();
+    if (depth > 0)
+		return Vector();
     if (depth > 4 && (depth > 20 || U > hitObj->color.max())) {
       return Vector();
     }
@@ -291,7 +293,8 @@ struct Tracer {
     if (EMITTER_SAMPLING) {
       for (Shape *light : scene) {
         // Skip any objects that don't emit light
-        if (light->emit.max() == 0) {
+        if (light->emit.max() == 0)
+        {
           continue;
         }
         Vector lightPos = light->randomPoint();
@@ -328,10 +331,10 @@ struct Tracer {
 
     // Recurse
     Vector reflected = getRadiance(Ray(hitPos, d), depth + 1);
-    //
-//    if (!EMITTER_SAMPLING || depth == 0) {
-//      return hitObj->emit + hitObj->color * lightSampling + hitObj->color * reflected;
-//    }
+
+    if (!EMITTER_SAMPLING || depth == 0) {
+      return hitObj->emit + hitObj->color * lightSampling + hitObj->color * reflected;
+    }
     return hitObj->color * lightSampling + hitObj->color * reflected;
   }
 };

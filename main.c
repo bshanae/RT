@@ -1,44 +1,22 @@
-#include "sdl_ctrl.h"
-
-// Tutorial : https://lazyfoo.net/tutorials/SDL/index.php#Getting%20an%20Image%20on%20the%20Screen
+#include "renderer.h"
+#include "shape_list.h"
+#include "material_list.h"
 
 int					main()
 {
-	t_sdl_ctrl		*sdl;
-	int 			index;
+	t_renderer		*renderer;
 
-	sdl = sdl_ctrl_new();
-	sdl_ctrl_init(sdl);
+	renderer = renderer_new();
 
-	index = 0;
-	while (!sdl->flags.quit)
-	{
-		SDL_PollEvent(&sdl->event);
-		if (sdl->event.type == SDL_QUIT)
-			sdl->flags.quit = 1;
-		else if (sdl->event.type == SDL_KEYDOWN)
-		{
-			if (sdl->event.key.keysym.sym == SDLK_LEFT)
-				index--;
-			else if (sdl->event.key.keysym.sym == SDLK_RIGHT)
-				index++;
-			else if (sdl->event.key.keysym.sym == SDLK_ESCAPE)
-				sdl->flags.quit = 1;
-			if (index > 1)
-				index = 0;
-			if (index == 0)
-				sdl->surface_temp = SDL_LoadBMP("../land.bmp");
-			else if (index == 1)
-				sdl->surface_temp = SDL_LoadBMP("../land2.bmp");
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 1., -14.}, .2, MATERIAL_LIGHT));
 
-			SDL_UpdateTexture(sdl->texture, NULL, sdl->frame, WINDOW_WIDTH * WINDOW_HEIGHT * sizeof(Uint32));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., -15.}, .5, MATERIAL_RED));
 
-			SDL_RenderClear(sdl->renderer);
-			SDL_RenderCopy(sdl->renderer, sdl->texture, NULL, NULL);
-			SDL_RenderPresent(sdl->renderer);  
-		}
-	}
+	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., -1., 0.}, (t_vector3){0., 1., 0.}, MATERIAL_WHITE)); // lower
+//	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., 2., 0.}, (t_vector3){0., -1., 0.}, MATERIAL_WHITE)); // upper
+//	scene_add_shape(renderer->scene, shape_plane((t_vector3){-2., 0., 0.}, (t_vector3){1., 0., 0.}, MATERIAL_WHITE)); // left
+//	scene_add_shape(renderer->scene, shape_plane((t_vector3){2., 0., 0.}, (t_vector3){-1., 0., 0.}, MATERIAL_WHITE)); // right
 
-	sdl_ctrl_delete(&sdl);
+	renderer_loop(&renderer);
 	return (0);
 }

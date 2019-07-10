@@ -12,3 +12,6 @@ Some guy’ blog :
 
 Spherical light and importance sampling : 
 	https://schuttejoe.github.io/post/
+
+SDL2 :
+    https://lazyfoo.net/tutorials/SDL/index.php#Getting%20an%20Image%20on%20the%20Screen
