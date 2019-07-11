@@ -91,7 +91,7 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 	vector3_mul_eq(&radiance_emission, (float)(renderer->depth == 1));
 	radiance_light = (t_vector3){0., 0., 0.};
 
-	for (int i = 0; i < renderer->scene->shapes_length; i++)
+	for (int i = 0; i < renderer->scene->shapes_length; ++i)
 	{
 		if (i == shape_id)
 			continue ;
@@ -109,15 +109,20 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 		emission_intensity = vector3_dot_ref(&renderer->intersection_shape.normal, &renderer->intersection_light.direction);
 		if (emission_intensity < 0.)
 			continue ;
-		sphere_data = (t_shape_data_sphere *)renderer->scene->shapes->data;
 
 #define OMEGA_MONTELIGHT
 
-#ifdef OMEGA
+#ifdef OMEGA_NONE
+		vector3_add_eq_cp(&radiance_light, vector3_mul_ref(&renderer->scene->shapes[i].material.emission, emission_intensity * 0.2));
+#endif
+
+#ifdef OMEGA_MY
+		sphere_data = (t_shape_data_sphere *)renderer->scene->shapes->data;
 		vector_to_sphere = vector3_sub_ref(&sphere_data->center, &renderer->intersection_light.origin);
 		vector_to_sphere_length = vector3_length_ref(&vector_to_sphere);
 		cos_a_max = vector_to_sphere_length / sqrtf(sphere_data->radius * sphere_data->radius + vector_to_sphere_length * vector_to_sphere_length);
 		omega = 2 * M_PI * (1.f - cos_a_max);
+		vector3_add_eq_cp(&radiance_light, vector3_mul_ref(&renderer->scene->shapes[i].material.emission, emission_intensity));
 #endif
 
 #ifdef OMEGA_MONTELIGHT
@@ -128,13 +133,12 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 	omega = 2 * M_PI * (1 - cos_a_max);
 	vector3_add_eq_cp(&radiance_light, vector3_mul_ref(&renderer->scene->shapes[i].material.emission, emission_intensity * omega * M_1_PI));
 #endif
-//		vector3_add_eq_cp(&radiance_light, vector3_mul_ref(&renderer->scene->shapes[i].material.emission, emission_intensity));
 	}
 
-#define SAMPLE_MONTELIGHT
+#define SAMPLE_SCRATCH
 
 #ifdef SAMPLE_SCRATCH
-	create_coordiante_system(&renderer->intersection_shape.normal, &nt, &nb);
+	create_coordinate_system(&renderer->intersection_shape.normal, &nt, &nb);
 	r[0] = drand48();
 	r[1] = drand48();
 	sample_direction = generate_sample(r, r + 1);
@@ -167,7 +171,7 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 
 	renderer->intersection_shape.origin = renderer->intersection_shape.hit;
 	renderer->intersection_shape.direction = sample_direction;
-	radiance_incident = renderer_radiance_path(renderer);
+	radiance_incident = vector3_mul_cp(renderer_radiance_path(renderer), r[0]);
 
 	vector3_stupid_mul(&radiance_light, &color);
 	vector3_stupid_mul(&radiance_incident, &color);
@@ -175,8 +179,6 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 	vector3_add_eq_ref(&radiance_total, &radiance_emission);
 	vector3_add_eq_ref(&radiance_total, &radiance_light);
 	vector3_add_eq_ref(&radiance_total, &radiance_incident);
-
-//	printf("%f %f %f\n", radiance_light.x, radiance_light.y, radiance_light.z);
 
 	return (radiance_total);
 }

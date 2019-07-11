@@ -31,7 +31,9 @@ int					main()
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-10., 25., 25.}, 1.5, MATERIAL_LIGHT));
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){10., 25., 25.}, 1.5, MATERIAL_LIGHT));
 
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., 10.}, 10.5, MATERIAL_WHITE));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){15., 0., 50.}, 7., MATERIAL_WHITE));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., 35.}, 7., MATERIAL_WHITE));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-15., 0., 20.}, 7., MATERIAL_WHITE));
 
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., -15., 0.}, (t_vector3){0., 1., 0.}, MATERIAL_WHITE)); // lower
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., 35., 0.}, (t_vector3){0., -1., 0.}, MATERIAL_WHITE)); // upper

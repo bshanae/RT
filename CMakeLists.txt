@@ -3,6 +3,8 @@ project(rp_sdl C)
 
 set(CMAKE_C_STANDARD 99)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+
 link_directories(
         ./sdl2/2.0.9_1/lib
         ../21_libft/)

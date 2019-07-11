@@ -3,7 +3,7 @@
 
 # include "color_list.h"
 
-# define MATERIAL_LIGHT	(t_material){COLOR_WHITE, (t_vector3){3., 3., 3.}}
+# define MATERIAL_LIGHT	(t_material){COLOR_WHITE, (t_vector3){5., 5., 5.}}
 
 # define MATERIAL_WHITE	(t_material){COLOR_WHITE, COLOR_BLACK}
 # define MATERIAL_GREY	(t_material){COLOR_GREY, COLOR_BLACK}
