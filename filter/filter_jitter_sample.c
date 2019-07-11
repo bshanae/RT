@@ -8,15 +8,15 @@ static void			normalize_value(float *f)
 		*f = 1. - sqrtf(2. - *f);
 }
 
-void 				filter_jitter_sample(t_vector3 *ray)
+void 				filter_jitter_values(float *x, float *y)
 {
-	t_vector3		u;
+	float 			dx;
+	float 			dy;
 
-	srand48(time(NULL));
-	u.x = 2. * drand48();
-	u.y = 2. * drand48();
-	u.z = 0;
-	normalize_value(&u.x);
-	normalize_value(&u.y);
-	vector3_add_eq_ref(ray, &u);
+	dx = 2. * drand48();
+	dy = 2. * drand48();
+	normalize_value(&dx);
+	normalize_value(&dy);
+	*x += dx;
+	*y += dy;
 }

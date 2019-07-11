@@ -6,6 +6,6 @@
 # include <stdlib.h>
 # include <time.h>
 
-void 				filter_jitter_sample(t_vector3 *);
+void 				filter_jitter_values(float *x, float *y);
 
 #endif

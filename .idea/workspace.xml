@@ -13,136 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/camera/camera_build_ray.c" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera_build_ray.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera/camera_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rp_sdl.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rp_sdl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rp_sdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rp_sdl.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rp_sdl.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intersection/intersection.h" beforeDir="false" afterPath="$PROJECT_DIR$/intersection/intersection.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_build_ray.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_build_ray.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_run.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_update_frame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/scene/scene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/.brew/sdl2.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/COPYING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/INSTALL_RECEIPT.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/TODO.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/bin/sdl2-config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_assert.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_audio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_bits.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_egl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_endian.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_events.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_hints.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_log.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_main.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_name.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengl_glext.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles2_gl2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles2_gl2ext.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles2_gl2platform.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_opengles2_khrplatform.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_platform.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_power.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_quit.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_rect.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_render.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_revision.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_shape.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_surface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_system.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_syswm.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_assert.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_compare.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_crc32.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_font.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_fuzzer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_harness.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_images.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_log.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_md5.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_memory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_test_random.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_thread.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_timer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_touch.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_video.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/SDL_vulkan.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/begin_code.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/include/SDL2/close_code.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/cmake/SDL2/sdl2-config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/libSDL2-2.0.0.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/libSDL2.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/libSDL2.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/libSDL2_test.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/libSDL2main.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/lib/pkgconfig/sdl2.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl2/2.0.9_1/share/aclocal/sdl2.m4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl_ctrl/cdl_ctrl_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/cdl_ctrl_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shape/shape.h" beforeDir="false" afterPath="$PROJECT_DIR$/shape/shape.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sources/links.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/minilight/minilight-development-description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sources/minilight/minilight-development-description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/montelight/compile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sources/montelight/compile.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/montelight/montelight" beforeDir="false" afterPath="$PROJECT_DIR$/sources/montelight/montelight" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/montelight/montelight.cc" beforeDir="false" afterPath="$PROJECT_DIR$/sources/montelight/montelight.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/montelight/render.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/sources/montelight/render.ppm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/opencl_rp/opencl_kernel.cl" beforeDir="false" afterPath="$PROJECT_DIR$/sources/opencl_rp/opencl_kernel.cl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector3/vector3.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector3/vector3_mul.c" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3_mul.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter/filter_jitter_sample.c" beforeDir="false" afterPath="$PROJECT_DIR$/filter/filter_jitter_sample.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renderer/renderer_update_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_update_frame.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,22 +37,38 @@
     <splitter split-orientation="horizontal" split-proportion="0.48995632">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/renderer/renderer_radiance.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="554">
-                  <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+                <state relative-caret-position="167">
+                  <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
+            <entry file="file://$PROJECT_DIR$/renderer/renderer_update_frame.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-                  <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-                  <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/renderer/renderer_build_ray.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/camera/camera_build_ray.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
                 </state>
               </provider>
             </entry>
@@ -183,29 +77,29 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/parameters.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sources/montelight/montelight.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="285" column="44" lean-forward="true" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
+                <state relative-caret-position="137">
+                  <caret line="366" column="18" lean-forward="true" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/filter/filter_jitter_sample.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/renderer/renderer_update_frame.c">
+            <entry file="file://$PROJECT_DIR$/parameters.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -218,17 +112,6 @@
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/material/material_list.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-                  <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-                  <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
@@ -261,11 +144,8 @@
         <option value="$PROJECT_DIR$/rp/rp_render.c" />
         <option value="$PROJECT_DIR$/camera/camera_delete.c" />
         <option value="$PROJECT_DIR$/vector3/vector3_add.c" />
-        <option value="$PROJECT_DIR$/filter/filter.h" />
-        <option value="$PROJECT_DIR$/filter/filter_jitter_sample.c" />
         <option value="$PROJECT_DIR$/light/light.h" />
         <option value="$PROJECT_DIR$/montelight.cc" />
-        <option value="$PROJECT_DIR$/camera/camera.h" />
         <option value="$PROJECT_DIR$/sources/links.txt" />
         <option value="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_upload_data.c" />
         <option value="$PROJECT_DIR$/sdl_ctrl/sdl_ctrl.h" />
@@ -284,7 +164,6 @@
         <option value="$PROJECT_DIR$/renderer/renderer_build_ray.c" />
         <option value="$PROJECT_DIR$/camera/camera_new.c" />
         <option value="$PROJECT_DIR$/vector3/vector3_sub.c" />
-        <option value="$PROJECT_DIR$/camera/camera_build_ray.c" />
         <option value="$PROJECT_DIR$/vector3/vector3_mul.c" />
         <option value="$PROJECT_DIR$/intersection/intersection.h" />
         <option value="$PROJECT_DIR$/scene/scene.c" />
@@ -302,13 +181,17 @@
         <option value="$PROJECT_DIR$/shape/shape_plane.c" />
         <option value="$PROJECT_DIR$/shape/shape.c" />
         <option value="$PROJECT_DIR$/renderer/renderer_loop.c" />
-        <option value="$PROJECT_DIR$/renderer/renderer_update_frame.c" />
-        <option value="$PROJECT_DIR$/sources/montelight/montelight.cc" />
         <option value="$PROJECT_DIR$/material/material_list.h" />
         <option value="$PROJECT_DIR$/shape/shape_sphere.c" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/renderer/renderer_radiance.c" />
         <option value="$PROJECT_DIR$/parameters.h" />
+        <option value="$PROJECT_DIR$/sources/montelight/montelight.cc" />
+        <option value="$PROJECT_DIR$/renderer/renderer_radiance.c" />
+        <option value="$PROJECT_DIR$/renderer/renderer_update_frame.c" />
+        <option value="$PROJECT_DIR$/filter/filter.h" />
+        <option value="$PROJECT_DIR$/camera/camera.h" />
+        <option value="$PROJECT_DIR$/filter/filter_jitter_sample.c" />
+        <option value="$PROJECT_DIR$/camera/camera_build_ray.c" />
       </list>
     </option>
   </component>
@@ -324,7 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,27 +217,18 @@
             <path>
               <item name="rp_sdl" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rp_sdl" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
               <item name="renderer" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rp_sdl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="sdl_ctrl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rp_sdl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="shape" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,18 +280,20 @@
       <workItem from="1562687157787" duration="11000" />
       <workItem from="1562687224432" duration="4139000" />
       <workItem from="1562756844140" duration="18681000" />
-      <workItem from="1562778172978" duration="5534000" />
+      <workItem from="1562778172978" duration="5628000" />
+      <workItem from="1562831175497" duration="358000" />
+      <workItem from="1562832929985" duration="1648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44513000" />
+    <option name="totallyTimeSpent" value="46613000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09094519" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.091739476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -468,8 +343,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/intersection/intersection.c" />
     <entry file="file://$PROJECT_DIR$/rp/rp_render.c" />
-    <entry file="file://$PROJECT_DIR$/filter/filter.h" />
-    <entry file="file://$PROJECT_DIR$/filter/filter_jitter_sample.c" />
     <entry file="file://$PROJECT_DIR$/light/light.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -478,16 +351,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/montelight.cc" />
-    <entry file="file://$PROJECT_DIR$/camera/camera.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#42#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdl_ctrl/sdl_ctrl_delete.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -560,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/renderer/renderer_build_ray.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vector3/vector3_sub.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -585,13 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camera/camera_build_ray.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -634,13 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="61" lean-forward="true" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/links.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -755,10 +597,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/renderer/renderer_update_frame.c">
+    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="630">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -771,19 +615,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shape/shape_sphere.c">
+    <entry file="file://$PROJECT_DIR$/sources/links.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_radiance.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_update_frame.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer/renderer_build_ray.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter/filter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camera/camera.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="55" lean-forward="true" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="62" />
+          <folding>
+            <element signature="e#42#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/montelight/montelight.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="285" column="44" lean-forward="true" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
+        <state relative-caret-position="137">
+          <caret line="366" column="18" lean-forward="true" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -797,17 +684,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parameters.h">
+    <entry file="file://$PROJECT_DIR$/filter/filter_jitter_sample.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="285">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/renderer/renderer_radiance.c">
+    <entry file="file://$PROJECT_DIR$/camera/camera_build_ray.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

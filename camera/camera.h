@@ -3,8 +3,9 @@
 
 # include "parameters.h"
 
-# include "vector3.h"
 # include "libft_standart.h"
+# include "vector3.h"
+# include "filter.h"
 
 typedef struct 		s_camera
 {
