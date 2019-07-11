@@ -91,6 +91,7 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 		light_position = shape_random_sphere(renderer->scene->shapes + i);
 		light_direction = vector3_sub_ref(&light_position, &renderer->intersection_shape.hit);
 		vector3_normalize(&light_direction);
+
 		renderer->intersection_light.origin = renderer->intersection_shape.hit;
 		renderer->intersection_light.direction = light_direction;
 		renderer->intersection_light.t = INTERSECTION_MAX;
@@ -116,7 +117,7 @@ static t_vector3		renderer_radiance_path(t_renderer *renderer)
 
 	renderer->intersection_shape.origin = renderer->intersection_shape.hit;
 	renderer->intersection_shape.direction = sample_direction;
-	radiance_incident = renderer_radiance_path(renderer);
+	radiance_incident = vector3_mul_cp(renderer_radiance_path(renderer), r[1]);
 
 	vector3_stupid_mul(&radiance_light, &color);
 	vector3_stupid_mul(&radiance_incident, &color);

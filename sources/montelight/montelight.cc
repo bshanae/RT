@@ -20,45 +20,45 @@ struct Vector {
   //
   Vector(const Vector &o) : x(o.x), y(o.y), z(o.z) {}
   Vector(double x_=0, double y_=0, double z_=0) : x(x_), y(y_), z(z_) {}
-  inline Vector operator+(const Vector &o) const {
+   Vector operator+(const Vector &o) const {
     return Vector(x + o.x, y + o.y, z + o.z);
   }
-  inline Vector &operator+=(const Vector &rhs) {
+   Vector &operator+=(const Vector &rhs) {
     x += rhs.x; y += rhs.y; z += rhs.z;
     return *this;
   }
-  inline Vector operator-(const Vector &o) const {
+   Vector operator-(const Vector &o) const {
     return Vector(x - o.x, y - o.y, z - o.z);
   }
-  inline Vector operator*(const Vector &o) const {
+   Vector operator*(const Vector &o) const {
     return Vector(x * o.x, y * o.y, z * o.z);
   }
-  inline Vector operator/(double o) const {
+   Vector operator/(double o) const {
     return Vector(x / o, y / o, z / o);
   }
-  inline Vector operator*(double o) const {
+   Vector operator*(double o) const {
     return Vector(x * o, y * o, z * o);
   }
-  inline double dot(const Vector &o) const {
+   double dot(const Vector &o) const {
     return x * o.x + y * o.y + z * o.z;
   }
-  inline Vector &norm(){
+   Vector &norm(){
     return *this = *this * (1 / sqrt(x * x + y * y + z * z));
   }
-  inline Vector cross(Vector &o){
+   Vector cross(Vector &o){
     return Vector(y * o.z - z * o.y, z * o.x - x * o.z, x * o.y - y * o.x);
   }
-  inline double min() {
+   double min() {
     return fmin(x, fmin(y, z));
   }
-  inline double max() {
+   double max() {
     return fmax(x, fmax(y, z));
   }
-  inline Vector &abs() {
+   Vector &abs() {
     x = fabs(x); y = fabs(y); z = fabs(z);
     return *this;
   }
-  inline Vector &clamp() {
+   Vector &clamp() {
     // C++11 lambda function: http://en.cppreference.com/w/cpp/language/lambda
     auto clampDouble = [](double x) {
       if (x < 0) return 0.0;
@@ -118,7 +118,7 @@ struct Image {
     }
     return avg / total;
   }
-  inline double toInt(double x) {
+   double toInt(double x) {
     return pow(x, 1 / 2.2f) * 255;
   }
   void save(std::string filePrefix) {
@@ -223,17 +223,17 @@ struct Sphere : Shape {
 /////////////////////////
 std::vector<Shape *> simpleScene = {
   // Left sphere
-  new Sphere(Vector(1e5+1,40.8,81.6), 1e5f, Vector(.75,.25,.25), Vector()),
+  //new Sphere(Vector(1e5+1,40.8,81.6), 1e5f, Vector(.75,.25,.25), Vector()),
   // Right sphere
-  new Sphere(Vector(-1e5+99,40.8,81.6), 1e5f, Vector(.25,.25,.75), Vector()),
+  //new Sphere(Vector(-1e5+99,40.8,81.6), 1e5f, Vector(.25,.25,.75), Vector()),
   // Back sphere
-  new Sphere(Vector(50,40.8, 1e5), 1e5f, Vector(.75,.75,.75), Vector()),
+  //new Sphere(Vector(50,40.8, 1e5), 1e5f, Vector(.75,.75,.75), Vector()),
   // Floor sphere
-  new Sphere(Vector(50, 1e5, 81.6), 1e5f, Vector(.75,.75,.75), Vector()),
+  //new Sphere(Vector(50, 1e5, 81.6), 1e5f, Vector(.75,.75,.75), Vector()),
   // Roof sphere
-  new Sphere(Vector(50,-1e5+81.6,81.6), 1e5f, Vector(.75,.75,.75), Vector()),
+  //new Sphere(Vector(50,-1e5+81.6,81.6), 1e5f, Vector(.75,.75,.75), Vector()),
   // Traditional mirror sphere
-  new Sphere(Vector(27,16.5,47), 16.5f, Vector(1,1,1) * 0.799, Vector()),
+  new Sphere(Vector(27,16.5,47), 16.5f, Vector(1,0,0) * 0.799, Vector()),
   // Traditional glass sphere
   new Sphere(Vector(73,16.5,78), 16.5f, Vector(1,1,1) * 0.799, Vector()),
   // Light source
@@ -279,9 +279,9 @@ struct Tracer {
     double U = drand48();
     if (depth > 0)
 		return Vector();
-    if (depth > 4 && (depth > 20 || U > hitObj->color.max())) {
-      return Vector();
-    }
+//    if (depth > 4 && (depth > 20 || U > hitObj->color.max())) {
+//      return Vector();
+//    }
     Vector hitPos = r.origin + r.direction * result.second;
     Vector norm = hitObj->getNormal(hitPos);
     // Orient the normal according to how the ray struck the object
@@ -301,9 +301,11 @@ struct Tracer {
         Vector lightDirection = (lightPos - hitPos).norm();
         Ray rayToLight = Ray(hitPos, lightDirection);
         auto lightHit = getIntersection(rayToLight);
-        if (light == lightHit.first) {
+        if (light == lightHit.first)
+        {
           double wi = lightDirection.dot(norm);
-          if (wi > 0) {
+          if (wi > 0)
+          {
             double srad = 1.5;
             //double srad = 600;
             double cos_a_max = sqrt(1-srad*srad/(hitPos - lightPos).dot(hitPos - lightPos));
@@ -313,21 +315,22 @@ struct Tracer {
         }
       }
     }
+
     // Work out contribution from reflected light
     // Diffuse reflection condition:
     // Create orthogonal coordinate system defined by (x=u, y=v, z=norm)
-    double angle = 2 * M_PI * drand48();
-    double dist_cen = sqrt(drand48());
+
+    double angle_phi = 2 * M_PI * drand48();
+    double sin_theta = drand48();
     Vector u;
-    if (fabs(norm.x) > 0.1) {
+    if (fabs(norm.x) > 0.1)
       u = Vector(0, 1, 0);
-    } else {
+  	else
       u = Vector(1, 0, 0);
-    }
     u = u.cross(norm).norm();
     Vector v = norm.cross(u);
     // Direction of reflection
-    Vector d = (u * cos(angle) * dist_cen + v * sin(angle) * dist_cen + norm * sqrt(1 - dist_cen * dist_cen)).norm();
+    Vector d = (u * cos(angle_phi) * sin_theta + v * sin(angle_phi) * sin_theta + norm * sqrt(1 - sin_theta * sin_theta)).norm();
 
     // Recurse
     Vector reflected = getRadiance(Ray(hitPos, d), depth + 1);

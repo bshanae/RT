@@ -4,7 +4,7 @@
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
-# define SAMPLES				50
+# define SAMPLES				500
 # define PATH_DEPTH				1
 
 # define INTERSECTION_MIN		0.0001f

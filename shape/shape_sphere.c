@@ -9,14 +9,14 @@ int						shape_intersect_sphere(t_shape *shape, t_intersection *intersection)
 	t_vector3			temp;
 
 	data = (t_shape_data_sphere *)shape->data;
-	k[0] = vector3_dot_ref(&intersection->direction, &intersection->direction);
 	temp = vector3_sub_ref(&intersection->origin, &data->center);
+	k[0] = 1.;
 	k[1] = 2 * vector3_dot_ref(&temp, &intersection->direction);
 	k[2] = vector3_dot_ref(&temp, &temp) - data->radius * data->radius;
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.)
 		return (0);
-	t = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
+	t = (-k[1] - sqrtf(discriminant)) / 2;
 	if (t <= INTERSECTION_MIN || t >= intersection->t)
 		return (0);
 	intersection->t = t;
