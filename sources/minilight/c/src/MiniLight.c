@@ -135,7 +135,7 @@ static void makeRenderingObjects
 
    const bool isHdri = !strcmp( argv[1], "-hdri" );
 
-   /* make random generator */
+   /* make xor_random generator */
    *pRandom_o = RandomCreate();
 
    /* get/make file names */

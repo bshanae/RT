@@ -11,5 +11,6 @@ t_renderer			*renderer_new()
 	new->scene = scene_new();
 	new->sample_data = (t_vector3 *)malloc(sizeof(t_vector3) * WINDOW_WIDTH * WINDOW_HEIGHT);
 	new->sample_number = 0;
+	srand48(time(NULL));
 	return (new);
 }

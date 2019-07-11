@@ -381,7 +381,7 @@ TVector3 L_out (const SRayHitInfo& X, const TVector3& outDir, size_t bouncesLeft
 
     TVector3 ret = material->m_emissive;
 
-    // add in random recursive samples for global illumination
+    // add in xor_random recursive samples for global illumination
     {
 #if COSINE_WEIGHTED_HEMISPHERE_SAMPLES()
         TVector3 newRayDir = CosineSampleHemisphere(X.m_surfaceNormal);

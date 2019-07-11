@@ -30,8 +30,11 @@ void				scene_add_light(t_scene *scene, t_light light)
 
 int					scene_intersect(t_scene *scene, t_intersection *intersection)
 {
+	int 			last_i;
+
+	last_i = -1;
 	for (int i = 0; i < scene->shapes_length; i++)
 		if (shape_intersect(scene->shapes + i, intersection))
-			return (i);
-	return (-1);
+			last_i = i;
+	return (last_i);
 }

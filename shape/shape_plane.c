@@ -4,10 +4,10 @@ int						shape_intersect_plane(t_shape *shape, t_intersection *intersection)
 {
 	t_shape_data_plane	*data;
 	t_vector3			temp[2];
-	float 				value[3];
+	float 				value[2];
 
 	data = (t_shape_data_plane *)shape->data;
-	if (!(value[0] = vector3_dot_ref(&intersection->direction, &data->normal)))
+	if (fabsf(value[0] = vector3_dot_ref(&intersection->direction, &data->normal)) < INTERSECTION_MIN)
 		return (0);
 	temp[0] = vector3_sub_ref(&data->position, &intersection->origin);
 	value[1] = vector3_dot_ref(temp, &data->normal) / value[0];

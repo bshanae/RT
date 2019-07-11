@@ -24,7 +24,7 @@ inline float Clamp(float v, float min, float max)
 float RandomFloat ()
 {
     /*
-    // Xorshift random number algorithm invented by George Marsaglia
+    // Xorshift xor_random number algorithm invented by George Marsaglia
     static uint32_t rng_state = 0xf2eec0de;
     rng_state ^= (rng_state << 13);
     rng_state ^= (rng_state >> 17);

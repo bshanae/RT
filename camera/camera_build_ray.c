@@ -10,7 +10,7 @@ t_vector3			camera_build_ray(t_camera *camera, INT_REF x, INT_REF y)
 
 	xf = (float)*x;
 	yf = (float)*y;
-//	filter_jitter_values(&xf, &yf);
+	filter_jitter_values(&xf, &yf);
 
 	up = camera->up;
 	right = camera->right;

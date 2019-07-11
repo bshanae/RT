@@ -6,7 +6,7 @@ void				renderer_loop(t_renderer **renderer)
 
 	sdl = (*renderer)->sdl;
 	renderer_update_frame(*renderer);
-	while (!sdl->flags.quit)
+	while (!sdl->flags.quit && (!QUIT_AFTER_SAMPLING || (*renderer)->sample_number < SAMPLES))
 	{
 		SDL_PollEvent(&sdl->event);
 		if (sdl->event.type == SDL_QUIT)
