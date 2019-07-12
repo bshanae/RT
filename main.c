@@ -28,7 +28,7 @@ int					main()
 #ifdef CORNELL
 	renderer->camera->position = (t_vector3){0., 10., 180.};
 
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-10., 25., 25.}, 1.5, MATERIAL_LIGHT));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-10., 25., 45.}, 1.5, MATERIAL_LIGHT));
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){10., 25., 25.}, 1.5, MATERIAL_LIGHT));
 
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){15., 0., 50.}, 7., MATERIAL_WHITE));

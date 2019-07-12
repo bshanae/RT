@@ -4,11 +4,11 @@
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
-# define SAMPLES				20
+# define SAMPLES				200
 # define PATH_DEPTH				5
 # define RUSSIAN_DEPTH			2
 
-# define QUIT_AFTER_SAMPLING	1
+# define QUIT_AFTER_SAMPLING	0
 
 # define INTERSECTION_MIN		0.001f
 # define INTERSECTION_MAX		INFINITY

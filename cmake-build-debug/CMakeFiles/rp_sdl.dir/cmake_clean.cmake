@@ -26,9 +26,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/rp_sdl.dir/shape/shape.c.o"
   "CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o"
   "CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o"
-  "CMakeFiles/rp_sdl.dir/intersection/intersection_calculate.c.o"
   "CMakeFiles/rp_sdl.dir/scene/scene.c.o"
   "CMakeFiles/rp_sdl.dir/color/color_unpack.c.o"
+  "CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.o"
   "rp_sdl.pdb"
   "rp_sdl"
 )

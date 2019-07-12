@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -258,33 +258,6 @@ filter/filter_jitter_sample.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s
 .PHONY : filter/filter_jitter_sample.c.s
 
-intersection/intersection_calculate.o: intersection/intersection_calculate.c.o
-
-.PHONY : intersection/intersection_calculate.o
-
-# target to build an object file
-intersection/intersection_calculate.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_calculate.c.o
-.PHONY : intersection/intersection_calculate.c.o
-
-intersection/intersection_calculate.i: intersection/intersection_calculate.c.i
-
-.PHONY : intersection/intersection_calculate.i
-
-# target to preprocess a source file
-intersection/intersection_calculate.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_calculate.c.i
-.PHONY : intersection/intersection_calculate.c.i
-
-intersection/intersection_calculate.s: intersection/intersection_calculate.c.s
-
-.PHONY : intersection/intersection_calculate.s
-
-# target to generate assembly for a file
-intersection/intersection_calculate.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_calculate.c.s
-.PHONY : intersection/intersection_calculate.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -311,6 +284,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.s
 .PHONY : main.c.s
+
+ray/ray_calculate.o: ray/ray_calculate.c.o
+
+.PHONY : ray/ray_calculate.o
+
+# target to build an object file
+ray/ray_calculate.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.o
+.PHONY : ray/ray_calculate.c.o
+
+ray/ray_calculate.i: ray/ray_calculate.c.i
+
+.PHONY : ray/ray_calculate.i
+
+# target to preprocess a source file
+ray/ray_calculate.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.i
+.PHONY : ray/ray_calculate.c.i
+
+ray/ray_calculate.s: ray/ray_calculate.c.s
+
+.PHONY : ray/ray_calculate.s
+
+# target to generate assembly for a file
+ray/ray_calculate.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.s
+.PHONY : ray/ray_calculate.c.s
 
 renderer/renderer_build_ray.o: renderer/renderer_build_ray.c.o
 
@@ -957,12 +957,12 @@ help:
 	@echo "... filter/filter_jitter_sample.o"
 	@echo "... filter/filter_jitter_sample.i"
 	@echo "... filter/filter_jitter_sample.s"
-	@echo "... intersection/intersection_calculate.o"
-	@echo "... intersection/intersection_calculate.i"
-	@echo "... intersection/intersection_calculate.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ray/ray_calculate.o"
+	@echo "... ray/ray_calculate.i"
+	@echo "... ray/ray_calculate.s"
 	@echo "... renderer/renderer_build_ray.o"
 	@echo "... renderer/renderer_build_ray.i"
 	@echo "... renderer/renderer_build_ray.s"

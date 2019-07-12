@@ -405,10 +405,12 @@ int main(int argc, const char *argv[]) {
 					dy = 1 - sqrt(2 - Uy);
 				}
 				// Calculate the direction of the camera ray
-				Vector d = (cx * (((x+dx) / float(w)) - 0.5)) + (cy * (((y+dy) / float(h)) - 0.5)) + camera.direction;
+				Vector d = (cx * (((x+dx) / float(w)) - 0.5))
+						+ (cy * (((y+dy) / float(h)) - 0.5))
+						+ camera.direction;
 				Ray ray = Ray(camera.origin + d * 140, d.norm());
 				// If we're actually using depth of field, we need to modify the camera ray to account for that
-				if (FOCUS_EFFECT) {
+				if (1) {
 					// Calculate the focal point
 					Vector fp = (camera.origin + d * L) + d.norm() * FOCAL_LENGTH;
 					// Get a pixel point and new ray direction to calculate where the rays should intersect

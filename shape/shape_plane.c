@@ -7,16 +7,16 @@ int						shape_intersect_plane(t_shape *shape, t_intersection *intersection)
 	float 				value[2];
 
 	data = (t_shape_data_plane *)shape->data;
-	if (fabsf(value[0] = vector3_dot_ref(&intersection->direction, &data->normal)) < INTERSECTION_MIN)
+	if (fabsf(value[0] = vector3_dot_ref(&intersection->ray.direction, &data->normal)) < INTERSECTION_MIN)
 		return (0);
-	temp[0] = vector3_sub_ref(&data->position, &intersection->origin);
+	temp[0] = vector3_sub_ref(&data->position, &intersection->ray.origin);
 	value[1] = vector3_dot_ref(temp, &data->normal) / value[0];
-	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->t)
+	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->ray.t)
 		return (0);
-	intersection->t = value[1];
+	intersection->ray.t = value[1];
 	intersection->normal = data->normal;
 	intersection->material = shape->material;
-	intersection->hit = intersection_calculate(intersection);
+	intersection->hit = ray_calculate(&intersection->ray);
 	return (1);
 }
 

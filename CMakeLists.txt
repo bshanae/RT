@@ -24,6 +24,7 @@ include_directories(
         ./scene
         ./color
         ./material
+        ./ray
         ./intersection
         ./renderer/)
 
@@ -59,7 +60,7 @@ add_executable(rp_sdl
         ./shape/shape.c
         ./shape/shape_sphere.c
         ./shape/shape_plane.c
-        ./intersection/intersection_calculate.c
         ./scene/scene.c
-        ./color/color_unpack.c)
+        ./color/color_unpack.c
+        ./ray/ray_calculate.c)
 
