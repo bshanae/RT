@@ -10,5 +10,6 @@ void 				renderer_update_frame(t_renderer *renderer)
 			renderer_get_radiance(renderer);
 			renderer_write_radiance(renderer, &x, &y);
 		}
-	sdl_ctrl_upload(renderer->sdl);
+	if (renderer_check_upload(renderer))
+		sdl_ctrl_upload(renderer->sdl);
 }

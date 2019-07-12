@@ -7,6 +7,7 @@
 # define SAMPLES				200
 # define PATH_DEPTH				5
 # define RUSSIAN_DEPTH			2
+# define UPLOAD_INTERVAL		4
 
 # define QUIT_AFTER_SAMPLING	0
 

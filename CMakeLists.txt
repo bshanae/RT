@@ -62,5 +62,5 @@ add_executable(rp_sdl
         ./shape/shape_plane.c
         ./scene/scene.c
         ./color/color_unpack.c
-        ./ray/ray_calculate.c)
+        ./ray/ray_calculate.c renderer/renderer_check_upload.c)
 

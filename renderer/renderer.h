@@ -37,5 +37,6 @@ void				renderer_get_radiance(t_renderer *renderer);
 
 void				renderer_write_radiance(t_renderer *renderer, INT_REF x, INT_REF y);
 
+int 				renderer_check_upload(t_renderer *renderer);
 
 #endif

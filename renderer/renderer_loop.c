@@ -18,7 +18,7 @@ void				renderer_loop(t_renderer **renderer)
 			else if (sdl->event.key.keysym.sym == SDLK_RETURN)
 				renderer_update_frame(*renderer);
 		}
-		else if ((*renderer)->sample_number < SAMPLES)
+		else if ((*renderer)->sample_number)
 			renderer_update_frame(*renderer);
 	}
 	renderer_delete(renderer);
