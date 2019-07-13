@@ -15,3 +15,9 @@ Spherical light and importance sampling :
 
 SDL2 :
     https://lazyfoo.net/tutorials/SDL/index.php#Getting%20an%20Image%20on%20the%20Screen
+
+Importance Sampling :
+    https://blog.thomaspoulet.fr/uniform-sampling-on-unit-hemisphere/
+
+... :
+    http://lousodrome.net/blog/light/tag/mis/

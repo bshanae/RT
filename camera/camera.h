@@ -8,22 +8,23 @@
 # include "ray.h"
 # include "filter.h"
 
-# define	APERTURE_SIZE	7.
-# define	FOCAL_LENGTH	145.
-# define	FOCUS_EFFECT	1
+# define APERTURE_SIZE	7.
+# define FOCAL_LENGTH	145.
 
-typedef struct 		s_camera
+typedef struct 			s_camera
 {
-	t_vector3		position;
-	t_vector3		forward;
-	t_vector3		up;
-	t_vector3		right;
-}					t_camera;
+	t_vector3			position;
+	t_vector3			forward;
+	t_vector3			up;
+	t_vector3			right;
+}						t_camera;
 
-t_camera			*camera_new();
+t_camera				*camera_new();
 
-void				camera_delete(t_camera **camera);
+void					camera_delete(t_camera **camera);
 
-t_ray				camera_build_ray(t_camera *camera, INT_REF x, INT_REF y);
+void					camera_focus(t_camera *camera, t_ray *ray);
+
+t_ray					camera_build_ray(t_camera *camera, INT_REF x, INT_REF y);
 
 #endif

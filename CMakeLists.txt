@@ -6,13 +6,11 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
 
 link_directories(
-        ./sdl2/2.0.9_1/lib
+        ~/.brew/Cellar/sdl2/2.0.9_1/lib
         ../21_libft/)
 
-find_package(SDL2 REQUIRED)
-
 include_directories(
-        ${SDL2_INCLUDE_DIRS}
+        ~/.brew/Cellar/sdl2/2.0.9_1/include/SDL2
         ../21_libft/includes
         ./
         ./sdl_ctrl/
@@ -26,10 +24,11 @@ include_directories(
         ./material
         ./ray
         ./intersection
-        ./renderer/)
+        ./renderer/
+        ./sampler)
 
 link_libraries(
-        ${SDL2_LIBRARIES}
+       "SDL2"
         "ft")
 
 add_executable(rp_sdl
@@ -44,6 +43,7 @@ add_executable(rp_sdl
         ./renderer/renderer_loop.c
         ./renderer/renderer_radiance.c
         ./renderer/renderer_write_radience.c
+        ./renderer/renderer_check_interval.c
         ./camera/camera_new.c
         ./camera/camera_delete.c
         ./camera/camera_build_ray.c
@@ -62,5 +62,8 @@ add_executable(rp_sdl
         ./shape/shape_plane.c
         ./scene/scene.c
         ./color/color_unpack.c
-        ./ray/ray_calculate.c renderer/renderer_check_upload.c)
+        ./ray/ray_calculate.c
+        ./camera/camera_focus.c
+        ./renderer/renderer_radiance_light.c
+        ./sampler/sampler.c vector3/vector3_max.c vector3/vector3_min.c)
 

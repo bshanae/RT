@@ -39,5 +39,7 @@ void					vector3_normalize(t_vector3 *);
 t_vector3				vector3_normalized_ref(VECTOR3_REF);
 t_vector3				vector3_normalized_cp(t_vector3);
 
+float 					vector3_max(VECTOR3_REF v);
+float 					vector3_min(VECTOR3_REF v);
 
 #endif

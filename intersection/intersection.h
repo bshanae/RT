@@ -11,6 +11,7 @@ typedef struct 		s_intersection
 	t_vector3		hit;
 	t_vector3		normal;
 	t_material		material;
+	int 			shape_index;
 }					t_intersection;
 
 #endif

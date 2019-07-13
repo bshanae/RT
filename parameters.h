@@ -4,10 +4,12 @@
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
-# define SAMPLES				200
+# define SAMPLES				1000
 # define PATH_DEPTH				5
 # define RUSSIAN_DEPTH			2
-# define UPLOAD_INTERVAL		4
+# define UPLOAD_INTERVAL		3
+# define FOCUS_EFFECT			1
+# define DEFAULT_ALBEDO			0.65
 
 # define QUIT_AFTER_SAMPLING	0
 

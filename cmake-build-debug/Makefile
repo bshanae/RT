@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,33 @@ camera/camera_delete.s: camera/camera_delete.c.s
 camera/camera_delete.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s
 .PHONY : camera/camera_delete.c.s
+
+camera/camera_focus.o: camera/camera_focus.c.o
+
+.PHONY : camera/camera_focus.o
+
+# target to build an object file
+camera/camera_focus.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o
+.PHONY : camera/camera_focus.c.o
+
+camera/camera_focus.i: camera/camera_focus.c.i
+
+.PHONY : camera/camera_focus.i
+
+# target to preprocess a source file
+camera/camera_focus.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.i
+.PHONY : camera/camera_focus.c.i
+
+camera/camera_focus.s: camera/camera_focus.c.s
+
+.PHONY : camera/camera_focus.s
+
+# target to generate assembly for a file
+camera/camera_focus.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.s
+.PHONY : camera/camera_focus.c.s
 
 camera/camera_new.o: camera/camera_new.c.o
 
@@ -339,32 +366,32 @@ renderer/renderer_build_ray.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s
 .PHONY : renderer/renderer_build_ray.c.s
 
-renderer/renderer_check_upload.o: renderer/renderer_check_upload.c.o
+renderer/renderer_check_interval.o: renderer/renderer_check_interval.c.o
 
-.PHONY : renderer/renderer_check_upload.o
+.PHONY : renderer/renderer_check_interval.o
 
 # target to build an object file
-renderer/renderer_check_upload.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_upload.c.o
-.PHONY : renderer/renderer_check_upload.c.o
+renderer/renderer_check_interval.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o
+.PHONY : renderer/renderer_check_interval.c.o
 
-renderer/renderer_check_upload.i: renderer/renderer_check_upload.c.i
+renderer/renderer_check_interval.i: renderer/renderer_check_interval.c.i
 
-.PHONY : renderer/renderer_check_upload.i
+.PHONY : renderer/renderer_check_interval.i
 
 # target to preprocess a source file
-renderer/renderer_check_upload.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_upload.c.i
-.PHONY : renderer/renderer_check_upload.c.i
+renderer/renderer_check_interval.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.i
+.PHONY : renderer/renderer_check_interval.c.i
 
-renderer/renderer_check_upload.s: renderer/renderer_check_upload.c.s
+renderer/renderer_check_interval.s: renderer/renderer_check_interval.c.s
 
-.PHONY : renderer/renderer_check_upload.s
+.PHONY : renderer/renderer_check_interval.s
 
 # target to generate assembly for a file
-renderer/renderer_check_upload.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_upload.c.s
-.PHONY : renderer/renderer_check_upload.c.s
+renderer/renderer_check_interval.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.s
+.PHONY : renderer/renderer_check_interval.c.s
 
 renderer/renderer_delete.o: renderer/renderer_delete.c.o
 
@@ -474,6 +501,33 @@ renderer/renderer_radiance.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.s
 .PHONY : renderer/renderer_radiance.c.s
 
+renderer/renderer_radiance_light.o: renderer/renderer_radiance_light.c.o
+
+.PHONY : renderer/renderer_radiance_light.o
+
+# target to build an object file
+renderer/renderer_radiance_light.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o
+.PHONY : renderer/renderer_radiance_light.c.o
+
+renderer/renderer_radiance_light.i: renderer/renderer_radiance_light.c.i
+
+.PHONY : renderer/renderer_radiance_light.i
+
+# target to preprocess a source file
+renderer/renderer_radiance_light.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.i
+.PHONY : renderer/renderer_radiance_light.c.i
+
+renderer/renderer_radiance_light.s: renderer/renderer_radiance_light.c.s
+
+.PHONY : renderer/renderer_radiance_light.s
+
+# target to generate assembly for a file
+renderer/renderer_radiance_light.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.s
+.PHONY : renderer/renderer_radiance_light.c.s
+
 renderer/renderer_update_frame.o: renderer/renderer_update_frame.c.o
 
 .PHONY : renderer/renderer_update_frame.o
@@ -527,6 +581,33 @@ renderer/renderer_write_radience.s: renderer/renderer_write_radience.c.s
 renderer/renderer_write_radience.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.s
 .PHONY : renderer/renderer_write_radience.c.s
+
+sampler/sampler.o: sampler/sampler.c.o
+
+.PHONY : sampler/sampler.o
+
+# target to build an object file
+sampler/sampler.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
+.PHONY : sampler/sampler.c.o
+
+sampler/sampler.i: sampler/sampler.c.i
+
+.PHONY : sampler/sampler.i
+
+# target to preprocess a source file
+sampler/sampler.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.i
+.PHONY : sampler/sampler.c.i
+
+sampler/sampler.s: sampler/sampler.c.s
+
+.PHONY : sampler/sampler.s
+
+# target to generate assembly for a file
+sampler/sampler.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.s
+.PHONY : sampler/sampler.c.s
 
 scene/scene.o: scene/scene.c.o
 
@@ -879,6 +960,60 @@ vector3/vector3_length.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_length.c.s
 .PHONY : vector3/vector3_length.c.s
 
+vector3/vector3_max.o: vector3/vector3_max.c.o
+
+.PHONY : vector3/vector3_max.o
+
+# target to build an object file
+vector3/vector3_max.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o
+.PHONY : vector3/vector3_max.c.o
+
+vector3/vector3_max.i: vector3/vector3_max.c.i
+
+.PHONY : vector3/vector3_max.i
+
+# target to preprocess a source file
+vector3/vector3_max.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.i
+.PHONY : vector3/vector3_max.c.i
+
+vector3/vector3_max.s: vector3/vector3_max.c.s
+
+.PHONY : vector3/vector3_max.s
+
+# target to generate assembly for a file
+vector3/vector3_max.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.s
+.PHONY : vector3/vector3_max.c.s
+
+vector3/vector3_min.o: vector3/vector3_min.c.o
+
+.PHONY : vector3/vector3_min.o
+
+# target to build an object file
+vector3/vector3_min.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o
+.PHONY : vector3/vector3_min.c.o
+
+vector3/vector3_min.i: vector3/vector3_min.c.i
+
+.PHONY : vector3/vector3_min.i
+
+# target to preprocess a source file
+vector3/vector3_min.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.i
+.PHONY : vector3/vector3_min.c.i
+
+vector3/vector3_min.s: vector3/vector3_min.c.s
+
+.PHONY : vector3/vector3_min.s
+
+# target to generate assembly for a file
+vector3/vector3_min.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s
+.PHONY : vector3/vector3_min.c.s
+
 vector3/vector3_mul.o: vector3/vector3_mul.c.o
 
 .PHONY : vector3/vector3_mul.o
@@ -975,6 +1110,9 @@ help:
 	@echo "... camera/camera_delete.o"
 	@echo "... camera/camera_delete.i"
 	@echo "... camera/camera_delete.s"
+	@echo "... camera/camera_focus.o"
+	@echo "... camera/camera_focus.i"
+	@echo "... camera/camera_focus.s"
 	@echo "... camera/camera_new.o"
 	@echo "... camera/camera_new.i"
 	@echo "... camera/camera_new.s"
@@ -993,9 +1131,9 @@ help:
 	@echo "... renderer/renderer_build_ray.o"
 	@echo "... renderer/renderer_build_ray.i"
 	@echo "... renderer/renderer_build_ray.s"
-	@echo "... renderer/renderer_check_upload.o"
-	@echo "... renderer/renderer_check_upload.i"
-	@echo "... renderer/renderer_check_upload.s"
+	@echo "... renderer/renderer_check_interval.o"
+	@echo "... renderer/renderer_check_interval.i"
+	@echo "... renderer/renderer_check_interval.s"
 	@echo "... renderer/renderer_delete.o"
 	@echo "... renderer/renderer_delete.i"
 	@echo "... renderer/renderer_delete.s"
@@ -1008,12 +1146,18 @@ help:
 	@echo "... renderer/renderer_radiance.o"
 	@echo "... renderer/renderer_radiance.i"
 	@echo "... renderer/renderer_radiance.s"
+	@echo "... renderer/renderer_radiance_light.o"
+	@echo "... renderer/renderer_radiance_light.i"
+	@echo "... renderer/renderer_radiance_light.s"
 	@echo "... renderer/renderer_update_frame.o"
 	@echo "... renderer/renderer_update_frame.i"
 	@echo "... renderer/renderer_update_frame.s"
 	@echo "... renderer/renderer_write_radience.o"
 	@echo "... renderer/renderer_write_radience.i"
 	@echo "... renderer/renderer_write_radience.s"
+	@echo "... sampler/sampler.o"
+	@echo "... sampler/sampler.i"
+	@echo "... sampler/sampler.s"
 	@echo "... scene/scene.o"
 	@echo "... scene/scene.i"
 	@echo "... scene/scene.s"
@@ -1053,6 +1197,12 @@ help:
 	@echo "... vector3/vector3_length.o"
 	@echo "... vector3/vector3_length.i"
 	@echo "... vector3/vector3_length.s"
+	@echo "... vector3/vector3_max.o"
+	@echo "... vector3/vector3_max.i"
+	@echo "... vector3/vector3_max.s"
+	@echo "... vector3/vector3_min.o"
+	@echo "... vector3/vector3_min.i"
+	@echo "... vector3/vector3_min.s"
 	@echo "... vector3/vector3_mul.o"
 	@echo "... vector3/vector3_mul.i"
 	@echo "... vector3/vector3_mul.s"
