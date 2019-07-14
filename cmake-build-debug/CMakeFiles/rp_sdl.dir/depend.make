@@ -3,7 +3,7 @@
 
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: .././filter/filter.h
-CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: ../camera/camera.h
@@ -11,7 +11,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o: ../camera/camera_build_ray.c
 
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: .././filter/filter.h
-CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: ../camera/camera.h
@@ -19,7 +19,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o: ../camera/camera_delete.c
 
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: .././filter/filter.h
-CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: ../camera/camera.h
@@ -27,7 +27,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o: ../camera/camera_focus.c
 
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: .././filter/filter.h
-CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o: ../camera/camera.h
@@ -41,6 +41,18 @@ CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o: ../filter/filter.h
 CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o: ../filter/filter_jitter_sample.c
 
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: .././material/material.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: .././ray/ray.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection_reflect.c
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: .././material/material.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: .././ray/ray.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection.h
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection_refract.c
+
 CMakeFiles/rp_sdl.dir/main.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/main.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/main.c.o: ../../21_libft/includes/libft_vector.h
@@ -52,7 +64,7 @@ CMakeFiles/rp_sdl.dir/main.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././material/material.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././material/material_list.h
-CMakeFiles/rp_sdl.dir/main.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/main.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././renderer/renderer.h
 CMakeFiles/rp_sdl.dir/main.c.o: .././sampler/sampler.h
@@ -122,7 +134,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o: .././scene/scene.h
@@ -188,7 +200,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o: .././scene/scene.h
@@ -254,7 +266,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o: .././scene/scene.h
@@ -320,7 +332,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o: .././scene/scene.h
@@ -386,7 +398,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o: .././scene/scene.h
@@ -452,7 +464,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o: .././scene/scene.h
@@ -518,7 +530,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o: .././scene/scene.h
@@ -584,7 +596,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o: .././scene/scene.h
@@ -650,7 +662,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././filter/filter.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././sampler/sampler.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: .././scene/scene.h
@@ -706,6 +718,8 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: /Users/bshanae/.brew
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: ../renderer/renderer.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: ../renderer/renderer_write_radience.c
 
+CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../sampler/sampler.c
 CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../sampler/sampler.h
@@ -714,7 +728,7 @@ CMakeFiles/rp_sdl.dir/scene/scene.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././light/light.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././shape/shape.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././vector3/vector3.h
@@ -724,7 +738,7 @@ CMakeFiles/rp_sdl.dir/scene/scene.c.o: ../scene/scene.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -776,7 +790,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o: ../sdl_ctrl/sdl_ctrl.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -828,7 +842,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o: ../sdl_ctrl/sdl_ctrl_delete.
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -880,7 +894,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o: ../sdl_ctrl/sdl_ctrl_error.c
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -932,7 +946,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o: ../sdl_ctrl/sdl_ctrl_init.c
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
 CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -984,7 +998,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o: ../sdl_ctrl/sdl_ctrl_upload.
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/shape/shape.c.o: ../shape/shape.c
@@ -994,7 +1008,7 @@ CMakeFiles/rp_sdl.dir/shape/shape.c.o: ../shape/shape_list.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: ../shape/shape.h
@@ -1004,7 +1018,7 @@ CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o: ../shape/shape_plane.c
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././intersection/intersection.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././material/material.h
-CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././parameters.h
+CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././options.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././ray/ray.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: ../shape/shape.h
@@ -1016,6 +1030,9 @@ CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3_add.c
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.o: ../vector3/vector3.h
 CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.o: ../vector3/vector3_cross.c
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o: ../vector3/vector3.h
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o: ../vector3/vector3_div.c
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.o: ../vector3/vector3.h
 CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.o: ../vector3/vector3_dot.c

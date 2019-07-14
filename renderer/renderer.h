@@ -18,7 +18,6 @@ typedef struct 		s_renderer
 	t_scene			*scene;
 	t_intersection	intersection;
 	t_vector3		radiance;
-	int				depth;
 	t_vector3		*sample_data;
 	int				sample_number;
 }					t_renderer;

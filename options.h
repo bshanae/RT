@@ -1,15 +1,15 @@
-#ifndef PARAMETERS_H
-# define PARAMETERS_H
+#ifndef OPTIONS_H
+# define OPTIONS_H
 
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
-# define SAMPLES				1000
-# define PATH_DEPTH				5
-# define RUSSIAN_DEPTH			2
+# define SAMPLES				100
+# define PATH_DEPTH				8
+# define RUSSIAN_DEPTH			4
 # define UPLOAD_INTERVAL		3
-# define FOCUS_EFFECT			1
-# define DEFAULT_ALBEDO			0.65
+# define FOCUS_EFFECT			0
+# define DEFAULT_ALBEDO			0.18
 
 # define QUIT_AFTER_SAMPLING	0
 
@@ -22,5 +22,8 @@
 
 # define SCENE_SHAPES_CAPACITY	16
 # define SCENE_LIGHTS_CAPACITY	8
+
+# define SAMPLING_COSINE_PBRT
+//# define SAMPLING_UNIFORM
 
 #endif

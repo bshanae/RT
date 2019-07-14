@@ -1,7 +1,7 @@
 #ifndef SHAPE_H
 # define SHAPE_H
 
-# include "parameters.h"
+# include "options.h"
 
 # include "libft_standart.h"
 

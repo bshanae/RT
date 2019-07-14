@@ -1,7 +1,7 @@
 #ifndef RP_CAMERA_H
 # define RP_CAMERA_H
 
-# include "parameters.h"
+# include "options.h"
 
 # include "libft_standart.h"
 # include "vector3.h"

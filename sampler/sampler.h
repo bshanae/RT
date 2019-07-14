@@ -1,6 +1,8 @@
 #ifndef SAMPLER_H
 # define SAMPLER_H
 
+# include "options.h"
+
 # include "vector3.h"
 
 # include <stdlib.h>

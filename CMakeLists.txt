@@ -65,5 +65,5 @@ add_executable(rp_sdl
         ./ray/ray_calculate.c
         ./camera/camera_focus.c
         ./renderer/renderer_radiance_light.c
-        ./sampler/sampler.c vector3/vector3_max.c vector3/vector3_min.c)
+        ./sampler/sampler.c vector3/vector3_max.c vector3/vector3_min.c intersection/intersection_reflect.c intersection/intersection_refract.c vector3/vector3_div.c)
 

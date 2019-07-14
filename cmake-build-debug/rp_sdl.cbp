@@ -130,6 +130,12 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/filter/filter_jitter_sample.c">
 			<Option target="rp_sdl"/>
 		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/main.c">
 			<Option target="rp_sdl"/>
 		</Unit>
@@ -206,6 +212,9 @@
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c">

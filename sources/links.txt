@@ -21,3 +21,6 @@ Importance Sampling :
 
 ... :
     http://lousodrome.net/blog/light/tag/mis/
+
+Path Tracing on GPU :
+    https://is.muni.cz/th/396530/fi_b/Bachelor.pdf

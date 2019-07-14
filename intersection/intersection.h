@@ -14,4 +14,8 @@ typedef struct 		s_intersection
 	int 			shape_index;
 }					t_intersection;
 
+void				intersection_reflect(t_intersection *destination, const t_intersection *source);
+
+void				intersection_refract(t_intersection *destination, const t_intersection *source);
+
 #endif

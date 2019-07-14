@@ -4,7 +4,7 @@
 CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
@@ -12,7 +12,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o
 CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
@@ -20,7 +20,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o
 CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
@@ -28,7 +28,7 @@ CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o
 CMakeFiles/rp_sdl.dir/camera/camera_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
@@ -41,6 +41,18 @@ CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/filter/filter.h
  /Users/bshanae/workspace/21_ray_tracer/filter/filter_jitter_sample.c
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o
+ .././material/material.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o
+ .././material/material.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c
 CMakeFiles/rp_sdl.dir/main.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -53,7 +65,7 @@ CMakeFiles/rp_sdl.dir/main.c.o
  .././light/light.h
  .././material/material.h
  .././material/material_list.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././renderer/renderer.h
  .././sampler/sampler.h
@@ -123,7 +135,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -189,7 +201,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -255,7 +267,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -321,7 +333,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -387,7 +399,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -453,7 +465,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -519,7 +531,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -585,7 +597,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -651,7 +663,7 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././sampler/sampler.h
  .././scene/scene.h
@@ -707,6 +719,8 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o
  /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
  /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_write_radience.c
 CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././options.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/sampler/sampler.c
  /Users/bshanae/workspace/21_ray_tracer/sampler/sampler.h
@@ -715,7 +729,7 @@ CMakeFiles/rp_sdl.dir/scene/scene.c.o
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././shape/shape.h
  .././vector3/vector3.h
@@ -725,7 +739,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
- .././parameters.h
+ .././options.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -777,7 +791,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
- .././parameters.h
+ .././options.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -829,7 +843,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
- .././parameters.h
+ .././options.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -881,7 +895,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
- .././parameters.h
+ .././options.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -933,7 +947,7 @@ CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
- .././parameters.h
+ .././options.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
  /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
@@ -985,7 +999,7 @@ CMakeFiles/rp_sdl.dir/shape/shape.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/shape/shape.c
@@ -995,7 +1009,7 @@ CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
@@ -1005,7 +1019,7 @@ CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
  .././material/material.h
- .././parameters.h
+ .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
@@ -1017,6 +1031,9 @@ CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o
 CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.o
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c
 CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.o
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
  /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c

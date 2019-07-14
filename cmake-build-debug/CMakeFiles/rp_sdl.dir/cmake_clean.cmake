@@ -35,6 +35,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/rp_sdl.dir/sampler/sampler.c.o"
   "CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o"
   "CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o"
+  "CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o"
+  "CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o"
+  "CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o"
   "rp_sdl.pdb"
   "rp_sdl"
 )

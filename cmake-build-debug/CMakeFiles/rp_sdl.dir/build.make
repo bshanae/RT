@@ -525,6 +525,45 @@ CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c -o CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s
 
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection_reflect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o   -c /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c > CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c -o CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection_refract.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o   -c /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c > CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i
+
+CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c -o CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o: ../vector3/vector3_div.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c > CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.i
+
+CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c -o CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.s
+
 # Object files for target rp_sdl
 rp_sdl_OBJECTS = \
 "CMakeFiles/rp_sdl.dir/main.c.o" \
@@ -562,7 +601,10 @@ rp_sdl_OBJECTS = \
 "CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o" \
 "CMakeFiles/rp_sdl.dir/sampler/sampler.c.o" \
 "CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o" \
-"CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o"
+"CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o" \
+"CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o" \
+"CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o" \
+"CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o"
 
 # External object files for target rp_sdl
 rp_sdl_EXTERNAL_OBJECTS =
@@ -603,9 +645,12 @@ rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/build.make
 rp_sdl: CMakeFiles/rp_sdl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking C executable rp_sdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking C executable rp_sdl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rp_sdl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

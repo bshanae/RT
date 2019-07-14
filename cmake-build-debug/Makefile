@@ -285,6 +285,60 @@ filter/filter_jitter_sample.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s
 .PHONY : filter/filter_jitter_sample.c.s
 
+intersection/intersection_reflect.o: intersection/intersection_reflect.c.o
+
+.PHONY : intersection/intersection_reflect.o
+
+# target to build an object file
+intersection/intersection_reflect.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o
+.PHONY : intersection/intersection_reflect.c.o
+
+intersection/intersection_reflect.i: intersection/intersection_reflect.c.i
+
+.PHONY : intersection/intersection_reflect.i
+
+# target to preprocess a source file
+intersection/intersection_reflect.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i
+.PHONY : intersection/intersection_reflect.c.i
+
+intersection/intersection_reflect.s: intersection/intersection_reflect.c.s
+
+.PHONY : intersection/intersection_reflect.s
+
+# target to generate assembly for a file
+intersection/intersection_reflect.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s
+.PHONY : intersection/intersection_reflect.c.s
+
+intersection/intersection_refract.o: intersection/intersection_refract.c.o
+
+.PHONY : intersection/intersection_refract.o
+
+# target to build an object file
+intersection/intersection_refract.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o
+.PHONY : intersection/intersection_refract.c.o
+
+intersection/intersection_refract.i: intersection/intersection_refract.c.i
+
+.PHONY : intersection/intersection_refract.i
+
+# target to preprocess a source file
+intersection/intersection_refract.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i
+.PHONY : intersection/intersection_refract.c.i
+
+intersection/intersection_refract.s: intersection/intersection_refract.c.s
+
+.PHONY : intersection/intersection_refract.s
+
+# target to generate assembly for a file
+intersection/intersection_refract.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s
+.PHONY : intersection/intersection_refract.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -906,6 +960,33 @@ vector3/vector3_cross.c.s:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.s
 .PHONY : vector3/vector3_cross.c.s
 
+vector3/vector3_div.o: vector3/vector3_div.c.o
+
+.PHONY : vector3/vector3_div.o
+
+# target to build an object file
+vector3/vector3_div.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o
+.PHONY : vector3/vector3_div.c.o
+
+vector3/vector3_div.i: vector3/vector3_div.c.i
+
+.PHONY : vector3/vector3_div.i
+
+# target to preprocess a source file
+vector3/vector3_div.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.i
+.PHONY : vector3/vector3_div.c.i
+
+vector3/vector3_div.s: vector3/vector3_div.c.s
+
+.PHONY : vector3/vector3_div.s
+
+# target to generate assembly for a file
+vector3/vector3_div.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.s
+.PHONY : vector3/vector3_div.c.s
+
 vector3/vector3_dot.o: vector3/vector3_dot.c.o
 
 .PHONY : vector3/vector3_dot.o
@@ -1122,6 +1203,12 @@ help:
 	@echo "... filter/filter_jitter_sample.o"
 	@echo "... filter/filter_jitter_sample.i"
 	@echo "... filter/filter_jitter_sample.s"
+	@echo "... intersection/intersection_reflect.o"
+	@echo "... intersection/intersection_reflect.i"
+	@echo "... intersection/intersection_reflect.s"
+	@echo "... intersection/intersection_refract.o"
+	@echo "... intersection/intersection_refract.i"
+	@echo "... intersection/intersection_refract.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -1191,6 +1278,9 @@ help:
 	@echo "... vector3/vector3_cross.o"
 	@echo "... vector3/vector3_cross.i"
 	@echo "... vector3/vector3_cross.s"
+	@echo "... vector3/vector3_div.o"
+	@echo "... vector3/vector3_div.i"
+	@echo "... vector3/vector3_div.s"
 	@echo "... vector3/vector3_dot.o"
 	@echo "... vector3/vector3_dot.i"
 	@echo "... vector3/vector3_dot.s"

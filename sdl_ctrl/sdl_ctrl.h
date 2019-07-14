@@ -1,7 +1,7 @@
 #ifndef SDL_CTRL_H
 # define SDL_CTRL_H
 
-# include "parameters.h"
+# include "options.h"
 
 # include "libft_ft_printf.h"
 
