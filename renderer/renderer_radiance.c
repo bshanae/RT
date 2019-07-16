@@ -52,7 +52,7 @@ void					renderer_radiance(t_renderer *renderer)
 		renderer->intersection.ray.direction = sample;
 
 		vector3_stupid_mul_eq(&mask, &renderer->intersection.material.color);
-		vector3_mul_eq(&renderer->radiance, 2 * M_PI);
+		//vector3_mul_eq(&renderer->radiance, 2 * M_PI);
 	}
 
 

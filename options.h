@@ -7,11 +7,11 @@
 # define UPLOAD_INTERVAL		3
 # define QUIT_AFTER_SAMPLING	0
 
-# define SAMPLES				100
+# define SAMPLES				5
 # define PATH_DEPTH				8
 # define RUSSIAN_DEPTH			2
 
-# define DEFAULT_ALBEDO			0.18
+# define DEFAULT_ALBEDO			1.
 
 # define FOCUS_EFFECT			0
 # define APERTURE_SIZE			7.
