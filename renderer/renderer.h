@@ -10,6 +10,7 @@
 # include "scene.h"
 # include "intersection.h"
 # include "sampler.h"
+# include "brdf.h"
 
 typedef struct 		s_renderer
 {

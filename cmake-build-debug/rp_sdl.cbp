@@ -60,6 +60,7 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sampler"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./brdf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -97,6 +98,7 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./sampler"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./brdf"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -112,6 +114,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/brdf/brdf.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/brdf/brdf.h">
+			<Option target="rp_sdl"/>
+		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c">
 			<Option target="rp_sdl"/>
 		</Unit>

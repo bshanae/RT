@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/bshanae/workspace/21_ray_tracer/brdf/brdf.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/brdf/brdf.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/camera/camera_focus.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o"
@@ -64,6 +65,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././intersection"
   ".././renderer"
   ".././sampler"
+  ".././brdf"
   )
 
 # Targets to which this target links.

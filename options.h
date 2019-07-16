@@ -4,14 +4,18 @@
 # define WINDOW_WIDTH			720
 # define WINDOW_HEIGHT			480
 
+# define UPLOAD_INTERVAL		3
+# define QUIT_AFTER_SAMPLING	0
+
 # define SAMPLES				100
 # define PATH_DEPTH				8
-# define RUSSIAN_DEPTH			4
-# define UPLOAD_INTERVAL		3
-# define FOCUS_EFFECT			0
+# define RUSSIAN_DEPTH			2
+
 # define DEFAULT_ALBEDO			0.18
 
-# define QUIT_AFTER_SAMPLING	0
+# define FOCUS_EFFECT			0
+# define APERTURE_SIZE			7.
+# define FOCAL_LENGTH			145.
 
 # define INTERSECTION_MIN		0.001f
 # define INTERSECTION_MAX		INFINITY
@@ -23,7 +27,8 @@
 # define SCENE_SHAPES_CAPACITY	16
 # define SCENE_LIGHTS_CAPACITY	8
 
-# define SAMPLING_COSINE_PBRT
-//# define SAMPLING_UNIFORM
+# define LIGHT_SAMPLING
+
+# define SCENE_CORNELL
 
 #endif

@@ -123,6 +123,33 @@ rp_sdl/fast:
 	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/build
 .PHONY : rp_sdl/fast
 
+brdf/brdf.o: brdf/brdf.c.o
+
+.PHONY : brdf/brdf.o
+
+# target to build an object file
+brdf/brdf.c.o:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/brdf/brdf.c.o
+.PHONY : brdf/brdf.c.o
+
+brdf/brdf.i: brdf/brdf.c.i
+
+.PHONY : brdf/brdf.i
+
+# target to preprocess a source file
+brdf/brdf.c.i:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/brdf/brdf.c.i
+.PHONY : brdf/brdf.c.i
+
+brdf/brdf.s: brdf/brdf.c.s
+
+.PHONY : brdf/brdf.s
+
+# target to generate assembly for a file
+brdf/brdf.c.s:
+	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/brdf/brdf.c.s
+.PHONY : brdf/brdf.c.s
+
 camera/camera_build_ray.o: camera/camera_build_ray.c.o
 
 .PHONY : camera/camera_build_ray.o
@@ -1185,6 +1212,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... rp_sdl"
+	@echo "... brdf/brdf.o"
+	@echo "... brdf/brdf.i"
+	@echo "... brdf/brdf.s"
 	@echo "... camera/camera_build_ray.o"
 	@echo "... camera/camera_build_ray.i"
 	@echo "... camera/camera_build_ray.s"

@@ -8,9 +8,6 @@
 # include "ray.h"
 # include "filter.h"
 
-# define APERTURE_SIZE	7.
-# define FOCAL_LENGTH	145.
-
 typedef struct 			s_camera
 {
 	t_vector3			position;

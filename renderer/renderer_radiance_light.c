@@ -38,7 +38,15 @@ t_vector3				renderer_radiance_light(t_renderer *renderer)
 		sphere_radius = ((t_shape_data_sphere *)renderer->scene->shapes->data)->radius;
 		cos_a_max = sqrtf(1. - sphere_radius * sphere_radius / vector3_length_cp(vector3_sub_ref(&renderer->intersection.hit, &light_position)));
 		omega = 2 * M_PI * (1 - cos_a_max);
-		vector3_add_eq_cp(&radiance, vector3_mul_ref(&renderer->scene->shapes[i].material.emission, emission_intensity * omega * M_1_PI));
+		vector3_add_eq_cp
+		(
+			&radiance,
+			vector3_mul_ref
+			(
+				&renderer->scene->shapes[i].material.emission,
+				emission_intensity * omega * M_1_PI * brdf(&renderer->intersection, &light_direction)
+			)
+		);
 	}
 	return (radiance);
 }

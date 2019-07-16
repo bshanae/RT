@@ -22,7 +22,7 @@ void					renderer_radiance(t_renderer *renderer)
 	t_vector3			radiance_light;
 	t_vector3			mask;
 	float				incident_cosine;
-	float 				choice;
+	t_vector3			sample;
 
 
 	renderer->radiance = (t_vector3){0., 0., 0.};
@@ -33,52 +33,30 @@ void					renderer_radiance(t_renderer *renderer)
 		if (!scene_intersect(renderer->scene, &renderer->intersection))
 			break ;
 
-//		vector3_mul_eq(&mask, 2. * DEFAULT_ALBEDO);
+//		if (depth > RUSSIAN_DEPTH && vector3_max(&renderer->intersection.material.color) < drand48())
+//			break ;
 
-		// RUSSIAN ROULETTE
+		vector3_add_eq_cp(&renderer->radiance, vector3_stupid_mul_cp(mask, renderer->intersection.material.emission));
 
-		if (depth > RUSSIAN_DEPTH && vector3_max(&renderer->intersection.material.color) < drand48())
-			break ;
-
-		if (renderer->intersection.material.reflection || renderer->intersection.material.refraction)
-		{
-			choice = drand48();
-			if (choice < renderer->intersection.material.reflection) // reflection
-				intersection_reflect(&renderer->intersection, &renderer->intersection);
-			else // refraction
-				intersection_refract(&renderer->intersection, &renderer->intersection);
-			vector3_div_eq(&mask, choice < renderer->intersection.material.reflection ? 1. : renderer->intersection.material.refraction);
-		}
-		else
-		{
-			// EMISSION
-
-			vector3_add_eq_cp(&renderer->radiance, vector3_stupid_mul_cp(mask, renderer->intersection.material.emission));
-
-			// EXPLICIT LIGHT SAMPLING
-
-			radiance_light = renderer_radiance_light(renderer);
-			vector3_stupid_mul_eq(&radiance_light, &renderer->intersection.material.color);
-			vector3_stupid_mul_eq(&radiance_light, &mask);
-			vector3_add_eq_ref(&renderer->radiance, &radiance_light);
-
-			// NEXT STEP
-
-			renderer->intersection.ray.origin = renderer->intersection.hit;
-			renderer->intersection.ray.direction = sampler_uniform(&renderer->intersection.normal, &incident_cosine);
-			vector3_stupid_mul_eq(&mask, &renderer->intersection.material.color);
-
-#ifdef SAMPLING_UNIFORM
-			vector3_mul_eq(&mask, incident_cosine);
+#ifdef LIGHT_SAMPLING
+		radiance_light = renderer_radiance_light(renderer);
+		vector3_stupid_mul_eq(&radiance_light, &renderer->intersection.material.color);
+		vector3_stupid_mul_eq(&radiance_light, &mask);
+		vector3_add_eq_ref(&renderer->radiance, &radiance_light);
 #endif
+		sample = sampler_uniform(&renderer->intersection.normal, &incident_cosine);
 
-#ifdef SAMPLING_COSINE_OTTE
-			vector3_mul_eq(&mask, incident_cosine);
-#endif
+		vector3_mul_eq(&mask, brdf(&renderer->intersection, &sample));
 
-#ifdef SAMPLING_COSINE_PBRT
+		renderer->intersection.ray.origin = renderer->intersection.hit;
+		renderer->intersection.ray.direction = sample;
 
-#endif
-		}
+		vector3_stupid_mul_eq(&mask, &renderer->intersection.material.color);
+		vector3_mul_eq(&renderer->radiance, 2 * M_PI);
 	}
+
+
+	float 	*ptr = &renderer->radiance.x;
+	for (int i = 0; i < 3; i++, ptr++)
+		*ptr = pow(*ptr, 0.45);
 }
