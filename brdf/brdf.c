@@ -62,12 +62,12 @@ float 				brdf(const t_intersection *intersection, const t_vector3 *sample)
 	nh = vector3_dot_ref(&n, &h);
 	hv = vector3_dot_ref(&h, &v);
 
-	roughness = .9;
-	fresnel_ratio = .1;
+	roughness = ROUGHNESS;
+	fresnel_ratio = REFLECTANCE;
 
 	G = GGX_Geometry(&nv, &roughness) * GGX_Geometry(&nl, &roughness);
 	D = GGX_Distribution(&nh, &roughness);
 	F = GGX_Fresnel(&fresnel_ratio, &hv);
 
-	return ((1. - F) * DEFAULT_ALBEDO * M_1_PI + (G * D * F) / (4. * nv));
+	return ((G * F * hv) / (nv * nh));
 }

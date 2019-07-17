@@ -7,11 +7,9 @@
 # define UPLOAD_INTERVAL		3
 # define QUIT_AFTER_SAMPLING	0
 
-# define SAMPLES				5
+# define SAMPLES				10
 # define PATH_DEPTH				8
-# define RUSSIAN_DEPTH			2
-
-# define DEFAULT_ALBEDO			1.
+# define RUSSIAN_DEPTH			4
 
 # define FOCUS_EFFECT			0
 # define APERTURE_SIZE			7.
@@ -27,8 +25,10 @@
 # define SCENE_SHAPES_CAPACITY	16
 # define SCENE_LIGHTS_CAPACITY	8
 
-# define LIGHT_SAMPLING
+# define SAMPLING_LIGHT
+# define SAMPLING_GGX
 
-# define SCENE_CORNELL
+# define ROUGHNESS				0.5
+# define REFLECTANCE			1.
 
 #endif

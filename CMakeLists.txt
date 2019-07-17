@@ -7,10 +7,12 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
 
 link_directories(
         ~/.brew/Cellar/sdl2/2.0.9_1/lib
+        /usr/local/Cellar/sdl2/2.0.9_1/lib
         ../21_libft/)
 
 include_directories(
         ~/.brew/Cellar/sdl2/2.0.9_1/include/SDL2
+        /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2
         ../21_libft/includes
         ./
         ./sdl_ctrl/

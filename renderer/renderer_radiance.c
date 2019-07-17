@@ -33,12 +33,12 @@ void					renderer_radiance(t_renderer *renderer)
 		if (!scene_intersect(renderer->scene, &renderer->intersection))
 			break ;
 
-//		if (depth > RUSSIAN_DEPTH && vector3_max(&renderer->intersection.material.color) < drand48())
-//			break ;
+		if (depth > RUSSIAN_DEPTH && vector3_max(&renderer->intersection.material.color) < drand48())
+			break ;
 
-		vector3_add_eq_cp(&renderer->radiance, vector3_stupid_mul_cp(mask, renderer->intersection.material.emission));
+//		vector3_add_eq_cp(&renderer->radiance, vector3_stupid_mul_cp(mask, renderer->intersection.material.emission));
 
-#ifdef LIGHT_SAMPLING
+#ifdef SAMPLING_LIGHT
 		radiance_light = renderer_radiance_light(renderer);
 		vector3_stupid_mul_eq(&radiance_light, &renderer->intersection.material.color);
 		vector3_stupid_mul_eq(&radiance_light, &mask);
@@ -52,10 +52,10 @@ void					renderer_radiance(t_renderer *renderer)
 		renderer->intersection.ray.direction = sample;
 
 		vector3_stupid_mul_eq(&mask, &renderer->intersection.material.color);
-		//vector3_mul_eq(&renderer->radiance, 2 * M_PI);
+
 	}
 
-
+	vector3_mul_eq(&renderer->radiance, 2 * M_PI);
 	float 	*ptr = &renderer->radiance.x;
 	for (int i = 0; i < 3; i++, ptr++)
 		*ptr = pow(*ptr, 0.45);

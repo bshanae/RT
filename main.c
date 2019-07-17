@@ -8,20 +8,6 @@ int					main()
 
 	renderer = renderer_new();
 
-#ifdef SCENE_BALLS
-	renderer->camera->position = (t_vector3){0., 10., 180.};
-
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-10., 25., 55.}, 2., MATERIAL_LIGHT));
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){10., 25., 55.}, 2., MATERIAL_LIGHT));
-
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-20., 0., 20.}, 7., MATERIAL_WHITE));
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., 20.}, 7., MATERIAL_WHITE));
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){20., 0., 20.}, 7., MATERIAL_WHITE));
-
-	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., -15., 0.}, (t_vector3){0., 1., 0.}, MATERIAL_WHITE)); // lower
-#endif
-
-#ifdef SCENE_CORNELL
 	renderer->camera->position = (t_vector3){0., 10., 180.};
 
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-10., 25., 45.}, 1.5, MATERIAL_LIGHT));
@@ -29,9 +15,8 @@ int					main()
 
 //	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-5., 0., 20.}, 7., MATERIAL_MIRROR));
 //	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., 50.}, 7., MATERIAL_GLASS));
-//	scene_add_shape(renderer->scene, shape_sphere((t_vector3){15., 0., 20.}, 7., MATERIAL_WHITE_2));
-//	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-15., 0., 20.}, 7., MATERIAL_WHITE));
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){0., 0., 30.}, 7., MATERIAL_WHITE));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){5., -2., 50.}, 5., MATERIAL_WHITE));
 	//scene_add_shape(renderer->scene, shape_sphere((t_vector3){-6., 0., 40.}, 7., MATERIAL_GLASS));
 
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., -15., 0.}, (t_vector3){0., 1., 0.}, MATERIAL_WHITE)); // lower
@@ -41,7 +26,7 @@ int					main()
 
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., 0., -40.}, (t_vector3){0., 0., 1.}, MATERIAL_WHITE)); // back
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., 0., 200.}, (t_vector3){0., 0., -1.}, MATERIAL_WHITE)); // front
-#endif
+
 	renderer_loop(&renderer);
 	return (0);
 }
