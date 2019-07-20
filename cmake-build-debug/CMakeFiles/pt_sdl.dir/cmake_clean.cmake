@@ -36,6 +36,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/shape/shape.c.o"
   "CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o"
   "CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o"
+  "CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o"

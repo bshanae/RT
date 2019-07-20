@@ -47,14 +47,12 @@ CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o
  /Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o
  .././material/material.h
- .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
  /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_reflect.c
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o
  .././material/material.h
- .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
@@ -1040,6 +1038,16 @@ CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o
  /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
  /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
  /Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o
  /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c

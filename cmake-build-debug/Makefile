@@ -987,6 +987,33 @@ shape/shape_sphere.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
+shape/shape_triangle.o: shape/shape_triangle.c.o
+
+.PHONY : shape/shape_triangle.o
+
+# target to build an object file
+shape/shape_triangle.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o
+.PHONY : shape/shape_triangle.c.o
+
+shape/shape_triangle.i: shape/shape_triangle.c.i
+
+.PHONY : shape/shape_triangle.i
+
+# target to preprocess a source file
+shape/shape_triangle.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.i
+.PHONY : shape/shape_triangle.c.i
+
+shape/shape_triangle.s: shape/shape_triangle.c.s
+
+.PHONY : shape/shape_triangle.s
+
+# target to generate assembly for a file
+shape/shape_triangle.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.s
+.PHONY : shape/shape_triangle.c.s
+
 vector3/vector3_add.o: vector3/vector3_add.c.o
 
 .PHONY : vector3/vector3_add.o
@@ -1389,6 +1416,9 @@ help:
 	@echo "... shape/shape_sphere.o"
 	@echo "... shape/shape_sphere.i"
 	@echo "... shape/shape_sphere.s"
+	@echo "... shape/shape_triangle.o"
+	@echo "... shape/shape_triangle.i"
+	@echo "... shape/shape_triangle.s"
 	@echo "... vector3/vector3_add.o"
 	@echo "... vector3/vector3_add.i"
 	@echo "... vector3/vector3_add.s"

@@ -87,7 +87,7 @@ set(SOURCE_SHAPE
         ./shape/shape.c
         ./shape/shape_sphere.c
         ./shape/shape_plane.c
-        )
+        ./shape/shape_triangle.c)
 
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c

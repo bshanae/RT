@@ -1,8 +1,6 @@
 #ifndef INTERSECTION_H
 # define INTERSECTION_H
 
-# include "options.h"
-
 # include "material.h"
 # include "vector3.h"
 # include "ray.h"

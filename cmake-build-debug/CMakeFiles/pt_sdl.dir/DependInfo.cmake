@@ -36,6 +36,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vladimir/workspace/21_ray_tracer/shape/shape.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/shape/shape_plane.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.o"

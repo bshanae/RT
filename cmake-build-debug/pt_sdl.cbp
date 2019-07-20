@@ -214,6 +214,9 @@
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c">
 			<Option target="pt_sdl"/>
 		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c">
+			<Option target="pt_sdl"/>
+		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c">
 			<Option target="pt_sdl"/>
 		</Unit>

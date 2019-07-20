@@ -22,4 +22,14 @@ typedef struct		s_shape_data_plane
 int					shape_intersect_plane(t_shape *shape, t_intersection *intersection);
 t_shape				shape_plane(t_vector3 position, t_vector3 normal, t_material material);
 
+typedef struct		s_shape_data_triangle
+{
+	t_vector3		a;
+	t_vector3		b;
+	t_vector3		c;
+}					t_shape_data_triangle;
+
+int					shape_intersect_triangle(t_shape *shape, t_intersection *intersection);
+t_shape				shape_triangle(t_vector3 a, t_vector3 b, t_vector3 c, t_material material);
+
 #endif

@@ -46,14 +46,12 @@ CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o: ../filter/filter.h
 CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o: ../filter/filter_jitter_sample.c
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: .././material/material.h
-CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: .././options.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: .././ray/ray.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: .././vector3/vector3.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection_reflect.c
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: .././material/material.h
-CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: .././options.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: .././ray/ray.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: .././vector3/vector3.h
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection.h
@@ -1039,6 +1037,16 @@ CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o: .././vector3/vector3.h
 CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o: ../shape/shape.h
 CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o: ../shape/shape_list.h
 CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
+
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: .././intersection/intersection.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: .././material/material.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: .././options.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: .././ray/ray.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: .././vector3/vector3.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: ../shape/shape.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: ../shape/shape_list.h
+CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o: ../shape/shape_triangle.c
 
 CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3.h
 CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3_add.c
