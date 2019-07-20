@@ -10,16 +10,16 @@ static void				create_coordinate_system(const t_vector3 *normal, t_vector3 *nt, 
 	*nb = vector3_cross_ref(normal, nt);
 }
 
-static t_vector3		generate_sample(const float *r1, const float *r2, float *cosine)
+static t_vector3		generate_sample(const float *r1, const float *r2)
 {
-	float sin_theta = sqrtf(fmaxf(0.0f , 1.0f - *r1 * *r1));
+	float cos_theta = sqrtf(fmaxf(0.0f , 1.0f - *r1));
+	float sin_theta = sqrtf(fmaxf(0.0f , 1.0f - cos_theta * cos_theta));
 	float phi = 2.0f * M_PI * *r2;
-	*cosine = *r1;
 
 	return (t_vector3)
 	{
 		sin_theta * cosf(phi),
-		*r1,
+		cos_theta,
 		sin_theta * sinf(phi)
 	};
 }
@@ -34,7 +34,7 @@ static t_vector3		convert_sample(const t_vector3 *normal, const t_vector3 *sampl
 	});
 }
 
-t_vector3				sampler_uniform(const t_vector3 *normal, float *cosine)
+t_vector3				sampler_cosine(const t_vector3 *normal)
 {
 	t_vector3			nt;
 	t_vector3			nb;
@@ -44,7 +44,7 @@ t_vector3				sampler_uniform(const t_vector3 *normal, float *cosine)
 	create_coordinate_system(normal, &nt, &nb);
 	r[0] = drand48();
 	r[1] = drand48();
-	sample = generate_sample(r, r + 1, cosine);
+	sample = generate_sample(r, r + 1);
 	sample = convert_sample(normal, &sample, &nt, &nb);
 	return (sample);
 }

@@ -10,9 +10,9 @@
 # define QUIT_AFTER_SAMPLING	0
 
 # define SAMPLES				50
-# define PATH_DEPTH				1
+# define PATH_DEPTH				8
 # define RUSSIAN_DEPTH			4
-# define SRGB					0
+# define SRGB					1
 
 # define UPLOAD_INTERVAL		3
 

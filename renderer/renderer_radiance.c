@@ -4,7 +4,6 @@ void					renderer_radiance(t_renderer *renderer)
 {
 	t_vector3			radiance_light;
 	t_vector3			mask;
-	float				incident_cosine;
 	float 				choice;
 
 
@@ -47,11 +46,9 @@ void					renderer_radiance(t_renderer *renderer)
 			// NEXT STEP
 
 			renderer->intersection.ray.origin = renderer->intersection.hit;
-			renderer->intersection.ray.direction = sampler_uniform(&renderer->intersection.normal, &incident_cosine);
+			renderer->intersection.ray.direction = sampler_cosine(&renderer->intersection.normal);
 
 			vector3_component_mul_eq_ref(&mask, &renderer->intersection.material.color);
-
-			vector3_mul_eq(&renderer->radiance, incident_cosine);
 		}
 	}
 	if (SRGB)

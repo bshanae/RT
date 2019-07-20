@@ -19,7 +19,7 @@ SDL2 :
 Importance Sampling :
     https://blog.thomaspoulet.fr/uniform-sampling-on-unit-hemisphere/
 
-... :
+More links :
     http://lousodrome.net/blog/light/tag/mis/
 
 Path Tracing on GPU :

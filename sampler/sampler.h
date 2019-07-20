@@ -7,6 +7,6 @@
 
 # include <stdlib.h>
 
-t_vector3			sampler_uniform(const t_vector3 *normal, float *cosine);
+t_vector3			sampler_cosine(const t_vector3 *normal);
 
 #endif
