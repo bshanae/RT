@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(rp_sdl C)
+project(pt_sdl C)
 
 set(CMAKE_C_STANDARD 99)
 
@@ -33,44 +33,85 @@ link_libraries(
        "SDL2"
         "ft")
 
-add_executable(rp_sdl
-        ./main.c
+set(SOURCE_VECTOR
+        ./vector3/vector3_add.c
+        ./vector3/vector3_sub.c
+        ./vector3/vector3_mul.c
+        ./vector3/vector3_div.c
+        ./vector3/vector3_dot.c
+        ./vector3/vector3_cross.c
+        ./vector3/vector3_length.c
+        ./vector3/vector3_normal.c
+        ./vector3/vector3_max.c
+        ./vector3/vector3_min.c
+        ./vector3/vector3_component_mul.c)
+
+set(SOURCE_SDL_CTRL
         ./sdl_ctrl/cdl_ctrl_new.c
-        ./sdl_ctrl/sdl_ctrl_init.c
         ./sdl_ctrl/sdl_ctrl_delete.c
         ./sdl_ctrl/sdl_ctrl_error.c
-        ./renderer/renderer_new.c
-        ./renderer/renderer_delete.c
-        ./renderer/renderer_update_frame.c
-        ./renderer/renderer_loop.c
-        ./renderer/renderer_radiance.c
-        ./renderer/renderer_write_radience.c
-        ./renderer/renderer_check_interval.c
+        ./sdl_ctrl/sdl_ctrl_init.c
+        ./sdl_ctrl/sdl_ctrl_upload.c)
+
+set(SOURCE_RAY
+        ./ray/ray_calculate.c)
+
+set(SOURCE_CAMERA
         ./camera/camera_new.c
         ./camera/camera_delete.c
         ./camera/camera_build_ray.c
-        ./vector3/vector3_mul.c
-        ./vector3/vector3_add.c
-        ./vector3/vector3_sub.c
-        ./vector3/vector3_dot.c
-        ./vector3/vector3_length.c
-        ./vector3/vector3_normal.c
-        ./vector3/vector3_cross.c
-        ./vector3/vector3_div.c
-        ./vector3/vector3_component_mul.c
+        ./camera/camera_focus.c)
+
+set(SOURCE_FILTER
+        ./filter/filter_jitter_sample.c)
+
+set(SOURCE_RENDERER
+        ./renderer/renderer_new.c
+        ./renderer/renderer_delete.c
+        ./renderer/renderer_loop.c
+        ./renderer/renderer_update_frame.c
         ./renderer/renderer_build_ray.c
-        ./filter/filter_jitter_sample.c
-        ./sdl_ctrl/sdl_ctrl_upload.c
+        ./renderer/renderer_radiance.c
+        ./renderer/renderer_radiance_light.c
+        ./renderer/renderer_write_radience.c
+        ./renderer/renderer_check_interval.c)
+
+set(SOURCE_COLOR
+        ./color/color_unpack.c
+        ./color/color_correct.c)
+
+set(SOURCE_SCENE
+        ./scene/scene.c)
+
+set(SOURCE_SHAPE
         ./shape/shape.c
         ./shape/shape_sphere.c
         ./shape/shape_plane.c
-        ./scene/scene.c
-        ./color/color_unpack.c
-        ./ray/ray_calculate.c
-        ./camera/camera_focus.c
-        ./renderer/renderer_radiance_light.c
-        ./sampler/sampler.c vector3/vector3_max.c
-        ./vector3/vector3_min.c
+        )
+
+set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c
-        ./intersection/intersection_refract.c color/color_correct.c)
+        ./intersection/intersection_refract.c)
+
+set(SOURCE_SAMPLER
+        ./sampler/sampler_transform.c
+        ./sampler/sampler_uniform.c
+        ./sampler/sampler_cosine.c)
+
+set(SOURCE_MAIN
+        ./main.c)
+
+add_executable(pt_sdl
+        ${SOURCE_VECTOR}
+        ${SOURCE_SDL_CTRL}
+        ${SOURCE_RAY}
+        ${SOURCE_CAMERA}
+        ${SOURCE_FILTER}
+        ${SOURCE_RENDERER}
+        ${SOURCE_COLOR}
+        ${SOURCE_SCENE}
+        ${SOURCE_SHAPE}
+        ${SOURCE_INTERSECTION}
+        ${SOURCE_SAMPLER}
+        ${SOURCE_MAIN})
 

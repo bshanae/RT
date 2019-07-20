@@ -172,10 +172,13 @@
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/renderer/renderer_write_radience.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c">
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c">
 			<Option target="rp_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h">
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/scene/scene.c">
@@ -209,6 +212,9 @@
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c">
+			<Option target="rp_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c">
 			<Option target="rp_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c">

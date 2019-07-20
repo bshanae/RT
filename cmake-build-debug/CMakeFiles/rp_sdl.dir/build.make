@@ -512,22 +512,9 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_radiance_light.c -o CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.s
 
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: CMakeFiles/rp_sdl.dir/flags.make
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../sampler/sampler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rp_sdl.dir/sampler/sampler.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/sampler/sampler.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c
-
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/sampler/sampler.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c > CMakeFiles/rp_sdl.dir/sampler/sampler.c.i
-
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/sampler/sampler.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c -o CMakeFiles/rp_sdl.dir/sampler/sampler.c.s
-
 CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o: CMakeFiles/rp_sdl.dir/flags.make
 CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o: ../vector3/vector3_max.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o   -c /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_max.c
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.i: cmake_force
@@ -540,7 +527,7 @@ CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.s: cmake_force
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o: CMakeFiles/rp_sdl.dir/flags.make
 CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o: ../vector3/vector3_min.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o   -c /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_min.c
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.i: cmake_force
@@ -553,7 +540,7 @@ CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s: cmake_force
 
 CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: CMakeFiles/rp_sdl.dir/flags.make
 CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection_reflect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o   -c /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_reflect.c
 
 CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i: cmake_force
@@ -566,7 +553,7 @@ CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s: cmake_force
 
 CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: CMakeFiles/rp_sdl.dir/flags.make
 CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection_refract.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o   -c /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c
 
 CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i: cmake_force
@@ -579,7 +566,7 @@ CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s: cmake_force
 
 CMakeFiles/rp_sdl.dir/color/color_correct.c.o: CMakeFiles/rp_sdl.dir/flags.make
 CMakeFiles/rp_sdl.dir/color/color_correct.c.o: ../color/color_correct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rp_sdl.dir/color/color_correct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rp_sdl.dir/color/color_correct.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/color/color_correct.c.o   -c /Users/vladimir/workspace/21_ray_tracer/color/color_correct.c
 
 CMakeFiles/rp_sdl.dir/color/color_correct.c.i: cmake_force
@@ -589,6 +576,58 @@ CMakeFiles/rp_sdl.dir/color/color_correct.c.i: cmake_force
 CMakeFiles/rp_sdl.dir/color/color_correct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/color/color_correct.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/color/color_correct.c -o CMakeFiles/rp_sdl.dir/color/color_correct.c.s
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: ../sampler/sampler_transform.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c > CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.i
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c -o CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.s
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: ../sampler/sampler_uniform.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c > CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.i
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c -o CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.s
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: ../sampler/sampler_cosine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c > CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.i
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c -o CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.s
+
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: CMakeFiles/rp_sdl.dir/flags.make
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: ../shape/shape_triangle.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o   -c /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c
+
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c > CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.i
+
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c -o CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.s
 
 # Object files for target rp_sdl
 rp_sdl_OBJECTS = \
@@ -627,12 +666,15 @@ rp_sdl_OBJECTS = \
 "CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.o" \
 "CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o" \
 "CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o" \
-"CMakeFiles/rp_sdl.dir/sampler/sampler.c.o" \
 "CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o" \
 "CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o" \
 "CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o" \
 "CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o" \
-"CMakeFiles/rp_sdl.dir/color/color_correct.c.o"
+"CMakeFiles/rp_sdl.dir/color/color_correct.c.o" \
+"CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o" \
+"CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o" \
+"CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o" \
+"CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o"
 
 # External object files for target rp_sdl
 rp_sdl_EXTERNAL_OBJECTS =
@@ -672,15 +714,18 @@ rp_sdl: CMakeFiles/rp_sdl.dir/color/color_unpack.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o
-rp_sdl: CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/color/color_correct.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o
+rp_sdl: CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o
 rp_sdl: CMakeFiles/rp_sdl.dir/build.make
 rp_sdl: CMakeFiles/rp_sdl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking C executable rp_sdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking C executable rp_sdl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rp_sdl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -47,5 +47,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/rp_sdl.dir/DependInfo.cmake"
+  "CMakeFiles/pt_sdl.dir/DependInfo.cmake"
   )

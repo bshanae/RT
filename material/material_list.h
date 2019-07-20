@@ -11,6 +11,6 @@
 # define MATERIAL_GREEN		(t_material){COLOR_GREEN, COLOR_BLACK, 0., 0.}
 
 # define MATERIAL_MIRROR	(t_material){COLOR_WHITE, COLOR_BLACK, 1., 0.}
-# define MATERIAL_GLASS		(t_material){COLOR_WHITE, COLOR_BLACK, .2, .8}
+# define MATERIAL_GLASS		(t_material){COLOR_WHITE, COLOR_BLACK, .05, .95}
 
 #endif

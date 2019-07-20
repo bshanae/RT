@@ -722,11 +722,21 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o
  .././options.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c
  /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o
+ .././options.h
+ .././vector3/vector3.h
+ /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o
+ .././options.h
+ .././vector3/vector3.h
+ /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c
 CMakeFiles/rp_sdl.dir/scene/scene.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -1028,6 +1038,16 @@ CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o
  /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
  /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
  /Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c
 CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o
  /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c

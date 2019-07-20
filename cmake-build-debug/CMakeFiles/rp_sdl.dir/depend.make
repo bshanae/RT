@@ -722,10 +722,20 @@ CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: /usr/local/Cellar/sd
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
 CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: .././options.h
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: .././vector3/vector3.h
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../sampler/sampler.c
-CMakeFiles/rp_sdl.dir/sampler/sampler.c.o: ../sampler/sampler.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: .././options.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: ../sampler/sampler.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_cosine.c.o: ../sampler/sampler_cosine.c
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: .././options.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: ../sampler/sampler.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_transform.c.o: ../sampler/sampler_transform.c
+
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: .././options.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: ../sampler/sampler.h
+CMakeFiles/rp_sdl.dir/sampler/sampler_uniform.c.o: ../sampler/sampler_uniform.c
 
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rp_sdl.dir/scene/scene.c.o: .././intersection/intersection.h
@@ -1027,6 +1037,16 @@ CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: .././vector3/vector3.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: ../shape/shape.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: ../shape/shape_list.h
 CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
+
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: .././intersection/intersection.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: .././material/material.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: .././options.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: .././ray/ray.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: .././vector3/vector3.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: ../shape/shape.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: ../shape/shape_list.h
+CMakeFiles/rp_sdl.dir/shape/shape_triangle.c.o: ../shape/shape_triangle.c
 
 CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3.h
 CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o: ../vector3/vector3_add.c

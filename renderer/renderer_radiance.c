@@ -1,9 +1,12 @@
 #include "renderer.h"
 
+#define IS_BLACK(v)		(!(v)->x && !(v)->y && !(v)->z)
+
 void					renderer_radiance(t_renderer *renderer)
 {
 	t_vector3			radiance_light;
 	t_vector3			mask;
+	float 				cosine;
 	float 				choice;
 
 
@@ -46,9 +49,10 @@ void					renderer_radiance(t_renderer *renderer)
 			// NEXT STEP
 
 			renderer->intersection.ray.origin = renderer->intersection.hit;
-			renderer->intersection.ray.direction = sampler_cosine(&renderer->intersection.normal);
+			renderer->intersection.ray.direction = sampler_uniform(&renderer->intersection.normal, &cosine);
 
 			vector3_component_mul_eq_ref(&mask, &renderer->intersection.material.color);
+			vector3_mul_eq(&mask, cosine);
 		}
 	}
 	if (SRGB)

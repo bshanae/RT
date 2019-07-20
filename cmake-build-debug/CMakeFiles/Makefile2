@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
 CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/rp_sdl.dir
+# Target rules for target CMakeFiles/pt_sdl.dir
 
 # All Build rule for target.
-CMakeFiles/rp_sdl.dir/all:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/depend
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target rp_sdl"
-.PHONY : CMakeFiles/rp_sdl.dir/all
+CMakeFiles/pt_sdl.dir/all:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/depend
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target pt_sdl"
+.PHONY : CMakeFiles/pt_sdl.dir/all
 
 # Include target in all.
-all: CMakeFiles/rp_sdl.dir/all
+all: CMakeFiles/pt_sdl.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/rp_sdl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 42
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/rp_sdl.dir/all
+CMakeFiles/pt_sdl.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 44
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pt_sdl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rp_sdl.dir/rule
+.PHONY : CMakeFiles/pt_sdl.dir/rule
 
 # Convenience name for target.
-rp_sdl: CMakeFiles/rp_sdl.dir/rule
+pt_sdl: CMakeFiles/pt_sdl.dir/rule
 
-.PHONY : rp_sdl
-
-# clean rule for target.
-CMakeFiles/rp_sdl.dir/clean:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/clean
-.PHONY : CMakeFiles/rp_sdl.dir/clean
+.PHONY : pt_sdl
 
 # clean rule for target.
-clean: CMakeFiles/rp_sdl.dir/clean
+CMakeFiles/pt_sdl.dir/clean:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/clean
+.PHONY : CMakeFiles/pt_sdl.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/pt_sdl.dir/clean
 
 .PHONY : clean
 

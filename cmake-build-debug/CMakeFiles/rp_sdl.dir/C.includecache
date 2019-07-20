@@ -6,21 +6,55 @@
 
 #IncludeRegexTransform: 
 
+../../21_libft/includes/libft_standart.h
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+.././intersection/intersection.h
+material.h
+.././intersection/material.h
+vector3.h
+.././intersection/vector3.h
+ray.h
+.././intersection/ray.h
+
+.././material/material.h
+vector3.h
+.././material/vector3.h
+
 .././options.h
+
+.././ray/ray.h
+vector3.h
+.././ray/vector3.h
 
 .././vector3/vector3.h
 math.h
 .././vector3/math.h
 
-/Users/vladimir/workspace/21_ray_tracer/sampler/sampler.c
-sampler.h
-/Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
-
-/Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
+/Users/vladimir/workspace/21_ray_tracer/shape/shape.h
 options.h
-/Users/vladimir/workspace/21_ray_tracer/sampler/options.h
-vector3.h
-/Users/vladimir/workspace/21_ray_tracer/sampler/vector3.h
-stdlib.h
--
+/Users/vladimir/workspace/21_ray_tracer/shape/options.h
+libft_standart.h
+/Users/vladimir/workspace/21_ray_tracer/shape/libft_standart.h
+material.h
+/Users/vladimir/workspace/21_ray_tracer/shape/material.h
+intersection.h
+/Users/vladimir/workspace/21_ray_tracer/shape/intersection.h
+
+/Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+shape.h
+/Users/vladimir/workspace/21_ray_tracer/shape/shape.h
+
+/Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c
+shape_list.h
+/Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
 

@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rp_sdl
+# Target rules for targets named pt_sdl
 
 # Build rule for target.
-rp_sdl: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rp_sdl
-.PHONY : rp_sdl
+pt_sdl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pt_sdl
+.PHONY : pt_sdl
 
 # fast build rule for target.
-rp_sdl/fast:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/build
-.PHONY : rp_sdl/fast
+pt_sdl/fast:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/build
+.PHONY : pt_sdl/fast
 
 camera/camera_build_ray.o: camera/camera_build_ray.c.o
 
@@ -129,7 +129,7 @@ camera/camera_build_ray.o: camera/camera_build_ray.c.o
 
 # target to build an object file
 camera/camera_build_ray.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_build_ray.c.o
 .PHONY : camera/camera_build_ray.c.o
 
 camera/camera_build_ray.i: camera/camera_build_ray.c.i
@@ -138,7 +138,7 @@ camera/camera_build_ray.i: camera/camera_build_ray.c.i
 
 # target to preprocess a source file
 camera/camera_build_ray.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_build_ray.c.i
 .PHONY : camera/camera_build_ray.c.i
 
 camera/camera_build_ray.s: camera/camera_build_ray.c.s
@@ -147,7 +147,7 @@ camera/camera_build_ray.s: camera/camera_build_ray.c.s
 
 # target to generate assembly for a file
 camera/camera_build_ray.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_build_ray.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_build_ray.c.s
 .PHONY : camera/camera_build_ray.c.s
 
 camera/camera_delete.o: camera/camera_delete.c.o
@@ -156,7 +156,7 @@ camera/camera_delete.o: camera/camera_delete.c.o
 
 # target to build an object file
 camera/camera_delete.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_delete.c.o
 .PHONY : camera/camera_delete.c.o
 
 camera/camera_delete.i: camera/camera_delete.c.i
@@ -165,7 +165,7 @@ camera/camera_delete.i: camera/camera_delete.c.i
 
 # target to preprocess a source file
 camera/camera_delete.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_delete.c.i
 .PHONY : camera/camera_delete.c.i
 
 camera/camera_delete.s: camera/camera_delete.c.s
@@ -174,7 +174,7 @@ camera/camera_delete.s: camera/camera_delete.c.s
 
 # target to generate assembly for a file
 camera/camera_delete.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_delete.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_delete.c.s
 .PHONY : camera/camera_delete.c.s
 
 camera/camera_focus.o: camera/camera_focus.c.o
@@ -183,7 +183,7 @@ camera/camera_focus.o: camera/camera_focus.c.o
 
 # target to build an object file
 camera/camera_focus.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_focus.c.o
 .PHONY : camera/camera_focus.c.o
 
 camera/camera_focus.i: camera/camera_focus.c.i
@@ -192,7 +192,7 @@ camera/camera_focus.i: camera/camera_focus.c.i
 
 # target to preprocess a source file
 camera/camera_focus.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_focus.c.i
 .PHONY : camera/camera_focus.c.i
 
 camera/camera_focus.s: camera/camera_focus.c.s
@@ -201,7 +201,7 @@ camera/camera_focus.s: camera/camera_focus.c.s
 
 # target to generate assembly for a file
 camera/camera_focus.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_focus.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_focus.c.s
 .PHONY : camera/camera_focus.c.s
 
 camera/camera_new.o: camera/camera_new.c.o
@@ -210,7 +210,7 @@ camera/camera_new.o: camera/camera_new.c.o
 
 # target to build an object file
 camera/camera_new.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_new.c.o
 .PHONY : camera/camera_new.c.o
 
 camera/camera_new.i: camera/camera_new.c.i
@@ -219,7 +219,7 @@ camera/camera_new.i: camera/camera_new.c.i
 
 # target to preprocess a source file
 camera/camera_new.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_new.c.i
 .PHONY : camera/camera_new.c.i
 
 camera/camera_new.s: camera/camera_new.c.s
@@ -228,7 +228,7 @@ camera/camera_new.s: camera/camera_new.c.s
 
 # target to generate assembly for a file
 camera/camera_new.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/camera/camera_new.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/camera/camera_new.c.s
 .PHONY : camera/camera_new.c.s
 
 color/color_correct.o: color/color_correct.c.o
@@ -237,7 +237,7 @@ color/color_correct.o: color/color_correct.c.o
 
 # target to build an object file
 color/color_correct.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_correct.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_correct.c.o
 .PHONY : color/color_correct.c.o
 
 color/color_correct.i: color/color_correct.c.i
@@ -246,7 +246,7 @@ color/color_correct.i: color/color_correct.c.i
 
 # target to preprocess a source file
 color/color_correct.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_correct.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_correct.c.i
 .PHONY : color/color_correct.c.i
 
 color/color_correct.s: color/color_correct.c.s
@@ -255,7 +255,7 @@ color/color_correct.s: color/color_correct.c.s
 
 # target to generate assembly for a file
 color/color_correct.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_correct.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_correct.c.s
 .PHONY : color/color_correct.c.s
 
 color/color_unpack.o: color/color_unpack.c.o
@@ -264,7 +264,7 @@ color/color_unpack.o: color/color_unpack.c.o
 
 # target to build an object file
 color/color_unpack.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_unpack.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_unpack.c.o
 .PHONY : color/color_unpack.c.o
 
 color/color_unpack.i: color/color_unpack.c.i
@@ -273,7 +273,7 @@ color/color_unpack.i: color/color_unpack.c.i
 
 # target to preprocess a source file
 color/color_unpack.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_unpack.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_unpack.c.i
 .PHONY : color/color_unpack.c.i
 
 color/color_unpack.s: color/color_unpack.c.s
@@ -282,7 +282,7 @@ color/color_unpack.s: color/color_unpack.c.s
 
 # target to generate assembly for a file
 color/color_unpack.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/color/color_unpack.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/color/color_unpack.c.s
 .PHONY : color/color_unpack.c.s
 
 filter/filter_jitter_sample.o: filter/filter_jitter_sample.c.o
@@ -291,7 +291,7 @@ filter/filter_jitter_sample.o: filter/filter_jitter_sample.c.o
 
 # target to build an object file
 filter/filter_jitter_sample.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o
 .PHONY : filter/filter_jitter_sample.c.o
 
 filter/filter_jitter_sample.i: filter/filter_jitter_sample.c.i
@@ -300,7 +300,7 @@ filter/filter_jitter_sample.i: filter/filter_jitter_sample.c.i
 
 # target to preprocess a source file
 filter/filter_jitter_sample.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.i
 .PHONY : filter/filter_jitter_sample.c.i
 
 filter/filter_jitter_sample.s: filter/filter_jitter_sample.c.s
@@ -309,7 +309,7 @@ filter/filter_jitter_sample.s: filter/filter_jitter_sample.c.s
 
 # target to generate assembly for a file
 filter/filter_jitter_sample.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/filter/filter_jitter_sample.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.s
 .PHONY : filter/filter_jitter_sample.c.s
 
 intersection/intersection_reflect.o: intersection/intersection_reflect.c.o
@@ -318,7 +318,7 @@ intersection/intersection_reflect.o: intersection/intersection_reflect.c.o
 
 # target to build an object file
 intersection/intersection_reflect.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o
 .PHONY : intersection/intersection_reflect.c.o
 
 intersection/intersection_reflect.i: intersection/intersection_reflect.c.i
@@ -327,7 +327,7 @@ intersection/intersection_reflect.i: intersection/intersection_reflect.c.i
 
 # target to preprocess a source file
 intersection/intersection_reflect.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.i
 .PHONY : intersection/intersection_reflect.c.i
 
 intersection/intersection_reflect.s: intersection/intersection_reflect.c.s
@@ -336,7 +336,7 @@ intersection/intersection_reflect.s: intersection/intersection_reflect.c.s
 
 # target to generate assembly for a file
 intersection/intersection_reflect.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_reflect.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.s
 .PHONY : intersection/intersection_reflect.c.s
 
 intersection/intersection_refract.o: intersection/intersection_refract.c.o
@@ -345,7 +345,7 @@ intersection/intersection_refract.o: intersection/intersection_refract.c.o
 
 # target to build an object file
 intersection/intersection_refract.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o
 .PHONY : intersection/intersection_refract.c.o
 
 intersection/intersection_refract.i: intersection/intersection_refract.c.i
@@ -354,7 +354,7 @@ intersection/intersection_refract.i: intersection/intersection_refract.c.i
 
 # target to preprocess a source file
 intersection/intersection_refract.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.i
 .PHONY : intersection/intersection_refract.c.i
 
 intersection/intersection_refract.s: intersection/intersection_refract.c.s
@@ -363,7 +363,7 @@ intersection/intersection_refract.s: intersection/intersection_refract.c.s
 
 # target to generate assembly for a file
 intersection/intersection_refract.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/intersection/intersection_refract.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s
 .PHONY : intersection/intersection_refract.c.s
 
 main.o: main.c.o
@@ -372,7 +372,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -381,7 +381,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -390,7 +390,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/main.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.s
 .PHONY : main.c.s
 
 ray/ray_calculate.o: ray/ray_calculate.c.o
@@ -399,7 +399,7 @@ ray/ray_calculate.o: ray/ray_calculate.c.o
 
 # target to build an object file
 ray/ray_calculate.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o
 .PHONY : ray/ray_calculate.c.o
 
 ray/ray_calculate.i: ray/ray_calculate.c.i
@@ -408,7 +408,7 @@ ray/ray_calculate.i: ray/ray_calculate.c.i
 
 # target to preprocess a source file
 ray/ray_calculate.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.i
 .PHONY : ray/ray_calculate.c.i
 
 ray/ray_calculate.s: ray/ray_calculate.c.s
@@ -417,7 +417,7 @@ ray/ray_calculate.s: ray/ray_calculate.c.s
 
 # target to generate assembly for a file
 ray/ray_calculate.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/ray/ray_calculate.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.s
 .PHONY : ray/ray_calculate.c.s
 
 renderer/renderer_build_ray.o: renderer/renderer_build_ray.c.o
@@ -426,7 +426,7 @@ renderer/renderer_build_ray.o: renderer/renderer_build_ray.c.o
 
 # target to build an object file
 renderer/renderer_build_ray.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o
 .PHONY : renderer/renderer_build_ray.c.o
 
 renderer/renderer_build_ray.i: renderer/renderer_build_ray.c.i
@@ -435,7 +435,7 @@ renderer/renderer_build_ray.i: renderer/renderer_build_ray.c.i
 
 # target to preprocess a source file
 renderer/renderer_build_ray.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.i
 .PHONY : renderer/renderer_build_ray.c.i
 
 renderer/renderer_build_ray.s: renderer/renderer_build_ray.c.s
@@ -444,7 +444,7 @@ renderer/renderer_build_ray.s: renderer/renderer_build_ray.c.s
 
 # target to generate assembly for a file
 renderer/renderer_build_ray.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_build_ray.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.s
 .PHONY : renderer/renderer_build_ray.c.s
 
 renderer/renderer_check_interval.o: renderer/renderer_check_interval.c.o
@@ -453,7 +453,7 @@ renderer/renderer_check_interval.o: renderer/renderer_check_interval.c.o
 
 # target to build an object file
 renderer/renderer_check_interval.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o
 .PHONY : renderer/renderer_check_interval.c.o
 
 renderer/renderer_check_interval.i: renderer/renderer_check_interval.c.i
@@ -462,7 +462,7 @@ renderer/renderer_check_interval.i: renderer/renderer_check_interval.c.i
 
 # target to preprocess a source file
 renderer/renderer_check_interval.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.i
 .PHONY : renderer/renderer_check_interval.c.i
 
 renderer/renderer_check_interval.s: renderer/renderer_check_interval.c.s
@@ -471,7 +471,7 @@ renderer/renderer_check_interval.s: renderer/renderer_check_interval.c.s
 
 # target to generate assembly for a file
 renderer/renderer_check_interval.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_check_interval.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.s
 .PHONY : renderer/renderer_check_interval.c.s
 
 renderer/renderer_delete.o: renderer/renderer_delete.c.o
@@ -480,7 +480,7 @@ renderer/renderer_delete.o: renderer/renderer_delete.c.o
 
 # target to build an object file
 renderer/renderer_delete.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o
 .PHONY : renderer/renderer_delete.c.o
 
 renderer/renderer_delete.i: renderer/renderer_delete.c.i
@@ -489,7 +489,7 @@ renderer/renderer_delete.i: renderer/renderer_delete.c.i
 
 # target to preprocess a source file
 renderer/renderer_delete.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.i
 .PHONY : renderer/renderer_delete.c.i
 
 renderer/renderer_delete.s: renderer/renderer_delete.c.s
@@ -498,7 +498,7 @@ renderer/renderer_delete.s: renderer/renderer_delete.c.s
 
 # target to generate assembly for a file
 renderer/renderer_delete.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_delete.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.s
 .PHONY : renderer/renderer_delete.c.s
 
 renderer/renderer_loop.o: renderer/renderer_loop.c.o
@@ -507,7 +507,7 @@ renderer/renderer_loop.o: renderer/renderer_loop.c.o
 
 # target to build an object file
 renderer/renderer_loop.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o
 .PHONY : renderer/renderer_loop.c.o
 
 renderer/renderer_loop.i: renderer/renderer_loop.c.i
@@ -516,7 +516,7 @@ renderer/renderer_loop.i: renderer/renderer_loop.c.i
 
 # target to preprocess a source file
 renderer/renderer_loop.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.i
 .PHONY : renderer/renderer_loop.c.i
 
 renderer/renderer_loop.s: renderer/renderer_loop.c.s
@@ -525,7 +525,7 @@ renderer/renderer_loop.s: renderer/renderer_loop.c.s
 
 # target to generate assembly for a file
 renderer/renderer_loop.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_loop.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.s
 .PHONY : renderer/renderer_loop.c.s
 
 renderer/renderer_new.o: renderer/renderer_new.c.o
@@ -534,7 +534,7 @@ renderer/renderer_new.o: renderer/renderer_new.c.o
 
 # target to build an object file
 renderer/renderer_new.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o
 .PHONY : renderer/renderer_new.c.o
 
 renderer/renderer_new.i: renderer/renderer_new.c.i
@@ -543,7 +543,7 @@ renderer/renderer_new.i: renderer/renderer_new.c.i
 
 # target to preprocess a source file
 renderer/renderer_new.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.i
 .PHONY : renderer/renderer_new.c.i
 
 renderer/renderer_new.s: renderer/renderer_new.c.s
@@ -552,7 +552,7 @@ renderer/renderer_new.s: renderer/renderer_new.c.s
 
 # target to generate assembly for a file
 renderer/renderer_new.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_new.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.s
 .PHONY : renderer/renderer_new.c.s
 
 renderer/renderer_radiance.o: renderer/renderer_radiance.c.o
@@ -561,7 +561,7 @@ renderer/renderer_radiance.o: renderer/renderer_radiance.c.o
 
 # target to build an object file
 renderer/renderer_radiance.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o
 .PHONY : renderer/renderer_radiance.c.o
 
 renderer/renderer_radiance.i: renderer/renderer_radiance.c.i
@@ -570,7 +570,7 @@ renderer/renderer_radiance.i: renderer/renderer_radiance.c.i
 
 # target to preprocess a source file
 renderer/renderer_radiance.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.i
 .PHONY : renderer/renderer_radiance.c.i
 
 renderer/renderer_radiance.s: renderer/renderer_radiance.c.s
@@ -579,7 +579,7 @@ renderer/renderer_radiance.s: renderer/renderer_radiance.c.s
 
 # target to generate assembly for a file
 renderer/renderer_radiance.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.s
 .PHONY : renderer/renderer_radiance.c.s
 
 renderer/renderer_radiance_light.o: renderer/renderer_radiance_light.c.o
@@ -588,7 +588,7 @@ renderer/renderer_radiance_light.o: renderer/renderer_radiance_light.c.o
 
 # target to build an object file
 renderer/renderer_radiance_light.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o
 .PHONY : renderer/renderer_radiance_light.c.o
 
 renderer/renderer_radiance_light.i: renderer/renderer_radiance_light.c.i
@@ -597,7 +597,7 @@ renderer/renderer_radiance_light.i: renderer/renderer_radiance_light.c.i
 
 # target to preprocess a source file
 renderer/renderer_radiance_light.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.i
 .PHONY : renderer/renderer_radiance_light.c.i
 
 renderer/renderer_radiance_light.s: renderer/renderer_radiance_light.c.s
@@ -606,7 +606,7 @@ renderer/renderer_radiance_light.s: renderer/renderer_radiance_light.c.s
 
 # target to generate assembly for a file
 renderer/renderer_radiance_light.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_radiance_light.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.s
 .PHONY : renderer/renderer_radiance_light.c.s
 
 renderer/renderer_update_frame.o: renderer/renderer_update_frame.c.o
@@ -615,7 +615,7 @@ renderer/renderer_update_frame.o: renderer/renderer_update_frame.c.o
 
 # target to build an object file
 renderer/renderer_update_frame.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o
 .PHONY : renderer/renderer_update_frame.c.o
 
 renderer/renderer_update_frame.i: renderer/renderer_update_frame.c.i
@@ -624,7 +624,7 @@ renderer/renderer_update_frame.i: renderer/renderer_update_frame.c.i
 
 # target to preprocess a source file
 renderer/renderer_update_frame.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.i
 .PHONY : renderer/renderer_update_frame.c.i
 
 renderer/renderer_update_frame.s: renderer/renderer_update_frame.c.s
@@ -633,7 +633,7 @@ renderer/renderer_update_frame.s: renderer/renderer_update_frame.c.s
 
 # target to generate assembly for a file
 renderer/renderer_update_frame.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_update_frame.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.s
 .PHONY : renderer/renderer_update_frame.c.s
 
 renderer/renderer_write_radience.o: renderer/renderer_write_radience.c.o
@@ -642,7 +642,7 @@ renderer/renderer_write_radience.o: renderer/renderer_write_radience.c.o
 
 # target to build an object file
 renderer/renderer_write_radience.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o
 .PHONY : renderer/renderer_write_radience.c.o
 
 renderer/renderer_write_radience.i: renderer/renderer_write_radience.c.i
@@ -651,7 +651,7 @@ renderer/renderer_write_radience.i: renderer/renderer_write_radience.c.i
 
 # target to preprocess a source file
 renderer/renderer_write_radience.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.i
 .PHONY : renderer/renderer_write_radience.c.i
 
 renderer/renderer_write_radience.s: renderer/renderer_write_radience.c.s
@@ -660,35 +660,89 @@ renderer/renderer_write_radience.s: renderer/renderer_write_radience.c.s
 
 # target to generate assembly for a file
 renderer/renderer_write_radience.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/renderer/renderer_write_radience.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.s
 .PHONY : renderer/renderer_write_radience.c.s
 
-sampler/sampler.o: sampler/sampler.c.o
+sampler/sampler_cosine.o: sampler/sampler_cosine.c.o
 
-.PHONY : sampler/sampler.o
+.PHONY : sampler/sampler_cosine.o
 
 # target to build an object file
-sampler/sampler.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.o
-.PHONY : sampler/sampler.c.o
+sampler/sampler_cosine.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o
+.PHONY : sampler/sampler_cosine.c.o
 
-sampler/sampler.i: sampler/sampler.c.i
+sampler/sampler_cosine.i: sampler/sampler_cosine.c.i
 
-.PHONY : sampler/sampler.i
+.PHONY : sampler/sampler_cosine.i
 
 # target to preprocess a source file
-sampler/sampler.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.i
-.PHONY : sampler/sampler.c.i
+sampler/sampler_cosine.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.i
+.PHONY : sampler/sampler_cosine.c.i
 
-sampler/sampler.s: sampler/sampler.c.s
+sampler/sampler_cosine.s: sampler/sampler_cosine.c.s
 
-.PHONY : sampler/sampler.s
+.PHONY : sampler/sampler_cosine.s
 
 # target to generate assembly for a file
-sampler/sampler.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sampler/sampler.c.s
-.PHONY : sampler/sampler.c.s
+sampler/sampler_cosine.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.s
+.PHONY : sampler/sampler_cosine.c.s
+
+sampler/sampler_transform.o: sampler/sampler_transform.c.o
+
+.PHONY : sampler/sampler_transform.o
+
+# target to build an object file
+sampler/sampler_transform.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o
+.PHONY : sampler/sampler_transform.c.o
+
+sampler/sampler_transform.i: sampler/sampler_transform.c.i
+
+.PHONY : sampler/sampler_transform.i
+
+# target to preprocess a source file
+sampler/sampler_transform.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.i
+.PHONY : sampler/sampler_transform.c.i
+
+sampler/sampler_transform.s: sampler/sampler_transform.c.s
+
+.PHONY : sampler/sampler_transform.s
+
+# target to generate assembly for a file
+sampler/sampler_transform.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.s
+.PHONY : sampler/sampler_transform.c.s
+
+sampler/sampler_uniform.o: sampler/sampler_uniform.c.o
+
+.PHONY : sampler/sampler_uniform.o
+
+# target to build an object file
+sampler/sampler_uniform.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o
+.PHONY : sampler/sampler_uniform.c.o
+
+sampler/sampler_uniform.i: sampler/sampler_uniform.c.i
+
+.PHONY : sampler/sampler_uniform.i
+
+# target to preprocess a source file
+sampler/sampler_uniform.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.i
+.PHONY : sampler/sampler_uniform.c.i
+
+sampler/sampler_uniform.s: sampler/sampler_uniform.c.s
+
+.PHONY : sampler/sampler_uniform.s
+
+# target to generate assembly for a file
+sampler/sampler_uniform.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.s
+.PHONY : sampler/sampler_uniform.c.s
 
 scene/scene.o: scene/scene.c.o
 
@@ -696,7 +750,7 @@ scene/scene.o: scene/scene.c.o
 
 # target to build an object file
 scene/scene.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/scene/scene.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/scene/scene.c.o
 .PHONY : scene/scene.c.o
 
 scene/scene.i: scene/scene.c.i
@@ -705,7 +759,7 @@ scene/scene.i: scene/scene.c.i
 
 # target to preprocess a source file
 scene/scene.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/scene/scene.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/scene/scene.c.i
 .PHONY : scene/scene.c.i
 
 scene/scene.s: scene/scene.c.s
@@ -714,7 +768,7 @@ scene/scene.s: scene/scene.c.s
 
 # target to generate assembly for a file
 scene/scene.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/scene/scene.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/scene/scene.c.s
 .PHONY : scene/scene.c.s
 
 sdl_ctrl/cdl_ctrl_new.o: sdl_ctrl/cdl_ctrl_new.c.o
@@ -723,7 +777,7 @@ sdl_ctrl/cdl_ctrl_new.o: sdl_ctrl/cdl_ctrl_new.c.o
 
 # target to build an object file
 sdl_ctrl/cdl_ctrl_new.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
 .PHONY : sdl_ctrl/cdl_ctrl_new.c.o
 
 sdl_ctrl/cdl_ctrl_new.i: sdl_ctrl/cdl_ctrl_new.c.i
@@ -732,7 +786,7 @@ sdl_ctrl/cdl_ctrl_new.i: sdl_ctrl/cdl_ctrl_new.c.i
 
 # target to preprocess a source file
 sdl_ctrl/cdl_ctrl_new.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.i
 .PHONY : sdl_ctrl/cdl_ctrl_new.c.i
 
 sdl_ctrl/cdl_ctrl_new.s: sdl_ctrl/cdl_ctrl_new.c.s
@@ -741,7 +795,7 @@ sdl_ctrl/cdl_ctrl_new.s: sdl_ctrl/cdl_ctrl_new.c.s
 
 # target to generate assembly for a file
 sdl_ctrl/cdl_ctrl_new.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.s
 .PHONY : sdl_ctrl/cdl_ctrl_new.c.s
 
 sdl_ctrl/sdl_ctrl_delete.o: sdl_ctrl/sdl_ctrl_delete.c.o
@@ -750,7 +804,7 @@ sdl_ctrl/sdl_ctrl_delete.o: sdl_ctrl/sdl_ctrl_delete.c.o
 
 # target to build an object file
 sdl_ctrl/sdl_ctrl_delete.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
 .PHONY : sdl_ctrl/sdl_ctrl_delete.c.o
 
 sdl_ctrl/sdl_ctrl_delete.i: sdl_ctrl/sdl_ctrl_delete.c.i
@@ -759,7 +813,7 @@ sdl_ctrl/sdl_ctrl_delete.i: sdl_ctrl/sdl_ctrl_delete.c.i
 
 # target to preprocess a source file
 sdl_ctrl/sdl_ctrl_delete.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.i
 .PHONY : sdl_ctrl/sdl_ctrl_delete.c.i
 
 sdl_ctrl/sdl_ctrl_delete.s: sdl_ctrl/sdl_ctrl_delete.c.s
@@ -768,7 +822,7 @@ sdl_ctrl/sdl_ctrl_delete.s: sdl_ctrl/sdl_ctrl_delete.c.s
 
 # target to generate assembly for a file
 sdl_ctrl/sdl_ctrl_delete.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.s
 .PHONY : sdl_ctrl/sdl_ctrl_delete.c.s
 
 sdl_ctrl/sdl_ctrl_error.o: sdl_ctrl/sdl_ctrl_error.c.o
@@ -777,7 +831,7 @@ sdl_ctrl/sdl_ctrl_error.o: sdl_ctrl/sdl_ctrl_error.c.o
 
 # target to build an object file
 sdl_ctrl/sdl_ctrl_error.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
 .PHONY : sdl_ctrl/sdl_ctrl_error.c.o
 
 sdl_ctrl/sdl_ctrl_error.i: sdl_ctrl/sdl_ctrl_error.c.i
@@ -786,7 +840,7 @@ sdl_ctrl/sdl_ctrl_error.i: sdl_ctrl/sdl_ctrl_error.c.i
 
 # target to preprocess a source file
 sdl_ctrl/sdl_ctrl_error.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.i
 .PHONY : sdl_ctrl/sdl_ctrl_error.c.i
 
 sdl_ctrl/sdl_ctrl_error.s: sdl_ctrl/sdl_ctrl_error.c.s
@@ -795,7 +849,7 @@ sdl_ctrl/sdl_ctrl_error.s: sdl_ctrl/sdl_ctrl_error.c.s
 
 # target to generate assembly for a file
 sdl_ctrl/sdl_ctrl_error.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.s
 .PHONY : sdl_ctrl/sdl_ctrl_error.c.s
 
 sdl_ctrl/sdl_ctrl_init.o: sdl_ctrl/sdl_ctrl_init.c.o
@@ -804,7 +858,7 @@ sdl_ctrl/sdl_ctrl_init.o: sdl_ctrl/sdl_ctrl_init.c.o
 
 # target to build an object file
 sdl_ctrl/sdl_ctrl_init.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
 .PHONY : sdl_ctrl/sdl_ctrl_init.c.o
 
 sdl_ctrl/sdl_ctrl_init.i: sdl_ctrl/sdl_ctrl_init.c.i
@@ -813,7 +867,7 @@ sdl_ctrl/sdl_ctrl_init.i: sdl_ctrl/sdl_ctrl_init.c.i
 
 # target to preprocess a source file
 sdl_ctrl/sdl_ctrl_init.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.i
 .PHONY : sdl_ctrl/sdl_ctrl_init.c.i
 
 sdl_ctrl/sdl_ctrl_init.s: sdl_ctrl/sdl_ctrl_init.c.s
@@ -822,7 +876,7 @@ sdl_ctrl/sdl_ctrl_init.s: sdl_ctrl/sdl_ctrl_init.c.s
 
 # target to generate assembly for a file
 sdl_ctrl/sdl_ctrl_init.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.s
 .PHONY : sdl_ctrl/sdl_ctrl_init.c.s
 
 sdl_ctrl/sdl_ctrl_upload.o: sdl_ctrl/sdl_ctrl_upload.c.o
@@ -831,7 +885,7 @@ sdl_ctrl/sdl_ctrl_upload.o: sdl_ctrl/sdl_ctrl_upload.c.o
 
 # target to build an object file
 sdl_ctrl/sdl_ctrl_upload.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o
 .PHONY : sdl_ctrl/sdl_ctrl_upload.c.o
 
 sdl_ctrl/sdl_ctrl_upload.i: sdl_ctrl/sdl_ctrl_upload.c.i
@@ -840,7 +894,7 @@ sdl_ctrl/sdl_ctrl_upload.i: sdl_ctrl/sdl_ctrl_upload.c.i
 
 # target to preprocess a source file
 sdl_ctrl/sdl_ctrl_upload.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.i
 .PHONY : sdl_ctrl/sdl_ctrl_upload.c.i
 
 sdl_ctrl/sdl_ctrl_upload.s: sdl_ctrl/sdl_ctrl_upload.c.s
@@ -849,7 +903,7 @@ sdl_ctrl/sdl_ctrl_upload.s: sdl_ctrl/sdl_ctrl_upload.c.s
 
 # target to generate assembly for a file
 sdl_ctrl/sdl_ctrl_upload.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.s
 .PHONY : sdl_ctrl/sdl_ctrl_upload.c.s
 
 shape/shape.o: shape/shape.c.o
@@ -858,7 +912,7 @@ shape/shape.o: shape/shape.c.o
 
 # target to build an object file
 shape/shape.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape.c.o
 .PHONY : shape/shape.c.o
 
 shape/shape.i: shape/shape.c.i
@@ -867,7 +921,7 @@ shape/shape.i: shape/shape.c.i
 
 # target to preprocess a source file
 shape/shape.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape.c.i
 .PHONY : shape/shape.c.i
 
 shape/shape.s: shape/shape.c.s
@@ -876,7 +930,7 @@ shape/shape.s: shape/shape.c.s
 
 # target to generate assembly for a file
 shape/shape.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape.c.s
 .PHONY : shape/shape.c.s
 
 shape/shape_plane.o: shape/shape_plane.c.o
@@ -885,7 +939,7 @@ shape/shape_plane.o: shape/shape_plane.c.o
 
 # target to build an object file
 shape/shape_plane.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_plane.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o
 .PHONY : shape/shape_plane.c.o
 
 shape/shape_plane.i: shape/shape_plane.c.i
@@ -894,7 +948,7 @@ shape/shape_plane.i: shape/shape_plane.c.i
 
 # target to preprocess a source file
 shape/shape_plane.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_plane.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_plane.c.i
 .PHONY : shape/shape_plane.c.i
 
 shape/shape_plane.s: shape/shape_plane.c.s
@@ -903,7 +957,7 @@ shape/shape_plane.s: shape/shape_plane.c.s
 
 # target to generate assembly for a file
 shape/shape_plane.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_plane.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_plane.c.s
 .PHONY : shape/shape_plane.c.s
 
 shape/shape_sphere.o: shape/shape_sphere.c.o
@@ -912,7 +966,7 @@ shape/shape_sphere.o: shape/shape_sphere.c.o
 
 # target to build an object file
 shape/shape_sphere.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o
 .PHONY : shape/shape_sphere.c.o
 
 shape/shape_sphere.i: shape/shape_sphere.c.i
@@ -921,7 +975,7 @@ shape/shape_sphere.i: shape/shape_sphere.c.i
 
 # target to preprocess a source file
 shape/shape_sphere.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.i
 .PHONY : shape/shape_sphere.c.i
 
 shape/shape_sphere.s: shape/shape_sphere.c.s
@@ -930,7 +984,7 @@ shape/shape_sphere.s: shape/shape_sphere.c.s
 
 # target to generate assembly for a file
 shape/shape_sphere.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/shape/shape_sphere.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
 vector3/vector3_add.o: vector3/vector3_add.c.o
@@ -939,7 +993,7 @@ vector3/vector3_add.o: vector3/vector3_add.c.o
 
 # target to build an object file
 vector3/vector3_add.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o
 .PHONY : vector3/vector3_add.c.o
 
 vector3/vector3_add.i: vector3/vector3_add.c.i
@@ -948,7 +1002,7 @@ vector3/vector3_add.i: vector3/vector3_add.c.i
 
 # target to preprocess a source file
 vector3/vector3_add.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.i
 .PHONY : vector3/vector3_add.c.i
 
 vector3/vector3_add.s: vector3/vector3_add.c.s
@@ -957,7 +1011,7 @@ vector3/vector3_add.s: vector3/vector3_add.c.s
 
 # target to generate assembly for a file
 vector3/vector3_add.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_add.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.s
 .PHONY : vector3/vector3_add.c.s
 
 vector3/vector3_component_mul.o: vector3/vector3_component_mul.c.o
@@ -966,7 +1020,7 @@ vector3/vector3_component_mul.o: vector3/vector3_component_mul.c.o
 
 # target to build an object file
 vector3/vector3_component_mul.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_component_mul.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o
 .PHONY : vector3/vector3_component_mul.c.o
 
 vector3/vector3_component_mul.i: vector3/vector3_component_mul.c.i
@@ -975,7 +1029,7 @@ vector3/vector3_component_mul.i: vector3/vector3_component_mul.c.i
 
 # target to preprocess a source file
 vector3/vector3_component_mul.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_component_mul.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.i
 .PHONY : vector3/vector3_component_mul.c.i
 
 vector3/vector3_component_mul.s: vector3/vector3_component_mul.c.s
@@ -984,7 +1038,7 @@ vector3/vector3_component_mul.s: vector3/vector3_component_mul.c.s
 
 # target to generate assembly for a file
 vector3/vector3_component_mul.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_component_mul.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.s
 .PHONY : vector3/vector3_component_mul.c.s
 
 vector3/vector3_cross.o: vector3/vector3_cross.c.o
@@ -993,7 +1047,7 @@ vector3/vector3_cross.o: vector3/vector3_cross.c.o
 
 # target to build an object file
 vector3/vector3_cross.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.o
 .PHONY : vector3/vector3_cross.c.o
 
 vector3/vector3_cross.i: vector3/vector3_cross.c.i
@@ -1002,7 +1056,7 @@ vector3/vector3_cross.i: vector3/vector3_cross.c.i
 
 # target to preprocess a source file
 vector3/vector3_cross.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.i
 .PHONY : vector3/vector3_cross.c.i
 
 vector3/vector3_cross.s: vector3/vector3_cross.c.s
@@ -1011,7 +1065,7 @@ vector3/vector3_cross.s: vector3/vector3_cross.c.s
 
 # target to generate assembly for a file
 vector3/vector3_cross.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_cross.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.s
 .PHONY : vector3/vector3_cross.c.s
 
 vector3/vector3_div.o: vector3/vector3_div.c.o
@@ -1020,7 +1074,7 @@ vector3/vector3_div.o: vector3/vector3_div.c.o
 
 # target to build an object file
 vector3/vector3_div.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_div.c.o
 .PHONY : vector3/vector3_div.c.o
 
 vector3/vector3_div.i: vector3/vector3_div.c.i
@@ -1029,7 +1083,7 @@ vector3/vector3_div.i: vector3/vector3_div.c.i
 
 # target to preprocess a source file
 vector3/vector3_div.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_div.c.i
 .PHONY : vector3/vector3_div.c.i
 
 vector3/vector3_div.s: vector3/vector3_div.c.s
@@ -1038,7 +1092,7 @@ vector3/vector3_div.s: vector3/vector3_div.c.s
 
 # target to generate assembly for a file
 vector3/vector3_div.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_div.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_div.c.s
 .PHONY : vector3/vector3_div.c.s
 
 vector3/vector3_dot.o: vector3/vector3_dot.c.o
@@ -1047,7 +1101,7 @@ vector3/vector3_dot.o: vector3/vector3_dot.c.o
 
 # target to build an object file
 vector3/vector3_dot.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_dot.c.o
 .PHONY : vector3/vector3_dot.c.o
 
 vector3/vector3_dot.i: vector3/vector3_dot.c.i
@@ -1056,7 +1110,7 @@ vector3/vector3_dot.i: vector3/vector3_dot.c.i
 
 # target to preprocess a source file
 vector3/vector3_dot.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_dot.c.i
 .PHONY : vector3/vector3_dot.c.i
 
 vector3/vector3_dot.s: vector3/vector3_dot.c.s
@@ -1065,7 +1119,7 @@ vector3/vector3_dot.s: vector3/vector3_dot.c.s
 
 # target to generate assembly for a file
 vector3/vector3_dot.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_dot.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_dot.c.s
 .PHONY : vector3/vector3_dot.c.s
 
 vector3/vector3_length.o: vector3/vector3_length.c.o
@@ -1074,7 +1128,7 @@ vector3/vector3_length.o: vector3/vector3_length.c.o
 
 # target to build an object file
 vector3/vector3_length.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_length.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_length.c.o
 .PHONY : vector3/vector3_length.c.o
 
 vector3/vector3_length.i: vector3/vector3_length.c.i
@@ -1083,7 +1137,7 @@ vector3/vector3_length.i: vector3/vector3_length.c.i
 
 # target to preprocess a source file
 vector3/vector3_length.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_length.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_length.c.i
 .PHONY : vector3/vector3_length.c.i
 
 vector3/vector3_length.s: vector3/vector3_length.c.s
@@ -1092,7 +1146,7 @@ vector3/vector3_length.s: vector3/vector3_length.c.s
 
 # target to generate assembly for a file
 vector3/vector3_length.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_length.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_length.c.s
 .PHONY : vector3/vector3_length.c.s
 
 vector3/vector3_max.o: vector3/vector3_max.c.o
@@ -1101,7 +1155,7 @@ vector3/vector3_max.o: vector3/vector3_max.c.o
 
 # target to build an object file
 vector3/vector3_max.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_max.c.o
 .PHONY : vector3/vector3_max.c.o
 
 vector3/vector3_max.i: vector3/vector3_max.c.i
@@ -1110,7 +1164,7 @@ vector3/vector3_max.i: vector3/vector3_max.c.i
 
 # target to preprocess a source file
 vector3/vector3_max.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_max.c.i
 .PHONY : vector3/vector3_max.c.i
 
 vector3/vector3_max.s: vector3/vector3_max.c.s
@@ -1119,7 +1173,7 @@ vector3/vector3_max.s: vector3/vector3_max.c.s
 
 # target to generate assembly for a file
 vector3/vector3_max.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_max.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_max.c.s
 .PHONY : vector3/vector3_max.c.s
 
 vector3/vector3_min.o: vector3/vector3_min.c.o
@@ -1128,7 +1182,7 @@ vector3/vector3_min.o: vector3/vector3_min.c.o
 
 # target to build an object file
 vector3/vector3_min.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_min.c.o
 .PHONY : vector3/vector3_min.c.o
 
 vector3/vector3_min.i: vector3/vector3_min.c.i
@@ -1137,7 +1191,7 @@ vector3/vector3_min.i: vector3/vector3_min.c.i
 
 # target to preprocess a source file
 vector3/vector3_min.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_min.c.i
 .PHONY : vector3/vector3_min.c.i
 
 vector3/vector3_min.s: vector3/vector3_min.c.s
@@ -1146,7 +1200,7 @@ vector3/vector3_min.s: vector3/vector3_min.c.s
 
 # target to generate assembly for a file
 vector3/vector3_min.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_min.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_min.c.s
 .PHONY : vector3/vector3_min.c.s
 
 vector3/vector3_mul.o: vector3/vector3_mul.c.o
@@ -1155,7 +1209,7 @@ vector3/vector3_mul.o: vector3/vector3_mul.c.o
 
 # target to build an object file
 vector3/vector3_mul.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_mul.c.o
 .PHONY : vector3/vector3_mul.c.o
 
 vector3/vector3_mul.i: vector3/vector3_mul.c.i
@@ -1164,7 +1218,7 @@ vector3/vector3_mul.i: vector3/vector3_mul.c.i
 
 # target to preprocess a source file
 vector3/vector3_mul.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_mul.c.i
 .PHONY : vector3/vector3_mul.c.i
 
 vector3/vector3_mul.s: vector3/vector3_mul.c.s
@@ -1173,7 +1227,7 @@ vector3/vector3_mul.s: vector3/vector3_mul.c.s
 
 # target to generate assembly for a file
 vector3/vector3_mul.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_mul.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_mul.c.s
 .PHONY : vector3/vector3_mul.c.s
 
 vector3/vector3_normal.o: vector3/vector3_normal.c.o
@@ -1182,7 +1236,7 @@ vector3/vector3_normal.o: vector3/vector3_normal.c.o
 
 # target to build an object file
 vector3/vector3_normal.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_normal.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_normal.c.o
 .PHONY : vector3/vector3_normal.c.o
 
 vector3/vector3_normal.i: vector3/vector3_normal.c.i
@@ -1191,7 +1245,7 @@ vector3/vector3_normal.i: vector3/vector3_normal.c.i
 
 # target to preprocess a source file
 vector3/vector3_normal.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_normal.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_normal.c.i
 .PHONY : vector3/vector3_normal.c.i
 
 vector3/vector3_normal.s: vector3/vector3_normal.c.s
@@ -1200,7 +1254,7 @@ vector3/vector3_normal.s: vector3/vector3_normal.c.s
 
 # target to generate assembly for a file
 vector3/vector3_normal.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_normal.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_normal.c.s
 .PHONY : vector3/vector3_normal.c.s
 
 vector3/vector3_sub.o: vector3/vector3_sub.c.o
@@ -1209,7 +1263,7 @@ vector3/vector3_sub.o: vector3/vector3_sub.c.o
 
 # target to build an object file
 vector3/vector3_sub.c.o:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_sub.c.o
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.o
 .PHONY : vector3/vector3_sub.c.o
 
 vector3/vector3_sub.i: vector3/vector3_sub.c.i
@@ -1218,7 +1272,7 @@ vector3/vector3_sub.i: vector3/vector3_sub.c.i
 
 # target to preprocess a source file
 vector3/vector3_sub.c.i:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_sub.c.i
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.i
 .PHONY : vector3/vector3_sub.c.i
 
 vector3/vector3_sub.s: vector3/vector3_sub.c.s
@@ -1227,7 +1281,7 @@ vector3/vector3_sub.s: vector3/vector3_sub.c.s
 
 # target to generate assembly for a file
 vector3/vector3_sub.c.s:
-	$(MAKE) -f CMakeFiles/rp_sdl.dir/build.make CMakeFiles/rp_sdl.dir/vector3/vector3_sub.c.s
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.s
 .PHONY : vector3/vector3_sub.c.s
 
 # Help Target
@@ -1238,7 +1292,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... rp_sdl"
+	@echo "... pt_sdl"
 	@echo "... camera/camera_build_ray.o"
 	@echo "... camera/camera_build_ray.i"
 	@echo "... camera/camera_build_ray.s"
@@ -1299,9 +1353,15 @@ help:
 	@echo "... renderer/renderer_write_radience.o"
 	@echo "... renderer/renderer_write_radience.i"
 	@echo "... renderer/renderer_write_radience.s"
-	@echo "... sampler/sampler.o"
-	@echo "... sampler/sampler.i"
-	@echo "... sampler/sampler.s"
+	@echo "... sampler/sampler_cosine.o"
+	@echo "... sampler/sampler_cosine.i"
+	@echo "... sampler/sampler_cosine.s"
+	@echo "... sampler/sampler_transform.o"
+	@echo "... sampler/sampler_transform.i"
+	@echo "... sampler/sampler_transform.s"
+	@echo "... sampler/sampler_uniform.o"
+	@echo "... sampler/sampler_uniform.i"
+	@echo "... sampler/sampler_uniform.s"
 	@echo "... scene/scene.o"
 	@echo "... scene/scene.i"
 	@echo "... scene/scene.s"
