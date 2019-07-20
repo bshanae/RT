@@ -1,38 +1,30 @@
-#ifndef CAMERA_H
-# define CAMERA_H
+#ifndef RP_CAMERA_H
+# define RP_CAMERA_H
 
+# include "options.h"
+
+# include "libft_standart.h"
 # include "vector3.h"
 # include "ray.h"
+# include "filter.h"
 
-typedef struct			s_camera
+# define APERTURE_SIZE	7.
+# define FOCAL_LENGTH	145.
+
+typedef struct 			s_camera
 {
 	t_vector3			position;
-	const float	direction_length;
-	t_vector3			direction;
-	t_vector3			axis_x;
-	t_vector3			axis_y;
-	t_vector3			axis_z;
-	t_vector3			vp_axis_x;
-	t_vector3			vp_axis_y;
-	t_vector3       	angles;
+	t_vector3			forward;
+	t_vector3			up;
+	t_vector3			right;
 }						t_camera;
 
-typedef struct			s_camera_cl
-{
-	t_vector3			position;
-	t_vector3			direction;
-	t_vector3			vp_axis_x;
-	t_vector3			vp_axis_y;
-}						t_camera_cl;
+t_camera				*camera_new();
 
-t_camera				*camera_new(float direction_length);
+void					camera_delete(t_camera **camera);
 
-void					camera_delete(t_camera **me);
+void					camera_focus(t_camera *camera, t_ray *ray);
 
-void					camera_build_cl(t_camera *me, t_camera_cl *cl);
-
-t_ray					camera_cast_ray(t_camera *me, t_vector3 *vp_values);
-
-void                	camera_recalculate(t_camera *me);
+t_ray					camera_build_ray(t_camera *camera, INT_REF x, INT_REF y);
 
 #endif

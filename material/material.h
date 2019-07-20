@@ -1,17 +1,14 @@
 #ifndef MATERIAL_H
 # define MATERIAL_H
 
-# include "color.h"
+# include "vector3.h"
 
-typedef struct 		s_material
+typedef struct		s_material
 {
 	t_vector3		color;
-	float 	diffuse;
-	float 	specular;
-	float 	reflect;
-	float 	refract;
+	t_vector3		emission;
+	float 			reflection;
+	float 			refraction;
 }					t_material;
-
-t_material			*material_new(t_vector3 color, float diffuse, float specular, float reflect, float refract);
 
 #endif
