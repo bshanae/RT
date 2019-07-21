@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -366,6 +366,114 @@ intersection/intersection_refract.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s
 .PHONY : intersection/intersection_refract.c.s
 
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.s
+.PHONY : main.c.s
+
+mesh/mesh_delete.o: mesh/mesh_delete.c.o
+
+.PHONY : mesh/mesh_delete.o
+
+# target to build an object file
+mesh/mesh_delete.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o
+.PHONY : mesh/mesh_delete.c.o
+
+mesh/mesh_delete.i: mesh/mesh_delete.c.i
+
+.PHONY : mesh/mesh_delete.i
+
+# target to preprocess a source file
+mesh/mesh_delete.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.i
+.PHONY : mesh/mesh_delete.c.i
+
+mesh/mesh_delete.s: mesh/mesh_delete.c.s
+
+.PHONY : mesh/mesh_delete.s
+
+# target to generate assembly for a file
+mesh/mesh_delete.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.s
+.PHONY : mesh/mesh_delete.c.s
+
+mesh/mesh_intersect.o: mesh/mesh_intersect.c.o
+
+.PHONY : mesh/mesh_intersect.o
+
+# target to build an object file
+mesh/mesh_intersect.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o
+.PHONY : mesh/mesh_intersect.c.o
+
+mesh/mesh_intersect.i: mesh/mesh_intersect.c.i
+
+.PHONY : mesh/mesh_intersect.i
+
+# target to preprocess a source file
+mesh/mesh_intersect.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.i
+.PHONY : mesh/mesh_intersect.c.i
+
+mesh/mesh_intersect.s: mesh/mesh_intersect.c.s
+
+.PHONY : mesh/mesh_intersect.s
+
+# target to generate assembly for a file
+mesh/mesh_intersect.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.s
+.PHONY : mesh/mesh_intersect.c.s
+
+mesh/mesh_new.o: mesh/mesh_new.c.o
+
+.PHONY : mesh/mesh_new.o
+
+# target to build an object file
+mesh/mesh_new.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o
+.PHONY : mesh/mesh_new.c.o
+
+mesh/mesh_new.i: mesh/mesh_new.c.i
+
+.PHONY : mesh/mesh_new.i
+
+# target to preprocess a source file
+mesh/mesh_new.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.i
+.PHONY : mesh/mesh_new.c.i
+
+mesh/mesh_new.s: mesh/mesh_new.c.s
+
+.PHONY : mesh/mesh_new.s
+
+# target to generate assembly for a file
+mesh/mesh_new.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.s
+.PHONY : mesh/mesh_new.c.s
+
 obj_parser/open_file.o: obj_parser/open_file.c.o
 
 .PHONY : obj_parser/open_file.o
@@ -392,33 +500,6 @@ obj_parser/open_file.s: obj_parser/open_file.c.s
 obj_parser/open_file.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s
 .PHONY : obj_parser/open_file.c.s
-
-obj_parser/test.o: obj_parser/test.c.o
-
-.PHONY : obj_parser/test.o
-
-# target to build an object file
-obj_parser/test.c.o:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.o
-.PHONY : obj_parser/test.c.o
-
-obj_parser/test.i: obj_parser/test.c.i
-
-.PHONY : obj_parser/test.i
-
-# target to preprocess a source file
-obj_parser/test.c.i:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.i
-.PHONY : obj_parser/test.c.i
-
-obj_parser/test.s: obj_parser/test.c.s
-
-.PHONY : obj_parser/test.s
-
-# target to generate assembly for a file
-obj_parser/test.c.s:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.s
-.PHONY : obj_parser/test.c.s
 
 ray/ray_calculate.o: ray/ray_calculate.c.o
 
@@ -1374,12 +1455,21 @@ help:
 	@echo "... intersection/intersection_refract.o"
 	@echo "... intersection/intersection_refract.i"
 	@echo "... intersection/intersection_refract.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... mesh/mesh_delete.o"
+	@echo "... mesh/mesh_delete.i"
+	@echo "... mesh/mesh_delete.s"
+	@echo "... mesh/mesh_intersect.o"
+	@echo "... mesh/mesh_intersect.i"
+	@echo "... mesh/mesh_intersect.s"
+	@echo "... mesh/mesh_new.o"
+	@echo "... mesh/mesh_new.i"
+	@echo "... mesh/mesh_new.s"
 	@echo "... obj_parser/open_file.o"
 	@echo "... obj_parser/open_file.i"
 	@echo "... obj_parser/open_file.s"
-	@echo "... obj_parser/test.o"
-	@echo "... obj_parser/test.i"
-	@echo "... obj_parser/test.s"
 	@echo "... ray/ray_calculate.o"
 	@echo "... ray/ray_calculate.i"
 	@echo "... ray/ray_calculate.s"

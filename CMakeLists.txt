@@ -20,6 +20,7 @@ include_directories(
         ./camera
         ./filter
         ./shape
+        ./mesh
         ./light
         ./scene
         ./color
@@ -90,6 +91,11 @@ set(SOURCE_SHAPE
         ./shape/shape_plane.c
         ./shape/shape_triangle.c)
 
+set(SOURCE_MESH mesh/mesh_new.c mesh/mesh_delete.c mesh/mesh_intersect.c)
+
+set(SOURCE_OBJ_PARSER
+        ./obj_parser/open_file.c mesh/mesh.h)
+
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c
         ./intersection/intersection_refract.c)
@@ -100,12 +106,9 @@ set(SOURCE_SAMPLER
         ./sampler/sampler_cosine.c)
 
 set(SOURCE_MAIN
-#        ./main.c
-        ./obj_parser/test.c
+        ./main.c
+#        ./obj_parser/test.c
         )
-
-set(SOURCE_OBJ_PARSER
-        ./obj_parser/open_file.c)
 
 add_executable(pt_sdl
         ${SOURCE_VECTOR}
@@ -117,8 +120,9 @@ add_executable(pt_sdl
         ${SOURCE_COLOR}
         ${SOURCE_SCENE}
         ${SOURCE_SHAPE}
+        ${SOURCE_MESH}
+        ${SOURCE_OBJ_PARSER}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
-        ${SOURCE_OBJ_PARSER}
         ${SOURCE_MAIN})
 

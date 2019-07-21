@@ -10,10 +10,11 @@ int							shape_intersect_triangle(t_shape *shape, t_intersection *intersection)
 	t_vector3				q_v;
 	float					u;
 	float					v;
+	float					t;
 	float					determinant;
 	float					inverse_determinant;
 
-	data = (t_shape_data_triangle *) shape->data;
+	data = (t_shape_data_triangle *)shape->data;
 	ab = vector3_sub_ref(&data->b, &data->a);
 	ac = vector3_sub_ref(&data->c, &data->a);
 
@@ -37,7 +38,11 @@ int							shape_intersect_triangle(t_shape *shape, t_intersection *intersection)
 	if (v < 0 || u + v > 1.)
 		return (0);
 
-	intersection->ray.t = vector3_dot_ref(&ac, &q_v) * inverse_determinant;
+	t = vector3_dot_ref(&ac, &q_v) * inverse_determinant;
+	if (t >= intersection->ray.t)
+		return (0);
+
+	intersection->ray.t = t;
 	intersection->normal = vector3_cross_ref(&ab, &ac);
 	vector3_normalize(&intersection->normal);
 	intersection->material = shape->material;

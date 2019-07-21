@@ -12,6 +12,7 @@
 # define SAMPLES				1
 # define PATH_DEPTH				1
 # define RUSSIAN_DEPTH			2
+# define LIGHT_SAMPLING			0
 # define SRGB					1
 
 # define UPLOAD_INTERVAL		3

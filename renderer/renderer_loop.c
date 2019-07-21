@@ -14,9 +14,24 @@ void				renderer_loop(t_renderer **renderer)
 		else if (sdl->event.type == SDL_KEYDOWN)
 		{
 			if (sdl->event.key.keysym.sym == SDLK_ESCAPE)
+			{
 				sdl->flags.quit = 1;
-			else if (sdl->event.key.keysym.sym == SDLK_RETURN)
-				renderer_update_frame(*renderer);
+				continue ;
+			}
+			else if (sdl->event.key.keysym.sym == SDLK_a)
+				(*renderer)->camera->position.x -= CAMERA_STEP;
+			else if (sdl->event.key.keysym.sym == SDLK_d)
+				(*renderer)->camera->position.x += CAMERA_STEP;
+			else if (sdl->event.key.keysym.sym == SDLK_w)
+				(*renderer)->camera->position.z -= CAMERA_STEP;
+			else if (sdl->event.key.keysym.sym == SDLK_s)
+				(*renderer)->camera->position.z += CAMERA_STEP;
+			else if (sdl->event.key.keysym.sym == SDLK_q)
+				(*renderer)->camera->position.y += CAMERA_STEP;
+			else if (sdl->event.key.keysym.sym == SDLK_e)
+				(*renderer)->camera->position.z -= CAMERA_STEP;
+			renderer_update_frame(*renderer);
+
 		}
 		else if ((*renderer)->sample_number < SAMPLES)
 			renderer_update_frame(*renderer);

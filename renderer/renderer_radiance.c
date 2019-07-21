@@ -41,10 +41,13 @@ void					renderer_radiance(t_renderer *renderer)
 
 			// EXPLICIT LIGHT SAMPLING
 
-			radiance_light = renderer_radiance_light(renderer);
-			vector3_component_mul_eq_ref(&radiance_light, &renderer->intersection.material.color);
-			vector3_component_mul_eq_ref(&radiance_light, &mask);
-			vector3_add_eq_ref(&renderer->radiance, &radiance_light);
+			if (LIGHT_SAMPLING)
+			{
+				radiance_light = renderer_radiance_light(renderer);
+				vector3_component_mul_eq_ref(&radiance_light, &renderer->intersection.material.color);
+				vector3_component_mul_eq_ref(&radiance_light, &mask);
+				vector3_add_eq_ref(&renderer->radiance, &radiance_light);
+			}
 
 			// NEXT STEP
 
