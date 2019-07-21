@@ -616,22 +616,9 @@ CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c -o CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.s
 
-CMakeFiles/pt_sdl.dir/main.c.o: CMakeFiles/pt_sdl.dir/flags.make
-CMakeFiles/pt_sdl.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/pt_sdl.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/main.c.o   -c /Users/vladimir/workspace/21_ray_tracer/main.c
-
-CMakeFiles/pt_sdl.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pt_sdl.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/main.c > CMakeFiles/pt_sdl.dir/main.c.i
-
-CMakeFiles/pt_sdl.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/main.c -o CMakeFiles/pt_sdl.dir/main.c.s
-
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o: ../obj_parser/open_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o   -c /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c
 
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.i: cmake_force
@@ -641,6 +628,19 @@ CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.i: cmake_force
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c -o CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s
+
+CMakeFiles/pt_sdl.dir/obj_parser/test.c.o: CMakeFiles/pt_sdl.dir/flags.make
+CMakeFiles/pt_sdl.dir/obj_parser/test.c.o: ../obj_parser/test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/pt_sdl.dir/obj_parser/test.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/obj_parser/test.c.o   -c /Users/vladimir/workspace/21_ray_tracer/obj_parser/test.c
+
+CMakeFiles/pt_sdl.dir/obj_parser/test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pt_sdl.dir/obj_parser/test.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/obj_parser/test.c > CMakeFiles/pt_sdl.dir/obj_parser/test.c.i
+
+CMakeFiles/pt_sdl.dir/obj_parser/test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/obj_parser/test.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/obj_parser/test.c -o CMakeFiles/pt_sdl.dir/obj_parser/test.c.s
 
 # Object files for target pt_sdl
 pt_sdl_OBJECTS = \
@@ -687,8 +687,8 @@ pt_sdl_OBJECTS = \
 "CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o" \
 "CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o" \
 "CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o" \
-"CMakeFiles/pt_sdl.dir/main.c.o" \
-"CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
+"CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o" \
+"CMakeFiles/pt_sdl.dir/obj_parser/test.c.o"
 
 # External object files for target pt_sdl
 pt_sdl_EXTERNAL_OBJECTS =
@@ -736,8 +736,8 @@ pt_sdl: CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o
-pt_sdl: CMakeFiles/pt_sdl.dir/main.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
+pt_sdl: CMakeFiles/pt_sdl.dir/obj_parser/test.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/build.make
 pt_sdl: CMakeFiles/pt_sdl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking C executable pt_sdl"

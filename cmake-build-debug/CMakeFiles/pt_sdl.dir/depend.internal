@@ -57,79 +57,14 @@ CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
  /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c
-CMakeFiles/pt_sdl.dir/main.c.o
- ../../21_libft/includes/libft_ft_printf.h
- ../../21_libft/includes/libft_standart.h
- ../../21_libft/includes/libft_vector.h
- .././camera/camera.h
- .././color/color.h
- .././color/color_list.h
- .././filter/filter.h
- .././intersection/intersection.h
- .././light/light.h
- .././material/material.h
- .././material/material_list.h
- .././obj_parser/objpar.h
- .././obj_parser/open_file.h
- .././options.h
- .././ray/ray.h
- .././renderer/renderer.h
- .././sampler/sampler.h
- .././scene/scene.h
- .././sdl_ctrl/sdl_ctrl.h
- .././shape/shape.h
- .././shape/shape_list.h
- .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/main.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
  /Users/vladimir/workspace/21_ray_tracer/obj_parser/objpar.h
  /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c
  /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h
+CMakeFiles/pt_sdl.dir/obj_parser/test.c.o
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/objpar.h
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/test.c
 CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/ray/ray.h

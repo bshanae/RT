@@ -141,13 +141,13 @@
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c">
 			<Option target="pt_sdl"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/main.c">
-			<Option target="pt_sdl"/>
-		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c">
 			<Option target="pt_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h">
+			<Option target="pt_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/obj_parser/test.c">
 			<Option target="pt_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/ray/ray_calculate.c">

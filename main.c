@@ -9,19 +9,77 @@ void 				test()
 {
 	char 			*file_name;
 	size_t 			file_size;
-	void 			*buffer;
+	void 			*buffer[2];
 	objpar_data_t	data;
+	objpar_mesh_t	mesh;
 
-	file_name = NULL;
-	file_name = open_file(file_name, &file_size);
-	buffer = malloc(objpar_get_size(file_name, file_size));
-	objpar(file_name, file_size, buffer, &data);
-	free(buffer);
+	file_name = "../obj_tests/cube.obj";
+	buffer[0] = open_file(file_name, &file_size);
+	buffer[1] = malloc(objpar_get_size(buffer[0], file_size));
+	objpar((const char *)buffer[0], file_size, buffer[1], &data);
+	free(buffer[0]);
 
 	printf("Geometry Vertices Count: %u\n", data.position_count);
 	printf("Vertex Normals Count: %u\n", data.normal_count);
 	printf("Texture Vertices Count: %u\n", data.texcoord_count);
 	printf("Face Count: %u\n\n", data.face_count);
+
+	printf("Geometry Vertices:\n");
+	for (int index = 0; index < data.position_count * data.position_width; index += data.position_width)
+	{
+		unsigned int j;
+		putc('\t', stdout);
+		for (j = 0; j < data.position_width; ++j)
+		{
+			float v = data.p_positions[index + j];
+			printf("%f\t", v);
+		}
+		putc('\n', stdout);
+	}
+
+	printf("\nVertex Normals:\n");
+	for (int index = 0; index < data.normal_count * data.normal_width; index += data.normal_width)
+	{
+		unsigned int j;
+		putc('\t', stdout);
+		for (j = 0; j < data.normal_width; ++j)
+		{
+			float v = data.p_normals[index + j];
+			printf("%f\t", v);
+		}
+		putc('\n', stdout);
+	}
+
+	printf("\nTexture Vertices:\n");
+	for (int index = 0; index < data.texcoord_count * data.texcoord_width; index += data.texcoord_width)
+	{
+		unsigned int j;
+		putc('\t', stdout);
+		for (j = 0; j < data.texcoord_width; ++j)
+		{
+			float v = data.p_texcoords[index + j];
+			printf("%f\t", v);
+		}
+		putc('\n', stdout);
+	}
+
+	printf("\nFaces:\n");
+	for (int index = 0; index < data.face_count * data.face_width * 3; index += data.face_width * 3)
+	{
+		unsigned int j;
+		putc('\t', stdout);
+		for (j = 0; j < data.face_width * 3; j += 3)
+		{
+			unsigned int v = data.p_faces[index + j + OBJPAR_V_IDX];
+			unsigned int vn = data.p_faces[index + j + OBJPAR_VN_IDX];
+			unsigned int vt = data.p_faces[index + j + OBJPAR_VT_IDX];
+
+			printf("%u/%u/%u\t", v, vt, vn);
+		}
+		putc('\n', stdout);
+
+	}
+	exit(0);
 }
 
 int					main()

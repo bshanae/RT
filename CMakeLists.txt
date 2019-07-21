@@ -100,10 +100,11 @@ set(SOURCE_SAMPLER
         ./sampler/sampler_cosine.c)
 
 set(SOURCE_MAIN
-        ./main.c obj_parser/open_file.c obj_parser/open_file.h)
+#        ./main.c
+        ./obj_parser/test.c
+        )
 
-set(SOURCE_OBJ_PARSES
-        ./obj_parser/objpar.h
+set(SOURCE_OBJ_PARSER
         ./obj_parser/open_file.c)
 
 add_executable(pt_sdl

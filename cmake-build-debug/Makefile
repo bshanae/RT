@@ -366,33 +366,6 @@ intersection/intersection_refract.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s
 .PHONY : intersection/intersection_refract.c.s
 
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.s
-.PHONY : main.c.s
-
 obj_parser/open_file.o: obj_parser/open_file.c.o
 
 .PHONY : obj_parser/open_file.o
@@ -419,6 +392,33 @@ obj_parser/open_file.s: obj_parser/open_file.c.s
 obj_parser/open_file.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s
 .PHONY : obj_parser/open_file.c.s
+
+obj_parser/test.o: obj_parser/test.c.o
+
+.PHONY : obj_parser/test.o
+
+# target to build an object file
+obj_parser/test.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.o
+.PHONY : obj_parser/test.c.o
+
+obj_parser/test.i: obj_parser/test.c.i
+
+.PHONY : obj_parser/test.i
+
+# target to preprocess a source file
+obj_parser/test.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.i
+.PHONY : obj_parser/test.c.i
+
+obj_parser/test.s: obj_parser/test.c.s
+
+.PHONY : obj_parser/test.s
+
+# target to generate assembly for a file
+obj_parser/test.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/test.c.s
+.PHONY : obj_parser/test.c.s
 
 ray/ray_calculate.o: ray/ray_calculate.c.o
 
@@ -1374,12 +1374,12 @@ help:
 	@echo "... intersection/intersection_refract.o"
 	@echo "... intersection/intersection_refract.i"
 	@echo "... intersection/intersection_refract.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... obj_parser/open_file.o"
 	@echo "... obj_parser/open_file.i"
 	@echo "... obj_parser/open_file.s"
+	@echo "... obj_parser/test.o"
+	@echo "... obj_parser/test.i"
+	@echo "... obj_parser/test.s"
 	@echo "... ray/ray_calculate.o"
 	@echo "... ray/ray_calculate.i"
 	@echo "... ray/ray_calculate.s"

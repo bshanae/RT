@@ -2,24 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "open_file.h"
 
-void*			open_file(const char* p_file_name, size_t* p_file_size);
-
-int				not_main()
+int				main()
 {
     unsigned int mesh_index;
     char* files[5];
 
-    files[0] = "data/plane.obj";
-    files[1] = "data/cube.obj";
-    files[2] = "data/cube_nontri.obj";
-    files[3] = "data/monkey.obj";
-    files[4] = "data/teapot.obj";
+    files[0] = "../obj_tests/plane.obj";
+    files[1] = "../obj_tests/cube.obj";
+    files[2] = "../obj_tests/cube_nontri.obj";
+    files[3] = "../obj_tests/monkey.obj";
+    files[4] = "../obj_tests/teapot.obj";
 
-    for (mesh_index = 0; mesh_index < 5; ++mesh_index)
+    for (mesh_index = 1; mesh_index <= 1; ++mesh_index)
     {
-        void* p_data;
-        void* p_buffer;
+        void* p_data; // buffer 0
+        void* p_buffer; // buffer 1
         unsigned int index;
         size_t file_size;
         objpar_data_t obj_data;
@@ -156,33 +155,4 @@ int				not_main()
     }
     getchar();
     return 0;
-}
-
-void* open_file(const char* p_file_name, size_t* p_file_size)
-{
-    FILE* p_file;
-    void* p_file_data;
-    size_t size;
-    int err;
-
-#if defined(_MSC_VER)
-    fopen_s(&p_file, p_file_name, "rb");
-#else
-    p_file = fopen(p_file_name, "rb+");
-#endif
-    assert(p_file != NULL);
-    fseek(p_file, 0L, SEEK_END);
-    size = ftell(p_file);
-    rewind(p_file);
-    p_file_data = malloc(size);
-#if defined(_MSC_VER)
-    fread_s(p_file_data, size, size, 1, p_file);
-#else
-    fread(p_file_data, size, 1, p_file);
-#endif
-    err = ferror(p_file);
-    assert(err == 0);
-    fclose(p_file);
-    *p_file_size = size;
-    return p_file_data;
 }

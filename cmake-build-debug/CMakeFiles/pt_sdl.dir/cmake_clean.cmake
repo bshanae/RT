@@ -42,8 +42,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
-  "CMakeFiles/pt_sdl.dir/main.c.o"
   "CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
+  "CMakeFiles/pt_sdl.dir/obj_parser/test.c.o"
   "pt_sdl.pdb"
   "pt_sdl"
 )
