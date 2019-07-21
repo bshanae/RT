@@ -393,6 +393,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/main.c.s
 .PHONY : main.c.s
 
+obj_parser/open_file.o: obj_parser/open_file.c.o
+
+.PHONY : obj_parser/open_file.o
+
+# target to build an object file
+obj_parser/open_file.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
+.PHONY : obj_parser/open_file.c.o
+
+obj_parser/open_file.i: obj_parser/open_file.c.i
+
+.PHONY : obj_parser/open_file.i
+
+# target to preprocess a source file
+obj_parser/open_file.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.i
+.PHONY : obj_parser/open_file.c.i
+
+obj_parser/open_file.s: obj_parser/open_file.c.s
+
+.PHONY : obj_parser/open_file.s
+
+# target to generate assembly for a file
+obj_parser/open_file.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s
+.PHONY : obj_parser/open_file.c.s
+
 ray/ray_calculate.o: ray/ray_calculate.c.o
 
 .PHONY : ray/ray_calculate.o
@@ -1350,6 +1377,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... obj_parser/open_file.o"
+	@echo "... obj_parser/open_file.i"
+	@echo "... obj_parser/open_file.s"
 	@echo "... ray/ray_calculate.o"
 	@echo "... ray/ray_calculate.i"
 	@echo "... ray/ray_calculate.s"

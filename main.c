@@ -2,9 +2,33 @@
 #include "shape_list.h"
 #include "material_list.h"
 
+#include "objpar.h"
+#include "open_file.h"
+
+void 				test()
+{
+	char 			*file_name;
+	size_t 			file_size;
+	void 			*buffer;
+	objpar_data_t	data;
+
+	file_name = NULL;
+	file_name = open_file(file_name, &file_size);
+	buffer = malloc(objpar_get_size(file_name, file_size));
+	objpar(file_name, file_size, buffer, &data);
+	free(buffer);
+
+	printf("Geometry Vertices Count: %u\n", data.position_count);
+	printf("Vertex Normals Count: %u\n", data.normal_count);
+	printf("Texture Vertices Count: %u\n", data.texcoord_count);
+	printf("Face Count: %u\n\n", data.face_count);
+}
+
 int					main()
 {
 	t_renderer		*renderer;
+
+	test();
 
 	renderer = renderer_new();
 

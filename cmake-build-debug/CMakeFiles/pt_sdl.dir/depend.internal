@@ -69,6 +69,8 @@ CMakeFiles/pt_sdl.dir/main.c.o
  .././light/light.h
  .././material/material.h
  .././material/material_list.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
  .././options.h
  .././ray/ray.h
  .././renderer/renderer.h
@@ -124,6 +126,10 @@ CMakeFiles/pt_sdl.dir/main.c.o
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
  /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/objpar.h
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c
+ /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h
 CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/ray/ray.h

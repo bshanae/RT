@@ -61,6 +61,7 @@
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sampler"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./obj_parser"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -98,6 +99,7 @@
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./sampler"/>
+					<Add directory="/Users/vladimir/workspace/21_ray_tracer/./obj_parser"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -140,6 +142,12 @@
 			<Option target="pt_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/main.c">
+			<Option target="pt_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c">
+			<Option target="pt_sdl"/>
+		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h">
 			<Option target="pt_sdl"/>
 		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/ray/ray_calculate.c">

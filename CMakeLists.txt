@@ -27,7 +27,8 @@ include_directories(
         ./ray
         ./intersection
         ./renderer/
-        ./sampler)
+        ./sampler
+        ./obj_parser)
 
 link_libraries(
        "SDL2"
@@ -99,7 +100,11 @@ set(SOURCE_SAMPLER
         ./sampler/sampler_cosine.c)
 
 set(SOURCE_MAIN
-        ./main.c)
+        ./main.c obj_parser/open_file.c obj_parser/open_file.h)
+
+set(SOURCE_OBJ_PARSES
+        ./obj_parser/objpar.h
+        ./obj_parser/open_file.c)
 
 add_executable(pt_sdl
         ${SOURCE_VECTOR}
@@ -113,5 +118,6 @@ add_executable(pt_sdl
         ${SOURCE_SHAPE}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
+        ${SOURCE_OBJ_PARSER}
         ${SOURCE_MAIN})
 

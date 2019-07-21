@@ -68,6 +68,8 @@ CMakeFiles/pt_sdl.dir/main.c.o: .././intersection/intersection.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././light/light.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././material/material.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././material/material_list.h
+CMakeFiles/pt_sdl.dir/main.c.o: .././obj_parser/objpar.h
+CMakeFiles/pt_sdl.dir/main.c.o: .././obj_parser/open_file.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././options.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././ray/ray.h
 CMakeFiles/pt_sdl.dir/main.c.o: .././renderer/renderer.h
@@ -123,6 +125,10 @@ CMakeFiles/pt_sdl.dir/main.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_
 CMakeFiles/pt_sdl.dir/main.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
 CMakeFiles/pt_sdl.dir/main.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
 CMakeFiles/pt_sdl.dir/main.c.o: /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+
+CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o: ../obj_parser/objpar.h
+CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o: ../obj_parser/open_file.c
+CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o: ../obj_parser/open_file.h
 
 CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o: .././vector3/vector3.h
 CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o: ../ray/ray.h
