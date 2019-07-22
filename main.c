@@ -8,7 +8,6 @@ int					main()
 {
 	t_renderer		*renderer;
 
-
 	renderer = renderer_new();
 
 //	renderer->camera->position = (t_vector3){0., 10., 180.};

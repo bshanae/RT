@@ -40,6 +40,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o"
   "CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o"
   "CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o"
+  "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.o"
+  "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o"
+  "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o"
   "CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
@@ -47,6 +50,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
   "CMakeFiles/pt_sdl.dir/main.c.o"
+  "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.o"
   "pt_sdl.pdb"
   "pt_sdl"
 )

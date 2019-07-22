@@ -21,6 +21,7 @@ include_directories(
         ./filter
         ./shape
         ./mesh
+        ./kd_tree
         ./light
         ./scene
         ./color
@@ -91,10 +92,16 @@ set(SOURCE_SHAPE
         ./shape/shape_plane.c
         ./shape/shape_triangle.c)
 
-set(SOURCE_MESH mesh/mesh_new.c mesh/mesh_delete.c mesh/mesh_intersect.c)
+set(SOURCE_MESH
+        ./mesh/mesh_new.c
+        ./mesh/mesh_delete.c
+        ./mesh/mesh_intersect.c)
+
+set(SOURCE_KD_TREE
+        ./kd_tree/kd_tree_build.c kd_tree/kd_tree_array_create.c kd_tree/kd_tree_bb_create.c)
 
 set(SOURCE_OBJ_PARSER
-        ./obj_parser/open_file.c mesh/mesh.h)
+        ./obj_parser/open_file.c)
 
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c
@@ -108,7 +115,7 @@ set(SOURCE_SAMPLER
 set(SOURCE_MAIN
         ./main.c
 #        ./obj_parser/test.c
-        )
+        kd_tree/kd_tree_node_create.c)
 
 add_executable(pt_sdl
         ${SOURCE_VECTOR}
@@ -121,6 +128,7 @@ add_executable(pt_sdl
         ${SOURCE_SCENE}
         ${SOURCE_SHAPE}
         ${SOURCE_MESH}
+        ${SOURCE_KD_TREE}
         ${SOURCE_OBJ_PARSER}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}

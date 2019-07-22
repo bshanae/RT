@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -365,6 +365,114 @@ intersection/intersection_refract.s: intersection/intersection_refract.c.s
 intersection/intersection_refract.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s
 .PHONY : intersection/intersection_refract.c.s
+
+kd_tree/kd_tree_array_create.o: kd_tree/kd_tree_array_create.c.o
+
+.PHONY : kd_tree/kd_tree_array_create.o
+
+# target to build an object file
+kd_tree/kd_tree_array_create.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o
+.PHONY : kd_tree/kd_tree_array_create.c.o
+
+kd_tree/kd_tree_array_create.i: kd_tree/kd_tree_array_create.c.i
+
+.PHONY : kd_tree/kd_tree_array_create.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_array_create.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.i
+.PHONY : kd_tree/kd_tree_array_create.c.i
+
+kd_tree/kd_tree_array_create.s: kd_tree/kd_tree_array_create.c.s
+
+.PHONY : kd_tree/kd_tree_array_create.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_array_create.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.s
+.PHONY : kd_tree/kd_tree_array_create.c.s
+
+kd_tree/kd_tree_bb_create.o: kd_tree/kd_tree_bb_create.c.o
+
+.PHONY : kd_tree/kd_tree_bb_create.o
+
+# target to build an object file
+kd_tree/kd_tree_bb_create.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o
+.PHONY : kd_tree/kd_tree_bb_create.c.o
+
+kd_tree/kd_tree_bb_create.i: kd_tree/kd_tree_bb_create.c.i
+
+.PHONY : kd_tree/kd_tree_bb_create.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_bb_create.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.i
+.PHONY : kd_tree/kd_tree_bb_create.c.i
+
+kd_tree/kd_tree_bb_create.s: kd_tree/kd_tree_bb_create.c.s
+
+.PHONY : kd_tree/kd_tree_bb_create.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_bb_create.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.s
+.PHONY : kd_tree/kd_tree_bb_create.c.s
+
+kd_tree/kd_tree_build.o: kd_tree/kd_tree_build.c.o
+
+.PHONY : kd_tree/kd_tree_build.o
+
+# target to build an object file
+kd_tree/kd_tree_build.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.o
+.PHONY : kd_tree/kd_tree_build.c.o
+
+kd_tree/kd_tree_build.i: kd_tree/kd_tree_build.c.i
+
+.PHONY : kd_tree/kd_tree_build.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_build.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.i
+.PHONY : kd_tree/kd_tree_build.c.i
+
+kd_tree/kd_tree_build.s: kd_tree/kd_tree_build.c.s
+
+.PHONY : kd_tree/kd_tree_build.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_build.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.s
+.PHONY : kd_tree/kd_tree_build.c.s
+
+kd_tree/kd_tree_node_create.o: kd_tree/kd_tree_node_create.c.o
+
+.PHONY : kd_tree/kd_tree_node_create.o
+
+# target to build an object file
+kd_tree/kd_tree_node_create.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.o
+.PHONY : kd_tree/kd_tree_node_create.c.o
+
+kd_tree/kd_tree_node_create.i: kd_tree/kd_tree_node_create.c.i
+
+.PHONY : kd_tree/kd_tree_node_create.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_node_create.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.i
+.PHONY : kd_tree/kd_tree_node_create.c.i
+
+kd_tree/kd_tree_node_create.s: kd_tree/kd_tree_node_create.c.s
+
+.PHONY : kd_tree/kd_tree_node_create.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_node_create.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.s
+.PHONY : kd_tree/kd_tree_node_create.c.s
 
 main.o: main.c.o
 
@@ -1455,6 +1563,18 @@ help:
 	@echo "... intersection/intersection_refract.o"
 	@echo "... intersection/intersection_refract.i"
 	@echo "... intersection/intersection_refract.s"
+	@echo "... kd_tree/kd_tree_array_create.o"
+	@echo "... kd_tree/kd_tree_array_create.i"
+	@echo "... kd_tree/kd_tree_array_create.s"
+	@echo "... kd_tree/kd_tree_bb_create.o"
+	@echo "... kd_tree/kd_tree_bb_create.i"
+	@echo "... kd_tree/kd_tree_bb_create.s"
+	@echo "... kd_tree/kd_tree_build.o"
+	@echo "... kd_tree/kd_tree_build.i"
+	@echo "... kd_tree/kd_tree_build.s"
+	@echo "... kd_tree/kd_tree_node_create.o"
+	@echo "... kd_tree/kd_tree_node_create.i"
+	@echo "... kd_tree/kd_tree_node_create.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
