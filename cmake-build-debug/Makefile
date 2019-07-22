@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -366,6 +366,33 @@ intersection/intersection_refract.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s
 .PHONY : intersection/intersection_refract.c.s
 
+kd_tree/kd_tree_array_add.o: kd_tree/kd_tree_array_add.c.o
+
+.PHONY : kd_tree/kd_tree_array_add.o
+
+# target to build an object file
+kd_tree/kd_tree_array_add.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.o
+.PHONY : kd_tree/kd_tree_array_add.c.o
+
+kd_tree/kd_tree_array_add.i: kd_tree/kd_tree_array_add.c.i
+
+.PHONY : kd_tree/kd_tree_array_add.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_array_add.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.i
+.PHONY : kd_tree/kd_tree_array_add.c.i
+
+kd_tree/kd_tree_array_add.s: kd_tree/kd_tree_array_add.c.s
+
+.PHONY : kd_tree/kd_tree_array_add.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_array_add.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.s
+.PHONY : kd_tree/kd_tree_array_add.c.s
+
 kd_tree/kd_tree_array_create.o: kd_tree/kd_tree_array_create.c.o
 
 .PHONY : kd_tree/kd_tree_array_create.o
@@ -419,6 +446,60 @@ kd_tree/kd_tree_bb_create.s: kd_tree/kd_tree_bb_create.c.s
 kd_tree/kd_tree_bb_create.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.s
 .PHONY : kd_tree/kd_tree_bb_create.c.s
+
+kd_tree/kd_tree_bb_find_cut_axis.o: kd_tree/kd_tree_bb_find_cut_axis.c.o
+
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.o
+
+# target to build an object file
+kd_tree/kd_tree_bb_find_cut_axis.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.o
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.c.o
+
+kd_tree/kd_tree_bb_find_cut_axis.i: kd_tree/kd_tree_bb_find_cut_axis.c.i
+
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_bb_find_cut_axis.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.i
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.c.i
+
+kd_tree/kd_tree_bb_find_cut_axis.s: kd_tree/kd_tree_bb_find_cut_axis.c.s
+
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_bb_find_cut_axis.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.s
+.PHONY : kd_tree/kd_tree_bb_find_cut_axis.c.s
+
+kd_tree/kd_tree_bb_find_triangle_side.o: kd_tree/kd_tree_bb_find_triangle_side.c.o
+
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.o
+
+# target to build an object file
+kd_tree/kd_tree_bb_find_triangle_side.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.c.o
+
+kd_tree/kd_tree_bb_find_triangle_side.i: kd_tree/kd_tree_bb_find_triangle_side.c.i
+
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_bb_find_triangle_side.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.i
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.c.i
+
+kd_tree/kd_tree_bb_find_triangle_side.s: kd_tree/kd_tree_bb_find_triangle_side.c.s
+
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_bb_find_triangle_side.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.s
+.PHONY : kd_tree/kd_tree_bb_find_triangle_side.c.s
 
 kd_tree/kd_tree_build.o: kd_tree/kd_tree_build.c.o
 
@@ -581,6 +662,60 @@ mesh/mesh_new.s: mesh/mesh_new.c.s
 mesh/mesh_new.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.s
 .PHONY : mesh/mesh_new.c.s
+
+mesh/triangle_create.o: mesh/triangle_create.c.o
+
+.PHONY : mesh/triangle_create.o
+
+# target to build an object file
+mesh/triangle_create.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.o
+.PHONY : mesh/triangle_create.c.o
+
+mesh/triangle_create.i: mesh/triangle_create.c.i
+
+.PHONY : mesh/triangle_create.i
+
+# target to preprocess a source file
+mesh/triangle_create.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.i
+.PHONY : mesh/triangle_create.c.i
+
+mesh/triangle_create.s: mesh/triangle_create.c.s
+
+.PHONY : mesh/triangle_create.s
+
+# target to generate assembly for a file
+mesh/triangle_create.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.s
+.PHONY : mesh/triangle_create.c.s
+
+mesh/triangle_intersect.o: mesh/triangle_intersect.c.o
+
+.PHONY : mesh/triangle_intersect.o
+
+# target to build an object file
+mesh/triangle_intersect.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.o
+.PHONY : mesh/triangle_intersect.c.o
+
+mesh/triangle_intersect.i: mesh/triangle_intersect.c.i
+
+.PHONY : mesh/triangle_intersect.i
+
+# target to preprocess a source file
+mesh/triangle_intersect.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.i
+.PHONY : mesh/triangle_intersect.c.i
+
+mesh/triangle_intersect.s: mesh/triangle_intersect.c.s
+
+.PHONY : mesh/triangle_intersect.s
+
+# target to generate assembly for a file
+mesh/triangle_intersect.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.s
+.PHONY : mesh/triangle_intersect.c.s
 
 obj_parser/open_file.o: obj_parser/open_file.c.o
 
@@ -1203,33 +1338,6 @@ shape/shape_sphere.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
-shape/shape_triangle.o: shape/shape_triangle.c.o
-
-.PHONY : shape/shape_triangle.o
-
-# target to build an object file
-shape/shape_triangle.c.o:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o
-.PHONY : shape/shape_triangle.c.o
-
-shape/shape_triangle.i: shape/shape_triangle.c.i
-
-.PHONY : shape/shape_triangle.i
-
-# target to preprocess a source file
-shape/shape_triangle.c.i:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.i
-.PHONY : shape/shape_triangle.c.i
-
-shape/shape_triangle.s: shape/shape_triangle.c.s
-
-.PHONY : shape/shape_triangle.s
-
-# target to generate assembly for a file
-shape/shape_triangle.c.s:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.s
-.PHONY : shape/shape_triangle.c.s
-
 vector3/vector3_add.o: vector3/vector3_add.c.o
 
 .PHONY : vector3/vector3_add.o
@@ -1563,12 +1671,21 @@ help:
 	@echo "... intersection/intersection_refract.o"
 	@echo "... intersection/intersection_refract.i"
 	@echo "... intersection/intersection_refract.s"
+	@echo "... kd_tree/kd_tree_array_add.o"
+	@echo "... kd_tree/kd_tree_array_add.i"
+	@echo "... kd_tree/kd_tree_array_add.s"
 	@echo "... kd_tree/kd_tree_array_create.o"
 	@echo "... kd_tree/kd_tree_array_create.i"
 	@echo "... kd_tree/kd_tree_array_create.s"
 	@echo "... kd_tree/kd_tree_bb_create.o"
 	@echo "... kd_tree/kd_tree_bb_create.i"
 	@echo "... kd_tree/kd_tree_bb_create.s"
+	@echo "... kd_tree/kd_tree_bb_find_cut_axis.o"
+	@echo "... kd_tree/kd_tree_bb_find_cut_axis.i"
+	@echo "... kd_tree/kd_tree_bb_find_cut_axis.s"
+	@echo "... kd_tree/kd_tree_bb_find_triangle_side.o"
+	@echo "... kd_tree/kd_tree_bb_find_triangle_side.i"
+	@echo "... kd_tree/kd_tree_bb_find_triangle_side.s"
 	@echo "... kd_tree/kd_tree_build.o"
 	@echo "... kd_tree/kd_tree_build.i"
 	@echo "... kd_tree/kd_tree_build.s"
@@ -1587,6 +1704,12 @@ help:
 	@echo "... mesh/mesh_new.o"
 	@echo "... mesh/mesh_new.i"
 	@echo "... mesh/mesh_new.s"
+	@echo "... mesh/triangle_create.o"
+	@echo "... mesh/triangle_create.i"
+	@echo "... mesh/triangle_create.s"
+	@echo "... mesh/triangle_intersect.o"
+	@echo "... mesh/triangle_intersect.i"
+	@echo "... mesh/triangle_intersect.s"
 	@echo "... obj_parser/open_file.o"
 	@echo "... obj_parser/open_file.i"
 	@echo "... obj_parser/open_file.s"
@@ -1656,9 +1779,6 @@ help:
 	@echo "... shape/shape_sphere.o"
 	@echo "... shape/shape_sphere.i"
 	@echo "... shape/shape_sphere.s"
-	@echo "... shape/shape_triangle.o"
-	@echo "... shape/shape_triangle.i"
-	@echo "... shape/shape_triangle.s"
 	@echo "... vector3/vector3_add.o"
 	@echo "... vector3/vector3_add.i"
 	@echo "... vector3/vector3_add.s"

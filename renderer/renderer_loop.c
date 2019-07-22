@@ -30,6 +30,7 @@ void				renderer_loop(t_renderer **renderer)
 				(*renderer)->camera->position.y += CAMERA_STEP;
 			else if (sdl->event.key.keysym.sym == SDLK_e)
 				(*renderer)->camera->position.z -= CAMERA_STEP;
+			(*renderer)->sample_number = 0;
 			renderer_update_frame(*renderer);
 
 		}

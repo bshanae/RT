@@ -36,7 +36,7 @@ int					scene_intersect(t_scene *scene, t_intersection *intersection)
 	for (int i = 0; i < scene->shapes_length; ++i)
 		if (shape_intersect(scene->shapes + i, intersection))
 			intersection->shape_index = i;
-	if (mesh_intersect(scene->mesh, intersection))
+	if (scene->mesh && mesh_intersect(scene->mesh, intersection))
 		intersection->shape_index = 10000;
 	return (intersection->shape_index != -1);
 }

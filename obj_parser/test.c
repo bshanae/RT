@@ -15,7 +15,7 @@ int				main()
     files[3] = "../obj_tests/monkey.obj";
     files[4] = "../obj_tests/teapot.obj";
 
-    for (mesh_index = 1; mesh_index <= 1; ++mesh_index)
+    for (mesh_index = 4; mesh_index <= 4; ++mesh_index)
     {
         void* p_data; // buffer 0
         void* p_buffer; // buffer 1

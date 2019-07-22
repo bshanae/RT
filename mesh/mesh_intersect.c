@@ -6,7 +6,9 @@ int							mesh_intersect(t_mesh *mesh, t_intersection *intersection)
 
 	result = -1;
 	for (int i = 0; i < mesh->triangles_number; i++)
-		if (shape_intersect_triangle(mesh->triangles + i, intersection))
+		if (triangle_intersect(mesh->triangles + i, intersection))
 			result = i;
+	if (result != -1)
+		intersection->material = mesh->material;
 	return (result != -1);
 }

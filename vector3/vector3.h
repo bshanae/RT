@@ -43,8 +43,10 @@ void					vector3_normalize(t_vector3 *);
 t_vector3				vector3_normalized_ref(VECTOR3_REF);
 t_vector3				vector3_normalized_cp(t_vector3);
 
-float 					vector3_max(VECTOR3_REF v);
-float 					vector3_min(VECTOR3_REF v);
+float 					vector3_max_component(VECTOR3_REF v);
+float 					vector3_min_component(VECTOR3_REF v);
+t_vector3 				vector3_max_vector(VECTOR3_REF v1, VECTOR3_REF v2);
+t_vector3 				vector3_min_vector(VECTOR3_REF v1, VECTOR3_REF v2);
 
 t_vector3				vector3_component_mul_ref(VECTOR3_REF v1, VECTOR3_REF v2);
 t_vector3				vector3_component_mul_cp(t_vector3 v1, t_vector3 v2);

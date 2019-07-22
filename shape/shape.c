@@ -6,7 +6,5 @@ int					shape_intersect(t_shape *shape, t_intersection *intersection)
 		return (shape_intersect_sphere(shape, intersection));
 	else if (shape->id == SHAPE_ID_PLANE)
 		return (shape_intersect_plane(shape, intersection));
-	else if (shape->id == SHAPE_ID_TRIANGLE)
-		return (shape_intersect_triangle(shape, intersection));
 	exit(2);
 }

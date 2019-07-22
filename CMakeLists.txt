@@ -21,6 +21,7 @@ include_directories(
         ./filter
         ./shape
         ./mesh
+        ./accelerated_mesh
         ./kd_tree
         ./light
         ./scene
@@ -90,15 +91,23 @@ set(SOURCE_SHAPE
         ./shape/shape.c
         ./shape/shape_sphere.c
         ./shape/shape_plane.c
-        ./shape/shape_triangle.c)
+        )
 
 set(SOURCE_MESH
         ./mesh/mesh_new.c
         ./mesh/mesh_delete.c
-        ./mesh/mesh_intersect.c)
+        ./mesh/mesh_intersect.c
+        ./mesh/triangle_create.c
+        ./mesh/triangle_intersect.c)
 
 set(SOURCE_KD_TREE
-        ./kd_tree/kd_tree_build.c kd_tree/kd_tree_array_create.c kd_tree/kd_tree_bb_create.c)
+        ./kd_tree/kd_tree_build.c
+        ./kd_tree/kd_tree_array_create.c
+        ./kd_tree/kd_tree_bb_create.c
+        ./kd_tree/kd_tree_node_create.c
+        ./kd_tree/kd_tree_array_add.c
+        ./kd_tree/kd_tree_bb_find_cut_axis.c
+        ./kd_tree/kd_tree_bb_find_triangle_side.c)
 
 set(SOURCE_OBJ_PARSER
         ./obj_parser/open_file.c)
@@ -115,7 +124,7 @@ set(SOURCE_SAMPLER
 set(SOURCE_MAIN
         ./main.c
 #        ./obj_parser/test.c
-        kd_tree/kd_tree_node_create.c)
+        )
 
 add_executable(pt_sdl
         ${SOURCE_VECTOR}

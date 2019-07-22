@@ -1,7 +1,9 @@
 #ifndef MESH_H
 # define MESH_H
 
-# include "shape_list.h"
+# include "libft_standart.h"
+
+# include "triangle.h"
 
 # include "objpar.h"
 # include "open_file.h"
@@ -9,13 +11,16 @@
 typedef struct		s_mesh_temp
 {
 	objpar_data_t	obj;
-	void			*buffer[2];
+	objpar_mesh_t	mesh;
+	float 			*vertices;
+	void			*buffer[3];
 }					t_mesh_temp;
 
 typedef struct		s_mesh
 {
-	t_shape			*triangles;
+	t_triangle		*triangles;
 	int 			triangles_number;
+	t_material		material;
 }					t_mesh;
 
 t_mesh				*mesh_new(const char *file_name, t_material material);

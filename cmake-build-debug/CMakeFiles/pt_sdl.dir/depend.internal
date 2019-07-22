@@ -7,56 +7,147 @@ CMakeFiles/pt_sdl.dir/camera/camera_build_ray.c.o
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c
 CMakeFiles/pt_sdl.dir/camera/camera_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera_delete.c
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c
 CMakeFiles/pt_sdl.dir/camera/camera_focus.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera_focus.c
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera_focus.c
 CMakeFiles/pt_sdl.dir/camera/camera_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././filter/filter.h
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera.h
- /Users/vladimir/workspace/21_ray_tracer/camera/camera_new.c
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera.h
+ /Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c
 CMakeFiles/pt_sdl.dir/color/color_correct.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/color/color.h
- /Users/vladimir/workspace/21_ray_tracer/color/color_correct.c
+ /Users/bshanae/workspace/21_ray_tracer/color/color.h
+ /Users/bshanae/workspace/21_ray_tracer/color/color_correct.c
 CMakeFiles/pt_sdl.dir/color/color_unpack.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/color/color.h
- /Users/vladimir/workspace/21_ray_tracer/color/color_unpack.c
+ /Users/bshanae/workspace/21_ray_tracer/color/color.h
+ /Users/bshanae/workspace/21_ray_tracer/color/color_unpack.c
 CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/filter/filter.h
- /Users/vladimir/workspace/21_ray_tracer/filter/filter_jitter_sample.c
+ /Users/bshanae/workspace/21_ray_tracer/filter/filter.h
+ /Users/bshanae/workspace/21_ray_tracer/filter/filter_jitter_sample.c
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o
  .././material/material.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_reflect.c
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_reflect.c
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o
  .././material/material.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection.h
- /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection.h
+ /Users/bshanae/workspace/21_ray_tracer/intersection/intersection_refract.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_array_add.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_array_create.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_bb_create.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_bb_find_cut_axis.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_bb_find_triangle_side.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_build.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././obj_parser/objpar.h
+ .././obj_parser/open_file.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_node_create.c
 CMakeFiles/pt_sdl.dir/main.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -70,6 +161,7 @@ CMakeFiles/pt_sdl.dir/main.c.o
  .././material/material.h
  .././material/material_list.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -81,52 +173,52 @@ CMakeFiles/pt_sdl.dir/main.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/main.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/main.c
 CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -135,11 +227,10 @@ CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o
  .././obj_parser/open_file.h
  .././options.h
  .././ray/ray.h
- .././shape/shape.h
- .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh_delete.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh_delete.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle.h
 CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -148,11 +239,10 @@ CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o
  .././obj_parser/open_file.h
  .././options.h
  .././ray/ray.h
- .././shape/shape.h
- .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh_intersect.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh_intersect.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle.h
 CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -161,19 +251,34 @@ CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o
  .././obj_parser/open_file.h
  .././options.h
  .././ray/ray.h
- .././shape/shape.h
- .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh.h
- /Users/vladimir/workspace/21_ray_tracer/mesh/mesh_new.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/mesh_new.c
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle.h
+CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.o
+ .././intersection/intersection.h
+ .././material/material.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle_create.c
+CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.o
+ .././intersection/intersection.h
+ .././material/material.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle.h
+ /Users/bshanae/workspace/21_ray_tracer/mesh/triangle_intersect.c
 CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
- /Users/vladimir/workspace/21_ray_tracer/obj_parser/objpar.h
- /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.c
- /Users/vladimir/workspace/21_ray_tracer/obj_parser/open_file.h
+ /Users/bshanae/workspace/21_ray_tracer/obj_parser/objpar.h
+ /Users/bshanae/workspace/21_ray_tracer/obj_parser/open_file.c
+ /Users/bshanae/workspace/21_ray_tracer/obj_parser/open_file.h
 CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/ray/ray.h
- /Users/vladimir/workspace/21_ray_tracer/ray/ray_calculate.c
+ /Users/bshanae/workspace/21_ray_tracer/ray/ray.h
+ /Users/bshanae/workspace/21_ray_tracer/ray/ray_calculate.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -186,6 +291,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -196,53 +302,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_build_ray.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_build_ray.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -255,6 +361,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -265,53 +372,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_check_interval.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_check_interval.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -324,6 +431,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -334,53 +442,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_delete.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -393,6 +501,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -403,53 +512,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_loop.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_loop.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -462,6 +571,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -472,53 +582,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_new.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -531,6 +641,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -541,53 +652,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_radiance.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_radiance.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -600,6 +711,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -610,53 +722,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_radiance_light.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_radiance_light.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -669,6 +781,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -679,53 +792,53 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_update_frame.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_update_frame.c
 CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -738,6 +851,7 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
@@ -748,343 +862,343 @@ CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o
  .././shape/shape.h
  .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer.h
- /Users/vladimir/workspace/21_ray_tracer/renderer/renderer_write_radience.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer.h
+ /Users/bshanae/workspace/21_ray_tracer/renderer/renderer_write_radience.c
 CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o
  .././options.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler_cosine.c
 CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o
  .././options.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler_transform.c
 CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o
  .././options.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler.h
- /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler.h
+ /Users/bshanae/workspace/21_ray_tracer/sampler/sampler_uniform.c
 CMakeFiles/pt_sdl.dir/scene/scene.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
  .././light/light.h
  .././material/material.h
  .././mesh/mesh.h
+ .././mesh/triangle.h
  .././obj_parser/objpar.h
  .././obj_parser/open_file.h
  .././options.h
  .././ray/ray.h
  .././shape/shape.h
- .././shape/shape_list.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/scene/scene.c
- /Users/vladimir/workspace/21_ray_tracer/scene/scene.h
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.c
+ /Users/bshanae/workspace/21_ray_tracer/scene/scene.h
 CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././options.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/cdl_ctrl_new.c
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
 CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././options.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_delete.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_delete.c
 CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././options.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_error.c
 CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_init.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././options.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_init.c
 CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_upload.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././options.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
- /Users/vladimir/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_upload.c
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
- /usr/local/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_assert.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_atomic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_audio.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_blendmode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_clipboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_config.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_cpuinfo.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_endian.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_error.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_events.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_filesystem.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gamecontroller.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_gesture.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_haptic.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_hints.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_joystick.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keyboard.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_keycode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_loadso.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_log.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_main.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_messagebox.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mouse.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_mutex.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_pixels.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_platform.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_power.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_quit.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rect.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_render.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_rwops.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_scancode.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_sensor.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_shape.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_stdinc.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_surface.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_system.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_thread.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_timer.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_touch.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_version.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/SDL_video.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/begin_code.h
+ /Users/bshanae/.brew/Cellar/sdl2/2.0.9_1/include/SDL2/close_code.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl.h
+ /Users/bshanae/workspace/21_ray_tracer/sdl_ctrl/sdl_ctrl_upload.c
 CMakeFiles/pt_sdl.dir/shape/shape.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -1092,9 +1206,9 @@ CMakeFiles/pt_sdl.dir/shape/shape.c.o
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.c
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape.c
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
 CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -1102,9 +1216,9 @@ CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_plane.c
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape_plane.c
 CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h
@@ -1112,49 +1226,39 @@ CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o
  .././options.h
  .././ray/ray.h
  .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_sphere.c
-CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o
- ../../21_libft/includes/libft_standart.h
- .././intersection/intersection.h
- .././material/material.h
- .././options.h
- .././ray/ray.h
- .././vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_list.h
- /Users/vladimir/workspace/21_ray_tracer/shape/shape_triangle.c
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape_list.h
+ /Users/bshanae/workspace/21_ray_tracer/shape/shape_sphere.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_div.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_div.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_dot.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_dot.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_length.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_length.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_max.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_max.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_min.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_min.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_mul.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_normal.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_normal.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c
 CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.o
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3.h
- /Users/vladimir/workspace/21_ray_tracer/vector3/vector3_sub.c
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3.h
+ /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c

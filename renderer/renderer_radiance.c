@@ -20,7 +20,7 @@ void					renderer_radiance(t_renderer *renderer)
 
 		// RUSSIAN ROULETTE
 
-		if (depth > RUSSIAN_DEPTH && vector3_max(&renderer->intersection.material.color) < drand48())
+		if (depth > RUSSIAN_DEPTH && vector3_max_component(&renderer->intersection.material.color) < drand48())
 			break ;
 
 		if (renderer->intersection.material.reflection || renderer->intersection.material.refraction)
