@@ -48,7 +48,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.o"
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.o"
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o"
-  "CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o"
   "CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o"

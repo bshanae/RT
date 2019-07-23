@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -716,33 +716,6 @@ mesh/triangle_intersect.s: mesh/triangle_intersect.c.s
 mesh/triangle_intersect.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.s
 .PHONY : mesh/triangle_intersect.c.s
-
-obj_parser/open_file.o: obj_parser/open_file.c.o
-
-.PHONY : obj_parser/open_file.o
-
-# target to build an object file
-obj_parser/open_file.c.o:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o
-.PHONY : obj_parser/open_file.c.o
-
-obj_parser/open_file.i: obj_parser/open_file.c.i
-
-.PHONY : obj_parser/open_file.i
-
-# target to preprocess a source file
-obj_parser/open_file.c.i:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.i
-.PHONY : obj_parser/open_file.c.i
-
-obj_parser/open_file.s: obj_parser/open_file.c.s
-
-.PHONY : obj_parser/open_file.s
-
-# target to generate assembly for a file
-obj_parser/open_file.c.s:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.s
-.PHONY : obj_parser/open_file.c.s
 
 ray/ray_calculate.o: ray/ray_calculate.c.o
 
@@ -1710,9 +1683,6 @@ help:
 	@echo "... mesh/triangle_intersect.o"
 	@echo "... mesh/triangle_intersect.i"
 	@echo "... mesh/triangle_intersect.s"
-	@echo "... obj_parser/open_file.o"
-	@echo "... obj_parser/open_file.i"
-	@echo "... obj_parser/open_file.s"
 	@echo "... ray/ray_calculate.o"
 	@echo "... ray/ray_calculate.i"
 	@echo "... ray/ray_calculate.s"

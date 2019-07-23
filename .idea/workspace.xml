@@ -41,29 +41,39 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/filter/filter_jitter_sample.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_node_create.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/mesh_new.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/triangle_create.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/mesh/triangle_intersect.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/obj_parser/open_file.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/obj_parser/test.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/ray/ray_calculate.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/scene/scene.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/scene/scene.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_build_ray.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_check_interval.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_delete.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_loop.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_new.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_radiance_light.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_update_frame.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/renderer/renderer_write_radience.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/scene/scene.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o" afterDir="false" />
@@ -72,7 +82,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_plane.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/shape/shape_triangle.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_add.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_cross.c.o" afterDir="false" />
@@ -86,31 +95,14 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pt_sdl.dir/vector3/vector3_sub.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/pt_sdl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/pt_sdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/pt_sdl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/pt_sdl.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/pt_sdl.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kd_tree/kd_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/kd_tree/kd_tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kd_tree/kd_tree_array_create.c" beforeDir="false" afterPath="$PROJECT_DIR$/kd_tree/kd_tree_array_create.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kd_tree/kd_tree_bb_create.c" beforeDir="false" afterPath="$PROJECT_DIR$/kd_tree/kd_tree_bb_create.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kd_tree/kd_tree_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/kd_tree/kd_tree_build.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kd_tree/kd_tree_node_create.c" beforeDir="false" afterPath="$PROJECT_DIR$/kd_tree/kd_tree_node_create.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/material/material_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/material/material_list.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mesh/mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/mesh/mesh.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesh/mesh_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/mesh/mesh_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesh/mesh_intersect.c" beforeDir="false" afterPath="$PROJECT_DIR$/mesh/mesh_intersect.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mesh/mesh_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/mesh/mesh_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj_parser/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/obj_parser/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/options.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_loop.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_loop.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_radiance.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_radiance.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer/renderer_write_radience.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_write_radience.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/scene.c" beforeDir="false" afterPath="$PROJECT_DIR$/scene/scene.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shape/shape.c" beforeDir="false" afterPath="$PROJECT_DIR$/shape/shape.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shape/shape_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/shape/shape_list.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shape/shape_triangle.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector3/vector3.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector3/vector3_max.c" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3_max.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector3/vector3_min.c" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3_min.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj_parser/objpar.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj_parser/open_file.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj_parser/open_file.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj_parser/test.c" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,122 +116,59 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46493265">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/renderer/renderer_radiance.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="545">
-                  <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mesh/mesh_intersect.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/mesh/mesh_new.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mesh/triangle_create.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/obj_parser/objpar.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1345">
-                  <caret line="344" selection-start-line="344" selection-end-line="344" />
-                  <folding>
-                    <element signature="e#1648#1661#0" expanded="true" />
-                    <element signature="e#3877#8539#0" />
-                    <element signature="e#12574#14143#0" />
-                    <element signature="e#14145#15716#0" />
-                    <element signature="e#15718#17304#0" />
-                    <element signature="e#17306#19304#0" />
-                    <element signature="e#19306#19686#0" />
-                    <element signature="e#19688#20240#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mesh/mesh.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#32#60#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/obj_parser/test.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/options.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_build.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mesh/mesh_new.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mesh/mesh.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#32#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mesh/mesh_parser.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -261,9 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/intersection/intersection_reflect.c" />
-        <option value="$PROJECT_DIR$/obj_parser/open_file.h" />
-        <option value="$PROJECT_DIR$/obj_parser/open_file.c" />
         <option value="$PROJECT_DIR$/scene/scene.h" />
         <option value="$PROJECT_DIR$/shape/shape_triangle.c" />
         <option value="$PROJECT_DIR$/renderer/renderer_update_frame.c" />
@@ -305,18 +231,21 @@
         <option value="$PROJECT_DIR$/material/material_list.h" />
         <option value="$PROJECT_DIR$/options.h" />
         <option value="$PROJECT_DIR$/mesh/triangle_intersect.c" />
-        <option value="$PROJECT_DIR$/mesh/mesh.h" />
         <option value="$PROJECT_DIR$/mesh/mesh_intersect.c" />
         <option value="$PROJECT_DIR$/mesh/triangle_create.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/obj_parser/test.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/obj_parser/guarded_parser.h" />
+        <option value="$PROJECT_DIR$/obj_parser/tinyobj_loader_c.h" />
         <option value="$PROJECT_DIR$/mesh/mesh_new.c" />
+        <option value="$PROJECT_DIR$/mesh/mesh_parser.h" />
+        <option value="$PROJECT_DIR$/mesh/mesh.h" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
@@ -339,11 +268,6 @@
               <item name="pt_sdl" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
               <item name="mesh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pt_sdl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="obj_tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,22 +320,23 @@
       <workItem from="1561732810971" duration="2779000" />
       <workItem from="1563710590368" duration="11866000" />
       <workItem from="1563797982573" duration="12980000" />
+      <workItem from="1563874261390" duration="2995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45197000" />
+    <option name="totallyTimeSpent" value="48192000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14495632" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22389127" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3919708" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3919708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,7 +346,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.25255474" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.5058394" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32168674" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -512,23 +437,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/obj_tests/cube_nontri.obj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obj_tests/plane.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/color/color_correct.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.h" />
     <entry file="file://$PROJECT_DIR$/renderer/renderer.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -542,13 +450,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_build_array.c" />
     <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_array_delete.c" />
-    <entry file="file://$PROJECT_DIR$/shape/shape_triangle.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="34" selection-start-line="4" selection-start-column="4" selection-end-line="49" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shape/shape_triangle.c" />
     <entry file="file://$PROJECT_DIR$/shape/shape.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -573,13 +475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="544" column="13" selection-start-line="544" selection-start-column="13" selection-end-line="544" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/math.h" />
     <entry file="file://$PROJECT_DIR$/vector3/vector3_min.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -608,24 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_bb_create.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vector3/vector3.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="47" column="75" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
@@ -636,13 +518,6 @@
           <folding>
             <element signature="e#32#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_build.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -807,23 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mesh/mesh.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#32#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/obj_parser/objpar.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1345">
@@ -869,10 +727,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_bb_create.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kd_tree/kd_tree_build.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj_parser/guarded_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj_parser/tinyobj_loader_c.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#3880#44876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mesh/mesh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#32#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mesh/mesh_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mesh/mesh_new.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="15">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

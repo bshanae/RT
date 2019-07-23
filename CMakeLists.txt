@@ -109,9 +109,6 @@ set(SOURCE_KD_TREE
         ./kd_tree/kd_tree_bb_find_cut_axis.c
         ./kd_tree/kd_tree_bb_find_triangle_side.c)
 
-set(SOURCE_OBJ_PARSER
-        ./obj_parser/open_file.c)
-
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c
         ./intersection/intersection_refract.c)
@@ -122,9 +119,7 @@ set(SOURCE_SAMPLER
         ./sampler/sampler_cosine.c)
 
 set(SOURCE_MAIN
-        ./main.c
-#        ./obj_parser/test.c
-        )
+        ./main.c)
 
 add_executable(pt_sdl
         ${SOURCE_VECTOR}
@@ -138,7 +133,6 @@ add_executable(pt_sdl
         ${SOURCE_SHAPE}
         ${SOURCE_MESH}
         ${SOURCE_KD_TREE}
-        ${SOURCE_OBJ_PARSER}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
         ${SOURCE_MAIN})
