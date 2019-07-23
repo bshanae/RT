@@ -1,6 +1,8 @@
 #include "kd_tree.h"
 
-int recusion_id;
+#include <stdio.h>
+
+int recursion_id;
 
 static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array *array, int depth)
 {
@@ -9,16 +11,16 @@ static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array 
 	t_kd_tree_array		right;
 	t_kd_tree_axis		axis;
 
-	printf("recusion id = %d\n", recusion_id++);
-
-	node = kd_tree_node_create();
-	node->array = *array;
+//	printf("recursion id = %d, depth = %d\n", recursion_id++, depth);
 
 	if (depth > 16)
-		return (node);
+		return (NULL);
 
 	if (array->length < 2)
-		return (node);
+		return (NULL);
+
+	node = kd_tree_node_create(mesh);
+	node->array = *array;
 
 	node->bb = kd_tree_bb_create(mesh, array);
 	left = kd_tree_array_create(array->length);
@@ -45,7 +47,7 @@ t_kd_tree_node			*kd_tree_build(const t_mesh *mesh)
 	t_kd_tree_node		*root;
 	t_kd_tree_array		array;
 
-	recusion_id = 0;
+	recursion_id = 0;
 	array = kd_tree_array_create(mesh->triangles_number);
 	for (int i = 0; i < mesh->triangles_number; i++)
 		kd_tree_array_add(&array, &i);

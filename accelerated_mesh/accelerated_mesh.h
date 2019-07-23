@@ -11,7 +11,7 @@ typedef struct 		s_accelerated_mesh
 }					t_accelerated_mesh;
 
 t_accelerated_mesh	*accelerated_mesh_new(const char *file_name, t_material material);
-
 void 				accelerated_mesh_delete(t_accelerated_mesh **mesh);
+int 				accelerated_mesh_intersect(t_accelerated_mesh *mesh ,t_intersection *intersection);
 
 #endif

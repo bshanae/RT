@@ -16,6 +16,6 @@ typedef struct		s_triangle
 
 t_triangle			triangle_create(VECTOR3_REF a, VECTOR3_REF b, VECTOR3_REF c, VECTOR3_REF normal);
 
-int 				triangle_intersect(t_triangle *triangle, t_intersection *intersection);
+int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersection);
 
 #endif

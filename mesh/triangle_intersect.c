@@ -1,6 +1,6 @@
 #include "triangle.h"
 
-int 				triangle_intersect(t_triangle *triangle, t_intersection *intersection)
+int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersection)
 {
 	t_vector3		ab;
 	t_vector3		ac;

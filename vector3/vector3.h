@@ -2,6 +2,7 @@
 # define VECTOR3_H
 
 # include "math.h"
+# include "stdlib.h"
 
 typedef struct 			s_vector3
 {
@@ -52,5 +53,7 @@ t_vector3				vector3_component_mul_ref(VECTOR3_REF v1, VECTOR3_REF v2);
 t_vector3				vector3_component_mul_cp(t_vector3 v1, t_vector3 v2);
 void					vector3_component_mul_eq_ref(t_vector3 *v1, VECTOR3_REF v2);
 void					vector3_component_mul_eq_cp(t_vector3 *v1, t_vector3 v2);
+
+float					*vector3_iter(t_vector3 *me, int i);
 
 #endif

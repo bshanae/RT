@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ accelerated_mesh/accelerated_mesh_delete.s: accelerated_mesh/accelerated_mesh_de
 accelerated_mesh/accelerated_mesh_delete.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.s
 .PHONY : accelerated_mesh/accelerated_mesh_delete.c.s
+
+accelerated_mesh/accelerated_mesh_intersect.o: accelerated_mesh/accelerated_mesh_intersect.c.o
+
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.o
+
+# target to build an object file
+accelerated_mesh/accelerated_mesh_intersect.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.c.o
+
+accelerated_mesh/accelerated_mesh_intersect.i: accelerated_mesh/accelerated_mesh_intersect.c.i
+
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.i
+
+# target to preprocess a source file
+accelerated_mesh/accelerated_mesh_intersect.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.i
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.c.i
+
+accelerated_mesh/accelerated_mesh_intersect.s: accelerated_mesh/accelerated_mesh_intersect.c.s
+
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.s
+
+# target to generate assembly for a file
+accelerated_mesh/accelerated_mesh_intersect.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.s
+.PHONY : accelerated_mesh/accelerated_mesh_intersect.c.s
 
 accelerated_mesh/accelerated_mesh_new.o: accelerated_mesh/accelerated_mesh_new.c.o
 
@@ -555,6 +582,33 @@ kd_tree/kd_tree_bb_find_triangle_side.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.s
 .PHONY : kd_tree/kd_tree_bb_find_triangle_side.c.s
 
+kd_tree/kd_tree_bb_intersect.o: kd_tree/kd_tree_bb_intersect.c.o
+
+.PHONY : kd_tree/kd_tree_bb_intersect.o
+
+# target to build an object file
+kd_tree/kd_tree_bb_intersect.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.o
+.PHONY : kd_tree/kd_tree_bb_intersect.c.o
+
+kd_tree/kd_tree_bb_intersect.i: kd_tree/kd_tree_bb_intersect.c.i
+
+.PHONY : kd_tree/kd_tree_bb_intersect.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_bb_intersect.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.i
+.PHONY : kd_tree/kd_tree_bb_intersect.c.i
+
+kd_tree/kd_tree_bb_intersect.s: kd_tree/kd_tree_bb_intersect.c.s
+
+.PHONY : kd_tree/kd_tree_bb_intersect.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_bb_intersect.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.s
+.PHONY : kd_tree/kd_tree_bb_intersect.c.s
+
 kd_tree/kd_tree_build.o: kd_tree/kd_tree_build.c.o
 
 .PHONY : kd_tree/kd_tree_build.o
@@ -608,6 +662,33 @@ kd_tree/kd_tree_destroy.s: kd_tree/kd_tree_destroy.c.s
 kd_tree/kd_tree_destroy.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.s
 .PHONY : kd_tree/kd_tree_destroy.c.s
+
+kd_tree/kd_tree_intersect.o: kd_tree/kd_tree_intersect.c.o
+
+.PHONY : kd_tree/kd_tree_intersect.o
+
+# target to build an object file
+kd_tree/kd_tree_intersect.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.o
+.PHONY : kd_tree/kd_tree_intersect.c.o
+
+kd_tree/kd_tree_intersect.i: kd_tree/kd_tree_intersect.c.i
+
+.PHONY : kd_tree/kd_tree_intersect.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_intersect.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.i
+.PHONY : kd_tree/kd_tree_intersect.c.i
+
+kd_tree/kd_tree_intersect.s: kd_tree/kd_tree_intersect.c.s
+
+.PHONY : kd_tree/kd_tree_intersect.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_intersect.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.s
+.PHONY : kd_tree/kd_tree_intersect.c.s
 
 kd_tree/kd_tree_node_create.o: kd_tree/kd_tree_node_create.c.o
 
@@ -689,33 +770,6 @@ mesh/mesh_delete.s: mesh/mesh_delete.c.s
 mesh/mesh_delete.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_delete.c.s
 .PHONY : mesh/mesh_delete.c.s
-
-mesh/mesh_intersect.o: mesh/mesh_intersect.c.o
-
-.PHONY : mesh/mesh_intersect.o
-
-# target to build an object file
-mesh/mesh_intersect.c.o:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.o
-.PHONY : mesh/mesh_intersect.c.o
-
-mesh/mesh_intersect.i: mesh/mesh_intersect.c.i
-
-.PHONY : mesh/mesh_intersect.i
-
-# target to preprocess a source file
-mesh/mesh_intersect.c.i:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.i
-.PHONY : mesh/mesh_intersect.c.i
-
-mesh/mesh_intersect.s: mesh/mesh_intersect.c.s
-
-.PHONY : mesh/mesh_intersect.s
-
-# target to generate assembly for a file
-mesh/mesh_intersect.c.s:
-	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/mesh/mesh_intersect.c.s
-.PHONY : mesh/mesh_intersect.c.s
 
 mesh/mesh_new.o: mesh/mesh_new.c.o
 
@@ -1527,6 +1581,33 @@ vector3/vector3_dot.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_dot.c.s
 .PHONY : vector3/vector3_dot.c.s
 
+vector3/vector3_iter.o: vector3/vector3_iter.c.o
+
+.PHONY : vector3/vector3_iter.o
+
+# target to build an object file
+vector3/vector3_iter.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_iter.c.o
+.PHONY : vector3/vector3_iter.c.o
+
+vector3/vector3_iter.i: vector3/vector3_iter.c.i
+
+.PHONY : vector3/vector3_iter.i
+
+# target to preprocess a source file
+vector3/vector3_iter.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_iter.c.i
+.PHONY : vector3/vector3_iter.c.i
+
+vector3/vector3_iter.s: vector3/vector3_iter.c.s
+
+.PHONY : vector3/vector3_iter.s
+
+# target to generate assembly for a file
+vector3/vector3_iter.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/vector3_iter.c.s
+.PHONY : vector3/vector3_iter.c.s
+
 vector3/vector3_length.o: vector3/vector3_length.c.o
 
 .PHONY : vector3/vector3_length.o
@@ -1701,6 +1782,9 @@ help:
 	@echo "... accelerated_mesh/accelerated_mesh_delete.o"
 	@echo "... accelerated_mesh/accelerated_mesh_delete.i"
 	@echo "... accelerated_mesh/accelerated_mesh_delete.s"
+	@echo "... accelerated_mesh/accelerated_mesh_intersect.o"
+	@echo "... accelerated_mesh/accelerated_mesh_intersect.i"
+	@echo "... accelerated_mesh/accelerated_mesh_intersect.s"
 	@echo "... accelerated_mesh/accelerated_mesh_new.o"
 	@echo "... accelerated_mesh/accelerated_mesh_new.i"
 	@echo "... accelerated_mesh/accelerated_mesh_new.s"
@@ -1746,12 +1830,18 @@ help:
 	@echo "... kd_tree/kd_tree_bb_find_triangle_side.o"
 	@echo "... kd_tree/kd_tree_bb_find_triangle_side.i"
 	@echo "... kd_tree/kd_tree_bb_find_triangle_side.s"
+	@echo "... kd_tree/kd_tree_bb_intersect.o"
+	@echo "... kd_tree/kd_tree_bb_intersect.i"
+	@echo "... kd_tree/kd_tree_bb_intersect.s"
 	@echo "... kd_tree/kd_tree_build.o"
 	@echo "... kd_tree/kd_tree_build.i"
 	@echo "... kd_tree/kd_tree_build.s"
 	@echo "... kd_tree/kd_tree_destroy.o"
 	@echo "... kd_tree/kd_tree_destroy.i"
 	@echo "... kd_tree/kd_tree_destroy.s"
+	@echo "... kd_tree/kd_tree_intersect.o"
+	@echo "... kd_tree/kd_tree_intersect.i"
+	@echo "... kd_tree/kd_tree_intersect.s"
 	@echo "... kd_tree/kd_tree_node_create.o"
 	@echo "... kd_tree/kd_tree_node_create.i"
 	@echo "... kd_tree/kd_tree_node_create.s"
@@ -1761,9 +1851,6 @@ help:
 	@echo "... mesh/mesh_delete.o"
 	@echo "... mesh/mesh_delete.i"
 	@echo "... mesh/mesh_delete.s"
-	@echo "... mesh/mesh_intersect.o"
-	@echo "... mesh/mesh_intersect.i"
-	@echo "... mesh/mesh_intersect.s"
 	@echo "... mesh/mesh_new.o"
 	@echo "... mesh/mesh_new.i"
 	@echo "... mesh/mesh_new.s"
@@ -1854,6 +1941,9 @@ help:
 	@echo "... vector3/vector3_dot.o"
 	@echo "... vector3/vector3_dot.i"
 	@echo "... vector3/vector3_dot.s"
+	@echo "... vector3/vector3_iter.o"
+	@echo "... vector3/vector3_iter.i"
+	@echo "... vector3/vector3_iter.s"
 	@echo "... vector3/vector3_length.o"
 	@echo "... vector3/vector3_length.i"
 	@echo "... vector3/vector3_length.s"

@@ -48,7 +48,8 @@ set(SOURCE_VECTOR
         ./vector3/vector3_normal.c
         ./vector3/vector3_max.c
         ./vector3/vector3_min.c
-        ./vector3/vector3_component_mul.c)
+        ./vector3/vector3_component_mul.c
+        ./vector3/vector3_iter.c)
 
 set(SOURCE_SDL_CTRL
         ./sdl_ctrl/cdl_ctrl_new.c
@@ -96,7 +97,6 @@ set(SOURCE_SHAPE
 set(SOURCE_MESH
         ./mesh/mesh_new.c
         ./mesh/mesh_delete.c
-        ./mesh/mesh_intersect.c
         ./mesh/triangle_create.c
         ./mesh/triangle_intersect.c)
 
@@ -107,10 +107,14 @@ set(SOURCE_KD_TREE
         ./kd_tree/kd_tree_node_create.c
         ./kd_tree/kd_tree_array_add.c
         ./kd_tree/kd_tree_bb_find_cut_axis.c
-        ./kd_tree/kd_tree_bb_find_triangle_side.c kd_tree/kd_tree_destroy.c)
+        ./kd_tree/kd_tree_bb_find_triangle_side.c
+        ./kd_tree/kd_tree_destroy.c
+        ./kd_tree/kd_tree_intersect.c kd_tree/kd_tree_bb_intersect.c)
 
 set(SOURCE_ACCELERATED_MESH
-        accelerated_mesh/accelerated_mesh_new.c accelerated_mesh/accelerated_mesh_delete.c)
+        ./accelerated_mesh/accelerated_mesh_new.c
+        ./accelerated_mesh/accelerated_mesh_delete.c
+        ./accelerated_mesh/accelerated_mesh_intersect.c)
 
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c

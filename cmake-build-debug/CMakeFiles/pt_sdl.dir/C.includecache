@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../../21_libft/includes/libft_standart.h
-sys/types.h
--
-sys/stat.h
--
-fcntl.h
--
-stdlib.h
--
-unistd.h
--
-
 .././intersection/intersection.h
 material.h
 .././intersection/material.h
@@ -30,20 +18,6 @@ ray.h
 vector3.h
 .././material/vector3.h
 
-.././mesh/mesh.h
-libft_standart.h
-.././mesh/libft_standart.h
-triangle.h
-.././mesh/triangle.h
-
-.././mesh/triangle.h
-options.h
-.././mesh/options.h
-vector3.h
-.././mesh/vector3.h
-intersection.h
-.././mesh/intersection.h
-
 .././options.h
 
 .././ray/ray.h
@@ -53,12 +27,18 @@ vector3.h
 .././vector3/vector3.h
 math.h
 .././vector3/math.h
+stdlib.h
+.././vector3/stdlib.h
 
-/Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
-mesh.h
-/Users/bshanae/workspace/21_ray_tracer/kd_tree/mesh.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/triangle.h
+options.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/options.h
+vector3.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/vector3.h
+intersection.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/intersection.h
 
-/Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree_build.c
-kd_tree.h
-/Users/bshanae/workspace/21_ray_tracer/kd_tree/kd_tree.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/triangle_intersect.c
+triangle.h
+/Users/vladimir/workspace/21_ray_tracer/mesh/triangle.h
 

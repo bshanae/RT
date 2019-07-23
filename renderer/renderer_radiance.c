@@ -61,8 +61,6 @@ void					renderer_radiance(t_renderer *renderer)
 			vector3_mul_eq(&mask, cosine);
 		}
 	}
-	if (IS_BLACK(&renderer->radiance))
-		renderer->radiance = BACKGROUND;
 	if (SRGB)
 		color_correct(&renderer->radiance);
 }
