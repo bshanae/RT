@@ -31,42 +31,29 @@ static void				get_mesh(t_mesh *mesh, t_mesh_temp *temp, const t_material *mater
 
 	if (result != TINYOBJ_SUCCESS)
 		exit(result);
-
-	for (int i = 0; i < temp->attributes.num_face_num_verts; i++)
-		for (int f = 0; f < (int)temp->attributes.face_num_verts[i] / 3; f++)
-		{
-			size_t k;
-			t_vector3	v[3];
-			float n[3][3];
-			float c[3];
-			float len2;
-
-			tinyobj_vertex_index_t idx0 = temp->attributes.faces[3 * f + 0];
-			tinyobj_vertex_index_t idx1 = temp->attributes.faces[3 * f + 1];
-			tinyobj_vertex_index_t idx2 = temp->attributes.faces[3 * f + 2];
-
-			for (k = 0; k < 3; k++)
-			{
-				int f0 = idx0.v_idx;
-				int f1 = idx1.v_idx;
-				int f2 = idx2.v_idx;
-
-				v[k].x = temp->attributes.vertices[3 * f0 + k];
-				v[k].y = temp->attributes.vertices[3 * f1 + k];
-				v[k].z = temp->attributes.vertices[3 * f2 + k];
-			}
-
-			printf("{{%f, %f, %f}, {%f, %f, %f}, {%f, %f, %f}}\n",
-				v[0].x, v[0].y, v[0].z,
-				v[1].x, v[1].y, v[1].z,
-				v[2].x, v[2].y, v[2].z);
-		}
-	exit(2);
+	mesh->triangles = (t_triangle *)malloc(sizeof(t_triangle) * temp->attributes.num_faces);
+	mesh->triangles_number = 0;
+	mesh->material = *material;
+	for (int face_i = 0; face_i < temp->attributes.num_faces; face_i += 3)
+	{
+		mesh->triangles[mesh->triangles_number++] = triangle_create
+			(
+				(t_vector3 *)(temp->attributes.vertices) + temp->attributes.faces[face_i + 0].v_idx,
+				(t_vector3 *)(temp->attributes.vertices) + temp->attributes.faces[face_i + 1].v_idx,
+				(t_vector3 *)(temp->attributes.vertices) + temp->attributes.faces[face_i + 2].v_idx,
+				temp->attributes.num_normals ?
+					(t_vector3 *)(temp->attributes.normals) + temp->attributes.faces[face_i + 0].vn_idx :
+					NULL
+			);
+	}
 }
 
 static void				clean_temp(t_mesh_temp *temp)
 {
-
+	free(temp->file_buffer);
+	tinyobj_attrib_free(&temp->attributes);
+	tinyobj_shapes_free(temp->shapes, temp->shapes_length);
+	tinyobj_materials_free(temp->materials, temp->materials_length);
 }
 
 t_mesh					*mesh_new(const char *file_name, t_material material)

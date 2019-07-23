@@ -16,7 +16,10 @@ void					renderer_radiance(t_renderer *renderer)
 	for (int depth = 0; depth < PATH_DEPTH; ++depth)
 	{
 		if (!scene_intersect(renderer->scene, &renderer->intersection))
+		{
+			vector3_add_eq_cp(&renderer->radiance, vector3_component_mul_cp(BACKGROUND, mask));
 			break ;
+		}
 
 		// RUSSIAN ROULETTE
 
@@ -58,6 +61,8 @@ void					renderer_radiance(t_renderer *renderer)
 			vector3_mul_eq(&mask, cosine);
 		}
 	}
+	if (IS_BLACK(&renderer->radiance))
+		renderer->radiance = BACKGROUND;
 	if (SRGB)
 		color_correct(&renderer->radiance);
 }

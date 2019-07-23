@@ -3,25 +3,25 @@
 
 # include "light.h"
 # include "shape.h"
-# include "mesh.h"
+# include "accelerated_mesh.h"
 
-typedef struct 		s_scene
+typedef struct 			s_scene
 {
-	t_shape			shapes[SCENE_SHAPES_CAPACITY];
-	int 			shapes_length;
-	t_mesh			*mesh;
-	t_light			lights[SCENE_LIGHTS_CAPACITY];
-	int 			lights_length;
-}					t_scene;
+	t_shape				shapes[SCENE_SHAPES_CAPACITY];
+	int 				shapes_length;
+	t_accelerated_mesh	*accelerated_mesh;
+	t_light				lights[SCENE_LIGHTS_CAPACITY];
+	int 				lights_length;
+}						t_scene;
 
-t_scene				*scene_new();
+t_scene					*scene_new();
 
-void				scene_delete(t_scene **scene);
+void					scene_delete(t_scene **scene);
 
-void				scene_add_shape(t_scene *scene, t_shape shape);
+void					scene_add_shape(t_scene *scene, t_shape shape);
 
-void				scene_add_light(t_scene *scene, t_light light);
+void					scene_add_light(t_scene *scene, t_light light);
 
-int					scene_intersect(t_scene *scene, t_intersection *intersection);
+int						scene_intersect(t_scene *scene, t_intersection *intersection);
 
 #endif

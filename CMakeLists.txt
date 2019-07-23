@@ -107,7 +107,10 @@ set(SOURCE_KD_TREE
         ./kd_tree/kd_tree_node_create.c
         ./kd_tree/kd_tree_array_add.c
         ./kd_tree/kd_tree_bb_find_cut_axis.c
-        ./kd_tree/kd_tree_bb_find_triangle_side.c)
+        ./kd_tree/kd_tree_bb_find_triangle_side.c kd_tree/kd_tree_destroy.c)
+
+set(SOURCE_ACCELERATED_MESH
+        accelerated_mesh/accelerated_mesh_new.c accelerated_mesh/accelerated_mesh_delete.c)
 
 set(SOURCE_INTERSECTION
         ./intersection/intersection_reflect.c
@@ -133,6 +136,7 @@ add_executable(pt_sdl
         ${SOURCE_SHAPE}
         ${SOURCE_MESH}
         ${SOURCE_KD_TREE}
+        ${SOURCE_ACCELERATED_MESH}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
         ${SOURCE_MAIN})

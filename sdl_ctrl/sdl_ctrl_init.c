@@ -33,4 +33,5 @@ void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 		WINDOW_HEIGHT
 	);
 	sdl->data = (Uint32 *)malloc(sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
+	ft_bzero(sdl->data, sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
 }

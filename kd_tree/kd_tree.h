@@ -49,7 +49,8 @@ struct 				s_kd_tree_node
 };
 
 t_kd_tree_node		*kd_tree_node_create(void);
-
 t_kd_tree_node		*kd_tree_build(const t_mesh *mesh);
+void				kd_tree_destroy(t_kd_tree_node **tree);
+
 
 #endif

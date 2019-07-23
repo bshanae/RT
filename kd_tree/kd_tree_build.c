@@ -1,11 +1,15 @@
 #include "kd_tree.h"
 
+int recusion_id;
+
 static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array *array, int depth)
 {
 	t_kd_tree_node		*node;
 	t_kd_tree_array		left;
 	t_kd_tree_array		right;
 	t_kd_tree_axis		axis;
+
+	printf("recusion id = %d\n", recusion_id++);
 
 	node = kd_tree_node_create();
 	node->array = *array;
@@ -41,9 +45,10 @@ t_kd_tree_node			*kd_tree_build(const t_mesh *mesh)
 	t_kd_tree_node		*root;
 	t_kd_tree_array		array;
 
+	recusion_id = 0;
 	array = kd_tree_array_create(mesh->triangles_number);
 	for (int i = 0; i < mesh->triangles_number; i++)
-		array.indexes[i] = i;
+		kd_tree_array_add(&array, &i);
 	root = build_tree_recursive(mesh, &array, 0);
 	return (root);
 }

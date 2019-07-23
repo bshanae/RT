@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,60 @@ pt_sdl: cmake_check_build_system
 pt_sdl/fast:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/build
 .PHONY : pt_sdl/fast
+
+accelerated_mesh/accelerated_mesh_delete.o: accelerated_mesh/accelerated_mesh_delete.c.o
+
+.PHONY : accelerated_mesh/accelerated_mesh_delete.o
+
+# target to build an object file
+accelerated_mesh/accelerated_mesh_delete.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o
+.PHONY : accelerated_mesh/accelerated_mesh_delete.c.o
+
+accelerated_mesh/accelerated_mesh_delete.i: accelerated_mesh/accelerated_mesh_delete.c.i
+
+.PHONY : accelerated_mesh/accelerated_mesh_delete.i
+
+# target to preprocess a source file
+accelerated_mesh/accelerated_mesh_delete.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.i
+.PHONY : accelerated_mesh/accelerated_mesh_delete.c.i
+
+accelerated_mesh/accelerated_mesh_delete.s: accelerated_mesh/accelerated_mesh_delete.c.s
+
+.PHONY : accelerated_mesh/accelerated_mesh_delete.s
+
+# target to generate assembly for a file
+accelerated_mesh/accelerated_mesh_delete.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.s
+.PHONY : accelerated_mesh/accelerated_mesh_delete.c.s
+
+accelerated_mesh/accelerated_mesh_new.o: accelerated_mesh/accelerated_mesh_new.c.o
+
+.PHONY : accelerated_mesh/accelerated_mesh_new.o
+
+# target to build an object file
+accelerated_mesh/accelerated_mesh_new.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o
+.PHONY : accelerated_mesh/accelerated_mesh_new.c.o
+
+accelerated_mesh/accelerated_mesh_new.i: accelerated_mesh/accelerated_mesh_new.c.i
+
+.PHONY : accelerated_mesh/accelerated_mesh_new.i
+
+# target to preprocess a source file
+accelerated_mesh/accelerated_mesh_new.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.i
+.PHONY : accelerated_mesh/accelerated_mesh_new.c.i
+
+accelerated_mesh/accelerated_mesh_new.s: accelerated_mesh/accelerated_mesh_new.c.s
+
+.PHONY : accelerated_mesh/accelerated_mesh_new.s
+
+# target to generate assembly for a file
+accelerated_mesh/accelerated_mesh_new.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.s
+.PHONY : accelerated_mesh/accelerated_mesh_new.c.s
 
 camera/camera_build_ray.o: camera/camera_build_ray.c.o
 
@@ -527,6 +581,33 @@ kd_tree/kd_tree_build.s: kd_tree/kd_tree_build.c.s
 kd_tree/kd_tree_build.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_build.c.s
 .PHONY : kd_tree/kd_tree_build.c.s
+
+kd_tree/kd_tree_destroy.o: kd_tree/kd_tree_destroy.c.o
+
+.PHONY : kd_tree/kd_tree_destroy.o
+
+# target to build an object file
+kd_tree/kd_tree_destroy.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.o
+.PHONY : kd_tree/kd_tree_destroy.c.o
+
+kd_tree/kd_tree_destroy.i: kd_tree/kd_tree_destroy.c.i
+
+.PHONY : kd_tree/kd_tree_destroy.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_destroy.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.i
+.PHONY : kd_tree/kd_tree_destroy.c.i
+
+kd_tree/kd_tree_destroy.s: kd_tree/kd_tree_destroy.c.s
+
+.PHONY : kd_tree/kd_tree_destroy.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_destroy.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.s
+.PHONY : kd_tree/kd_tree_destroy.c.s
 
 kd_tree/kd_tree_node_create.o: kd_tree/kd_tree_node_create.c.o
 
@@ -1617,6 +1698,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... pt_sdl"
+	@echo "... accelerated_mesh/accelerated_mesh_delete.o"
+	@echo "... accelerated_mesh/accelerated_mesh_delete.i"
+	@echo "... accelerated_mesh/accelerated_mesh_delete.s"
+	@echo "... accelerated_mesh/accelerated_mesh_new.o"
+	@echo "... accelerated_mesh/accelerated_mesh_new.i"
+	@echo "... accelerated_mesh/accelerated_mesh_new.s"
 	@echo "... camera/camera_build_ray.o"
 	@echo "... camera/camera_build_ray.i"
 	@echo "... camera/camera_build_ray.s"
@@ -1662,6 +1749,9 @@ help:
 	@echo "... kd_tree/kd_tree_build.o"
 	@echo "... kd_tree/kd_tree_build.i"
 	@echo "... kd_tree/kd_tree_build.s"
+	@echo "... kd_tree/kd_tree_destroy.o"
+	@echo "... kd_tree/kd_tree_destroy.i"
+	@echo "... kd_tree/kd_tree_destroy.s"
 	@echo "... kd_tree/kd_tree_node_create.o"
 	@echo "... kd_tree/kd_tree_node_create.i"
 	@echo "... kd_tree/kd_tree_node_create.s"

@@ -37,7 +37,7 @@ int 				triangle_intersect(t_triangle *triangle, t_intersection *intersection)
 		return (0);
 
 	t = vector3_dot_ref(&ac, &q_v) * inverse_determinant;
-	if (t < INTERSECTION_MIN || t >= intersection->ray.t)
+	if (t < INTERSECTION_MIN || t > intersection->ray.t)
 		return (0);
 
 	intersection->ray.t = t;
