@@ -32,9 +32,9 @@ float 				kd_tree_array_find_median(const t_kd_tree_array *array, const t_mesh *
 		median =  (temp[(array->length + 1) / 2 - 1].f + temp[(array->length + 1) / 2].f) / 2.;
 	else
 		median =  (temp[array->length / 2 - 1].f + temp[array->length / 2].f) / 2.;
-	for (int i = 0; i < array->length; i++)
-		printf("[%i, %f] ", temp[i].i, temp[i].f);
-	printf(" : median = %f\n", median);
+//	for (int i = 0; i < array->length; i++)
+//		printf("[%i, %f] ", temp[i].i, temp[i].f);
+//	printf(" : median = %f\n", median);
 	free(temp);
-	return (median + 0.0001f);
+	return (median + 0.000001f);
 }

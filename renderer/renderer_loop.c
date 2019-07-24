@@ -29,7 +29,7 @@ void				renderer_loop(t_renderer **renderer)
 			else if (sdl->event.key.keysym.sym == SDLK_q)
 				(*renderer)->camera->position.y += CAMERA_STEP;
 			else if (sdl->event.key.keysym.sym == SDLK_e)
-				(*renderer)->camera->position.z -= CAMERA_STEP;
+				(*renderer)->camera->position.y -= CAMERA_STEP;
 			else
 				continue ;
 			(*renderer)->sample_number = 0;

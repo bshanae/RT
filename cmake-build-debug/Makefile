@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer-test_mesh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer-test_mesh/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer-test_mesh/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer-test_mesh/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer-test_mesh/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1473,6 +1473,33 @@ shape/shape_sphere.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/shape/shape_sphere.c.s
 .PHONY : shape/shape_sphere.c.s
 
+vector3/malloc.o: vector3/malloc.c.o
+
+.PHONY : vector3/malloc.o
+
+# target to build an object file
+vector3/malloc.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/malloc.c.o
+.PHONY : vector3/malloc.c.o
+
+vector3/malloc.i: vector3/malloc.c.i
+
+.PHONY : vector3/malloc.i
+
+# target to preprocess a source file
+vector3/malloc.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/malloc.c.i
+.PHONY : vector3/malloc.c.i
+
+vector3/malloc.s: vector3/malloc.c.s
+
+.PHONY : vector3/malloc.s
+
+# target to generate assembly for a file
+vector3/malloc.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/vector3/malloc.c.s
+.PHONY : vector3/malloc.c.s
+
 vector3/vector3_add.o: vector3/vector3_add.c.o
 
 .PHONY : vector3/vector3_add.o
@@ -1956,6 +1983,9 @@ help:
 	@echo "... shape/shape_sphere.o"
 	@echo "... shape/shape_sphere.i"
 	@echo "... shape/shape_sphere.s"
+	@echo "... vector3/malloc.o"
+	@echo "... vector3/malloc.i"
+	@echo "... vector3/malloc.s"
 	@echo "... vector3/vector3_add.o"
 	@echo "... vector3/vector3_add.i"
 	@echo "... vector3/vector3_add.s"

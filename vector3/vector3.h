@@ -1,6 +1,8 @@
 #ifndef VECTOR3_H
 # define VECTOR3_H
 
+# include "libft_standart.h"
+
 # include "math.h"
 # include "stdlib.h"
 
@@ -12,6 +14,8 @@ typedef struct 			s_vector3
 }						t_vector3;
 
 # define VECTOR3_REF	const t_vector3 *
+
+void					*malloc_guard(u_long size);
 
 t_vector3				vector3_add_ref(VECTOR3_REF, VECTOR3_REF);
 t_vector3				vector3_add_cp(t_vector3, t_vector3);

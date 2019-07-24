@@ -14,9 +14,9 @@ t_triangle			triangle_create(VECTOR3_REF a, VECTOR3_REF b, VECTOR3_REF c, VECTOR
 {
 	t_triangle		triangle;
 
-	triangle.a = vector3_mul_ref(a, MESH_RESIZE_RATIO);
-	triangle.b = vector3_mul_ref(b, MESH_RESIZE_RATIO);
-	triangle.c = vector3_mul_ref(c, MESH_RESIZE_RATIO);
+	triangle.a = vector3_add_cp(vector3_mul_ref(a, MESH_RESIZE), MESH_SHIFT);
+	triangle.b = vector3_add_cp(vector3_mul_ref(b, MESH_RESIZE), MESH_SHIFT);
+	triangle.c = vector3_add_cp(vector3_mul_ref(c, MESH_RESIZE), MESH_SHIFT);
 	if (normal)
 		triangle.normal = *normal;
 	else

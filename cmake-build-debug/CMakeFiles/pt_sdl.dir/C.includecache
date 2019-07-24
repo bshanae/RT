@@ -18,6 +18,12 @@ stdlib.h
 unistd.h
 -
 
+.././accelerated_mesh/accelerated_mesh.h
+mesh.h
+.././accelerated_mesh/mesh.h
+kd_tree.h
+.././accelerated_mesh/kd_tree.h
+
 .././intersection/intersection.h
 material.h
 .././intersection/material.h
@@ -25,6 +31,14 @@ vector3.h
 .././intersection/vector3.h
 ray.h
 .././intersection/ray.h
+
+.././kd_tree/kd_tree.h
+mesh.h
+.././kd_tree/mesh.h
+
+.././light/light.h
+vector3.h
+.././light/vector3.h
 
 .././material/material.h
 vector3.h
@@ -50,17 +64,33 @@ intersection.h
 vector3.h
 .././ray/vector3.h
 
+.././shape/shape.h
+options.h
+.././shape/options.h
+libft_standart.h
+.././shape/libft_standart.h
+material.h
+.././shape/material.h
+intersection.h
+.././shape/intersection.h
+
 .././vector3/vector3.h
+libft_standart.h
+.././vector3/libft_standart.h
 math.h
 .././vector3/math.h
 stdlib.h
 .././vector3/stdlib.h
 
-/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree.h
-mesh.h
-/Users/vladimir/workspace/21_ray_tracer/kd_tree/mesh.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/scene.c
+scene.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/scene.h
 
-/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_find_triangle_side.c
-kd_tree.h
-/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/scene.h
+light.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/light.h
+shape.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/shape.h
+accelerated_mesh.h
+/Users/ashari/21_ray_tracer-test_mesh/scene/accelerated_mesh.h
 

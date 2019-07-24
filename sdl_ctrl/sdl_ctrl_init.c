@@ -2,7 +2,7 @@
 
 void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 {
-	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) < 0)
 		sdl_ctrl_error(__FUNCTION__, __LINE__);
 
 	SDL_GL_SetAttribute(SDL_GL_FRAMEBUFFER_SRGB_CAPABLE, 1); // todo this doesnt give effect
@@ -32,6 +32,6 @@ void				sdl_ctrl_init(t_sdl_ctrl *sdl)
 		WINDOW_WIDTH,
 		WINDOW_HEIGHT
 	);
-	sdl->data = (Uint32 *)malloc_guard(sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
+	sdl->data = (Uint32 *)malloc(sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
 	ft_bzero(sdl->data, sizeof(Uint32) * WINDOW_WIDTH * WINDOW_HEIGHT);
 }

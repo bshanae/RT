@@ -17,7 +17,7 @@ void					renderer_radiance(t_renderer *renderer)
 	{
 		if (!scene_intersect(renderer->scene, &renderer->intersection))
 		{
-			vector3_add_eq_cp(&renderer->radiance, vector3_component_mul_cp(BACKGROUND, mask));
+//			vector3_add_eq_cp(&renderer->radiance, vector3_component_mul_cp(BACKGROUND, mask));
 			break ;
 		}
 

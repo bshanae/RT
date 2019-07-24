@@ -61,6 +61,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
   "CMakeFiles/pt_sdl.dir/main.c.o"
+  "CMakeFiles/pt_sdl.dir/vector3/malloc.c.o"
   "pt_sdl.pdb"
   "pt_sdl"
 )

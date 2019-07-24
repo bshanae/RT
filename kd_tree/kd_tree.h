@@ -19,7 +19,7 @@ typedef struct 		s_kd_tree_array
 
 t_kd_tree_array		kd_tree_array_create(int capacity);
 
-void				kd_tree_array_add(t_kd_tree_array *array, INT_REF value);
+int					kd_tree_array_add(t_kd_tree_array *array, INT_REF value);
 float 				kd_tree_array_find_median(const t_kd_tree_array *array, const t_mesh *mesh, t_kd_tree_axis axis);
 
 typedef struct		s_kd_tree_bb

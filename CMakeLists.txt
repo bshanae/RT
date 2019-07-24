@@ -143,5 +143,5 @@ add_executable(pt_sdl
         ${SOURCE_ACCELERATED_MESH}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
-        ${SOURCE_MAIN})
+        ${SOURCE_MAIN} vector3/malloc.c)
 
