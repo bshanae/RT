@@ -11,7 +11,7 @@
 # include "intersection.h"
 # include "sampler.h"
 
-# define CAMERA_STEP	0.1f
+# define CAMERA_STEP	0.8f
 
 typedef struct 			s_renderer
 {

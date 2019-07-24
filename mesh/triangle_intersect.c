@@ -21,8 +21,6 @@ int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersect
 
 	if (determinant < INTERSECTION_MIN)
 		return (0);
-	if (fabsf(determinant) < INTERSECTION_MIN)
-		return (0);
 
 	inverse_determinant = 1.f / determinant;
 

@@ -5,13 +5,13 @@
 # define WINDOW_HEIGHT			480
 
 # define FOCUS_EFFECT			0
-# define PIXEL_JITTERING		1
+# define PIXEL_JITTERING		0
 
 # define QUIT_AFTER_SAMPLING	0
 # define RENDER_PROGRESS		2
 
-# define SAMPLES				256
-# define PATH_DEPTH				16
+# define SAMPLES				1
+# define PATH_DEPTH				1
 # define RUSSIAN_DEPTH			8
 # define LIGHT_SAMPLING			1
 # define SRGB					1
@@ -31,7 +31,10 @@
 # define SCENE_SHAPES_CAPACITY	64
 # define SCENE_LIGHTS_CAPACITY	8
 
-# define MESH_RESIZE			75
-# define MESH_SHIFT				(t_vector3){0., -5.5, 0.}
+# define MESH_RESIZE			2.
+# define MESH_SHIFT				(t_vector3){0., -2., 10.}
+
+//# define MESH_RESIZE			2.
+//# define MESH_SHIFT				(t_vector3){0., 0., 0.}
 
 #endif

@@ -1,7 +1,7 @@
 #include "kd_tree.h"
 
 # define DEBUG			0
-# define DEPTH			12
+# define DEPTH			20
 
 static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array *array, int depth)
 {
@@ -73,5 +73,6 @@ t_kd_tree_node			*kd_tree_build(const t_mesh *mesh)
 	for (int i = 0; i < mesh->triangles_number; i++)
 		kd_tree_array_add(&array, &i);
 	root = build_tree_recursive(mesh, &array, 0);
+	printf("tree total polygons = %d\n", count(root));
 	return (root);
 }

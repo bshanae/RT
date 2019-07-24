@@ -29,9 +29,12 @@ t_vector3				renderer_radiance_light(t_renderer *renderer)
 		intersection.ray.direction = light_direction;
 
 		if (!scene_intersect(renderer->scene, &intersection))
-			continue ;
+			continue;
 		if (intersection.shape_index != i)
-			continue ;
+		{
+			renderer->radiance = (t_vector3){0., 0., 1.};
+			continue;
+		}
 		emission_intensity = vector3_dot_ref(&renderer->intersection.normal, &intersection.ray.direction);
 		if (emission_intensity < 0.)
 			continue ;

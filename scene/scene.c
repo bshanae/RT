@@ -33,10 +33,12 @@ int					scene_intersect(t_scene *scene, t_intersection *intersection)
 {
 	intersection->shape_index = -1;
 	intersection->ray.t = INTERSECTION_MAX;
-	if (scene->accelerated_mesh)
-		accelerated_mesh_intersect(scene->accelerated_mesh, intersection);
+	if (scene->accelerated_mesh && accelerated_mesh_intersect(scene->accelerated_mesh, intersection))
+		intersection->shape_index = 1000;
+
 	for (int i = 0; i < scene->shapes_length; ++i)
 		if (shape_intersect(scene->shapes + i, intersection))
 			intersection->shape_index = i;
+
 	return (intersection->shape_index != -1);
 }
