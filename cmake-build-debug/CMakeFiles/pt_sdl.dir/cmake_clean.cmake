@@ -51,6 +51,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.o"
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.o"
   "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.o"
+  "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o"
   "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o"
   "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o"
   "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o"

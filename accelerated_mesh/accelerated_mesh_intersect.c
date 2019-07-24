@@ -9,9 +9,7 @@ int 				accelerated_mesh_intersect(t_accelerated_mesh *mesh ,t_intersection *int
 		intersection->material = mesh->mesh->material;
 		intersection->hit = ray_calculate(&intersection->ray);
 		intersection->shape_index = 1000;
-//		printf("intersection\n");
 		return (1);
 	}
-//	printf("no intersection\n");
 	return (0);
 }

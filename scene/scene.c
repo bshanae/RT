@@ -4,7 +4,7 @@ t_scene				*scene_new()
 {
 	t_scene			*new;
 
-	new = (t_scene *)malloc(sizeof(t_scene));
+	new = (t_scene *)malloc_guard(sizeof(t_scene));
 	new->shapes_length = 0;
 	new->lights_length = 0;
 	return (new);

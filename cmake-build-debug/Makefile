@@ -501,6 +501,33 @@ kd_tree/kd_tree_array_create.c.s:
 	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.s
 .PHONY : kd_tree/kd_tree_array_create.c.s
 
+kd_tree/kd_tree_array_find_median.o: kd_tree/kd_tree_array_find_median.c.o
+
+.PHONY : kd_tree/kd_tree_array_find_median.o
+
+# target to build an object file
+kd_tree/kd_tree_array_find_median.c.o:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o
+.PHONY : kd_tree/kd_tree_array_find_median.c.o
+
+kd_tree/kd_tree_array_find_median.i: kd_tree/kd_tree_array_find_median.c.i
+
+.PHONY : kd_tree/kd_tree_array_find_median.i
+
+# target to preprocess a source file
+kd_tree/kd_tree_array_find_median.c.i:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.i
+.PHONY : kd_tree/kd_tree_array_find_median.c.i
+
+kd_tree/kd_tree_array_find_median.s: kd_tree/kd_tree_array_find_median.c.s
+
+.PHONY : kd_tree/kd_tree_array_find_median.s
+
+# target to generate assembly for a file
+kd_tree/kd_tree_array_find_median.c.s:
+	$(MAKE) -f CMakeFiles/pt_sdl.dir/build.make CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.s
+.PHONY : kd_tree/kd_tree_array_find_median.c.s
+
 kd_tree/kd_tree_bb_create.o: kd_tree/kd_tree_bb_create.c.o
 
 .PHONY : kd_tree/kd_tree_bb_create.o
@@ -1821,6 +1848,9 @@ help:
 	@echo "... kd_tree/kd_tree_array_create.o"
 	@echo "... kd_tree/kd_tree_array_create.i"
 	@echo "... kd_tree/kd_tree_array_create.s"
+	@echo "... kd_tree/kd_tree_array_find_median.o"
+	@echo "... kd_tree/kd_tree_array_find_median.i"
+	@echo "... kd_tree/kd_tree_array_find_median.s"
 	@echo "... kd_tree/kd_tree_bb_create.o"
 	@echo "... kd_tree/kd_tree_bb_create.i"
 	@echo "... kd_tree/kd_tree_bb_create.s"

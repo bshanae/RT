@@ -21,5 +21,11 @@ t_triangle			triangle_create(VECTOR3_REF a, VECTOR3_REF b, VECTOR3_REF c, VECTOR
 		triangle.normal = *normal;
 	else
 		triangle.normal = triangle_normal(&triangle);
+	triangle.center = (t_vector3)
+		{
+			(triangle.a.x + triangle.b.x + triangle.c.x) / 3.,
+			(triangle.a.y + triangle.b.y + triangle.c.y) / 3.,
+			(triangle.a.z + triangle.b.z + triangle.c.z) / 3.
+		};
 	return (triangle);
 }

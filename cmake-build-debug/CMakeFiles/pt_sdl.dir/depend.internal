@@ -115,6 +115,17 @@ CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o
  .././vector3/vector3.h
  /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree.h
  /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_create.c
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././intersection/intersection.h
+ .././material/material.h
+ .././mesh/mesh.h
+ .././mesh/triangle.h
+ .././options.h
+ .././ray/ray.h
+ .././vector3/vector3.h
+ /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree.h
+ /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o
  ../../21_libft/includes/libft_standart.h
  .././intersection/intersection.h

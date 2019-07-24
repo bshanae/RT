@@ -733,9 +733,22 @@ CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_intersect.c -o CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.s
 
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: CMakeFiles/pt_sdl.dir/flags.make
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: ../kd_tree/kd_tree_array_find_median.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o   -c /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c
+
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c > CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.i
+
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c -o CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.s
+
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o: ../accelerated_mesh/accelerated_mesh_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o   -c /Users/vladimir/workspace/21_ray_tracer/accelerated_mesh/accelerated_mesh_new.c
 
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.i: cmake_force
@@ -748,7 +761,7 @@ CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o: ../accelerated_mesh/accelerated_mesh_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o   -c /Users/vladimir/workspace/21_ray_tracer/accelerated_mesh/accelerated_mesh_delete.c
 
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.i: cmake_force
@@ -761,7 +774,7 @@ CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o: ../accelerated_mesh/accelerated_mesh_intersect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o   -c /Users/vladimir/workspace/21_ray_tracer/accelerated_mesh/accelerated_mesh_intersect.c
 
 CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.i: cmake_force
@@ -774,7 +787,7 @@ CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.s: cmake_for
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o: ../intersection/intersection_reflect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.o   -c /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_reflect.c
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.i: cmake_force
@@ -787,7 +800,7 @@ CMakeFiles/pt_sdl.dir/intersection/intersection_reflect.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o: ../intersection/intersection_refract.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o   -c /Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c
 
 CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.i: cmake_force
@@ -800,7 +813,7 @@ CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o: ../sampler/sampler_transform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_transform.c
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.i: cmake_force
@@ -813,7 +826,7 @@ CMakeFiles/pt_sdl.dir/sampler/sampler_transform.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o: ../sampler/sampler_uniform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_uniform.c
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.i: cmake_force
@@ -826,7 +839,7 @@ CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o: ../sampler/sampler_cosine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o   -c /Users/vladimir/workspace/21_ray_tracer/sampler/sampler_cosine.c
 
 CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.i: cmake_force
@@ -839,7 +852,7 @@ CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.s: cmake_force
 
 CMakeFiles/pt_sdl.dir/main.c.o: CMakeFiles/pt_sdl.dir/flags.make
 CMakeFiles/pt_sdl.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/pt_sdl.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/pt_sdl.dir/main.c.o"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt_sdl.dir/main.c.o   -c /Users/vladimir/workspace/21_ray_tracer/main.c
 
 CMakeFiles/pt_sdl.dir/main.c.i: cmake_force
@@ -904,6 +917,7 @@ pt_sdl_OBJECTS = \
 "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.o" \
 "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.o" \
 "CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.o" \
+"CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o" \
 "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o" \
 "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o" \
 "CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o" \
@@ -969,6 +983,7 @@ pt_sdl: CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_destroy.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_intersect.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_intersect.c.o
+pt_sdl: CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_new.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_delete.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/accelerated_mesh/accelerated_mesh_intersect.c.o
@@ -980,7 +995,7 @@ pt_sdl: CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/main.c.o
 pt_sdl: CMakeFiles/pt_sdl.dir/build.make
 pt_sdl: CMakeFiles/pt_sdl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Linking C executable pt_sdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Linking C executable pt_sdl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pt_sdl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

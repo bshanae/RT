@@ -8,7 +8,7 @@
 # define PIXEL_JITTERING		0
 
 # define QUIT_AFTER_SAMPLING	0
-# define RENDER_PROGRESS		1
+# define RENDER_PROGRESS		0
 
 # define SAMPLES				1
 # define PATH_DEPTH				1

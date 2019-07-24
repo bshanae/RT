@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vladimir/workspace/21_ray_tracer/intersection/intersection_refract.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/intersection/intersection_refract.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_add.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_add.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_create.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o"
+  "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_create.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_find_cut_axis.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_cut_axis.c.o"
   "/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_find_triangle_side.c" "/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_find_triangle_side.c.o"

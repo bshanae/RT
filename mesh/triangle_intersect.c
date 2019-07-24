@@ -42,6 +42,5 @@ int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersect
 
 	intersection->ray.t = t;
 	intersection->normal = triangle->normal;
-	intersection->hit = ray_calculate(&intersection->ray);
 	return (1);
 }

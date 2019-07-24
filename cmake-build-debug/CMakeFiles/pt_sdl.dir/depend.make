@@ -115,6 +115,17 @@ CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o: .././vector3/vector3.h
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o: ../kd_tree/kd_tree.h
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_create.c.o: ../kd_tree/kd_tree_array_create.c
 
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././intersection/intersection.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././material/material.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././mesh/mesh.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././mesh/triangle.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././options.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././ray/ray.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: .././vector3/vector3.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: ../kd_tree/kd_tree.h
+CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_array_find_median.c.o: ../kd_tree/kd_tree_array_find_median.c
+
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o: .././intersection/intersection.h
 CMakeFiles/pt_sdl.dir/kd_tree/kd_tree_bb_create.c.o: .././material/material.h

@@ -162,6 +162,9 @@
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_create.c">
 			<Option target="pt_sdl"/>
 		</Unit>
+		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_array_find_median.c">
+			<Option target="pt_sdl"/>
+		</Unit>
 		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/kd_tree/kd_tree_bb_create.c">
 			<Option target="pt_sdl"/>
 		</Unit>

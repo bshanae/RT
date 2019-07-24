@@ -109,7 +109,7 @@ set(SOURCE_KD_TREE
         ./kd_tree/kd_tree_bb_find_cut_axis.c
         ./kd_tree/kd_tree_bb_find_triangle_side.c
         ./kd_tree/kd_tree_destroy.c
-        ./kd_tree/kd_tree_intersect.c kd_tree/kd_tree_bb_intersect.c)
+        ./kd_tree/kd_tree_intersect.c kd_tree/kd_tree_bb_intersect.c kd_tree/kd_tree_array_find_median.c)
 
 set(SOURCE_ACCELERATED_MESH
         ./accelerated_mesh/accelerated_mesh_new.c
