@@ -2,9 +2,6 @@
 
 int 				kd_tree_bb_intersect(t_kd_tree_bb *bb, t_intersection *intersection)
 {
-#define BB_KOSKIV
-
-#ifdef BB_OLD
 	float			inv_dir;
 	float 			t[2];
 	float 			t_near;
@@ -13,8 +10,8 @@ int 				kd_tree_bb_intersect(t_kd_tree_bb *bb, t_intersection *intersection)
 	int 			i;
 
 	i = 0;
-	t_near = INTERSECTION_MIN;
-	t_far = INTERSECTION_MAX;
+	t_near = -INFINITY;
+	t_far = INFINITY;
 	while (i < 3)
 	{
 		inv_dir = 1. / *vector3_iter(&intersection->ray.direction, i);
@@ -32,37 +29,8 @@ int 				kd_tree_bb_intersect(t_kd_tree_bb *bb, t_intersection *intersection)
 			return (0);
 		i++;
 	}
-	if (t_near == INTERSECTION_MIN || t_near >= intersection->ray.t)
+	if (t_near == -INFINITY || t_near >= intersection->ray.t)
 		return (0);
+//	intersection->ray.t = t_far;
 	return (1);
-#endif
-
-#ifdef BB_KOSKIV
-	//If a mesh has no polygons, it won't have a root bbox either.
-	if (!bb) return 0;
-
-	t_vector3	dirfrac;
-	dirfrac.x = 1.0 / intersection->ray.direction.x;
-	dirfrac.y = 1.0 / intersection->ray.direction.y;
-	dirfrac.z = 1.0 / intersection->ray.direction.z;
-
-	double t1 = (bb->min.x - intersection->ray.origin.x)*dirfrac.x;
-	double t2 = (bb->max.x - intersection->ray.origin.x)*dirfrac.x;
-	double t3 = (bb->min.y - intersection->ray.origin.y)*dirfrac.y;
-	double t4 = (bb->max.y - intersection->ray.origin.y)*dirfrac.y;
-	double t5 = (bb->min.z - intersection->ray.origin.z)*dirfrac.z;
-	double t6 = (bb->max.z - intersection->ray.origin.z)*dirfrac.z;
-
-	double tmin = fmaxf(fmaxf(fminf(t1, t2), fminf(t3, t4)), fminf(t5, t6));
-	double tmax = fminf(fminf(fmaxf(t1, t2), fmaxf(t3, t4)), fmaxf(t5, t6));
-
-	// if tmax < 0, ray is intersecting AABB, but the whole AABB is behind us
-	if (tmax < 0)
-		return 0;
-
-	// if tmin > tmax, ray doesn't intersect AABB
-	if (tmin > tmax)
-		return 0;
-	return (1);
-#endif
 }

@@ -31,7 +31,8 @@ typedef struct		s_kd_tree_bb
 typedef enum 		e_kd_tree_side
 {
 	side_left,
-	side_right
+	side_right,
+	side_schrodinger
 }					t_kd_tree_side;
 
 t_kd_tree_bb		kd_tree_bb_create(const t_mesh *mesh, t_kd_tree_array *array);

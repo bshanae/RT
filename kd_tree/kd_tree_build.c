@@ -10,6 +10,7 @@ static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array 
 	t_kd_tree_array		right;
 	t_kd_tree_axis		axis;
 	float 				median;
+	t_kd_tree_side		side;
 	int 				error;
 
 	if (depth > DEPTH)
@@ -22,7 +23,6 @@ static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array 
 	if (array->length < 3)
 		return (node);
 
-
 	left = kd_tree_array_create((int)(array->length * 0.6));
 	right = kd_tree_array_create((int)(array->length * 0.6));
 
@@ -31,10 +31,13 @@ static t_kd_tree_node	*build_tree_recursive(const t_mesh *mesh, t_kd_tree_array 
 
 	error = 0;
 	for (int i = 0; i < node->array.length && !error; i++)
-		if (kd_tree_bb_find_triangle_side(mesh->triangles + node->array.indexes[i], axis, &median) == side_left)
+	{
+		side = kd_tree_bb_find_triangle_side(mesh->triangles + node->array.indexes[i], axis, &median);
+		if (side == side_left || side == side_schrodinger)
 			error = kd_tree_array_add(&left, node->array.indexes + i);
-		else
+		if (side == side_right || side == side_schrodinger)
 			error = kd_tree_array_add(&right, node->array.indexes + i);
+	}
 	if (error)
 	{
 		free(left.indexes);

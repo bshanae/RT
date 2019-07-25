@@ -25,7 +25,7 @@ float 				kd_tree_array_find_median(const t_kd_tree_array *array, const t_mesh *
 	for (int i = 0; i < array->length; i++)
 	{
 		temp[i].i = i;
-		temp[i].f = *vector3_iter(&mesh->triangles[array->indexes[i]].center, axis);
+		temp[i].f = (*vector3_iter(&mesh->triangles[array->indexes[i]].min, axis) + *vector3_iter(&mesh->triangles[array->indexes[i]].max, axis)) / 2.;
 	}
 	sort(temp, array->length);
 	if (array->length % 2)

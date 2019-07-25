@@ -19,7 +19,7 @@ int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersect
 	p_v = vector3_cross_ref(&intersection->ray.direction, &ac);
 	determinant = vector3_dot_ref(&ab, &p_v);
 
-	if (determinant < INTERSECTION_MIN)
+	if (fabsf(determinant) < INTERSECTION_MIN)
 		return (0);
 
 	inverse_determinant = 1.f / determinant;
@@ -37,7 +37,7 @@ int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersect
 	t = vector3_dot_ref(&ac, &q_v) * inverse_determinant;
 	if (t < INTERSECTION_MIN || t > intersection->ray.t)
 		return (0);
-
+//	printf("%f %f\n", t, intersection->ray.t);
 	intersection->ray.t = t;
 	intersection->normal = triangle->normal;
 	return (1);

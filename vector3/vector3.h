@@ -56,7 +56,7 @@ t_vector3				vector3_component_mul_cp(t_vector3 v1, t_vector3 v2);
 void					vector3_component_mul_eq_ref(t_vector3 *v1, VECTOR3_REF v2);
 void					vector3_component_mul_eq_cp(t_vector3 *v1, t_vector3 v2);
 
-float					*vector3_iter(t_vector3 *me, int i);
+float					*vector3_iter(const t_vector3 *me, int i);
 
 void					vector3_rotate_x(t_vector3 *me, float theta);
 void					vector3_rotate_y(t_vector3 *me, float theta);
