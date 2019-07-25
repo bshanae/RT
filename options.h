@@ -31,9 +31,9 @@
 # define SCENE_SHAPES_CAPACITY	64
 # define SCENE_LIGHTS_CAPACITY	8
 
-# define MESH_RESIZE			2.
-# define MESH_SHIFT				(t_vector3){0., -2., 10.}
-
-extern int double_intersection;
+# define MESH_RESIZE			.5
+# define MESH_SHIFT				(t_vector3){0., -2., 7.}
+# define MESH_ROTATE_X			1.
+# define MESH_ROTATE_Y			0.5
 
 #endif

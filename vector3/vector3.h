@@ -15,8 +15,6 @@ typedef struct 			s_vector3
 
 # define VECTOR3_REF	const t_vector3 *
 
-void					*malloc_guard(u_long size);
-
 t_vector3				vector3_add_ref(VECTOR3_REF, VECTOR3_REF);
 t_vector3				vector3_add_cp(t_vector3, t_vector3);
 void					vector3_add_eq_ref(t_vector3 *, VECTOR3_REF);
@@ -59,5 +57,8 @@ void					vector3_component_mul_eq_ref(t_vector3 *v1, VECTOR3_REF v2);
 void					vector3_component_mul_eq_cp(t_vector3 *v1, t_vector3 v2);
 
 float					*vector3_iter(t_vector3 *me, int i);
+
+void					vector3_rotate_x(t_vector3 *me, float theta);
+void					vector3_rotate_y(t_vector3 *me, float theta);
 
 #endif

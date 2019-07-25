@@ -31,7 +31,7 @@ void 				venus(t_renderer *renderer)
 void 				mesh(t_renderer *renderer)
 {
 	renderer->camera->position = (t_vector3){0., 5., 50.};
-	renderer->scene->accelerated_mesh =	accelerated_mesh_new("../obj_tests/teapot.obj", MATERIAL_RED);
+	renderer->scene->accelerated_mesh =	accelerated_mesh_new("../obj_tests/teapot1.obj", MATERIAL_RED);
 
 	scene_add_shape(renderer->scene, shape_sphere((t_vector3){2., 7., 25.}, .5, MATERIAL_LIGHT));
 

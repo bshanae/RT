@@ -49,7 +49,8 @@ set(SOURCE_VECTOR
         ./vector3/vector3_max.c
         ./vector3/vector3_min.c
         ./vector3/vector3_component_mul.c
-        ./vector3/vector3_iter.c)
+        ./vector3/vector3_iter.c
+        ./vector3/vector3_rotate.c)
 
 set(SOURCE_SDL_CTRL
         ./sdl_ctrl/cdl_ctrl_new.c
@@ -109,7 +110,9 @@ set(SOURCE_KD_TREE
         ./kd_tree/kd_tree_bb_find_cut_axis.c
         ./kd_tree/kd_tree_bb_find_triangle_side.c
         ./kd_tree/kd_tree_destroy.c
-        ./kd_tree/kd_tree_intersect.c kd_tree/kd_tree_bb_intersect.c kd_tree/kd_tree_array_find_median.c)
+        ./kd_tree/kd_tree_intersect.c
+        ./kd_tree/kd_tree_bb_intersect.c
+        ./kd_tree/kd_tree_array_find_median.c)
 
 set(SOURCE_ACCELERATED_MESH
         ./accelerated_mesh/accelerated_mesh_new.c
@@ -143,5 +146,5 @@ add_executable(pt_sdl
         ${SOURCE_ACCELERATED_MESH}
         ${SOURCE_INTERSECTION}
         ${SOURCE_SAMPLER}
-        ${SOURCE_MAIN} vector3/malloc.c)
+        ${SOURCE_MAIN})
 

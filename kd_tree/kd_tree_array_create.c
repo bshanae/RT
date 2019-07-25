@@ -6,6 +6,6 @@ t_kd_tree_array		kd_tree_array_create(int capacity)
 
 	array.length = 0;
 	array.capacity = capacity;
-	array.indexes = (int *)malloc_guard(sizeof(int) * capacity);
+	array.indexes = (int *)malloc(sizeof(int) * capacity);
 	return (array);
 }

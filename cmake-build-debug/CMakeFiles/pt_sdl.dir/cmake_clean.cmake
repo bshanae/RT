@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/vector3/vector3_min.c.o"
   "CMakeFiles/pt_sdl.dir/vector3/vector3_component_mul.c.o"
   "CMakeFiles/pt_sdl.dir/vector3/vector3_iter.c.o"
+  "CMakeFiles/pt_sdl.dir/vector3/vector3_rotate.c.o"
   "CMakeFiles/pt_sdl.dir/sdl_ctrl/cdl_ctrl_new.c.o"
   "CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_delete.c.o"
   "CMakeFiles/pt_sdl.dir/sdl_ctrl/sdl_ctrl_error.c.o"
@@ -61,7 +62,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/pt_sdl.dir/sampler/sampler_uniform.c.o"
   "CMakeFiles/pt_sdl.dir/sampler/sampler_cosine.c.o"
   "CMakeFiles/pt_sdl.dir/main.c.o"
-  "CMakeFiles/pt_sdl.dir/vector3/malloc.c.o"
   "pt_sdl.pdb"
   "pt_sdl"
 )
