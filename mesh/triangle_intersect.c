@@ -37,7 +37,6 @@ int 				triangle_intersect(const t_triangle *triangle, t_intersection *intersect
 	t = vector3_dot_ref(&ac, &q_v) * inverse_determinant;
 	if (t < INTERSECTION_MIN || t > intersection->ray.t)
 		return (0);
-//	printf("%f %f\n", t, intersection->ray.t);
 	intersection->ray.t = t;
 	intersection->normal = triangle->normal;
 	return (1);

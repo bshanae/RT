@@ -33,7 +33,8 @@ void 				mesh(t_renderer *renderer)
 	renderer->camera->position = (t_vector3){0., 5., 50.};
 	renderer->scene->accelerated_mesh =	accelerated_mesh_new("../obj_tests/teapot1.obj", MATERIAL_RED);
 
-	scene_add_shape(renderer->scene, shape_sphere((t_vector3){2., 7., 25.}, .5, MATERIAL_LIGHT));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){2., 7., 20.}, .5, MATERIAL_LIGHT));
+	scene_add_shape(renderer->scene, shape_sphere((t_vector3){-2., 3., 25.}, .2, MATERIAL_LIGHT));
 
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., -2., 0.}, (t_vector3){0., 1., 0.}, MATERIAL_WHITE)); // lower
 	scene_add_shape(renderer->scene, shape_plane((t_vector3){0., 12., 0.}, (t_vector3){0., -1., 0.}, MATERIAL_WHITE)); // upper
@@ -51,8 +52,6 @@ int					main()
 	renderer = renderer_new();
 
 	mesh(renderer);
-//	venus(renderer);
-	//cornell_box(renderer);
 
 	renderer_loop(&renderer);
 	return (0);

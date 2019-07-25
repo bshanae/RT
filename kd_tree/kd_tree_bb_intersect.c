@@ -31,6 +31,5 @@ int 				kd_tree_bb_intersect(t_kd_tree_bb *bb, t_intersection *intersection)
 	}
 	if (t_near == -INFINITY || t_near >= intersection->ray.t)
 		return (0);
-//	intersection->ray.t = t_far;
 	return (1);
 }
