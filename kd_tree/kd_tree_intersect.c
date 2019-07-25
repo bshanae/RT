@@ -18,6 +18,8 @@ int 				kd_tree_intersect(t_kd_tree_node *node, t_intersection *intersection)
 		result = 0;
 		for (int i = 0; i < node->array.length; i++)
 			result += triangle_intersect(node->mesh->triangles + node->array.indexes[i], intersection);
+		if (result > 1)
+			double_intersection = 1;
 		return (result);
 	}
 	return (0);

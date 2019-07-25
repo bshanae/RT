@@ -34,7 +34,6 @@
 # define MESH_RESIZE			2.
 # define MESH_SHIFT				(t_vector3){0., -2., 10.}
 
-//# define MESH_RESIZE			2.
-//# define MESH_SHIFT				(t_vector3){0., 0., 0.}
+extern int double_intersection;
 
 #endif

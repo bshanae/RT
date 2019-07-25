@@ -17,6 +17,5 @@ t_kd_tree_bb				kd_tree_bb_create(const t_mesh *mesh, t_kd_tree_array *array)
 			ptr++;
 		}
 	}
-	bb.middle = (t_vector3){0.5 * (bb.min.x + bb.max.x), 0.5 * (bb.min.y + bb.max.y), 0.5 * (bb.min.z + bb.max.z)};
 	return (bb);
 }

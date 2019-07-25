@@ -26,7 +26,6 @@ typedef struct		s_kd_tree_bb
 {
 	t_vector3		min;
 	t_vector3		max;
-	t_vector3		middle;
 }					t_kd_tree_bb;
 
 typedef enum 		e_kd_tree_side
