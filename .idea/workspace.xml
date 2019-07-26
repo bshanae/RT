@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gtk_install.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gtk_install.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -39,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            <state relative-caret-position="150">
+              <caret line="10" column="75" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -86,8 +88,8 @@
         <option value="$PROJECT_DIR$/console/console_spawn.c" />
         <option value="$PROJECT_DIR$/rt/rt_parallel.cl" />
         <option value="$PROJECT_DIR$/intersection/intersection.c" />
-        <option value="$PROJECT_DIR$/gtk_install.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/gtk_install.txt" />
         <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
@@ -163,12 +165,12 @@
       <workItem from="1564060758540" duration="4000" />
       <workItem from="1564060785948" duration="3263000" />
       <workItem from="1564079560550" duration="2000" />
-      <workItem from="1564079596829" duration="6768000" />
+      <workItem from="1564079596829" duration="9197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13437000" />
+    <option name="totallyTimeSpent" value="15866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -244,13 +246,6 @@
     <entry file="file://$PROJECT_DIR$/rt/rt_parallel.cl" />
     <entry file="file://$PROJECT_DIR$/intersection/intersection.c" />
     <entry file="file://$PROJECT_DIR$/rt/rt_consistent.c" />
-    <entry file="file://$PROJECT_DIR$/gtk_install.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/bin/cmake/mac/share/cmake-3.14/Modules/FindPkgConfig.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -265,10 +260,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gtk_install.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="150">
+          <caret line="10" column="75" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

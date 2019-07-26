@@ -1,48 +1,58 @@
 #include "libft_ft_printf.h"
 
 #include <gtk/gtk.h>
+#include <math.h>
 
-void				func_clean(GtkWidget *widget, gpointer ptr)
+float				progress_value = 0.f;
+
+gboolean			unclick(gpointer ptr)
 {
-	gtk_entry_set_text(GTK_ENTRY(ptr), "");
+	if (progress_value > 0. && progress_value < 1.)
+		progress_value -= progress_value * sinf(progress_value * M_PI) / 5.;
+	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
+	return (TRUE);
 }
 
-void				func_write(GtkWidget *widget, gpointer ptr)
+void				click(GtkWidget *widget, gpointer ptr)
 {
-	g_print("%s\n", gtk_entry_get_text(GTK_ENTRY(ptr)));
+	if (progress_value < 1.)
+		progress_value += 0.05;
+	else
+		gtk_button_set_label(GTK_BUTTON(widget), "you are amazing!");
+	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
 }
 
 int					main(int argc, char **argv)
 {
 	GtkWidget		*window;
-	GtkWidget		*table;
-	GtkWidget		*entry;
-	GtkWidget		*button_clean;
-	GtkWidget		*button_write;
-
+	GtkWidget		*box;
+	GtkWidget		*progress;
+	GtkWidget		*button;
 
 	gtk_init(&argc, &argv);
 
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-	table = gtk_table_new(2, 2, 1);
-	entry = gtk_entry_new();
-	button_clean = gtk_button_new_with_label("clean");
-	button_write = gtk_button_new_with_label("write");
+
+	box = gtk_vbox_new(TRUE, 10);
+
+	progress = gtk_progress_bar_new();
+
+	button = gtk_button_new_with_label("click!");
 
 	gtk_widget_set_size_request(window, 480, 360);
 	gtk_window_set_title(GTK_WINDOW(window), "Window");
 
-	gtk_table_attach(GTK_TABLE(table), entry, 0, 2, 0, 1, GTK_FILL, GTK_FILL, 0, 0);
-	gtk_table_attach(GTK_TABLE(table), button_clean, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
-	gtk_table_attach(GTK_TABLE(table), button_write, 1, 2, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+	gtk_box_pack_start(GTK_BOX(box), progress, TRUE, TRUE, FALSE);
+	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, FALSE);
 
-	gtk_container_add(GTK_CONTAINER(window), table);
+	gtk_container_add(GTK_CONTAINER(window), box);
 
 	gtk_widget_show_all(window);
 
+	g_timeout_add(400, unclick, (gpointer)progress);
+
 	g_signal_connect(window, "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-	g_signal_connect(button_clean, "clicked", G_CALLBACK(func_clean), (gpointer)entry);
-	g_signal_connect(button_write, "clicked", G_CALLBACK(func_write), (gpointer)entry);
+	g_signal_connect(button, "clicked", G_CALLBACK(click), (gpointer)progress);
 
 	gtk_main();
 

@@ -35,6 +35,8 @@ libft_ft_printf.h
 /Users/vladimir/workspace/21_ray_tracer/libft_ft_printf.h
 gtk/gtk.h
 -
+math.h
+-
 
 /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h
