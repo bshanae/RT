@@ -1,0 +1,4 @@
+fix libffi :
+    export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig"
+compilation :
+    gcc `pkg-config --libs --cflags gtk+-3.0` main.c
