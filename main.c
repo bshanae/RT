@@ -1,60 +1,74 @@
-#include "libft_ft_printf.h"
+#include "nuklear_cross.h"
+#include <stdio.h>
 
-#include <gtk/gtk.h>
-#include <math.h>
+enum radioOptions {
+    EASY,
+    HARD
+};
 
-float				progress_value = 0.f;
+struct my_nkc_app {
+    struct nkc* nkcHandle;
 
-gboolean			unclick(gpointer ptr)
-{
-	if (progress_value > 0. && progress_value < 1.)
-		progress_value -= progress_value * sinf(progress_value * M_PI) / 5.;
-	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
-	return (TRUE);
+    /* some user data */
+    float value;
+    enum radioOptions op;
+};
+
+void mainLoop(void* loopArg){
+    struct my_nkc_app* myapp = (struct my_nkc_app*)loopArg;
+    struct nk_context *ctx = nkc_get_ctx(myapp->nkcHandle);
+
+    union nkc_event e = nkc_poll_events(myapp->nkcHandle);
+    if( (e.type == NKC_EWINDOW) && (e.window.param == NKC_EQUIT) ){
+        nkc_stop_main_loop(myapp->nkcHandle);
+    }
+
+    /* Nuklear GUI code */
+    if (nk_begin(ctx, "Show", nk_rect(50, 50, 220, 220),
+                 NK_WINDOW_BORDER | NK_WINDOW_MOVABLE| NK_WINDOW_CLOSABLE)) {
+        /* fixed widget pixel width */
+        nk_layout_row_static(ctx, 30, 80, 1);
+        if (nk_button_label(ctx, "button")) {
+            /* event handling */
+            printf("Button pressed\n");
+        }
+
+        /* fixed widget window ratio width */
+        nk_layout_row_dynamic(ctx, 30, 2);
+        if (nk_option_label(ctx, "easy", myapp->op == EASY)) myapp->op = EASY;
+        if (nk_option_label(ctx, "hard", myapp->op == HARD)) myapp->op = HARD;
+
+        /* custom widget pixel width */
+        nk_layout_row_begin(ctx, NK_STATIC, 30, 2);
+        {
+            nk_layout_row_push(ctx, 50);
+            nk_label(ctx, "Volume:", NK_TEXT_LEFT);
+            nk_layout_row_push(ctx, 110);
+            nk_slider_float(ctx, 0, &(myapp->value), 1.0f, 0.1f);
+        }
+        nk_layout_row_end(ctx);
+    }
+    nk_end(ctx);
+    /* End Nuklear GUI */
+
+    nkc_render(myapp->nkcHandle, nk_rgb(40,40,40) );
 }
 
-void				click(GtkWidget *widget, gpointer ptr)
-{
-	if (progress_value < 1.)
-		progress_value += 0.05;
-	else
-		gtk_button_set_label(GTK_BUTTON(widget), "you are amazing!");
-	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
-}
+int main(){
+    struct my_nkc_app myapp;
+    struct nkc nkcx; /* Allocate memory for Nuklear+ handle */
+    myapp.nkcHandle = &nkcx;
+    /* init some user data */
+    myapp.value = 0.4;
+    myapp.op = HARD;
 
-int					main(int argc, char **argv)
-{
-	GtkWidget		*window;
-	GtkWidget		*box;
-	GtkWidget		*progress;
-	GtkWidget		*button;
-
-	gtk_init(&argc, &argv);
-
-	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-
-	box = gtk_vbox_new(TRUE, 10);
-
-	progress = gtk_progress_bar_new();
-
-	button = gtk_button_new_with_label("click!");
-
-	gtk_widget_set_size_request(window, 480, 360);
-	gtk_window_set_title(GTK_WINDOW(window), "Window");
-
-	gtk_box_pack_start(GTK_BOX(box), progress, TRUE, TRUE, FALSE);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, FALSE);
-
-	gtk_container_add(GTK_CONTAINER(window), box);
-
-	gtk_widget_show_all(window);
-
-	g_timeout_add(400, unclick, (gpointer)progress);
-
-	g_signal_connect(window, "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-	g_signal_connect(button, "clicked", G_CALLBACK(click), (gpointer)progress);
-
-	gtk_main();
-
-	return (0);
+    if( nkc_init( myapp.nkcHandle, "Nuklear+ Example", 640, 480, NKC_WIN_NORMAL ) ){
+        printf("Successfull init. Starting 'infinite' main loop...\n");
+        nkc_set_main_loop(myapp.nkcHandle, mainLoop, (void*)&myapp );
+    } else {
+        printf("Can't init NKC\n");
+    }
+    printf("Value after exit = %f\n", myapp.value);
+    nkc_shutdown( myapp.nkcHandle );
+    return 0;
 }
