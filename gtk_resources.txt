@@ -1,3 +1,0 @@
-https://www.raspberrypi.org/magpi-issues/C_GUI_Programming.pdf
-https://github.com/MaxPerl/perl-Gtk3-Tutorial
-https://codeburst.io/how-to-style-your-gtk-app-with-css-and-haskell-1aa99c87eb8f

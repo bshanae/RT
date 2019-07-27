@@ -1,58 +1,62 @@
 #include "libft_ft_printf.h"
 
 #include <gtk/gtk.h>
-#include <math.h>
 
-float				progress_value = 0.f;
-
-gboolean			unclick(gpointer ptr)
+void				func_clean(GtkWidget *widget, gpointer ptr)
 {
-	if (progress_value > 0. && progress_value < 1.)
-		progress_value -= progress_value * sinf(progress_value * M_PI) / 5.;
-	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
-	return (TRUE);
+	gtk_entry_set_text(GTK_ENTRY(ptr), "");
 }
 
-void				click(GtkWidget *widget, gpointer ptr)
+void				func_write(GtkWidget *widget, gpointer ptr)
 {
-	if (progress_value < 1.)
-		progress_value += 0.05;
-	else
-		gtk_button_set_label(GTK_BUTTON(widget), "you are amazing!");
-	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(ptr), progress_value);
+	g_print("%s\n", gtk_entry_get_text(GTK_ENTRY(ptr)));
 }
 
 int					main(int argc, char **argv)
 {
+	GtkCssProvider *css_provider;
 	GtkWidget		*window;
-	GtkWidget		*box;
-	GtkWidget		*progress;
-	GtkWidget		*button;
+	GtkWidget		*box_big;
+	GtkWidget		*box_little;
+	GtkWidget		*entry;
+	GtkWidget		*button_clean;
+	GtkWidget		*button_write;
+
 
 	gtk_init(&argc, &argv);
 
+	css_provider = gtk_css_provider_new();
+	gtk_css_provider_load_from_path(css_provider, "/Users/vladimir/workspace/21_ray_tracer/Adwaita/gtk-dark.css", NULL);
+	gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),
+											  GTK_STYLE_PROVIDER(css_provider),
+											  GTK_STYLE_PROVIDER_PRIORITY_USER);
+
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-	box = gtk_vbox_new(TRUE, 10);
+	box_big = gtk_vbox_new(TRUE, 0);
+	box_little = gtk_hbox_new(TRUE, 10);
 
-	progress = gtk_progress_bar_new();
+	entry = gtk_entry_new();
 
-	button = gtk_button_new_with_label("click!");
+	button_clean = gtk_button_new_with_label("clean");
+	button_write = gtk_button_new_with_label("write");
 
 	gtk_widget_set_size_request(window, 480, 360);
 	gtk_window_set_title(GTK_WINDOW(window), "Window");
 
-	gtk_box_pack_start(GTK_BOX(box), progress, TRUE, TRUE, FALSE);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, FALSE);
+	gtk_box_pack_start(GTK_BOX(box_little), button_clean, TRUE, TRUE, FALSE);
+	gtk_box_pack_start(GTK_BOX(box_little), button_write, TRUE, TRUE, FALSE);
 
-	gtk_container_add(GTK_CONTAINER(window), box);
+	gtk_box_pack_start(GTK_BOX(box_big), entry, TRUE, TRUE, TRUE);
+	gtk_box_pack_start(GTK_BOX(box_big), box_little, TRUE, TRUE, TRUE);
+
+	gtk_container_add(GTK_CONTAINER(window), box_big);
 
 	gtk_widget_show_all(window);
 
-	g_timeout_add(400, unclick, (gpointer)progress);
-
 	g_signal_connect(window, "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-	g_signal_connect(button, "clicked", G_CALLBACK(click), (gpointer)progress);
+	g_signal_connect(button_clean, "clicked", G_CALLBACK(func_clean), (gpointer)entry);
+	g_signal_connect(button_write, "clicked", G_CALLBACK(func_write), (gpointer)entry);
 
 	gtk_main();
 

@@ -69,7 +69,7 @@ set(GTK_LINKS_B
 
 link_directories(
 	../21_libft/
-	${GTK_LINKS_B})
+	${GTK_LINKS_A})
 
 link_libraries(
     "ft"
@@ -91,7 +91,7 @@ link_libraries(
 
 include_directories(
     ../21_libft/includes
-    ${GTK_INCLUDES_B})
+    ${GTK_INCLUDES_A})
 
 add_executable(test_gui
     main.c)
