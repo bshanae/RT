@@ -1,9 +1,9 @@
 #include "shape_list.h"
 
-static float       cone_cap_intersect(t_shape *shape, t_intersection *intersection)
+static double       cone_cap_intersect(t_shape *shape, t_intersection *intersection)
 {
 	t_cone_data	*data;
-	float 			t;
+	double 			t;
 
 	data = (t_cone_data *)shape->data;
 	if (!vector3_dot(&intersection->ray.direction, &data->axis))
@@ -23,11 +23,11 @@ int 				cone_intersect
 		(t_shape *shape, t_intersection *intersection)
 {
 	t_cone_data	    *data;
-	float 			k[3];
-	float 			discriminant;
-	float 			t[2];
+	double 			k[3];
+	double 			discriminant;
+	double 			t[2];
 	t_vector3		temp[3];
-	float 			angle[2];
+	double 			angle[2];
 
 	data = (t_cone_data *)shape->data;
 	temp[0] = vector3_sub(&intersection->ray.origin, &data->top);
@@ -72,7 +72,7 @@ static void			cone_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_cone
-		(t_vector3 top, t_vector3 bottom, float tangens, const t_material *material)
+		(t_vector3 top, t_vector3 bottom, double tangens, const t_material *material)
 {
 	t_shape			*shape;
 	t_cone_data	    *data;

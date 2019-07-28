@@ -8,7 +8,6 @@
 # include "camera.h"
 # include "scene.h"
 # include "shape_list.h"
-# include "open_cl.h"
 # include "mlx_keys.h"
 
 # define WIN_WIDTH         1000
@@ -52,7 +51,6 @@ typedef	struct 				s_rt
 		int 				*shadows;
 		int 				*tshadows;
 	}						settings;
-	t_open_cl				*open_cl;
 }							t_rt;
 
 t_rt						*rt_new();

@@ -5,7 +5,7 @@ int 			plane_intersect
 {
 	t_plane_data	*data;
 	t_vector3		temp[2];
-	float 			value[3];
+	double 			value[3];
 
 	data = (t_plane_data *)shape->data;
 	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))

@@ -31,7 +31,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/rt/rt_consistent.c.o"
   "CMakeFiles/rt.dir/rt/rt_parallel.c.o"
   "CMakeFiles/rt.dir/console/console_parallel.c.o"
-  "CMakeFiles/rt.dir/open_cl/open_cl.c.o"
+  "CMakeFiles/rt.dir/shape/shape_moebius.c.o"
+  "CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o"
+  "CMakeFiles/rt.dir/shape/shape_paraboloid.c.o"
   "rt.pdb"
   "rt"
 )

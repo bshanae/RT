@@ -82,7 +82,6 @@ CMakeFiles/rt.dir/light/light.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/light/light.c.o: ../light/light.c
 CMakeFiles/rt.dir/light/light.c.o: ../light/light.h
 
-CMakeFiles/rt.dir/main.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/main.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/main.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/main.c.o: ../camera/camera.h
@@ -92,12 +91,12 @@ CMakeFiles/rt.dir/main.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/main.c.o: ../light/light.h
 CMakeFiles/rt.dir/main.c.o: ../material/material.h
 CMakeFiles/rt.dir/main.c.o: ../mlx/mlx_keys.h
-CMakeFiles/rt.dir/main.c.o: ../open_cl/open_cl.h
 CMakeFiles/rt.dir/main.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/main.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/main.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/main.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/main.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/main.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/main.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/main.c.o: ../main.c
 
@@ -106,27 +105,10 @@ CMakeFiles/rt.dir/material/material.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/material/material.c.o: ../material/material.c
 CMakeFiles/rt.dir/material/material.c.o: ../material/material.h
 
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../../21_libft/includes/libft_ft_printf.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../../21_libft/includes/libft_standart.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../../21_libft/includes/libft_vector.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../camera/camera.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../color/color.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../intersection/intersection.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../light/light.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../material/material.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../ray/ray.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../scene/scene.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../shape/shape.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../shape/shape_list.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../vector3/vector3.h
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../open_cl/open_cl.c
-CMakeFiles/rt.dir/open_cl/open_cl.c.o: ../open_cl/open_cl.h
-
 CMakeFiles/rt.dir/ray/ray.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/ray/ray.c.o: ../ray/ray.c
 CMakeFiles/rt.dir/ray/ray.c.o: ../ray/ray.h
 
-CMakeFiles/rt.dir/rt/rt.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../camera/camera.h
@@ -136,16 +118,15 @@ CMakeFiles/rt.dir/rt/rt.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../light/light.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../material/material.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../mlx/mlx_keys.h
-CMakeFiles/rt.dir/rt/rt.c.o: ../open_cl/open_cl.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.c
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.h
 
-CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../camera/camera.h
@@ -155,16 +136,15 @@ CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../light/light.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../material/material.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../mlx/mlx_keys.h
-CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../open_cl/open_cl.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../rt/rt_consistent.c
 
-CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../camera/camera.h
@@ -174,16 +154,15 @@ CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../light/light.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../material/material.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../mlx/mlx_keys.h
-CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../open_cl/open_cl.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../rt/rt_mlx.c
 
-CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../../21_libft/includes/libft_ft_printf.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../camera/camera.h
@@ -193,11 +172,11 @@ CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../intersection/intersection.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../light/light.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../material/material.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../mlx/mlx_keys.h
-CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../open_cl/open_cl.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../rt/rt.h
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../rt/rt_parallel.c
@@ -248,6 +227,7 @@ CMakeFiles/rt.dir/shape/shape.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape.c
 CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape_moebius.h
 
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../color/color.h
@@ -259,6 +239,7 @@ CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_aabb.c
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_moebius.h
 
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../color/color.h
@@ -270,6 +251,7 @@ CMakeFiles/rt.dir/shape/shape_cone.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_cone.c
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_moebius.h
 
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../color/color.h
@@ -281,6 +263,7 @@ CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_cylinder.c
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_moebius.h
 
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../color/color.h
@@ -292,6 +275,39 @@ CMakeFiles/rt.dir/shape/shape_disk.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../shape/shape_disk.c
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_disk.c.o: ../shape/shape_moebius.h
+
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../color/color.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../intersection/intersection.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../light/light.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../material/material.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../ray/ray.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../shape/shape.h
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../shape/shape_moebius.c
+CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../shape/shape_moebius.h
+
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../color/color.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../intersection/intersection.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../light/light.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../material/material.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../ray/ray.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../shape/shape.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../shape/shape_moebius.h
+CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../shape/shape_moebius_equation.c
+
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../../21_libft/includes/libft_standart.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../color/color.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../intersection/intersection.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../light/light.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../material/material.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../ray/ray.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../vector3/vector3.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../shape/shape.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../shape/shape_moebius.h
+CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../shape/shape_paraboloid.c
 
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../color/color.h
@@ -302,6 +318,7 @@ CMakeFiles/rt.dir/shape/shape_plane.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_plane.c
 
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../../21_libft/includes/libft_standart.h
@@ -313,6 +330,7 @@ CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../ray/ray.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../vector3/vector3.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_list.h
+CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_moebius.h
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
 
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.c

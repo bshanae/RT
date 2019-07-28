@@ -6,12 +6,12 @@
 typedef struct 		s_material
 {
 	t_vector3		color;
-	float 	diffuse;
-	float 	specular;
-	float 	reflect;
-	float 	refract;
+	double 	diffuse;
+	double 	specular;
+	double 	reflect;
+	double 	refract;
 }					t_material;
 
-t_material			*material_new(t_vector3 color, float diffuse, float specular, float reflect, float refract);
+t_material			*material_new(t_vector3 color, double diffuse, double specular, double reflect, double refract);
 
 #endif

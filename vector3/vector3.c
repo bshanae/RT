@@ -10,15 +10,15 @@ t_vector3			*vector3_new(int num_of_elements, ...)
 	va_start(args, num_of_elements);
 	if (num_of_elements == 1)
 	{
-		new->x = (float)va_arg(args, double);
+		new->x = (double)va_arg(args, double);
 		new->y = new->x;
 		new->z = new->x;
 	}
 	else if (num_of_elements == 3)
 	{
-		new->x = (float)va_arg(args, double);
-		new->y = (float)va_arg(args, double);
-		new->z = (float)va_arg(args, double);
+		new->x = (double)va_arg(args, double);
+		new->y = (double)va_arg(args, double);
+		new->z = (double)va_arg(args, double);
 	}
 	else
 	{
@@ -36,19 +36,19 @@ void				vector3_delete(t_vector3 **me)
 	*me = NULL;
 }
 
-float 		vector3_length(const t_vector3 *me)
+double 		vector3_length(const t_vector3 *me)
 {
 	return (sqrtf(me->x * me->x + me->y * me->y + me->z * me->z));
 }
 
-float 		vector3_s_length(const t_vector3 me)
+double 		vector3_s_length(const t_vector3 me)
 {
 	return (sqrtf(me.x * me.x + me.y * me.y + me.z * me.z));
 }
 
 void				vector3_normalize(t_vector3 *me)
 {
-	float		length;
+	double		length;
 
 	length = vector3_length(me);
 	me->x /= length;
@@ -58,7 +58,7 @@ void				vector3_normalize(t_vector3 *me)
 
 t_vector3			vector3_s_normalize(t_vector3 me)
 {
-	float		length;
+	double		length;
 
 	length = vector3_length(&me);
 	me.x /= length;
@@ -76,12 +76,12 @@ t_vector3			vector3_normalized(const t_vector3 *me)
 	return (result);
 }
 
-float 		vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
+double 		vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
 {
 	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
 }
 
-float 		vector3_s_dot(t_vector3 v1, t_vector3 v2)
+double 		vector3_s_dot(t_vector3 v1, t_vector3 v2)
 {
 	return (v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
 }
@@ -174,7 +174,7 @@ void				vector3_s_add_eq(t_vector3 *v1, t_vector3 v2)
 	v1->z += v2.z;
 }
 
-t_vector3			vector3_mul(const t_vector3 *v1, float k)
+t_vector3			vector3_mul(const t_vector3 *v1, double k)
 {
 	t_vector3		result;
 
@@ -184,7 +184,7 @@ t_vector3			vector3_mul(const t_vector3 *v1, float k)
 	return (result);
 }
 
-t_vector3			vector3_s_mul(t_vector3 v1, float k)
+t_vector3			vector3_s_mul(t_vector3 v1, double k)
 {
 	v1.x *= k;
 	v1.y *= k;
@@ -192,14 +192,14 @@ t_vector3			vector3_s_mul(t_vector3 v1, float k)
 	return (v1);
 }
 
-void				vector3_mul_eq(t_vector3 *v1, float k)
+void				vector3_mul_eq(t_vector3 *v1, double k)
 {
 	v1->x = v1->x * k;
 	v1->y = v1->y * k;
 	v1->z = v1->z * k;
 }
 
-t_vector3			vector3_div(const t_vector3 *v1, float k)
+t_vector3			vector3_div(const t_vector3 *v1, double k)
 {
 	t_vector3		result;
 
@@ -209,7 +209,7 @@ t_vector3			vector3_div(const t_vector3 *v1, float k)
 	return (result);
 }
 
-t_vector3			vector3_s_div(t_vector3 v1, float k)
+t_vector3			vector3_s_div(t_vector3 v1, double k)
 {
 	t_vector3		result;
 
@@ -219,21 +219,21 @@ t_vector3			vector3_s_div(t_vector3 v1, float k)
 	return (result);
 }
 
-void				vector3_div_eq(t_vector3 *v1, float k)
+void				vector3_div_eq(t_vector3 *v1, double k)
 {
 	v1->x = v1->x / k;
 	v1->y = v1->y / k;
 	v1->z = v1->z / k;
 }
 
-float			*vector3_iter(t_vector3 *me, int i)
+double			*vector3_iter(t_vector3 *me, int i)
 {
 	if (i < 0 || i > 3)
 		return (NULL);
 	return (&me->x + i);
 }
 
-void				vector3_rotate_x(t_vector3 *me, float theta)
+void				vector3_rotate_x(t_vector3 *me, double theta)
 {
 	t_vector3		copy;
 
@@ -242,7 +242,7 @@ void				vector3_rotate_x(t_vector3 *me, float theta)
 	me->z = -1 * copy.y * sinf(theta) + copy.z * cosf(theta);
 }
 
-void				vector3_rotate_y(t_vector3 *me, float theta)
+void				vector3_rotate_y(t_vector3 *me, double theta)
 {
 	t_vector3		copy;
 

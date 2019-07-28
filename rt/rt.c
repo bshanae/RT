@@ -30,7 +30,6 @@ t_rt				*rt_new()
 	rt->settings.specular_light = &rt->scene->settings.specular_light;
 	rt->settings.shadows = &rt->scene->settings.shadows;
 	rt->settings.tshadows = &rt->scene->settings.tshadows;
-	rt->open_cl = open_cl_new(rt->img_data, WIN_WIDTH, WIN_HEIGHT);
 	return (rt);
 }
 
@@ -50,7 +49,6 @@ void 				rt_reset(t_rt **me)
 
 	old = *me;
 	*me = (*me)->clone;
-	(*me)->open_cl = old->open_cl;
 	(*me)->clone = NULL;
 	rt_delete(&old);
 	rt_clone(*me);
@@ -102,7 +100,6 @@ void 				rt_clone(t_rt *me)
 	me->clone->settings.specular_light = &me->clone->scene->settings.specular_light;
 	me->clone->settings.shadows = &me->clone->scene->settings.shadows;
 	me->clone->settings.tshadows = &me->clone->scene->settings.tshadows;
-	me->clone->open_cl = NULL;
 }
 
 void				rt_set_camera(t_rt *me, t_vector3 position)
@@ -156,14 +153,8 @@ void				rt_perform(t_rt **me)
 
 void 				rt_render(t_rt *me)
 {
-	if (me->settings.parallel)
-		rt_parallel(me);
-	else
+//	if (me->settings.parallel)
+//		rt_parallel(me);
+//	else
 		rt_consistent(me);
-}
-
-void				rt_build_open_cl(t_rt *me)
-{
-	open_cl_alloc_device(me->open_cl, me->scene);
-	open_cl_set_args(me->open_cl);
 }

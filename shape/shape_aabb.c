@@ -4,10 +4,10 @@ int 			aabb_intersect
 	(t_shape *shape, t_intersection *intersection)
 {
 	t_aabb_data		*data;
-	float			inv_dir;
-	float 			t[2];
-	float 			t_near;
-	float 			t_far;
+	double			inv_dir;
+	double 			t[2];
+	double 			t_near;
+	double 			t_far;
 	int 			i;
 	t_vector3		normal;
 
@@ -21,7 +21,7 @@ int 			aabb_intersect
 		t[0] = (*vector3_iter(&data->min, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
 		t[1] = (*vector3_iter(&data->max, i) - *vector3_iter(&intersection->ray.origin, i)) * inv_dir;
 		if (inv_dir < 0.)
-			swap_memory(t, t + 1, sizeof(float));
+			swap_memory(t, t + 1, sizeof(double));
 		if ((t_near = fmax(t[0], t_near)) == t[0])
 		{
 			normal = (t_vector3){0., 0., 0.};

@@ -38,7 +38,10 @@ add_executable(rt
         ./rt/rt_consistent.c
         ./rt/rt_parallel.c
         ./console/console_parallel.c
-        ./open_cl/open_cl.c)
+        ./shape/shape_moebius.c
+        ./shape/shape_moebius_equation.c
+        ./shape/shape_moebius.h
+        ./shape/shape_paraboloid.c)
 
 target_include_directories(rt
         PRIVATE /usr/local/include
@@ -57,7 +60,7 @@ target_include_directories(rt
         PRIVATE console
         PRIVATE mlx
         PRIVATE open_cl
-        PRIVATE float_macro)
+        PRIVATE double_macro)
 
 target_link_directories(rt
         PRIVATE /usr/local/lib

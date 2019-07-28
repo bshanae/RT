@@ -15,9 +15,9 @@ t_vector3			color_pack(int value)
 int                 color_unpack(t_vector3 vector)
 {
     t_color         color;
-	float 	*ptr;
+	double 	*ptr;
 	int 			counter;
-	float 	left;
+	double 	left;
 
 	ptr = &vector.x;
 	counter = 0;

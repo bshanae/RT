@@ -7,7 +7,7 @@
 typedef struct			s_camera
 {
 	t_vector3			position;
-	const float	direction_length;
+	const double	direction_length;
 	t_vector3			direction;
 	t_vector3			axis_x;
 	t_vector3			axis_y;
@@ -25,7 +25,7 @@ typedef struct			s_camera_cl
 	t_vector3			vp_axis_y;
 }						t_camera_cl;
 
-t_camera				*camera_new(float direction_length);
+t_camera				*camera_new(double direction_length);
 
 void					camera_delete(t_camera **me);
 

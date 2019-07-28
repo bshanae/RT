@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/ashari/moebius_paraboloid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/moebius_paraboloid/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles /Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -555,33 +555,6 @@ material/material.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/material/material.c.s
 .PHONY : material/material.c.s
 
-open_cl/open_cl.o: open_cl/open_cl.c.o
-
-.PHONY : open_cl/open_cl.o
-
-# target to build an object file
-open_cl/open_cl.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.o
-.PHONY : open_cl/open_cl.c.o
-
-open_cl/open_cl.i: open_cl/open_cl.c.i
-
-.PHONY : open_cl/open_cl.i
-
-# target to preprocess a source file
-open_cl/open_cl.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.i
-.PHONY : open_cl/open_cl.c.i
-
-open_cl/open_cl.s: open_cl/open_cl.c.s
-
-.PHONY : open_cl/open_cl.s
-
-# target to generate assembly for a file
-open_cl/open_cl.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl/open_cl.c.s
-.PHONY : open_cl/open_cl.c.s
-
 ray/ray.o: ray/ray.c.o
 
 .PHONY : ray/ray.o
@@ -933,6 +906,87 @@ shape/shape_disk.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_disk.c.s
 .PHONY : shape/shape_disk.c.s
 
+shape/shape_moebius.o: shape/shape_moebius.c.o
+
+.PHONY : shape/shape_moebius.o
+
+# target to build an object file
+shape/shape_moebius.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius.c.o
+.PHONY : shape/shape_moebius.c.o
+
+shape/shape_moebius.i: shape/shape_moebius.c.i
+
+.PHONY : shape/shape_moebius.i
+
+# target to preprocess a source file
+shape/shape_moebius.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius.c.i
+.PHONY : shape/shape_moebius.c.i
+
+shape/shape_moebius.s: shape/shape_moebius.c.s
+
+.PHONY : shape/shape_moebius.s
+
+# target to generate assembly for a file
+shape/shape_moebius.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius.c.s
+.PHONY : shape/shape_moebius.c.s
+
+shape/shape_moebius_equation.o: shape/shape_moebius_equation.c.o
+
+.PHONY : shape/shape_moebius_equation.o
+
+# target to build an object file
+shape/shape_moebius_equation.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o
+.PHONY : shape/shape_moebius_equation.c.o
+
+shape/shape_moebius_equation.i: shape/shape_moebius_equation.c.i
+
+.PHONY : shape/shape_moebius_equation.i
+
+# target to preprocess a source file
+shape/shape_moebius_equation.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius_equation.c.i
+.PHONY : shape/shape_moebius_equation.c.i
+
+shape/shape_moebius_equation.s: shape/shape_moebius_equation.c.s
+
+.PHONY : shape/shape_moebius_equation.s
+
+# target to generate assembly for a file
+shape/shape_moebius_equation.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_moebius_equation.c.s
+.PHONY : shape/shape_moebius_equation.c.s
+
+shape/shape_paraboloid.o: shape/shape_paraboloid.c.o
+
+.PHONY : shape/shape_paraboloid.o
+
+# target to build an object file
+shape/shape_paraboloid.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_paraboloid.c.o
+.PHONY : shape/shape_paraboloid.c.o
+
+shape/shape_paraboloid.i: shape/shape_paraboloid.c.i
+
+.PHONY : shape/shape_paraboloid.i
+
+# target to preprocess a source file
+shape/shape_paraboloid.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_paraboloid.c.i
+.PHONY : shape/shape_paraboloid.c.i
+
+shape/shape_paraboloid.s: shape/shape_paraboloid.c.s
+
+.PHONY : shape/shape_paraboloid.s
+
+# target to generate assembly for a file
+shape/shape_paraboloid.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/shape/shape_paraboloid.c.s
+.PHONY : shape/shape_paraboloid.c.s
+
 shape/shape_plane.o: shape/shape_plane.c.o
 
 .PHONY : shape/shape_plane.o
@@ -1071,9 +1125,6 @@ help:
 	@echo "... material/material.o"
 	@echo "... material/material.i"
 	@echo "... material/material.s"
-	@echo "... open_cl/open_cl.o"
-	@echo "... open_cl/open_cl.i"
-	@echo "... open_cl/open_cl.s"
 	@echo "... ray/ray.o"
 	@echo "... ray/ray.i"
 	@echo "... ray/ray.s"
@@ -1113,6 +1164,15 @@ help:
 	@echo "... shape/shape_disk.o"
 	@echo "... shape/shape_disk.i"
 	@echo "... shape/shape_disk.s"
+	@echo "... shape/shape_moebius.o"
+	@echo "... shape/shape_moebius.i"
+	@echo "... shape/shape_moebius.s"
+	@echo "... shape/shape_moebius_equation.o"
+	@echo "... shape/shape_moebius_equation.i"
+	@echo "... shape/shape_moebius_equation.s"
+	@echo "... shape/shape_paraboloid.o"
+	@echo "... shape/shape_paraboloid.i"
+	@echo "... shape/shape_paraboloid.s"
 	@echo "... shape/shape_plane.o"
 	@echo "... shape/shape_plane.i"
 	@echo "... shape/shape_plane.s"

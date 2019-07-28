@@ -8,24 +8,24 @@
 
 typedef struct		    s_vector3
 {
-	float	 	    x;
-	float	 	    y;
-	float	 	    z;
+	double	 	    x;
+	double	 	    y;
+	double	 	    z;
 }					    t_vector3;
 
-static float	      vector3_length(const t_vector3 *me)
+static double	      vector3_length(const t_vector3 *me)
 {
 	return (sqrt(me->x * me->x + me->y * me->y + me->z * me->z));
 }
 
-static float	      vector3_s_length(const t_vector3 me)
+static double	      vector3_s_length(const t_vector3 me)
 {
 	return (sqrt(me.x * me.x + me.y * me.y + me.z * me.z));
 }
 
 static void				vector3_normalize(t_vector3 *me)
 {
-	float				    length;
+	double				    length;
 
 	length = vector3_length(me);
 	me->x /= length;
@@ -35,7 +35,7 @@ static void				vector3_normalize(t_vector3 *me)
 
 static t_vector3        vector3_s_normalize(t_vector3 me)
 {
-	float				    length;
+	double				    length;
 
 	length = vector3_length(&me);
 	me.x /= length;
@@ -53,12 +53,12 @@ static t_vector3		vector3_normalized(const t_vector3 *me)
 	return (result);
 }
 
-static float	 			vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
+static double	 			vector3_dot(const t_vector3 *v1, const t_vector3 *v2)
 {
 	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
 }
 
-static float	 			vector3_s_dot(t_vector3 v1, t_vector3 v2)
+static double	 			vector3_s_dot(t_vector3 v1, t_vector3 v2)
 {
 	return (v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
 }
@@ -151,7 +151,7 @@ static void			    vector3_s_add_eq(t_vector3 *v1, t_vector3 v2)
 	v1->z += v2.z;
 }
 
-static t_vector3		vector3_mul(const t_vector3 *v1, float	 k)
+static t_vector3		vector3_mul(const t_vector3 *v1, double	 k)
 {
 	t_vector3		    result;
 
@@ -161,7 +161,7 @@ static t_vector3		vector3_mul(const t_vector3 *v1, float	 k)
 	return (result);
 }
 
-static t_vector3		vector3_s_mul(t_vector3 v1, float	 k)
+static t_vector3		vector3_s_mul(t_vector3 v1, double	 k)
 {
 	v1.x *= k;
 	v1.y *= k;
@@ -169,14 +169,14 @@ static t_vector3		vector3_s_mul(t_vector3 v1, float	 k)
 	return (v1);
 }
 
-static void			    vector3_mul_eq(t_vector3 *v1, float	 k)
+static void			    vector3_mul_eq(t_vector3 *v1, double	 k)
 {
 	v1->x = v1->x * k;
 	v1->y = v1->y * k;
 	v1->z = v1->z * k;
 }
 
-static t_vector3		vector3_div(const t_vector3 *v1, float	 k)
+static t_vector3		vector3_div(const t_vector3 *v1, double	 k)
 {
 	t_vector3		    result;
 
@@ -186,7 +186,7 @@ static t_vector3		vector3_div(const t_vector3 *v1, float	 k)
 	return (result);
 }
 
-static t_vector3		vector3_s_div(t_vector3 v1, float	 k)
+static t_vector3		vector3_s_div(t_vector3 v1, double	 k)
 {
 	t_vector3		    result;
 
@@ -196,21 +196,21 @@ static t_vector3		vector3_s_div(t_vector3 v1, float	 k)
 	return (result);
 }
 
-static void				vector3_div_eq(t_vector3 *v1, float	 k)
+static void				vector3_div_eq(t_vector3 *v1, double	 k)
 {
 	v1->x = v1->x / k;
 	v1->y = v1->y / k;
 	v1->z = v1->z / k;
 }
 
-static float				*vector3_iter(t_vector3 *me, int i)
+static double				*vector3_iter(t_vector3 *me, int i)
 {
 	if (i < 0 || i > 3)
 		return (0);
 	return (&me->x + i);
 }
 
-static void				vector3_rotate_x(t_vector3 *me, float	 theta)
+static void				vector3_rotate_x(t_vector3 *me, double	 theta)
 {
 	t_vector3		    copy;
 
@@ -219,7 +219,7 @@ static void				vector3_rotate_x(t_vector3 *me, float	 theta)
 	me->z = -1 * copy.y * sinf(theta) + copy.z * cosf(theta);
 }
 
-static void				vector3_rotate_y(t_vector3 *me, float	 theta)
+static void				vector3_rotate_y(t_vector3 *me, double	 theta)
 {
 	t_vector3		    copy;
 
@@ -249,9 +249,9 @@ typedef union			u_color
 static int              cl_color_unpack(t_vector3 vector)
 {
     t_color             color;
-	float	 	    *ptr;
+	double	 	    *ptr;
 	int 			    counter;
-	float	 	    left;
+	double	 	    left;
 
 	ptr = &vector.x;
 	counter = 0;
@@ -283,7 +283,7 @@ typedef	struct		    s_ray
 {
 	t_vector3		    origin;
 	t_vector3		    direction;
-	float	 		t;
+	double	 		t;
 }					    t_ray;
 
 static t_vector3		ray_intersect(const t_ray *me)
@@ -308,7 +308,7 @@ typedef enum		    e_light_type
 typedef	struct 		    s_light
 {
 	t_light_type	    type;
-	float				    intensity;
+	double				    intensity;
 	t_vector3		    vector;
 }					    t_light;
 
@@ -319,10 +319,10 @@ typedef	struct 		    s_light
 typedef struct 		    s_material
 {
 	t_vector3		    color;
-	float	 	    diffuse;
-	float	 	    specular;
-	float	 	    reflect;
-	float	 	    refract;
+	double	 	    diffuse;
+	double	 	    specular;
+	double	 	    reflect;
+	double	 	    refract;
 }					    t_material;
 
 // //////////////////////////////////////////////////////////////////////////////
@@ -345,11 +345,11 @@ typedef struct			s_intersection_cl
 {
 	t_ray				ray;
 	t_vector3			normal;
-	float	         diffuse_intensity;
-	float	         specular_intensity;
+	double	         diffuse_intensity;
+	double	         specular_intensity;
 	t_vector3           color;
 	t_material			material;
-	float	 		shadow_ratio;
+	double	 		shadow_ratio;
 	int 				highlight;
 }						t_intersection_cl;
 
@@ -385,7 +385,7 @@ static t_vector3        intersection_light_direction
 typedef struct 			s_sphere_data
 {
 	t_vector3			center;
-	float	 		radius;
+	double	 		radius;
 }						t_sphere_data;
 
 static int     			cl_sphere_intersect
@@ -395,9 +395,9 @@ static int     			cl_sphere_intersect
 {
 	CONST t_sphere_data *ptr;
 	t_sphere_data		data;
-float	 		k[3];
-float	 		t;
-float	 	    discriminant;
+double	 		k[3];
+double	 		t;
+double	 	    discriminant;
 	t_vector3			temp;
 
     ptr = (constant t_sphere_data *)data_ptr;
@@ -441,7 +441,7 @@ static int 			    cl_plane_intersect
 {
 	t_plane_data	    *data;
 	t_vector3		    temp[2];
-float	 	    value[3];
+double	 	    value[3];
 
 	data = (t_plane_data *)data_ptr;
 	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
@@ -586,7 +586,7 @@ static void             cl_intersection_lighting_diffuse
                         constant t_light *light,
                         t_vector3 *light_direction)
 {
-float	          dot;
+double	          dot;
 
 	if ((dot = vector3_dot(light_direction, &intersection->normal)) > 0.)
 		intersection->diffuse_intensity += intersection->shadow_ratio * intersection->material.diffuse * light->intensity * dot / vector3_length(light_direction);
@@ -598,7 +598,7 @@ static void             cl_intersection_lighting_specular
                         t_vector3 *light_direction)
 {
 	t_vector3            halfway;
-float	          dot;
+double	          dot;
 
 	halfway = vector3_add(light_direction, &intersection->ray.direction);
 	vector3_normalize(&halfway);
@@ -686,7 +686,7 @@ static void             cl_reflect(
     t_vector3           result_color;
     t_intersection_cl   previous;
     t_intersection_cl   current;
-float	         depth_ratio;
+double	         depth_ratio;
     int                 i;
 
     result_color = (t_vector3){0., 0., 0.};
@@ -724,9 +724,9 @@ static void				cl_intersection_refract
     t_vector3		refracted;
     t_vector3		a, b;
     t_vector3		m;
-	float			sin_alpha;
-	float			sin_beta;
-	float			cos_beta;
+	double			sin_alpha;
+	double			sin_beta;
+	double			cos_beta;
 
     m = vector3_mul(&source->normal, -1. * vector3_dot(&source->normal, &source->ray.direction));
     vector3_add_eq(&m, &source->ray.direction);
@@ -753,7 +753,7 @@ static void             cl_refract(
     t_vector3           result_color;
     t_intersection_cl   previous;
     t_intersection_cl   current;
-float	         depth_ratio;
+double	         depth_ratio;
     int                 i;
 
     result_color = (t_vector3){0., 0., 0.};

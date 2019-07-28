@@ -19,6 +19,8 @@ t_intersection_function	shape_get_function_ptr(int i)
 		array[3] = aabb_intersect;
 		array[4] = cone_intersect;
 		array[5] = disk_intersect;
+		array[6] = moebius_intersect;
+		array[7] = paraboloid_intersect;
 	}
 	if (i < 0 || i >= SHAPE_TYPE_NUM)
 		return (NULL);

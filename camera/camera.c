@@ -1,13 +1,13 @@
 #include "camera.h"
 
-t_camera			*camera_new(float direction_length)
+t_camera			*camera_new(double direction_length)
 {
 	t_camera		*new;
 
 	if (!(new = (t_camera *)malloc(sizeof(t_camera))))
 		exit(21);
 	new->position = (t_vector3){0., 0., 0.};
-	*(float *)&new->direction_length = direction_length;
+	*(double *)&new->direction_length = direction_length;
 	new->direction = (t_vector3){0., 0., -direction_length};
 	new->axis_x = (t_vector3){1., 0., 0.};
 	new->axis_y = (t_vector3){0., 1., 0.};

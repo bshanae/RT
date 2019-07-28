@@ -15,7 +15,7 @@ typedef enum		e_light_type
 typedef	struct 		s_light
 {
 	t_light_type	type;
-	float		intensity;
+	double		intensity;
 	t_vector3		vector;
 }					t_light;
 

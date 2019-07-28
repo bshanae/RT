@@ -4,9 +4,9 @@ int					sphere_intersect
 	(t_shape *shape, t_intersection *intersection)
 {
 	t_sphere_data	*data;
-	float 	k[3];
-	float 	t;
-	float 	discriminant;
+	double 	k[3];
+	double 	t;
+	double 	discriminant;
 	t_vector3		temp;
 
 	data = (t_sphere_data *)shape->data;
@@ -39,7 +39,7 @@ static void			sphere_move(t_shape *shape, t_vector3 move)
 }
 
 t_shape				*shape_sphere
-	(t_vector3 center, float radius, const t_material *material)
+	(t_vector3 center, double radius, const t_material *material)
 {
 	t_shape			*shape;
 	t_sphere_data	*data;

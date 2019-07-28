@@ -136,6 +136,6 @@ int					rt_exit(void *ptr)
 	me = (t_rt **)ptr;
 	rt_delete(&(*me)->clone);
 	rt_delete(me);
-	open_cl_delete(&(*me)->open_cl);
+//	open_cl_delete(&(*me)->open_cl);
 	exit(0);
 }
