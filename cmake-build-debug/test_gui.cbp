@@ -8,43 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/home/vladimir/workspace/ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/home/vladimir/workspace/ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_gui">
-				<Option output="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/test_gui" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/home/vladimir/workspace/ray_tracer/cmake-build-debug/test_gui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/workspace/ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/home/vladimir/workspace/ray_tracer/../21_libft/includes"/>
 					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
 					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/usr/local/Cellar/glib/2.60.5/include/gio-unix-2.0"/>
@@ -65,27 +55,27 @@
 					<Add directory="/usr/local/Cellar/glib/2.60.5/lib/glib-2.0/include"/>
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_gui"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_gui"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_gui/fast">
-				<Option output="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/test_gui" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/home/vladimir/workspace/ray_tracer/cmake-build-debug/test_gui" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/workspace/ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/home/vladimir/workspace/ray_tracer/../21_libft/includes"/>
 					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
 					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/usr/local/Cellar/glib/2.60.5/include/gio-unix-2.0"/>
@@ -106,24 +96,34 @@
 					<Add directory="/usr/local/Cellar/glib/2.60.5/lib/glib-2.0/include"/>
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_gui/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_gui/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/vladimir/workspace/ray_tracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/main.c">
+		<Unit filename="/home/vladimir/workspace/ray_tracer/main.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/Users/vladimir/workspace/21_ray_tracer/CMakeLists.txt">
+		<Unit filename="/home/vladimir/workspace/ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

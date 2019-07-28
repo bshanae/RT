@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window">
+    <property name="width_request">480</property>
+    <property name="height_request">360</property>
+    <property name="can_focus">False</property>
+    <property name="default_width">480</property>
+    <property name="default_height">360</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed_grid_1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkToggleButton" id="toggle_button_1">
+            <property name="name">toggle_button_1</property>
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">do stuff</property>
+            <signal name="toggled" handler="toggle_button_1_interaction" object="label_1" swapped="no"/>
+            <child>
+              <object class="GtkImage">
+                <property name="name">image_1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-execute</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">140</property>
+            <property name="y">230</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_1">
+            <property name="width_request">200</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">off</property>
+          </object>
+          <packing>
+            <property name="x">140</property>
+            <property name="y">96</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
