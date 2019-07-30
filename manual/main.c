@@ -4,36 +4,27 @@
 
 #define CHECK(statement) if (!statement) printf("Error on line %d\n", __LINE__);
 
-void				toggle_button_1_interaction(GtkWidget *widget, gpointer ptr)
+typedef struct		s_window
 {
-	if (gtk_toggle_button_get_active(widget))
-		gtk_label_set_text (GTK_LABEL(ptr), (const gchar* )"on");
-	else
-		gtk_label_set_text (GTK_LABEL(ptr), (const gchar* )"off");
-}
+	GtkBuilder		*builder;
+	GtkWidget		*window_0;
+	GtkWidget		*stack_0;
+}					t_window;
 
 int					main(int argc, char **argv)
 {
-	GtkBuilder		*builder;
-	GtkWidget		*window;
-	GtkWidget		*button;
-	GtkWidget		*label;
+	t_window		window;
 
 	gtk_init(&argc, &argv);
 
-	builder = gtk_builder_new_from_file("build_2.glade");
-	CHECK(builder)
+	window.builder = gtk_builder_new_from_file("build_2.glade");
 
-	window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
-	CHECK(window)
-	button = GTK_WIDGET(gtk_builder_get_object(builder, "toggle_button_1"));
-	label = GTK_WIDGET(gtk_builder_get_object(builder, "label_1"));
+	window.window_0 = GTK_WIDGET(gtk_builder_get_object(window.builder, "window_0"));
+	window.stack_0 = GTK_WIDGET(gtk_builder_get_object(window.builder, "stack_0"));
 
-	gtk_builder_connect_signals(builder, NULL);
+	gtk_builder_connect_signals(window.builder, NULL);
 
-	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
-
-	gtk_widget_show(window);
+	gtk_widget_show_all(window.window_0);
 
 	gtk_main();
 
