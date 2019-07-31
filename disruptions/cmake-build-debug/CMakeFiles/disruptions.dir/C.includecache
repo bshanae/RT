@@ -658,12 +658,6 @@ mach/mach_types.h
 perlin_noise.h
 /Users/ashari/21_ray_tracer/disruptions/perlin_noise/perlin_noise.h
 
-/Users/ashari/21_ray_tracer/disruptions/perlin_noise/perlin_noise_math.c
-stdlib.h
--
-perlin_noise.h
-/Users/ashari/21_ray_tracer/disruptions/perlin_noise/perlin_noise.h
-
 /Users/ashari/21_ray_tracer/disruptions/preferences.h
 libft_standart.h
 /Users/ashari/21_ray_tracer/disruptions/libft_standart.h

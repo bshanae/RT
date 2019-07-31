@@ -39,7 +39,6 @@ void				rt_consistent(t_rt *me)
 	t_vector3		vp;
 	t_intersection	intersection;
 
-	x = 0;
 	vp.z = 0;
 	for (int i = 0; i < 3; i++)
 	{

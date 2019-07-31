@@ -11,7 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54d7add9-1119-457c-b2cd-3e903a236d0d" name="Default Changelist" comment="" />
+    <list default="true" id="54d7add9-1119-457c-b2cd-3e903a236d0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdl/sdl_put_image.c" beforeDir="false" afterPath="$PROJECT_DIR$/sdl/sdl_put_image.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rt/rt_consistent.c" beforeDir="false" afterPath="$PROJECT_DIR$/../rt/rt_consistent.c" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +29,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdl/sdl_put_image.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="438">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding>
-                <element signature="e#564#610#0" expanded="true" />
+                <element signature="e#474#495#0" expanded="true" />
+                <element signature="e#514#542#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/preferences.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding>
+                <element signature="e#46#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perlin_noise/perlin_noise.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -52,7 +78,6 @@
         <option value="$PROJECT_DIR$/sdl/sdl.h" />
         <option value="$PROJECT_DIR$/disruptions.h" />
         <option value="$PROJECT_DIR$/sdl/sdl_image.h" />
-        <option value="$PROJECT_DIR$/preferences.h" />
         <option value="$PROJECT_DIR$/sdl/sdl_init.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/vector2/vector2.c" />
@@ -63,6 +88,7 @@
         <option value="$PROJECT_DIR$/perlin_noise/perlin_noise_generator.c" />
         <option value="$PROJECT_DIR$/perlin_noise/perlin_noise_math.c" />
         <option value="$PROJECT_DIR$/sdl/sdl_put_image.c" />
+        <option value="$PROJECT_DIR$/preferences.h" />
       </list>
     </option>
   </component>
@@ -80,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,6 +117,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,21 +165,23 @@
       <workItem from="1564481684973" duration="15726000" />
       <workItem from="1564503957751" duration="2000" />
       <workItem from="1564561367920" duration="5562000" />
+      <workItem from="1564573035392" duration="1398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26619000" />
+    <option name="totallyTimeSpent" value="28017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1282" y="0" width="1278" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18932039" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13996764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -189,13 +217,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sdl/sdl_image.h" />
-    <entry file="file://$PROJECT_DIR$/preferences.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdl/sdl_error.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -289,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perlin_noise/perlin_noise.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise/perlin_noise_generator.c">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -308,10 +322,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sdl/sdl_put_image.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="438">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
           <folding>
-            <element signature="e#564#610#0" expanded="true" />
+            <element signature="e#474#495#0" expanded="true" />
+            <element signature="e#514#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perlin_noise/perlin_noise.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preferences.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#46#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
