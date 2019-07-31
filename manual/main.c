@@ -39,8 +39,6 @@ int						main(int argc, char **argv)
 	data.list.select = GTK_TREE_SELECTION(gtk_builder_get_object(data.builder, "view_1_select"));
 	data.list.iter_is_set = 0;
 	data.entry = GTK_ENTRY(gtk_builder_get_object(data.builder, "entry_1"));
-	if (!data.entry)
-		return (1);
 
 	gtk_builder_connect_signals(data.builder, NULL);
 
