@@ -41,18 +41,28 @@ void				rt_consistent(t_rt *me)
 
 	x = 0;
 	vp.z = 0;
-	while (x < WIN_WIDTH)
+	for (int i = 0; i < 3; i++)
 	{
-		y = 0;
-		while (y < WIN_HEIGHT)
-		{
-			vp.x = x - (WIN_WIDTH - 1) / 2.;
-			vp.y = -y + (WIN_HEIGHT - 1) / 2.;
-			intersection.ray = camera_cast_ray(me->camera, &vp);
-			me->img_data[x + y * WIN_WIDTH] = color_unpack(rt_ray_trace(me, &intersection, me->settings.reflection_depth, me->settings.refraction_depth));
-			y++;
+		if (i == 0)
+			vector3_s_sub_eq(&me->camera->position, vector3_s_mul(me->camera->axis_x, 0.2));
+		else if (i == 1)
+			vector3_s_add_eq(&me->camera->position, vector3_s_mul(me->camera->axis_x, 0.4));
+		else if (i == 2)
+			vector3_s_sub_eq(&me->camera->position, vector3_s_mul(me->camera->axis_x, 0.2));
+		x = 0;
+		while (x < WIN_WIDTH) {
+			y = 0;
+			while (y < WIN_HEIGHT) {
+				vp.x = x - (WIN_WIDTH - 1) / 2.;
+				vp.y = -y + (WIN_HEIGHT - 1) / 2.;
+				intersection.ray = camera_cast_ray(me->camera, &vp);
+				me->img_data[x + y * WIN_WIDTH] = color_unpack_stereoscopy(
+						rt_ray_trace(me, &intersection, me->settings.reflection_depth, me->settings.refraction_depth), i, intersection.stereoscopy_mode);
+				y++;
+			}
+			x++;
 		}
-		x++;
+		mlx_put_image_to_window(me->mlx_ptr, me->win_ptr, me->img_ptr, 0, 0);
 	}
-	mlx_put_image_to_window(me->mlx_ptr, me->win_ptr, me->img_ptr, 0, 0);
+//	mlx_put_image_to_window(me->mlx_ptr, me->win_ptr, me->img_ptr, 0, 0);
 }

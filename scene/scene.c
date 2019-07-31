@@ -54,6 +54,8 @@ int 				scene_intersect(t_scene *me, t_intersection *intersection)
 		shape = scene_shape_at(me, i++);
 		result += shape->intersect(shape, intersection);
 	}
+	if (result != 0)
+		intersection->stereoscopy_mode = 1;
 	return (result != 0);
 }
 

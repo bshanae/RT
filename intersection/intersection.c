@@ -6,6 +6,7 @@ void				intersection_reset(t_intersection *me)
 	me->diffuse_intensity = 0.;
 	me->specular_intensity = 0.;
 	me->shadow_ratio = 1.;
+	me->stereoscopy_mode = 0;
 }
 
 void				intersection_reflect(t_intersection *target, const t_intersection *source)

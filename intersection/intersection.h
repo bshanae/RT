@@ -11,12 +11,13 @@ typedef struct			s_intersection
 {
 	t_ray				ray;
 	t_vector3			normal;
-    double         diffuse_intensity;
-	double         specular_intensity;
+    double         		diffuse_intensity;
+	double         		specular_intensity;
 	t_vector3           color;
 	const t_material	*material;
 	double 				shadow_ratio;
 	int 				*highlight;
+	int 				stereoscopy_mode;
 }						t_intersection;
 
 typedef struct			s_intersection_cl

@@ -22,4 +22,6 @@ t_vector3				color_pack(int value);
 
 int                     color_unpack(t_vector3 vector);
 
+int                 	color_unpack_stereoscopy(t_vector3 vector, int i, int stereoscopy_mode);
+
 #endif

@@ -22,6 +22,7 @@ int 				main()
 //	scene_shape_push(rt->scene, shape_moebius(1, 0.5, (t_vector3){0., 0., 0.}, red_material));
 //	scene_shape_push(rt->scene, shape_paraboloid((t_vector3){0., 0., 0.}, (t_vector3){0., 1., 0.}, .5, red_material));
 	scene_shape_push(rt->scene, shape_sphere((t_vector3){0., 0.5, 0.}, 2.5, red_material));
+	scene_shape_push(rt->scene, shape_sphere((t_vector3){4., 1.5, 0.}, .5, red_material));
 	scene_light_push(rt->scene, light_new(light_point, .9, (t_vector3){0., 5., 5.}));
 
 	rt_render(rt);
