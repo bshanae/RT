@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/json_tester.dir/test.c.o  -o json_tester  -L/Users/ashari/.brew/Cellar/json-c/0.13.1/lib  -L/Users/ashari/21_libft -Wl,-rpath,/Users/ashari/.brew/Cellar/json-c/0.13.1/lib -Wl,-rpath,/Users/ashari/21_libft -ljson-c -lft 

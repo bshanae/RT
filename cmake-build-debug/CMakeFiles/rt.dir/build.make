@@ -43,10 +43,10 @@ RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/moebius_paraboloid
+CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/moebius_paraboloid/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rt.dir/depend.make
@@ -59,458 +59,458 @@ include CMakeFiles/rt.dir/flags.make
 
 CMakeFiles/rt.dir/main.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rt.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/main.c.o   -c /Users/ashari/moebius_paraboloid/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rt.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/main.c.o   -c /Users/ashari/21_ray_tracer/main.c
 
 CMakeFiles/rt.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/main.c > CMakeFiles/rt.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/main.c > CMakeFiles/rt.dir/main.c.i
 
 CMakeFiles/rt.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/main.c -o CMakeFiles/rt.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/main.c -o CMakeFiles/rt.dir/main.c.s
 
 CMakeFiles/rt.dir/vector3/vector3.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3.c.o: ../vector3/vector3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rt.dir/vector3/vector3.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3.c.o   -c /Users/ashari/moebius_paraboloid/vector3/vector3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rt.dir/vector3/vector3.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3.c.o   -c /Users/ashari/21_ray_tracer/vector3/vector3.c
 
 CMakeFiles/rt.dir/vector3/vector3.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/vector3/vector3.c > CMakeFiles/rt.dir/vector3/vector3.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/vector3/vector3.c > CMakeFiles/rt.dir/vector3/vector3.c.i
 
 CMakeFiles/rt.dir/vector3/vector3.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/vector3/vector3.c -o CMakeFiles/rt.dir/vector3/vector3.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/vector3/vector3.c -o CMakeFiles/rt.dir/vector3/vector3.c.s
 
 CMakeFiles/rt.dir/camera/camera.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera.c.o: ../camera/camera.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rt.dir/camera/camera.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera.c.o   -c /Users/ashari/moebius_paraboloid/camera/camera.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rt.dir/camera/camera.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera.c.o   -c /Users/ashari/21_ray_tracer/camera/camera.c
 
 CMakeFiles/rt.dir/camera/camera.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/camera/camera.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/camera/camera.c > CMakeFiles/rt.dir/camera/camera.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/camera/camera.c > CMakeFiles/rt.dir/camera/camera.c.i
 
 CMakeFiles/rt.dir/camera/camera.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/camera/camera.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/camera/camera.c -o CMakeFiles/rt.dir/camera/camera.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/camera/camera.c -o CMakeFiles/rt.dir/camera/camera.c.s
 
 CMakeFiles/rt.dir/rt/rt.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/rt/rt.c.o: ../rt/rt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/rt/rt.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt.c.o   -c /Users/ashari/moebius_paraboloid/rt/rt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/rt/rt.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt.c.o   -c /Users/ashari/21_ray_tracer/rt/rt.c
 
 CMakeFiles/rt.dir/rt/rt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/rt/rt.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/rt/rt.c > CMakeFiles/rt.dir/rt/rt.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/rt/rt.c > CMakeFiles/rt.dir/rt/rt.c.i
 
 CMakeFiles/rt.dir/rt/rt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/rt/rt.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/rt/rt.c -o CMakeFiles/rt.dir/rt/rt.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/rt/rt.c -o CMakeFiles/rt.dir/rt/rt.c.s
 
 CMakeFiles/rt.dir/ray/ray.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/ray/ray.c.o: ../ray/ray.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rt.dir/ray/ray.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/ray/ray.c.o   -c /Users/ashari/moebius_paraboloid/ray/ray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rt.dir/ray/ray.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/ray/ray.c.o   -c /Users/ashari/21_ray_tracer/ray/ray.c
 
 CMakeFiles/rt.dir/ray/ray.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/ray/ray.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/ray/ray.c > CMakeFiles/rt.dir/ray/ray.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/ray/ray.c > CMakeFiles/rt.dir/ray/ray.c.i
 
 CMakeFiles/rt.dir/ray/ray.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/ray/ray.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/ray/ray.c -o CMakeFiles/rt.dir/ray/ray.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/ray/ray.c -o CMakeFiles/rt.dir/ray/ray.c.s
 
 CMakeFiles/rt.dir/scene/scene.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene.c.o: ../scene/scene.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rt.dir/scene/scene.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene.c.o   -c /Users/ashari/moebius_paraboloid/scene/scene.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rt.dir/scene/scene.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene.c.o   -c /Users/ashari/21_ray_tracer/scene/scene.c
 
 CMakeFiles/rt.dir/scene/scene.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/scene/scene.c > CMakeFiles/rt.dir/scene/scene.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/scene/scene.c > CMakeFiles/rt.dir/scene/scene.c.i
 
 CMakeFiles/rt.dir/scene/scene.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/scene/scene.c -o CMakeFiles/rt.dir/scene/scene.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/scene/scene.c -o CMakeFiles/rt.dir/scene/scene.c.s
 
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_sphere.c.o: ../shape/shape_sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rt.dir/shape/shape_sphere.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_sphere.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_sphere.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rt.dir/shape/shape_sphere.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_sphere.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_sphere.c
 
 CMakeFiles/rt.dir/shape/shape_sphere.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_sphere.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_sphere.c > CMakeFiles/rt.dir/shape/shape_sphere.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_sphere.c > CMakeFiles/rt.dir/shape/shape_sphere.c.i
 
 CMakeFiles/rt.dir/shape/shape_sphere.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_sphere.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_sphere.c -o CMakeFiles/rt.dir/shape/shape_sphere.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_sphere.c -o CMakeFiles/rt.dir/shape/shape_sphere.c.s
 
 CMakeFiles/rt.dir/scene/scene_shapes.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_shapes.c.o: ../scene/scene_shapes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rt.dir/scene/scene_shapes.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_shapes.c.o   -c /Users/ashari/moebius_paraboloid/scene/scene_shapes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rt.dir/scene/scene_shapes.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_shapes.c.o   -c /Users/ashari/21_ray_tracer/scene/scene_shapes.c
 
 CMakeFiles/rt.dir/scene/scene_shapes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_shapes.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/scene/scene_shapes.c > CMakeFiles/rt.dir/scene/scene_shapes.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/scene/scene_shapes.c > CMakeFiles/rt.dir/scene/scene_shapes.c.i
 
 CMakeFiles/rt.dir/scene/scene_shapes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_shapes.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/scene/scene_shapes.c -o CMakeFiles/rt.dir/scene/scene_shapes.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/scene/scene_shapes.c -o CMakeFiles/rt.dir/scene/scene_shapes.c.s
 
 CMakeFiles/rt.dir/scene/scene_lights.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_lights.c.o: ../scene/scene_lights.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rt.dir/scene/scene_lights.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_lights.c.o   -c /Users/ashari/moebius_paraboloid/scene/scene_lights.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rt.dir/scene/scene_lights.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_lights.c.o   -c /Users/ashari/21_ray_tracer/scene/scene_lights.c
 
 CMakeFiles/rt.dir/scene/scene_lights.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_lights.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/scene/scene_lights.c > CMakeFiles/rt.dir/scene/scene_lights.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/scene/scene_lights.c > CMakeFiles/rt.dir/scene/scene_lights.c.i
 
 CMakeFiles/rt.dir/scene/scene_lights.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_lights.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/scene/scene_lights.c -o CMakeFiles/rt.dir/scene/scene_lights.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/scene/scene_lights.c -o CMakeFiles/rt.dir/scene/scene_lights.c.s
 
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/rt/rt_mlx.c.o: ../rt/rt_mlx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/rt.dir/rt/rt_mlx.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_mlx.c.o   -c /Users/ashari/moebius_paraboloid/rt/rt_mlx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/rt.dir/rt/rt_mlx.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_mlx.c.o   -c /Users/ashari/21_ray_tracer/rt/rt_mlx.c
 
 CMakeFiles/rt.dir/rt/rt_mlx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/rt/rt_mlx.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/rt/rt_mlx.c > CMakeFiles/rt.dir/rt/rt_mlx.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/rt/rt_mlx.c > CMakeFiles/rt.dir/rt/rt_mlx.c.i
 
 CMakeFiles/rt.dir/rt/rt_mlx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/rt/rt_mlx.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/rt/rt_mlx.c -o CMakeFiles/rt.dir/rt/rt_mlx.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/rt/rt_mlx.c -o CMakeFiles/rt.dir/rt/rt_mlx.c.s
 
 CMakeFiles/rt.dir/light/light.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/light/light.c.o: ../light/light.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/rt.dir/light/light.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/light/light.c.o   -c /Users/ashari/moebius_paraboloid/light/light.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/rt.dir/light/light.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/light/light.c.o   -c /Users/ashari/21_ray_tracer/light/light.c
 
 CMakeFiles/rt.dir/light/light.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/light/light.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/light/light.c > CMakeFiles/rt.dir/light/light.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/light/light.c > CMakeFiles/rt.dir/light/light.c.i
 
 CMakeFiles/rt.dir/light/light.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/light/light.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/light/light.c -o CMakeFiles/rt.dir/light/light.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/light/light.c -o CMakeFiles/rt.dir/light/light.c.s
 
 CMakeFiles/rt.dir/color/color.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/color/color.c.o: ../color/color.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/color/color.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/color/color.c.o   -c /Users/ashari/moebius_paraboloid/color/color.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/color/color.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/color/color.c.o   -c /Users/ashari/21_ray_tracer/color/color.c
 
 CMakeFiles/rt.dir/color/color.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/color/color.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/color/color.c > CMakeFiles/rt.dir/color/color.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/color/color.c > CMakeFiles/rt.dir/color/color.c.i
 
 CMakeFiles/rt.dir/color/color.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/color/color.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/color/color.c -o CMakeFiles/rt.dir/color/color.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/color/color.c -o CMakeFiles/rt.dir/color/color.c.s
 
 CMakeFiles/rt.dir/material/material.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/material/material.c.o: ../material/material.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/rt.dir/material/material.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/material/material.c.o   -c /Users/ashari/moebius_paraboloid/material/material.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/rt.dir/material/material.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/material/material.c.o   -c /Users/ashari/21_ray_tracer/material/material.c
 
 CMakeFiles/rt.dir/material/material.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/material/material.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/material/material.c > CMakeFiles/rt.dir/material/material.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/material/material.c > CMakeFiles/rt.dir/material/material.c.i
 
 CMakeFiles/rt.dir/material/material.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/material/material.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/material/material.c -o CMakeFiles/rt.dir/material/material.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/material/material.c -o CMakeFiles/rt.dir/material/material.c.s
 
 CMakeFiles/rt.dir/intersection/intersection.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/intersection/intersection.c.o: ../intersection/intersection.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/rt.dir/intersection/intersection.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/intersection/intersection.c.o   -c /Users/ashari/moebius_paraboloid/intersection/intersection.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/rt.dir/intersection/intersection.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/intersection/intersection.c.o   -c /Users/ashari/21_ray_tracer/intersection/intersection.c
 
 CMakeFiles/rt.dir/intersection/intersection.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/intersection/intersection.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/intersection/intersection.c > CMakeFiles/rt.dir/intersection/intersection.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/intersection/intersection.c > CMakeFiles/rt.dir/intersection/intersection.c.i
 
 CMakeFiles/rt.dir/intersection/intersection.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/intersection/intersection.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/intersection/intersection.c -o CMakeFiles/rt.dir/intersection/intersection.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/intersection/intersection.c -o CMakeFiles/rt.dir/intersection/intersection.c.s
 
 CMakeFiles/rt.dir/shape/shape_plane.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_plane.c.o: ../shape/shape_plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/rt.dir/shape/shape_plane.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_plane.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_plane.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/rt.dir/shape/shape_plane.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_plane.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_plane.c
 
 CMakeFiles/rt.dir/shape/shape_plane.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_plane.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_plane.c > CMakeFiles/rt.dir/shape/shape_plane.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_plane.c > CMakeFiles/rt.dir/shape/shape_plane.c.i
 
 CMakeFiles/rt.dir/shape/shape_plane.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_plane.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_plane.c -o CMakeFiles/rt.dir/shape/shape_plane.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_plane.c -o CMakeFiles/rt.dir/shape/shape_plane.c.s
 
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_cylinder.c.o: ../shape/shape_cylinder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/rt.dir/shape/shape_cylinder.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_cylinder.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_cylinder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/rt.dir/shape/shape_cylinder.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_cylinder.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_cylinder.c
 
 CMakeFiles/rt.dir/shape/shape_cylinder.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_cylinder.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_cylinder.c > CMakeFiles/rt.dir/shape/shape_cylinder.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_cylinder.c > CMakeFiles/rt.dir/shape/shape_cylinder.c.i
 
 CMakeFiles/rt.dir/shape/shape_cylinder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_cylinder.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_cylinder.c -o CMakeFiles/rt.dir/shape/shape_cylinder.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_cylinder.c -o CMakeFiles/rt.dir/shape/shape_cylinder.c.s
 
 CMakeFiles/rt.dir/shape/shape.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape.c.o: ../shape/shape.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/rt.dir/shape/shape.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/rt.dir/shape/shape.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape.c.o   -c /Users/ashari/21_ray_tracer/shape/shape.c
 
 CMakeFiles/rt.dir/shape/shape.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape.c > CMakeFiles/rt.dir/shape/shape.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape.c > CMakeFiles/rt.dir/shape/shape.c.i
 
 CMakeFiles/rt.dir/shape/shape.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape.c -o CMakeFiles/rt.dir/shape/shape.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape.c -o CMakeFiles/rt.dir/shape/shape.c.s
 
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_aabb.c.o: ../shape/shape_aabb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/rt.dir/shape/shape_aabb.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_aabb.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_aabb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/rt.dir/shape/shape_aabb.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_aabb.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_aabb.c
 
 CMakeFiles/rt.dir/shape/shape_aabb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_aabb.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_aabb.c > CMakeFiles/rt.dir/shape/shape_aabb.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_aabb.c > CMakeFiles/rt.dir/shape/shape_aabb.c.i
 
 CMakeFiles/rt.dir/shape/shape_aabb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_aabb.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_aabb.c -o CMakeFiles/rt.dir/shape/shape_aabb.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_aabb.c -o CMakeFiles/rt.dir/shape/shape_aabb.c.s
 
 CMakeFiles/rt.dir/console/console.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console.c.o: ../console/console.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/rt.dir/console/console.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console.c.o   -c /Users/ashari/moebius_paraboloid/console/console.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/rt.dir/console/console.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console.c.o   -c /Users/ashari/21_ray_tracer/console/console.c
 
 CMakeFiles/rt.dir/console/console.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console.c > CMakeFiles/rt.dir/console/console.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console.c > CMakeFiles/rt.dir/console/console.c.i
 
 CMakeFiles/rt.dir/console/console.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console.c -o CMakeFiles/rt.dir/console/console.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console.c -o CMakeFiles/rt.dir/console/console.c.s
 
 CMakeFiles/rt.dir/console/console_translate.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_translate.c.o: ../console/console_translate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/rt.dir/console/console_translate.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_translate.c.o   -c /Users/ashari/moebius_paraboloid/console/console_translate.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/rt.dir/console/console_translate.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_translate.c.o   -c /Users/ashari/21_ray_tracer/console/console_translate.c
 
 CMakeFiles/rt.dir/console/console_translate.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_translate.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_translate.c > CMakeFiles/rt.dir/console/console_translate.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_translate.c > CMakeFiles/rt.dir/console/console_translate.c.i
 
 CMakeFiles/rt.dir/console/console_translate.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_translate.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_translate.c -o CMakeFiles/rt.dir/console/console_translate.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_translate.c -o CMakeFiles/rt.dir/console/console_translate.c.s
 
 CMakeFiles/rt.dir/console/console_reflect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_reflect.c.o: ../console/console_reflect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/rt.dir/console/console_reflect.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_reflect.c.o   -c /Users/ashari/moebius_paraboloid/console/console_reflect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/rt.dir/console/console_reflect.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_reflect.c.o   -c /Users/ashari/21_ray_tracer/console/console_reflect.c
 
 CMakeFiles/rt.dir/console/console_reflect.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_reflect.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_reflect.c > CMakeFiles/rt.dir/console/console_reflect.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_reflect.c > CMakeFiles/rt.dir/console/console_reflect.c.i
 
 CMakeFiles/rt.dir/console/console_reflect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_reflect.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_reflect.c -o CMakeFiles/rt.dir/console/console_reflect.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_reflect.c -o CMakeFiles/rt.dir/console/console_reflect.c.s
 
 CMakeFiles/rt.dir/shape/shape_cone.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_cone.c.o: ../shape/shape_cone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/rt.dir/shape/shape_cone.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_cone.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_cone.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/rt.dir/shape/shape_cone.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_cone.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_cone.c
 
 CMakeFiles/rt.dir/shape/shape_cone.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_cone.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_cone.c > CMakeFiles/rt.dir/shape/shape_cone.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_cone.c > CMakeFiles/rt.dir/shape/shape_cone.c.i
 
 CMakeFiles/rt.dir/shape/shape_cone.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_cone.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_cone.c -o CMakeFiles/rt.dir/shape/shape_cone.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_cone.c -o CMakeFiles/rt.dir/shape/shape_cone.c.s
 
 CMakeFiles/rt.dir/shape/shape_disk.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_disk.c.o: ../shape/shape_disk.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/rt.dir/shape/shape_disk.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_disk.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_disk.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/rt.dir/shape/shape_disk.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_disk.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_disk.c
 
 CMakeFiles/rt.dir/shape/shape_disk.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_disk.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_disk.c > CMakeFiles/rt.dir/shape/shape_disk.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_disk.c > CMakeFiles/rt.dir/shape/shape_disk.c.i
 
 CMakeFiles/rt.dir/shape/shape_disk.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_disk.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_disk.c -o CMakeFiles/rt.dir/shape/shape_disk.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_disk.c -o CMakeFiles/rt.dir/shape/shape_disk.c.s
 
 CMakeFiles/rt.dir/console/console_diffuse.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_diffuse.c.o: ../console/console_diffuse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/rt.dir/console/console_diffuse.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_diffuse.c.o   -c /Users/ashari/moebius_paraboloid/console/console_diffuse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/rt.dir/console/console_diffuse.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_diffuse.c.o   -c /Users/ashari/21_ray_tracer/console/console_diffuse.c
 
 CMakeFiles/rt.dir/console/console_diffuse.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_diffuse.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_diffuse.c > CMakeFiles/rt.dir/console/console_diffuse.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_diffuse.c > CMakeFiles/rt.dir/console/console_diffuse.c.i
 
 CMakeFiles/rt.dir/console/console_diffuse.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_diffuse.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_diffuse.c -o CMakeFiles/rt.dir/console/console_diffuse.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_diffuse.c -o CMakeFiles/rt.dir/console/console_diffuse.c.s
 
 CMakeFiles/rt.dir/console/console_specular.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_specular.c.o: ../console/console_specular.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/rt.dir/console/console_specular.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_specular.c.o   -c /Users/ashari/moebius_paraboloid/console/console_specular.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/rt.dir/console/console_specular.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_specular.c.o   -c /Users/ashari/21_ray_tracer/console/console_specular.c
 
 CMakeFiles/rt.dir/console/console_specular.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_specular.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_specular.c > CMakeFiles/rt.dir/console/console_specular.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_specular.c > CMakeFiles/rt.dir/console/console_specular.c.i
 
 CMakeFiles/rt.dir/console/console_specular.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_specular.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_specular.c -o CMakeFiles/rt.dir/console/console_specular.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_specular.c -o CMakeFiles/rt.dir/console/console_specular.c.s
 
 CMakeFiles/rt.dir/console/console_shadows.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_shadows.c.o: ../console/console_shadows.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/rt.dir/console/console_shadows.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_shadows.c.o   -c /Users/ashari/moebius_paraboloid/console/console_shadows.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/rt.dir/console/console_shadows.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_shadows.c.o   -c /Users/ashari/21_ray_tracer/console/console_shadows.c
 
 CMakeFiles/rt.dir/console/console_shadows.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_shadows.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_shadows.c > CMakeFiles/rt.dir/console/console_shadows.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_shadows.c > CMakeFiles/rt.dir/console/console_shadows.c.i
 
 CMakeFiles/rt.dir/console/console_shadows.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_shadows.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_shadows.c -o CMakeFiles/rt.dir/console/console_shadows.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_shadows.c -o CMakeFiles/rt.dir/console/console_shadows.c.s
 
 CMakeFiles/rt.dir/console/console_refract.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_refract.c.o: ../console/console_refract.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/rt.dir/console/console_refract.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_refract.c.o   -c /Users/ashari/moebius_paraboloid/console/console_refract.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/rt.dir/console/console_refract.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_refract.c.o   -c /Users/ashari/21_ray_tracer/console/console_refract.c
 
 CMakeFiles/rt.dir/console/console_refract.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_refract.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_refract.c > CMakeFiles/rt.dir/console/console_refract.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_refract.c > CMakeFiles/rt.dir/console/console_refract.c.i
 
 CMakeFiles/rt.dir/console/console_refract.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_refract.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_refract.c -o CMakeFiles/rt.dir/console/console_refract.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_refract.c -o CMakeFiles/rt.dir/console/console_refract.c.s
 
 CMakeFiles/rt.dir/console/console_reset.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_reset.c.o: ../console/console_reset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/rt.dir/console/console_reset.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_reset.c.o   -c /Users/ashari/moebius_paraboloid/console/console_reset.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/rt.dir/console/console_reset.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_reset.c.o   -c /Users/ashari/21_ray_tracer/console/console_reset.c
 
 CMakeFiles/rt.dir/console/console_reset.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_reset.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_reset.c > CMakeFiles/rt.dir/console/console_reset.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_reset.c > CMakeFiles/rt.dir/console/console_reset.c.i
 
 CMakeFiles/rt.dir/console/console_reset.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_reset.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_reset.c -o CMakeFiles/rt.dir/console/console_reset.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_reset.c -o CMakeFiles/rt.dir/console/console_reset.c.s
 
 CMakeFiles/rt.dir/console/cosnole_tshadows.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/cosnole_tshadows.c.o: ../console/cosnole_tshadows.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/rt.dir/console/cosnole_tshadows.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/cosnole_tshadows.c.o   -c /Users/ashari/moebius_paraboloid/console/cosnole_tshadows.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/rt.dir/console/cosnole_tshadows.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/cosnole_tshadows.c.o   -c /Users/ashari/21_ray_tracer/console/cosnole_tshadows.c
 
 CMakeFiles/rt.dir/console/cosnole_tshadows.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/cosnole_tshadows.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/cosnole_tshadows.c > CMakeFiles/rt.dir/console/cosnole_tshadows.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/cosnole_tshadows.c > CMakeFiles/rt.dir/console/cosnole_tshadows.c.i
 
 CMakeFiles/rt.dir/console/cosnole_tshadows.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/cosnole_tshadows.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/cosnole_tshadows.c -o CMakeFiles/rt.dir/console/cosnole_tshadows.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/cosnole_tshadows.c -o CMakeFiles/rt.dir/console/cosnole_tshadows.c.s
 
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/rt/rt_consistent.c.o: ../rt/rt_consistent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/rt.dir/rt/rt_consistent.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_consistent.c.o   -c /Users/ashari/moebius_paraboloid/rt/rt_consistent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/rt.dir/rt/rt_consistent.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_consistent.c.o   -c /Users/ashari/21_ray_tracer/rt/rt_consistent.c
 
 CMakeFiles/rt.dir/rt/rt_consistent.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/rt/rt_consistent.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/rt/rt_consistent.c > CMakeFiles/rt.dir/rt/rt_consistent.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/rt/rt_consistent.c > CMakeFiles/rt.dir/rt/rt_consistent.c.i
 
 CMakeFiles/rt.dir/rt/rt_consistent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/rt/rt_consistent.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/rt/rt_consistent.c -o CMakeFiles/rt.dir/rt/rt_consistent.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/rt/rt_consistent.c -o CMakeFiles/rt.dir/rt/rt_consistent.c.s
 
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/rt/rt_parallel.c.o: ../rt/rt_parallel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/rt.dir/rt/rt_parallel.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_parallel.c.o   -c /Users/ashari/moebius_paraboloid/rt/rt_parallel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/rt.dir/rt/rt_parallel.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/rt/rt_parallel.c.o   -c /Users/ashari/21_ray_tracer/rt/rt_parallel.c
 
 CMakeFiles/rt.dir/rt/rt_parallel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/rt/rt_parallel.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/rt/rt_parallel.c > CMakeFiles/rt.dir/rt/rt_parallel.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/rt/rt_parallel.c > CMakeFiles/rt.dir/rt/rt_parallel.c.i
 
 CMakeFiles/rt.dir/rt/rt_parallel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/rt/rt_parallel.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/rt/rt_parallel.c -o CMakeFiles/rt.dir/rt/rt_parallel.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/rt/rt_parallel.c -o CMakeFiles/rt.dir/rt/rt_parallel.c.s
 
 CMakeFiles/rt.dir/console/console_parallel.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/console/console_parallel.c.o: ../console/console_parallel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/rt.dir/console/console_parallel.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_parallel.c.o   -c /Users/ashari/moebius_paraboloid/console/console_parallel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/rt.dir/console/console_parallel.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/console/console_parallel.c.o   -c /Users/ashari/21_ray_tracer/console/console_parallel.c
 
 CMakeFiles/rt.dir/console/console_parallel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/console/console_parallel.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/console/console_parallel.c > CMakeFiles/rt.dir/console/console_parallel.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/console/console_parallel.c > CMakeFiles/rt.dir/console/console_parallel.c.i
 
 CMakeFiles/rt.dir/console/console_parallel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/console/console_parallel.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/console/console_parallel.c -o CMakeFiles/rt.dir/console/console_parallel.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/console/console_parallel.c -o CMakeFiles/rt.dir/console/console_parallel.c.s
 
 CMakeFiles/rt.dir/shape/shape_moebius.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_moebius.c.o: ../shape/shape_moebius.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/rt.dir/shape/shape_moebius.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_moebius.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_moebius.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/rt.dir/shape/shape_moebius.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_moebius.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_moebius.c
 
 CMakeFiles/rt.dir/shape/shape_moebius.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_moebius.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_moebius.c > CMakeFiles/rt.dir/shape/shape_moebius.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_moebius.c > CMakeFiles/rt.dir/shape/shape_moebius.c.i
 
 CMakeFiles/rt.dir/shape/shape_moebius.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_moebius.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_moebius.c -o CMakeFiles/rt.dir/shape/shape_moebius.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_moebius.c -o CMakeFiles/rt.dir/shape/shape_moebius.c.s
 
 CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o: ../shape/shape_moebius_equation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_moebius_equation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_moebius_equation.c
 
 CMakeFiles/rt.dir/shape/shape_moebius_equation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_moebius_equation.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_moebius_equation.c > CMakeFiles/rt.dir/shape/shape_moebius_equation.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_moebius_equation.c > CMakeFiles/rt.dir/shape/shape_moebius_equation.c.i
 
 CMakeFiles/rt.dir/shape/shape_moebius_equation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_moebius_equation.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_moebius_equation.c -o CMakeFiles/rt.dir/shape/shape_moebius_equation.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_moebius_equation.c -o CMakeFiles/rt.dir/shape/shape_moebius_equation.c.s
 
 CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/shape/shape_paraboloid.c.o: ../shape/shape_paraboloid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/shape/shape_paraboloid.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_paraboloid.c.o   -c /Users/ashari/moebius_paraboloid/shape/shape_paraboloid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/shape/shape_paraboloid.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/shape/shape_paraboloid.c.o   -c /Users/ashari/21_ray_tracer/shape/shape_paraboloid.c
 
 CMakeFiles/rt.dir/shape/shape_paraboloid.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/shape/shape_paraboloid.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/moebius_paraboloid/shape/shape_paraboloid.c > CMakeFiles/rt.dir/shape/shape_paraboloid.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/shape/shape_paraboloid.c > CMakeFiles/rt.dir/shape/shape_paraboloid.c.i
 
 CMakeFiles/rt.dir/shape/shape_paraboloid.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/shape/shape_paraboloid.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/moebius_paraboloid/shape/shape_paraboloid.c -o CMakeFiles/rt.dir/shape/shape_paraboloid.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/shape/shape_paraboloid.c -o CMakeFiles/rt.dir/shape/shape_paraboloid.c.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -590,7 +590,7 @@ rt: CMakeFiles/rt.dir/shape/shape_moebius_equation.c.o
 rt: CMakeFiles/rt.dir/shape/shape_paraboloid.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -603,6 +603,6 @@ CMakeFiles/rt.dir/clean:
 .PHONY : CMakeFiles/rt.dir/clean
 
 CMakeFiles/rt.dir/depend:
-	cd /Users/ashari/moebius_paraboloid/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ashari/moebius_paraboloid /Users/ashari/moebius_paraboloid /Users/ashari/moebius_paraboloid/cmake-build-debug /Users/ashari/moebius_paraboloid/cmake-build-debug /Users/ashari/moebius_paraboloid/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/ashari/21_ray_tracer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ashari/21_ray_tracer /Users/ashari/21_ray_tracer /Users/ashari/21_ray_tracer/cmake-build-debug /Users/ashari/21_ray_tracer/cmake-build-debug /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rt.dir/depend
 

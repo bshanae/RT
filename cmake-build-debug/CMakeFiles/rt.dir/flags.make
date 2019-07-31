@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/X11/include -I/Users/ashari/moebius_paraboloid/../21_libft/includes -I/Users/ashari/moebius_paraboloid/vector3 -I/Users/ashari/moebius_paraboloid/camera -I/Users/ashari/moebius_paraboloid/rt -I/Users/ashari/moebius_paraboloid/ray -I/Users/ashari/moebius_paraboloid/intersection -I/Users/ashari/moebius_paraboloid/scene -I/Users/ashari/moebius_paraboloid/color -I/Users/ashari/moebius_paraboloid/shape -I/Users/ashari/moebius_paraboloid/material -I/Users/ashari/moebius_paraboloid/light -I/Users/ashari/moebius_paraboloid/console -I/Users/ashari/moebius_paraboloid/mlx -I/Users/ashari/moebius_paraboloid/open_cl -I/Users/ashari/moebius_paraboloid/double_macro 
+C_INCLUDES = -I/usr/X11/include -I/Users/ashari/21_ray_tracer/../21_libft/includes -I/Users/ashari/21_ray_tracer/vector3 -I/Users/ashari/21_ray_tracer/camera -I/Users/ashari/21_ray_tracer/rt -I/Users/ashari/21_ray_tracer/ray -I/Users/ashari/21_ray_tracer/intersection -I/Users/ashari/21_ray_tracer/scene -I/Users/ashari/21_ray_tracer/color -I/Users/ashari/21_ray_tracer/shape -I/Users/ashari/21_ray_tracer/material -I/Users/ashari/21_ray_tracer/light -I/Users/ashari/21_ray_tracer/console -I/Users/ashari/21_ray_tracer/mlx -I/Users/ashari/21_ray_tracer/open_cl -I/Users/ashari/21_ray_tracer/double_macro 
 

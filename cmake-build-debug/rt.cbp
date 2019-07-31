@@ -8,58 +8,58 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ashari/moebius_paraboloid/cmake-build-debug"/>
+				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ashari/moebius_paraboloid/cmake-build-debug"/>
+				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ashari/moebius_paraboloid/cmake-build-debug"/>
+				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt">
-				<Option output="/Users/ashari/moebius_paraboloid/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ashari/moebius_paraboloid/cmake-build-debug"/>
+				<Option output="/Users/ashari/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/X11/include"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/../21_libft/includes"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/vector3"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/camera"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/rt"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/ray"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/intersection"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/scene"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/color"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/shape"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/material"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/light"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/console"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/mlx"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/open_cl"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/double_macro"/>
+					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/ashari/21_ray_tracer/vector3"/>
+					<Add directory="/Users/ashari/21_ray_tracer/camera"/>
+					<Add directory="/Users/ashari/21_ray_tracer/rt"/>
+					<Add directory="/Users/ashari/21_ray_tracer/ray"/>
+					<Add directory="/Users/ashari/21_ray_tracer/intersection"/>
+					<Add directory="/Users/ashari/21_ray_tracer/scene"/>
+					<Add directory="/Users/ashari/21_ray_tracer/color"/>
+					<Add directory="/Users/ashari/21_ray_tracer/shape"/>
+					<Add directory="/Users/ashari/21_ray_tracer/material"/>
+					<Add directory="/Users/ashari/21_ray_tracer/light"/>
+					<Add directory="/Users/ashari/21_ray_tracer/console"/>
+					<Add directory="/Users/ashari/21_ray_tracer/mlx"/>
+					<Add directory="/Users/ashari/21_ray_tracer/open_cl"/>
+					<Add directory="/Users/ashari/21_ray_tracer/double_macro"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -68,35 +68,35 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt/fast">
-				<Option output="/Users/ashari/moebius_paraboloid/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ashari/moebius_paraboloid/cmake-build-debug"/>
+				<Option output="/Users/ashari/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/X11/include"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/../21_libft/includes"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/vector3"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/camera"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/rt"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/ray"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/intersection"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/scene"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/color"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/shape"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/material"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/light"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/console"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/mlx"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/open_cl"/>
-					<Add directory="/Users/ashari/moebius_paraboloid/double_macro"/>
+					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/ashari/21_ray_tracer/vector3"/>
+					<Add directory="/Users/ashari/21_ray_tracer/camera"/>
+					<Add directory="/Users/ashari/21_ray_tracer/rt"/>
+					<Add directory="/Users/ashari/21_ray_tracer/ray"/>
+					<Add directory="/Users/ashari/21_ray_tracer/intersection"/>
+					<Add directory="/Users/ashari/21_ray_tracer/scene"/>
+					<Add directory="/Users/ashari/21_ray_tracer/color"/>
+					<Add directory="/Users/ashari/21_ray_tracer/shape"/>
+					<Add directory="/Users/ashari/21_ray_tracer/material"/>
+					<Add directory="/Users/ashari/21_ray_tracer/light"/>
+					<Add directory="/Users/ashari/21_ray_tracer/console"/>
+					<Add directory="/Users/ashari/21_ray_tracer/mlx"/>
+					<Add directory="/Users/ashari/21_ray_tracer/open_cl"/>
+					<Add directory="/Users/ashari/21_ray_tracer/double_macro"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -105,155 +105,155 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/moebius_paraboloid/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ashari/moebius_paraboloid/camera/camera.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/camera/camera.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/camera/camera.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/camera/camera.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/color/color.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/color/color.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/color/color.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/color/color.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_diffuse.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_diffuse.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_parallel.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_parallel.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_reflect.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_reflect.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_refract.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_refract.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_reset.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_shadows.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_shadows.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_specular.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_specular.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/console_translate.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/console_translate.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/console/cosnole_tshadows.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/console/cosnole_tshadows.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/intersection/intersection.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/intersection/intersection.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/intersection/intersection.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/intersection/intersection.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/light/light.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/light/light.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/light/light.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/light/light.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/main.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/main.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/material/material.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/material/material.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/material/material.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/material/material.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/ray/ray.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/ray/ray.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/ray/ray.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/ray/ray.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/rt/rt.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/rt/rt.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/rt/rt.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/rt/rt.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/rt/rt_consistent.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/rt/rt_consistent.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/rt/rt_mlx.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/rt/rt_mlx.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/rt/rt_parallel.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/rt/rt_parallel.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/scene/scene.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/scene/scene.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/scene/scene.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/scene/scene.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/scene/scene_lights.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/scene/scene_lights.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/scene/scene_shapes.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/scene/scene_shapes.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_aabb.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_aabb.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_cone.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_cone.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_cylinder.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_cylinder.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_disk.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_disk.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_moebius.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_moebius.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_moebius.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_moebius.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_moebius_equation.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_moebius_equation.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_paraboloid.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_paraboloid.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_plane.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_plane.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/shape/shape_sphere.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/shape/shape_sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/vector3/vector3.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/vector3/vector3.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/vector3/vector3.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/vector3/vector3.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/moebius_paraboloid/CMakeLists.txt">
+		<Unit filename="/Users/ashari/21_ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
