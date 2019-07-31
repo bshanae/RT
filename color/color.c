@@ -12,6 +12,8 @@ t_vector3			color_pack(int value)
 	return (vector);
 }
 
+#define RED_FILTER
+
 int                 color_unpack(t_vector3 vector)
 {
     t_color         color;
@@ -31,9 +33,16 @@ int                 color_unpack(t_vector3 vector)
 		}
 		ptr++;
 	}
+#ifdef RED_FILTER
 	color.rgb.a = 0;
     color.rgb.r = (unsigned char)(255. * vector.x);
-    color.rgb.g = (unsigned char)(255. * vector.y);
-    color.rgb.b = (unsigned char)(255. * vector.z);
+    color.rgb.g = (unsigned char)(0. * vector.y);
+    color.rgb.b = (unsigned char)(0. * vector.z);
+#else
+	color.rgb.a = 0;
+	color.rgb.r = (unsigned char)(255. * vector.x);
+	color.rgb.g = (unsigned char)(255. * vector.y);
+	color.rgb.b = (unsigned char)(255. * vector.z);
+#endif
     return (color.mix);
 }

@@ -24,7 +24,6 @@ int					sphere_intersect
 	temp = ray_intersect(&intersection->ray);
 	intersection->normal = vector3_sub(&temp, &data->center);
 	vector3_normalize(&intersection->normal);
-	intersection->color = perlin_noise(intersection->ray.origin);
 	intersection->material = shape->material;
 	intersection->highlight = &shape->highlight;
 	return (1);
