@@ -8,7 +8,9 @@ typedef struct			s_gtk_list
 {
 	GtkTreeView			*view;
 	GtkTreeSelection	*select;
-	GtkListStore		*list;		
+	GtkListStore		*list;
+	GtkTreeIter			iter;
+	int					iter_is_set;
 }						t_gtk_list;
 
 typedef struct			s_gtk_data
@@ -20,6 +22,9 @@ typedef struct			s_gtk_data
 }						t_gtk_data;
 
 void					foo(t_gtk_data *data);
+void					list_1_selected(GtkTreeSelection *, gpointer);
+void					list_1_edited_name(GtkEntry *, gpointer);
+
 
 int						main(int argc, char **argv)
 {
@@ -32,8 +37,15 @@ int						main(int argc, char **argv)
 	data.list.view = GTK_TREE_VIEW(gtk_builder_get_object(data.builder, "view_1"));
 	data.list.list = GTK_LIST_STORE(gtk_builder_get_object(data.builder, "list_1"));
 	data.list.select = GTK_TREE_SELECTION(gtk_builder_get_object(data.builder, "view_1_select"));
+	data.list.iter_is_set = 0;
+	data.entry = GTK_ENTRY(gtk_builder_get_object(data.builder, "entry_1"));
+	if (!data.entry)
+		return (1);
 
 	gtk_builder_connect_signals(data.builder, NULL);
+
+	g_signal_connect(data.list.select, "changed", G_CALLBACK(list_1_selected), (gpointer)&data);
+	g_signal_connect(data.entry, "activate", G_CALLBACK(list_1_edited_name), (gpointer)&data);
 
 	foo(&data);
 
@@ -59,3 +71,29 @@ void				foo(t_gtk_data *data)
 	}
 
 }
+
+void				list_1_selected(GtkTreeSelection *select, gpointer ptr)
+{
+	t_gtk_data		*data;
+	GtkTreeModel	*model;
+	gchar			*value;
+
+	data = (t_gtk_data *)ptr;
+	gtk_tree_selection_get_selected(select, &model, &data->list.iter);
+	gtk_tree_model_get(model, &data->list.iter, 0, &value, -1);
+	gtk_entry_set_text(data->entry, value);
+	data->list.iter_is_set = 1;
+}
+
+void				list_1_edited_name(GtkEntry *entry, gpointer ptr)
+{
+	t_gtk_data		*data;
+	const gchar		*text;
+
+	data = (t_gtk_data *)ptr;
+	text = gtk_entry_get_text(entry);
+	if (data->list.iter_is_set && text[0])
+		gtk_list_store_set(data->list.list, &data->list.iter, 0, text, -1);
+
+}
+
