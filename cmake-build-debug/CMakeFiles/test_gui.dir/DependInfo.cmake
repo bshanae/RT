@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/vladimir/workspace/ray_tracer/main.c" "/home/vladimir/workspace/ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/main.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
