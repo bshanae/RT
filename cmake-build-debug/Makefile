@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,276 @@ test_gui/fast:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/build
 .PHONY : test_gui/fast
 
+gui/gui/gui_init.o: gui/gui/gui_init.c.o
+
+.PHONY : gui/gui/gui_init.o
+
+# target to build an object file
+gui/gui/gui_init.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o
+.PHONY : gui/gui/gui_init.c.o
+
+gui/gui/gui_init.i: gui/gui/gui_init.c.i
+
+.PHONY : gui/gui/gui_init.i
+
+# target to preprocess a source file
+gui/gui/gui_init.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.i
+.PHONY : gui/gui/gui_init.c.i
+
+gui/gui/gui_init.s: gui/gui/gui_init.c.s
+
+.PHONY : gui/gui/gui_init.s
+
+# target to generate assembly for a file
+gui/gui/gui_init.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.s
+.PHONY : gui/gui/gui_init.c.s
+
+gui/gui/gui_new.o: gui/gui/gui_new.c.o
+
+.PHONY : gui/gui/gui_new.o
+
+# target to build an object file
+gui/gui/gui_new.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_new.c.o
+.PHONY : gui/gui/gui_new.c.o
+
+gui/gui/gui_new.i: gui/gui/gui_new.c.i
+
+.PHONY : gui/gui/gui_new.i
+
+# target to preprocess a source file
+gui/gui/gui_new.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_new.c.i
+.PHONY : gui/gui/gui_new.c.i
+
+gui/gui/gui_new.s: gui/gui/gui_new.c.s
+
+.PHONY : gui/gui/gui_new.s
+
+# target to generate assembly for a file
+gui/gui/gui_new.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_new.c.s
+.PHONY : gui/gui/gui_new.c.s
+
+gui/gui/gui_start.o: gui/gui/gui_start.c.o
+
+.PHONY : gui/gui/gui_start.o
+
+# target to build an object file
+gui/gui/gui_start.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o
+.PHONY : gui/gui/gui_start.c.o
+
+gui/gui/gui_start.i: gui/gui/gui_start.c.i
+
+.PHONY : gui/gui/gui_start.i
+
+# target to preprocess a source file
+gui/gui/gui_start.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.i
+.PHONY : gui/gui/gui_start.c.i
+
+gui/gui/gui_start.s: gui/gui/gui_start.c.s
+
+.PHONY : gui/gui/gui_start.s
+
+# target to generate assembly for a file
+gui/gui/gui_start.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.s
+.PHONY : gui/gui/gui_start.c.s
+
+gui/gui_scene/gui_scene_init.o: gui/gui_scene/gui_scene_init.c.o
+
+.PHONY : gui/gui_scene/gui_scene_init.o
+
+# target to build an object file
+gui/gui_scene/gui_scene_init.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_init.c.o
+.PHONY : gui/gui_scene/gui_scene_init.c.o
+
+gui/gui_scene/gui_scene_init.i: gui/gui_scene/gui_scene_init.c.i
+
+.PHONY : gui/gui_scene/gui_scene_init.i
+
+# target to preprocess a source file
+gui/gui_scene/gui_scene_init.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_init.c.i
+.PHONY : gui/gui_scene/gui_scene_init.c.i
+
+gui/gui_scene/gui_scene_init.s: gui/gui_scene/gui_scene_init.c.s
+
+.PHONY : gui/gui_scene/gui_scene_init.s
+
+# target to generate assembly for a file
+gui/gui_scene/gui_scene_init.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_init.c.s
+.PHONY : gui/gui_scene/gui_scene_init.c.s
+
+gui/gui_scene/gui_scene_new.o: gui/gui_scene/gui_scene_new.c.o
+
+.PHONY : gui/gui_scene/gui_scene_new.o
+
+# target to build an object file
+gui/gui_scene/gui_scene_new.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_new.c.o
+.PHONY : gui/gui_scene/gui_scene_new.c.o
+
+gui/gui_scene/gui_scene_new.i: gui/gui_scene/gui_scene_new.c.i
+
+.PHONY : gui/gui_scene/gui_scene_new.i
+
+# target to preprocess a source file
+gui/gui_scene/gui_scene_new.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_new.c.i
+.PHONY : gui/gui_scene/gui_scene_new.c.i
+
+gui/gui_scene/gui_scene_new.s: gui/gui_scene/gui_scene_new.c.s
+
+.PHONY : gui/gui_scene/gui_scene_new.s
+
+# target to generate assembly for a file
+gui/gui_scene/gui_scene_new.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_new.c.s
+.PHONY : gui/gui_scene/gui_scene_new.c.s
+
+gui/gui_scene_list/gui_scene_list_init.o: gui/gui_scene_list/gui_scene_list_init.c.o
+
+.PHONY : gui/gui_scene_list/gui_scene_list_init.o
+
+# target to build an object file
+gui/gui_scene_list/gui_scene_list_init.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_init.c.o
+.PHONY : gui/gui_scene_list/gui_scene_list_init.c.o
+
+gui/gui_scene_list/gui_scene_list_init.i: gui/gui_scene_list/gui_scene_list_init.c.i
+
+.PHONY : gui/gui_scene_list/gui_scene_list_init.i
+
+# target to preprocess a source file
+gui/gui_scene_list/gui_scene_list_init.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_init.c.i
+.PHONY : gui/gui_scene_list/gui_scene_list_init.c.i
+
+gui/gui_scene_list/gui_scene_list_init.s: gui/gui_scene_list/gui_scene_list_init.c.s
+
+.PHONY : gui/gui_scene_list/gui_scene_list_init.s
+
+# target to generate assembly for a file
+gui/gui_scene_list/gui_scene_list_init.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_init.c.s
+.PHONY : gui/gui_scene_list/gui_scene_list_init.c.s
+
+gui/gui_scene_list/gui_scene_list_new.o: gui/gui_scene_list/gui_scene_list_new.c.o
+
+.PHONY : gui/gui_scene_list/gui_scene_list_new.o
+
+# target to build an object file
+gui/gui_scene_list/gui_scene_list_new.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_new.c.o
+.PHONY : gui/gui_scene_list/gui_scene_list_new.c.o
+
+gui/gui_scene_list/gui_scene_list_new.i: gui/gui_scene_list/gui_scene_list_new.c.i
+
+.PHONY : gui/gui_scene_list/gui_scene_list_new.i
+
+# target to preprocess a source file
+gui/gui_scene_list/gui_scene_list_new.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_new.c.i
+.PHONY : gui/gui_scene_list/gui_scene_list_new.c.i
+
+gui/gui_scene_list/gui_scene_list_new.s: gui/gui_scene_list/gui_scene_list_new.c.s
+
+.PHONY : gui/gui_scene_list/gui_scene_list_new.s
+
+# target to generate assembly for a file
+gui/gui_scene_list/gui_scene_list_new.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_new.c.s
+.PHONY : gui/gui_scene_list/gui_scene_list_new.c.s
+
+gui/gui_scene_params/gui_scene_param_init.o: gui/gui_scene_params/gui_scene_param_init.c.o
+
+.PHONY : gui/gui_scene_params/gui_scene_param_init.o
+
+# target to build an object file
+gui/gui_scene_params/gui_scene_param_init.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_param_init.c.o
+.PHONY : gui/gui_scene_params/gui_scene_param_init.c.o
+
+gui/gui_scene_params/gui_scene_param_init.i: gui/gui_scene_params/gui_scene_param_init.c.i
+
+.PHONY : gui/gui_scene_params/gui_scene_param_init.i
+
+# target to preprocess a source file
+gui/gui_scene_params/gui_scene_param_init.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_param_init.c.i
+.PHONY : gui/gui_scene_params/gui_scene_param_init.c.i
+
+gui/gui_scene_params/gui_scene_param_init.s: gui/gui_scene_params/gui_scene_param_init.c.s
+
+.PHONY : gui/gui_scene_params/gui_scene_param_init.s
+
+# target to generate assembly for a file
+gui/gui_scene_params/gui_scene_param_init.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_param_init.c.s
+.PHONY : gui/gui_scene_params/gui_scene_param_init.c.s
+
+gui/gui_scene_params/gui_scene_params_init.o: gui/gui_scene_params/gui_scene_params_init.c.o
+
+.PHONY : gui/gui_scene_params/gui_scene_params_init.o
+
+# target to build an object file
+gui/gui_scene_params/gui_scene_params_init.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_init.c.o
+.PHONY : gui/gui_scene_params/gui_scene_params_init.c.o
+
+gui/gui_scene_params/gui_scene_params_init.i: gui/gui_scene_params/gui_scene_params_init.c.i
+
+.PHONY : gui/gui_scene_params/gui_scene_params_init.i
+
+# target to preprocess a source file
+gui/gui_scene_params/gui_scene_params_init.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_init.c.i
+.PHONY : gui/gui_scene_params/gui_scene_params_init.c.i
+
+gui/gui_scene_params/gui_scene_params_init.s: gui/gui_scene_params/gui_scene_params_init.c.s
+
+.PHONY : gui/gui_scene_params/gui_scene_params_init.s
+
+# target to generate assembly for a file
+gui/gui_scene_params/gui_scene_params_init.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_init.c.s
+.PHONY : gui/gui_scene_params/gui_scene_params_init.c.s
+
+gui/gui_scene_params/gui_scene_params_new.o: gui/gui_scene_params/gui_scene_params_new.c.o
+
+.PHONY : gui/gui_scene_params/gui_scene_params_new.o
+
+# target to build an object file
+gui/gui_scene_params/gui_scene_params_new.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_new.c.o
+.PHONY : gui/gui_scene_params/gui_scene_params_new.c.o
+
+gui/gui_scene_params/gui_scene_params_new.i: gui/gui_scene_params/gui_scene_params_new.c.i
+
+.PHONY : gui/gui_scene_params/gui_scene_params_new.i
+
+# target to preprocess a source file
+gui/gui_scene_params/gui_scene_params_new.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_new.c.i
+.PHONY : gui/gui_scene_params/gui_scene_params_new.c.i
+
+gui/gui_scene_params/gui_scene_params_new.s: gui/gui_scene_params/gui_scene_params_new.c.s
+
+.PHONY : gui/gui_scene_params/gui_scene_params_new.s
+
+# target to generate assembly for a file
+gui/gui_scene_params/gui_scene_params_new.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_new.c.s
+.PHONY : gui/gui_scene_params/gui_scene_params_new.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -157,8 +427,38 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... test_gui"
+	@echo "... edit_cache"
+	@echo "... gui/gui/gui_init.o"
+	@echo "... gui/gui/gui_init.i"
+	@echo "... gui/gui/gui_init.s"
+	@echo "... gui/gui/gui_new.o"
+	@echo "... gui/gui/gui_new.i"
+	@echo "... gui/gui/gui_new.s"
+	@echo "... gui/gui/gui_start.o"
+	@echo "... gui/gui/gui_start.i"
+	@echo "... gui/gui/gui_start.s"
+	@echo "... gui/gui_scene/gui_scene_init.o"
+	@echo "... gui/gui_scene/gui_scene_init.i"
+	@echo "... gui/gui_scene/gui_scene_init.s"
+	@echo "... gui/gui_scene/gui_scene_new.o"
+	@echo "... gui/gui_scene/gui_scene_new.i"
+	@echo "... gui/gui_scene/gui_scene_new.s"
+	@echo "... gui/gui_scene_list/gui_scene_list_init.o"
+	@echo "... gui/gui_scene_list/gui_scene_list_init.i"
+	@echo "... gui/gui_scene_list/gui_scene_list_init.s"
+	@echo "... gui/gui_scene_list/gui_scene_list_new.o"
+	@echo "... gui/gui_scene_list/gui_scene_list_new.i"
+	@echo "... gui/gui_scene_list/gui_scene_list_new.s"
+	@echo "... gui/gui_scene_params/gui_scene_param_init.o"
+	@echo "... gui/gui_scene_params/gui_scene_param_init.i"
+	@echo "... gui/gui_scene_params/gui_scene_param_init.s"
+	@echo "... gui/gui_scene_params/gui_scene_params_init.o"
+	@echo "... gui/gui_scene_params/gui_scene_params_init.i"
+	@echo "... gui/gui_scene_params/gui_scene_params_init.s"
+	@echo "... gui/gui_scene_params/gui_scene_params_new.o"
+	@echo "... gui/gui_scene_params/gui_scene_params_new.i"
+	@echo "... gui/gui_scene_params/gui_scene_params_new.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
