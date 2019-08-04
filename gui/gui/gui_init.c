@@ -1,4 +1,5 @@
 #include "gui.h"
+#include "gui_signal.h"
 
 void				gui_init(t_gui *gui, int *ac, char ***av)
 {
@@ -6,7 +7,9 @@ void				gui_init(t_gui *gui, int *ac, char ***av)
 
 	gui->builder = gtk_builder_new_from_file(G_SOURCE);
 	gui->window = GTK_WINDOW(gtk_builder_get_object(gui->builder, G_WINDOW));
-	gui_scene_init(gui->scene, gui->builder);
-	gtk_builder_connect_signals(gui->builder, (gpointer)gui);
-	gtk_widget_show(GTK_WIDGET(gui->window));
+	gui_list_init(gui->list, gui->builder);
+	gui_object_init(gui->object, gui->builder);
+	//gui_image_init(gui->image, gui->builder);
+	gui_signal_connect(gui);
+	gtk_widget_show_all(GTK_WIDGET(gui->window));
 }

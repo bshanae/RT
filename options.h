@@ -1,0 +1,9 @@
+#ifndef OPTIONS_H
+# define OPTIONS_H
+
+# define OBJECT_DATA_CAPACITY	32
+
+# define SCENE_LIGHTS_CAPACITY	4
+# define SCENE_OBJECTS_CAPACITY	16
+
+#endif

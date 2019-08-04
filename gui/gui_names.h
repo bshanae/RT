@@ -1,16 +1,20 @@
 #ifndef GUI_NAMES_H
 # define GUI_NAMES_H
 
-# define G_SOURCE			"../gui/build.glade"
+# define G_SOURCE			"../gui/build/build.glade"
 # define G_WINDOW			"window"
 
-# define GSL_DATA			""
-# define GSL_VIEW			""
-# define GSL_SELECT			""
+# define GL_DATA			"list"
+# define GL_VIEW			"tree"
+# define GL_SELECT			"select"
 
-# define GSP_OVERLAY		""
+# define GO_OVERLAY			"overlay"
+# define GO_SPHERE_OBJECT	"sphere"
+# define GO_SPHERE_PARENT	"sphere_offscreen"
+# define GO_SPHERE_POS_X	"sphere_position_x"
+# define GO_SPHERE_POS_Y	"sphere_position_y"
+# define GO_SPHERE_POS_Z	"sphere_position_z"
 
-# define GSP_SPHERE_PARAM	""
-# define GSP_SPHERE_PARENT	""
+# define GI_IMAGE			"image"
 
 #endif

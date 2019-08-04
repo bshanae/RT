@@ -50,11 +50,21 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/."/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_params"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./light"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -91,11 +101,21 @@
 					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
 					<Add directory="/usr/include/glib-2.0"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/."/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_params"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./vector3"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./light"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -120,6 +140,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">
+			<Option target="test_gui"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_init.c">
 			<Option target="test_gui"/>
 		</Unit>
@@ -129,28 +152,64 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_start.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_init.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_list/gui_scene_list_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_init.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_list/gui_scene_list_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_params/gui_scene_param_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_init.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_params/gui_scene_params_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_params/gui_scene_params_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_sphere.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_selected.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_sphere.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/main.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_build.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_build.h">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_intersect.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object_list/plane.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object_list/sphere.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_get_space.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_new.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/CMakeLists.txt">

@@ -7,6 +7,8 @@ t_gui				*gui_new(void)
 	new = (t_gui *)malloc(sizeof(t_gui));
 	new->builder = NULL;
 	new->window = NULL;
-	new->scene = gui_scene_new();
+	new->list = gui_list_new();
+	new->object = gui_object_new();
+	new->image = gui_image_new();
 	return (new);
 }
