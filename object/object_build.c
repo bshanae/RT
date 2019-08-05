@@ -1,4 +1,4 @@
-#include "object_build.h"
+#include "object_interaction.h"
 
 void				object_build(
 					t_object *space,

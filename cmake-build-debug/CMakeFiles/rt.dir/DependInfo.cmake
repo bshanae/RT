@@ -33,10 +33,15 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vladimir/workspace/21_ray_tracer/object/object_intersect.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object/object_intersect.c.o"
   "/home/vladimir/workspace/21_ray_tracer/object_list/plane.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object_list/plane.c.o"
   "/home/vladimir/workspace/21_ray_tracer/object_list/sphere.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object_list/sphere.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o"
   "/home/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/renderer/renderer_delete.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/renderer/renderer_frame.c.o"
   "/home/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/renderer/renderer_new.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/renderer/renderer_pixel.c.o"
   "/home/vladimir/workspace/21_ray_tracer/scene/scene_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_delete.c.o"
   "/home/vladimir/workspace/21_ray_tracer/scene/scene_get_space.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_get_space.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/scene/scene_intersect.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_intersect.c.o"
   "/home/vladimir/workspace/21_ray_tracer/scene/scene_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_new.c.o"
   "/home/vladimir/workspace/21_ray_tracer/vector3/vector3_add.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_add.c.o"
   "/home/vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o"
@@ -88,6 +93,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././renderer"
   ".././camera"
   ".././ray"
+  ".././intersection"
+  ".././open_cl_manager"
   )
 
 # Targets to which this target links.

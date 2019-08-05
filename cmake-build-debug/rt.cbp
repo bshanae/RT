@@ -68,6 +68,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./ray"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -122,6 +124,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./ray"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./intersection"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -224,9 +228,6 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_build.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_build.h">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object/object_intersect.c">
 			<Option target="rt"/>
 		</Unit>
@@ -236,16 +237,31 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/object_list/sphere.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/renderer/renderer_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_get_space.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_intersect.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/scene/scene_new.c">

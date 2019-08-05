@@ -3,7 +3,7 @@
 
 # include "gui_object_base.h"
 # include "object_definition.h"
-# include "object_data.h"
+# include "object_list.h"
 
 # include <stdio.h>
 

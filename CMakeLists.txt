@@ -25,7 +25,9 @@ include_directories(
 	./scene/
 	./renderer/
 	./camera/
-	./ray/)
+	./ray/
+	./intersection/
+	./open_cl_manager/)
 
 link_directories(
 	${GTK3_LIBRARY_DIRS})
@@ -92,11 +94,16 @@ set(SOURCE_VECTOR3
 	./vector3/vector3_component_mul.c)
 
 set(SOURCE_RENDERER
-	./renderer/renderer_new.c renderer/renderer_delete.c)
+	./renderer/renderer_new.c
+	./renderer/renderer_delete.c
+	./renderer/renderer_pixel.c
+	./renderer/renderer_frame.c)
 
 set(SOURCE_SCENE
 	./scene/scene_new.c
-	./scene/scene_get_space.c scene/scene_delete.c)
+	./scene/scene_get_space.c
+	./scene/scene_delete.c
+	./scene/scene_intersect.c)
 
 set(SOURCE_OBJECT
 	./object/object_build.c
@@ -110,6 +117,10 @@ set(SOURCE_CAMERA
 	./camera/camera_delete.c
 	./camera/camera_build_ray.c)
 
+set(SOURCE_OPEN_CL_MANAGER
+	./open_cl_manager/open_cl_manager_new.c
+	./open_cl_manager/open_cl_manager_delete.c)
+
 set(SOURCE_RAY
 	./ray/ray)
 
@@ -120,4 +131,5 @@ add_executable(rt
 	${SOURCE_RENDERER}
 	${SOURCE_SCENE}
 	${SOURCE_OBJECT}
-	${SOURCE_CAMERA})
+	${SOURCE_CAMERA}
+	${SOURCE_OPEN_CL_MANAGER})

@@ -4,7 +4,8 @@
 # include "options.h"
 
 # include "light.h"
-# include "object_definition.h"
+# include "object_interaction.h"
+# include "intersection.h"
 
 # include <stdlib.h>
 
@@ -23,5 +24,7 @@ t_scene						*scene_new(void);
 void						scene_delete(t_scene **scene);
 
 void						*scene_get_space(t_scene *scene, int purpose);
+int							scene_intersect
+							(t_scene *scene, t_intersection *intersection);
 
 #endif

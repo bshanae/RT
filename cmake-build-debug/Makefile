@@ -906,6 +906,60 @@ object_list/sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object_list/sphere.c.s
 .PHONY : object_list/sphere.c.s
 
+open_cl_manager/open_cl_manager_delete.o: open_cl_manager/open_cl_manager_delete.c.o
+
+.PHONY : open_cl_manager/open_cl_manager_delete.o
+
+# target to build an object file
+open_cl_manager/open_cl_manager_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o
+.PHONY : open_cl_manager/open_cl_manager_delete.c.o
+
+open_cl_manager/open_cl_manager_delete.i: open_cl_manager/open_cl_manager_delete.c.i
+
+.PHONY : open_cl_manager/open_cl_manager_delete.i
+
+# target to preprocess a source file
+open_cl_manager/open_cl_manager_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i
+.PHONY : open_cl_manager/open_cl_manager_delete.c.i
+
+open_cl_manager/open_cl_manager_delete.s: open_cl_manager/open_cl_manager_delete.c.s
+
+.PHONY : open_cl_manager/open_cl_manager_delete.s
+
+# target to generate assembly for a file
+open_cl_manager/open_cl_manager_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s
+.PHONY : open_cl_manager/open_cl_manager_delete.c.s
+
+open_cl_manager/open_cl_manager_new.o: open_cl_manager/open_cl_manager_new.c.o
+
+.PHONY : open_cl_manager/open_cl_manager_new.o
+
+# target to build an object file
+open_cl_manager/open_cl_manager_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o
+.PHONY : open_cl_manager/open_cl_manager_new.c.o
+
+open_cl_manager/open_cl_manager_new.i: open_cl_manager/open_cl_manager_new.c.i
+
+.PHONY : open_cl_manager/open_cl_manager_new.i
+
+# target to preprocess a source file
+open_cl_manager/open_cl_manager_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i
+.PHONY : open_cl_manager/open_cl_manager_new.c.i
+
+open_cl_manager/open_cl_manager_new.s: open_cl_manager/open_cl_manager_new.c.s
+
+.PHONY : open_cl_manager/open_cl_manager_new.s
+
+# target to generate assembly for a file
+open_cl_manager/open_cl_manager_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s
+.PHONY : open_cl_manager/open_cl_manager_new.c.s
+
 renderer/renderer_delete.o: renderer/renderer_delete.c.o
 
 .PHONY : renderer/renderer_delete.o
@@ -933,6 +987,33 @@ renderer/renderer_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_delete.c.s
 .PHONY : renderer/renderer_delete.c.s
 
+renderer/renderer_frame.o: renderer/renderer_frame.c.o
+
+.PHONY : renderer/renderer_frame.o
+
+# target to build an object file
+renderer/renderer_frame.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.o
+.PHONY : renderer/renderer_frame.c.o
+
+renderer/renderer_frame.i: renderer/renderer_frame.c.i
+
+.PHONY : renderer/renderer_frame.i
+
+# target to preprocess a source file
+renderer/renderer_frame.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.i
+.PHONY : renderer/renderer_frame.c.i
+
+renderer/renderer_frame.s: renderer/renderer_frame.c.s
+
+.PHONY : renderer/renderer_frame.s
+
+# target to generate assembly for a file
+renderer/renderer_frame.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.s
+.PHONY : renderer/renderer_frame.c.s
+
 renderer/renderer_new.o: renderer/renderer_new.c.o
 
 .PHONY : renderer/renderer_new.o
@@ -959,6 +1040,33 @@ renderer/renderer_new.s: renderer/renderer_new.c.s
 renderer/renderer_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_new.c.s
 .PHONY : renderer/renderer_new.c.s
+
+renderer/renderer_pixel.o: renderer/renderer_pixel.c.o
+
+.PHONY : renderer/renderer_pixel.o
+
+# target to build an object file
+renderer/renderer_pixel.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.o
+.PHONY : renderer/renderer_pixel.c.o
+
+renderer/renderer_pixel.i: renderer/renderer_pixel.c.i
+
+.PHONY : renderer/renderer_pixel.i
+
+# target to preprocess a source file
+renderer/renderer_pixel.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.i
+.PHONY : renderer/renderer_pixel.c.i
+
+renderer/renderer_pixel.s: renderer/renderer_pixel.c.s
+
+.PHONY : renderer/renderer_pixel.s
+
+# target to generate assembly for a file
+renderer/renderer_pixel.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.s
+.PHONY : renderer/renderer_pixel.c.s
 
 scene/scene_delete.o: scene/scene_delete.c.o
 
@@ -1013,6 +1121,33 @@ scene/scene_get_space.s: scene/scene_get_space.c.s
 scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_get_space.c.s
 .PHONY : scene/scene_get_space.c.s
+
+scene/scene_intersect.o: scene/scene_intersect.c.o
+
+.PHONY : scene/scene_intersect.o
+
+# target to build an object file
+scene/scene_intersect.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.o
+.PHONY : scene/scene_intersect.c.o
+
+scene/scene_intersect.i: scene/scene_intersect.c.i
+
+.PHONY : scene/scene_intersect.i
+
+# target to preprocess a source file
+scene/scene_intersect.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.i
+.PHONY : scene/scene_intersect.c.i
+
+scene/scene_intersect.s: scene/scene_intersect.c.s
+
+.PHONY : scene/scene_intersect.s
+
+# target to generate assembly for a file
+scene/scene_intersect.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.s
+.PHONY : scene/scene_intersect.c.s
 
 scene/scene_new.o: scene/scene_new.c.o
 
@@ -1434,18 +1569,33 @@ help:
 	@echo "... object_list/sphere.o"
 	@echo "... object_list/sphere.i"
 	@echo "... object_list/sphere.s"
+	@echo "... open_cl_manager/open_cl_manager_delete.o"
+	@echo "... open_cl_manager/open_cl_manager_delete.i"
+	@echo "... open_cl_manager/open_cl_manager_delete.s"
+	@echo "... open_cl_manager/open_cl_manager_new.o"
+	@echo "... open_cl_manager/open_cl_manager_new.i"
+	@echo "... open_cl_manager/open_cl_manager_new.s"
 	@echo "... renderer/renderer_delete.o"
 	@echo "... renderer/renderer_delete.i"
 	@echo "... renderer/renderer_delete.s"
+	@echo "... renderer/renderer_frame.o"
+	@echo "... renderer/renderer_frame.i"
+	@echo "... renderer/renderer_frame.s"
 	@echo "... renderer/renderer_new.o"
 	@echo "... renderer/renderer_new.i"
 	@echo "... renderer/renderer_new.s"
+	@echo "... renderer/renderer_pixel.o"
+	@echo "... renderer/renderer_pixel.i"
+	@echo "... renderer/renderer_pixel.s"
 	@echo "... scene/scene_delete.o"
 	@echo "... scene/scene_delete.i"
 	@echo "... scene/scene_delete.s"
 	@echo "... scene/scene_get_space.o"
 	@echo "... scene/scene_get_space.i"
 	@echo "... scene/scene_get_space.s"
+	@echo "... scene/scene_intersect.o"
+	@echo "... scene/scene_intersect.i"
+	@echo "... scene/scene_intersect.s"
 	@echo "... scene/scene_new.o"
 	@echo "... scene/scene_new.i"
 	@echo "... scene/scene_new.s"

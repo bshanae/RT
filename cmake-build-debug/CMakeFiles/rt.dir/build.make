@@ -512,9 +512,35 @@ CMakeFiles/rt.dir/renderer/renderer_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_delete.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c -o CMakeFiles/rt.dir/renderer/renderer_delete.c.s
 
+CMakeFiles/rt.dir/renderer/renderer_pixel.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/renderer/renderer_pixel.c.o: ../renderer/renderer_pixel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rt.dir/renderer/renderer_pixel.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_pixel.c.o   -c /home/vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c
+
+CMakeFiles/rt.dir/renderer/renderer_pixel.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_pixel.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c > CMakeFiles/rt.dir/renderer/renderer_pixel.c.i
+
+CMakeFiles/rt.dir/renderer/renderer_pixel.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_pixel.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c -o CMakeFiles/rt.dir/renderer/renderer_pixel.c.s
+
+CMakeFiles/rt.dir/renderer/renderer_frame.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/renderer/renderer_frame.c.o: ../renderer/renderer_frame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rt.dir/renderer/renderer_frame.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_frame.c.o   -c /home/vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c
+
+CMakeFiles/rt.dir/renderer/renderer_frame.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_frame.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c > CMakeFiles/rt.dir/renderer/renderer_frame.c.i
+
+CMakeFiles/rt.dir/renderer/renderer_frame.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_frame.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c -o CMakeFiles/rt.dir/renderer/renderer_frame.c.s
+
 CMakeFiles/rt.dir/scene/scene_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_new.c.o: ../scene/scene_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rt.dir/scene/scene_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rt.dir/scene/scene_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/scene/scene_new.c
 
 CMakeFiles/rt.dir/scene/scene_new.c.i: cmake_force
@@ -527,7 +553,7 @@ CMakeFiles/rt.dir/scene/scene_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: ../scene/scene_get_space.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rt.dir/scene/scene_get_space.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rt.dir/scene/scene_get_space.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_get_space.c.o   -c /home/vladimir/workspace/21_ray_tracer/scene/scene_get_space.c
 
 CMakeFiles/rt.dir/scene/scene_get_space.c.i: cmake_force
@@ -540,7 +566,7 @@ CMakeFiles/rt.dir/scene/scene_get_space.c.s: cmake_force
 
 CMakeFiles/rt.dir/scene/scene_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_delete.c.o: ../scene/scene_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rt.dir/scene/scene_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rt.dir/scene/scene_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/scene/scene_delete.c
 
 CMakeFiles/rt.dir/scene/scene_delete.c.i: cmake_force
@@ -551,9 +577,22 @@ CMakeFiles/rt.dir/scene/scene_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_delete.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/scene/scene_delete.c -o CMakeFiles/rt.dir/scene/scene_delete.c.s
 
+CMakeFiles/rt.dir/scene/scene_intersect.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/scene/scene_intersect.c.o: ../scene/scene_intersect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rt.dir/scene/scene_intersect.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_intersect.c.o   -c /home/vladimir/workspace/21_ray_tracer/scene/scene_intersect.c
+
+CMakeFiles/rt.dir/scene/scene_intersect.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_intersect.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/scene/scene_intersect.c > CMakeFiles/rt.dir/scene/scene_intersect.c.i
+
+CMakeFiles/rt.dir/scene/scene_intersect.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_intersect.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/scene/scene_intersect.c -o CMakeFiles/rt.dir/scene/scene_intersect.c.s
+
 CMakeFiles/rt.dir/object/object_build.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object/object_build.c.o: ../object/object_build.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rt.dir/object/object_build.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/rt.dir/object/object_build.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_build.c.o   -c /home/vladimir/workspace/21_ray_tracer/object/object_build.c
 
 CMakeFiles/rt.dir/object/object_build.c.i: cmake_force
@@ -566,7 +605,7 @@ CMakeFiles/rt.dir/object/object_build.c.s: cmake_force
 
 CMakeFiles/rt.dir/object_list/sphere.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object_list/sphere.c.o: ../object_list/sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rt.dir/object_list/sphere.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/rt.dir/object_list/sphere.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/sphere.c.o   -c /home/vladimir/workspace/21_ray_tracer/object_list/sphere.c
 
 CMakeFiles/rt.dir/object_list/sphere.c.i: cmake_force
@@ -579,7 +618,7 @@ CMakeFiles/rt.dir/object_list/sphere.c.s: cmake_force
 
 CMakeFiles/rt.dir/object/object_intersect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object/object_intersect.c.o: ../object/object_intersect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rt.dir/object/object_intersect.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/rt.dir/object/object_intersect.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_intersect.c.o   -c /home/vladimir/workspace/21_ray_tracer/object/object_intersect.c
 
 CMakeFiles/rt.dir/object/object_intersect.c.i: cmake_force
@@ -592,7 +631,7 @@ CMakeFiles/rt.dir/object/object_intersect.c.s: cmake_force
 
 CMakeFiles/rt.dir/object_list/plane.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object_list/plane.c.o: ../object_list/plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/rt.dir/object_list/plane.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/rt.dir/object_list/plane.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/plane.c.o   -c /home/vladimir/workspace/21_ray_tracer/object_list/plane.c
 
 CMakeFiles/rt.dir/object_list/plane.c.i: cmake_force
@@ -605,7 +644,7 @@ CMakeFiles/rt.dir/object_list/plane.c.s: cmake_force
 
 CMakeFiles/rt.dir/camera/camera_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_new.c.o: ../camera/camera_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/rt.dir/camera/camera_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/rt.dir/camera/camera_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_new.c
 
 CMakeFiles/rt.dir/camera/camera_new.c.i: cmake_force
@@ -618,7 +657,7 @@ CMakeFiles/rt.dir/camera/camera_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/camera/camera_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_delete.c.o: ../camera/camera_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/rt.dir/camera/camera_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/rt.dir/camera/camera_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c
 
 CMakeFiles/rt.dir/camera/camera_delete.c.i: cmake_force
@@ -631,7 +670,7 @@ CMakeFiles/rt.dir/camera/camera_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/camera/camera_build_ray.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_build_ray.c.o: ../camera/camera_build_ray.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_build_ray.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c
 
 CMakeFiles/rt.dir/camera/camera_build_ray.c.i: cmake_force
@@ -641,6 +680,32 @@ CMakeFiles/rt.dir/camera/camera_build_ray.c.i: cmake_force
 CMakeFiles/rt.dir/camera/camera_build_ray.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/camera/camera_build_ray.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c -o CMakeFiles/rt.dir/camera/camera_build_ray.c.s
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o: ../open_cl_manager/open_cl_manager_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o: ../open_cl_manager/open_cl_manager_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i
+
+CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -679,16 +744,21 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o" \
 "CMakeFiles/rt.dir/renderer/renderer_new.c.o" \
 "CMakeFiles/rt.dir/renderer/renderer_delete.c.o" \
+"CMakeFiles/rt.dir/renderer/renderer_pixel.c.o" \
+"CMakeFiles/rt.dir/renderer/renderer_frame.c.o" \
 "CMakeFiles/rt.dir/scene/scene_new.c.o" \
 "CMakeFiles/rt.dir/scene/scene_get_space.c.o" \
 "CMakeFiles/rt.dir/scene/scene_delete.c.o" \
+"CMakeFiles/rt.dir/scene/scene_intersect.c.o" \
 "CMakeFiles/rt.dir/object/object_build.c.o" \
 "CMakeFiles/rt.dir/object_list/sphere.c.o" \
 "CMakeFiles/rt.dir/object/object_intersect.c.o" \
 "CMakeFiles/rt.dir/object_list/plane.c.o" \
 "CMakeFiles/rt.dir/camera/camera_new.c.o" \
 "CMakeFiles/rt.dir/camera/camera_delete.c.o" \
-"CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
+"CMakeFiles/rt.dir/camera/camera_build_ray.c.o" \
+"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o" \
+"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -728,9 +798,12 @@ rt: CMakeFiles/rt.dir/vector3/vector3_min.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o
 rt: CMakeFiles/rt.dir/renderer/renderer_new.c.o
 rt: CMakeFiles/rt.dir/renderer/renderer_delete.c.o
+rt: CMakeFiles/rt.dir/renderer/renderer_pixel.c.o
+rt: CMakeFiles/rt.dir/renderer/renderer_frame.c.o
 rt: CMakeFiles/rt.dir/scene/scene_new.c.o
 rt: CMakeFiles/rt.dir/scene/scene_get_space.c.o
 rt: CMakeFiles/rt.dir/scene/scene_delete.c.o
+rt: CMakeFiles/rt.dir/scene/scene_intersect.c.o
 rt: CMakeFiles/rt.dir/object/object_build.c.o
 rt: CMakeFiles/rt.dir/object_list/sphere.c.o
 rt: CMakeFiles/rt.dir/object/object_intersect.c.o
@@ -738,9 +811,11 @@ rt: CMakeFiles/rt.dir/object_list/plane.c.o
 rt: CMakeFiles/rt.dir/camera/camera_new.c.o
 rt: CMakeFiles/rt.dir/camera/camera_delete.c.o
 rt: CMakeFiles/rt.dir/camera/camera_build_ray.c.o
+rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o
+rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

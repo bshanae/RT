@@ -11,4 +11,7 @@
 
 # define INT_REF				const int *
 
+# define INTERSECTION_MIN		0.0001
+# define INTERSECTION_MAX		INFINITY
+
 #endif

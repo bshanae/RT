@@ -5,9 +5,10 @@
 
 typedef struct		s_color
 {
-	guchar			b;
-	guchar			g;
 	guchar			r;
+	guchar			g;
+	guchar			b;
+	guchar			a;
 }					t_color;
 
 #endif

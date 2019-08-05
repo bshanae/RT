@@ -3,7 +3,11 @@
 
 # include "options.h"
 
-# include "object_type.h"
+typedef enum		e_object_type
+{
+	object_sphere = 0,
+	object_plane
+}					t_object_type;
 
 typedef struct		s_object
 {
