@@ -21,11 +21,7 @@ typedef struct			s_gui_list
 	GtkTreeIter			iter;
 }						t_gui_list;
 
-t_gui_list				*gui_list_new(void);
+t_gui_list				*gui_list_new(GtkBuilder *builder);
 void					gui_list_delete(t_gui_list **gsl);
-
-void					gui_list_init(
-						t_gui_list *gl,
-						GtkBuilder *builder);
 
 #endif

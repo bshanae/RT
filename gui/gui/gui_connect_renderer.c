@@ -22,8 +22,8 @@ static void			gui_connect_scene(t_gui *gui)
 	gtk_widget_show(GTK_WIDGET(gui->list->view));
 }
 
-void				gui_connect_renderer(t_gui *gui, t_renderer *renderer)
+void				gui_connect_renderer(t_gui *gui)
 {
-	gui->renderer = renderer;
+	gui->renderer->image = gui->image;
 	gui_connect_scene(gui);
 }

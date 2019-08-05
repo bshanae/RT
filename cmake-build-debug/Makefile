@@ -150,32 +150,59 @@ gui/gui/gui_connect_renderer.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.s
 .PHONY : gui/gui/gui_connect_renderer.c.s
 
-gui/gui/gui_init.o: gui/gui/gui_init.c.o
+gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
-.PHONY : gui/gui/gui_init.o
+.PHONY : gui/gui/gui_delete.o
 
 # target to build an object file
-gui/gui/gui_init.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o
-.PHONY : gui/gui/gui_init.c.o
+gui/gui/gui_delete.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_delete.c.o
+.PHONY : gui/gui/gui_delete.c.o
 
-gui/gui/gui_init.i: gui/gui/gui_init.c.i
+gui/gui/gui_delete.i: gui/gui/gui_delete.c.i
 
-.PHONY : gui/gui/gui_init.i
+.PHONY : gui/gui/gui_delete.i
 
 # target to preprocess a source file
-gui/gui/gui_init.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.i
-.PHONY : gui/gui/gui_init.c.i
+gui/gui/gui_delete.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_delete.c.i
+.PHONY : gui/gui/gui_delete.c.i
 
-gui/gui/gui_init.s: gui/gui/gui_init.c.s
+gui/gui/gui_delete.s: gui/gui/gui_delete.c.s
 
-.PHONY : gui/gui/gui_init.s
+.PHONY : gui/gui/gui_delete.s
 
 # target to generate assembly for a file
-gui/gui/gui_init.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_init.c.s
-.PHONY : gui/gui/gui_init.c.s
+gui/gui/gui_delete.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_delete.c.s
+.PHONY : gui/gui/gui_delete.c.s
+
+gui/gui/gui_loop.o: gui/gui/gui_loop.c.o
+
+.PHONY : gui/gui/gui_loop.o
+
+# target to build an object file
+gui/gui/gui_loop.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_loop.c.o
+.PHONY : gui/gui/gui_loop.c.o
+
+gui/gui/gui_loop.i: gui/gui/gui_loop.c.i
+
+.PHONY : gui/gui/gui_loop.i
+
+# target to preprocess a source file
+gui/gui/gui_loop.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_loop.c.i
+.PHONY : gui/gui/gui_loop.c.i
+
+gui/gui/gui_loop.s: gui/gui/gui_loop.c.s
+
+.PHONY : gui/gui/gui_loop.s
+
+# target to generate assembly for a file
+gui/gui/gui_loop.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_loop.c.s
+.PHONY : gui/gui/gui_loop.c.s
 
 gui/gui/gui_new.o: gui/gui/gui_new.c.o
 
@@ -204,59 +231,32 @@ gui/gui/gui_new.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_new.c.s
 .PHONY : gui/gui/gui_new.c.s
 
-gui/gui/gui_start.o: gui/gui/gui_start.c.o
+gui/gui_image/gui_image_delete.o: gui/gui_image/gui_image_delete.c.o
 
-.PHONY : gui/gui/gui_start.o
-
-# target to build an object file
-gui/gui/gui_start.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o
-.PHONY : gui/gui/gui_start.c.o
-
-gui/gui/gui_start.i: gui/gui/gui_start.c.i
-
-.PHONY : gui/gui/gui_start.i
-
-# target to preprocess a source file
-gui/gui/gui_start.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.i
-.PHONY : gui/gui/gui_start.c.i
-
-gui/gui/gui_start.s: gui/gui/gui_start.c.s
-
-.PHONY : gui/gui/gui_start.s
-
-# target to generate assembly for a file
-gui/gui/gui_start.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui/gui_start.c.s
-.PHONY : gui/gui/gui_start.c.s
-
-gui/gui_image/gui_image_init.o: gui/gui_image/gui_image_init.c.o
-
-.PHONY : gui/gui_image/gui_image_init.o
+.PHONY : gui/gui_image/gui_image_delete.o
 
 # target to build an object file
-gui/gui_image/gui_image_init.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_init.c.o
-.PHONY : gui/gui_image/gui_image_init.c.o
+gui/gui_image/gui_image_delete.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_delete.c.o
+.PHONY : gui/gui_image/gui_image_delete.c.o
 
-gui/gui_image/gui_image_init.i: gui/gui_image/gui_image_init.c.i
+gui/gui_image/gui_image_delete.i: gui/gui_image/gui_image_delete.c.i
 
-.PHONY : gui/gui_image/gui_image_init.i
+.PHONY : gui/gui_image/gui_image_delete.i
 
 # target to preprocess a source file
-gui/gui_image/gui_image_init.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_init.c.i
-.PHONY : gui/gui_image/gui_image_init.c.i
+gui/gui_image/gui_image_delete.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_delete.c.i
+.PHONY : gui/gui_image/gui_image_delete.c.i
 
-gui/gui_image/gui_image_init.s: gui/gui_image/gui_image_init.c.s
+gui/gui_image/gui_image_delete.s: gui/gui_image/gui_image_delete.c.s
 
-.PHONY : gui/gui_image/gui_image_init.s
+.PHONY : gui/gui_image/gui_image_delete.s
 
 # target to generate assembly for a file
-gui/gui_image/gui_image_init.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_init.c.s
-.PHONY : gui/gui_image/gui_image_init.c.s
+gui/gui_image/gui_image_delete.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_delete.c.s
+.PHONY : gui/gui_image/gui_image_delete.c.s
 
 gui/gui_image/gui_image_new.o: gui/gui_image/gui_image_new.c.o
 
@@ -285,32 +285,32 @@ gui/gui_image/gui_image_new.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_image/gui_image_new.c.s
 .PHONY : gui/gui_image/gui_image_new.c.s
 
-gui/gui_list/gui_list_init.o: gui/gui_list/gui_list_init.c.o
+gui/gui_list/gui_list_delete.o: gui/gui_list/gui_list_delete.c.o
 
-.PHONY : gui/gui_list/gui_list_init.o
+.PHONY : gui/gui_list/gui_list_delete.o
 
 # target to build an object file
-gui/gui_list/gui_list_init.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_init.c.o
-.PHONY : gui/gui_list/gui_list_init.c.o
+gui/gui_list/gui_list_delete.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_delete.c.o
+.PHONY : gui/gui_list/gui_list_delete.c.o
 
-gui/gui_list/gui_list_init.i: gui/gui_list/gui_list_init.c.i
+gui/gui_list/gui_list_delete.i: gui/gui_list/gui_list_delete.c.i
 
-.PHONY : gui/gui_list/gui_list_init.i
+.PHONY : gui/gui_list/gui_list_delete.i
 
 # target to preprocess a source file
-gui/gui_list/gui_list_init.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_init.c.i
-.PHONY : gui/gui_list/gui_list_init.c.i
+gui/gui_list/gui_list_delete.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_delete.c.i
+.PHONY : gui/gui_list/gui_list_delete.c.i
 
-gui/gui_list/gui_list_init.s: gui/gui_list/gui_list_init.c.s
+gui/gui_list/gui_list_delete.s: gui/gui_list/gui_list_delete.c.s
 
-.PHONY : gui/gui_list/gui_list_init.s
+.PHONY : gui/gui_list/gui_list_delete.s
 
 # target to generate assembly for a file
-gui/gui_list/gui_list_init.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_init.c.s
-.PHONY : gui/gui_list/gui_list_init.c.s
+gui/gui_list/gui_list_delete.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_delete.c.s
+.PHONY : gui/gui_list/gui_list_delete.c.s
 
 gui/gui_list/gui_list_new.o: gui/gui_list/gui_list_new.c.o
 
@@ -339,32 +339,32 @@ gui/gui_list/gui_list_new.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_list/gui_list_new.c.s
 .PHONY : gui/gui_list/gui_list_new.c.s
 
-gui/gui_object/gui_object_init.o: gui/gui_object/gui_object_init.c.o
+gui/gui_object/gui_object_delete.o: gui/gui_object/gui_object_delete.c.o
 
-.PHONY : gui/gui_object/gui_object_init.o
+.PHONY : gui/gui_object/gui_object_delete.o
 
 # target to build an object file
-gui/gui_object/gui_object_init.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_init.c.o
-.PHONY : gui/gui_object/gui_object_init.c.o
+gui/gui_object/gui_object_delete.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_delete.c.o
+.PHONY : gui/gui_object/gui_object_delete.c.o
 
-gui/gui_object/gui_object_init.i: gui/gui_object/gui_object_init.c.i
+gui/gui_object/gui_object_delete.i: gui/gui_object/gui_object_delete.c.i
 
-.PHONY : gui/gui_object/gui_object_init.i
+.PHONY : gui/gui_object/gui_object_delete.i
 
 # target to preprocess a source file
-gui/gui_object/gui_object_init.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_init.c.i
-.PHONY : gui/gui_object/gui_object_init.c.i
+gui/gui_object/gui_object_delete.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_delete.c.i
+.PHONY : gui/gui_object/gui_object_delete.c.i
 
-gui/gui_object/gui_object_init.s: gui/gui_object/gui_object_init.c.s
+gui/gui_object/gui_object_delete.s: gui/gui_object/gui_object_delete.c.s
 
-.PHONY : gui/gui_object/gui_object_init.s
+.PHONY : gui/gui_object/gui_object_delete.s
 
 # target to generate assembly for a file
-gui/gui_object/gui_object_init.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_init.c.s
-.PHONY : gui/gui_object/gui_object_init.c.s
+gui/gui_object/gui_object_delete.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_delete.c.s
+.PHONY : gui/gui_object/gui_object_delete.c.s
 
 gui/gui_object/gui_object_new.o: gui/gui_object/gui_object_new.c.o
 
@@ -393,33 +393,6 @@ gui/gui_object/gui_object_new.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_new.c.s
 .PHONY : gui/gui_object/gui_object_new.c.s
 
-gui/gui_object/gui_object_sphere.o: gui/gui_object/gui_object_sphere.c.o
-
-.PHONY : gui/gui_object/gui_object_sphere.o
-
-# target to build an object file
-gui/gui_object/gui_object_sphere.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_sphere.c.o
-.PHONY : gui/gui_object/gui_object_sphere.c.o
-
-gui/gui_object/gui_object_sphere.i: gui/gui_object/gui_object_sphere.c.i
-
-.PHONY : gui/gui_object/gui_object_sphere.i
-
-# target to preprocess a source file
-gui/gui_object/gui_object_sphere.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_sphere.c.i
-.PHONY : gui/gui_object/gui_object_sphere.c.i
-
-gui/gui_object/gui_object_sphere.s: gui/gui_object/gui_object_sphere.c.s
-
-.PHONY : gui/gui_object/gui_object_sphere.s
-
-# target to generate assembly for a file
-gui/gui_object/gui_object_sphere.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object/gui_object_sphere.c.s
-.PHONY : gui/gui_object/gui_object_sphere.c.s
-
 gui/gui_object_base/gui_object_base_init.o: gui/gui_object_base/gui_object_base_init.c.o
 
 .PHONY : gui/gui_object_base/gui_object_base_init.o
@@ -447,6 +420,249 @@ gui/gui_object_base/gui_object_base_init.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_base/gui_object_base_init.c.s
 .PHONY : gui/gui_object_base/gui_object_base_init.c.s
 
+gui/gui_object_list/gui_object_plane.o: gui/gui_object_list/gui_object_plane.c.o
+
+.PHONY : gui/gui_object_list/gui_object_plane.o
+
+# target to build an object file
+gui/gui_object_list/gui_object_plane.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_plane.c.o
+.PHONY : gui/gui_object_list/gui_object_plane.c.o
+
+gui/gui_object_list/gui_object_plane.i: gui/gui_object_list/gui_object_plane.c.i
+
+.PHONY : gui/gui_object_list/gui_object_plane.i
+
+# target to preprocess a source file
+gui/gui_object_list/gui_object_plane.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_plane.c.i
+.PHONY : gui/gui_object_list/gui_object_plane.c.i
+
+gui/gui_object_list/gui_object_plane.s: gui/gui_object_list/gui_object_plane.c.s
+
+.PHONY : gui/gui_object_list/gui_object_plane.s
+
+# target to generate assembly for a file
+gui/gui_object_list/gui_object_plane.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_plane.c.s
+.PHONY : gui/gui_object_list/gui_object_plane.c.s
+
+gui/gui_object_list/gui_object_sphere.o: gui/gui_object_list/gui_object_sphere.c.o
+
+.PHONY : gui/gui_object_list/gui_object_sphere.o
+
+# target to build an object file
+gui/gui_object_list/gui_object_sphere.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_sphere.c.o
+.PHONY : gui/gui_object_list/gui_object_sphere.c.o
+
+gui/gui_object_list/gui_object_sphere.i: gui/gui_object_list/gui_object_sphere.c.i
+
+.PHONY : gui/gui_object_list/gui_object_sphere.i
+
+# target to preprocess a source file
+gui/gui_object_list/gui_object_sphere.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_sphere.c.i
+.PHONY : gui/gui_object_list/gui_object_sphere.c.i
+
+gui/gui_object_list/gui_object_sphere.s: gui/gui_object_list/gui_object_sphere.c.s
+
+.PHONY : gui/gui_object_list/gui_object_sphere.s
+
+# target to generate assembly for a file
+gui/gui_object_list/gui_object_sphere.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_object_list/gui_object_sphere.c.s
+.PHONY : gui/gui_object_list/gui_object_sphere.c.s
+
+gui/gui_signal/gui_s_key.o: gui/gui_signal/gui_s_key.c.o
+
+.PHONY : gui/gui_signal/gui_s_key.o
+
+# target to build an object file
+gui/gui_signal/gui_s_key.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_key.c.o
+.PHONY : gui/gui_signal/gui_s_key.c.o
+
+gui/gui_signal/gui_s_key.i: gui/gui_signal/gui_s_key.c.i
+
+.PHONY : gui/gui_signal/gui_s_key.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_key.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_key.c.i
+.PHONY : gui/gui_signal/gui_s_key.c.i
+
+gui/gui_signal/gui_s_key.s: gui/gui_signal/gui_s_key.c.s
+
+.PHONY : gui/gui_signal/gui_s_key.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_key.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_key.c.s
+.PHONY : gui/gui_signal/gui_s_key.c.s
+
+gui/gui_signal/gui_s_obj_add.o: gui/gui_signal/gui_s_obj_add.c.o
+
+.PHONY : gui/gui_signal/gui_s_obj_add.o
+
+# target to build an object file
+gui/gui_signal/gui_s_obj_add.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_add.c.o
+.PHONY : gui/gui_signal/gui_s_obj_add.c.o
+
+gui/gui_signal/gui_s_obj_add.i: gui/gui_signal/gui_s_obj_add.c.i
+
+.PHONY : gui/gui_signal/gui_s_obj_add.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_obj_add.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_add.c.i
+.PHONY : gui/gui_signal/gui_s_obj_add.c.i
+
+gui/gui_signal/gui_s_obj_add.s: gui/gui_signal/gui_s_obj_add.c.s
+
+.PHONY : gui/gui_signal/gui_s_obj_add.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_obj_add.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_add.c.s
+.PHONY : gui/gui_signal/gui_s_obj_add.c.s
+
+gui/gui_signal/gui_s_obj_selected.o: gui/gui_signal/gui_s_obj_selected.c.o
+
+.PHONY : gui/gui_signal/gui_s_obj_selected.o
+
+# target to build an object file
+gui/gui_signal/gui_s_obj_selected.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_selected.c.o
+.PHONY : gui/gui_signal/gui_s_obj_selected.c.o
+
+gui/gui_signal/gui_s_obj_selected.i: gui/gui_signal/gui_s_obj_selected.c.i
+
+.PHONY : gui/gui_signal/gui_s_obj_selected.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_obj_selected.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_selected.c.i
+.PHONY : gui/gui_signal/gui_s_obj_selected.c.i
+
+gui/gui_signal/gui_s_obj_selected.s: gui/gui_signal/gui_s_obj_selected.c.s
+
+.PHONY : gui/gui_signal/gui_s_obj_selected.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_obj_selected.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_obj_selected.c.s
+.PHONY : gui/gui_signal/gui_s_obj_selected.c.s
+
+gui/gui_signal/gui_s_plane_norm.o: gui/gui_signal/gui_s_plane_norm.c.o
+
+.PHONY : gui/gui_signal/gui_s_plane_norm.o
+
+# target to build an object file
+gui/gui_signal/gui_s_plane_norm.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_norm.c.o
+.PHONY : gui/gui_signal/gui_s_plane_norm.c.o
+
+gui/gui_signal/gui_s_plane_norm.i: gui/gui_signal/gui_s_plane_norm.c.i
+
+.PHONY : gui/gui_signal/gui_s_plane_norm.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_plane_norm.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_norm.c.i
+.PHONY : gui/gui_signal/gui_s_plane_norm.c.i
+
+gui/gui_signal/gui_s_plane_norm.s: gui/gui_signal/gui_s_plane_norm.c.s
+
+.PHONY : gui/gui_signal/gui_s_plane_norm.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_plane_norm.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_norm.c.s
+.PHONY : gui/gui_signal/gui_s_plane_norm.c.s
+
+gui/gui_signal/gui_s_plane_pos.o: gui/gui_signal/gui_s_plane_pos.c.o
+
+.PHONY : gui/gui_signal/gui_s_plane_pos.o
+
+# target to build an object file
+gui/gui_signal/gui_s_plane_pos.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_pos.c.o
+.PHONY : gui/gui_signal/gui_s_plane_pos.c.o
+
+gui/gui_signal/gui_s_plane_pos.i: gui/gui_signal/gui_s_plane_pos.c.i
+
+.PHONY : gui/gui_signal/gui_s_plane_pos.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_plane_pos.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_pos.c.i
+.PHONY : gui/gui_signal/gui_s_plane_pos.c.i
+
+gui/gui_signal/gui_s_plane_pos.s: gui/gui_signal/gui_s_plane_pos.c.s
+
+.PHONY : gui/gui_signal/gui_s_plane_pos.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_plane_pos.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_plane_pos.c.s
+.PHONY : gui/gui_signal/gui_s_plane_pos.c.s
+
+gui/gui_signal/gui_s_sphere_pos.o: gui/gui_signal/gui_s_sphere_pos.c.o
+
+.PHONY : gui/gui_signal/gui_s_sphere_pos.o
+
+# target to build an object file
+gui/gui_signal/gui_s_sphere_pos.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_pos.c.o
+.PHONY : gui/gui_signal/gui_s_sphere_pos.c.o
+
+gui/gui_signal/gui_s_sphere_pos.i: gui/gui_signal/gui_s_sphere_pos.c.i
+
+.PHONY : gui/gui_signal/gui_s_sphere_pos.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_sphere_pos.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_pos.c.i
+.PHONY : gui/gui_signal/gui_s_sphere_pos.c.i
+
+gui/gui_signal/gui_s_sphere_pos.s: gui/gui_signal/gui_s_sphere_pos.c.s
+
+.PHONY : gui/gui_signal/gui_s_sphere_pos.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_sphere_pos.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_pos.c.s
+.PHONY : gui/gui_signal/gui_s_sphere_pos.c.s
+
+gui/gui_signal/gui_s_sphere_rad.o: gui/gui_signal/gui_s_sphere_rad.c.o
+
+.PHONY : gui/gui_signal/gui_s_sphere_rad.o
+
+# target to build an object file
+gui/gui_signal/gui_s_sphere_rad.c.o:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_rad.c.o
+.PHONY : gui/gui_signal/gui_s_sphere_rad.c.o
+
+gui/gui_signal/gui_s_sphere_rad.i: gui/gui_signal/gui_s_sphere_rad.c.i
+
+.PHONY : gui/gui_signal/gui_s_sphere_rad.i
+
+# target to preprocess a source file
+gui/gui_signal/gui_s_sphere_rad.c.i:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_rad.c.i
+.PHONY : gui/gui_signal/gui_s_sphere_rad.c.i
+
+gui/gui_signal/gui_s_sphere_rad.s: gui/gui_signal/gui_s_sphere_rad.c.s
+
+.PHONY : gui/gui_signal/gui_s_sphere_rad.s
+
+# target to generate assembly for a file
+gui/gui_signal/gui_s_sphere_rad.c.s:
+	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_s_sphere_rad.c.s
+.PHONY : gui/gui_signal/gui_s_sphere_rad.c.s
+
 gui/gui_signal/gui_signal_connect.o: gui/gui_signal/gui_signal_connect.c.o
 
 .PHONY : gui/gui_signal/gui_signal_connect.o
@@ -473,60 +689,6 @@ gui/gui_signal/gui_signal_connect.s: gui/gui_signal/gui_signal_connect.c.s
 gui/gui_signal/gui_signal_connect.c.s:
 	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_connect.c.s
 .PHONY : gui/gui_signal/gui_signal_connect.c.s
-
-gui/gui_signal/gui_signal_selected.o: gui/gui_signal/gui_signal_selected.c.o
-
-.PHONY : gui/gui_signal/gui_signal_selected.o
-
-# target to build an object file
-gui/gui_signal/gui_signal_selected.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_selected.c.o
-.PHONY : gui/gui_signal/gui_signal_selected.c.o
-
-gui/gui_signal/gui_signal_selected.i: gui/gui_signal/gui_signal_selected.c.i
-
-.PHONY : gui/gui_signal/gui_signal_selected.i
-
-# target to preprocess a source file
-gui/gui_signal/gui_signal_selected.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_selected.c.i
-.PHONY : gui/gui_signal/gui_signal_selected.c.i
-
-gui/gui_signal/gui_signal_selected.s: gui/gui_signal/gui_signal_selected.c.s
-
-.PHONY : gui/gui_signal/gui_signal_selected.s
-
-# target to generate assembly for a file
-gui/gui_signal/gui_signal_selected.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_selected.c.s
-.PHONY : gui/gui_signal/gui_signal_selected.c.s
-
-gui/gui_signal/gui_signal_sphere.o: gui/gui_signal/gui_signal_sphere.c.o
-
-.PHONY : gui/gui_signal/gui_signal_sphere.o
-
-# target to build an object file
-gui/gui_signal/gui_signal_sphere.c.o:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_sphere.c.o
-.PHONY : gui/gui_signal/gui_signal_sphere.c.o
-
-gui/gui_signal/gui_signal_sphere.i: gui/gui_signal/gui_signal_sphere.c.i
-
-.PHONY : gui/gui_signal/gui_signal_sphere.i
-
-# target to preprocess a source file
-gui/gui_signal/gui_signal_sphere.c.i:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_sphere.c.i
-.PHONY : gui/gui_signal/gui_signal_sphere.c.i
-
-gui/gui_signal/gui_signal_sphere.s: gui/gui_signal/gui_signal_sphere.c.s
-
-.PHONY : gui/gui_signal/gui_signal_sphere.s
-
-# target to generate assembly for a file
-gui/gui_signal/gui_signal_sphere.c.s:
-	$(MAKE) -f CMakeFiles/test_gui.dir/build.make CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_sphere.c.s
-.PHONY : gui/gui_signal/gui_signal_sphere.c.s
 
 main.o: main.c.o
 
@@ -756,48 +918,66 @@ help:
 	@echo "... gui/gui/gui_connect_renderer.o"
 	@echo "... gui/gui/gui_connect_renderer.i"
 	@echo "... gui/gui/gui_connect_renderer.s"
-	@echo "... gui/gui/gui_init.o"
-	@echo "... gui/gui/gui_init.i"
-	@echo "... gui/gui/gui_init.s"
+	@echo "... gui/gui/gui_delete.o"
+	@echo "... gui/gui/gui_delete.i"
+	@echo "... gui/gui/gui_delete.s"
+	@echo "... gui/gui/gui_loop.o"
+	@echo "... gui/gui/gui_loop.i"
+	@echo "... gui/gui/gui_loop.s"
 	@echo "... gui/gui/gui_new.o"
 	@echo "... gui/gui/gui_new.i"
 	@echo "... gui/gui/gui_new.s"
-	@echo "... gui/gui/gui_start.o"
-	@echo "... gui/gui/gui_start.i"
-	@echo "... gui/gui/gui_start.s"
-	@echo "... gui/gui_image/gui_image_init.o"
-	@echo "... gui/gui_image/gui_image_init.i"
-	@echo "... gui/gui_image/gui_image_init.s"
+	@echo "... gui/gui_image/gui_image_delete.o"
+	@echo "... gui/gui_image/gui_image_delete.i"
+	@echo "... gui/gui_image/gui_image_delete.s"
 	@echo "... gui/gui_image/gui_image_new.o"
 	@echo "... gui/gui_image/gui_image_new.i"
 	@echo "... gui/gui_image/gui_image_new.s"
-	@echo "... gui/gui_list/gui_list_init.o"
-	@echo "... gui/gui_list/gui_list_init.i"
-	@echo "... gui/gui_list/gui_list_init.s"
+	@echo "... gui/gui_list/gui_list_delete.o"
+	@echo "... gui/gui_list/gui_list_delete.i"
+	@echo "... gui/gui_list/gui_list_delete.s"
 	@echo "... gui/gui_list/gui_list_new.o"
 	@echo "... gui/gui_list/gui_list_new.i"
 	@echo "... gui/gui_list/gui_list_new.s"
-	@echo "... gui/gui_object/gui_object_init.o"
-	@echo "... gui/gui_object/gui_object_init.i"
-	@echo "... gui/gui_object/gui_object_init.s"
+	@echo "... gui/gui_object/gui_object_delete.o"
+	@echo "... gui/gui_object/gui_object_delete.i"
+	@echo "... gui/gui_object/gui_object_delete.s"
 	@echo "... gui/gui_object/gui_object_new.o"
 	@echo "... gui/gui_object/gui_object_new.i"
 	@echo "... gui/gui_object/gui_object_new.s"
-	@echo "... gui/gui_object/gui_object_sphere.o"
-	@echo "... gui/gui_object/gui_object_sphere.i"
-	@echo "... gui/gui_object/gui_object_sphere.s"
 	@echo "... gui/gui_object_base/gui_object_base_init.o"
 	@echo "... gui/gui_object_base/gui_object_base_init.i"
 	@echo "... gui/gui_object_base/gui_object_base_init.s"
+	@echo "... gui/gui_object_list/gui_object_plane.o"
+	@echo "... gui/gui_object_list/gui_object_plane.i"
+	@echo "... gui/gui_object_list/gui_object_plane.s"
+	@echo "... gui/gui_object_list/gui_object_sphere.o"
+	@echo "... gui/gui_object_list/gui_object_sphere.i"
+	@echo "... gui/gui_object_list/gui_object_sphere.s"
+	@echo "... gui/gui_signal/gui_s_key.o"
+	@echo "... gui/gui_signal/gui_s_key.i"
+	@echo "... gui/gui_signal/gui_s_key.s"
+	@echo "... gui/gui_signal/gui_s_obj_add.o"
+	@echo "... gui/gui_signal/gui_s_obj_add.i"
+	@echo "... gui/gui_signal/gui_s_obj_add.s"
+	@echo "... gui/gui_signal/gui_s_obj_selected.o"
+	@echo "... gui/gui_signal/gui_s_obj_selected.i"
+	@echo "... gui/gui_signal/gui_s_obj_selected.s"
+	@echo "... gui/gui_signal/gui_s_plane_norm.o"
+	@echo "... gui/gui_signal/gui_s_plane_norm.i"
+	@echo "... gui/gui_signal/gui_s_plane_norm.s"
+	@echo "... gui/gui_signal/gui_s_plane_pos.o"
+	@echo "... gui/gui_signal/gui_s_plane_pos.i"
+	@echo "... gui/gui_signal/gui_s_plane_pos.s"
+	@echo "... gui/gui_signal/gui_s_sphere_pos.o"
+	@echo "... gui/gui_signal/gui_s_sphere_pos.i"
+	@echo "... gui/gui_signal/gui_s_sphere_pos.s"
+	@echo "... gui/gui_signal/gui_s_sphere_rad.o"
+	@echo "... gui/gui_signal/gui_s_sphere_rad.i"
+	@echo "... gui/gui_signal/gui_s_sphere_rad.s"
 	@echo "... gui/gui_signal/gui_signal_connect.o"
 	@echo "... gui/gui_signal/gui_signal_connect.i"
 	@echo "... gui/gui_signal/gui_signal_connect.s"
-	@echo "... gui/gui_signal/gui_signal_selected.o"
-	@echo "... gui/gui_signal/gui_signal_selected.i"
-	@echo "... gui/gui_signal/gui_signal_selected.s"
-	@echo "... gui/gui_signal/gui_signal_sphere.o"
-	@echo "... gui/gui_signal/gui_signal_sphere.i"
-	@echo "... gui/gui_signal/gui_signal_sphere.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

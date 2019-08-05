@@ -18,20 +18,12 @@ void				scene_test(t_scene *scene)
 int					main(int argc, char **argv)
 {
 	t_gui			*gui;
-	t_renderer		*renderer;
 
-	gui = gui_new();
-	gui_init(gui, &argc, &argv);
-
-	renderer = renderer_new();
-	scene_test(renderer->scene);
-
-	gui_connect_renderer(gui, renderer);
-
-	gui_start(gui);
-
-	printf("object0 = %f\n",
-		   *(double *)renderer->scene->objects->data);
-
+	gui = gui_new(&argc, &argv);
+	gui->renderer = renderer_new();
+	scene_test(gui->renderer->scene);
+	gui_connect_renderer(gui);
+	gui_loop(gui);
+	gui_delete(&gui);
 	return (0);
 }

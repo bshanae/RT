@@ -58,7 +58,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./vector3"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./light"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object"/>
@@ -109,7 +110,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./vector3"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./light"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object"/>
@@ -143,46 +145,64 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_start.c">
-			<Option target="test_gui"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c">
 			<Option target="test_gui"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_sphere.c">
-			<Option target="test_gui"/>
-		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c">
 			<Option target="test_gui"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c">
+			<Option target="test_gui"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c">
-			<Option target="test_gui"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_selected.c">
-			<Option target="test_gui"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_sphere.c">
 			<Option target="test_gui"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/main.c">

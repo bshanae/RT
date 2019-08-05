@@ -16,6 +16,8 @@ void 				gui_object_sphere_init
 		GTK_ENTRY(gtk_builder_get_object(builder, GO_SPHERE_POS_Y));
 	sphere->position_z =
 		GTK_ENTRY(gtk_builder_get_object(builder, GO_SPHERE_POS_Z));
+	sphere->radius =
+		GTK_ENTRY(gtk_builder_get_object(builder, GO_SPHERE_RAD));
 }
 
 void				gui_sphere_load(t_gui_object_sphere *gui, t_object *sphere)
@@ -24,10 +26,12 @@ void				gui_sphere_load(t_gui_object_sphere *gui, t_object *sphere)
 	t_object_sphere	*data;
 
 	data = (t_object_sphere *)sphere->data;
-	sprintf(buffer, "%3.1f\0", data->position.x);
+	sprintf(buffer, "%3.1f", data->position.x);
 	gtk_entry_set_text(gui->position_x, buffer);
-	sprintf(buffer, "%3.1f\0", data->position.y);
+	sprintf(buffer, "%3.1f", data->position.y);
 	gtk_entry_set_text(gui->position_y, buffer);
-	sprintf(buffer, "%3.1f\0", data->position.z);
+	sprintf(buffer, "%3.1f", data->position.z);
 	gtk_entry_set_text(gui->position_z, buffer);
+	sprintf(buffer, "%3.1f", data->radius);
+	gtk_entry_set_text(gui->radius, buffer);
 }

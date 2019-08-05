@@ -2,7 +2,7 @@
 # include "gui_object.h"
 # include <stdlib.h>
 
-void				gui_signal_sphere_pos_x(GtkEntry *entry, gpointer ptr)
+void				gui_s_sphere_rad(GtkEntry *entry, gpointer ptr)
 {
 	t_gui			*gui;
 	t_object_sphere	*data;
@@ -11,6 +11,6 @@ void				gui_signal_sphere_pos_x(GtkEntry *entry, gpointer ptr)
 	if (gui->object->current_id == -1)
 		return ;
 	data = (t_object_sphere *)
-		gui->renderer->scene->objects[gui->object->current_id].data;
-	data->position.x = atof(gtk_entry_get_text(entry));
+			gui->renderer->scene->objects[gui->object->current_id].data;
+	data->radius = atof(gtk_entry_get_text(entry));
 }

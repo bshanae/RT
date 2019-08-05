@@ -2,6 +2,9 @@
 # define GUI_IMAGE_H
 
 # include "gui_names.h"
+# include "options.h"
+
+# include "color.h"
 
 # include <gtk/gtk.h>
 
@@ -9,12 +12,13 @@ typedef struct 		s_gui_image
 {
 	GtkImage		*image;
 	GdkPixbuf		*gdk_buffer;
-	guchar			*buffer;
+	guchar			*char_buffer;
+	t_color			*color_buffer;
 	int				width;
 	int				height;
 }					t_gui_image;
 
-t_gui_image			*gui_image_new(void);
-void				gui_image_init(t_gui_image *gi, GtkBuilder *builder);
+t_gui_image			*gui_image_new(GtkBuilder *builder);
+void				gui_image_delete(t_gui_image **image);
 
 #endif

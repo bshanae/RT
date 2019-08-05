@@ -6,4 +6,7 @@
 # define SCENE_LIGHTS_CAPACITY	4
 # define SCENE_OBJECTS_CAPACITY	16
 
+# define GO_DEFAULT_WIDTH		480
+# define GO_DEFAULT_HEIGHT		480
+
 #endif

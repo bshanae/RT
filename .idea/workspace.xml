@@ -12,153 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base_init.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_signal/gui_s_obj_selected.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/gui_signal/gui_s_sphere_pos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/_colors-public.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/_colors.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/_common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/_drawing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/bullet-symbolic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/bullet-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/bullet@2-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/check-symbolic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/check-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/check@2-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/dash-symbolic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/dash-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/dash@2-symbolic.symbolic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-backdrop@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-above@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-backdrop@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-horz-scale-has-marks-below@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-backdrop@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-above@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-backdrop@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-insensitive-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-insensitive-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-insensitive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below-insensitive@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/slider-vert-scale-has-marks-below@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-end@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-active-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-active-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-active@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-hover-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-hover-dark@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start-hover@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/assets/text-select-start@2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk-contained-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk-contained-dark.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk-contained.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk-contained.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/gtk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/meson.build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/parse-sass.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adwaita/render-assets.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
@@ -169,38 +25,53 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene/gui_scene_new.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene_list/gui_scene_list_new.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_param_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_scene_params/gui_scene_params_new.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_init.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_init.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_init.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_sphere.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object_base/gui_object_base_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object_base/gui_object_base_init.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_connect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_connect.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_selected.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_sphere.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/renderer/renderer_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/renderer/renderer_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_gui" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_gui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_gui.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_gui.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/build/build.glade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/build/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/build/build.glade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui/gui.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui/gui_connect_renderer.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_connect_renderer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui/gui_init.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui/gui_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui/gui_start.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_loop.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list_new.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui_names.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_names.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene/gui_scene.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene/gui_scene_init.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene/gui_scene_new.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_list/gui_scene_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_list/gui_scene_list_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_list/gui_scene_list_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_params/gui_scene_param_init.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_params/gui_scene_params.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_params/gui_scene_params_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_params/gui_scene_params_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_sphere.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_list/gui_object_sphere.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal/gui_signal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_connect.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal/gui_signal_connect.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_selected.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_sphere.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/options.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renderer/renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,6 +100,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1OdbUhFFO4OUzB4u4OtbSVuk2SA" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -245,11 +117,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_list" />
       <recent name="$PROJECT_DIR$/gui/gui_object" />
       <recent name="$PROJECT_DIR$/gui/build" />
       <recent name="$PROJECT_DIR$/object" />
       <recent name="$PROJECT_DIR$/object_list" />
-      <recent name="$PROJECT_DIR$/gui/gui_scene_params" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,6 +168,8 @@
       <workItem from="1564860231649" duration="5833000" />
       <workItem from="1564899322425" duration="20030000" />
       <workItem from="1564929240666" duration="6343000" />
+      <workItem from="1564939835266" duration="5772000" />
+      <workItem from="1564992480492" duration="10140000" />
     </task>
     <servers />
   </component>
