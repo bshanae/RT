@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/camera/camera_delete.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/camera/camera_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/camera/camera_new.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_delete.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_loop.c.o"
@@ -70,6 +73,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././object_list"
   ".././scene"
   ".././renderer"
+  ".././camera"
+  ".././ray"
   )
 
 # Targets to which this target links.

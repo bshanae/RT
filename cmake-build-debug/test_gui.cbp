@@ -66,6 +66,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./scene"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -118,6 +120,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./scene"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./renderer"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -142,6 +146,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c">
+			<Option target="test_gui"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/camera/camera_new.c">
+			<Option target="test_gui"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">
 			<Option target="test_gui"/>
 		</Unit>

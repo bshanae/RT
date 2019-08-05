@@ -13,6 +13,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	new->list = gui_list_new(new->builder);
 	new->object = gui_object_new(new->builder);
 	new->image = gui_image_new(new->builder);
+	new->renderer = renderer_new();
 	gui_signal_connect(new);
 	return (new);
 }

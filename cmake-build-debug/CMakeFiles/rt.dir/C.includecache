@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+math.h
+-
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_div.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_dot.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_max.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_min.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3_sub.c
+vector3.h
+/home/vladimir/workspace/21_ray_tracer/vector3/vector3.h
+

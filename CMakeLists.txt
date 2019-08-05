@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(test_gui C)
+project(rt C)
 
 set(CMAKE_CFLAGS "${CMAKE_CFALGS} -Wall -Wextra")
 
@@ -23,7 +23,9 @@ include_directories(
 	./object/
 	./object_list/
 	./scene/
-	./renderer)
+	./renderer/
+	./camera/
+	./ray/)
 
 link_directories(
 	${GTK3_LIBRARY_DIRS})
@@ -32,7 +34,8 @@ add_definitions(
 	${GTK3_CFLAGS_OTHER})
 
 link_libraries(
-	${GTK3_LIBRARIES})
+	${GTK3_LIBRARIES}
+	"m")
 
 set(SOURCE_MAIN
 	./main.c)
@@ -75,22 +78,46 @@ set(SOURCE_GUI
 	${SOURCE_GUI_IMAGE}
 	${SOURCE_GUI_SIGNAL})
 
+set(SOURCE_VECTOR3
+	./vector3/vector3_add.c
+	./vector3/vector3_sub.c
+	./vector3/vector3_mul.c
+	./vector3/vector3_div.c
+	./vector3/vector3_dot.c
+	./vector3/vector3_cross.c
+	./vector3/vector3_length.c
+	./vector3/vector3_normal.c
+	./vector3/vector3_max.c
+	./vector3/vector3_min.c
+	./vector3/vector3_component_mul.c)
+
 set(SOURCE_RENDERER
-	./renderer/renderer_new.c)
+	./renderer/renderer_new.c renderer/renderer_delete.c)
 
 set(SOURCE_SCENE
 	./scene/scene_new.c
-	./scene/scene_get_space.c)
+	./scene/scene_get_space.c scene/scene_delete.c)
 
 set(SOURCE_OBJECT
 	./object/object_build.c
 	./object_list/sphere.c
 	./object/object_intersect.c
-	./object_list/plane.c gui/gui_signal/gui_s_key.c)
+	./object_list/plane.c
+	./gui/gui_signal/gui_s_key.c)
 
-add_executable(test_gui
+set(SOURCE_CAMERA
+	./camera/camera_new.c
+	./camera/camera_delete.c
+	./camera/camera_build_ray.c)
+
+set(SOURCE_RAY
+	./ray/ray)
+
+add_executable(rt
 	${SOURCE_MAIN}
 	${SOURCE_GUI}
+	${SOURCE_VECTOR3}
 	${SOURCE_RENDERER}
 	${SOURCE_SCENE}
-	${SOURCE_OBJECT})
+	${SOURCE_OBJECT}
+	${SOURCE_CAMERA})

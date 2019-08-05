@@ -20,6 +20,7 @@ typedef struct				s_scene
 }							t_scene;
 
 t_scene						*scene_new(void);
+void						scene_delete(t_scene **scene);
 
 void						*scene_get_space(t_scene *scene, int purpose);
 

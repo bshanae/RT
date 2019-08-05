@@ -5,14 +5,14 @@
 void				scene_test(t_scene *scene)
 {
 	object_build(
-			(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
-			object_sphere,
-			(t_vector3){0.1, 0., 0.}, 1.);
+		(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
+		object_sphere,
+		(t_vector3){0.1, 0., 0.}, 1.);
 	object_build(
-			(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
-			object_plane,
-			(t_vector3){0., -1., 0.},
-			(t_vector3){0., 1., 0.});
+		(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
+		object_plane,
+		(t_vector3){0., -1., 0.},
+		(t_vector3){0., 1., 0.});
 }
 
 int					main(int argc, char **argv)
@@ -20,7 +20,6 @@ int					main(int argc, char **argv)
 	t_gui			*gui;
 
 	gui = gui_new(&argc, &argv);
-	gui->renderer = renderer_new();
 	scene_test(gui->renderer->scene);
 	gui_connect_renderer(gui);
 	gui_loop(gui);

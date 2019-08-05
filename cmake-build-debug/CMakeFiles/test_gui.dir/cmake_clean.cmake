@@ -28,6 +28,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_gui.dir/object_list/sphere.c.o"
   "CMakeFiles/test_gui.dir/object/object_intersect.c.o"
   "CMakeFiles/test_gui.dir/object_list/plane.c.o"
+  "CMakeFiles/test_gui.dir/camera/camera_new.c.o"
+  "CMakeFiles/test_gui.dir/camera/camera_delete.c.o"
+  "CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o"
   "test_gui.pdb"
   "test_gui"
 )

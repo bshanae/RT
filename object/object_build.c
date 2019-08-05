@@ -10,7 +10,7 @@ void				object_build(
 	va_start(args, type);
 	if (type == object_sphere)
 		object_sphere_build(space, &args);
-	else if (type = object_plane)
+	else if (type == object_plane)
 		object_plane_build(space, &args);
 	va_end(args);
 }

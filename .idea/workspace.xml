@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="test_gui" targetName="test_gui" />
+      <config projectName="rt" targetName="rt" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -12,66 +12,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gui/gui_signal/gui_s_obj_selected.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui/gui_signal/gui_s_sphere_pos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_connect_renderer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui/gui_start.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_image/gui_image_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_list/gui_list_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object/gui_object_sphere.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object_base/gui_object_base_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_object_base/gui_object_base_init.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_connect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_connect.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_selected.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/gui/gui_signal/gui_signal_sphere.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/renderer/renderer_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/test_gui.dir/renderer/renderer_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_gui" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_gui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test_gui.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test_gui.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/build/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/build/build.glade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_connect_renderer.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_connect_renderer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_init.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_gui.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_theme.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui/gui_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_delete.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui/gui_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_start.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_loop.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image_init.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list_init.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_list/gui_list_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_list/gui_list_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_names.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_names.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_init.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object/gui_object_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object/gui_object_sphere.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_list/gui_object_sphere.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_base/gui_object_base_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal/gui_signal.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_connect.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal/gui_signal_connect.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_selected.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal_sphere.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/object/object_build.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/options.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renderer/renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renderer/renderer_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/renderer/renderer_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/scene/scene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector3/vector3.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector3/vector3.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +107,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="test_gui" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="test_gui" TARGET_NAME="test_gui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="test_gui" RUN_TARGET_NAME="test_gui">
+    <configuration name="rt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rt" TARGET_NAME="rt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rt" RUN_TARGET_NAME="rt">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -170,6 +140,7 @@
       <workItem from="1564929240666" duration="6343000" />
       <workItem from="1564939835266" duration="5772000" />
       <workItem from="1564992480492" duration="10140000" />
+      <workItem from="1565006640132" duration="4390000" />
     </task>
     <servers />
   </component>

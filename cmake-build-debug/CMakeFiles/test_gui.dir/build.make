@@ -434,6 +434,45 @@ CMakeFiles/test_gui.dir/object_list/plane.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_gui.dir/object_list/plane.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/object_list/plane.c -o CMakeFiles/test_gui.dir/object_list/plane.c.s
 
+CMakeFiles/test_gui.dir/camera/camera_new.c.o: CMakeFiles/test_gui.dir/flags.make
+CMakeFiles/test_gui.dir/camera/camera_new.c.o: ../camera/camera_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/test_gui.dir/camera/camera_new.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_gui.dir/camera/camera_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_new.c
+
+CMakeFiles/test_gui.dir/camera/camera_new.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_gui.dir/camera/camera_new.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/camera/camera_new.c > CMakeFiles/test_gui.dir/camera/camera_new.c.i
+
+CMakeFiles/test_gui.dir/camera/camera_new.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_gui.dir/camera/camera_new.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/camera/camera_new.c -o CMakeFiles/test_gui.dir/camera/camera_new.c.s
+
+CMakeFiles/test_gui.dir/camera/camera_delete.c.o: CMakeFiles/test_gui.dir/flags.make
+CMakeFiles/test_gui.dir/camera/camera_delete.c.o: ../camera/camera_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/test_gui.dir/camera/camera_delete.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_gui.dir/camera/camera_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c
+
+CMakeFiles/test_gui.dir/camera/camera_delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_gui.dir/camera/camera_delete.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c > CMakeFiles/test_gui.dir/camera/camera_delete.c.i
+
+CMakeFiles/test_gui.dir/camera/camera_delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_gui.dir/camera/camera_delete.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/camera/camera_delete.c -o CMakeFiles/test_gui.dir/camera/camera_delete.c.s
+
+CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o: CMakeFiles/test_gui.dir/flags.make
+CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o: ../camera/camera_build_ray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o   -c /home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c
+
+CMakeFiles/test_gui.dir/camera/camera_build_ray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_gui.dir/camera/camera_build_ray.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c > CMakeFiles/test_gui.dir/camera/camera_build_ray.c.i
+
+CMakeFiles/test_gui.dir/camera/camera_build_ray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_gui.dir/camera/camera_build_ray.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c -o CMakeFiles/test_gui.dir/camera/camera_build_ray.c.s
+
 # Object files for target test_gui
 test_gui_OBJECTS = \
 "CMakeFiles/test_gui.dir/main.c.o" \
@@ -464,7 +503,10 @@ test_gui_OBJECTS = \
 "CMakeFiles/test_gui.dir/object/object_build.c.o" \
 "CMakeFiles/test_gui.dir/object_list/sphere.c.o" \
 "CMakeFiles/test_gui.dir/object/object_intersect.c.o" \
-"CMakeFiles/test_gui.dir/object_list/plane.c.o"
+"CMakeFiles/test_gui.dir/object_list/plane.c.o" \
+"CMakeFiles/test_gui.dir/camera/camera_new.c.o" \
+"CMakeFiles/test_gui.dir/camera/camera_delete.c.o" \
+"CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o"
 
 # External object files for target test_gui
 test_gui_EXTERNAL_OBJECTS =
@@ -498,9 +540,12 @@ test_gui: CMakeFiles/test_gui.dir/object/object_build.c.o
 test_gui: CMakeFiles/test_gui.dir/object_list/sphere.c.o
 test_gui: CMakeFiles/test_gui.dir/object/object_intersect.c.o
 test_gui: CMakeFiles/test_gui.dir/object_list/plane.c.o
+test_gui: CMakeFiles/test_gui.dir/camera/camera_new.c.o
+test_gui: CMakeFiles/test_gui.dir/camera/camera_delete.c.o
+test_gui: CMakeFiles/test_gui.dir/camera/camera_build_ray.c.o
 test_gui: CMakeFiles/test_gui.dir/build.make
 test_gui: CMakeFiles/test_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C executable test_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable test_gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
