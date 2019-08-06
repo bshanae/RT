@@ -47,8 +47,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/camera/camera_new.c.o"
   "CMakeFiles/rt.dir/camera/camera_delete.c.o"
   "CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
+  "CMakeFiles/rt.dir/ft_assert/ft_assert.c.o"
   "CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o"
   "CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o"
+  "CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o"
+  "CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o"
+  "CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o"
   "rt.pdb"
   "rt"
 )

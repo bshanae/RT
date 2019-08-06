@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vladimir/workspace/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,6 +203,33 @@ camera/camera_new.s: camera/camera_new.c.s
 camera/camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_new.c.s
 .PHONY : camera/camera_new.c.s
+
+ft_assert/ft_assert.o: ft_assert/ft_assert.c.o
+
+.PHONY : ft_assert/ft_assert.o
+
+# target to build an object file
+ft_assert/ft_assert.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.o
+.PHONY : ft_assert/ft_assert.c.o
+
+ft_assert/ft_assert.i: ft_assert/ft_assert.c.i
+
+.PHONY : ft_assert/ft_assert.i
+
+# target to preprocess a source file
+ft_assert/ft_assert.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.i
+.PHONY : ft_assert/ft_assert.c.i
+
+ft_assert/ft_assert.s: ft_assert/ft_assert.c.s
+
+.PHONY : ft_assert/ft_assert.s
+
+# target to generate assembly for a file
+ft_assert/ft_assert.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.s
+.PHONY : ft_assert/ft_assert.c.s
 
 gui/gui/gui_connect_renderer.o: gui/gui/gui_connect_renderer.c.o
 
@@ -906,6 +933,33 @@ object_list/sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object_list/sphere.c.s
 .PHONY : object_list/sphere.c.s
 
+open_cl_manager/open_cl_manager_create_program.o: open_cl_manager/open_cl_manager_create_program.c.o
+
+.PHONY : open_cl_manager/open_cl_manager_create_program.o
+
+# target to build an object file
+open_cl_manager/open_cl_manager_create_program.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o
+.PHONY : open_cl_manager/open_cl_manager_create_program.c.o
+
+open_cl_manager/open_cl_manager_create_program.i: open_cl_manager/open_cl_manager_create_program.c.i
+
+.PHONY : open_cl_manager/open_cl_manager_create_program.i
+
+# target to preprocess a source file
+open_cl_manager/open_cl_manager_create_program.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.i
+.PHONY : open_cl_manager/open_cl_manager_create_program.c.i
+
+open_cl_manager/open_cl_manager_create_program.s: open_cl_manager/open_cl_manager_create_program.c.s
+
+.PHONY : open_cl_manager/open_cl_manager_create_program.s
+
+# target to generate assembly for a file
+open_cl_manager/open_cl_manager_create_program.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.s
+.PHONY : open_cl_manager/open_cl_manager_create_program.c.s
+
 open_cl_manager/open_cl_manager_delete.o: open_cl_manager/open_cl_manager_delete.c.o
 
 .PHONY : open_cl_manager/open_cl_manager_delete.o
@@ -932,6 +986,60 @@ open_cl_manager/open_cl_manager_delete.s: open_cl_manager/open_cl_manager_delete
 open_cl_manager/open_cl_manager_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s
 .PHONY : open_cl_manager/open_cl_manager_delete.c.s
+
+open_cl_manager/open_cl_manager_init_context.o: open_cl_manager/open_cl_manager_init_context.c.o
+
+.PHONY : open_cl_manager/open_cl_manager_init_context.o
+
+# target to build an object file
+open_cl_manager/open_cl_manager_init_context.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o
+.PHONY : open_cl_manager/open_cl_manager_init_context.c.o
+
+open_cl_manager/open_cl_manager_init_context.i: open_cl_manager/open_cl_manager_init_context.c.i
+
+.PHONY : open_cl_manager/open_cl_manager_init_context.i
+
+# target to preprocess a source file
+open_cl_manager/open_cl_manager_init_context.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.i
+.PHONY : open_cl_manager/open_cl_manager_init_context.c.i
+
+open_cl_manager/open_cl_manager_init_context.s: open_cl_manager/open_cl_manager_init_context.c.s
+
+.PHONY : open_cl_manager/open_cl_manager_init_context.s
+
+# target to generate assembly for a file
+open_cl_manager/open_cl_manager_init_context.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.s
+.PHONY : open_cl_manager/open_cl_manager_init_context.c.s
+
+open_cl_manager/open_cl_manager_init_device.o: open_cl_manager/open_cl_manager_init_device.c.o
+
+.PHONY : open_cl_manager/open_cl_manager_init_device.o
+
+# target to build an object file
+open_cl_manager/open_cl_manager_init_device.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o
+.PHONY : open_cl_manager/open_cl_manager_init_device.c.o
+
+open_cl_manager/open_cl_manager_init_device.i: open_cl_manager/open_cl_manager_init_device.c.i
+
+.PHONY : open_cl_manager/open_cl_manager_init_device.i
+
+# target to preprocess a source file
+open_cl_manager/open_cl_manager_init_device.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.i
+.PHONY : open_cl_manager/open_cl_manager_init_device.c.i
+
+open_cl_manager/open_cl_manager_init_device.s: open_cl_manager/open_cl_manager_init_device.c.s
+
+.PHONY : open_cl_manager/open_cl_manager_init_device.s
+
+# target to generate assembly for a file
+open_cl_manager/open_cl_manager_init_device.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.s
+.PHONY : open_cl_manager/open_cl_manager_init_device.c.s
 
 open_cl_manager/open_cl_manager_new.o: open_cl_manager/open_cl_manager_new.c.o
 
@@ -1480,8 +1588,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... rt"
 	@echo "... edit_cache"
+	@echo "... rt"
 	@echo "... camera/camera_build_ray.o"
 	@echo "... camera/camera_build_ray.i"
 	@echo "... camera/camera_build_ray.s"
@@ -1491,6 +1599,9 @@ help:
 	@echo "... camera/camera_new.o"
 	@echo "... camera/camera_new.i"
 	@echo "... camera/camera_new.s"
+	@echo "... ft_assert/ft_assert.o"
+	@echo "... ft_assert/ft_assert.i"
+	@echo "... ft_assert/ft_assert.s"
 	@echo "... gui/gui/gui_connect_renderer.o"
 	@echo "... gui/gui/gui_connect_renderer.i"
 	@echo "... gui/gui/gui_connect_renderer.s"
@@ -1569,9 +1680,18 @@ help:
 	@echo "... object_list/sphere.o"
 	@echo "... object_list/sphere.i"
 	@echo "... object_list/sphere.s"
+	@echo "... open_cl_manager/open_cl_manager_create_program.o"
+	@echo "... open_cl_manager/open_cl_manager_create_program.i"
+	@echo "... open_cl_manager/open_cl_manager_create_program.s"
 	@echo "... open_cl_manager/open_cl_manager_delete.o"
 	@echo "... open_cl_manager/open_cl_manager_delete.i"
 	@echo "... open_cl_manager/open_cl_manager_delete.s"
+	@echo "... open_cl_manager/open_cl_manager_init_context.o"
+	@echo "... open_cl_manager/open_cl_manager_init_context.i"
+	@echo "... open_cl_manager/open_cl_manager_init_context.s"
+	@echo "... open_cl_manager/open_cl_manager_init_device.o"
+	@echo "... open_cl_manager/open_cl_manager_init_device.i"
+	@echo "... open_cl_manager/open_cl_manager_init_device.s"
 	@echo "... open_cl_manager/open_cl_manager_new.o"
 	@echo "... open_cl_manager/open_cl_manager_new.i"
 	@echo "... open_cl_manager/open_cl_manager_new.s"

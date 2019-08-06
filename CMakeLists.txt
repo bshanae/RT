@@ -8,6 +8,7 @@ pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 include_directories(
 	${GTK3_INCLUDE_DIRS}
+	../21_libft/includes/
 	./
 	./gui/
 	./gui/gui/
@@ -27,17 +28,20 @@ include_directories(
 	./camera/
 	./ray/
 	./intersection/
+	./ft_assert/
 	./open_cl_manager/)
 
 link_directories(
-	${GTK3_LIBRARY_DIRS})
+	${GTK3_LIBRARY_DIRS}
+	../21_libft/)
 
 add_definitions(
 	${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	${GTK3_LIBRARIES}
-	"m")
+	"m"
+	"ft")
 
 set(SOURCE_MAIN
 	./main.c)
@@ -117,9 +121,11 @@ set(SOURCE_CAMERA
 	./camera/camera_delete.c
 	./camera/camera_build_ray.c)
 
+set(SOURCE_FT_ASSERT ft_assert/ft_assert.c)
+
 set(SOURCE_OPEN_CL_MANAGER
 	./open_cl_manager/open_cl_manager_new.c
-	./open_cl_manager/open_cl_manager_delete.c)
+	./open_cl_manager/open_cl_manager_delete.c open_cl_manager/open_cl_manager_init_device.c open_cl_manager/open_cl_manager_init_context.c open_cl_manager/open_cl_manager_create_program.c)
 
 set(SOURCE_RAY
 	./ray/ray)
@@ -132,4 +138,5 @@ add_executable(rt
 	${SOURCE_SCENE}
 	${SOURCE_OBJECT}
 	${SOURCE_CAMERA}
+	${SOURCE_FT_ASSERT}
 	${SOURCE_OPEN_CL_MANAGER})
