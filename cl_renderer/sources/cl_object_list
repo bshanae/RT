@@ -1,0 +1,56 @@
+typedef struct					s_object_sphere
+{
+	double4						position;
+	double						radius;
+}								t_object_sphere;
+
+typedef struct					s_object_plane
+{
+	double4						position;
+	double4						normal;
+}								t_object_plane;
+
+static int     					sphere_intersect(constant object *object, t_intersection *intersection)
+{
+	constant t_object_sphere	*ptr;
+	t_object_sphere				data;
+	double						k[3];
+	double						t;
+	double						discriminant;
+	double4						temp;
+
+    ptr = (constant t_object_sphere *)object->data;
+    data.center = ptr->center;
+    data.radius = ptr->radius;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
+	temp = intersection->ray.origin - data.center;
+	k[1] = 2 * dot(temp, intersection->ray.direction);
+	k[2] = dot(temp, temp) - data.radius * data.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+		return (0);
+	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
+	if (t <= RAY_T_MIN || t >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t;
+	return (1);
+}
+
+/*
+static int 			    		plane_intersect(constant t_object *object, t_intersection_cl *intersection)
+{
+	t_object_plane	    		*data;
+	double4			    		temp[2];
+	double						value[3];
+
+	data = (t_object_plane *)data_ptr;
+	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
+		return (0);
+	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
+	value[1] = vector3_dot(temp, &data->normal) / value[0];
+	if (value[1] <= RAY_T_MIN || value[1] >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = value[1];
+	return (1);
+}
+*/

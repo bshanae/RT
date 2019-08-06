@@ -12,12 +12,12 @@ void 				cl_renderer_init_data(t_cl_renderer *renderer)
 		sizeof(int) * renderer->image->width * renderer->image->height;
 	renderer->data_device.camera = clCreateBuffer(renderer->context,
 		CL_MEM_READ_ONLY, renderer->data_size.camera, NULL, &renderer->error);
-	ft_assert(renderer->error == 0, "open_cl : camera buffer allocation");
+	ASSERT(renderer->error == 0)
 	renderer->data_device.scene = clCreateBuffer(renderer->context,
 		CL_MEM_READ_ONLY, renderer->data_size.scene, NULL, &renderer->error);
-	ft_assert(renderer->error == 0, "open_cl : scene buffer allocation");
+	ASSERT(renderer->error == 0)
 	renderer->data_device.image = clCreateBuffer(renderer->context,
 		CL_MEM_WRITE_ONLY, renderer->data_size.image, NULL, &renderer->error);
-	ft_assert(renderer->error == 0, "open_cl : image buffer allocation");
+	ASSERT(renderer->error == 0)
 
 }

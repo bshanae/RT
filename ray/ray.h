@@ -1,12 +1,12 @@
 #ifndef RAY_H
 # define RAY_H
 
-# include "vector3.h"
+# include "cl_include.h"
 
 typedef	struct		s_ray
 {
-	t_vector3		origin;
-	t_vector3		direction;
+	cl_double4		origin;
+	cl_double4		direction;
 	double 			t;
 }					t_ray;
 

@@ -11,3 +11,7 @@ typedef struct		s_object
 	t_object_type	type;
 	char			data[OBJECT_DATA_CAPACITY];
 }					t_object;
+
+int 				object_intersect
+					(t_object *object, t_intersection *intersection);
+

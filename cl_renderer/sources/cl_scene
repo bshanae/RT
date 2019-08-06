@@ -1,7 +1,17 @@
-typedef struct				s_scene
+typedef struct		s_scene
 {
-	t_object				objects[SCENE_OBJECTS_CAPACITY];
-	int						objects_length;
-	t_light					lights[SCENE_LIGHTS_CAPACITY];
-	int						lights_length;
-}							t_scene;
+	t_object		objects[SCENE_OBJECTS_CAPACITY];
+	int				objects_length;
+	t_light			lights[SCENE_LIGHTS_CAPACITY];
+	int				lights_length;
+}					t_scene;
+
+static int			scene_intersect(constant t_scene *scene, t_intersection *intersection)
+{
+	int				result;
+
+	result = 0;
+	for (int i = 0; i < scene->objects_length; i++)
+		result += object_intersect(scene->objects + i, intersection);
+	return (result != 0);
+}

@@ -1,10 +1,10 @@
 #ifndef OBJECT_INTERACTION_H
 # define OBJECT_INTERACTION_H
 
-# include "ft_assert.h"
+# include "assert.h"
 # include "object_definition.h"
 # include "object_list.h"
-# include "vector3.h"
+# include "cl_include.h"
 # include "intersection.h"
 
 # include <stdarg.h>
@@ -16,12 +16,5 @@ void				object_build(
 
 void				object_sphere_build(t_object *space, va_list *args);
 void				object_plane_build(t_object *space, va_list *args);
-
-int 				object_intersect
-					(t_object *object, t_intersection *intersection);
-int					object_sphere_intersect
-					(t_object *object, t_intersection *intersection);
-int					object_plane_intersect
-					(t_object *object, t_intersection *intersection);
 
 #endif

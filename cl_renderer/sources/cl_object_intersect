@@ -1,0 +1,5 @@
+static int			object_intersect(constant t_object *object, t_intersection *intersection)
+{
+	if (object->type == object_sphere)
+		return (sphere_intersect(object, intersection));
+}

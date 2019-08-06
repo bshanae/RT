@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_delete.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_new.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o"
@@ -18,7 +17,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/ft_assert/ft_assert.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_delete.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"
@@ -42,24 +40,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/main.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/main.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/object/object_build.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object/object_build.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/object/object_intersect.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object/object_intersect.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/object_list/plane.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object_list/plane.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/object_list/sphere.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/object_list/sphere.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/scene/scene_delete.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_delete.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/scene/scene_get_space.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_get_space.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/scene/scene_intersect.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_intersect.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/scene/scene_new.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_new.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_add.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_cross.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_div.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_dot.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_length.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_max.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_min.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_mul.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_normal.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/vector3/vector3_sub.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
@@ -97,16 +82,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././gui/gui_image"
   ".././gui/gui_signal"
   ".././color"
-  ".././vector3"
   ".././light"
   ".././object"
   ".././object_list"
   ".././scene"
-  "../cl_renderer"
+  ".././cl_renderer"
   ".././camera"
   ".././ray"
   ".././intersection"
-  ".././ft_assert"
+  ".././assert"
   ".././open_cl_manager"
   )
 

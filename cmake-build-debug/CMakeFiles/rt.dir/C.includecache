@@ -30,13 +30,17 @@ unistd.h
 libft_standart.h
 ../../21_libft/includes/libft_standart.h
 
+.././assert/assert.h
+libft_ft_printf.h
+.././assert/libft_ft_printf.h
+
 .././camera/camera.h
 options.h
 .././camera/options.h
+cl_include.h
+.././camera/cl_include.h
 libft_standart.h
 .././camera/libft_standart.h
-vector3.h
-.././camera/vector3.h
 ray.h
 .././camera/ray.h
 stdlib.h
@@ -44,11 +48,15 @@ stdlib.h
 math.h
 -
 
-.././color/color.h
+.././cl_include.h
+OpenCL/opencl.h
+-
+OpenCL/opencl.h
+-
+CL/cl.h
+-
 
-.././ft_assert/ft_assert.h
-libft_ft_printf.h
-.././ft_assert/libft_ft_printf.h
+.././color/color.h
 
 .././gui/gui_image/gui_image.h
 gui_names.h
@@ -60,29 +68,7 @@ color.h
 gtk/gtk.h
 -
 
-.././gui/gui_list/gui_list.h
-gui_names.h
-.././gui/gui_list/gui_names.h
-gtk/gtk.h
--
-
 .././gui/gui_names.h
-
-.././gui/gui_object/gui_object.h
-gui_object_base.h
-.././gui/gui_object/gui_object_base.h
-object_definition.h
-.././gui/gui_object/object_definition.h
-object_list.h
-.././gui/gui_object/object_list.h
-stdio.h
--
-
-.././gui/gui_object_base/gui_object_base.h
-gui_names.h
-.././gui/gui_object_base/gui_names.h
-gtk/gtk.h
--
 
 .././intersection/intersection.h
 ray.h
@@ -95,28 +81,28 @@ options.h
 .././object/options.h
 
 .././object/object_interaction.h
-ft_assert.h
-.././object/ft_assert.h
+assert.h
+.././object/assert.h
 object_definition.h
 .././object/object_definition.h
 object_list.h
 .././object/object_list.h
-vector3.h
-.././object/vector3.h
+cl_include.h
+.././object/cl_include.h
 intersection.h
 .././object/intersection.h
 stdarg.h
 -
 
 .././object_list/object_list.h
-vector3.h
-.././object_list/vector3.h
+cl_include.h
+.././object_list/cl_include.h
 
 .././options.h
 
 .././ray/ray.h
-vector3.h
-.././ray/vector3.h
+cl_include.h
+.././ray/cl_include.h
 
 .././scene/scene.h
 options.h
@@ -127,34 +113,6 @@ object_interaction.h
 .././scene/object_interaction.h
 intersection.h
 .././scene/intersection.h
-stdlib.h
--
-
-.././vector3/vector3.h
-math.h
--
-
-../cl_renderer/cl_options.h
-
-../cl_renderer/cl_renderer.h
-cl_options.h
-../cl_renderer/cl_options.h
-ft_assert.h
-../cl_renderer/ft_assert.h
-gui_image.h
-../cl_renderer/gui_image.h
-scene.h
-../cl_renderer/scene.h
-camera.h
-../cl_renderer/camera.h
-ray.h
-../cl_renderer/ray.h
-intersection.h
-../cl_renderer/intersection.h
-OpenCL/opencl.h
--
-CL/cl.h
--
 stdlib.h
 -
 
@@ -4680,21 +4638,27 @@ pango/pango.h
 cairo.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui.h
-gui_names.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_names.h
-gui_list.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_list.h
-gui_object.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_object.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_options.h
+
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
+cl_options.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_options.h
+assert.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/assert.h
 gui_image.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_image.h
-cl_renderer.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/cl_renderer.h
-gtk/gtk.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/gui_image.h
+scene.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/scene.h
+camera.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/camera.h
+ray.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/ray.h
+intersection.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/intersection.h
+stdlib.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c
-gui.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_log.c
+cl_renderer.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
 

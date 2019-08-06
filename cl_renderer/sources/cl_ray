@@ -1,6 +1,6 @@
 typedef	struct		s_ray
 {
-	t_vector3		origin;
-	t_vector3		direction;
+	double4			origin;
+	double4			direction;
 	double 			t;
 }					t_ray;

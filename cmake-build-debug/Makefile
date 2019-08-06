@@ -123,33 +123,6 @@ rt/fast:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/build
 .PHONY : rt/fast
 
-camera/camera_build_ray.o: camera/camera_build_ray.c.o
-
-.PHONY : camera/camera_build_ray.o
-
-# target to build an object file
-camera/camera_build_ray.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_build_ray.c.o
-.PHONY : camera/camera_build_ray.c.o
-
-camera/camera_build_ray.i: camera/camera_build_ray.c.i
-
-.PHONY : camera/camera_build_ray.i
-
-# target to preprocess a source file
-camera/camera_build_ray.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_build_ray.c.i
-.PHONY : camera/camera_build_ray.c.i
-
-camera/camera_build_ray.s: camera/camera_build_ray.c.s
-
-.PHONY : camera/camera_build_ray.s
-
-# target to generate assembly for a file
-camera/camera_build_ray.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_build_ray.c.s
-.PHONY : camera/camera_build_ray.c.s
-
 camera/camera_delete.o: camera/camera_delete.c.o
 
 .PHONY : camera/camera_delete.o
@@ -500,33 +473,6 @@ cl_renderer/cl_renderer_set_arguments.s: cl_renderer/cl_renderer_set_arguments.c
 cl_renderer/cl_renderer_set_arguments.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s
 .PHONY : cl_renderer/cl_renderer_set_arguments.c.s
-
-ft_assert/ft_assert.o: ft_assert/ft_assert.c.o
-
-.PHONY : ft_assert/ft_assert.o
-
-# target to build an object file
-ft_assert/ft_assert.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.o
-.PHONY : ft_assert/ft_assert.c.o
-
-ft_assert/ft_assert.i: ft_assert/ft_assert.c.i
-
-.PHONY : ft_assert/ft_assert.i
-
-# target to preprocess a source file
-ft_assert/ft_assert.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.i
-.PHONY : ft_assert/ft_assert.c.i
-
-ft_assert/ft_assert.s: ft_assert/ft_assert.c.s
-
-.PHONY : ft_assert/ft_assert.s
-
-# target to generate assembly for a file
-ft_assert/ft_assert.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/ft_assert/ft_assert.c.s
-.PHONY : ft_assert/ft_assert.c.s
 
 gui/gui/gui_connect_renderer.o: gui/gui/gui_connect_renderer.c.o
 
@@ -1149,33 +1095,6 @@ object/object_build.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object/object_build.c.s
 .PHONY : object/object_build.c.s
 
-object/object_intersect.o: object/object_intersect.c.o
-
-.PHONY : object/object_intersect.o
-
-# target to build an object file
-object/object_intersect.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object/object_intersect.c.o
-.PHONY : object/object_intersect.c.o
-
-object/object_intersect.i: object/object_intersect.c.i
-
-.PHONY : object/object_intersect.i
-
-# target to preprocess a source file
-object/object_intersect.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object/object_intersect.c.i
-.PHONY : object/object_intersect.c.i
-
-object/object_intersect.s: object/object_intersect.c.s
-
-.PHONY : object/object_intersect.s
-
-# target to generate assembly for a file
-object/object_intersect.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object/object_intersect.c.s
-.PHONY : object/object_intersect.c.s
-
 object_list/plane.o: object_list/plane.c.o
 
 .PHONY : object_list/plane.o
@@ -1284,33 +1203,6 @@ scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_get_space.c.s
 .PHONY : scene/scene_get_space.c.s
 
-scene/scene_intersect.o: scene/scene_intersect.c.o
-
-.PHONY : scene/scene_intersect.o
-
-# target to build an object file
-scene/scene_intersect.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.o
-.PHONY : scene/scene_intersect.c.o
-
-scene/scene_intersect.i: scene/scene_intersect.c.i
-
-.PHONY : scene/scene_intersect.i
-
-# target to preprocess a source file
-scene/scene_intersect.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.i
-.PHONY : scene/scene_intersect.c.i
-
-scene/scene_intersect.s: scene/scene_intersect.c.s
-
-.PHONY : scene/scene_intersect.s
-
-# target to generate assembly for a file
-scene/scene_intersect.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_intersect.c.s
-.PHONY : scene/scene_intersect.c.s
-
 scene/scene_new.o: scene/scene_new.c.o
 
 .PHONY : scene/scene_new.o
@@ -1338,303 +1230,6 @@ scene/scene_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/scene/scene_new.c.s
 .PHONY : scene/scene_new.c.s
 
-vector3/vector3_add.o: vector3/vector3_add.c.o
-
-.PHONY : vector3/vector3_add.o
-
-# target to build an object file
-vector3/vector3_add.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add.c.o
-.PHONY : vector3/vector3_add.c.o
-
-vector3/vector3_add.i: vector3/vector3_add.c.i
-
-.PHONY : vector3/vector3_add.i
-
-# target to preprocess a source file
-vector3/vector3_add.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add.c.i
-.PHONY : vector3/vector3_add.c.i
-
-vector3/vector3_add.s: vector3/vector3_add.c.s
-
-.PHONY : vector3/vector3_add.s
-
-# target to generate assembly for a file
-vector3/vector3_add.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_add.c.s
-.PHONY : vector3/vector3_add.c.s
-
-vector3/vector3_component_mul.o: vector3/vector3_component_mul.c.o
-
-.PHONY : vector3/vector3_component_mul.o
-
-# target to build an object file
-vector3/vector3_component_mul.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o
-.PHONY : vector3/vector3_component_mul.c.o
-
-vector3/vector3_component_mul.i: vector3/vector3_component_mul.c.i
-
-.PHONY : vector3/vector3_component_mul.i
-
-# target to preprocess a source file
-vector3/vector3_component_mul.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_component_mul.c.i
-.PHONY : vector3/vector3_component_mul.c.i
-
-vector3/vector3_component_mul.s: vector3/vector3_component_mul.c.s
-
-.PHONY : vector3/vector3_component_mul.s
-
-# target to generate assembly for a file
-vector3/vector3_component_mul.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_component_mul.c.s
-.PHONY : vector3/vector3_component_mul.c.s
-
-vector3/vector3_cross.o: vector3/vector3_cross.c.o
-
-.PHONY : vector3/vector3_cross.o
-
-# target to build an object file
-vector3/vector3_cross.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_cross.c.o
-.PHONY : vector3/vector3_cross.c.o
-
-vector3/vector3_cross.i: vector3/vector3_cross.c.i
-
-.PHONY : vector3/vector3_cross.i
-
-# target to preprocess a source file
-vector3/vector3_cross.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_cross.c.i
-.PHONY : vector3/vector3_cross.c.i
-
-vector3/vector3_cross.s: vector3/vector3_cross.c.s
-
-.PHONY : vector3/vector3_cross.s
-
-# target to generate assembly for a file
-vector3/vector3_cross.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_cross.c.s
-.PHONY : vector3/vector3_cross.c.s
-
-vector3/vector3_div.o: vector3/vector3_div.c.o
-
-.PHONY : vector3/vector3_div.o
-
-# target to build an object file
-vector3/vector3_div.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_div.c.o
-.PHONY : vector3/vector3_div.c.o
-
-vector3/vector3_div.i: vector3/vector3_div.c.i
-
-.PHONY : vector3/vector3_div.i
-
-# target to preprocess a source file
-vector3/vector3_div.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_div.c.i
-.PHONY : vector3/vector3_div.c.i
-
-vector3/vector3_div.s: vector3/vector3_div.c.s
-
-.PHONY : vector3/vector3_div.s
-
-# target to generate assembly for a file
-vector3/vector3_div.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_div.c.s
-.PHONY : vector3/vector3_div.c.s
-
-vector3/vector3_dot.o: vector3/vector3_dot.c.o
-
-.PHONY : vector3/vector3_dot.o
-
-# target to build an object file
-vector3/vector3_dot.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_dot.c.o
-.PHONY : vector3/vector3_dot.c.o
-
-vector3/vector3_dot.i: vector3/vector3_dot.c.i
-
-.PHONY : vector3/vector3_dot.i
-
-# target to preprocess a source file
-vector3/vector3_dot.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_dot.c.i
-.PHONY : vector3/vector3_dot.c.i
-
-vector3/vector3_dot.s: vector3/vector3_dot.c.s
-
-.PHONY : vector3/vector3_dot.s
-
-# target to generate assembly for a file
-vector3/vector3_dot.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_dot.c.s
-.PHONY : vector3/vector3_dot.c.s
-
-vector3/vector3_length.o: vector3/vector3_length.c.o
-
-.PHONY : vector3/vector3_length.o
-
-# target to build an object file
-vector3/vector3_length.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_length.c.o
-.PHONY : vector3/vector3_length.c.o
-
-vector3/vector3_length.i: vector3/vector3_length.c.i
-
-.PHONY : vector3/vector3_length.i
-
-# target to preprocess a source file
-vector3/vector3_length.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_length.c.i
-.PHONY : vector3/vector3_length.c.i
-
-vector3/vector3_length.s: vector3/vector3_length.c.s
-
-.PHONY : vector3/vector3_length.s
-
-# target to generate assembly for a file
-vector3/vector3_length.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_length.c.s
-.PHONY : vector3/vector3_length.c.s
-
-vector3/vector3_max.o: vector3/vector3_max.c.o
-
-.PHONY : vector3/vector3_max.o
-
-# target to build an object file
-vector3/vector3_max.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_max.c.o
-.PHONY : vector3/vector3_max.c.o
-
-vector3/vector3_max.i: vector3/vector3_max.c.i
-
-.PHONY : vector3/vector3_max.i
-
-# target to preprocess a source file
-vector3/vector3_max.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_max.c.i
-.PHONY : vector3/vector3_max.c.i
-
-vector3/vector3_max.s: vector3/vector3_max.c.s
-
-.PHONY : vector3/vector3_max.s
-
-# target to generate assembly for a file
-vector3/vector3_max.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_max.c.s
-.PHONY : vector3/vector3_max.c.s
-
-vector3/vector3_min.o: vector3/vector3_min.c.o
-
-.PHONY : vector3/vector3_min.o
-
-# target to build an object file
-vector3/vector3_min.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_min.c.o
-.PHONY : vector3/vector3_min.c.o
-
-vector3/vector3_min.i: vector3/vector3_min.c.i
-
-.PHONY : vector3/vector3_min.i
-
-# target to preprocess a source file
-vector3/vector3_min.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_min.c.i
-.PHONY : vector3/vector3_min.c.i
-
-vector3/vector3_min.s: vector3/vector3_min.c.s
-
-.PHONY : vector3/vector3_min.s
-
-# target to generate assembly for a file
-vector3/vector3_min.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_min.c.s
-.PHONY : vector3/vector3_min.c.s
-
-vector3/vector3_mul.o: vector3/vector3_mul.c.o
-
-.PHONY : vector3/vector3_mul.o
-
-# target to build an object file
-vector3/vector3_mul.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.o
-.PHONY : vector3/vector3_mul.c.o
-
-vector3/vector3_mul.i: vector3/vector3_mul.c.i
-
-.PHONY : vector3/vector3_mul.i
-
-# target to preprocess a source file
-vector3/vector3_mul.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.i
-.PHONY : vector3/vector3_mul.c.i
-
-vector3/vector3_mul.s: vector3/vector3_mul.c.s
-
-.PHONY : vector3/vector3_mul.s
-
-# target to generate assembly for a file
-vector3/vector3_mul.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_mul.c.s
-.PHONY : vector3/vector3_mul.c.s
-
-vector3/vector3_normal.o: vector3/vector3_normal.c.o
-
-.PHONY : vector3/vector3_normal.o
-
-# target to build an object file
-vector3/vector3_normal.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_normal.c.o
-.PHONY : vector3/vector3_normal.c.o
-
-vector3/vector3_normal.i: vector3/vector3_normal.c.i
-
-.PHONY : vector3/vector3_normal.i
-
-# target to preprocess a source file
-vector3/vector3_normal.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_normal.c.i
-.PHONY : vector3/vector3_normal.c.i
-
-vector3/vector3_normal.s: vector3/vector3_normal.c.s
-
-.PHONY : vector3/vector3_normal.s
-
-# target to generate assembly for a file
-vector3/vector3_normal.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_normal.c.s
-.PHONY : vector3/vector3_normal.c.s
-
-vector3/vector3_sub.o: vector3/vector3_sub.c.o
-
-.PHONY : vector3/vector3_sub.o
-
-# target to build an object file
-vector3/vector3_sub.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_sub.c.o
-.PHONY : vector3/vector3_sub.c.o
-
-vector3/vector3_sub.i: vector3/vector3_sub.c.i
-
-.PHONY : vector3/vector3_sub.i
-
-# target to preprocess a source file
-vector3/vector3_sub.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_sub.c.i
-.PHONY : vector3/vector3_sub.c.i
-
-vector3/vector3_sub.s: vector3/vector3_sub.c.s
-
-.PHONY : vector3/vector3_sub.s
-
-# target to generate assembly for a file
-vector3/vector3_sub.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/vector3/vector3_sub.c.s
-.PHONY : vector3/vector3_sub.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1644,9 +1239,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... rt"
-	@echo "... camera/camera_build_ray.o"
-	@echo "... camera/camera_build_ray.i"
-	@echo "... camera/camera_build_ray.s"
 	@echo "... camera/camera_delete.o"
 	@echo "... camera/camera_delete.i"
 	@echo "... camera/camera_delete.s"
@@ -1686,9 +1278,6 @@ help:
 	@echo "... cl_renderer/cl_renderer_set_arguments.o"
 	@echo "... cl_renderer/cl_renderer_set_arguments.i"
 	@echo "... cl_renderer/cl_renderer_set_arguments.s"
-	@echo "... ft_assert/ft_assert.o"
-	@echo "... ft_assert/ft_assert.i"
-	@echo "... ft_assert/ft_assert.s"
 	@echo "... gui/gui/gui_connect_renderer.o"
 	@echo "... gui/gui/gui_connect_renderer.i"
 	@echo "... gui/gui/gui_connect_renderer.s"
@@ -1758,9 +1347,6 @@ help:
 	@echo "... object/object_build.o"
 	@echo "... object/object_build.i"
 	@echo "... object/object_build.s"
-	@echo "... object/object_intersect.o"
-	@echo "... object/object_intersect.i"
-	@echo "... object/object_intersect.s"
 	@echo "... object_list/plane.o"
 	@echo "... object_list/plane.i"
 	@echo "... object_list/plane.s"
@@ -1773,45 +1359,9 @@ help:
 	@echo "... scene/scene_get_space.o"
 	@echo "... scene/scene_get_space.i"
 	@echo "... scene/scene_get_space.s"
-	@echo "... scene/scene_intersect.o"
-	@echo "... scene/scene_intersect.i"
-	@echo "... scene/scene_intersect.s"
 	@echo "... scene/scene_new.o"
 	@echo "... scene/scene_new.i"
 	@echo "... scene/scene_new.s"
-	@echo "... vector3/vector3_add.o"
-	@echo "... vector3/vector3_add.i"
-	@echo "... vector3/vector3_add.s"
-	@echo "... vector3/vector3_component_mul.o"
-	@echo "... vector3/vector3_component_mul.i"
-	@echo "... vector3/vector3_component_mul.s"
-	@echo "... vector3/vector3_cross.o"
-	@echo "... vector3/vector3_cross.i"
-	@echo "... vector3/vector3_cross.s"
-	@echo "... vector3/vector3_div.o"
-	@echo "... vector3/vector3_div.i"
-	@echo "... vector3/vector3_div.s"
-	@echo "... vector3/vector3_dot.o"
-	@echo "... vector3/vector3_dot.i"
-	@echo "... vector3/vector3_dot.s"
-	@echo "... vector3/vector3_length.o"
-	@echo "... vector3/vector3_length.i"
-	@echo "... vector3/vector3_length.s"
-	@echo "... vector3/vector3_max.o"
-	@echo "... vector3/vector3_max.i"
-	@echo "... vector3/vector3_max.s"
-	@echo "... vector3/vector3_min.o"
-	@echo "... vector3/vector3_min.i"
-	@echo "... vector3/vector3_min.s"
-	@echo "... vector3/vector3_mul.o"
-	@echo "... vector3/vector3_mul.i"
-	@echo "... vector3/vector3_mul.s"
-	@echo "... vector3/vector3_normal.o"
-	@echo "... vector3/vector3_normal.i"
-	@echo "... vector3/vector3_normal.s"
-	@echo "... vector3/vector3_sub.o"
-	@echo "... vector3/vector3_sub.i"
-	@echo "... vector3/vector3_sub.s"
 .PHONY : help
 
 

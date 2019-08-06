@@ -3,18 +3,13 @@
 
 # include "cl_options.h"
 
-# include "ft_assert.h"
+# include "assert.h"
 # include "gui_image.h"
 # include "scene.h"
 # include "camera.h"
 # include "ray.h"
 # include "intersection.h"
 
-# ifdef __APPLE__
-#  include <OpenCL/opencl.h>
-# else
-#  include <CL/cl.h>
-# endif
 # include <stdlib.h>
 
 

@@ -76,16 +76,15 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./gui/gui_image"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./gui/gui_signal"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./color"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./vector3"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./object"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/cl_renderer"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./cl_renderer"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./ft_assert"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./assert"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
@@ -140,16 +139,15 @@
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./gui/gui_image"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./gui/gui_signal"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./color"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./vector3"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./light"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./object"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/cl_renderer"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./cl_renderer"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./ft_assert"/>
+					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./assert"/>
 					<Add directory="/Users/bshanae/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
@@ -166,9 +164,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
@@ -206,12 +201,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.h">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">
@@ -283,9 +272,6 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/object/object_build.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/object/object_intersect.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/object_list/plane.c">
 			<Option target="rt"/>
 		</Unit>
@@ -298,43 +284,7 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_get_space.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_intersect.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/scene/scene_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/CMakeLists.txt">

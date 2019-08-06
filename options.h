@@ -9,9 +9,7 @@
 # define GI_DEFAULT_WIDTH		480
 # define GI_DEFAULT_HEIGHT		480
 
-# define INT_REF				const int *
-
-# define INTERSECTION_MIN		0.0001
+# define INTERSECTION_MIN		0.000001
 # define INTERSECTION_MAX		INFINITY
 
 #endif
