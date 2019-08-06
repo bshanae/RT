@@ -1,0 +1,11 @@
+kernel void			cl_main(
+					constant t_camera *camera,
+					constant t_scene *scene,
+					global t_color *image)
+{
+	int				global_id;
+
+	global_id = get_global_id(0);
+	image[global_id] = (t_color){255, 0, 0, 255};
+
+}

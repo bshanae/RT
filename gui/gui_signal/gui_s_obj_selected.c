@@ -16,7 +16,7 @@ void				gui_s_obj_selected(
 		gtk_widget_hide(gui->object->current_widget);
 	gtk_tree_model_get(model,
 			&gui->list->iter, gl_id, &gui->object->current_id, -1);
-	object = gui->renderer->scene->objects + gui->object->current_id;
+	object = gui->renderer->data_host.scene->objects + gui->object->current_id;
 	if (object->type == object_sphere)
 	{
 		gui_sphere_load(&gui->object->sphere, object);

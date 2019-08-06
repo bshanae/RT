@@ -1,7 +1,10 @@
 #include "gui_signal.h"
 
+#define MACRO(x) gtk_builder_add_callback_symbol(gui->builder, #x, G_CALLBACK(x));
+
 void				gui_signal_connect(t_gui *gui)
 {
+	MACRO(gui_s_key)
 	gtk_builder_add_callback_symbol(gui->builder, "gui_s_key", G_CALLBACK(gui_s_key));
 	gtk_builder_add_callback_symbol(gui->builder, "gui_s_obj_selected", G_CALLBACK(gui_s_obj_selected));
 	gtk_builder_add_callback_symbol(gui->builder, "gui_s_obj_add", G_CALLBACK(gui_s_obj_add));

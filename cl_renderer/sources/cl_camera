@@ -1,0 +1,10 @@
+typedef struct 		s_camera
+{
+	t_vector3		position;
+	t_vector3		axis_x;
+	t_vector3		axis_y;
+	t_vector3		axis_z;
+	t_vector3		forward;
+	int				width;
+	int				height;
+}					t_camera;

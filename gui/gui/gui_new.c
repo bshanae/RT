@@ -12,7 +12,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	new->list = gui_list_new(new->builder);
 	new->object = gui_object_new(new->builder);
 	new->image = gui_image_new(new->builder);
-	new->renderer = renderer_new();
+	new->renderer = cl_renderer_new(new->image);
 	gui_signal_connect(new);
 	gtk_widget_show(GTK_WIDGET(new->window));
 	return (new);

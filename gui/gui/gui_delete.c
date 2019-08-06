@@ -2,7 +2,7 @@
 
 void				gui_delete(t_gui **gui)
 {
-	renderer_delete(&(*gui)->renderer);
+	cl_renderer_delete(&(*gui)->renderer);
 	gui_list_delete(&(*gui)->list);
 	gui_object_delete(&(*gui)->object);
 	gui_image_delete(&(*gui)->image);

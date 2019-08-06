@@ -6,13 +6,13 @@
 # include "gui_list.h"
 # include "gui_object.h"
 # include "gui_image.h"
-# include "renderer.h"
+# include "cl_renderer.h"
 
 # include <gtk/gtk.h>
 
 typedef struct		s_gui
 {
-	t_renderer		*renderer;
+	t_cl_renderer		*renderer;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
 	t_gui_list		*list;

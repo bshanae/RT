@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rt.dir/depend.make
@@ -59,705 +59,731 @@ include CMakeFiles/rt.dir/flags.make
 
 CMakeFiles/rt.dir/main.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rt.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/main.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/rt.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/main.c.o   -c /Users/bshanae/workspace/21_ray_tracer/main.c
 
 CMakeFiles/rt.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/main.c > CMakeFiles/rt.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/main.c > CMakeFiles/rt.dir/main.c.i
 
 CMakeFiles/rt.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/main.c -o CMakeFiles/rt.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/main.c -o CMakeFiles/rt.dir/main.c.s
 
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: ../gui/gui/gui_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rt.dir/gui/gui/gui_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/rt.dir/gui/gui/gui_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_new.c
 
 CMakeFiles/rt.dir/gui/gui/gui_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c > CMakeFiles/rt.dir/gui/gui/gui_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_new.c > CMakeFiles/rt.dir/gui/gui/gui_new.c.i
 
 CMakeFiles/rt.dir/gui/gui/gui_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c -o CMakeFiles/rt.dir/gui/gui/gui_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_new.c -o CMakeFiles/rt.dir/gui/gui/gui_new.c.s
 
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: ../gui/gui/gui_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_delete.c
 
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c > CMakeFiles/rt.dir/gui/gui/gui_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_delete.c > CMakeFiles/rt.dir/gui/gui/gui_delete.c.i
 
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c -o CMakeFiles/rt.dir/gui/gui/gui_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_delete.c -o CMakeFiles/rt.dir/gui/gui/gui_delete.c.s
 
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: ../gui/gui/gui_connect_renderer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c
 
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c > CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c > CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.i
 
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c -o CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c -o CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.s
 
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: ../gui/gui/gui_loop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_loop.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_loop.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c
 
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_loop.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c > CMakeFiles/rt.dir/gui/gui/gui_loop.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c > CMakeFiles/rt.dir/gui/gui/gui_loop.c.i
 
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_loop.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c -o CMakeFiles/rt.dir/gui/gui/gui_loop.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c -o CMakeFiles/rt.dir/gui/gui/gui_loop.c.s
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o: ../gui/gui_list/gui_list_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c > CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c > CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.i
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c -o CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c -o CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.s
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o: ../gui/gui_list/gui_list_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c > CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c > CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.i
 
 CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c -o CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c -o CMakeFiles/rt.dir/gui/gui_list/gui_list_delete.c.s
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: ../gui/gui_object/gui_object_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c > CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c > CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.i
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c -o CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c -o CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.s
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: ../gui/gui_object/gui_object_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c > CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c > CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.i
 
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c -o CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c -o CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.s
 
 CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o: ../gui/gui_object_base/gui_object_base_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c
 
 CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c > CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c > CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.i
 
 CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c -o CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c -o CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.s
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: ../gui/gui_object_list/gui_object_sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c > CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c > CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.i
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.s
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: ../gui/gui_object_list/gui_object_plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c > CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c > CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.i
 
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c -o CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.s
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: ../gui/gui_image/gui_image_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c > CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c > CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.i
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c -o CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c -o CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: ../gui/gui_image/gui_image_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c > CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c > CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.i
 
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c -o CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c -o CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: ../gui/gui_signal/gui_signal_connect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c > CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c > CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: ../gui/gui_signal/gui_s_obj_selected.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: ../gui/gui_signal/gui_s_sphere_pos.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: ../gui/gui_signal/gui_s_key.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: ../gui/gui_signal/gui_s_sphere_rad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: ../gui/gui_signal/gui_s_plane_pos.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: ../gui/gui_signal/gui_s_plane_norm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.s
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: ../gui/gui_signal/gui_s_obj_add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c > CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.i
 
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c -o CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_add.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_add.c.o: ../vector3/vector3_add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/rt.dir/vector3/vector3_add.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_add.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_add.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/rt.dir/vector3/vector3_add.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_add.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c
 
 CMakeFiles/rt.dir/vector3/vector3_add.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_add.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_add.c > CMakeFiles/rt.dir/vector3/vector3_add.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c > CMakeFiles/rt.dir/vector3/vector3_add.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_add.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_add.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_add.c -o CMakeFiles/rt.dir/vector3/vector3_add.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_add.c -o CMakeFiles/rt.dir/vector3/vector3_add.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_sub.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_sub.c.o: ../vector3/vector3_sub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/rt.dir/vector3/vector3_sub.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_sub.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_sub.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/rt.dir/vector3/vector3_sub.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_sub.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c
 
 CMakeFiles/rt.dir/vector3/vector3_sub.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_sub.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_sub.c > CMakeFiles/rt.dir/vector3/vector3_sub.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c > CMakeFiles/rt.dir/vector3/vector3_sub.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_sub.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_sub.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_sub.c -o CMakeFiles/rt.dir/vector3/vector3_sub.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_sub.c -o CMakeFiles/rt.dir/vector3/vector3_sub.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_mul.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_mul.c.o: ../vector3/vector3_mul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/rt.dir/vector3/vector3_mul.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_mul.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/rt.dir/vector3/vector3_mul.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_mul.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c
 
 CMakeFiles/rt.dir/vector3/vector3_mul.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_mul.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c > CMakeFiles/rt.dir/vector3/vector3_mul.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c > CMakeFiles/rt.dir/vector3/vector3_mul.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_mul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_mul.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_mul.c -o CMakeFiles/rt.dir/vector3/vector3_mul.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_mul.c -o CMakeFiles/rt.dir/vector3/vector3_mul.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_div.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_div.c.o: ../vector3/vector3_div.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/rt.dir/vector3/vector3_div.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_div.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_div.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/rt.dir/vector3/vector3_div.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_div.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c
 
 CMakeFiles/rt.dir/vector3/vector3_div.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_div.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_div.c > CMakeFiles/rt.dir/vector3/vector3_div.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c > CMakeFiles/rt.dir/vector3/vector3_div.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_div.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_div.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_div.c -o CMakeFiles/rt.dir/vector3/vector3_div.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_div.c -o CMakeFiles/rt.dir/vector3/vector3_div.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_dot.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_dot.c.o: ../vector3/vector3_dot.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/rt.dir/vector3/vector3_dot.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_dot.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_dot.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/rt.dir/vector3/vector3_dot.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_dot.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c
 
 CMakeFiles/rt.dir/vector3/vector3_dot.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_dot.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_dot.c > CMakeFiles/rt.dir/vector3/vector3_dot.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c > CMakeFiles/rt.dir/vector3/vector3_dot.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_dot.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_dot.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_dot.c -o CMakeFiles/rt.dir/vector3/vector3_dot.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_dot.c -o CMakeFiles/rt.dir/vector3/vector3_dot.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_cross.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_cross.c.o: ../vector3/vector3_cross.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/rt.dir/vector3/vector3_cross.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_cross.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/rt.dir/vector3/vector3_cross.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_cross.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c
 
 CMakeFiles/rt.dir/vector3/vector3_cross.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_cross.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c > CMakeFiles/rt.dir/vector3/vector3_cross.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c > CMakeFiles/rt.dir/vector3/vector3_cross.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_cross.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_cross.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_cross.c -o CMakeFiles/rt.dir/vector3/vector3_cross.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_cross.c -o CMakeFiles/rt.dir/vector3/vector3_cross.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_length.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_length.c.o: ../vector3/vector3_length.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/rt.dir/vector3/vector3_length.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_length.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_length.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/rt.dir/vector3/vector3_length.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_length.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c
 
 CMakeFiles/rt.dir/vector3/vector3_length.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_length.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_length.c > CMakeFiles/rt.dir/vector3/vector3_length.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c > CMakeFiles/rt.dir/vector3/vector3_length.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_length.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_length.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_length.c -o CMakeFiles/rt.dir/vector3/vector3_length.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_length.c -o CMakeFiles/rt.dir/vector3/vector3_length.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_normal.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_normal.c.o: ../vector3/vector3_normal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/rt.dir/vector3/vector3_normal.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_normal.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_normal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/rt.dir/vector3/vector3_normal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_normal.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c
 
 CMakeFiles/rt.dir/vector3/vector3_normal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_normal.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_normal.c > CMakeFiles/rt.dir/vector3/vector3_normal.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c > CMakeFiles/rt.dir/vector3/vector3_normal.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_normal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_normal.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_normal.c -o CMakeFiles/rt.dir/vector3/vector3_normal.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_normal.c -o CMakeFiles/rt.dir/vector3/vector3_normal.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_max.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_max.c.o: ../vector3/vector3_max.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/rt.dir/vector3/vector3_max.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_max.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_max.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/rt.dir/vector3/vector3_max.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_max.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c
 
 CMakeFiles/rt.dir/vector3/vector3_max.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_max.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_max.c > CMakeFiles/rt.dir/vector3/vector3_max.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c > CMakeFiles/rt.dir/vector3/vector3_max.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_max.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_max.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_max.c -o CMakeFiles/rt.dir/vector3/vector3_max.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_max.c -o CMakeFiles/rt.dir/vector3/vector3_max.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_min.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_min.c.o: ../vector3/vector3_min.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/rt.dir/vector3/vector3_min.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_min.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_min.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/rt.dir/vector3/vector3_min.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_min.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c
 
 CMakeFiles/rt.dir/vector3/vector3_min.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_min.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_min.c > CMakeFiles/rt.dir/vector3/vector3_min.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c > CMakeFiles/rt.dir/vector3/vector3_min.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_min.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_min.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_min.c -o CMakeFiles/rt.dir/vector3/vector3_min.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_min.c -o CMakeFiles/rt.dir/vector3/vector3_min.c.s
 
 CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o: ../vector3/vector3_component_mul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o   -c /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c
 
 CMakeFiles/rt.dir/vector3/vector3_component_mul.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/vector3/vector3_component_mul.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c > CMakeFiles/rt.dir/vector3/vector3_component_mul.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c > CMakeFiles/rt.dir/vector3/vector3_component_mul.c.i
 
 CMakeFiles/rt.dir/vector3/vector3_component_mul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/vector3/vector3_component_mul.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/vector3/vector3_component_mul.c -o CMakeFiles/rt.dir/vector3/vector3_component_mul.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/vector3/vector3_component_mul.c -o CMakeFiles/rt.dir/vector3/vector3_component_mul.c.s
 
-CMakeFiles/rt.dir/renderer/renderer_new.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/renderer/renderer_new.c.o: ../renderer/renderer_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/rt.dir/renderer/renderer_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_new.c
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: ../cl_renderer/cl_renderer_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c
 
-CMakeFiles/rt.dir/renderer/renderer_new.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_new.c > CMakeFiles/rt.dir/renderer/renderer_new.c.i
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.i
 
-CMakeFiles/rt.dir/renderer/renderer_new.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_new.c -o CMakeFiles/rt.dir/renderer/renderer_new.c.s
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.s
 
-CMakeFiles/rt.dir/renderer/renderer_delete.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/renderer/renderer_delete.c.o: ../renderer/renderer_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/renderer/renderer_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: ../cl_renderer/cl_renderer_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_delete.c
 
-CMakeFiles/rt.dir/renderer/renderer_delete.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c > CMakeFiles/rt.dir/renderer/renderer_delete.c.i
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_delete.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.i
 
-CMakeFiles/rt.dir/renderer/renderer_delete.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_delete.c -o CMakeFiles/rt.dir/renderer/renderer_delete.c.s
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_delete.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.s
 
-CMakeFiles/rt.dir/renderer/renderer_pixel.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/renderer/renderer_pixel.c.o: ../renderer/renderer_pixel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rt.dir/renderer/renderer_pixel.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_pixel.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: ../cl_renderer/cl_renderer_init_device.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_device.c
 
-CMakeFiles/rt.dir/renderer/renderer_pixel.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_pixel.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c > CMakeFiles/rt.dir/renderer/renderer_pixel.c.i
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_device.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.i
 
-CMakeFiles/rt.dir/renderer/renderer_pixel.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_pixel.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_pixel.c -o CMakeFiles/rt.dir/renderer/renderer_pixel.c.s
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_device.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.s
 
-CMakeFiles/rt.dir/renderer/renderer_frame.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/renderer/renderer_frame.c.o: ../renderer/renderer_frame.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rt.dir/renderer/renderer_frame.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/renderer/renderer_frame.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: ../cl_renderer/cl_renderer_init_context.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_context.c
 
-CMakeFiles/rt.dir/renderer/renderer_frame.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/renderer/renderer_frame.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c > CMakeFiles/rt.dir/renderer/renderer_frame.c.i
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_context.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.i
 
-CMakeFiles/rt.dir/renderer/renderer_frame.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/renderer/renderer_frame.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/renderer/renderer_frame.c -o CMakeFiles/rt.dir/renderer/renderer_frame.c.s
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_context.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: ../cl_renderer/cl_renderer_create_program.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_program.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_program.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_program.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: ../cl_renderer/cl_renderer_create_queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_queue.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_queue.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_queue.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: ../cl_renderer/cl_renderer_create_kernel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: ../cl_renderer/cl_renderer_init_data.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_data.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_data.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_data.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: ../cl_renderer/cl_renderer_set_arguments.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: ../cl_renderer/cl_renderer_render.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.s
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: ../cl_renderer/cl_renderer_log.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o   -c /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_log.c
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_log.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.i
+
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/cl_renderer/cl_renderer_log.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.s
 
 CMakeFiles/rt.dir/scene/scene_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_new.c.o: ../scene/scene_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/rt.dir/scene/scene_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/scene/scene_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/rt.dir/scene/scene_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_new.c
 
 CMakeFiles/rt.dir/scene/scene_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/scene/scene_new.c > CMakeFiles/rt.dir/scene/scene_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_new.c > CMakeFiles/rt.dir/scene/scene_new.c.i
 
 CMakeFiles/rt.dir/scene/scene_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/scene/scene_new.c -o CMakeFiles/rt.dir/scene/scene_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_new.c -o CMakeFiles/rt.dir/scene/scene_new.c.s
 
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: ../scene/scene_get_space.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/rt.dir/scene/scene_get_space.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_get_space.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/scene/scene_get_space.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/rt.dir/scene/scene_get_space.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_get_space.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_get_space.c
 
 CMakeFiles/rt.dir/scene/scene_get_space.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_get_space.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/scene/scene_get_space.c > CMakeFiles/rt.dir/scene/scene_get_space.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_get_space.c > CMakeFiles/rt.dir/scene/scene_get_space.c.i
 
 CMakeFiles/rt.dir/scene/scene_get_space.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_get_space.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/scene/scene_get_space.c -o CMakeFiles/rt.dir/scene/scene_get_space.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_get_space.c -o CMakeFiles/rt.dir/scene/scene_get_space.c.s
 
 CMakeFiles/rt.dir/scene/scene_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_delete.c.o: ../scene/scene_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/rt.dir/scene/scene_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/scene/scene_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/rt.dir/scene/scene_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_delete.c
 
 CMakeFiles/rt.dir/scene/scene_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/scene/scene_delete.c > CMakeFiles/rt.dir/scene/scene_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_delete.c > CMakeFiles/rt.dir/scene/scene_delete.c.i
 
 CMakeFiles/rt.dir/scene/scene_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/scene/scene_delete.c -o CMakeFiles/rt.dir/scene/scene_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_delete.c -o CMakeFiles/rt.dir/scene/scene_delete.c.s
 
 CMakeFiles/rt.dir/scene/scene_intersect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/scene/scene_intersect.c.o: ../scene/scene_intersect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/rt.dir/scene/scene_intersect.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_intersect.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/scene/scene_intersect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/rt.dir/scene/scene_intersect.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/scene/scene_intersect.c.o   -c /Users/bshanae/workspace/21_ray_tracer/scene/scene_intersect.c
 
 CMakeFiles/rt.dir/scene/scene_intersect.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/scene/scene_intersect.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/scene/scene_intersect.c > CMakeFiles/rt.dir/scene/scene_intersect.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/scene/scene_intersect.c > CMakeFiles/rt.dir/scene/scene_intersect.c.i
 
 CMakeFiles/rt.dir/scene/scene_intersect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/scene/scene_intersect.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/scene/scene_intersect.c -o CMakeFiles/rt.dir/scene/scene_intersect.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/scene/scene_intersect.c -o CMakeFiles/rt.dir/scene/scene_intersect.c.s
 
 CMakeFiles/rt.dir/object/object_build.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object/object_build.c.o: ../object/object_build.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/rt.dir/object/object_build.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_build.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/object/object_build.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/rt.dir/object/object_build.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_build.c.o   -c /Users/bshanae/workspace/21_ray_tracer/object/object_build.c
 
 CMakeFiles/rt.dir/object/object_build.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/object/object_build.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/object/object_build.c > CMakeFiles/rt.dir/object/object_build.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/object/object_build.c > CMakeFiles/rt.dir/object/object_build.c.i
 
 CMakeFiles/rt.dir/object/object_build.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/object/object_build.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/object/object_build.c -o CMakeFiles/rt.dir/object/object_build.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/object/object_build.c -o CMakeFiles/rt.dir/object/object_build.c.s
 
 CMakeFiles/rt.dir/object_list/sphere.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object_list/sphere.c.o: ../object_list/sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/rt.dir/object_list/sphere.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/sphere.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/object_list/sphere.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/rt.dir/object_list/sphere.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/sphere.c.o   -c /Users/bshanae/workspace/21_ray_tracer/object_list/sphere.c
 
 CMakeFiles/rt.dir/object_list/sphere.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/object_list/sphere.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/object_list/sphere.c > CMakeFiles/rt.dir/object_list/sphere.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/object_list/sphere.c > CMakeFiles/rt.dir/object_list/sphere.c.i
 
 CMakeFiles/rt.dir/object_list/sphere.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/object_list/sphere.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/object_list/sphere.c -o CMakeFiles/rt.dir/object_list/sphere.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/object_list/sphere.c -o CMakeFiles/rt.dir/object_list/sphere.c.s
 
 CMakeFiles/rt.dir/object/object_intersect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object/object_intersect.c.o: ../object/object_intersect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/rt.dir/object/object_intersect.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_intersect.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/object/object_intersect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/rt.dir/object/object_intersect.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object/object_intersect.c.o   -c /Users/bshanae/workspace/21_ray_tracer/object/object_intersect.c
 
 CMakeFiles/rt.dir/object/object_intersect.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/object/object_intersect.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/object/object_intersect.c > CMakeFiles/rt.dir/object/object_intersect.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/object/object_intersect.c > CMakeFiles/rt.dir/object/object_intersect.c.i
 
 CMakeFiles/rt.dir/object/object_intersect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/object/object_intersect.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/object/object_intersect.c -o CMakeFiles/rt.dir/object/object_intersect.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/object/object_intersect.c -o CMakeFiles/rt.dir/object/object_intersect.c.s
 
 CMakeFiles/rt.dir/object_list/plane.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/object_list/plane.c.o: ../object_list/plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/rt.dir/object_list/plane.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/plane.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/object_list/plane.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/rt.dir/object_list/plane.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/object_list/plane.c.o   -c /Users/bshanae/workspace/21_ray_tracer/object_list/plane.c
 
 CMakeFiles/rt.dir/object_list/plane.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/object_list/plane.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/object_list/plane.c > CMakeFiles/rt.dir/object_list/plane.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/object_list/plane.c > CMakeFiles/rt.dir/object_list/plane.c.i
 
 CMakeFiles/rt.dir/object_list/plane.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/object_list/plane.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/object_list/plane.c -o CMakeFiles/rt.dir/object_list/plane.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/object_list/plane.c -o CMakeFiles/rt.dir/object_list/plane.c.s
 
 CMakeFiles/rt.dir/camera/camera_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_new.c.o: ../camera/camera_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/rt.dir/camera/camera_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/rt.dir/camera/camera_new.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_new.c.o   -c /Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c
 
 CMakeFiles/rt.dir/camera/camera_new.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/camera/camera_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c > CMakeFiles/rt.dir/camera/camera_new.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c > CMakeFiles/rt.dir/camera/camera_new.c.i
 
 CMakeFiles/rt.dir/camera/camera_new.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/camera/camera_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c -o CMakeFiles/rt.dir/camera/camera_new.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/camera/camera_new.c -o CMakeFiles/rt.dir/camera/camera_new.c.s
 
 CMakeFiles/rt.dir/camera/camera_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_delete.c.o: ../camera/camera_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/rt.dir/camera/camera_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/rt.dir/camera/camera_delete.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_delete.c.o   -c /Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c
 
 CMakeFiles/rt.dir/camera/camera_delete.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/camera/camera_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c > CMakeFiles/rt.dir/camera/camera_delete.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c > CMakeFiles/rt.dir/camera/camera_delete.c.i
 
 CMakeFiles/rt.dir/camera/camera_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/camera/camera_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c -o CMakeFiles/rt.dir/camera/camera_delete.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/camera/camera_delete.c -o CMakeFiles/rt.dir/camera/camera_delete.c.s
 
 CMakeFiles/rt.dir/camera/camera_build_ray.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/camera/camera_build_ray.c.o: ../camera/camera_build_ray.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_build_ray.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/rt.dir/camera/camera_build_ray.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/camera/camera_build_ray.c.o   -c /Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c
 
 CMakeFiles/rt.dir/camera/camera_build_ray.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/camera/camera_build_ray.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c > CMakeFiles/rt.dir/camera/camera_build_ray.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c > CMakeFiles/rt.dir/camera/camera_build_ray.c.i
 
 CMakeFiles/rt.dir/camera/camera_build_ray.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/camera/camera_build_ray.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/camera/camera_build_ray.c -o CMakeFiles/rt.dir/camera/camera_build_ray.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/camera/camera_build_ray.c -o CMakeFiles/rt.dir/camera/camera_build_ray.c.s
 
 CMakeFiles/rt.dir/ft_assert/ft_assert.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/ft_assert/ft_assert.c.o: ../ft_assert/ft_assert.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/rt.dir/ft_assert/ft_assert.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/ft_assert/ft_assert.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/ft_assert/ft_assert.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/rt.dir/ft_assert/ft_assert.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/ft_assert/ft_assert.c.o   -c /Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.c
 
 CMakeFiles/rt.dir/ft_assert/ft_assert.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/ft_assert/ft_assert.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/ft_assert/ft_assert.c > CMakeFiles/rt.dir/ft_assert/ft_assert.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.c > CMakeFiles/rt.dir/ft_assert/ft_assert.c.i
 
 CMakeFiles/rt.dir/ft_assert/ft_assert.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/ft_assert/ft_assert.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/ft_assert/ft_assert.c -o CMakeFiles/rt.dir/ft_assert/ft_assert.c.s
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o: ../open_cl_manager/open_cl_manager_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_new.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o: ../open_cl_manager/open_cl_manager_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_delete.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o: ../open_cl_manager/open_cl_manager_init_device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_device.c
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_device.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.i
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_device.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.s
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o: ../open_cl_manager/open_cl_manager_init_context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_context.c
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_context.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.i
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_init_context.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.s
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o: ../open_cl_manager/open_cl_manager_create_program.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_create_program.c
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_create_program.c > CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.i
-
-CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/open_cl_manager/open_cl_manager_create_program.c -o CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/ft_assert/ft_assert.c -o CMakeFiles/rt.dir/ft_assert/ft_assert.c.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -794,10 +820,17 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/vector3/vector3_max.c.o" \
 "CMakeFiles/rt.dir/vector3/vector3_min.c.o" \
 "CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o" \
-"CMakeFiles/rt.dir/renderer/renderer_new.c.o" \
-"CMakeFiles/rt.dir/renderer/renderer_delete.c.o" \
-"CMakeFiles/rt.dir/renderer/renderer_pixel.c.o" \
-"CMakeFiles/rt.dir/renderer/renderer_frame.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o" \
 "CMakeFiles/rt.dir/scene/scene_new.c.o" \
 "CMakeFiles/rt.dir/scene/scene_get_space.c.o" \
 "CMakeFiles/rt.dir/scene/scene_delete.c.o" \
@@ -809,12 +842,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/camera/camera_new.c.o" \
 "CMakeFiles/rt.dir/camera/camera_delete.c.o" \
 "CMakeFiles/rt.dir/camera/camera_build_ray.c.o" \
-"CMakeFiles/rt.dir/ft_assert/ft_assert.c.o" \
-"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o" \
-"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o" \
-"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o" \
-"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o" \
-"CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o"
+"CMakeFiles/rt.dir/ft_assert/ft_assert.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -852,10 +880,17 @@ rt: CMakeFiles/rt.dir/vector3/vector3_normal.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_max.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_min.c.o
 rt: CMakeFiles/rt.dir/vector3/vector3_component_mul.c.o
-rt: CMakeFiles/rt.dir/renderer/renderer_new.c.o
-rt: CMakeFiles/rt.dir/renderer/renderer_delete.c.o
-rt: CMakeFiles/rt.dir/renderer/renderer_pixel.c.o
-rt: CMakeFiles/rt.dir/renderer/renderer_frame.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o
 rt: CMakeFiles/rt.dir/scene/scene_new.c.o
 rt: CMakeFiles/rt.dir/scene/scene_get_space.c.o
 rt: CMakeFiles/rt.dir/scene/scene_delete.c.o
@@ -868,14 +903,9 @@ rt: CMakeFiles/rt.dir/camera/camera_new.c.o
 rt: CMakeFiles/rt.dir/camera/camera_delete.c.o
 rt: CMakeFiles/rt.dir/camera/camera_build_ray.c.o
 rt: CMakeFiles/rt.dir/ft_assert/ft_assert.c.o
-rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o
-rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o
-rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o
-rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o
-rt: CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -888,6 +918,6 @@ CMakeFiles/rt.dir/clean:
 .PHONY : CMakeFiles/rt.dir/clean
 
 CMakeFiles/rt.dir/depend:
-	cd /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Vladimir/workspace/21_ray_tracer /Users/Vladimir/workspace/21_ray_tracer /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bshanae/workspace/21_ray_tracer /Users/bshanae/workspace/21_ray_tracer /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rt.dir/depend
 

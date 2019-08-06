@@ -6,7 +6,7 @@ static void			gui_connect_scene(t_gui *gui)
 	int				i;
 
 	i = 0;
-	while (i < gui->renderer->scene->objects_length)
+	while (i < gui->renderer->data_host.scene->objects_length)
 	{
 		gtk_list_store_append(gui->list->data, &iter);
 		gtk_list_store_set(
@@ -15,7 +15,7 @@ static void			gui_connect_scene(t_gui *gui)
 			//gs_type_icon, ...,
 			gl_name, "oh hi mark",
 			gl_id, i,
-			gl_type_id, gui->renderer->scene->objects->type,
+			gl_type_id, gui->renderer->data_host.scene->objects->type,
 			-1);
 		i++;
 	}
@@ -24,6 +24,5 @@ static void			gui_connect_scene(t_gui *gui)
 
 void				gui_connect_renderer(t_gui *gui)
 {
-	gui->renderer->image = gui->image;
 	gui_connect_scene(gui);
 }

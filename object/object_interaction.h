@@ -1,6 +1,7 @@
 #ifndef OBJECT_INTERACTION_H
 # define OBJECT_INTERACTION_H
 
+# include "ft_assert.h"
 # include "object_definition.h"
 # include "object_list.h"
 # include "vector3.h"

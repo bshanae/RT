@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,6 +203,303 @@ camera/camera_new.s: camera/camera_new.c.s
 camera/camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_new.c.s
 .PHONY : camera/camera_new.c.s
+
+cl_renderer/cl_renderer_create_kernel.o: cl_renderer/cl_renderer_create_kernel.c.o
+
+.PHONY : cl_renderer/cl_renderer_create_kernel.o
+
+# target to build an object file
+cl_renderer/cl_renderer_create_kernel.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o
+.PHONY : cl_renderer/cl_renderer_create_kernel.c.o
+
+cl_renderer/cl_renderer_create_kernel.i: cl_renderer/cl_renderer_create_kernel.c.i
+
+.PHONY : cl_renderer/cl_renderer_create_kernel.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_create_kernel.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.i
+.PHONY : cl_renderer/cl_renderer_create_kernel.c.i
+
+cl_renderer/cl_renderer_create_kernel.s: cl_renderer/cl_renderer_create_kernel.c.s
+
+.PHONY : cl_renderer/cl_renderer_create_kernel.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_create_kernel.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.s
+.PHONY : cl_renderer/cl_renderer_create_kernel.c.s
+
+cl_renderer/cl_renderer_create_program.o: cl_renderer/cl_renderer_create_program.c.o
+
+.PHONY : cl_renderer/cl_renderer_create_program.o
+
+# target to build an object file
+cl_renderer/cl_renderer_create_program.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o
+.PHONY : cl_renderer/cl_renderer_create_program.c.o
+
+cl_renderer/cl_renderer_create_program.i: cl_renderer/cl_renderer_create_program.c.i
+
+.PHONY : cl_renderer/cl_renderer_create_program.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_create_program.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.i
+.PHONY : cl_renderer/cl_renderer_create_program.c.i
+
+cl_renderer/cl_renderer_create_program.s: cl_renderer/cl_renderer_create_program.c.s
+
+.PHONY : cl_renderer/cl_renderer_create_program.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_create_program.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.s
+.PHONY : cl_renderer/cl_renderer_create_program.c.s
+
+cl_renderer/cl_renderer_create_queue.o: cl_renderer/cl_renderer_create_queue.c.o
+
+.PHONY : cl_renderer/cl_renderer_create_queue.o
+
+# target to build an object file
+cl_renderer/cl_renderer_create_queue.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o
+.PHONY : cl_renderer/cl_renderer_create_queue.c.o
+
+cl_renderer/cl_renderer_create_queue.i: cl_renderer/cl_renderer_create_queue.c.i
+
+.PHONY : cl_renderer/cl_renderer_create_queue.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_create_queue.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.i
+.PHONY : cl_renderer/cl_renderer_create_queue.c.i
+
+cl_renderer/cl_renderer_create_queue.s: cl_renderer/cl_renderer_create_queue.c.s
+
+.PHONY : cl_renderer/cl_renderer_create_queue.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_create_queue.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.s
+.PHONY : cl_renderer/cl_renderer_create_queue.c.s
+
+cl_renderer/cl_renderer_delete.o: cl_renderer/cl_renderer_delete.c.o
+
+.PHONY : cl_renderer/cl_renderer_delete.o
+
+# target to build an object file
+cl_renderer/cl_renderer_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o
+.PHONY : cl_renderer/cl_renderer_delete.c.o
+
+cl_renderer/cl_renderer_delete.i: cl_renderer/cl_renderer_delete.c.i
+
+.PHONY : cl_renderer/cl_renderer_delete.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.i
+.PHONY : cl_renderer/cl_renderer_delete.c.i
+
+cl_renderer/cl_renderer_delete.s: cl_renderer/cl_renderer_delete.c.s
+
+.PHONY : cl_renderer/cl_renderer_delete.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.s
+.PHONY : cl_renderer/cl_renderer_delete.c.s
+
+cl_renderer/cl_renderer_init_context.o: cl_renderer/cl_renderer_init_context.c.o
+
+.PHONY : cl_renderer/cl_renderer_init_context.o
+
+# target to build an object file
+cl_renderer/cl_renderer_init_context.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o
+.PHONY : cl_renderer/cl_renderer_init_context.c.o
+
+cl_renderer/cl_renderer_init_context.i: cl_renderer/cl_renderer_init_context.c.i
+
+.PHONY : cl_renderer/cl_renderer_init_context.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_init_context.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.i
+.PHONY : cl_renderer/cl_renderer_init_context.c.i
+
+cl_renderer/cl_renderer_init_context.s: cl_renderer/cl_renderer_init_context.c.s
+
+.PHONY : cl_renderer/cl_renderer_init_context.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_init_context.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.s
+.PHONY : cl_renderer/cl_renderer_init_context.c.s
+
+cl_renderer/cl_renderer_init_data.o: cl_renderer/cl_renderer_init_data.c.o
+
+.PHONY : cl_renderer/cl_renderer_init_data.o
+
+# target to build an object file
+cl_renderer/cl_renderer_init_data.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o
+.PHONY : cl_renderer/cl_renderer_init_data.c.o
+
+cl_renderer/cl_renderer_init_data.i: cl_renderer/cl_renderer_init_data.c.i
+
+.PHONY : cl_renderer/cl_renderer_init_data.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_init_data.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.i
+.PHONY : cl_renderer/cl_renderer_init_data.c.i
+
+cl_renderer/cl_renderer_init_data.s: cl_renderer/cl_renderer_init_data.c.s
+
+.PHONY : cl_renderer/cl_renderer_init_data.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_init_data.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.s
+.PHONY : cl_renderer/cl_renderer_init_data.c.s
+
+cl_renderer/cl_renderer_init_device.o: cl_renderer/cl_renderer_init_device.c.o
+
+.PHONY : cl_renderer/cl_renderer_init_device.o
+
+# target to build an object file
+cl_renderer/cl_renderer_init_device.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o
+.PHONY : cl_renderer/cl_renderer_init_device.c.o
+
+cl_renderer/cl_renderer_init_device.i: cl_renderer/cl_renderer_init_device.c.i
+
+.PHONY : cl_renderer/cl_renderer_init_device.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_init_device.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.i
+.PHONY : cl_renderer/cl_renderer_init_device.c.i
+
+cl_renderer/cl_renderer_init_device.s: cl_renderer/cl_renderer_init_device.c.s
+
+.PHONY : cl_renderer/cl_renderer_init_device.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_init_device.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.s
+.PHONY : cl_renderer/cl_renderer_init_device.c.s
+
+cl_renderer/cl_renderer_log.o: cl_renderer/cl_renderer_log.c.o
+
+.PHONY : cl_renderer/cl_renderer_log.o
+
+# target to build an object file
+cl_renderer/cl_renderer_log.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o
+.PHONY : cl_renderer/cl_renderer_log.c.o
+
+cl_renderer/cl_renderer_log.i: cl_renderer/cl_renderer_log.c.i
+
+.PHONY : cl_renderer/cl_renderer_log.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_log.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.i
+.PHONY : cl_renderer/cl_renderer_log.c.i
+
+cl_renderer/cl_renderer_log.s: cl_renderer/cl_renderer_log.c.s
+
+.PHONY : cl_renderer/cl_renderer_log.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_log.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.s
+.PHONY : cl_renderer/cl_renderer_log.c.s
+
+cl_renderer/cl_renderer_new.o: cl_renderer/cl_renderer_new.c.o
+
+.PHONY : cl_renderer/cl_renderer_new.o
+
+# target to build an object file
+cl_renderer/cl_renderer_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o
+.PHONY : cl_renderer/cl_renderer_new.c.o
+
+cl_renderer/cl_renderer_new.i: cl_renderer/cl_renderer_new.c.i
+
+.PHONY : cl_renderer/cl_renderer_new.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.i
+.PHONY : cl_renderer/cl_renderer_new.c.i
+
+cl_renderer/cl_renderer_new.s: cl_renderer/cl_renderer_new.c.s
+
+.PHONY : cl_renderer/cl_renderer_new.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.s
+.PHONY : cl_renderer/cl_renderer_new.c.s
+
+cl_renderer/cl_renderer_render.o: cl_renderer/cl_renderer_render.c.o
+
+.PHONY : cl_renderer/cl_renderer_render.o
+
+# target to build an object file
+cl_renderer/cl_renderer_render.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o
+.PHONY : cl_renderer/cl_renderer_render.c.o
+
+cl_renderer/cl_renderer_render.i: cl_renderer/cl_renderer_render.c.i
+
+.PHONY : cl_renderer/cl_renderer_render.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_render.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.i
+.PHONY : cl_renderer/cl_renderer_render.c.i
+
+cl_renderer/cl_renderer_render.s: cl_renderer/cl_renderer_render.c.s
+
+.PHONY : cl_renderer/cl_renderer_render.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_render.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.s
+.PHONY : cl_renderer/cl_renderer_render.c.s
+
+cl_renderer/cl_renderer_set_arguments.o: cl_renderer/cl_renderer_set_arguments.c.o
+
+.PHONY : cl_renderer/cl_renderer_set_arguments.o
+
+# target to build an object file
+cl_renderer/cl_renderer_set_arguments.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o
+.PHONY : cl_renderer/cl_renderer_set_arguments.c.o
+
+cl_renderer/cl_renderer_set_arguments.i: cl_renderer/cl_renderer_set_arguments.c.i
+
+.PHONY : cl_renderer/cl_renderer_set_arguments.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_set_arguments.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.i
+.PHONY : cl_renderer/cl_renderer_set_arguments.c.i
+
+cl_renderer/cl_renderer_set_arguments.s: cl_renderer/cl_renderer_set_arguments.c.s
+
+.PHONY : cl_renderer/cl_renderer_set_arguments.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_set_arguments.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s
+.PHONY : cl_renderer/cl_renderer_set_arguments.c.s
 
 ft_assert/ft_assert.o: ft_assert/ft_assert.c.o
 
@@ -933,249 +1230,6 @@ object_list/sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/object_list/sphere.c.s
 .PHONY : object_list/sphere.c.s
 
-open_cl_manager/open_cl_manager_create_program.o: open_cl_manager/open_cl_manager_create_program.c.o
-
-.PHONY : open_cl_manager/open_cl_manager_create_program.o
-
-# target to build an object file
-open_cl_manager/open_cl_manager_create_program.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.o
-.PHONY : open_cl_manager/open_cl_manager_create_program.c.o
-
-open_cl_manager/open_cl_manager_create_program.i: open_cl_manager/open_cl_manager_create_program.c.i
-
-.PHONY : open_cl_manager/open_cl_manager_create_program.i
-
-# target to preprocess a source file
-open_cl_manager/open_cl_manager_create_program.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.i
-.PHONY : open_cl_manager/open_cl_manager_create_program.c.i
-
-open_cl_manager/open_cl_manager_create_program.s: open_cl_manager/open_cl_manager_create_program.c.s
-
-.PHONY : open_cl_manager/open_cl_manager_create_program.s
-
-# target to generate assembly for a file
-open_cl_manager/open_cl_manager_create_program.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_create_program.c.s
-.PHONY : open_cl_manager/open_cl_manager_create_program.c.s
-
-open_cl_manager/open_cl_manager_delete.o: open_cl_manager/open_cl_manager_delete.c.o
-
-.PHONY : open_cl_manager/open_cl_manager_delete.o
-
-# target to build an object file
-open_cl_manager/open_cl_manager_delete.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.o
-.PHONY : open_cl_manager/open_cl_manager_delete.c.o
-
-open_cl_manager/open_cl_manager_delete.i: open_cl_manager/open_cl_manager_delete.c.i
-
-.PHONY : open_cl_manager/open_cl_manager_delete.i
-
-# target to preprocess a source file
-open_cl_manager/open_cl_manager_delete.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.i
-.PHONY : open_cl_manager/open_cl_manager_delete.c.i
-
-open_cl_manager/open_cl_manager_delete.s: open_cl_manager/open_cl_manager_delete.c.s
-
-.PHONY : open_cl_manager/open_cl_manager_delete.s
-
-# target to generate assembly for a file
-open_cl_manager/open_cl_manager_delete.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_delete.c.s
-.PHONY : open_cl_manager/open_cl_manager_delete.c.s
-
-open_cl_manager/open_cl_manager_init_context.o: open_cl_manager/open_cl_manager_init_context.c.o
-
-.PHONY : open_cl_manager/open_cl_manager_init_context.o
-
-# target to build an object file
-open_cl_manager/open_cl_manager_init_context.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.o
-.PHONY : open_cl_manager/open_cl_manager_init_context.c.o
-
-open_cl_manager/open_cl_manager_init_context.i: open_cl_manager/open_cl_manager_init_context.c.i
-
-.PHONY : open_cl_manager/open_cl_manager_init_context.i
-
-# target to preprocess a source file
-open_cl_manager/open_cl_manager_init_context.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.i
-.PHONY : open_cl_manager/open_cl_manager_init_context.c.i
-
-open_cl_manager/open_cl_manager_init_context.s: open_cl_manager/open_cl_manager_init_context.c.s
-
-.PHONY : open_cl_manager/open_cl_manager_init_context.s
-
-# target to generate assembly for a file
-open_cl_manager/open_cl_manager_init_context.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_context.c.s
-.PHONY : open_cl_manager/open_cl_manager_init_context.c.s
-
-open_cl_manager/open_cl_manager_init_device.o: open_cl_manager/open_cl_manager_init_device.c.o
-
-.PHONY : open_cl_manager/open_cl_manager_init_device.o
-
-# target to build an object file
-open_cl_manager/open_cl_manager_init_device.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.o
-.PHONY : open_cl_manager/open_cl_manager_init_device.c.o
-
-open_cl_manager/open_cl_manager_init_device.i: open_cl_manager/open_cl_manager_init_device.c.i
-
-.PHONY : open_cl_manager/open_cl_manager_init_device.i
-
-# target to preprocess a source file
-open_cl_manager/open_cl_manager_init_device.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.i
-.PHONY : open_cl_manager/open_cl_manager_init_device.c.i
-
-open_cl_manager/open_cl_manager_init_device.s: open_cl_manager/open_cl_manager_init_device.c.s
-
-.PHONY : open_cl_manager/open_cl_manager_init_device.s
-
-# target to generate assembly for a file
-open_cl_manager/open_cl_manager_init_device.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_init_device.c.s
-.PHONY : open_cl_manager/open_cl_manager_init_device.c.s
-
-open_cl_manager/open_cl_manager_new.o: open_cl_manager/open_cl_manager_new.c.o
-
-.PHONY : open_cl_manager/open_cl_manager_new.o
-
-# target to build an object file
-open_cl_manager/open_cl_manager_new.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.o
-.PHONY : open_cl_manager/open_cl_manager_new.c.o
-
-open_cl_manager/open_cl_manager_new.i: open_cl_manager/open_cl_manager_new.c.i
-
-.PHONY : open_cl_manager/open_cl_manager_new.i
-
-# target to preprocess a source file
-open_cl_manager/open_cl_manager_new.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.i
-.PHONY : open_cl_manager/open_cl_manager_new.c.i
-
-open_cl_manager/open_cl_manager_new.s: open_cl_manager/open_cl_manager_new.c.s
-
-.PHONY : open_cl_manager/open_cl_manager_new.s
-
-# target to generate assembly for a file
-open_cl_manager/open_cl_manager_new.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/open_cl_manager/open_cl_manager_new.c.s
-.PHONY : open_cl_manager/open_cl_manager_new.c.s
-
-renderer/renderer_delete.o: renderer/renderer_delete.c.o
-
-.PHONY : renderer/renderer_delete.o
-
-# target to build an object file
-renderer/renderer_delete.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_delete.c.o
-.PHONY : renderer/renderer_delete.c.o
-
-renderer/renderer_delete.i: renderer/renderer_delete.c.i
-
-.PHONY : renderer/renderer_delete.i
-
-# target to preprocess a source file
-renderer/renderer_delete.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_delete.c.i
-.PHONY : renderer/renderer_delete.c.i
-
-renderer/renderer_delete.s: renderer/renderer_delete.c.s
-
-.PHONY : renderer/renderer_delete.s
-
-# target to generate assembly for a file
-renderer/renderer_delete.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_delete.c.s
-.PHONY : renderer/renderer_delete.c.s
-
-renderer/renderer_frame.o: renderer/renderer_frame.c.o
-
-.PHONY : renderer/renderer_frame.o
-
-# target to build an object file
-renderer/renderer_frame.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.o
-.PHONY : renderer/renderer_frame.c.o
-
-renderer/renderer_frame.i: renderer/renderer_frame.c.i
-
-.PHONY : renderer/renderer_frame.i
-
-# target to preprocess a source file
-renderer/renderer_frame.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.i
-.PHONY : renderer/renderer_frame.c.i
-
-renderer/renderer_frame.s: renderer/renderer_frame.c.s
-
-.PHONY : renderer/renderer_frame.s
-
-# target to generate assembly for a file
-renderer/renderer_frame.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_frame.c.s
-.PHONY : renderer/renderer_frame.c.s
-
-renderer/renderer_new.o: renderer/renderer_new.c.o
-
-.PHONY : renderer/renderer_new.o
-
-# target to build an object file
-renderer/renderer_new.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_new.c.o
-.PHONY : renderer/renderer_new.c.o
-
-renderer/renderer_new.i: renderer/renderer_new.c.i
-
-.PHONY : renderer/renderer_new.i
-
-# target to preprocess a source file
-renderer/renderer_new.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_new.c.i
-.PHONY : renderer/renderer_new.c.i
-
-renderer/renderer_new.s: renderer/renderer_new.c.s
-
-.PHONY : renderer/renderer_new.s
-
-# target to generate assembly for a file
-renderer/renderer_new.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_new.c.s
-.PHONY : renderer/renderer_new.c.s
-
-renderer/renderer_pixel.o: renderer/renderer_pixel.c.o
-
-.PHONY : renderer/renderer_pixel.o
-
-# target to build an object file
-renderer/renderer_pixel.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.o
-.PHONY : renderer/renderer_pixel.c.o
-
-renderer/renderer_pixel.i: renderer/renderer_pixel.c.i
-
-.PHONY : renderer/renderer_pixel.i
-
-# target to preprocess a source file
-renderer/renderer_pixel.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.i
-.PHONY : renderer/renderer_pixel.c.i
-
-renderer/renderer_pixel.s: renderer/renderer_pixel.c.s
-
-.PHONY : renderer/renderer_pixel.s
-
-# target to generate assembly for a file
-renderer/renderer_pixel.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/renderer/renderer_pixel.c.s
-.PHONY : renderer/renderer_pixel.c.s
-
 scene/scene_delete.o: scene/scene_delete.c.o
 
 .PHONY : scene/scene_delete.o
@@ -1599,6 +1653,39 @@ help:
 	@echo "... camera/camera_new.o"
 	@echo "... camera/camera_new.i"
 	@echo "... camera/camera_new.s"
+	@echo "... cl_renderer/cl_renderer_create_kernel.o"
+	@echo "... cl_renderer/cl_renderer_create_kernel.i"
+	@echo "... cl_renderer/cl_renderer_create_kernel.s"
+	@echo "... cl_renderer/cl_renderer_create_program.o"
+	@echo "... cl_renderer/cl_renderer_create_program.i"
+	@echo "... cl_renderer/cl_renderer_create_program.s"
+	@echo "... cl_renderer/cl_renderer_create_queue.o"
+	@echo "... cl_renderer/cl_renderer_create_queue.i"
+	@echo "... cl_renderer/cl_renderer_create_queue.s"
+	@echo "... cl_renderer/cl_renderer_delete.o"
+	@echo "... cl_renderer/cl_renderer_delete.i"
+	@echo "... cl_renderer/cl_renderer_delete.s"
+	@echo "... cl_renderer/cl_renderer_init_context.o"
+	@echo "... cl_renderer/cl_renderer_init_context.i"
+	@echo "... cl_renderer/cl_renderer_init_context.s"
+	@echo "... cl_renderer/cl_renderer_init_data.o"
+	@echo "... cl_renderer/cl_renderer_init_data.i"
+	@echo "... cl_renderer/cl_renderer_init_data.s"
+	@echo "... cl_renderer/cl_renderer_init_device.o"
+	@echo "... cl_renderer/cl_renderer_init_device.i"
+	@echo "... cl_renderer/cl_renderer_init_device.s"
+	@echo "... cl_renderer/cl_renderer_log.o"
+	@echo "... cl_renderer/cl_renderer_log.i"
+	@echo "... cl_renderer/cl_renderer_log.s"
+	@echo "... cl_renderer/cl_renderer_new.o"
+	@echo "... cl_renderer/cl_renderer_new.i"
+	@echo "... cl_renderer/cl_renderer_new.s"
+	@echo "... cl_renderer/cl_renderer_render.o"
+	@echo "... cl_renderer/cl_renderer_render.i"
+	@echo "... cl_renderer/cl_renderer_render.s"
+	@echo "... cl_renderer/cl_renderer_set_arguments.o"
+	@echo "... cl_renderer/cl_renderer_set_arguments.i"
+	@echo "... cl_renderer/cl_renderer_set_arguments.s"
 	@echo "... ft_assert/ft_assert.o"
 	@echo "... ft_assert/ft_assert.i"
 	@echo "... ft_assert/ft_assert.s"
@@ -1680,33 +1767,6 @@ help:
 	@echo "... object_list/sphere.o"
 	@echo "... object_list/sphere.i"
 	@echo "... object_list/sphere.s"
-	@echo "... open_cl_manager/open_cl_manager_create_program.o"
-	@echo "... open_cl_manager/open_cl_manager_create_program.i"
-	@echo "... open_cl_manager/open_cl_manager_create_program.s"
-	@echo "... open_cl_manager/open_cl_manager_delete.o"
-	@echo "... open_cl_manager/open_cl_manager_delete.i"
-	@echo "... open_cl_manager/open_cl_manager_delete.s"
-	@echo "... open_cl_manager/open_cl_manager_init_context.o"
-	@echo "... open_cl_manager/open_cl_manager_init_context.i"
-	@echo "... open_cl_manager/open_cl_manager_init_context.s"
-	@echo "... open_cl_manager/open_cl_manager_init_device.o"
-	@echo "... open_cl_manager/open_cl_manager_init_device.i"
-	@echo "... open_cl_manager/open_cl_manager_init_device.s"
-	@echo "... open_cl_manager/open_cl_manager_new.o"
-	@echo "... open_cl_manager/open_cl_manager_new.i"
-	@echo "... open_cl_manager/open_cl_manager_new.s"
-	@echo "... renderer/renderer_delete.o"
-	@echo "... renderer/renderer_delete.i"
-	@echo "... renderer/renderer_delete.s"
-	@echo "... renderer/renderer_frame.o"
-	@echo "... renderer/renderer_frame.i"
-	@echo "... renderer/renderer_frame.s"
-	@echo "... renderer/renderer_new.o"
-	@echo "... renderer/renderer_new.i"
-	@echo "... renderer/renderer_new.s"
-	@echo "... renderer/renderer_pixel.o"
-	@echo "... renderer/renderer_pixel.i"
-	@echo "... renderer/renderer_pixel.s"
 	@echo "... scene/scene_delete.o"
 	@echo "... scene/scene_delete.i"
 	@echo "... scene/scene_delete.s"

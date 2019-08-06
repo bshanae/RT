@@ -3,11 +3,42 @@ project(rt C)
 
 set(CMAKE_CFLAGS "${CMAKE_CFALGS} -Wall -Wextra")
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+set(GTK_INCLUDES
+	/Users/bshanae/.brew/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
+	/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/
+	/Users/bshanae/.brew/Cellar/glib/2.60.6/include/gio-unix-2.0
+	/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo
+	/Users/bshanae/.brew/Cellar/libepoxy/1.5.3/include
+	/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0
+	/Users/bshanae/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz
+	/Users/bshanae/.brew/Cellar/graphite2/1.3.13/include
+	/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0
+	/Users/bshanae/.brew/Cellar/fribidi/1.0.5/include/fribidi
+	/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0
+	/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cair
+	/Users/bshanae/.brew/Cellar/pixman/0.38.4/include/pixman-1
+	/Users/bshanae/.brew/Cellar/fontconfig/2.13.1/include
+	/Users/bshanae/.brew/opt/freetype/include/freetype2
+	/Users/bshanae/.brew/Cellar/libpng/1.6.37/include/libpng16
+	/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0
+	/Users/bshanae/.brew/Cellar/glib/2.60.6/include
+	/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0
+	/Users/bshanae/.brew/Cellar/glib/2.60.6/lib/glib-2.0/include
+	/Users/bshanae/.brew/opt/gettext/include
+	/Users/bshanae/.brew/Cellar/pcre/8.43/include)
+
+set(GTK_LINKS
+	/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/lib
+	/Users/bshanae/.brew/Cellar/pango/1.42.4_2/lib
+	/Users/bshanae/.brew/Cellar/atk/2.32.0_1/lib
+	/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/lib
+	/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/lib
+	/Users/bshanae/.brew/Cellar/glib/2.60.6/lib
+	/Users/bshanae/.brew/opt/gettext/lib)
+
 
 include_directories(
-	${GTK3_INCLUDE_DIRS}
+	${GTK_INCLUDES}
 	../21_libft/includes/
 	./
 	./gui/
@@ -24,7 +55,7 @@ include_directories(
 	./object/
 	./object_list/
 	./scene/
-	./renderer/
+	cl_renderer/
 	./camera/
 	./ray/
 	./intersection/
@@ -32,16 +63,27 @@ include_directories(
 	./open_cl_manager/)
 
 link_directories(
-	${GTK3_LIBRARY_DIRS}
+	${GTK_LINKS}
 	../21_libft/)
 
-add_definitions(
-	${GTK3_CFLAGS_OTHER})
-
 link_libraries(
-	${GTK3_LIBRARIES}
-	"m"
-	"ft")
+	"ft"
+	"gtk-3"
+	"gdk-3"
+	"pangocairo-1.0"
+	"pango-1.0"
+	"atk-1.0"
+	"cairo-gobject"
+	"cairo"
+	"gdk_pixbuf-2.0"
+	"gio-2.0"
+	"gobject-2.0"
+	"glib-2.0"
+	"intl"
+	"-framework Cocoa"
+	"-framework Carbon"
+	"-framework CoreGraphics"
+	"-framework OpenCL")
 
 set(SOURCE_MAIN
 	./main.c)
@@ -97,11 +139,18 @@ set(SOURCE_VECTOR3
 	./vector3/vector3_min.c
 	./vector3/vector3_component_mul.c)
 
-set(SOURCE_RENDERER
-	./renderer/renderer_new.c
-	./renderer/renderer_delete.c
-	./renderer/renderer_pixel.c
-	./renderer/renderer_frame.c)
+set(SOURCE_CL_RENDERER
+	./cl_renderer/cl_renderer_new.c
+	./cl_renderer/cl_renderer_delete.c
+	./cl_renderer/cl_renderer_init_device.c
+	./cl_renderer/cl_renderer_init_context.c
+	./cl_renderer/cl_renderer_create_program.c
+	./cl_renderer/cl_renderer_create_queue.c
+	./cl_renderer/cl_renderer_create_kernel.c
+	./cl_renderer/cl_renderer_init_data.c
+	./cl_renderer/cl_renderer_set_arguments.c
+	./cl_renderer/cl_renderer_render.c
+	cl_renderer/cl_renderer_log.c)
 
 set(SOURCE_SCENE
 	./scene/scene_new.c
@@ -121,11 +170,8 @@ set(SOURCE_CAMERA
 	./camera/camera_delete.c
 	./camera/camera_build_ray.c)
 
-set(SOURCE_FT_ASSERT ft_assert/ft_assert.c)
-
-set(SOURCE_OPEN_CL_MANAGER
-	./open_cl_manager/open_cl_manager_new.c
-	./open_cl_manager/open_cl_manager_delete.c open_cl_manager/open_cl_manager_init_device.c open_cl_manager/open_cl_manager_init_context.c open_cl_manager/open_cl_manager_create_program.c)
+set(SOURCE_FT_ASSERT
+	./ft_assert/ft_assert.c)
 
 set(SOURCE_RAY
 	./ray/ray)
@@ -134,9 +180,8 @@ add_executable(rt
 	${SOURCE_MAIN}
 	${SOURCE_GUI}
 	${SOURCE_VECTOR3}
-	${SOURCE_RENDERER}
+	${SOURCE_CL_RENDERER}
 	${SOURCE_SCENE}
 	${SOURCE_OBJECT}
 	${SOURCE_CAMERA}
-	${SOURCE_FT_ASSERT}
-	${SOURCE_OPEN_CL_MANAGER})
+	${SOURCE_FT_ASSERT})

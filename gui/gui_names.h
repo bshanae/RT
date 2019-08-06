@@ -1,7 +1,7 @@
 #ifndef GUI_NAMES_H
 # define GUI_NAMES_H
 
-# define G_SOURCE			"../gui/build/build.glade"
+# define G_SOURCE			"./gui/build/build.glade"
 # define G_WINDOW			"window"
 
 # define GL_DATA			"list"
