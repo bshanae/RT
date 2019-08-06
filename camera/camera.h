@@ -2,7 +2,7 @@
 # define CAMERA_H
 
 # include "options.h"
-# include "cl_include.h"
+# include "cl_parameters/cl_float.h"
 
 # include "libft_standart.h"
 # include "ray.h"
@@ -12,11 +12,11 @@
 
 typedef struct 		s_camera
 {
-	cl_double4		position;
-	cl_double4		axis_x;
-	cl_double4		axis_y;
-	cl_double4		axis_z;
-	cl_double4		forward;
+	API_FLOAT4		position;
+	API_FLOAT4		axis_x;
+	API_FLOAT4		axis_y;
+	API_FLOAT4		axis_z;
+	API_FLOAT4		forward;
 	int				width;
 	int				height;
 }					t_camera;

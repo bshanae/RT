@@ -19,6 +19,7 @@ static void			cl_program_read
 {
 	int				fd;
 	int 			read_length;
+	int 			nl_counter;
 
 	fd = open(file, O_RDONLY);
 	ASSERT(fd != -1)
@@ -30,6 +31,12 @@ static void			cl_program_read
 			break ;
 		program->length += read_length;
 	}
+	nl_counter = 0;
+	nl_counter += program->buffer[program->length - 2] != '\n';
+	nl_counter += program->buffer[program->length - 1] != '\n';
+	while (nl_counter-- > 0)
+		program->buffer[program->length++] = '\n';
+
 }
 
 static int			cl_program_finish

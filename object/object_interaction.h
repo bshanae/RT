@@ -4,7 +4,7 @@
 # include "assert.h"
 # include "object_definition.h"
 # include "object_list.h"
-# include "cl_include.h"
+# include "cl_parameters/cl_float.h"
 # include "intersection.h"
 
 # include <stdarg.h>

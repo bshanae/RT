@@ -6,8 +6,8 @@
 typedef struct		s_intersection
 {
 	t_ray			ray;
-	cl_double4		hit;
-	cl_double4		normal;
+	API_FLOAT4		hit;
+	API_FLOAT4		normal;
 	int 			object_id;
 }					t_intersection;
 

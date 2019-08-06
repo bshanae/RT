@@ -1,7 +1,7 @@
 #ifndef RENDERER_H
 # define RENDERER_H
 
-# include "cl_options.h"
+# include "cl_parameters/cl_compilation.h"
 
 # include "assert.h"
 # include "gui_image.h"

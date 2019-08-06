@@ -2,12 +2,13 @@
 # define RAY_H
 
 # include "cl_include.h"
+# include "cl_float.h"
 
 typedef	struct		s_ray
 {
-	cl_double4		origin;
-	cl_double4		direction;
-	double 			t;
+	API_FLOAT4		origin;
+	API_FLOAT4		direction;
+	FLOAT			t;
 }					t_ray;
 
 #endif

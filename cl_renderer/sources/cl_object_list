@@ -1,36 +1,38 @@
+#include "options.h"
+
 typedef struct					s_object_sphere
 {
-	double4						position;
-	double						radius;
+	FLOAT4						position;
+	FLOAT						radius;
 }								t_object_sphere;
 
 typedef struct					s_object_plane
 {
-	double4						position;
-	double4						normal;
+	FLOAT4						position;
+	FLOAT4						normal;
 }								t_object_plane;
 
-static int     					sphere_intersect(constant object *object, t_intersection *intersection)
+static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
 {
 	constant t_object_sphere	*ptr;
 	t_object_sphere				data;
-	double						k[3];
-	double						t;
-	double						discriminant;
-	double4						temp;
+	FLOAT						k[3];
+	FLOAT						t;
+	FLOAT						discriminant;
+	FLOAT4						temp;
 
     ptr = (constant t_object_sphere *)object->data;
-    data.center = ptr->center;
+    data.position = ptr->position;
     data.radius = ptr->radius;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
-	temp = intersection->ray.origin - data.center;
+	temp = intersection->ray.origin - data.position;
 	k[1] = 2 * dot(temp, intersection->ray.direction);
 	k[2] = dot(temp, temp) - data.radius * data.radius;
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.f)
 		return (0);
 	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
-	if (t <= RAY_T_MIN || t >= intersection->ray.t)
+	if (t <= INTERSECTION_MIN || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
 	return (1);
@@ -40,8 +42,8 @@ static int     					sphere_intersect(constant object *object, t_intersection *in
 static int 			    		plane_intersect(constant t_object *object, t_intersection_cl *intersection)
 {
 	t_object_plane	    		*data;
-	double4			    		temp[2];
-	double						value[3];
+	FLOAT4			    		temp[2];
+	FLOAT						value[3];
 
 	data = (t_object_plane *)data_ptr;
 	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))

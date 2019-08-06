@@ -4,7 +4,7 @@ project(rt C)
 set(CMAKE_CFLAGS "${CMAKE_CFALGS} -Wall -Wextra")
 
 set(BREW
-	~/.brew
+	/usr/local/
 )
 
 set(GTK_INCLUDES
@@ -45,6 +45,7 @@ include_directories(
 	${GTK_INCLUDES}
 	../21_libft/includes/
 	./
+	./cl_parameters/
 	./gui/
 	./gui/gui/
 	./gui/gui_scene/
@@ -62,8 +63,8 @@ include_directories(
 	./camera/
 	./ray/
 	./intersection/
-	./assert/
-	./open_cl_manager/)
+	./open_cl_manager/
+	./assert)
 
 link_directories(
 	${GTK_LINKS}
@@ -140,13 +141,12 @@ set(SOURCE_CL_RENDERER
 	./cl_renderer/cl_renderer_init_data.c
 	./cl_renderer/cl_renderer_set_arguments.c
 	./cl_renderer/cl_renderer_render.c
-	cl_renderer/cl_renderer_log.c)
+	./cl_renderer/cl_renderer_log.c)
 
 set(SOURCE_SCENE
 	./scene/scene_new.c
 	./scene/scene_get_space.c
-	./scene/scene_delete.c
-	)
+	./scene/scene_delete.c)
 
 set(SOURCE_OBJECT
 	./object/object_build.c
@@ -156,8 +156,7 @@ set(SOURCE_OBJECT
 
 set(SOURCE_CAMERA
 	./camera/camera_new.c
-	./camera/camera_delete.c
-	)
+	./camera/camera_delete.c)
 
 set(SOURCE_RAY
 	./ray/ray)

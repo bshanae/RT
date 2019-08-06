@@ -1,0 +1,193 @@
+
+
+#include "cl_float.h"
+
+typedef	struct		s_ray
+{
+	FLOAT4			origin;
+	FLOAT4			direction;
+	FLOAT 			t;
+}					t_ray;
+
+typedef struct 		s_camera
+{
+	FLOAT4			position;
+	FLOAT4			axis_x;
+	FLOAT4			axis_y;
+	FLOAT4			axis_z;
+	FLOAT4			forward;
+	int				width;
+	int				height;
+}					t_camera;
+
+static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
+{
+	t_ray			result;
+	FLOAT4			up;
+	FLOAT4			right;
+	FLOAT 			xf;
+	FLOAT 			yf;
+
+	xf = (FLOAT)screen->x;
+	yf = (FLOAT)screen->y;
+	result.origin = camera->position;
+	up = (FLOAT4)camera->axis_y;
+	right = (FLOAT4)camera->axis_x;
+	right *= (FLOAT)(xf - (camera->width - 1.) / 2.);
+	up *= (FLOAT)(-1. * yf + (camera->height - 1.) / 2.);
+	result.direction = up + right;
+	result.direction += camera->forward;
+	result.direction = normalize(result.direction);
+	return (result);
+}
+
+#include "options.h"
+
+typedef struct		s_intersection
+{
+	t_ray			ray;
+	FLOAT4			hit;
+	FLOAT4			normal;
+	int 			object_id;
+}					t_intersection;
+
+static void			intersection_reset(t_intersection *intersection)
+{
+	intersection->ray.t = INTERSECTION_MAX;
+}
+
+typedef struct 		s_light
+{
+
+}					t_light;
+
+#include "options.h"
+
+typedef enum		e_object_type
+{
+	object_sphere = 0,
+	object_plane
+}					t_object_type;
+
+typedef struct		s_object
+{
+	t_object_type	type;
+	char			data[OBJECT_DATA_CAPACITY];
+}					t_object;
+
+int 				object_intersect
+					(t_object *object, t_intersection *intersection);
+
+#include "options.h"
+
+typedef struct					s_object_sphere
+{
+	FLOAT4						position;
+	FLOAT						radius;
+}								t_object_sphere;
+
+typedef struct					s_object_plane
+{
+	FLOAT4						position;
+	FLOAT4						normal;
+}								t_object_plane;
+
+static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
+{
+	constant t_object_sphere	*ptr;
+	t_object_sphere				data;
+	FLOAT						k[3];
+	FLOAT						t;
+	FLOAT						discriminant;
+	FLOAT4						temp;
+
+    ptr = (constant t_object_sphere *)object->data;
+    data.position = ptr->position;
+    data.radius = ptr->radius;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
+	temp = intersection->ray.origin - data.position;
+	k[1] = 2 * dot(temp, intersection->ray.direction);
+	k[2] = dot(temp, temp) - data.radius * data.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+		return (0);
+	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
+	if (t <= INTERSECTION_MIN || t >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t;
+	return (1);
+}
+
+/*
+static int 			    		plane_intersect(constant t_object *object, t_intersection_cl *intersection)
+{
+	t_object_plane	    		*data;
+	FLOAT4			    		temp[2];
+	FLOAT						value[3];
+
+	data = (t_object_plane *)data_ptr;
+	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
+		return (0);
+	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
+	value[1] = vector3_dot(temp, &data->normal) / value[0];
+	if (value[1] <= RAY_T_MIN || value[1] >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = value[1];
+	return (1);
+}
+*/
+
+static int			object_intersect(constant t_object *object, t_intersection *intersection)
+{
+	if (object->type == object_sphere)
+		return (sphere_intersect(object, intersection));
+	return (0);
+}
+typedef struct		s_scene
+{
+	t_object		objects[SCENE_OBJECTS_CAPACITY];
+	int				objects_length;
+	t_light			lights[SCENE_LIGHTS_CAPACITY];
+	int				lights_length;
+}					t_scene;
+
+static int			scene_intersect(constant t_scene *scene, t_intersection *intersection)
+{
+	int				result;
+
+	result = 0;
+	for (int i = 0; i < scene->objects_length; i++)
+		result += object_intersect(scene->objects + i, intersection);
+	return (result != 0);
+}
+typedef struct		s_color
+{
+	unsigned char	r;
+	unsigned char	g;
+	unsigned char	b;
+	unsigned char	a;
+}					t_color;
+
+kernel void			cl_main(
+					constant t_camera *camera,
+					constant t_scene *scene,
+					global t_color *image)
+{
+	int				global_id;
+	int2			screen;
+	t_intersection	intersection;
+
+
+
+	screen.x = global_id % camera->width;
+	screen.y = global_id / camera->height;
+
+	intersection.ray = camera_build_ray(camera, &screen);
+	intersection_reset(&intersection);
+
+	if (scene_intersect(scene, &intersection))
+		image[global_id] = (t_color){255, 0, 0, 255};
+	image[global_id] = (t_color){0, 0, 0, 255};
+}
+
+
