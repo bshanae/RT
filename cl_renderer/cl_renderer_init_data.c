@@ -9,7 +9,7 @@ void 				cl_renderer_init_data(t_cl_renderer *renderer)
 	renderer->data_size.camera = sizeof(t_camera);
 	renderer->data_size.scene = sizeof(t_scene);
 	renderer->data_size.image =
-		sizeof(int) * renderer->image->width * renderer->image->height;
+		sizeof(t_color) * renderer->image->width * renderer->image->height;
 	renderer->data_device.camera = clCreateBuffer(renderer->context,
 		CL_MEM_READ_ONLY, renderer->data_size.camera, NULL, &renderer->error);
 	ASSERT(renderer->error == 0)
@@ -19,5 +19,4 @@ void 				cl_renderer_init_data(t_cl_renderer *renderer)
 	renderer->data_device.image = clCreateBuffer(renderer->context,
 		CL_MEM_WRITE_ONLY, renderer->data_size.image, NULL, &renderer->error);
 	ASSERT(renderer->error == 0)
-
 }

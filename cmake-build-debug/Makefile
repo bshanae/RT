@@ -177,6 +177,33 @@ camera/camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_new.c.s
 .PHONY : camera/camera_new.c.s
 
+cl_renderer/cl_renderer_camera_move.o: cl_renderer/cl_renderer_camera_move.c.o
+
+.PHONY : cl_renderer/cl_renderer_camera_move.o
+
+# target to build an object file
+cl_renderer/cl_renderer_camera_move.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o
+.PHONY : cl_renderer/cl_renderer_camera_move.c.o
+
+cl_renderer/cl_renderer_camera_move.i: cl_renderer/cl_renderer_camera_move.c.i
+
+.PHONY : cl_renderer/cl_renderer_camera_move.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_camera_move.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.i
+.PHONY : cl_renderer/cl_renderer_camera_move.c.i
+
+cl_renderer/cl_renderer_camera_move.s: cl_renderer/cl_renderer_camera_move.c.s
+
+.PHONY : cl_renderer/cl_renderer_camera_move.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_camera_move.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.s
+.PHONY : cl_renderer/cl_renderer_camera_move.c.s
+
 cl_renderer/cl_renderer_create_kernel.o: cl_renderer/cl_renderer_create_kernel.c.o
 
 .PHONY : cl_renderer/cl_renderer_create_kernel.o
@@ -473,6 +500,33 @@ cl_renderer/cl_renderer_set_arguments.s: cl_renderer/cl_renderer_set_arguments.c
 cl_renderer/cl_renderer_set_arguments.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.s
 .PHONY : cl_renderer/cl_renderer_set_arguments.c.s
+
+cl_renderer/cl_renderer_update.o: cl_renderer/cl_renderer_update.c.o
+
+.PHONY : cl_renderer/cl_renderer_update.o
+
+# target to build an object file
+cl_renderer/cl_renderer_update.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o
+.PHONY : cl_renderer/cl_renderer_update.c.o
+
+cl_renderer/cl_renderer_update.i: cl_renderer/cl_renderer_update.c.i
+
+.PHONY : cl_renderer/cl_renderer_update.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer_update.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.i
+.PHONY : cl_renderer/cl_renderer_update.c.i
+
+cl_renderer/cl_renderer_update.s: cl_renderer/cl_renderer_update.c.s
+
+.PHONY : cl_renderer/cl_renderer_update.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer_update.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.s
+.PHONY : cl_renderer/cl_renderer_update.c.s
 
 gui/gui/gui_connect_renderer.o: gui/gui/gui_connect_renderer.c.o
 
@@ -1245,6 +1299,9 @@ help:
 	@echo "... camera/camera_new.o"
 	@echo "... camera/camera_new.i"
 	@echo "... camera/camera_new.s"
+	@echo "... cl_renderer/cl_renderer_camera_move.o"
+	@echo "... cl_renderer/cl_renderer_camera_move.i"
+	@echo "... cl_renderer/cl_renderer_camera_move.s"
 	@echo "... cl_renderer/cl_renderer_create_kernel.o"
 	@echo "... cl_renderer/cl_renderer_create_kernel.i"
 	@echo "... cl_renderer/cl_renderer_create_kernel.s"
@@ -1278,6 +1335,9 @@ help:
 	@echo "... cl_renderer/cl_renderer_set_arguments.o"
 	@echo "... cl_renderer/cl_renderer_set_arguments.i"
 	@echo "... cl_renderer/cl_renderer_set_arguments.s"
+	@echo "... cl_renderer/cl_renderer_update.o"
+	@echo "... cl_renderer/cl_renderer_update.i"
+	@echo "... cl_renderer/cl_renderer_update.s"
 	@echo "... gui/gui/gui_connect_renderer.o"
 	@echo "... gui/gui/gui_connect_renderer.i"
 	@echo "... gui/gui/gui_connect_renderer.s"

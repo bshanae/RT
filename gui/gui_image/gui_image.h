@@ -1,6 +1,7 @@
 #ifndef GUI_IMAGE_H
 # define GUI_IMAGE_H
 
+# include "libft_standart.h"
 # include "gui_names.h"
 # include "options.h"
 

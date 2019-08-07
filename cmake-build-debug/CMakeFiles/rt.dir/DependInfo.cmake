@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_delete.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_new.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_camera_move.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_program.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_queue.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o"
@@ -17,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_update.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"

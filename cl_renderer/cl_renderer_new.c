@@ -13,5 +13,7 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 	cl_renderer_create_queue(new);
 	cl_renderer_init_data(new);
 	cl_renderer_set_arguments(new);
+	new->flags.update_camera = 1;
+	new->flags.update_scene = 1;
 	return (new);
 }

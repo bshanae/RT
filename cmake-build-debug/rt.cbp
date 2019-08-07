@@ -170,6 +170,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_camera_move.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c">
 			<Option target="rt"/>
 		</Unit>
@@ -201,6 +204,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_update.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">

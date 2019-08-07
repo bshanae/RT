@@ -75,9 +75,6 @@ typedef struct		s_object
 	char			data[OBJECT_DATA_CAPACITY];
 }					t_object;
 
-int 				object_intersect
-					(t_object *object, t_intersection *intersection);
-
 #include "options.h"
 
 typedef struct					s_object_sphere
@@ -118,25 +115,22 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	return (1);
 }
 
-/*
-static int 			    		plane_intersect(constant t_object *object, t_intersection_cl *intersection)
+static int 			    		plane_intersect(constant t_object *object, t_intersection *intersection)
 {
 	t_object_plane	    		*data;
 	FLOAT4			    		temp[2];
 	FLOAT						value[3];
 
-	data = (t_object_plane *)data_ptr;
-	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
+	data = (t_object_plane *)object->data;
+	if (!(value[0] = dot(intersection->ray.direction, data->normal)))
 		return (0);
-	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
-	value[1] = vector3_dot(temp, &data->normal) / value[0];
-	if (value[1] <= RAY_T_MIN || value[1] >= intersection->ray.t)
+	temp[0] = data->position - intersection->ray.origin;
+	value[1] = dot(temp, data->normal) / value[0];
+	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = value[1];
 	return (1);
 }
-*/
-
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_sphere)
@@ -177,7 +171,7 @@ kernel void			cl_main(
 	int2			screen;
 	t_intersection	intersection;
 
-
+    global_id = get_global_id(0);
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->height;
@@ -186,8 +180,9 @@ kernel void			cl_main(
 	intersection_reset(&intersection);
 
 	if (scene_intersect(scene, &intersection))
-		image[global_id] = (t_color){255, 0, 0, 255};
-	image[global_id] = (t_color){0, 0, 0, 255};
+	    image[global_id] = (t_color){255, 0, 0, 255};
+	else
+	    image[global_id] = (t_color){0, 0, 0, 255};
 }
 
 

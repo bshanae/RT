@@ -7,7 +7,7 @@ kernel void			cl_main(
 	int2			screen;
 	t_intersection	intersection;
 
-
+    global_id = get_global_id(0);
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->height;
@@ -16,6 +16,7 @@ kernel void			cl_main(
 	intersection_reset(&intersection);
 
 	if (scene_intersect(scene, &intersection))
-		image[global_id] = (t_color){255, 0, 0, 255};
-	image[global_id] = (t_color){0, 0, 0, 255};
+	    image[global_id] = (t_color){255, 0, 0, 255};
+	else
+	    image[global_id] = (t_color){0, 0, 0, 255};
 }

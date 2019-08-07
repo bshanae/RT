@@ -8,5 +8,10 @@ gboolean			gui_s_key
 	gui = (t_gui *)ptr;
 	if (key->keyval == GDK_KEY_Escape)
 		gtk_main_quit();
+	else if (key->keyval == GDK_KEY_Return)
+	{
+		cl_renderer_render(gui->renderer);
+		gtk_main_iteration();
+	}
 	return (FALSE);
 }

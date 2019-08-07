@@ -43,6 +43,12 @@ typedef	struct 			s_cl_data_device
 	cl_mem				image;
 }						t_cl_data_device;
 
+typedef struct 			s_cl_flags
+{
+	int					update_camera;
+	int 				update_scene;
+}						t_cl_flags;
+
 typedef struct 			s_cl_renderer
 {
 	int 				error;
@@ -56,6 +62,7 @@ typedef struct 			s_cl_renderer
 	cl_kernel 			kernel;
 	cl_command_queue 	queue;
 	u_long 				queue_length;
+	t_cl_flags			flags;
 }						t_cl_renderer;
 
 t_cl_renderer			*cl_renderer_new(t_gui_image *image);
@@ -73,6 +80,24 @@ void					cl_renderer_create_kernel(t_cl_renderer *renderer);
 
 void					cl_renderer_set_arguments(t_cl_renderer *renderer);
 
+typedef enum 			e_cl_update
+{
+	update_camera,
+	update_scene,
+
+}						t_cl_update;
+
+void					cl_renderer_update
+						(t_cl_renderer *renderer, t_cl_update update);
+
 void					cl_renderer_render(t_cl_renderer *renderer);
+
+typedef enum 			 e_cl_direction
+{
+	direction_left,
+	direction_right,
+	direction_up,
+	direction_down
+}						t_cl_direction;
 
 #endif

@@ -32,6 +32,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o"
   "CMakeFiles/rt.dir/scene/scene_new.c.o"
   "CMakeFiles/rt.dir/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/scene/scene_delete.c.o"

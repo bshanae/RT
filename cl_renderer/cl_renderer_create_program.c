@@ -18,10 +18,13 @@ static void			cl_program_read
 					(t_cl_program *program, const char *file)
 {
 	int				fd;
+	char			file_full[64];
 	int 			read_length;
 	int 			nl_counter;
 
-	fd = open(file, O_RDONLY);
+	ft_strcpy(file_full, CL_SOURCE_FOLDER);
+	ft_strcat(file_full, file);
+	fd = open(file_full, O_RDONLY);
 	ASSERT(fd != -1)
 	while (1)
 	{
@@ -36,7 +39,7 @@ static void			cl_program_read
 	nl_counter += program->buffer[program->length - 1] != '\n';
 	while (nl_counter-- > 0)
 		program->buffer[program->length++] = '\n';
-
+	close(fd);
 }
 
 static int			cl_program_finish
@@ -66,7 +69,8 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 	cl_program_read(&renderer->program, CL_SOURCE_INTERSECTION);
 	cl_program_read(&renderer->program, CL_SOURCE_LIGHT);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_DEF);
-	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_LIST);
+	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_SPHERE);
+	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_PLANE);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_INTER);
 	cl_program_read(&renderer->program, CL_SOURCE_SCENE);
 	cl_program_read(&renderer->program, CL_SOURCE_COLOR);

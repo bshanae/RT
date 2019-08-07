@@ -6,12 +6,6 @@ typedef struct					s_object_sphere
 	FLOAT						radius;
 }								t_object_sphere;
 
-typedef struct					s_object_plane
-{
-	FLOAT4						position;
-	FLOAT4						normal;
-}								t_object_plane;
-
 static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
 {
 	constant t_object_sphere	*ptr;
@@ -37,22 +31,3 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	intersection->ray.t = t;
 	return (1);
 }
-
-/*
-static int 			    		plane_intersect(constant t_object *object, t_intersection_cl *intersection)
-{
-	t_object_plane	    		*data;
-	FLOAT4			    		temp[2];
-	FLOAT						value[3];
-
-	data = (t_object_plane *)data_ptr;
-	if (!(value[0] = vector3_dot(&intersection->ray.direction, &data->normal)))
-		return (0);
-	temp[0] = vector3_sub(&data->position, &intersection->ray.origin);
-	value[1] = vector3_dot(temp, &data->normal) / value[0];
-	if (value[1] <= RAY_T_MIN || value[1] >= intersection->ray.t)
-		return (0);
-	intersection->ray.t = value[1];
-	return (1);
-}
-*/
