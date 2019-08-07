@@ -1,0 +1,11 @@
+#include "options.h"
+
+static void			sample(constant t_scene *scene,
+							global t_color *image)
+{
+	FLOAT4			radiance;
+	FLOAT4			mask;
+
+	radiance = 0;
+	mask = 1;
+}

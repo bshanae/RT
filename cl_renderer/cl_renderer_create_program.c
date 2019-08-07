@@ -74,6 +74,8 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_INTER);
 	cl_program_read(&renderer->program, CL_SOURCE_SCENE);
 	cl_program_read(&renderer->program, CL_SOURCE_COLOR);
+	cl_program_read(&renderer->program, CL_SOURCE_SETTINGS);
+	cl_program_read(&renderer->program, CL_SOURCE_SAMPLE);
 	cl_program_read(&renderer->program, CL_SOURCE_MAIN);
 	if (cl_program_finish(&renderer->program, &renderer->context))
 		cl_renderer_log(renderer);

@@ -21,6 +21,8 @@
 # define CL_SOURCE_OBJECT_INTER		"cl_object_intersect"
 # define CL_SOURCE_SCENE			"cl_scene"
 # define CL_SOURCE_COLOR			"cl_color"
+# define CL_SOURCE_SETTINGS			"cl_settings"
+# define CL_SOURCE_SAMPLE			"cl_sample"
 # define CL_SOURCE_MAIN				"cl_main"
 
 #endif

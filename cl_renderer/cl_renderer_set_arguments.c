@@ -8,5 +8,9 @@ void				cl_renderer_set_arguments(t_cl_renderer *renderer)
 		1, sizeof(cl_mem), &renderer->data_device.scene);
 	renderer->error += clSetKernelArg(renderer->kernel,
 		2, sizeof(cl_mem), &renderer->data_device.image);
+	renderer->error += clSetKernelArg(renderer->kernel,
+		3, sizeof(cl_mem), &renderer->data_device.settings);
+	renderer->error += clSetKernelArg(renderer->kernel,
+		4, sizeof(cl_mem), &renderer->data_device.settings);
 	ASSERT(renderer->error == 0)
 }

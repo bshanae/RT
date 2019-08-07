@@ -83,12 +83,6 @@ typedef struct					s_object_sphere
 	FLOAT						radius;
 }								t_object_sphere;
 
-typedef struct					s_object_plane
-{
-	FLOAT4						position;
-	FLOAT4						normal;
-}								t_object_plane;
-
 static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
 {
 	constant t_object_sphere	*ptr;
@@ -115,6 +109,14 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	return (1);
 }
 
+#include "options.h"
+
+typedef struct					s_object_plane
+{
+	FLOAT4						position;
+	FLOAT4						normal;
+}								t_object_plane;
+
 static int 			    		plane_intersect(constant t_object *object, t_intersection *intersection)
 {
 	t_object_plane	    		*data;
@@ -125,7 +127,7 @@ static int 			    		plane_intersect(constant t_object *object, t_intersection *i
 	if (!(value[0] = dot(intersection->ray.direction, data->normal)))
 		return (0);
 	temp[0] = data->position - intersection->ray.origin;
-	value[1] = dot(temp, data->normal) / value[0];
+	value[1] = dot(temp[0], data->normal) / value[0];
 	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = value[1];
@@ -135,6 +137,8 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 {
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
+	else if (object->type == object_plane)
+        return (plane_intersect(object, intersection));
 	return (0);
 }
 typedef struct		s_scene
@@ -162,10 +166,29 @@ typedef struct		s_color
 	unsigned char	a;
 }					t_color;
 
+typedef struct 			s_cl_settings
+{
+	int					samples;
+	int 				path_depth;
+}						t_cl_settings;
+
+#include "options.h"
+
+static void			sample(constant t_scene *scene,
+							global t_color *image)
+{
+	FLOAT4			radiance;
+	FLOAT4			mask;
+
+	radiance = 0;
+	mask = 1;
+}
 kernel void			cl_main(
 					constant t_camera *camera,
 					constant t_scene *scene,
-					global t_color *image)
+					global t_color *image,
+					constant t_cl_settings settings,
+					global  FLOAT4 *sample_store)
 {
 	int				global_id;
 	int2			screen;
@@ -179,9 +202,10 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen);
 	intersection_reset(&intersection);
 
-	if (scene_intersect(scene, &intersection))
-	    image[global_id] = (t_color){255, 0, 0, 255};
-	else
+   // sample(scene, image);
+//	if (scene_intersect(scene, &intersection))
+//	    image[global_id] = (t_color){255, 0, 0, 255};
+//	else
 	    image[global_id] = (t_color){0, 0, 0, 255};
 }
 

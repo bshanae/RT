@@ -1,7 +1,8 @@
 #ifndef RENDERER_H
 # define RENDERER_H
 
-# include "cl_parameters/cl_compilation.h"
+# include "cl_float.h"
+# include "cl_compilation.h"
 
 # include "assert.h"
 # include "gui_image.h"
@@ -12,6 +13,11 @@
 
 # include <stdlib.h>
 
+typedef struct 			s_cl_settings
+{
+	int					samples;
+	int 				path_depth;
+}						t_cl_settings;
 
 typedef struct 			s_cl_program
 {
@@ -27,6 +33,8 @@ typedef struct 			s_cl_data_size
 	u_long				camera;
 	u_long				scene;
 	u_long 				image;
+	u_long 				settings;
+	u_long 				sample_store;
 }						t_cl_data_size;
 
 typedef	struct 			s_cl_data_host
@@ -34,6 +42,7 @@ typedef	struct 			s_cl_data_host
 	t_camera			*camera;
 	t_scene				*scene;
 	t_color				*image;
+	t_cl_settings		settings;
 }						t_cl_data_host;
 
 typedef	struct 			s_cl_data_device
@@ -41,12 +50,15 @@ typedef	struct 			s_cl_data_device
 	cl_mem				camera;
 	cl_mem				scene;
 	cl_mem				image;
+	cl_mem 				settings;
+	cl_mem				sample_store;
 }						t_cl_data_device;
 
 typedef struct 			s_cl_flags
 {
 	int					update_camera;
 	int 				update_scene;
+	int					update_settings;
 }						t_cl_flags;
 
 typedef struct 			s_cl_renderer
@@ -84,6 +96,7 @@ typedef enum 			e_cl_update
 {
 	update_camera,
 	update_scene,
+	update_settings
 
 }						t_cl_update;
 

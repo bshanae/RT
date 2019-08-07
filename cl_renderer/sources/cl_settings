@@ -1,0 +1,5 @@
+typedef struct 			s_cl_settings
+{
+	int					samples;
+	int 				path_depth;
+}						t_cl_settings;
