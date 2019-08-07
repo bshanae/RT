@@ -12,5 +12,7 @@ void				cl_renderer_set_arguments(t_cl_renderer *renderer)
 		3, sizeof(cl_mem), &renderer->data_device.settings);
 	renderer->error += clSetKernelArg(renderer->kernel,
 		4, sizeof(cl_mem), &renderer->data_device.settings);
+	renderer->error += clSetKernelArg(renderer->kernel,
+		5, sizeof(cl_mem), &renderer->data_device.rng_seed);
 	ASSERT(renderer->error == 0)
 }

@@ -1,0 +1,84 @@
+#include "options.h"
+
+static FLOAT4		radiance_explicit(
+					constant t_scene *scene,
+					t_intersection *intersection_object,
+					global unsigned int *rng_state)
+{
+	t_intersection	intersection_light;
+	FLOAT4			radiance;
+	FLOAT4			light_position;
+	FLOAT4			light_direction;
+	FLOAT			emission_intensity;
+	FLOAT			cos_a_max;
+	FLOAT			omega;
+	FLOAT			sphere_radius;
+
+	radiance = 0;
+	for (int i = 0; i < scene->objects_length; i++)
+	{
+		if (i == intersection_object->object_id)
+			continue ;
+		if (scene->object[i].type != object_sphere)
+			continue ;
+		if (vector_max_component(scene->objects[i].material.emission) == 0.)
+			continue ;
+
+		light_position = sphere_random(scene->object + i, rng_state);
+		light_direction = normalize(light_position - intersection_object->hit);
+
+		intersection_reset(&intersection_light);
+		if (!scene_intersect(scene, &intersection_light))
+			continue ;
+		if (intersection_light.object_id != i)
+			continue ;
+
+		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
+		if (emission_intensity < (FLOAT)0.)
+			continue ;
+
+		sphere_radius = (((t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
+		cos_a_max = SQRT(1. - sphere_radius * sphere_radius / length(intersection_object->hit - light_position));
+		omega = 2 * M_PI * (1 - cos_a_max);
+		radiance += scene->objects[i].material.emission * emission_intensity * omega * M_1_PI;
+	}
+}
+
+static void			radiance_add(
+					constant t_scene *scene,
+					t_intersection *intersection,
+					global FLOAT4 *sample,
+					constant t_cl_settings *settings,
+					global unsigned int *rng_state)
+{
+	FLOAT4			radiance;
+	FLOAT4			explicit;
+	FLOAT4			mask;
+	FLOAT			cosine;
+
+	radiance = 0;
+	mask = 1;
+	for (int depth = 0; depth < settings->sample_depth; ++depth)
+	{
+		if (!scene_intersect(scene, intersection))
+			break ;
+		if (depth < settings->russian_depth && vector_max_component(&intersection->material.color) < rng_xor(rng_state))
+			break ;
+		radiance += mask * intersection->material.emission;
+
+		explicit = radiance_explicit(scene, intersection, rng_state);
+		radiance += explicit * mask * intersection->material.color;
+
+		intersection->ray.origin = intersection->hit;
+		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+		mask *= intersection->material.color * cosine;
+	}
+	*sample += radiance;
+}
+
+static FLOAT4		radiance_get(
+					global FLOAT4 *sample,
+					constant t_cl_settings *settings)
+{
+	return (*sample / settings->sample_count);
+}

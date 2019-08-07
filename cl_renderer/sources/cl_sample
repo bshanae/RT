@@ -1,11 +1,53 @@
-#include "options.h"
-
-static void			sample(constant t_scene *scene,
-							global t_color *image)
+static void			create_coordinate_system(FLOAT4 *normal, FLOAT4 *nt, FLOAT4 *nb)
 {
-	FLOAT4			radiance;
-	FLOAT4			mask;
+	if (fabsf(normal->x) > fabsf(normal->y))
+		*nt = (FLOAT4)(normal->z, 0., -1.f * normal->x, 0.);
+	else
+		*nt = (FLOAT4)(0., -1.f * normal->z, normal->y, 0.);
+	*nt = normalize(*nt);
+	*nb = cross(*normal, *nt);
+}
 
-	radiance = 0;
-	mask = 1;
+static FLOAT4	convert_sample(FLOAT4 *normal, FLOAT4 *sample, FLOAT4 *nt, FLOAT4 *nb)
+{
+	return ((FLOAT4)
+		(
+			sample->x * nb->x + sample->y * normal->x + sample->z * nt->x,
+			sample->x * nb->y + sample->y * normal->y + sample->z * nt->y,
+			sample->x * nb->z + sample->y * normal->z + sample->z * nt->z,
+			0.
+		));
+}
+
+static FLOAT4	sampler_transform(FLOAT4 *normal, FLOAT4 *sample)
+{
+	FLOAT4		nt;
+	FLOAT4		nb;
+
+	create_coordinate_system(normal, &nt, &nb);
+	return (convert_sample(normal, sample, &nt, &nb));
+}
+
+static FLOAT4		sample_uniform
+					(FLOAT4 *normal,
+					FLOAT *cosine,
+					global unsigned int *rng_state)
+{
+	FLOAT 			r[2];
+	FLOAT4			sample;
+
+	r[0] = rng_xor(rng_state);
+	r[1] = rng_xor(rng_state);
+	FLOAT sin_theta = SQRT(fmax(0.0f , 1.0f - r[0] * r[0]));
+	FLOAT phi = 2.0f * M_PI * r[1];
+	if(cosine)
+		*cosine = r[0];
+	sample = (FLOAT4)
+		(
+			sin_theta * cosf(phi),
+			r[0],
+			sin_theta * SIN(phi),
+			0.
+		);
+	return (sampler_transform(normal, &sample));
 }

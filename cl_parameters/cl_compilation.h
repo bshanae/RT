@@ -11,8 +11,12 @@
 # define CL_SOURCE_FOLDER			"./cl_renderer/sources/"
 
 # define CL_SOURCE_VECTOR			"cl_vector"
+# define CL_SOURCE_SETTINGS			"cl_settings"
+# define CL_SOURCE_RANDOM			"cl_random"
 # define CL_SOURCE_RAY				"cl_ray"
 # define CL_SOURCE_CAMERA			"cl_camera"
+# define CL_SOURCE_COLOR			"cl_color"
+# define CL_SOURCE_MATERIAL			"cl_material"
 # define CL_SOURCE_INTERSECTION		"cl_intersection"
 # define CL_SOURCE_LIGHT			"cl_light"
 # define CL_SOURCE_OBJECT_DEF		"cl_object_definition"
@@ -20,9 +24,8 @@
 # define CL_SOURCE_OBJECT_PLANE		"cl_object_plane"
 # define CL_SOURCE_OBJECT_INTER		"cl_object_intersect"
 # define CL_SOURCE_SCENE			"cl_scene"
-# define CL_SOURCE_COLOR			"cl_color"
-# define CL_SOURCE_SETTINGS			"cl_settings"
 # define CL_SOURCE_SAMPLE			"cl_sample"
+# define CL_SOURCE_RADIANCE			"cl_radiance"
 # define CL_SOURCE_MAIN				"cl_main"
 
 #endif

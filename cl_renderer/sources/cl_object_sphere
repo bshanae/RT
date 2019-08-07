@@ -25,9 +25,26 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.f)
 		return (0);
-	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
+	t = (-k[1] - SQRT(discriminant)) / (2 * k[0]);
 	if (t <= INTERSECTION_MIN || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
 	return (1);
+}
+
+static FLOAT4					shape_random_sphere(t_object *object, global unsigned int *rng_state)
+{
+	t_object_sphere				*data;
+	FLOAT 						theta;
+	FLOAT 						phi;
+	FLOAT4						random;
+
+	data = (t_object_sphere *)object->data;
+	theta = rng_xor(rng_state) * M_PI;
+	phi = rng_xor(rng_state) * 2 * M_PI;
+	random.x = 0.99 * data->radius * sin(theta) * cos(phi);
+	random.y = 0.99 * data->radius * sin(theta) * sin(phi);
+	random.z = 0.99 * data->radius * cos(theta);
+	random += data->position;
+	return (random);
 }

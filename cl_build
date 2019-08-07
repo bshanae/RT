@@ -1,4 +1,49 @@
+#include "cl_float.h"
 
+static FLOAT		vector_min_component(FLOAT4 *vector)
+{
+	return (fmin(vector->x, fmin(vector->y, vector->z)));
+}
+
+static FLOAT		vector_max_component(FLOAT4 *vector)
+{
+	return (fmax(vector->x, fmax(vector->y, vector->z)));
+}
+typedef struct 			s_cl_settings
+{
+	int					sample_count;
+	int 				sample_depth;
+	int                 russian_depth;
+	int					srgb;
+}						t_cl_settings;
+
+/*
+static FLOAT		rng_hash(FLOAT x, FLOAT y)
+{
+	FLOAT			k[2];
+
+	 k[0] = 0.3183099;
+	 k[1] = 0.3678794;
+
+	 x = x * k[0] + k[1];
+	 y = y * k[1] + k[0];
+	 for (int i = 0; i < 2; i++)
+	 	k[i] = k[i] * 16. * fract(sin(x) * sin(y) * (x + y));
+	 for (int i = 0; i < 2; i++)
+     	 	k[i] = fract(k[i]) * 2.;
+     return (fract(k[0]) * sin(k[1]) * 43758.5453123);
+}
+*/
+
+static FLOAT		rng_xor(global unsigned int *state)
+{
+	unsigned int x = *state;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+	*state = x;
+    return (x / 4294967296.0);
+}
 
 #include "cl_float.h"
 
@@ -40,6 +85,30 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
 	result.direction = normalize(result.direction);
 	return (result);
 }
+typedef struct		s_color
+{
+	unsigned char	r;
+	unsigned char	g;
+	unsigned char	b;
+	unsigned char	a;
+}					t_color;
+
+static t_color		color_unpack(FLOAT4 source, int srgb)
+{
+    if (srgb)
+		source = pow(source, (FLOAT)0.4);
+	source.x = fmin(source.x, (FLOAT)1.);
+	source.y = fmin(source.y, (FLOAT)1.);
+	source.z = fmin(source.z, (FLOAT)1.);
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
+}
+
+typedef struct 		s_material
+{
+	FLOAT4			color;
+	FLOAT4			emission;
+}					t_material;
+
 
 #include "options.h"
 
@@ -48,6 +117,7 @@ typedef struct		s_intersection
 	t_ray			ray;
 	FLOAT4			hit;
 	FLOAT4			normal;
+	t_material		material;
 	int 			object_id;
 }					t_intersection;
 
@@ -71,8 +141,9 @@ typedef enum		e_object_type
 
 typedef struct		s_object
 {
-	t_object_type	type;
 	char			data[OBJECT_DATA_CAPACITY];
+	t_object_type	type;
+	t_material		material;
 }					t_object;
 
 #include "options.h"
@@ -102,13 +173,29 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0.f)
 		return (0);
-	t = (-k[1] - sqrt(discriminant)) / (2 * k[0]);
+	t = (-k[1] - SQRT(discriminant)) / (2 * k[0]);
 	if (t <= INTERSECTION_MIN || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
 	return (1);
 }
 
+static FLOAT4					shape_random_sphere(t_object *object, global unsigned int *rng_state)
+{
+	t_object_sphere				*data;
+	FLOAT 						theta;
+	FLOAT 						phi;
+	FLOAT4						random;
+
+	data = (t_object_sphere *)object->data;
+	theta = rng_xor(rng_state) * M_PI;
+	phi = rng_xor(rng_state) * 2 * M_PI;
+	random.x = 0.99 * data->radius * sin(theta) * cos(phi);
+	random.y = 0.99 * data->radius * sin(theta) * sin(phi);
+	random.z = 0.99 * data->radius * cos(theta);
+	random += data->position;
+	return (random);
+}
 #include "options.h"
 
 typedef struct					s_object_plane
@@ -158,37 +245,150 @@ static int			scene_intersect(constant t_scene *scene, t_intersection *intersecti
 		result += object_intersect(scene->objects + i, intersection);
 	return (result != 0);
 }
-typedef struct		s_color
+static void			create_coordinate_system(FLOAT4 *normal, FLOAT4 *nt, FLOAT4 *nb)
 {
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-	unsigned char	a;
-}					t_color;
+	if (fabsf(normal->x) > fabsf(normal->y))
+		*nt = (FLOAT4)(normal->z, 0., -1.f * normal->x, 0.);
+	else
+		*nt = (FLOAT4)(0., -1.f * normal->z, normal->y, 0.);
+	*nt = normalize(*nt);
+	*nb = cross(*normal, *nt);
+}
 
-typedef struct 			s_cl_settings
+static FLOAT4	convert_sample(FLOAT4 *normal, FLOAT4 *sample, FLOAT4 *nt, FLOAT4 *nb)
 {
-	int					samples;
-	int 				path_depth;
-}						t_cl_settings;
+	return ((FLOAT4)
+		(
+			sample->x * nb->x + sample->y * normal->x + sample->z * nt->x,
+			sample->x * nb->y + sample->y * normal->y + sample->z * nt->y,
+			sample->x * nb->z + sample->y * normal->z + sample->z * nt->z,
+			0.
+		));
+}
 
+static FLOAT4	sampler_transform(FLOAT4 *normal, FLOAT4 *sample)
+{
+	FLOAT4		nt;
+	FLOAT4		nb;
+
+	create_coordinate_system(normal, &nt, &nb);
+	return (convert_sample(normal, sample, &nt, &nb));
+}
+
+static FLOAT4		sample_uniform
+					(FLOAT4 *normal,
+					FLOAT *cosine,
+					global unsigned int *rng_state)
+{
+	FLOAT 			r[2];
+	FLOAT4			sample;
+
+	r[0] = rng_xor(rng_state);
+	r[1] = rng_xor(rng_state);
+	FLOAT sin_theta = SQRT(fmax(0.0f , 1.0f - r[0] * r[0]));
+	FLOAT phi = 2.0f * M_PI * r[1];
+	if(cosine)
+		*cosine = r[0];
+	sample = (FLOAT4)
+		(
+			sin_theta * cosf(phi),
+			r[0],
+			sin_theta * SIN(phi),
+			0.
+		);
+	return (sampler_transform(normal, &sample));
+}
 #include "options.h"
 
-static void			sample(constant t_scene *scene,
-							global t_color *image)
+static FLOAT4		radiance_explicit(
+					constant t_scene *scene,
+					t_intersection *intersection_object,
+					global unsigned int *rng_state)
+{
+	t_intersection	intersection_light;
+	FLOAT4			radiance;
+	FLOAT4			light_position;
+	FLOAT4			light_direction;
+	FLOAT			emission_intensity;
+	FLOAT			cos_a_max;
+	FLOAT			omega;
+	FLOAT			sphere_radius;
+
+	radiance = 0;
+	for (int i = 0; i < scene->objects_length; i++)
+	{
+		if (i == intersection_object->object_id)
+			continue ;
+		if (scene->object[i].type != object_sphere)
+			continue ;
+		if (vector_max_component(scene->objects[i].material.emission) == 0.)
+			continue ;
+
+		light_position = sphere_random(scene->object + i, rng_state);
+		light_direction = normalize(light_position - intersection_object->hit);
+
+		intersection_reset(&intersection_light);
+		if (!scene_intersect(scene, &intersection_light))
+			continue ;
+		if (intersection_light.object_id != i)
+			continue ;
+
+		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
+		if (emission_intensity < (FLOAT)0.)
+			continue ;
+
+		sphere_radius = (((t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
+		cos_a_max = SQRT(1. - sphere_radius * sphere_radius / length(intersection_object->hit - light_position));
+		omega = 2 * M_PI * (1 - cos_a_max);
+		radiance += scene->objects[i].material.emission * emission_intensity * omega * M_1_PI;
+	}
+}
+
+static void			radiance_add(
+					constant t_scene *scene,
+					t_intersection *intersection,
+					global FLOAT4 *sample,
+					constant t_cl_settings *settings,
+					global unsigned int *rng_state)
 {
 	FLOAT4			radiance;
+	FLOAT4			explicit;
 	FLOAT4			mask;
+	FLOAT			cosine;
 
 	radiance = 0;
 	mask = 1;
+	for (int depth = 0; depth < settings->sample_depth; ++depth)
+	{
+		if (!scene_intersect(scene, intersection))
+			break ;
+		if (depth < settings->russian_depth && vector_max_component(&intersection->material.color) < rng_xor(rng_state))
+			break ;
+		radiance += mask * intersection->material.emission;
+
+		explicit = radiance_explicit(scene, intersection, rng_state);
+		radiance += explicit * mask * intersection->material.color;
+
+		intersection->ray.origin = intersection->hit;
+		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+		mask *= intersection->material.color * cosine;
+	}
+	*sample += radiance;
+}
+
+static FLOAT4		radiance_get(
+					global FLOAT4 *sample,
+					constant t_cl_settings *settings)
+{
+	return (*sample / settings->sample_count);
 }
 kernel void			cl_main(
 					constant t_camera *camera,
 					constant t_scene *scene,
 					global t_color *image,
-					constant t_cl_settings settings,
-					global  FLOAT4 *sample_store)
+					constant t_cl_settings *settings,
+					global FLOAT4 *sample_store,
+					global unsigned int *rng_state)
 {
 	int				global_id;
 	int2			screen;
@@ -202,11 +402,8 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen);
 	intersection_reset(&intersection);
 
-   // sample(scene, image);
-//	if (scene_intersect(scene, &intersection))
-//	    image[global_id] = (t_color){255, 0, 0, 255};
-//	else
-	    image[global_id] = (t_color){0, 0, 0, 255};
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+    image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }
 
 

@@ -95,6 +95,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././intersection"
   ".././open_cl_manager"
   ".././assert"
+  ".././material"
   )
 
 # Targets to which this target links.

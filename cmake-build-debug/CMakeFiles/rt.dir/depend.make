@@ -28,8 +28,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././cl_parameters/cl
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o: .././object_list/object_list.h
@@ -671,8 +671,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././cl_parameters/
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o: .././object_list/object_list.h
@@ -1314,8 +1314,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././cl_parameters
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o: .././object_list/object_list.h
@@ -1957,8 +1957,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././cl_parameters/c
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o: .././object_list/object_list.h
@@ -2600,8 +2600,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././cl_parameters/cl_incl
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o: .././object_list/object_list.h
@@ -3243,8 +3243,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././cl_parameters/c
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o: .././object_list/object_list.h
@@ -3886,8 +3886,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././cl_parameters/cl_i
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o: .././object_list/object_list.h
@@ -4529,8 +4529,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././cl_parameters/cl
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o: .././object_list/object_list.h
@@ -5172,8 +5172,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././cl_parameters/cl_include
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o: .././object_list/object_list.h
@@ -5815,8 +5815,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././cl_parameters/cl_include
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o: .././object_list/object_list.h
@@ -6458,8 +6458,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././cl_parameters/cl_incl
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o: .././object_list/object_list.h
@@ -7101,8 +7101,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././cl_parameters/
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o: .././object_list/object_list.h
@@ -7744,8 +7744,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././cl_parameters/cl_incl
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././color/color.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././gui/gui_names.h
-CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././light/light.h
+CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././material/material.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o: .././object_list/object_list.h
@@ -8391,8 +8391,8 @@ CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o: .././object_list/object_list.h
@@ -9038,8 +9038,8 @@ CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o: .././object_list/object_list.h
@@ -9685,8 +9685,8 @@ CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o: .././object_list/object_list.h
@@ -10333,8 +10333,8 @@ CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././gui/gui_object_base/gui_object_base.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././gui/gui_signal/gui_signal.h
-CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o: .././object_list/object_list.h
@@ -12233,6 +12233,7 @@ CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././cl_parameters/cl_fl
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././cl_parameters/cl_include.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././gui/gui_object_base/gui_object_base.h
+CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o: .././options.h
@@ -12864,6 +12865,7 @@ CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././cl_parameters/cl_float
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././cl_parameters/cl_include.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././gui/gui_object_base/gui_object_base.h
+CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o: .././options.h
@@ -13500,6 +13502,7 @@ CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././cl_parameters/c
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././gui/gui_object_base/gui_object_base.h
+CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o: .././options.h
@@ -14131,6 +14134,7 @@ CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././cl_parameters/
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././gui/gui_object_base/gui_object_base.h
+CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o: .././options.h
@@ -14773,8 +14777,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o: .././object_list/object_list.h
@@ -15421,8 +15425,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o: .././object_list/object_list.h
@@ -16069,8 +16073,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././gui/gui_list/gui_l
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o: .././object_list/object_list.h
@@ -16717,8 +16721,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././gui/gui_list/gui_lis
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o: .././object_list/object_list.h
@@ -17365,8 +17369,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././gui/gui_list/gui_list
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o: .././object_list/object_list.h
@@ -18013,8 +18017,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././gui/gui_list/gui_lis
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o: .././object_list/object_list.h
@@ -18661,8 +18665,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././gui/gui_list/gui_lis
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o: .././object_list/object_list.h
@@ -19309,8 +19313,8 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././gui/gui_list/gui_l
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././light/light.h
+CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././material/material.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o: .././object_list/object_list.h
@@ -19957,8 +19961,8 @@ CMakeFiles/rt.dir/main.c.o: .././gui/gui_list/gui_list.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_object_base/gui_object_base.h
-CMakeFiles/rt.dir/main.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/main.c.o: .././light/light.h
+CMakeFiles/rt.dir/main.c.o: .././material/material.h
 CMakeFiles/rt.dir/main.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/main.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/main.c.o: .././object_list/object_list.h
@@ -20594,10 +20598,9 @@ CMakeFiles/rt.dir/object/object_build.c.o: ../../21_libft/includes/libft_vector.
 CMakeFiles/rt.dir/object/object_build.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/object/object_build.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/object/object_build.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/object/object_build.c.o: .././intersection/intersection.h
+CMakeFiles/rt.dir/object/object_build.c.o: .././material/material.h
 CMakeFiles/rt.dir/object/object_build.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/object/object_build.c.o: .././options.h
-CMakeFiles/rt.dir/object/object_build.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/object/object_build.c.o: ../object/object_build.c
 CMakeFiles/rt.dir/object/object_build.c.o: ../object/object_definition.h
 CMakeFiles/rt.dir/object/object_build.c.o: ../object/object_interaction.h
@@ -20608,12 +20611,11 @@ CMakeFiles/rt.dir/object_list/plane.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/object_list/plane.c.o: .././intersection/intersection.h
+CMakeFiles/rt.dir/object_list/plane.c.o: .././material/material.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/object_list/plane.c.o: .././options.h
-CMakeFiles/rt.dir/object_list/plane.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/object_list/plane.c.o: ../object_list/plane.c
 
 CMakeFiles/rt.dir/object_list/sphere.c.o: ../../21_libft/includes/libft_ft_printf.h
@@ -20622,12 +20624,11 @@ CMakeFiles/rt.dir/object_list/sphere.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/object_list/sphere.c.o: .././intersection/intersection.h
+CMakeFiles/rt.dir/object_list/sphere.c.o: .././material/material.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: .././options.h
-CMakeFiles/rt.dir/object_list/sphere.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/object_list/sphere.c.o: ../object_list/sphere.c
 
 CMakeFiles/rt.dir/scene/scene_delete.c.o: ../../21_libft/includes/libft_ft_printf.h
@@ -20636,13 +20637,12 @@ CMakeFiles/rt.dir/scene/scene_delete.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/scene/scene_delete.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././light/light.h
+CMakeFiles/rt.dir/scene/scene_delete.c.o: .././material/material.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: .././options.h
-CMakeFiles/rt.dir/scene/scene_delete.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/scene/scene_delete.c.o: ../scene/scene_delete.c
 
@@ -20652,13 +20652,12 @@ CMakeFiles/rt.dir/scene/scene_get_space.c.o: ../../21_libft/includes/libft_vecto
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././light/light.h
+CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././material/material.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././options.h
-CMakeFiles/rt.dir/scene/scene_get_space.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/scene/scene_get_space.c.o: ../scene/scene_get_space.c
 
@@ -20668,13 +20667,12 @@ CMakeFiles/rt.dir/scene/scene_new.c.o: ../../21_libft/includes/libft_vector.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././cl_parameters/cl_float.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././cl_parameters/cl_include.h
-CMakeFiles/rt.dir/scene/scene_new.c.o: .././intersection/intersection.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././light/light.h
+CMakeFiles/rt.dir/scene/scene_new.c.o: .././material/material.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././object_list/object_list.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: .././options.h
-CMakeFiles/rt.dir/scene/scene_new.c.o: .././ray/ray.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: ../scene/scene.h
 CMakeFiles/rt.dir/scene/scene_new.c.o: ../scene/scene_new.c
 

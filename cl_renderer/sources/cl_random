@@ -1,0 +1,27 @@
+/*
+static FLOAT		rng_hash(FLOAT x, FLOAT y)
+{
+	FLOAT			k[2];
+
+	 k[0] = 0.3183099;
+	 k[1] = 0.3678794;
+
+	 x = x * k[0] + k[1];
+	 y = y * k[1] + k[0];
+	 for (int i = 0; i < 2; i++)
+	 	k[i] = k[i] * 16. * fract(sin(x) * sin(y) * (x + y));
+	 for (int i = 0; i < 2; i++)
+     	 	k[i] = fract(k[i]) * 2.;
+     return (fract(k[0]) * sin(k[1]) * 43758.5453123);
+}
+*/
+
+static FLOAT		rng_xor(global unsigned int *state)
+{
+	unsigned int x = *state;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+	*state = x;
+    return (x / 4294967296.0);
+}

@@ -9,14 +9,16 @@
 # include "scene.h"
 # include "camera.h"
 # include "ray.h"
-# include "intersection.h"
 
 # include <stdlib.h>
+# include <time.h>
 
 typedef struct 			s_cl_settings
 {
-	int					samples;
-	int 				path_depth;
+	int					sample_count;
+	int 				sample_depth;
+	int					russian_depth;
+	int					srgb;
 }						t_cl_settings;
 
 typedef struct 			s_cl_program
@@ -35,6 +37,7 @@ typedef struct 			s_cl_data_size
 	u_long 				image;
 	u_long 				settings;
 	u_long 				sample_store;
+	u_long				rng_state;
 }						t_cl_data_size;
 
 typedef	struct 			s_cl_data_host
@@ -43,6 +46,7 @@ typedef	struct 			s_cl_data_host
 	t_scene				*scene;
 	t_color				*image;
 	t_cl_settings		settings;
+	unsigned int		rng_seed;
 }						t_cl_data_host;
 
 typedef	struct 			s_cl_data_device
@@ -52,6 +56,7 @@ typedef	struct 			s_cl_data_device
 	cl_mem				image;
 	cl_mem 				settings;
 	cl_mem				sample_store;
+	cl_mem 				rng_seed;
 }						t_cl_data_device;
 
 typedef struct 			s_cl_flags

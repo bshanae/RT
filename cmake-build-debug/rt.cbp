@@ -87,6 +87,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./assert"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./material"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -150,6 +151,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./assert"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./material"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>

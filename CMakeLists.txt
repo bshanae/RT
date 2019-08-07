@@ -64,7 +64,8 @@ include_directories(
 	./ray/
 	./intersection/
 	./open_cl_manager/
-	./assert)
+	./assert
+	./material)
 
 link_directories(
 	${GTK_LINKS}
@@ -141,7 +142,9 @@ set(SOURCE_CL_RENDERER
 	./cl_renderer/cl_renderer_init_data.c
 	./cl_renderer/cl_renderer_set_arguments.c
 	./cl_renderer/cl_renderer_render.c
-	./cl_renderer/cl_renderer_log.c cl_renderer/cl_renderer_update.c cl_renderer/cl_renderer_camera_move.c)
+	./cl_renderer/cl_renderer_log.c
+	./cl_renderer/cl_renderer_update.c
+	./cl_renderer/cl_renderer_camera_move.c)
 
 set(SOURCE_SCENE
 	./scene/scene_new.c

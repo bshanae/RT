@@ -3,7 +3,8 @@ kernel void			cl_main(
 					constant t_scene *scene,
 					global t_color *image,
 					constant t_cl_settings *settings,
-					global  FLOAT4 *sample_store)
+					global FLOAT4 *sample_store,
+					global unsigned int *rng_state)
 {
 	int				global_id;
 	int2			screen;
@@ -17,9 +18,6 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen);
 	intersection_reset(&intersection);
 
-   // sample(scene, image);
-//	if (scene_intersect(scene, &intersection))
-//	    image[global_id] = (t_color){255, 0, 0, 255};
-//	else
-	    image[global_id] = (t_color){0, 0, 0, 255};
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+    image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }

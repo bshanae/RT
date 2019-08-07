@@ -4,14 +4,14 @@
 # include "assert.h"
 # include "object_definition.h"
 # include "object_list.h"
-# include "cl_parameters/cl_float.h"
-# include "intersection.h"
+# include "cl_float.h"
 
 # include <stdarg.h>
 
 void				object_build(
 					t_object *space,
 					t_object_type type,
+					t_material material,
 					...);
 
 void				object_sphere_build(t_object *space, va_list *args);

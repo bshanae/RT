@@ -5,7 +5,6 @@
 
 # include "light.h"
 # include "object_interaction.h"
-# include "intersection.h"
 
 # include <stdlib.h>
 

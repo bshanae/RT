@@ -1,5 +1,7 @@
 typedef struct 			s_cl_settings
 {
-	int					samples;
-	int 				path_depth;
+	int					sample_count;
+	int 				sample_depth;
+	int                 russian_depth;
+	int					srgb;
 }						t_cl_settings;

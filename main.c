@@ -7,7 +7,13 @@ void				scene_test(t_scene *scene)
 		object_build(
 			(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
 			object_sphere,
+			(t_material){(API_FLOAT4){1.}, (API_FLOAT4){0.}},
 			(API_FLOAT4){0., (FLOAT)i / 3., -5.}, .1);
+	object_build(
+		(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
+		object_sphere,
+		(t_material){(API_FLOAT4){1., 1., 1., 1.}, (API_FLOAT4){1., 1., 1., 1.}},
+		(API_FLOAT4){-3., 0., -5.}, .1);
 //	object_build(
 //		(t_object *)scene_get_space(scene, SCENE_SPACE_OBJECT),
 //		object_plane,

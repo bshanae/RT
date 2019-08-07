@@ -64,8 +64,12 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 {
 	cl_program_allocate(&renderer->program);
 	cl_program_read(&renderer->program, CL_SOURCE_VECTOR);
+	cl_program_read(&renderer->program, CL_SOURCE_SETTINGS);
+	cl_program_read(&renderer->program, CL_SOURCE_RANDOM);
 	cl_program_read(&renderer->program, CL_SOURCE_RAY);
 	cl_program_read(&renderer->program, CL_SOURCE_CAMERA);
+	cl_program_read(&renderer->program, CL_SOURCE_COLOR);
+	cl_program_read(&renderer->program, CL_SOURCE_MATERIAL);
 	cl_program_read(&renderer->program, CL_SOURCE_INTERSECTION);
 	cl_program_read(&renderer->program, CL_SOURCE_LIGHT);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_DEF);
@@ -73,9 +77,8 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_PLANE);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_INTER);
 	cl_program_read(&renderer->program, CL_SOURCE_SCENE);
-	cl_program_read(&renderer->program, CL_SOURCE_COLOR);
-	cl_program_read(&renderer->program, CL_SOURCE_SETTINGS);
 	cl_program_read(&renderer->program, CL_SOURCE_SAMPLE);
+	cl_program_read(&renderer->program, CL_SOURCE_RADIANCE);
 	cl_program_read(&renderer->program, CL_SOURCE_MAIN);
 	if (cl_program_finish(&renderer->program, &renderer->context))
 		cl_renderer_log(renderer);
