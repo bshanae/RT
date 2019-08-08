@@ -30,14 +30,14 @@ typedef enum		e_camera_direction
 	left,
 	right,
 	up,
-	down
+	down,
+	forward,
+	backward
 }					t_camera_direction;
 
 void 				camera_move
 					(t_camera *camera,
 					t_camera_direction direction,
 					RT_F length);
-
-
 
 #endif

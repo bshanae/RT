@@ -13,7 +13,7 @@ kernel void			cl_main(
     global_id = get_global_id(0);
 
 	screen.x = global_id % camera->width;
-	screen.y = global_id / camera->height;
+	screen.y = global_id / camera->width;
 
 	intersection.ray = camera_build_ray(camera, &screen);
 	intersection_reset(&intersection);

@@ -13,19 +13,21 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_source/cl_object_sphere" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_object_sphere" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_source/cl_radiance" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_radiance" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_source/cl_radiance_explicit" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_radiance_explicit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_source/cl_ray" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_ray" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camera/camera_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/camera/camera_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer_camera_move.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer_camera_move.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_source/cl_camera" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_camera" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_source/cl_main" beforeDir="false" afterPath="$PROJECT_DIR$/cl_source/cl_main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/camera/camera_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/scene/scene_get_space.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_s_key.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal/gui_s_key.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/scene/scene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scene/scene_get_space.c" beforeDir="false" afterPath="$PROJECT_DIR$/scene/scene_get_space.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +140,7 @@
       <workItem from="1565006640132" duration="4390000" />
       <workItem from="1565019286836" duration="7093000" />
       <workItem from="1565075498077" duration="23329000" />
-      <workItem from="1565184444838" duration="28310000" />
+      <workItem from="1565184444838" duration="30084000" />
     </task>
     <servers />
   </component>

@@ -15,6 +15,10 @@ void 				camera_move
 		step = f4_mul(camera->axis_y, 1.f);
 	else if (direction == down)
 		step = f4_mul(camera->axis_y, -1.f);
+	else if (direction == forward)
+		step = f4_mul(camera->axis_z, -1.f);
+	else if (direction == backward)
+		step = f4_mul(camera->axis_z, 1.f);
 	else
 		return ;
 	step = f4_mul(step, length);

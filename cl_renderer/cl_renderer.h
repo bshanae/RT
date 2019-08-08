@@ -110,6 +110,8 @@ typedef enum 			e_cl_update
 
 void					cl_renderer_update
 						(t_cl_renderer *renderer, t_cl_update update);
+void 					cl_renderer_camera_move
+						(t_cl_renderer *renderer, t_camera_direction direction);
 
 void					cl_renderer_render(t_cl_renderer *renderer);
 

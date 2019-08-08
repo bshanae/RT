@@ -29,7 +29,7 @@ void				scene_test(t_scene *scene)
 		object_plane,
 		MATERIAL_WHITE,
 		(RT_F4_API){0., 0., -70.},
-		(RT_F4_API){0., 0., -1.});
+		(RT_F4_API){0., 0., 1.});
 }
 
 int					main(int argc, char **argv)
