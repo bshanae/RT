@@ -26,7 +26,6 @@ static void			radiance_add(
 		if (settings->light_explicit)
 		{
 			explicit = radiance_explicit(scene, intersection, rng_state);
-			//printf("%f %f %f %f\n", explicit.x, explicit.y, explicit.z, explicit.w);
 			radiance += explicit * mask * intersection->material.color;
 		}
 

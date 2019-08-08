@@ -34,12 +34,6 @@ static RT_F4		radiance_explicit(
 		if (intersection_light.object_id != i)
 			continue ;
 
-		if (0)
-		printf("dot({%f %f %f %f}, {%f %f %f %f}) = %f\n",
-			intersection_object->normal.x, intersection_object->normal.y, intersection_object->normal.z, intersection_object->normal.w,
-			intersection_light.ray.direction.x, intersection_light.ray.direction.y, intersection_light.ray.direction.z, intersection_light.ray.direction.w,
-			dot(intersection_object->normal, intersection_light.ray.direction));
-
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;
@@ -48,12 +42,6 @@ static RT_F4		radiance_explicit(
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
-
-		if (0)
-		printf("emission = {%f %f %f %f}, ei = %f, omega = %f\n",
-			scene->objects[i].material.emission.x, scene->objects[i].material.emission.y, scene->objects[i].material.emission.z, scene->objects[i].material.emission.w,
-			emission_intensity,
-			omega);
 	}
 	return (radiance);
 }

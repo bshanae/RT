@@ -32,11 +32,6 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 
 static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
 {
-	if (0)
-	printf("{%f, %f, %f, %f} - {%f, %f, %f, %f} = {%f, %f, %f, %f}\n",
-		intersection->hit.x, intersection->hit.y, intersection->hit.z, intersection->hit.w,
-		((t_object_sphere *)object->data)->position.x, ((t_object_sphere *)object->data)->position.y, ((t_object_sphere *)object->data)->position.z, ((t_object_sphere *)object->data)->position.w,
-		(intersection->hit - ((t_object_sphere *)object->data)->position).x, (intersection->hit - ((t_object_sphere *)object->data)->position).y, (intersection->hit - ((t_object_sphere *)object->data)->position).z, (intersection->hit - ((t_object_sphere *)object->data)->position).w);
 	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
 }
 

@@ -19978,6 +19978,7 @@ CMakeFiles/rt.dir/main.c.o: .././assert/assert.h
 CMakeFiles/rt.dir/main.c.o: .././camera/camera.h
 CMakeFiles/rt.dir/main.c.o: .././cl_renderer/cl_renderer.h
 CMakeFiles/rt.dir/main.c.o: .././color/color.h
+CMakeFiles/rt.dir/main.c.o: .././color/color_list.h
 CMakeFiles/rt.dir/main.c.o: .././f4/f4.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui/gui.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_image/gui_image.h
@@ -19986,6 +19987,7 @@ CMakeFiles/rt.dir/main.c.o: .././gui/gui_names.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_object/gui_object.h
 CMakeFiles/rt.dir/main.c.o: .././gui/gui_object_base/gui_object_base.h
 CMakeFiles/rt.dir/main.c.o: .././material/material.h
+CMakeFiles/rt.dir/main.c.o: .././material/material_list.h
 CMakeFiles/rt.dir/main.c.o: .././object/object_definition.h
 CMakeFiles/rt.dir/main.c.o: .././object/object_interaction.h
 CMakeFiles/rt.dir/main.c.o: .././object_list/object_list.h

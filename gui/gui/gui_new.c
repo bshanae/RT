@@ -5,6 +5,7 @@ t_gui				*gui_new(int *ac, char ***av)
 {
 	t_gui			*new;
 
+	gtk_disable_setlocale();
 	gtk_init(ac, av);
 	new = (t_gui *)malloc(sizeof(t_gui));
 	new->builder = gtk_builder_new_from_file(G_SOURCE);

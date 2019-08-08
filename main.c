@@ -1,33 +1,35 @@
 #include "gui.h"
 #include "cl_renderer.h"
+#include "material_list.h"
 
 void				scene_test(t_scene *scene)
 {
 	object_build(
-		(t_object *)scene_get_space(scene),
-		object_sphere,
-		(t_material){(RT_F4_API){1.}, (RT_F4_API){0.}},
+		scene_get_space(scene), object_sphere,
+		MATERIAL_RED,
 		(RT_F4_API){-10., -10., -55.}, 2.);
 	object_build(
-		(t_object *)scene_get_space(scene),
-		object_sphere,
-		(t_material){(RT_F4_API){1.}, (RT_F4_API){0.}},
+		scene_get_space(scene), object_sphere,
+		MATERIAL_RED,
 		(RT_F4_API){10., -10., -55.}, 2.);
 	object_build(
-		(t_object *)scene_get_space(scene),
-		object_sphere,
-		(t_material){(RT_F4_API){1.}, (RT_F4_API){0.}},
+		scene_get_space(scene), object_sphere,
+		MATERIAL_RED,
 		(RT_F4_API){-10., 10., -55.}, 2.);
 	object_build(
-		(t_object *)scene_get_space(scene),
-		object_sphere,
-		(t_material){(RT_F4_API){1.}, (RT_F4_API){0.}},
+		scene_get_space(scene), object_sphere,
+		MATERIAL_RED,
 		(RT_F4_API){10., 10., -55.}, 2.);
 	object_build(
-		(t_object *)scene_get_space(scene),
-		object_sphere,
-		(t_material){(RT_F4_API){1., 1., 1., 1.}, (RT_F4_API){10., 10., 10., 1.}},
+		scene_get_space(scene), object_sphere,
+		MATERIAL_LIGHT,
 		(RT_F4_API){0., 0., -50.}, 3.);
+	object_build(
+		scene_get_space(scene),
+		object_plane,
+		MATERIAL_WHITE,
+		(RT_F4_API){0., 0., -70.},
+		(RT_F4_API){0., 0., -1.});
 }
 
 int					main(int argc, char **argv)

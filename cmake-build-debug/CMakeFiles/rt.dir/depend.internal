@@ -19979,6 +19979,7 @@ CMakeFiles/rt.dir/main.c.o
  .././camera/camera.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././color/color_list.h
  .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
@@ -19987,6 +19988,7 @@ CMakeFiles/rt.dir/main.c.o
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
  .././material/material.h
+ .././material/material_list.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h

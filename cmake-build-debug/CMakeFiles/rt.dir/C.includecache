@@ -72,6 +72,12 @@ time.h
 
 .././color/color.h
 
+.././color/color_list.h
+rt_cl_include.h
+.././color/rt_cl_include.h
+rt_float.h
+.././color/rt_float.h
+
 .././f4/f4.h
 rt_cl_include.h
 .././f4/rt_cl_include.h
@@ -134,6 +140,10 @@ rt_cl_include.h
 rt_float.h
 .././material/rt_float.h
 
+.././material/material_list.h
+color_list.h
+.././material/color_list.h
+
 .././object/object_definition.h
 rt_parameters.h
 .././object/rt_parameters.h
@@ -189,6 +199,8 @@ gui.h
 /Users/Vladimir/workspace/21_ray_tracer/gui.h
 cl_renderer.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer.h
+material_list.h
+/Users/Vladimir/workspace/21_ray_tracer/material_list.h
 
 /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h
