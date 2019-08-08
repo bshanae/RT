@@ -2,6 +2,8 @@
 
 static void			cl_renderer_run_queue(t_cl_renderer *renderer)
 {
+	renderer->data_host.settings.sample_count++;
+	cl_renderer_update(renderer, update_settings);
 	renderer->error =
 		clEnqueueNDRangeKernel(renderer->queue, renderer->kernel, 1,
 		 NULL, &renderer->queue_length, NULL, 0, NULL, NULL);

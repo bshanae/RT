@@ -1,19 +1,19 @@
 #ifndef OBJECT_DATA_H
 # define OBJECT_DATA_H
 
-# include "cl_include.h"
-# include "cl_float.h"
+# include "rt_cl_include.h"
+# include "rt_float.h"
 
 typedef struct		s_object_sphere
 {
-	API_FLOAT4		position;
-	FLOAT			radius;
+	RT_F4_API		position;
+	RT_F			radius;
 }					t_object_sphere;
 
 typedef struct		s_object_plane
 {
-	API_FLOAT4		position;
-	API_FLOAT4		normal;
+	RT_F4_API		position;
+	RT_F4_API		normal;
 }					t_object_plane;
 
 #endif

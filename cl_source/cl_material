@@ -1,5 +1,5 @@
 typedef struct 		s_material
 {
-	FLOAT4			color;
-	FLOAT4			emission;
+	RT_F4			color;
+	RT_F4			emission;
 }					t_material;

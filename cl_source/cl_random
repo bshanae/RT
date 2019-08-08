@@ -1,0 +1,9 @@
+static RT_F			rng_xor(global unsigned int *state)
+{
+	unsigned int x = *state;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+	*state = x;
+    return (x / 4294967296.0f);
+}

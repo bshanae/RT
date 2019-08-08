@@ -40,8 +40,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/object/object_build.c.o"
   "CMakeFiles/rt.dir/object_list/sphere.c.o"
   "CMakeFiles/rt.dir/object_list/plane.c.o"
+  "CMakeFiles/rt.dir/f4/f4_add.c.o"
+  "CMakeFiles/rt.dir/f4/f4_sub.c.o"
+  "CMakeFiles/rt.dir/f4/f4_mul.c.o"
   "CMakeFiles/rt.dir/camera/camera_new.c.o"
   "CMakeFiles/rt.dir/camera/camera_delete.c.o"
+  "CMakeFiles/rt.dir/camera/camera_move.c.o"
   "rt.pdb"
   "rt"
 )

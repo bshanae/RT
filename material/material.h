@@ -1,13 +1,13 @@
 #ifndef MATERIAL_H
 # define MATERIAL_H
 
-# include "cl_include.h"
-# include "cl_float.h"
+# include "rt_cl_include.h"
+# include "rt_float.h"
 
 typedef struct 		s_material
 {
-	API_FLOAT4		color;
-	API_FLOAT4		emission;
+	RT_F4_API		color;
+	RT_F4_API		emission;
 }					t_material;
 
 #endif

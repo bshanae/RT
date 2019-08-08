@@ -1,8 +1,8 @@
-#ifndef RENDERER_H
-# define RENDERER_H
+#ifndef CL_RENDERER_H
+# define CL_RENDERER_H
 
-# include "cl_float.h"
-# include "cl_compilation.h"
+# include "rt_float.h"
+# include "rt_cl_compilation.h"
 
 # include "assert.h"
 # include "gui_image.h"
@@ -16,9 +16,12 @@
 typedef struct 			s_cl_settings
 {
 	int					sample_count;
+	int					sample_limit;
 	int 				sample_depth;
 	int					russian_depth;
 	int					srgb;
+	int					light_pb;
+	int 				light_explicit;
 }						t_cl_settings;
 
 typedef struct 			s_cl_program
@@ -46,7 +49,7 @@ typedef	struct 			s_cl_data_host
 	t_scene				*scene;
 	t_color				*image;
 	t_cl_settings		settings;
-	unsigned int		rng_seed;
+	unsigned int		rng_state;
 }						t_cl_data_host;
 
 typedef	struct 			s_cl_data_device
@@ -56,7 +59,7 @@ typedef	struct 			s_cl_data_device
 	cl_mem				image;
 	cl_mem 				settings;
 	cl_mem				sample_store;
-	cl_mem 				rng_seed;
+	cl_mem 				rng_state;
 }						t_cl_data_device;
 
 typedef struct 			s_cl_flags
@@ -109,13 +112,5 @@ void					cl_renderer_update
 						(t_cl_renderer *renderer, t_cl_update update);
 
 void					cl_renderer_render(t_cl_renderer *renderer);
-
-typedef enum 			 e_cl_direction
-{
-	direction_left,
-	direction_right,
-	direction_up,
-	direction_down
-}						t_cl_direction;
 
 #endif

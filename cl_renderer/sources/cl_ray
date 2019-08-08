@@ -1,8 +1,0 @@
-#include "cl_float.h"
-
-typedef	struct		s_ray
-{
-	FLOAT4			origin;
-	FLOAT4			direction;
-	FLOAT 			t;
-}					t_ray;

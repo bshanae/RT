@@ -3,7 +3,7 @@
 
 # include "libft_standart.h"
 # include "gui_names.h"
-# include "options.h"
+# include "rt_parameters.h"
 
 # include "color.h"
 

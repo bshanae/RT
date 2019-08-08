@@ -3,17 +3,28 @@
 
 CMakeFiles/rt.dir/camera/camera_delete.c.o
  ../../21_libft/includes/libft_standart.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
- .././options.h
+ .././f4/f4.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  /Users/Vladimir/workspace/21_ray_tracer/camera/camera.h
  /Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c
+CMakeFiles/rt.dir/camera/camera_move.c.o
+ ../../21_libft/includes/libft_standart.h
+ .././f4/f4.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
+ .././ray/ray.h
+ /Users/Vladimir/workspace/21_ray_tracer/camera/camera.h
+ /Users/Vladimir/workspace/21_ray_tracer/camera/camera_move.c
 CMakeFiles/rt.dir/camera/camera_new.c.o
  ../../21_libft/includes/libft_standart.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
- .././options.h
+ .././f4/f4.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  /Users/Vladimir/workspace/21_ray_tracer/camera/camera.h
  /Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c
@@ -23,18 +34,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_camera_move.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -666,18 +677,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_kernel.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -1309,18 +1320,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_program.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -1952,18 +1963,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_create_queue.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -2595,18 +2606,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_delete.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -3238,18 +3249,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_context.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -3881,18 +3892,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_data.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -4524,18 +4535,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_init_device.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -5167,18 +5178,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_log.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -5810,18 +5821,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_new.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -6453,18 +6464,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_render.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -7096,18 +7107,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_set_arguments.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -7739,18 +7750,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_names.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer.h
@@ -8376,28 +8387,43 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.o
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-version-macros.h
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango.h
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pangocairo.h
+CMakeFiles/rt.dir/f4/f4_add.c.o
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4_add.c
+CMakeFiles/rt.dir/f4/f4_mul.c.o
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4_mul.c
+CMakeFiles/rt.dir/f4/f4_sub.c.o
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4.h
+ /Users/Vladimir/workspace/21_ray_tracer/f4/f4_sub.c
 CMakeFiles/rt.dir/gui/gui/gui_connect_renderer.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui.h
@@ -9029,22 +9055,22 @@ CMakeFiles/rt.dir/gui/gui/gui_delete.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui.h
@@ -9676,22 +9702,22 @@ CMakeFiles/rt.dir/gui/gui/gui_loop.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui.h
@@ -10323,23 +10349,23 @@ CMakeFiles/rt.dir/gui/gui/gui_new.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
  .././gui/gui_signal/gui_signal.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui.h
@@ -10969,7 +10995,7 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././color/color.h
  .././gui/gui_names.h
- .././options.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
@@ -11597,7 +11623,7 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././color/color.h
  .././gui/gui_names.h
- .././options.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
@@ -12230,14 +12256,14 @@ CMakeFiles/rt.dir/gui/gui_list/gui_list_new.c.o
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c
 CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././gui/gui_names.h
  .././gui/gui_object_base/gui_object_base.h
  .././material/material.h
  .././object/object_definition.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
@@ -12862,14 +12888,14 @@ CMakeFiles/rt.dir/gui/gui_object/gui_object_delete.c.o
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango.h
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pangocairo.h
 CMakeFiles/rt.dir/gui/gui_object/gui_object_new.c.o
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././gui/gui_names.h
  .././gui/gui_object_base/gui_object_base.h
  .././material/material.h
  .././object/object_definition.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
@@ -13498,15 +13524,15 @@ CMakeFiles/rt.dir/gui/gui_object_base/gui_object_base_init.c.o
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
  .././material/material.h
  .././object/object_definition.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
@@ -14130,15 +14156,15 @@ CMakeFiles/rt.dir/gui/gui_object_list/gui_object_plane.c.o
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango.h
  /usr/local/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pangocairo.h
 CMakeFiles/rt.dir/gui/gui_object_list/gui_object_sphere.c.o
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
  .././material/material.h
  .././object/object_definition.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
  /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
@@ -14767,23 +14793,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_key.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c
@@ -15415,23 +15441,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_add.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c
@@ -16063,23 +16089,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_obj_selected.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c
@@ -16711,23 +16737,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_norm.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c
@@ -17359,23 +17385,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_plane_pos.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c
@@ -18007,23 +18033,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_pos.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c
@@ -18655,23 +18681,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_s_sphere_rad.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c
@@ -19303,23 +19329,23 @@ CMakeFiles/rt.dir/gui/gui_signal/gui_signal_connect.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal.h
@@ -19951,23 +19977,23 @@ CMakeFiles/rt.dir/main.c.o
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
  .././camera/camera.h
- .././cl_parameters/cl_compilation.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././cl_renderer/cl_renderer.h
  .././color/color.h
+ .././f4/f4.h
  .././gui/gui/gui.h
  .././gui/gui_image/gui_image.h
  .././gui/gui_list/gui_list.h
  .././gui/gui_names.h
  .././gui/gui_object/gui_object.h
  .././gui/gui_object_base/gui_object_base.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  .././ray/ray.h
  .././scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/main.c
@@ -20597,11 +20623,11 @@ CMakeFiles/rt.dir/object/object_build.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././material/material.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/object/object_build.c
  /Users/Vladimir/workspace/21_ray_tracer/object/object_definition.h
  /Users/Vladimir/workspace/21_ray_tracer/object/object_interaction.h
@@ -20610,40 +20636,39 @@ CMakeFiles/rt.dir/object_list/plane.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/object_list/plane.c
 CMakeFiles/rt.dir/object_list/sphere.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/object_list/sphere.c
 CMakeFiles/rt.dir/scene/scene_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene_delete.c
 CMakeFiles/rt.dir/scene/scene_get_space.c.o
@@ -20651,14 +20676,13 @@ CMakeFiles/rt.dir/scene/scene_get_space.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene_get_space.c
 CMakeFiles/rt.dir/scene/scene_new.c.o
@@ -20666,13 +20690,12 @@ CMakeFiles/rt.dir/scene/scene_new.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././assert/assert.h
- .././cl_parameters/cl_float.h
- .././cl_parameters/cl_include.h
- .././light/light.h
  .././material/material.h
  .././object/object_definition.h
  .././object/object_interaction.h
  .././object_list/object_list.h
- .././options.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene.h
  /Users/Vladimir/workspace/21_ray_tracer/scene/scene_new.c

@@ -66,8 +66,7 @@
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/."/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_parameters"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
@@ -82,6 +81,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./scene"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./f4"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
@@ -130,8 +130,7 @@
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/."/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_parameters"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
@@ -146,6 +145,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object_list"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./scene"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./f4"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./ray"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
@@ -167,6 +167,9 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_move.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c">
@@ -209,6 +212,15 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_update.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_add.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_mul.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">

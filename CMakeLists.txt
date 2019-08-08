@@ -3,9 +3,7 @@ project(rt C)
 
 set(CMAKE_CFLAGS "${CMAKE_CFALGS} -Wall -Wextra")
 
-set(BREW
-	/usr/local/
-)
+set(BREW /usr/local/)
 
 set(GTK_INCLUDES
 	${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
@@ -44,8 +42,7 @@ set(GTK_LINKS
 include_directories(
 	${GTK_INCLUDES}
 	../21_libft/includes/
-	./
-	./cl_parameters/
+	./parameters/
 	./gui/
 	./gui/gui/
 	./gui/gui_scene/
@@ -60,6 +57,7 @@ include_directories(
 	./object_list/
 	./scene/
 	./cl_renderer/
+	./f4/
 	./camera/
 	./ray/
 	./intersection/
@@ -157,9 +155,15 @@ set(SOURCE_OBJECT
 	./object_list/plane.c
 	./gui/gui_signal/gui_s_key.c)
 
+set(SOURCE_F4
+	./f4/f4_add.c
+	./f4/f4_sub.c
+	./f4/f4_mul.c)
+
 set(SOURCE_CAMERA
 	./camera/camera_new.c
-	./camera/camera_delete.c)
+	./camera/camera_delete.c
+	./camera/camera_move.c)
 
 set(SOURCE_RAY
 	./ray/ray)
@@ -170,5 +174,6 @@ add_executable(rt
 	${SOURCE_CL_RENDERER}
 	${SOURCE_SCENE}
 	${SOURCE_OBJECT}
+	${SOURCE_F4}
 	${SOURCE_CAMERA}
 	${SOURCE_ASSERT})

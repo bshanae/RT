@@ -13,6 +13,6 @@ void				object_build(
 		object_sphere_build(space, &args);
 	else if (type == object_plane)
 		object_plane_build(space, &args);
-
+	space->material = material;
 	va_end(args);
 }

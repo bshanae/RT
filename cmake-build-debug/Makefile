@@ -150,6 +150,33 @@ camera/camera_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_delete.c.s
 .PHONY : camera/camera_delete.c.s
 
+camera/camera_move.o: camera/camera_move.c.o
+
+.PHONY : camera/camera_move.o
+
+# target to build an object file
+camera/camera_move.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_move.c.o
+.PHONY : camera/camera_move.c.o
+
+camera/camera_move.i: camera/camera_move.c.i
+
+.PHONY : camera/camera_move.i
+
+# target to preprocess a source file
+camera/camera_move.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_move.c.i
+.PHONY : camera/camera_move.c.i
+
+camera/camera_move.s: camera/camera_move.c.s
+
+.PHONY : camera/camera_move.s
+
+# target to generate assembly for a file
+camera/camera_move.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/camera/camera_move.c.s
+.PHONY : camera/camera_move.c.s
+
 camera/camera_new.o: camera/camera_new.c.o
 
 .PHONY : camera/camera_new.o
@@ -527,6 +554,87 @@ cl_renderer/cl_renderer_update.s: cl_renderer/cl_renderer_update.c.s
 cl_renderer/cl_renderer_update.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer_update.c.s
 .PHONY : cl_renderer/cl_renderer_update.c.s
+
+f4/f4_add.o: f4/f4_add.c.o
+
+.PHONY : f4/f4_add.o
+
+# target to build an object file
+f4/f4_add.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_add.c.o
+.PHONY : f4/f4_add.c.o
+
+f4/f4_add.i: f4/f4_add.c.i
+
+.PHONY : f4/f4_add.i
+
+# target to preprocess a source file
+f4/f4_add.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_add.c.i
+.PHONY : f4/f4_add.c.i
+
+f4/f4_add.s: f4/f4_add.c.s
+
+.PHONY : f4/f4_add.s
+
+# target to generate assembly for a file
+f4/f4_add.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_add.c.s
+.PHONY : f4/f4_add.c.s
+
+f4/f4_mul.o: f4/f4_mul.c.o
+
+.PHONY : f4/f4_mul.o
+
+# target to build an object file
+f4/f4_mul.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_mul.c.o
+.PHONY : f4/f4_mul.c.o
+
+f4/f4_mul.i: f4/f4_mul.c.i
+
+.PHONY : f4/f4_mul.i
+
+# target to preprocess a source file
+f4/f4_mul.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_mul.c.i
+.PHONY : f4/f4_mul.c.i
+
+f4/f4_mul.s: f4/f4_mul.c.s
+
+.PHONY : f4/f4_mul.s
+
+# target to generate assembly for a file
+f4/f4_mul.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_mul.c.s
+.PHONY : f4/f4_mul.c.s
+
+f4/f4_sub.o: f4/f4_sub.c.o
+
+.PHONY : f4/f4_sub.o
+
+# target to build an object file
+f4/f4_sub.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_sub.c.o
+.PHONY : f4/f4_sub.c.o
+
+f4/f4_sub.i: f4/f4_sub.c.i
+
+.PHONY : f4/f4_sub.i
+
+# target to preprocess a source file
+f4/f4_sub.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_sub.c.i
+.PHONY : f4/f4_sub.c.i
+
+f4/f4_sub.s: f4/f4_sub.c.s
+
+.PHONY : f4/f4_sub.s
+
+# target to generate assembly for a file
+f4/f4_sub.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/f4/f4_sub.c.s
+.PHONY : f4/f4_sub.c.s
 
 gui/gui/gui_connect_renderer.o: gui/gui/gui_connect_renderer.c.o
 
@@ -1296,6 +1404,9 @@ help:
 	@echo "... camera/camera_delete.o"
 	@echo "... camera/camera_delete.i"
 	@echo "... camera/camera_delete.s"
+	@echo "... camera/camera_move.o"
+	@echo "... camera/camera_move.i"
+	@echo "... camera/camera_move.s"
 	@echo "... camera/camera_new.o"
 	@echo "... camera/camera_new.i"
 	@echo "... camera/camera_new.s"
@@ -1338,6 +1449,15 @@ help:
 	@echo "... cl_renderer/cl_renderer_update.o"
 	@echo "... cl_renderer/cl_renderer_update.i"
 	@echo "... cl_renderer/cl_renderer_update.s"
+	@echo "... f4/f4_add.o"
+	@echo "... f4/f4_add.i"
+	@echo "... f4/f4_add.s"
+	@echo "... f4/f4_mul.o"
+	@echo "... f4/f4_mul.i"
+	@echo "... f4/f4_mul.s"
+	@echo "... f4/f4_sub.o"
+	@echo "... f4/f4_sub.i"
+	@echo "... f4/f4_sub.s"
 	@echo "... gui/gui/gui_connect_renderer.o"
 	@echo "... gui/gui/gui_connect_renderer.i"
 	@echo "... gui/gui/gui_connect_renderer.s"

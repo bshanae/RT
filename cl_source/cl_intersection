@@ -1,11 +1,10 @@
-
-#include "options.h"
+#include "rt_parameters.h"
 
 typedef struct		s_intersection
 {
 	t_ray			ray;
-	FLOAT4			hit;
-	FLOAT4			normal;
+	RT_F4			hit;
+	RT_F4			normal;
 	t_material		material;
 	int 			object_id;
 }					t_intersection;
