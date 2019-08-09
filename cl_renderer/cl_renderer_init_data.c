@@ -9,11 +9,14 @@ static void			cl_renderer_data_size_init(t_cl_renderer *renderer)
 	renderer->data_size.sample_store = sizeof(RT_F4_API)
 		 * renderer->image->width * renderer->image->height;
 	renderer->data_size.settings = sizeof(t_cl_settings);
-	renderer->data_size.rng_state = sizeof(unsigned int);
+	renderer->data_size.rng_state =
+		sizeof(u_int) * renderer->image->width * renderer->image->height;
 }
 
 static void			cl_renderer_data_host_init(t_cl_renderer *renderer)
 {
+	int 			i;
+
 	renderer->data_host.camera =
 			camera_new(&renderer->image->width, &renderer->image->height);
 	renderer->data_host.scene = scene_new();
@@ -25,7 +28,11 @@ static void			cl_renderer_data_host_init(t_cl_renderer *renderer)
 	renderer->data_host.settings.russian_depth = CL_SRGB;
 	renderer->data_host.settings.light_pb = CL_LIGHT_PB;
 	renderer->data_host.settings.light_explicit = CL_LIGHT_EXPLICIT;
-	renderer->data_host.rng_state = time(NULL);
+	i = 0;
+	renderer->data_host.rng_state = malloc(renderer->data_size.rng_state);
+	srand(21);
+	while (i < renderer->image->width * renderer->image->height)
+		renderer->data_host.rng_state[i++] = rand();
 }
 
 static void			cl_renderer_data_device_init(t_cl_renderer *renderer)
@@ -53,7 +60,7 @@ static void			cl_renderer_data_device_init(t_cl_renderer *renderer)
 	renderer->error = clEnqueueWriteBuffer(
 		renderer->queue, renderer->data_device.rng_state,
 		CL_TRUE, 0, renderer->data_size.rng_state,
-		&renderer->data_host.rng_state, 0, NULL, NULL);
+		renderer->data_host.rng_state, 0, NULL, NULL);
 	ASSERT(renderer->error == 0)
 }
 

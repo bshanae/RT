@@ -5,7 +5,7 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_settings *settings,
-					global unsigned int *rng_state)
+					global uint *rng_state)
 {
 	RT_F4			radiance;
 	RT_F4			explicit;

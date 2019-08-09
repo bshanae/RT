@@ -49,7 +49,7 @@ typedef	struct 			s_cl_data_host
 	t_scene				*scene;
 	t_color				*image;
 	t_cl_settings		settings;
-	unsigned int		rng_state;
+	u_int				*rng_state;
 }						t_cl_data_host;
 
 typedef	struct 			s_cl_data_device

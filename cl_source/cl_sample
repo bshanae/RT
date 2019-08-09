@@ -31,7 +31,7 @@ static RT_F4		sampler_transform(RT_F4 *normal, RT_F4 *sample)
 static RT_F4		sample_uniform
 					(RT_F4 *normal,
 					RT_F *cosine,
-					global unsigned int *rng_state)
+					global uint *rng_state)
 {
 	RT_F 			r[2];
 	RT_F4			sample;

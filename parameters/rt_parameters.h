@@ -20,7 +20,6 @@
 #  define INTERSECTION_MIN			0.000001
 #endif
 
-
 # define CL_PATH_DEPTH				1
 # define CL_SAMPLES					2
 # define CL_RUSSIAN_DEPTH			10
@@ -29,5 +28,6 @@
 # define CL_LIGHT_EXPLICIT			1
 
 # define RT_DEBUG					0
+# define RT_DEBUG_QUEUE_LENGTH		2000
 
 #endif

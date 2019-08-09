@@ -20,26 +20,36 @@ typedef struct 			s_cl_settings
 	int 				light_explicit;
 }						t_cl_settings;
 
-static RT_F			rng_hash(global RT_F *state)
+static RT_F			rng_hash(global uint *rng_state)
 {
+	/*
 	RT_F			garbage;
-    return (fract((sin(*state += 0.1) * 43758.5453123), &garbage));
+	RT_F			x;
+
+	x = *state;
+	*state += 1.;
+    return (fract((sin(x) * 43758.5453123), &garbage));
+    */
 }
 
-static RT_F			rng_xr(global unsigned int *state)
+static RT_F			rng_xor(global uint *rng_state)
 {
-	return (rng_hash(state));
-	unsigned int x = *state;
+	int				gi;
+	uint			x;
+
+	gi = get_global_id(0);
+	x = rng_state[gi];
     x ^= x << 13;
     x ^= x >> 17;
     x ^= x << 5;
-	*state = x;
+	rng_state[gi] = x;
+	printf("%u\n", x);
     return (x / 4294967296.0f);
 }
 
-static RT_F			rng(global unsigned int *state)
+static RT_F			rng(global uint *rng_state)
 {
-
+	return (rng_xor(rng_state));
 }
 
 #include "rt_float.h"
@@ -178,7 +188,7 @@ static RT_F4					sphere_normal(constant t_object *object, t_intersection *inters
 	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(constant t_object *object, global unsigned int *rng_state)
+static RT_F4					sphere_random(constant t_object *object, global uint *rng_state)
 {
 	t_object_sphere				*data;
 	RT_F 						theta;
@@ -294,7 +304,7 @@ static RT_F4		sampler_transform(RT_F4 *normal, RT_F4 *sample)
 static RT_F4		sample_uniform
 					(RT_F4 *normal,
 					RT_F *cosine,
-					global unsigned int *rng_state)
+					global t_cl_rng_state *rng_state)
 {
 	RT_F 			r[2];
 	RT_F4			sample;
@@ -318,7 +328,7 @@ static RT_F4		sample_uniform
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
-					global unsigned int *rng_state)
+					global uint *rng_state)
 {
 	t_intersection	intersection_light;
 	RT_F4			radiance;
@@ -370,7 +380,7 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_settings *settings,
-					global unsigned int *rng_state)
+					global uint *rng_state)
 {
 	RT_F4			radiance;
 	RT_F4			explicit;
@@ -416,13 +426,15 @@ kernel void			cl_main(
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_settings *settings,
-					global unsigned int *rng_state)
+					global uint *rng_state)
 {
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
 
     global_id = get_global_id(0);
+
+    printf("{%u}\n", rng_state[global_id]);
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
