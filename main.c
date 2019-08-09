@@ -23,7 +23,7 @@ void				scene_test(t_scene *scene)
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){0., 0., -50.}, 3.);
+		(RT_F4_API){0., 0., -40.}, 3.);
 	object_build(
 		scene_get_space(scene),
 		object_plane,

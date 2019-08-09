@@ -1,6 +1,8 @@
 #ifndef OPTIONS_H
 # define OPTIONS_H
 
+# include "rt_float.h"
+
 # define OBJECT_DATA_CAPACITY		32
 
 # define SCENE_OBJECTS_CAPACITY		16
@@ -8,8 +10,16 @@
 # define GI_DEFAULT_WIDTH			480
 # define GI_DEFAULT_HEIGHT			480
 
-# define INTERSECTION_MIN			0.000001
 # define INTERSECTION_MAX			INFINITY
+
+#ifdef RT_FLOAT
+#  define INTERSECTION_MIN			0.0001
+#endif
+
+#ifdef RT_DOUBLE
+#  define INTERSECTION_MIN			0.000001
+#endif
+
 
 # define CL_PATH_DEPTH				1
 # define CL_SAMPLES					2

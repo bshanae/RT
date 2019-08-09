@@ -1,3 +1,13 @@
+static RT_F			rng_hash(global RT_F *state)
+{
+	RT_F			garbage;
+	RT_F			x, y;
+
+	x = *state;
+	*state += 1.;
+    return (fract((sin(x) * 43758.5453123), &garbage));
+}
+
 static RT_F			rng_xor(global unsigned int *state)
 {
 	unsigned int x = *state;
@@ -6,4 +16,9 @@ static RT_F			rng_xor(global unsigned int *state)
     x ^= x << 5;
 	*state = x;
     return (x / 4294967296.0f);
+}
+
+static RT_F			rng(global unsigned int *state)
+{
+	return (rng_xor(state));
 }

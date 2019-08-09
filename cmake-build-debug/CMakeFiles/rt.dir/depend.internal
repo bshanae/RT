@@ -10995,6 +10995,7 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././color/color.h
  .././gui/gui_names.h
+ .././parameters/rt_float.h
  .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c
@@ -11623,6 +11624,7 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././color/color.h
  .././gui/gui_names.h
+ .././parameters/rt_float.h
  .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image.h
  /Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c

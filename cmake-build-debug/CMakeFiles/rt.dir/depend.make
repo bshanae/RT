@@ -10994,6 +10994,7 @@ CMakeFiles/rt.dir/gui/gui/gui_new.c.o: /usr/local/Cellar/pango/1.42.4_2/include/
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: .././color/color.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: .././gui/gui_names.h
+CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: .././parameters/rt_float.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: .././parameters/rt_parameters.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: ../gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: ../gui/gui_image/gui_image_delete.c
@@ -11622,6 +11623,7 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o: /usr/local/Cellar/pango/1.
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: ../../21_libft/includes/libft_standart.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: .././color/color.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: .././gui/gui_names.h
+CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: .././parameters/rt_float.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: .././parameters/rt_parameters.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: ../gui/gui_image/gui_image.h
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o: ../gui/gui_image/gui_image_new.c
