@@ -4,7 +4,7 @@ kernel void			cl_main(
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_settings *settings,
-					global uint *rng_state)
+					global ulong *rng_state)
 {
 	int				global_id;
 	int2			screen;

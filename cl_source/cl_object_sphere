@@ -35,7 +35,7 @@ static RT_F4					sphere_normal(constant t_object *object, t_intersection *inters
 	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(constant t_object *object, global uint *rng_state)
+static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
 {
 	t_object_sphere				*data;
 	RT_F 						theta;

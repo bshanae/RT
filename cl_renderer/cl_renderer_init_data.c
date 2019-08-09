@@ -10,7 +10,7 @@ static void			cl_renderer_data_size_init(t_cl_renderer *renderer)
 		 * renderer->image->width * renderer->image->height;
 	renderer->data_size.settings = sizeof(t_cl_settings);
 	renderer->data_size.rng_state =
-		sizeof(u_int) * renderer->image->width * renderer->image->height;
+		sizeof(u_long) * renderer->image->width * renderer->image->height;
 }
 
 static void			cl_renderer_data_host_init(t_cl_renderer *renderer)

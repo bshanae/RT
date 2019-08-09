@@ -1,7 +1,7 @@
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
-					global uint *rng_state)
+					global ulong *rng_state)
 {
 	t_intersection	intersection_light;
 	RT_F4			radiance;
