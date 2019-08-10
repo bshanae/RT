@@ -8,306 +8,286 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt">
-				<Option output="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
-					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
-					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cairo"/>
-					<Add directory="/usr/local/Cellar/libepoxy/1.5.3/include"/>
-					<Add directory="/usr/local/Cellar/pango/1.42.4_2/include/pango-1.0"/>
-					<Add directory="/usr/local/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
-					<Add directory="/usr/local/Cellar/graphite2/1.3.13/include"/>
-					<Add directory="/usr/local/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/usr/local/Cellar/atk/2.32.0_1/include/atk-1.0"/>
-					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cair"/>
-					<Add directory="/usr/local/Cellar/pixman/0.38.4/include/pixman-1"/>
-					<Add directory="/usr/local/Cellar/fontconfig/2.13.1/include"/>
-					<Add directory="/usr/local/opt/freetype/include/freetype2"/>
-					<Add directory="/usr/local/Cellar/libpng/1.6.37/include/libpng16"/>
-					<Add directory="/usr/local/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include/glib-2.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
-					<Add directory="/usr/local/opt/gettext/include"/>
-					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./color"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./light"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object_list"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./f4"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./camera"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./ray"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./assert"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./material"/>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./parameters"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_edit"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/object_add"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/object_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/ray"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/intersection"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/material"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt/fast">
-				<Option output="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
-					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
-					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cairo"/>
-					<Add directory="/usr/local/Cellar/libepoxy/1.5.3/include"/>
-					<Add directory="/usr/local/Cellar/pango/1.42.4_2/include/pango-1.0"/>
-					<Add directory="/usr/local/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
-					<Add directory="/usr/local/Cellar/graphite2/1.3.13/include"/>
-					<Add directory="/usr/local/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/usr/local/Cellar/atk/2.32.0_1/include/atk-1.0"/>
-					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cair"/>
-					<Add directory="/usr/local/Cellar/pixman/0.38.4/include/pixman-1"/>
-					<Add directory="/usr/local/Cellar/fontconfig/2.13.1/include"/>
-					<Add directory="/usr/local/opt/freetype/include/freetype2"/>
-					<Add directory="/usr/local/Cellar/libpng/1.6.37/include/libpng16"/>
-					<Add directory="/usr/local/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/include/glib-2.0"/>
-					<Add directory="/usr/local/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
-					<Add directory="/usr/local/opt/gettext/include"/>
-					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_base"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_list"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./color"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./light"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./object_list"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./scene"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./f4"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./camera"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./ray"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./intersection"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./open_cl_manager"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./assert"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./material"/>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./parameters"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_object_edit"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/object_add"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/object"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/object_list"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/scene"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/camera"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/ray"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/intersection"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/material"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_move.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_move.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/camera/camera_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_camera_move.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_move.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_kernel.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_create_kernel.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_program.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_create_program.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_create_queue.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_create_queue.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_context.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_init_context.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_data.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_init_data.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_init_device.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_init_device.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_log.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_log.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_render.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_set_arguments.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_set_arguments.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer_update.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_add.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_mul.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/f4/f4_sub.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect_renderer.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/object/object_build.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/object_list/plane.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/object_list/sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_list/gui_list_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_delete.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object/gui_object_new.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_base/gui_object_base_init.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_plane.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_list/gui_object_sphere.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_key.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_sphere_get.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_add.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_universal_get.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_obj_selected.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_norm.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_plane_pos.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_pos.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_s_sphere_rad.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal/gui_signal_connect.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/main.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/object/object_build.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/object_list/plane.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/main.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/object_list/sphere.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/scene/scene_delete.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/scene/scene_get_space.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/scene/scene_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/CMakeLists.txt">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

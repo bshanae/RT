@@ -38,7 +38,7 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	scene_test(gui->renderer->data_host.scene);
-	gui_connect_renderer(gui);
+//	gui_connect_renderer(gui);
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);

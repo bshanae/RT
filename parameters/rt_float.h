@@ -1,13 +1,17 @@
 #ifndef CL_FLOAT_H
 # define CL_FLOAT_H
 
+# include "rt_control.h"
+
 # define _RT_PI			3.14159265358979323846264338327950288
 # define _RT_PI_2		1.57079632679489661923132169163975144
 # define _RT_PI_4		0.785398163397448309615660845819875721
 # define _RT_1_PI		0.318309886183790671537767526745028724
 # define _RT_2_PI		0.636619772367581343075535053490057448
 
-# define RT_FLOAT
+# if !defined RT_FLOAT && !defined RT_DOUBLE
+#  define RT_FLOAT
+# endif
 
 # ifdef RT_FLOAT
 #  define RT_F			float
@@ -40,6 +44,5 @@
 #  define RT_1_PI		_RT_1_PI
 #  define RT_2_PI		_RT_2_PI
 # endif
-
 
 #endif

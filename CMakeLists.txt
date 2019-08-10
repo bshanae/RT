@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(CMAKE_CFLAGS "${CMAKE_CFALGS} -Wall -Wextra")
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 set(BREW /usr/local/)
 
@@ -40,37 +41,34 @@ set(GTK_LINKS
 
 
 include_directories(
-	${GTK_INCLUDES}
+	#${GTK_INCLUDES}
+	${GTK3_INCLUDE_DIRS}
 	../21_libft/includes/
 	./parameters/
 	./gui/
 	./gui/gui/
+	./gui/gui_camera/
+	./gui/gui_scene_edit/
+	./gui/gui_object_edit/
+	./gui/gui_scene_add/
+	./gui/object_add/
 	./gui/gui_scene/
-	./gui/gui_object/
-	./gui/gui_object_base/
-	./gui/gui_list/
+	./gui/gui_settings/
 	./gui/gui_image/
-	./gui/gui_signal/
-	./color/
-	./light/
-	./object/
-	./object_list/
-	./scene/
-	./cl_renderer/
-	./f4/
-	./camera/
-	./ray/
-	./intersection/
-	./open_cl_manager/
-	./assert
-	./material)
+	./cl_renderer/cl_renderer/
+	./cl_renderer/color/
+	./cl_renderer/light/
+	./cl_renderer/object/
+	./cl_renderer/object_list/
+	./cl_renderer/scene/
+	./cl_renderer/f4/
+	./cl_renderer/camera/
+	./cl_renderer/ray/
+	./cl_renderer/intersection/
+	./cl_renderer/assert
+	./cl_renderer/material)
 
-link_directories(
-	${GTK_LINKS}
-	../21_libft/)
-
-link_libraries(
-	"ft"
+set(GTK_LIBS
 	"gtk-3"
 	"gdk-3"
 	"pangocairo-1.0"
@@ -85,8 +83,21 @@ link_libraries(
 	"intl"
 	"-framework Cocoa"
 	"-framework Carbon"
-	"-framework CoreGraphics"
-	"-framework OpenCL")
+	"-framework CoreGraphics")
+
+link_directories(
+	#${GTK_LINKS}
+	${GTK3_LIBRARY_DIRS}
+	../21_libft/)
+
+add_definitions(
+	${GTK3_CFLAGS_OTHER})
+
+link_libraries(
+	"ft"
+	#"-framework OpenCL"
+	${GTK3_LIBRARIES}
+	"OpenCL")
 
 set(SOURCE_MAIN
 	./main.c)
@@ -94,86 +105,96 @@ set(SOURCE_MAIN
 set(SOURCE_GUI_GUI
 	./gui/gui/gui_new.c
 	./gui/gui/gui_delete.c
-	./gui/gui/gui_connect_renderer.c
 	./gui/gui/gui_loop.c)
 
-set(SOURCE_GUI_LIST
-	./gui/gui_list/gui_list_new.c
-	./gui/gui_list/gui_list_delete.c)
+set(SOURCE_GUI_CAMERA
+	./gui/gui_camera/gui_camera_new.c
+	./gui/gui_camera/gui_camera_delete.c)
 
-set(SOURCE_GUI_OBJECT
-	./gui/gui_object/gui_object_new.c
-	./gui/gui_object/gui_object_delete.c
-	./gui/gui_object_base/gui_object_base_init.c
-	./gui/gui_object_list/gui_object_sphere.c
-	./gui/gui_object_list/gui_object_plane.c)
+set(SOURCE_GUI_OBJECT_EDIT
+	./gui/gui_object_edit/gui_object_edit_universal_get.c
+	./gui/gui_object_edit/gui_object_edit_sphere_get.c)
+
+set(SOURCE_GUI_SCENE_EDIT
+	./gui/gui_scene_edit/gui_scene_edit_new.c
+	./gui/gui_scene_edit/gui_scene_edit_delete.c)
+
+set(SOURCE_GUI_SCENE_ADD
+	./gui/gui_scene_add/gui_scene_add_new.c
+	./gui/gui_scene_add/gui_scene_add_delete.c)
+
+set(SOURCE_GUI_SCENE
+	./gui/gui_scene/gui_scene_new.c
+	./gui/gui_scene/gui_scene_delete.c)
+
+set(SOURCE_GUI_SETTINGS
+	./gui/gui_settings/gui_settings_new.c
+	./gui/gui_settings/gui_settings_delete.c)
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c
 	./gui/gui_image/gui_image_delete.c)
 
-set(SOURCE_GUI_SIGNAL
-	./gui/gui_signal/gui_signal_connect.c
-	./gui/gui_signal/gui_s_obj_selected.c
-	./gui/gui_signal/gui_s_sphere_pos.c
-	./gui/gui_signal/gui_s_key.c
-	./gui/gui_signal/gui_s_sphere_rad.c
-	./gui/gui_signal/gui_s_plane_pos.c
-	./gui/gui_signal/gui_s_plane_norm.c
-	./gui/gui_signal/gui_s_obj_add.c)
+set(SOURCE_GUI_SIGNAL)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
-	${SOURCE_GUI_LIST}
-	${SOURCE_GUI_OBJECT}
+	${SOURCE_GUI_CAMERA}
+	${SOURCE_GUI_OBJECT_EDIT}
+	${SOURCE_GUI_SCENE_EDIT}
+	${SOURCE_GUI_SCENE_ADD}
+	${SOURCE_GUI_SCENE}
+	${SOURCE_GUI_SETTINGS}
 	${SOURCE_GUI_IMAGE}
 	${SOURCE_GUI_SIGNAL})
 
-set(SOURCE_CL_RENDERER
-	./cl_renderer/cl_renderer_new.c
-	./cl_renderer/cl_renderer_delete.c
-	./cl_renderer/cl_renderer_init_device.c
-	./cl_renderer/cl_renderer_init_context.c
-	./cl_renderer/cl_renderer_create_program.c
-	./cl_renderer/cl_renderer_create_queue.c
-	./cl_renderer/cl_renderer_create_kernel.c
-	./cl_renderer/cl_renderer_init_data.c
-	./cl_renderer/cl_renderer_set_arguments.c
-	./cl_renderer/cl_renderer_render.c
-	./cl_renderer/cl_renderer_log.c
-	./cl_renderer/cl_renderer_update.c
-	./cl_renderer/cl_renderer_camera_move.c)
+set(SOURCE_CL_RENDERER_
+	./cl_renderer/cl_renderer/cl_renderer_new.c
+	./cl_renderer/cl_renderer/cl_renderer_delete.c
+	./cl_renderer/cl_renderer/cl_renderer_init_device.c
+	./cl_renderer/cl_renderer/cl_renderer_init_context.c
+	./cl_renderer/cl_renderer/cl_renderer_create_program.c
+	./cl_renderer/cl_renderer/cl_renderer_create_queue.c
+	./cl_renderer/cl_renderer/cl_renderer_create_kernel.c
+	./cl_renderer/cl_renderer/cl_renderer_init_data.c
+	./cl_renderer/cl_renderer/cl_renderer_set_arguments.c
+	./cl_renderer/cl_renderer/cl_renderer_render.c
+	./cl_renderer/cl_renderer/cl_renderer_log.c
+	./cl_renderer/cl_renderer/cl_renderer_update.c
+	./cl_renderer/cl_renderer/cl_renderer_camera_move.c)
 
 set(SOURCE_SCENE
-	./scene/scene_new.c
-	./scene/scene_get_space.c
-	./scene/scene_delete.c)
+	./cl_renderer/scene/scene_new.c
+	./cl_renderer/scene/scene_get_space.c
+	./cl_renderer/scene/scene_delete.c)
 
 set(SOURCE_OBJECT
-	./object/object_build.c
-	./object_list/sphere.c
-	./object_list/plane.c
-	./gui/gui_signal/gui_s_key.c)
+	./cl_renderer/object/object_build.c
+	./cl_renderer/object_list/sphere.c
+	./cl_renderer/object_list/plane.c)
 
 set(SOURCE_F4
-	./f4/f4_add.c
-	./f4/f4_sub.c
-	./f4/f4_mul.c)
+	./cl_renderer/f4/f4_add.c
+	./cl_renderer/f4/f4_sub.c
+	./cl_renderer/f4/f4_mul.c)
 
 set(SOURCE_CAMERA
-	./camera/camera_new.c
-	./camera/camera_delete.c
-	./camera/camera_move.c)
+	./cl_renderer/camera/camera_new.c
+	./cl_renderer/camera/camera_delete.c
+	./cl_renderer/camera/camera_move.c)
 
 set(SOURCE_RAY
-	./ray/ray)
+	./cl_renderer/ray/ray)
 
-add_executable(rt
-	${SOURCE_MAIN}
-	${SOURCE_GUI}
-	${SOURCE_CL_RENDERER}
+set(SOURCE_CL_RENDERER
+	${SOURCE_CL_RENDERER_}
 	${SOURCE_SCENE}
 	${SOURCE_OBJECT}
 	${SOURCE_F4}
 	${SOURCE_CAMERA}
 	${SOURCE_ASSERT})
+
+add_executable(rt
+	${SOURCE_MAIN}
+	${SOURCE_GUI}
+	${SOURCE_CL_RENDERER})
