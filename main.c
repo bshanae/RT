@@ -1,4 +1,5 @@
 #include "gui.h"
+#include "gui_signal_connect.h"
 #include "cl_renderer.h"
 #include "material_list.h"
 
@@ -37,8 +38,9 @@ int					main(int argc, char **argv)
 	t_gui			*gui;
 
 	gui = gui_new(&argc, &argv);
+	gui_signal_connect_all(gui);
 	scene_test(gui->renderer->data_host.scene);
-//	gui_connect_renderer(gui);
+	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);

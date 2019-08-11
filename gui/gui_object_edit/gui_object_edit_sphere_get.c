@@ -7,6 +7,8 @@ void 				gui_object_edit_sphere_get
 	sphere->box = GTK_BOX(GTK_GET(builder, "object_edit_sphere_box"));
 	sphere->offscreen =
 		GTK_VIEWPORT(GTK_GET(builder, "object_edit_sphere_offscreen"));
+	sphere->name =
+		GTK_ENTRY(GTK_GET(builder, "object_edit_sphere_name"));
 	sphere->position_x =
 		GTK_ENTRY(GTK_GET(builder, "object_edit_sphere_position_x"));
 	sphere->position_y =

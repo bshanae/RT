@@ -14,5 +14,6 @@ void				object_build(
 	else if (type == object_plane)
 		object_plane_build(space, &args);
 	space->material = material;
+	space->name[0] = '\0';
 	va_end(args);
 }

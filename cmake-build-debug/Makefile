@@ -825,6 +825,33 @@ gui/gui/gui_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_delete.c.s
 .PHONY : gui/gui/gui_delete.c.s
 
+gui/gui/gui_load.o: gui/gui/gui_load.c.o
+
+.PHONY : gui/gui/gui_load.o
+
+# target to build an object file
+gui/gui/gui_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.o
+.PHONY : gui/gui/gui_load.c.o
+
+gui/gui/gui_load.i: gui/gui/gui_load.c.i
+
+.PHONY : gui/gui/gui_load.i
+
+# target to preprocess a source file
+gui/gui/gui_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.i
+.PHONY : gui/gui/gui_load.c.i
+
+gui/gui/gui_load.s: gui/gui/gui_load.c.s
+
+.PHONY : gui/gui/gui_load.s
+
+# target to generate assembly for a file
+gui/gui/gui_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.s
+.PHONY : gui/gui/gui_load.c.s
+
 gui/gui/gui_loop.o: gui/gui/gui_loop.c.o
 
 .PHONY : gui/gui/gui_loop.o
@@ -987,6 +1014,60 @@ gui/gui_image/gui_image_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s
 .PHONY : gui/gui_image/gui_image_new.c.s
 
+gui/gui_object_edit/gui_object_edit_plane_get.o: gui/gui_object_edit/gui_object_edit_plane_get.c.o
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.o
+
+# target to build an object file
+gui/gui_object_edit/gui_object_edit_plane_get.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_get.c.o
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.c.o
+
+gui/gui_object_edit/gui_object_edit_plane_get.i: gui/gui_object_edit/gui_object_edit_plane_get.c.i
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.i
+
+# target to preprocess a source file
+gui/gui_object_edit/gui_object_edit_plane_get.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_get.c.i
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.c.i
+
+gui/gui_object_edit/gui_object_edit_plane_get.s: gui/gui_object_edit/gui_object_edit_plane_get.c.s
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.s
+
+# target to generate assembly for a file
+gui/gui_object_edit/gui_object_edit_plane_get.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_get.c.s
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_get.c.s
+
+gui/gui_object_edit/gui_object_edit_plane_load.o: gui/gui_object_edit/gui_object_edit_plane_load.c.o
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.o
+
+# target to build an object file
+gui/gui_object_edit/gui_object_edit_plane_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_load.c.o
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.c.o
+
+gui/gui_object_edit/gui_object_edit_plane_load.i: gui/gui_object_edit/gui_object_edit_plane_load.c.i
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.i
+
+# target to preprocess a source file
+gui/gui_object_edit/gui_object_edit_plane_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_load.c.i
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.c.i
+
+gui/gui_object_edit/gui_object_edit_plane_load.s: gui/gui_object_edit/gui_object_edit_plane_load.c.s
+
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.s
+
+# target to generate assembly for a file
+gui/gui_object_edit/gui_object_edit_plane_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_load.c.s
+.PHONY : gui/gui_object_edit/gui_object_edit_plane_load.c.s
+
 gui/gui_object_edit/gui_object_edit_sphere_get.o: gui/gui_object_edit/gui_object_edit_sphere_get.c.o
 
 .PHONY : gui/gui_object_edit/gui_object_edit_sphere_get.o
@@ -1013,6 +1094,33 @@ gui/gui_object_edit/gui_object_edit_sphere_get.s: gui/gui_object_edit/gui_object
 gui/gui_object_edit/gui_object_edit_sphere_get.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_get.c.s
 .PHONY : gui/gui_object_edit/gui_object_edit_sphere_get.c.s
+
+gui/gui_object_edit/gui_object_edit_sphere_load.o: gui/gui_object_edit/gui_object_edit_sphere_load.c.o
+
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.o
+
+# target to build an object file
+gui/gui_object_edit/gui_object_edit_sphere_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_load.c.o
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.c.o
+
+gui/gui_object_edit/gui_object_edit_sphere_load.i: gui/gui_object_edit/gui_object_edit_sphere_load.c.i
+
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.i
+
+# target to preprocess a source file
+gui/gui_object_edit/gui_object_edit_sphere_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_load.c.i
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.c.i
+
+gui/gui_object_edit/gui_object_edit_sphere_load.s: gui/gui_object_edit/gui_object_edit_sphere_load.c.s
+
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.s
+
+# target to generate assembly for a file
+gui/gui_object_edit/gui_object_edit_sphere_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_load.c.s
+.PHONY : gui/gui_object_edit/gui_object_edit_sphere_load.c.s
 
 gui/gui_object_edit/gui_object_edit_universal_get.o: gui/gui_object_edit/gui_object_edit_universal_get.c.o
 
@@ -1176,6 +1284,60 @@ gui/gui_scene_edit/gui_scene_edit_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_delete.c.s
 
+gui/gui_scene_edit/gui_scene_edit_gen_name.o: gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_gen_name.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
+
+gui/gui_scene_edit/gui_scene_edit_gen_name.i: gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_gen_name.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
+
+gui/gui_scene_edit/gui_scene_edit_gen_name.s: gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_gen_name.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
+
+gui/gui_scene_edit/gui_scene_edit_load.o: gui/gui_scene_edit/gui_scene_edit_load.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_load.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.c.o
+
+gui/gui_scene_edit/gui_scene_edit_load.i: gui/gui_scene_edit/gui_scene_edit_load.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_load.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.c.i
+
+gui/gui_scene_edit/gui_scene_edit_load.s: gui/gui_scene_edit/gui_scene_edit_load.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_load.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_load.c.s
+
 gui/gui_scene_edit/gui_scene_edit_new.o: gui/gui_scene_edit/gui_scene_edit_new.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_new.o
@@ -1256,6 +1418,141 @@ gui/gui_settings/gui_settings_new.s: gui/gui_settings/gui_settings_new.c.s
 gui/gui_settings/gui_settings_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_settings/gui_settings_new.c.s
 .PHONY : gui/gui_settings/gui_settings_new.c.s
+
+gui/gui_signal_connect/gui_signal_connect_all.o: gui/gui_signal_connect/gui_signal_connect_all.c.o
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.o
+
+# target to build an object file
+gui/gui_signal_connect/gui_signal_connect_all.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.c.o
+
+gui/gui_signal_connect/gui_signal_connect_all.i: gui/gui_signal_connect/gui_signal_connect_all.c.i
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.i
+
+# target to preprocess a source file
+gui/gui_signal_connect/gui_signal_connect_all.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.i
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.c.i
+
+gui/gui_signal_connect/gui_signal_connect_all.s: gui/gui_signal_connect/gui_signal_connect_all.c.s
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect/gui_signal_connect_all.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.s
+.PHONY : gui/gui_signal_connect/gui_signal_connect_all.c.s
+
+gui/gui_signal_connect/gui_signal_connect_scene_edit.o: gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.o
+
+# target to build an object file
+gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
+
+gui/gui_signal_connect/gui_signal_connect_scene_edit.i: gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.i
+
+# target to preprocess a source file
+gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i
+
+gui/gui_signal_connect/gui_signal_connect_scene_edit.s: gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
+.PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
+
+gui/gui_signal_x/gui_signal_exit.o: gui/gui_signal_x/gui_signal_exit.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_exit.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_exit.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.o
+.PHONY : gui/gui_signal_x/gui_signal_exit.c.o
+
+gui/gui_signal_x/gui_signal_exit.i: gui/gui_signal_x/gui_signal_exit.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_exit.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_exit.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.i
+.PHONY : gui/gui_signal_x/gui_signal_exit.c.i
+
+gui/gui_signal_x/gui_signal_exit.s: gui/gui_signal_x/gui_signal_exit.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_exit.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_exit.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.s
+.PHONY : gui/gui_signal_x/gui_signal_exit.c.s
+
+gui/gui_signal_x/gui_signal_key.o: gui/gui_signal_x/gui_signal_key.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_key.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_key.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o
+.PHONY : gui/gui_signal_x/gui_signal_key.c.o
+
+gui/gui_signal_x/gui_signal_key.i: gui/gui_signal_x/gui_signal_key.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_key.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_key.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.i
+.PHONY : gui/gui_signal_x/gui_signal_key.c.i
+
+gui/gui_signal_x/gui_signal_key.s: gui/gui_signal_x/gui_signal_key.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_key.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_key.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.s
+.PHONY : gui/gui_signal_x/gui_signal_key.c.s
+
+gui/gui_signal_x/gui_signal_scene_edit_select.o: gui/gui_signal_x/gui_signal_scene_edit_select.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_scene_edit_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.c.o
+
+gui/gui_signal_x/gui_signal_scene_edit_select.i: gui/gui_signal_x/gui_signal_scene_edit_select.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_scene_edit_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.c.i
+
+gui/gui_signal_x/gui_signal_scene_edit_select.s: gui/gui_signal_x/gui_signal_scene_edit_select.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_scene_edit_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_select.c.s
 
 main.o: main.c.o
 
@@ -1371,6 +1668,9 @@ help:
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
+	@echo "... gui/gui/gui_load.o"
+	@echo "... gui/gui/gui_load.i"
+	@echo "... gui/gui/gui_load.s"
 	@echo "... gui/gui/gui_loop.o"
 	@echo "... gui/gui/gui_loop.i"
 	@echo "... gui/gui/gui_loop.s"
@@ -1389,9 +1689,18 @@ help:
 	@echo "... gui/gui_image/gui_image_new.o"
 	@echo "... gui/gui_image/gui_image_new.i"
 	@echo "... gui/gui_image/gui_image_new.s"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_get.o"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_get.i"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_get.s"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_load.o"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_load.i"
+	@echo "... gui/gui_object_edit/gui_object_edit_plane_load.s"
 	@echo "... gui/gui_object_edit/gui_object_edit_sphere_get.o"
 	@echo "... gui/gui_object_edit/gui_object_edit_sphere_get.i"
 	@echo "... gui/gui_object_edit/gui_object_edit_sphere_get.s"
+	@echo "... gui/gui_object_edit/gui_object_edit_sphere_load.o"
+	@echo "... gui/gui_object_edit/gui_object_edit_sphere_load.i"
+	@echo "... gui/gui_object_edit/gui_object_edit_sphere_load.s"
 	@echo "... gui/gui_object_edit/gui_object_edit_universal_get.o"
 	@echo "... gui/gui_object_edit/gui_object_edit_universal_get.i"
 	@echo "... gui/gui_object_edit/gui_object_edit_universal_get.s"
@@ -1410,6 +1719,12 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_load.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_load.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_load.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.s"
@@ -1419,6 +1734,21 @@ help:
 	@echo "... gui/gui_settings/gui_settings_new.o"
 	@echo "... gui/gui_settings/gui_settings_new.i"
 	@echo "... gui/gui_settings/gui_settings_new.s"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_all.o"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_all.i"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_all.s"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.o"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.i"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.s"
+	@echo "... gui/gui_signal_x/gui_signal_exit.o"
+	@echo "... gui/gui_signal_x/gui_signal_exit.i"
+	@echo "... gui/gui_signal_x/gui_signal_exit.s"
+	@echo "... gui/gui_signal_x/gui_signal_key.o"
+	@echo "... gui/gui_signal_x/gui_signal_key.i"
+	@echo "... gui/gui_signal_x/gui_signal_key.s"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_select.o"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_select.i"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_select.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

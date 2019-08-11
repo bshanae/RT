@@ -9,11 +9,13 @@ typedef enum		e_object_type
 	object_light_point,
 	object_light_direct,
 	object_sphere,
-	object_plane
+	object_plane,
+	object_total
 }					t_object_type;
 
 typedef struct		s_object
 {
+	char 			name[32];
 	int				id;
 	t_object_type	type;
 	t_material		material;

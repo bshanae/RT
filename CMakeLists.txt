@@ -55,6 +55,8 @@ include_directories(
 	./gui/gui_scene/
 	./gui/gui_settings/
 	./gui/gui_image/
+	./gui/gui_signal_x/
+	./gui/gui_signal_connect/
 	./cl_renderer/cl_renderer/
 	./cl_renderer/color/
 	./cl_renderer/light/
@@ -113,11 +115,11 @@ set(SOURCE_GUI_CAMERA
 
 set(SOURCE_GUI_OBJECT_EDIT
 	./gui/gui_object_edit/gui_object_edit_universal_get.c
-	./gui/gui_object_edit/gui_object_edit_sphere_get.c)
+	./gui/gui_object_edit/gui_object_edit_sphere_get.c gui/gui_object_edit/gui_object_edit_plane_get.c gui/gui_object_edit/gui_object_edit_plane_load.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
-	./gui/gui_scene_edit/gui_scene_edit_delete.c)
+	./gui/gui_scene_edit/gui_scene_edit_delete.c gui/gui_scene_edit/gui_scene_edit_load.c gui/gui_scene_edit/gui_scene_edit_gen_name.c gui/gui_object_edit/gui_object_edit_sphere_load.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -135,7 +137,11 @@ set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c
 	./gui/gui_image/gui_image_delete.c)
 
-set(SOURCE_GUI_SIGNAL)
+set(SOURCE_GUI_SIGNAL_X
+	./gui/gui_signal_x/gui_signal_exit.c gui/gui_signal_x/gui_signal_key.c gui/gui_signal_x/gui_signal_scene_edit_select.c)
+
+set(SOURCE_GUI_SIGNAL_CONNECT
+	gui/gui_signal_connect/gui_signal_connect_all.c gui/gui_signal_connect/gui_signal_connect_scene_edit.c gui/gui_signal_connect/gui_signal_connect_macro.h)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
@@ -146,7 +152,8 @@ set(SOURCE_GUI
 	${SOURCE_GUI_SCENE}
 	${SOURCE_GUI_SETTINGS}
 	${SOURCE_GUI_IMAGE}
-	${SOURCE_GUI_SIGNAL})
+	${SOURCE_GUI_SIGNAL_X}
+	${SOURCE_GUI_SIGNAL_CONNECT} gui/gui/gui_load.c)
 
 set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_new.c

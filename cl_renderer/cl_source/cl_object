@@ -10,6 +10,7 @@ typedef enum		e_object_type
 
 typedef struct		s_object
 {
+	char 			name[32];
 	int				id;
 	t_object_type	type;
 	t_material		material;

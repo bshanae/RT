@@ -62,6 +62,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal_x"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal_connect"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
@@ -122,6 +124,8 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal_x"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_signal_connect"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
@@ -236,6 +240,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_load.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c">
 			<Option target="rt"/>
 		</Unit>
@@ -254,7 +261,16 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_plane_get.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_plane_load.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_sphere_get.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_sphere_load.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_object_edit/gui_object_edit_universal_get.c">
@@ -275,6 +291,12 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_load.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
 			<Option target="rt"/>
 		</Unit>
@@ -282,6 +304,24 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/main.c">
