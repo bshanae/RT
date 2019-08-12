@@ -2,6 +2,7 @@
 # define RT_PARAMETERS_H
 
 # define GUI_SOURCE					"./gui/build/build.glade"
+# define GUI_GET					gtk_builder_get_object
 
 # define GUI_DEFAULT_WIDTH			480
 # define GUI_DEFAULT_HEIGHT			480

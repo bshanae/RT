@@ -14,9 +14,11 @@
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_build.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_list/object_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_list/plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_plane.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_list/sphere.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_sphere.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
@@ -36,8 +38,8 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_set_arguments.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_set_arguments.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_update.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/plane.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/sphere.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/sphere.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/plane.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_list/sphere.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" afterDir="false" />
@@ -46,14 +48,26 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_get.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_get.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_universal_get.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_universal_get.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_get.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_plane_load.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_get.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_sphere_load.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_edit/gui_object_edit_universal_get.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_load.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" afterDir="false" />
@@ -61,26 +75,37 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/build/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/build/build.glade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_delete.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/build/old_build.glade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui/gui_load.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_load.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui/gui_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/old_gui_connect_renderer.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_sphere_get.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_sphere_get.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_plane_get.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_plane_load.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_sphere_get.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_sphere_load.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_edit/gui_object_edit_universal_get.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_new.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_gen_name.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_gen_name.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_load.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_update.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal/gui_signal.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_x.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_list/gui_list.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_list/gui_list_delete.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_list/gui_list_new.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object/old_gui_object.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object/old_gui_object_delete.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object/old_gui_object_new.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object_base/gui_object_base.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object_base/gui_object_base_init.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object_list/gui_object_plane.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/old_gui_object_list/gui_object_sphere.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect_all.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect_all.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect_scene_edit.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_connect/gui_signal_connect_scene_edit.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_select.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_select.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_x.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_key.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_obj_add.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_obj_selected.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_plane_norm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_plane_pos.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_sphere_pos.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_s_sphere_rad.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_signal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/old_gui_signal/gui_signal_connect.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,15 +154,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_x" />
       <recent name="$PROJECT_DIR$/gui/gui_names" />
       <recent name="$PROJECT_DIR$/gui/gui_object_edit" />
       <recent name="$PROJECT_DIR$/cl_renderer" />
       <recent name="$PROJECT_DIR$/gui/build" />
-      <recent name="$PROJECT_DIR$/gui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,7 +231,12 @@
       <workItem from="1565432605123" duration="981000" />
       <workItem from="1565434255578" duration="4277000" />
       <workItem from="1565443080847" duration="8356000" />
-      <workItem from="1565513676064" duration="9512000" />
+      <workItem from="1565513676064" duration="9810000" />
+      <workItem from="1565525972170" duration="5071000" />
+      <workItem from="1565531281836" duration="5575000" />
+      <workItem from="1565599693590" duration="2089000" />
+      <workItem from="1565603211628" duration="6329000" />
+      <workItem from="1565610160374" duration="5343000" />
     </task>
     <servers />
   </component>

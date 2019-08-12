@@ -11,7 +11,7 @@ static const char	*gui_scene_edit_translate_type(t_object_type type)
 
 void				gui_scene_edit_gen_name(t_object *object)
 {
-	static int 		id[object_total];
+	static int 		id[object_end];
 	char			*temp;
 
 	ft_strcpy(object->name, gui_scene_edit_translate_type(object->type));

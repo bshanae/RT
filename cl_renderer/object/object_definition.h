@@ -10,7 +10,7 @@ typedef enum		e_object_type
 	object_light_direct,
 	object_sphere,
 	object_plane,
-	object_total
+	object_end
 }					t_object_type;
 
 typedef struct		s_object
@@ -21,5 +21,7 @@ typedef struct		s_object
 	t_material		material;
 	char			data[OBJECT_DATA_CAPACITY];
 }					t_object;
+
+const char 			*object_translate(t_object_type type);
 
 #endif

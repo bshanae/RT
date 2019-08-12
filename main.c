@@ -45,3 +45,8 @@ int					main(int argc, char **argv)
 	gui_delete(&gui);
 	return (0);
 }
+
+/*
+ * new object hierarchy
+ * dialog appears and response
+ */
