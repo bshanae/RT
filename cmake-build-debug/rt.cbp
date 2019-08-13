@@ -261,6 +261,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_show.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
 			<Option target="rt"/>
 		</Unit>
@@ -345,6 +348,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h">
 			<Option target="rt"/>
 		</Unit>
@@ -358,6 +364,12 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_direction_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_position_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">

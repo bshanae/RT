@@ -14,6 +14,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	new->settings = gui_settings_new(new->builder);
 	new->image = gui_image_new(new->builder);
 	new->renderer = cl_renderer_new(new->image);
+	gui_camera_show(new->camera, new->renderer->data_host.camera);
 	gtk_widget_show(GTK_WIDGET(new->window));
 	return (new);
 }

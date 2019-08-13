@@ -14,4 +14,6 @@ void 				gui_signal_connect_object_edit_plane(t_gui *gui);
 
 void				gui_signal_connect_scene_add(t_gui *gui);
 
+void 				gui_signal_connect_camera(t_gui *gui);
+
 #endif

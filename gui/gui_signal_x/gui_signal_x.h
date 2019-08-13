@@ -6,9 +6,21 @@
 # define GTK_SIGNAL_SIGNATURE GtkWidget *w, gpointer p
 
 void 				gui_signal_exit(GTK_SIGNAL_SIGNATURE);
-
 gboolean			gui_signal_key
 					(GtkWidget *window, GdkEventKey *key, gpointer ptr);
+
+void 				gui_signal_camera_position_x
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_position_y
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_position_z
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_direction_x
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_direction_y
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_direction_z
+					(GTK_SIGNAL_SIGNATURE);
 
 void 				gui_signal_scene_edit_select
 					(GTK_SIGNAL_SIGNATURE);

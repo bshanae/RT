@@ -1014,6 +1014,33 @@ gui/gui_camera/gui_camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_new.c.s
 .PHONY : gui/gui_camera/gui_camera_new.c.s
 
+gui/gui_camera/gui_camera_show.o: gui/gui_camera/gui_camera_show.c.o
+
+.PHONY : gui/gui_camera/gui_camera_show.o
+
+# target to build an object file
+gui/gui_camera/gui_camera_show.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o
+.PHONY : gui/gui_camera/gui_camera_show.c.o
+
+gui/gui_camera/gui_camera_show.i: gui/gui_camera/gui_camera_show.c.i
+
+.PHONY : gui/gui_camera/gui_camera_show.i
+
+# target to preprocess a source file
+gui/gui_camera/gui_camera_show.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.i
+.PHONY : gui/gui_camera/gui_camera_show.c.i
+
+gui/gui_camera/gui_camera_show.s: gui/gui_camera/gui_camera_show.c.s
+
+.PHONY : gui/gui_camera/gui_camera_show.s
+
+# target to generate assembly for a file
+gui/gui_camera/gui_camera_show.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.s
+.PHONY : gui/gui_camera/gui_camera_show.c.s
+
 gui/gui_image/gui_image_delete.o: gui/gui_image/gui_image_delete.c.o
 
 .PHONY : gui/gui_image/gui_image_delete.o
@@ -1743,6 +1770,33 @@ gui/gui_signal_connect/gui_signal_connect_all.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.s
 .PHONY : gui/gui_signal_connect/gui_signal_connect_all.c.s
 
+gui/gui_signal_connect/gui_signal_connect_camera.o: gui/gui_signal_connect/gui_signal_connect_camera.c.o
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.o
+
+# target to build an object file
+gui/gui_signal_connect/gui_signal_connect_camera.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.c.o
+
+gui/gui_signal_connect/gui_signal_connect_camera.i: gui/gui_signal_connect/gui_signal_connect_camera.c.i
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.i
+
+# target to preprocess a source file
+gui/gui_signal_connect/gui_signal_connect_camera.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.i
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.c.i
+
+gui/gui_signal_connect/gui_signal_connect_camera.s: gui/gui_signal_connect/gui_signal_connect_camera.c.s
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect/gui_signal_connect_camera.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.s
+.PHONY : gui/gui_signal_connect/gui_signal_connect_camera.c.s
+
 gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o: gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c.o
 
 .PHONY : gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o
@@ -1850,6 +1904,60 @@ gui/gui_signal_connect/gui_signal_connect_scene_edit.s: gui/gui_signal_connect/g
 gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
 .PHONY : gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
+
+gui/gui_signal_x/gui_signal_camera_direction_x.o: gui/gui_signal_x/gui_signal_camera_direction_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_camera_direction_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_direction_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.c.o
+
+gui/gui_signal_x/gui_signal_camera_direction_x.i: gui/gui_signal_x/gui_signal_camera_direction_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_camera_direction_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_direction_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.c.i
+
+gui/gui_signal_x/gui_signal_camera_direction_x.s: gui/gui_signal_x/gui_signal_camera_direction_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_camera_direction_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_direction_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_direction_x.c.s
+
+gui/gui_signal_x/gui_signal_camera_position_x.o: gui/gui_signal_x/gui_signal_camera_position_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_camera_position_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.c.o
+
+gui/gui_signal_x/gui_signal_camera_position_x.i: gui/gui_signal_x/gui_signal_camera_position_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_camera_position_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.c.i
+
+gui/gui_signal_x/gui_signal_camera_position_x.s: gui/gui_signal_x/gui_signal_camera_position_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_camera_position_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_position_x.c.s
 
 gui/gui_signal_x/gui_signal_exit.o: gui/gui_signal_x/gui_signal_exit.c.o
 
@@ -2310,6 +2418,9 @@ help:
 	@echo "... gui/gui_camera/gui_camera_new.o"
 	@echo "... gui/gui_camera/gui_camera_new.i"
 	@echo "... gui/gui_camera/gui_camera_new.s"
+	@echo "... gui/gui_camera/gui_camera_show.o"
+	@echo "... gui/gui_camera/gui_camera_show.i"
+	@echo "... gui/gui_camera/gui_camera_show.s"
 	@echo "... gui/gui_image/gui_image_delete.o"
 	@echo "... gui/gui_image/gui_image_delete.i"
 	@echo "... gui/gui_image/gui_image_delete.s"
@@ -2391,6 +2502,9 @@ help:
 	@echo "... gui/gui_signal_connect/gui_signal_connect_all.o"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_all.i"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_all.s"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.o"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.i"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.s"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.i"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.s"
@@ -2403,6 +2517,12 @@ help:
 	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.o"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.i"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_scene_edit.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_direction_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_direction_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_direction_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_position_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_position_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_position_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_exit.o"
 	@echo "... gui/gui_signal_x/gui_signal_exit.i"
 	@echo "... gui/gui_signal_x/gui_signal_exit.s"
