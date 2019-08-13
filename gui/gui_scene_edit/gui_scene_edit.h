@@ -26,6 +26,7 @@ typedef struct 					s_gui_scene_edit
 	int 						current_id;
 	GtkBox						*current_object;
 	GtkTreeIter					iter;
+	GtkDialog					*remove_dialog;
 }								t_gui_scene_edit;
 
 t_gui_scene_edit				*gui_scene_edit_new

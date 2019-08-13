@@ -12,9 +12,9 @@ typedef struct		s_gui_camera
 	GtkEntry		*position_x;
 	GtkEntry		*position_y;
 	GtkEntry		*position_z;
-	GtkEntry		*direction_x;
-	GtkEntry		*direction_y;
-	GtkEntry		*direction_z;
+	GtkEntry		*rotation_x;
+	GtkEntry		*rotation_y;
+	GtkEntry		*rotation_z;
 }					t_gui_camera;
 
 t_gui_camera		*gui_camera_new(GtkBuilder *builder);

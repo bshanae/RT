@@ -11,4 +11,11 @@ void 				gui_camera_show(t_gui_camera *gui, const t_camera *camera)
 	gtk_entry_set_text(gui->position_y, buffer);
 	sprintf(buffer, "%.2f", camera->position.z);
 	gtk_entry_set_text(gui->position_z, buffer);
+	sprintf(buffer, "%.2f", camera->rotation.x);
+	gtk_entry_set_text(gui->rotation_x, buffer);
+	sprintf(buffer, "%.2f", camera->rotation.y);
+	gtk_entry_set_text(gui->rotation_y, buffer);
+	sprintf(buffer, "%.2f", camera->rotation.z);
+	gtk_entry_set_text(gui->rotation_z, buffer);
+
 }

@@ -954,7 +954,7 @@
                         <property name="width_request">70</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">direction</property>
+                        <property name="label" translatable="yes">rotation</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -967,11 +967,11 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkEntry" id="camera_direction_x">
+                          <object class="GtkEntry" id="camera_rotation_x">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_camera_direction_x" swapped="no"/>
+                            <signal name="changed" handler="gui_signal_camera_rotation_x" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -980,11 +980,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkEntry" id="camera_direction_y">
+                          <object class="GtkEntry" id="camera_rotation_y">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_camera_direction_y" swapped="no"/>
+                            <signal name="changed" handler="gui_signal_camera_rotation_y" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -993,11 +993,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkEntry" id="camera_direction_z">
+                          <object class="GtkEntry" id="camera_rotation_z">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_camera_direction_z" swapped="no"/>
+                            <signal name="changed" handler="gui_signal_camera_rotation_z" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -1252,7 +1252,7 @@
         <child>
           <object class="GtkImage" id="image">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
             <property name="stock">gtk-missing-image</property>
           </object>
           <packing>
@@ -1269,8 +1269,8 @@
     <property name="type_hint">dialog</property>
     <property name="focus_on_map">False</property>
     <property name="transient_for">window</property>
-    <signal name="close" handler="gui_signal_scene_add_cancel" swapped="no"/>
-    <signal name="destroy" handler="gui_signal_scene_add_cancel" swapped="no"/>
+    <signal name="close" handler="gui_signal_scene_add_response_cancel" swapped="no"/>
+    <signal name="destroy" handler="gui_signal_scene_add_response_cancel" swapped="no"/>
     <child>
       <placeholder/>
     </child>
@@ -1448,6 +1448,75 @@
           </object>
           <packing>
             <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="scene_edit_remove_dialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">warning</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">window</property>
+    <signal name="close" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
+    <signal name="destroy" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">no</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_no" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">yes</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_yes" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Are you sure you want to remove object?</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>

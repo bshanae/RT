@@ -11,6 +11,8 @@ t_gui_scene_edit		*gui_scene_edit_new(GtkBuilder *builder)
 	new->selection =
 		GTK_TREE_SELECTION(RT_GUI_GET(builder, "scene_edit_selection"));
 	new->list = GTK_LIST_STORE(RT_GUI_GET(builder, "scene_edit_list"));
+	new->remove_dialog =
+		GTK_DIALOG(RT_GUI_GET(builder, "scene_edit_remove_dialog"));
 	gui_scene_edit_set_sphere(new, builder);
 	gui_scene_edit_set_plane(new, builder);
 	return (new);

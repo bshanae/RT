@@ -8,8 +8,8 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 	new->position_x = GTK_ENTRY(RT_GUI_GET(builder, "camera_position_x"));
 	new->position_y = GTK_ENTRY(RT_GUI_GET(builder, "camera_position_y"));
 	new->position_z = GTK_ENTRY(RT_GUI_GET(builder, "camera_position_z"));
-	new->direction_x = GTK_ENTRY(RT_GUI_GET(builder, "camera_direction_x"));
-	new->direction_y = GTK_ENTRY(RT_GUI_GET(builder, "camera_direction_y"));
-	new->direction_z = GTK_ENTRY(RT_GUI_GET(builder, "camera_direction_z"));
+	new->rotation_x = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_x"));
+	new->rotation_y = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_y"));
+	new->rotation_z = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_z"));
 	return (new);
 }

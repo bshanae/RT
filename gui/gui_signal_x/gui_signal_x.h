@@ -15,11 +15,11 @@ void 				gui_signal_camera_position_y
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_camera_position_z
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_camera_direction_x
+void 				gui_signal_camera_rotation_x
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_camera_direction_y
+void 				gui_signal_camera_rotation_y
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_camera_direction_z
+void 				gui_signal_camera_rotation_z
 					(GTK_SIGNAL_SIGNATURE);
 
 void 				gui_signal_scene_edit_select
@@ -27,6 +27,12 @@ void 				gui_signal_scene_edit_select
 void				gui_signal_scene_edit_add
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_remove
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_edit_remove_response_cancel
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_edit_remove_response_yes
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_edit_remove_response_no
 					(GTK_SIGNAL_SIGNATURE);
 
 void 				gui_signal_object_edit_sphere_name
@@ -55,7 +61,7 @@ void 				gui_signal_object_edit_plane_normal_y
 void 				gui_signal_object_edit_plane_normal_z
 					(GTK_SIGNAL_SIGNATURE);
 
-void				gui_signal_scene_add_cancel
+void				gui_signal_scene_add_response_cancel
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_scene_add_response_yes
 					(GTK_SIGNAL_SIGNATURE);

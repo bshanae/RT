@@ -96,8 +96,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	"-framework OpenCL"
-#	"OpenCL"
+#	"-framework OpenCL"
+	"OpenCL"
+	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN ./main.c)
@@ -147,7 +148,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_name.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
-	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c gui/gui_signal_x/gui_signal_scene_add_response_x.c gui/gui_signal_x/gui_signal_scene_edit_add.c gui/gui_signal_x/gui_signal_scene_edit_remove.c gui/gui_signal_x/gui_signal_scene_add_close.c gui/gui_signal_x/gui_signal_scene_add_type_x.c gui/gui_signal_x/gui_signal_camera_position_x.c)
+	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c gui/gui_signal_x/gui_signal_scene_add_response_x.c gui/gui_signal_x/gui_signal_scene_edit_add.c gui/gui_signal_x/gui_signal_scene_edit_remove.c gui/gui_signal_x/gui_signal_scene_add_type_x.c gui/gui_signal_x/gui_signal_camera_position_x.c gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c
@@ -213,7 +214,7 @@ set(SOURCE_CL_RENDERER
 	${SOURCE_OBJECT}
 	${SOURCE_F4}
 	${SOURCE_CAMERA}
-	${SOURCE_ASSERT} gui/gui_signal_x/gui_signal_camera_direction_x.c cl_renderer/cl_renderer/cl_renderer_reset_samples.c cl_renderer/cl_renderer/cl_renderer_camera_x.c)
+	${SOURCE_ASSERT} gui/gui_signal_x/gui_signal_camera_rotation_x.c cl_renderer/cl_renderer/cl_renderer_reset_samples.c cl_renderer/cl_renderer/cl_renderer_camera_x.c)
 
 add_executable(rt
 	${SOURCE_MAIN}
