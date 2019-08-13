@@ -3,7 +3,7 @@
 static void			cl_renderer_run_queue(t_cl_renderer *renderer)
 {
 	renderer->data_host.settings.sample_count++;
-	cl_renderer_update(renderer, update_settings);
+	cl_renderer_update(renderer, rt_update_settings);
 	renderer->error =
 		clEnqueueNDRangeKernel(renderer->queue, renderer->kernel, 1,
 		 NULL, &renderer->queue_length, NULL, 0, NULL, NULL);
@@ -20,9 +20,9 @@ void				cl_renderer_render(t_cl_renderer *renderer)
 {
 #ifndef RT_NO_OPEN_CL
 	if (renderer->flags.update_camera)
-		cl_renderer_update(renderer, update_camera);
+		cl_renderer_update(renderer, rt_update_camera);
 	if (renderer->flags.update_scene)
-		cl_renderer_update(renderer, update_scene);
+		cl_renderer_update(renderer, rt_update_scene);
 	cl_renderer_run_queue(renderer);
 	gtk_image_set_from_pixbuf(renderer->image->image,
 		renderer->image->gdk_buffer);

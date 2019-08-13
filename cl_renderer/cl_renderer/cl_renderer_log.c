@@ -13,7 +13,7 @@ void				cl_renderer_log(t_cl_renderer *renderer)
 		CL_PROGRAM_BUILD_LOG, log_length + 1, log, NULL);
 	printf("cl compilation log (%d): \n%s\n", renderer->program.error, log);
 	free(log);
-	file = fopen("./cl_build", "w");
+	file = fopen("./cl_renderer/cl_build.c", "w");
 	fprintf(file, "%s\n", renderer->program.buffer);
 	fclose(file);
 	exit(1);

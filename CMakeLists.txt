@@ -96,9 +96,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	#"-framework OpenCL"
-	${GTK3_LIBRARIES}
-	"OpenCL")
+	"-framework OpenCL"
+#	"OpenCL"
+	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN ./main.c)
 
@@ -182,7 +182,7 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_render.c
 	./cl_renderer/cl_renderer/cl_renderer_log.c
 	./cl_renderer/cl_renderer/cl_renderer_update.c
-	./cl_renderer/cl_renderer/cl_renderer_camera_move.c)
+	)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -197,12 +197,12 @@ set(SOURCE_OBJECT
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
-	./cl_renderer/f4/f4_mul.c)
+	./cl_renderer/f4/f4_mul.c cl_renderer/f4/f4_rotate.c)
 
 set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_new.c
 	./cl_renderer/camera/camera_delete.c
-	./cl_renderer/camera/camera_move.c)
+	./cl_renderer/camera/camera_move.c cl_renderer/camera/camera_rotate.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -213,7 +213,7 @@ set(SOURCE_CL_RENDERER
 	${SOURCE_OBJECT}
 	${SOURCE_F4}
 	${SOURCE_CAMERA}
-	${SOURCE_ASSERT} gui/gui_signal_x/gui_signal_camera_direction_x.c)
+	${SOURCE_ASSERT} gui/gui_signal_x/gui_signal_camera_direction_x.c cl_renderer/cl_renderer/cl_renderer_reset_samples.c cl_renderer/cl_renderer/cl_renderer_camera_x.c)
 
 add_executable(rt
 	${SOURCE_MAIN}

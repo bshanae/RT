@@ -4,8 +4,29 @@
 # include "rt_cl_include.h"
 # include "rt_float.h"
 
+# include <math.h>
+
+typedef enum 		e_f4_rotation_axis
+{
+	rt_rotation_x,
+	rt_rotation_y,
+	rt_rotation_z
+}					t_f4_rotation_axis;
+
+typedef enum 		e_f4_rotation_direction
+{
+	rt_rotation_positive,
+	rt_rotation_negative
+}					t_f4_rotation_direction;
+
 RT_F4_API			f4_add(RT_F4_API a, RT_F4_API b);
 RT_F4_API			f4_sub(RT_F4_API a, RT_F4_API b);
 RT_F4_API			f4_mul(RT_F4_API v, RT_F f);
+
+RT_F4_API 			f4_rotate(
+					RT_F4_API v,
+					t_f4_rotation_axis axis,
+					t_f4_rotation_direction direction,
+					RT_F theta);
 
 #endif

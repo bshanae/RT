@@ -1,3 +1,5 @@
+// cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 static RT_F4		object_normal(constant t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_sphere)

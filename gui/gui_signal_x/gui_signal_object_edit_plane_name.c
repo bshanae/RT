@@ -15,4 +15,5 @@ void 				gui_signal_object_edit_plane_name
 	gtk_list_store_set(
 		gui->scene->edit->list, &gui->scene->edit->iter,
 		scene_edit_object_name, object->name, -1);
+	gui->renderer->flags.update_scene = 1;
 }

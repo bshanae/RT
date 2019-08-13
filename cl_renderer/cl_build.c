@@ -1,3 +1,5 @@
+// cl_f4 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #include "rt_float.h"
 
 static RT_F			f4_min_component(RT_F4 vector)
@@ -9,6 +11,8 @@ static RT_F			f4_max_component(RT_F4 vector)
 {
 	return (fmax(vector.x, fmax(vector.y, vector.z)));
 }
+// cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct 			s_cl_settings
 {
 	int					sample_count;
@@ -20,37 +24,40 @@ typedef struct 			s_cl_settings
 	int 				light_explicit;
 }						t_cl_settings;
 
-static RT_F			rng_hash(global uint *rng_state)
-{
-	/*
-	RT_F			garbage;
-	RT_F			x;
+// cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	x = *state;
-	*state += 1.;
-    return (fract((sin(x) * 43758.5453123), &garbage));
-    */
-}
-
-static RT_F			rng_xor(global uint *rng_state)
+static RT_F			rng_lgc(global ulong *rng_state)
 {
 	int				gi;
-	uint			x;
+	ulong			x;
+
+	gi = get_global_id(0);
+	x = rng_state[gi];
+	x = (0x5DEECE66DL * x + 0xBL) & ((1L << 48) - 1);
+	rng_state[gi] = x;
+    return ((RT_F)x / (1L << 48));
+}
+
+static RT_F			rng_xor(global ulong *rng_state)
+{
+	int				gi;
+	ulong			x;
 
 	gi = get_global_id(0);
 	x = rng_state[gi];
     x ^= x << 13;
     x ^= x >> 17;
-    x ^= x << 5;
+    x ^= x << 17;
 	rng_state[gi] = x;
-	printf("%u\n", x);
     return (x / 4294967296.0f);
 }
 
-static RT_F			rng(global uint *rng_state)
+static RT_F			rng(global ulong *rng_state)
 {
-	return (rng_xor(rng_state));
+	return (rng_lgc(rng_state));
 }
+
+// cl_ray //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_float.h"
 
@@ -65,6 +72,8 @@ static RT_F4		ray_intersect(t_ray *ray)
 {
 	return (ray->origin + ray->direction * ray->t);
 }
+// cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct 		s_camera
 {
 	RT_F4			position;
@@ -93,6 +102,8 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
 	result.direction = normalize(result.direction);
 	return (result);
 }
+// cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct		s_color
 {
 	unsigned char	r;
@@ -111,11 +122,15 @@ static t_color		color_unpack(RT_F4 source, int srgb)
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
+// cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct 		s_material
 {
 	RT_F4			color;
 	RT_F4			emission;
 }					t_material;
+
+// cl_intersection /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
@@ -133,6 +148,8 @@ static void			intersection_reset(t_intersection *intersection)
 	intersection->ray.t = INTERSECTION_MAX;
 }
 
+// cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #include "rt_parameters.h"
 
 typedef enum		e_object_type
@@ -145,11 +162,14 @@ typedef enum		e_object_type
 
 typedef struct		s_object
 {
+	char 			name[32];
 	int				id;
 	t_object_type	type;
 	t_material		material;
 	char			data[OBJECT_DATA_CAPACITY];
 }					t_object;
+
+// cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
@@ -188,7 +208,7 @@ static RT_F4					sphere_normal(constant t_object *object, t_intersection *inters
 	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(constant t_object *object, global uint *rng_state)
+static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
 {
 	t_object_sphere				*data;
 	RT_F 						theta;
@@ -204,6 +224,8 @@ static RT_F4					sphere_random(constant t_object *object, global uint *rng_state
 	random += data->position;
 	return (random);
 }
+// cl_object_plane /////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #include "rt_parameters.h"
 
 typedef struct		s_object_plane
@@ -234,6 +256,8 @@ static RT_F4		plane_normal(constant t_object *object, t_intersection *intersecti
 {
 	return (((t_object_plane *)object->data)->normal);
 }
+// cl_object_intersect /////////////////////////////////////////////////////////////////////////////////////////////////
+
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_sphere)
@@ -242,6 +266,8 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
         return (plane_intersect(object, intersection));
 	return (0);
 }
+// cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
+
 static RT_F4		object_normal(constant t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_sphere)
@@ -250,9 +276,11 @@ static RT_F4		object_normal(constant t_object *object, t_intersection *intersect
         return (plane_normal(object, intersection));
 	return (0);
 }
+// cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct		s_scene
 {
-	t_object		objects[SCENE_OBJECTS_CAPACITY];
+	t_object		objects[RT_SCENE_OBJECTS_CAPACITY];
 	int				objects_length;
 }					t_scene;
 
@@ -271,6 +299,8 @@ static int			scene_intersect(constant t_scene *scene, t_intersection *intersecti
 	}
 	return (result != 0);
 }
+// cl_sample ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 static void			create_coordinate_system(RT_F4 *normal, RT_F4 *nt, RT_F4 *nb)
 {
 	if (fabs(normal->x) > fabs(normal->y))
@@ -304,7 +334,7 @@ static RT_F4		sampler_transform(RT_F4 *normal, RT_F4 *sample)
 static RT_F4		sample_uniform
 					(RT_F4 *normal,
 					RT_F *cosine,
-					global t_cl_rng_state *rng_state)
+					global ulong *rng_state)
 {
 	RT_F 			r[2];
 	RT_F4			sample;
@@ -325,10 +355,12 @@ static RT_F4		sample_uniform
 		};
 	return (sampler_transform(normal, &sample));
 }
+// cl_radiance_explicit ////////////////////////////////////////////////////////////////////////////////////////////////
+
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
-					global uint *rng_state)
+					global ulong *rng_state)
 {
 	t_intersection	intersection_light;
 	RT_F4			radiance;
@@ -373,7 +405,9 @@ static RT_F4		radiance_explicit(
 	return (radiance);
 }
 
- #include "rt_parameters.h"
+// cl_radiance /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
 
 static void			radiance_add(
 					constant t_scene *scene,
@@ -420,21 +454,21 @@ static RT_F4		radiance_get(
 {
 	return (*sample / settings->sample_count);
 }
+// cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 kernel void			cl_main(
 					constant t_camera *camera,
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_settings *settings,
-					global uint *rng_state)
+					global ulong *rng_state)
 {
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
 
     global_id = get_global_id(0);
-
-    printf("{%u}\n", rng_state[global_id]);
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;

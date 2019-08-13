@@ -15,6 +15,7 @@ void 				gui_signal_object_edit_sphere_name
 	gtk_list_store_set(
 		gui->scene->edit->list, &gui->scene->edit->iter,
 		scene_edit_object_name, object->name, -1);
+	gui->renderer->flags.update_scene = 1;
 }
 
 void 				gui_signal_object_edit_sphere_position_x
@@ -31,6 +32,8 @@ void 				gui_signal_object_edit_sphere_position_x
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_sphere *)object->data)->position.x = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_sphere_position_y
@@ -47,6 +50,8 @@ void 				gui_signal_object_edit_sphere_position_y
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_sphere *)object->data)->position.y = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_sphere_position_z
@@ -63,6 +68,8 @@ void 				gui_signal_object_edit_sphere_position_z
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_sphere *)object->data)->position.z = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_sphere_radius
@@ -79,4 +86,6 @@ void 				gui_signal_object_edit_sphere_radius
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_sphere *)object->data)->radius = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }

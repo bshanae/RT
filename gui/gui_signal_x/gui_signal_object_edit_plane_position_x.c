@@ -14,6 +14,8 @@ void 				gui_signal_object_edit_plane_position_x
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->position.x = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_position_y
@@ -30,6 +32,8 @@ void 				gui_signal_object_edit_plane_position_y
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->position.y = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_position_z
@@ -46,4 +50,6 @@ void 				gui_signal_object_edit_plane_position_z
 	object = gui->renderer->data_host.scene->objects +
 		gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->position.z = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }

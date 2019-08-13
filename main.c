@@ -46,7 +46,4 @@ int					main(int argc, char **argv)
 	return (0);
 }
 
-/*
- * new object hierarchy
- * dialog appears and response
- */
+// todo add symbol °

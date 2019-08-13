@@ -103,16 +103,22 @@ void					cl_renderer_set_arguments(t_cl_renderer *renderer);
 
 typedef enum 			e_cl_update
 {
-	update_camera,
-	update_scene,
-	update_settings
+	rt_update_camera,
+	rt_update_scene,
+	rt_update_settings
 
 }						t_cl_update;
 
 void					cl_renderer_update
 						(t_cl_renderer *renderer, t_cl_update update);
+void 					cl_renderer_reset_samples(t_cl_renderer *renderer);
+
 void 					cl_renderer_camera_move
-						(t_cl_renderer *renderer, t_camera_direction direction);
+						(t_cl_renderer *renderer, t_camera_movement movement);
+void 					cl_renderer_camera_rotate(
+						t_cl_renderer *renderer,
+		 				t_f4_rotation_axis axis,
+		 				t_f4_rotation_direction direction);
 
 void					cl_renderer_render(t_cl_renderer *renderer);
 

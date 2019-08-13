@@ -1,10 +1,14 @@
+// cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 typedef struct 		s_camera
 {
 	RT_F4			position;
+	RT_F4			rotation;
 	RT_F4			axis_x;
 	RT_F4			axis_y;
 	RT_F4			axis_z;
 	RT_F4			forward;
+	RT_F4			forward_backup;
 	int				width;
 	int				height;
 }					t_camera;

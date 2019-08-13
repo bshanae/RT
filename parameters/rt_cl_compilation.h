@@ -8,7 +8,7 @@
 
 # define CL_MAIN_FUNCTION				"cl_main"
 
-# define CL_SOURCE_FOLDER				"./cl_source/"
+# define CL_SOURCE_FOLDER				"./cl_renderer/cl_source/"
 
 # define CL_SOURCE_F4					"cl_f4"
 # define CL_SOURCE_SETTINGS				"cl_settings"

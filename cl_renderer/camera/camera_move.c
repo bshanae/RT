@@ -2,22 +2,22 @@
 
 void 				camera_move
 					(t_camera *camera,
-					t_camera_direction direction,
-					RT_F length)
+					 t_camera_movement direction,
+					 RT_F length)
 {
 	RT_F4_API		step;
 
-	if (direction == left)
+	if (direction == rt_movement_left)
 		step = f4_mul(camera->axis_x, -1.f);
-	else if (direction == right)
+	else if (direction == rt_movement_right)
 		step = f4_mul(camera->axis_x, 1.f);
-	else if (direction == up)
+	else if (direction == rt_movement_up)
 		step = f4_mul(camera->axis_y, 1.f);
-	else if (direction == down)
+	else if (direction == rt_movement_down)
 		step = f4_mul(camera->axis_y, -1.f);
-	else if (direction == forward)
+	else if (direction == rt_movement_forward)
 		step = f4_mul(camera->axis_z, -1.f);
-	else if (direction == backward)
+	else if (direction == rt_movement_backward)
 		step = f4_mul(camera->axis_z, 1.f);
 	else
 		return ;

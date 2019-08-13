@@ -14,6 +14,8 @@ void 				gui_signal_object_edit_plane_normal_x
 	object = gui->renderer->data_host.scene->objects +
 			 gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->normal.x = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_normal_y
@@ -30,6 +32,8 @@ void 				gui_signal_object_edit_plane_normal_y
 	object = gui->renderer->data_host.scene->objects +
 			 gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->normal.y = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_normal_z
@@ -46,4 +50,6 @@ void 				gui_signal_object_edit_plane_normal_z
 	object = gui->renderer->data_host.scene->objects +
 			 gui->scene->edit->current_id;
 	((t_object_plane *)object->data)->normal.z = value;
+	gui->renderer->flags.update_scene = 1;
+	cl_renderer_reset_samples(gui->renderer);
 }

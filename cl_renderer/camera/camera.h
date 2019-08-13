@@ -14,10 +14,12 @@
 typedef struct 		s_camera
 {
 	RT_F4_API		position;
+	RT_F4_API		rotation;
 	RT_F4_API		axis_x;
 	RT_F4_API		axis_y;
 	RT_F4_API		axis_z;
 	RT_F4_API		forward;
+	RT_F4_API		forward_backup;
 	int				width;
 	int				height;
 }					t_camera;
@@ -25,19 +27,26 @@ typedef struct 		s_camera
 t_camera			*camera_new(INT_REF width, INT_REF height);
 void 				camera_delete(t_camera **camera);
 
-typedef enum		e_camera_direction
+typedef enum		e_camera_movement
 {
-	left,
-	right,
-	up,
-	down,
-	forward,
-	backward
-}					t_camera_direction;
+	rt_movement_left,
+	rt_movement_right,
+	rt_movement_up,
+	rt_movement_down,
+	rt_movement_forward,
+	rt_movement_backward
+}					t_camera_movement;
+
+
 
 void 				camera_move
 					(t_camera *camera,
-					t_camera_direction direction,
-					RT_F length);
+					 t_camera_movement direction,
+					 RT_F length);
+void 				camera_rotate
+					(t_camera *camera,
+					t_f4_rotation_axis axis,
+					t_f4_rotation_direction direction,
+					RT_F theta);
 
 #endif

@@ -1,3 +1,5 @@
+// cl_radiance_explicit ////////////////////////////////////////////////////////////////////////////////////////////////
+
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
