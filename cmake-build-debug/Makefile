@@ -825,6 +825,33 @@ cl_renderer/scene/scene_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.s
 .PHONY : cl_renderer/scene/scene_new.c.s
 
+cl_renderer/scene/scene_remove_object.o: cl_renderer/scene/scene_remove_object.c.o
+
+.PHONY : cl_renderer/scene/scene_remove_object.o
+
+# target to build an object file
+cl_renderer/scene/scene_remove_object.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
+.PHONY : cl_renderer/scene/scene_remove_object.c.o
+
+cl_renderer/scene/scene_remove_object.i: cl_renderer/scene/scene_remove_object.c.i
+
+.PHONY : cl_renderer/scene/scene_remove_object.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_remove_object.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i
+.PHONY : cl_renderer/scene/scene_remove_object.c.i
+
+cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c.s
+
+.PHONY : cl_renderer/scene/scene_remove_object.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_remove_object.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
+.PHONY : cl_renderer/scene/scene_remove_object.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -2262,6 +2289,9 @@ help:
 	@echo "... cl_renderer/scene/scene_new.o"
 	@echo "... cl_renderer/scene/scene_new.i"
 	@echo "... cl_renderer/scene/scene_new.s"
+	@echo "... cl_renderer/scene/scene_remove_object.o"
+	@echo "... cl_renderer/scene/scene_remove_object.i"
+	@echo "... cl_renderer/scene/scene_remove_object.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

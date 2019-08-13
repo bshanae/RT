@@ -7,7 +7,7 @@ char				*gui_scene_add_gen_name(t_gui_scene_add *add)
 
 	result = malloc(32);
 	ft_strcpy(result, "new_object_");
-	temp = ft_itoa(add->free_name_id);
+	temp = ft_itoa(add->gen_name_next);
 	ft_strcat(result, temp);
 	free(temp);
 	return (result);

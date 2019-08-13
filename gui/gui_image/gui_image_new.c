@@ -5,8 +5,8 @@ t_gui_image			*gui_image_new(GtkBuilder *builder)
 	t_gui_image		*new;
 
 	new = malloc(sizeof(t_gui_image));
-	new->width = GUI_DEFAULT_WIDTH;
-	new->height = GUI_DEFAULT_HEIGHT;
+	new->width = RT_GUI_DEFAULT_WIDTH;
+	new->height = RT_GUI_DEFAULT_HEIGHT;
 	new->image = GTK_IMAGE(gtk_builder_get_object(builder, "image"));
 	new->gdk_buffer =
 		gdk_pixbuf_new(GDK_COLORSPACE_RGB, TRUE, 8, new->width, new->height);

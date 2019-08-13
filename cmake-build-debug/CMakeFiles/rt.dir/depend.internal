@@ -8399,6 +8399,21 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
  .././parameters/rt_parameters.h
  /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene.h
  /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c
+CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
+ ../../21_libft/includes/libft_ft_printf.h
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././cl_renderer/assert/assert.h
+ .././cl_renderer/material/material.h
+ .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_x.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_control.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
+ /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene.h
+ /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -14685,7 +14700,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o
  /usr/include/pango-1.0/pango/pango.h
  /usr/include/pango-1.0/pango/pangocairo.h
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
-CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x_set.c.o
+CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
@@ -14694,8 +14709,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x_set.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
+ /home/vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_x.c
  /home/vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_x.h
- /home/vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_x_set.c
  /usr/include/atk-1.0/atk/atk-enum-types.h
  /usr/include/atk-1.0/atk/atk.h
  /usr/include/atk-1.0/atk/atkaction.h

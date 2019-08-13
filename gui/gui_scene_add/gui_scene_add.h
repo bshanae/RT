@@ -27,7 +27,7 @@ typedef struct 				s_gui_scene_add
 	t_gui_object_plane		plane;
 	GtkBox					*current_object;
 	t_object_type			current_type;
-	int 					free_name_id;
+	int 					gen_name_next;
 }							t_gui_scene_add;
 
 t_gui_scene_add				*gui_scene_add_new(GtkBuilder *builder);

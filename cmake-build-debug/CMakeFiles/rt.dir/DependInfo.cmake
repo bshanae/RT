@@ -30,6 +30,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
   "/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_load.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"

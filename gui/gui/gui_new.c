@@ -7,8 +7,8 @@ t_gui				*gui_new(int *ac, char ***av)
 	gtk_disable_setlocale();
 	gtk_init(ac, av);
 	new = (t_gui *)malloc(sizeof(t_gui));
-	new->builder = gtk_builder_new_from_file(GUI_SOURCE);
-	new->window = GTK_WINDOW(GUI_GET(new->builder, "window"));
+	new->builder = gtk_builder_new_from_file(RT_GUI_SOURCE);
+	new->window = GTK_WINDOW(RT_GUI_GET(new->builder, "window"));
 	new->camera = gui_camera_new(new->builder);
 	new->scene = gui_scene_new(new->builder);
 	new->settings = gui_settings_new(new->builder);

@@ -5,18 +5,18 @@ t_gui_object_plane		gui_object_plane_set
 {
 	t_gui_object_plane	plane;
 
-	plane.box = GTK_BOX(GUI_GET(builder, init->box));
-	plane.offscreen = GTK_VIEWPORT(GUI_GET(builder, init->offscreen));
+	plane.box = GTK_BOX(RT_GUI_GET(builder, init->box));
+	plane.offscreen = GTK_VIEWPORT(RT_GUI_GET(builder, init->offscreen));
 	if (init->name[0])
-		plane.name = GTK_ENTRY(GUI_GET(builder, init->name));
+		plane.name = GTK_ENTRY(RT_GUI_GET(builder, init->name));
 	else
 		plane.name = NULL;
-	plane.position_x = GTK_ENTRY(GUI_GET(builder, init->position_x));
-	plane.position_y = GTK_ENTRY(GUI_GET(builder, init->position_y));
-	plane.position_z = GTK_ENTRY(GUI_GET(builder, init->position_z));
-	plane.normal_x = GTK_ENTRY(GUI_GET(builder, init->normal_x));
-	plane.normal_y = GTK_ENTRY(GUI_GET(builder, init->normal_y));
-	plane.normal_z = GTK_ENTRY(GUI_GET(builder, init->normal_z));
+	plane.position_x = GTK_ENTRY(RT_GUI_GET(builder, init->position_x));
+	plane.position_y = GTK_ENTRY(RT_GUI_GET(builder, init->position_y));
+	plane.position_z = GTK_ENTRY(RT_GUI_GET(builder, init->position_z));
+	plane.normal_x = GTK_ENTRY(RT_GUI_GET(builder, init->normal_x));
+	plane.normal_y = GTK_ENTRY(RT_GUI_GET(builder, init->normal_y));
+	plane.normal_z = GTK_ENTRY(RT_GUI_GET(builder, init->normal_z));
 	return (plane);
 }
 

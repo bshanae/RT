@@ -22,12 +22,12 @@ static void			cl_renderer_data_host_init(t_cl_renderer *renderer)
 	renderer->data_host.scene = scene_new();
 	renderer->data_host.image = renderer->image->color_buffer;
 	renderer->data_host.settings.sample_count = 0;
-	renderer->data_host.settings.sample_limit = CL_SAMPLES;
-	renderer->data_host.settings.sample_depth = CL_PATH_DEPTH;
-	renderer->data_host.settings.russian_depth = CL_RUSSIAN_DEPTH;
-	renderer->data_host.settings.russian_depth = CL_SRGB;
-	renderer->data_host.settings.light_pb = CL_LIGHT_PB;
-	renderer->data_host.settings.light_explicit = CL_LIGHT_EXPLICIT;
+	renderer->data_host.settings.sample_limit = RT_CL_SAMPLES;
+	renderer->data_host.settings.sample_depth = RT_CL_PATH_DEPTH;
+	renderer->data_host.settings.russian_depth = RT_CL_RUSSIAN_DEPTH;
+	renderer->data_host.settings.russian_depth = RT_CL_SRGB;
+	renderer->data_host.settings.light_pb = RT_CL_LIGHT_PB;
+	renderer->data_host.settings.light_explicit = RT_CL_LIGHT_EXPLICIT;
 	i = 0;
 	renderer->data_host.rng_state = malloc(renderer->data_size.rng_state);
 	srand(21);

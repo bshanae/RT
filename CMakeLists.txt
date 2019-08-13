@@ -187,7 +187,7 @@ set(SOURCE_CL_RENDERER_
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
-	./cl_renderer/scene/scene_delete.c)
+	./cl_renderer/scene/scene_delete.c cl_renderer/scene/scene_remove_object.c)
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c

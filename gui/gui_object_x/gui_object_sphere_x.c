@@ -5,16 +5,16 @@ t_gui_object_sphere		gui_object_sphere_set
 {
 	t_gui_object_sphere	sphere;
 
-	sphere.box = GTK_BOX(GUI_GET(builder, init->box));
-	sphere.offscreen = GTK_VIEWPORT(GUI_GET(builder, init->offscreen));
+	sphere.box = GTK_BOX(RT_GUI_GET(builder, init->box));
+	sphere.offscreen = GTK_VIEWPORT(RT_GUI_GET(builder, init->offscreen));
 	if (init->name[0])
-		sphere.name = GTK_ENTRY(GUI_GET(builder, init->name));
+		sphere.name = GTK_ENTRY(RT_GUI_GET(builder, init->name));
 	else
 		sphere.name = NULL;
-	sphere.position_x = GTK_ENTRY(GUI_GET(builder, init->position_x));
-	sphere.position_y = GTK_ENTRY(GUI_GET(builder, init->position_y));
-	sphere.position_z = GTK_ENTRY(GUI_GET(builder, init->position_z));
-	sphere.radius = GTK_ENTRY(GUI_GET(builder, init->radius));
+	sphere.position_x = GTK_ENTRY(RT_GUI_GET(builder, init->position_x));
+	sphere.position_y = GTK_ENTRY(RT_GUI_GET(builder, init->position_y));
+	sphere.position_z = GTK_ENTRY(RT_GUI_GET(builder, init->position_z));
+	sphere.radius = GTK_ENTRY(RT_GUI_GET(builder, init->radius));
 	return (sphere);
 }
 
