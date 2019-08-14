@@ -46,9 +46,10 @@ static RT_F			rng_xor(global ulong *rng_state)
 	gi = get_global_id(0);
 	x = rng_state[gi];
     x ^= x << 13;
-    x ^= x >> 17;
+    x ^= x >> 7;
     x ^= x << 17;
 	rng_state[gi] = x;
+	x %= 4294967296; // костыль
     return (x / 4294967296.0f);
 }
 
@@ -77,10 +78,12 @@ static RT_F4		ray_intersect(t_ray *ray)
 typedef struct 		s_camera
 {
 	RT_F4			position;
+	RT_F4			rotation;
 	RT_F4			axis_x;
 	RT_F4			axis_y;
 	RT_F4			axis_z;
 	RT_F4			forward;
+	RT_F4			forward_backup;
 	int				width;
 	int				height;
 }					t_camera;
@@ -145,7 +148,7 @@ typedef struct		s_intersection
 
 static void			intersection_reset(t_intersection *intersection)
 {
-	intersection->ray.t = INTERSECTION_MAX;
+	intersection->ray.t = RT_INTERSECTION_MAX;
 }
 
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -166,7 +169,7 @@ typedef struct		s_object
 	int				id;
 	t_object_type	type;
 	t_material		material;
-	char			data[OBJECT_DATA_CAPACITY];
+	char			data[RT_OBJECT_DATA_CAPACITY];
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -355,6 +358,51 @@ static RT_F4		sample_uniform
 		};
 	return (sampler_transform(normal, &sample));
 }
+
+static RT_F4			sample_cosine(
+						RT_F4 *normal,
+						global ulong *rng_state)
+{
+	RT_F				r1;
+	RT_F				r2;
+	RT_F 				r1_offset;
+	RT_F 				r2_offset;
+	RT_F				theta;
+	RT_F 				r;
+	RT_F4				sample;
+
+	r1 = rng(rng_state);
+    r2 = rng(rng_state);
+	r1_offset = 2. * r1 - 1.;
+	r2_offset = 2. * r2 - 1.;
+
+	if (r1_offset && r2_offset)
+	{
+		if (RT_ABS(r1_offset) > RT_ABS(r2_offset))
+		{
+			r = r1_offset;
+			theta = RT_PI_4 * (r2_offset / r1_offset);
+		}
+		else
+		{
+			r = r2_offset;
+			theta = RT_PI_2 - RT_PI_4 * (r1_offset / r2_offset);
+		}
+		sample.x = r * RT_COS(theta);
+		sample.y = r * RT_SIN(theta);
+	}
+	else
+	{
+		sample.x = 0.;
+		sample.y = 0.;
+	}
+	sample.z = RT_SQRT(RT_MAX(0., 1. - sample.x * sample.x - sample.y * sample.y));
+
+	RT_F				temp = sample.y;
+	sample.y = sample.z;
+	sample.z = temp;
+	return (sampler_transform(normal, &sample));
+}
 // cl_radiance_explicit ////////////////////////////////////////////////////////////////////////////////////////////////
 
 static RT_F4		radiance_explicit(
@@ -414,7 +462,7 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_settings *settings,
-					global uint *rng_state)
+					global ulong *rng_state)
 {
 	RT_F4			radiance;
 	RT_F4			explicit;
@@ -423,10 +471,13 @@ static void			radiance_add(
 
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
-	for (int depth = 0; depth < settings->sample_depth; ++depth)
+	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		if (!scene_intersect(scene, intersection))
 			break ;
+		if (depth > 0 && intersection->material.color.x > 0.5 && intersection->material.color.y < 0.5)
+			radiance += (RT_F4){0., 0., 1., 1.};
+
 		if (depth < settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
@@ -439,8 +490,16 @@ static void			radiance_add(
 		}
 
 		intersection->ray.origin = intersection->hit;
-		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-		mask *= intersection->material.color * cosine;
+		if (!RT_CL_COSINE)
+		{
+			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+			mask *= intersection->material.color * cosine;
+		}
+		else
+		{
+			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
+        	mask *= intersection->material.color;
+        }
 	}
 	if (settings->sample_count == 1)
 		*sample = radiance;

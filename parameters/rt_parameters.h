@@ -11,12 +11,13 @@
 
 # define RT_SCENE_OBJECTS_CAPACITY	16
 
-# define RT_CL_PATH_DEPTH			1
+# define RT_CL_PATH_DEPTH			8
 # define RT_CL_SAMPLES				2
-# define RT_CL_RUSSIAN_DEPTH		10
-# define RT_CL_SRGB					0
+# define RT_CL_RUSSIAN_DEPTH		4
+# define RT_CL_SRGB					1
 # define RT_CL_LIGHT_PB				1
 # define RT_CL_LIGHT_EXPLICIT		1
+# define RT_CL_COSINE				1
 
 #ifdef RT_FLOAT
 #  define INTERSECTION_MIN			0.0001
