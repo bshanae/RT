@@ -7,20 +7,20 @@ void				scene_test(t_scene *scene)
 {
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){-10., -10., -55.}, 2.);
+		MATERIAL_WHITE,
+		(RT_F4_API){-10., -10., -35.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){10., -10., -55.}, 2.);
+		MATERIAL_WHITE,
+		(RT_F4_API){10., -10., -35.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){-10., 10., -55.}, 2.);
+		MATERIAL_WHITE,
+		(RT_F4_API){-10., 10., -35.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){10., 10., -55.}, 2.);
+		MATERIAL_WHITE,
+		(RT_F4_API){10., 10., -35.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
@@ -44,14 +44,14 @@ void				scene_test(t_scene *scene)
 	object_build( // left
 		scene_get_space(scene),
 		object_plane,
-		MATERIAL_WHITE,
-		(RT_F4_API){-50., 0., 0.},
+		MATERIAL_GREEN,
+		(RT_F4_API){-30., 0., 0.},
 		(RT_F4_API){1., 0., 0.});
 	object_build( // right
 		scene_get_space(scene),
 		object_plane,
-		MATERIAL_WHITE,
-		(RT_F4_API){50., 0., 0.},
+		MATERIAL_RED,
+		(RT_F4_API){30., 0., 0.},
 		(RT_F4_API){-1., 0., 0.});
 	object_build( // upper
 		scene_get_space(scene),

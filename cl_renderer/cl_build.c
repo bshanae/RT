@@ -396,7 +396,7 @@ static RT_F4			sample_cosine(
 		sample.x = 0.;
 		sample.y = 0.;
 	}
-	sample.z = RT_SQRT(RT_MAX(0., 1. - sample.x * sample.x - sample.y * sample.y));
+	sample.z = RT_SQRT(RT_MAX((RT_F)0., (RT_F)1. - sample.x * sample.x - sample.y * sample.y));
 
 	RT_F				temp = sample.y;
 	sample.y = sample.z;
@@ -475,13 +475,12 @@ static void			radiance_add(
 	{
 		if (!scene_intersect(scene, intersection))
 			break ;
-		if (depth > 0 && intersection->material.color.x > 0.5 && intersection->material.color.y < 0.5)
-			radiance += (RT_F4){0., 0., 1., 1.};
 
 		if (depth < settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
 		radiance += mask * intersection->material.emission;
+		printf("%f %f %f %f\n", )
 
 		if (settings->light_explicit)
 		{
@@ -490,16 +489,16 @@ static void			radiance_add(
 		}
 
 		intersection->ray.origin = intersection->hit;
-		if (!RT_CL_COSINE)
+		if (RT_CL_COSINE)
+		{
+			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
+			mask *= intersection->material.color;
+		}
+		else
 		{
 			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
 			mask *= intersection->material.color * cosine;
 		}
-		else
-		{
-			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
-        	mask *= intersection->material.color;
-        }
 	}
 	if (settings->sample_count == 1)
 		*sample = radiance;
