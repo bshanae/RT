@@ -13,6 +13,7 @@
 
 typedef struct		s_gui
 {
+	GtkCssProvider	*css_provider;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
 	t_gui_camera	*camera;
