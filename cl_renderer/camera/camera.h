@@ -48,5 +48,6 @@ void 				camera_rotate
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction,
 					RT_F theta);
+void				camera_apply(t_camera *camera);
 
 #endif

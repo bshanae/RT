@@ -82,6 +82,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_rotation_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_reset_samples.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o"

@@ -10,10 +10,11 @@ void 				gui_signal_camera_position_x
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_x), NULL);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_camera_position_y
-	(GtkWidget *widget, gpointer ptr)
+					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 
@@ -22,10 +23,11 @@ void 				gui_signal_camera_position_y
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_y), NULL);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_camera_position_z
-	(GtkWidget *widget, gpointer ptr)
+					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 
@@ -34,4 +36,5 @@ void 				gui_signal_camera_position_z
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_z), NULL);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }

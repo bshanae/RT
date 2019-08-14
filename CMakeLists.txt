@@ -96,9 +96,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN ./main.c)
@@ -203,7 +203,7 @@ set(SOURCE_F4
 set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_new.c
 	./cl_renderer/camera/camera_delete.c
-	./cl_renderer/camera/camera_move.c cl_renderer/camera/camera_rotate.c)
+	./cl_renderer/camera/camera_move.c cl_renderer/camera/camera_rotate.c cl_renderer/camera/camera_apply.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

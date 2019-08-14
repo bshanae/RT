@@ -12,6 +12,6 @@ void 				cl_renderer_camera_rotate
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction)
 {
-	camera_rotate(renderer->data_host.camera, axis, direction, 0.05f);
+	camera_rotate(renderer->data_host.camera, axis, direction, 0.025f);
 	// todo store theta in renderer
 }

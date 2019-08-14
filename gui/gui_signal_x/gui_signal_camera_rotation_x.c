@@ -8,8 +8,10 @@ void 				gui_signal_camera_rotation_x
 	gui = (t_gui *)ptr;
 	gui->renderer->data_host.camera->rotation.x =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_x), NULL);
+	camera_apply(gui->renderer->data_host.camera);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_camera_rotation_y
@@ -20,8 +22,10 @@ void 				gui_signal_camera_rotation_y
 	gui = (t_gui *)ptr;
 	gui->renderer->data_host.camera->rotation.y =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_y), NULL);
+	camera_apply(gui->renderer->data_host.camera);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_camera_rotation_z
@@ -32,6 +36,8 @@ void 				gui_signal_camera_rotation_z
 	gui = (t_gui *)ptr;
 	gui->renderer->data_host.camera->rotation.z =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_z), NULL);
+	camera_apply(gui->renderer->data_host.camera);
 	gui->renderer->flags.update_camera = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
