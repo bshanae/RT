@@ -2,7 +2,7 @@
 # define RT_PARAMETERS_H
 
 # define RT_GUI_BUILD				"./gui/source/build.glade"
-# define RT_GUI_THEME				"./gui/source/Breeze.css"
+# define RT_GUI_THEME				"./gui/source/theme_breeze/gtk-3.20/gtk.css"
 # define RT_GUI_GET					gtk_builder_get_object
 
 # define RT_GUI_DEFAULT_WIDTH		480

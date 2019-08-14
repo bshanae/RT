@@ -1,1 +1,1 @@
-GTK_DEBUG=interactive ./cmake-build-debug/test_gui
+GTK_DEBUG=interactive ./cmake-build-debug/rt

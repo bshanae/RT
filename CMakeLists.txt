@@ -96,9 +96,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN ./main.c)
