@@ -148,7 +148,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_name.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
-	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c gui/gui_signal_x/gui_signal_scene_add_response_x.c gui/gui_signal_x/gui_signal_scene_edit_add.c gui/gui_signal_x/gui_signal_scene_edit_remove.c gui/gui_signal_x/gui_signal_scene_add_type_x.c gui/gui_signal_x/gui_signal_camera_position_x.c gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c)
+	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c gui/gui_signal_x/gui_signal_scene_add_response_x.c gui/gui_signal_x/gui_signal_scene_edit_add.c gui/gui_signal_x/gui_signal_scene_edit_remove.c gui/gui_signal_x/gui_signal_scene_add_type_x.c gui/gui_signal_x/gui_signal_camera_position_x.c gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c gui/gui_signal_x/gui_signal_image_click.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c
@@ -156,7 +156,7 @@ set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_macro.h
 	./gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
 	./gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c
-	./gui/gui_signal_connect/gui_signal_connect_scene_add.c gui/gui_signal_connect/gui_signal_connect_camera.c)
+	./gui/gui_signal_connect/gui_signal_connect_scene_add.c gui/gui_signal_connect/gui_signal_connect_camera.c gui/gui_signal_connect/gui_signal_connect_image.c)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}

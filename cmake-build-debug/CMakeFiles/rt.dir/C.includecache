@@ -220,7 +220,11 @@ rt_control.h
 
 .././parameters/rt_parameters.h
 
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove.c
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c
+gui_signal_x.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c
 gui_signal_x.h
 /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 

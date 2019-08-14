@@ -10,6 +10,7 @@
 
 typedef struct 		s_gui_image
 {
+	GtkEventBox		*event_box;
 	GtkImage		*image;
 	GdkPixbuf		*gdk_buffer;
 	guchar			*char_buffer;

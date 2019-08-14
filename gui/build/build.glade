@@ -1250,10 +1250,18 @@
           </packing>
         </child>
         <child>
-          <object class="GtkImage" id="image">
+          <object class="GtkEventBox" id="image_event_box">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="stock">gtk-missing-image</property>
+            <property name="visible_window">False</property>
+            <signal name="button-press-event" handler="gui_signal_image_click" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="image">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-missing-image</property>
+              </object>
+            </child>
           </object>
           <packing>
             <property name="resize">True</property>

@@ -56,10 +56,5 @@ gboolean			gui_signal_key
 		cl_renderer_render(gui->renderer);
 	else if (try_rotate_camera(gui, key->keyval))
 		cl_renderer_render(gui->renderer);
-	else if (key->keyval == GDK_KEY_t)
-	{
-		GtkDialog *dialog = GTK_DIALOG(RT_GUI_GET(gui->builder, "test_dialog"));
-		gtk_dialog_run(dialog);
-	}
 	return (FALSE);
 }

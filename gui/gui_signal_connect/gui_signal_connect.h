@@ -8,6 +8,8 @@
 
 void				gui_signal_connect_all(t_gui *gui);
 
+void 				gui_signal_connect_image(t_gui *gui);
+
 void				gui_signal_connect_scene_edit(t_gui *gui);
 void 				gui_signal_connect_object_edit_sphere(t_gui *gui);
 void 				gui_signal_connect_object_edit_plane(t_gui *gui);

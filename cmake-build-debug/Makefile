@@ -1878,6 +1878,33 @@ gui/gui_signal_connect/gui_signal_connect_camera.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.s
 .PHONY : gui/gui_signal_connect/gui_signal_connect_camera.c.s
 
+gui/gui_signal_connect/gui_signal_connect_image.o: gui/gui_signal_connect/gui_signal_connect_image.c.o
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.o
+
+# target to build an object file
+gui/gui_signal_connect/gui_signal_connect_image.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.c.o
+
+gui/gui_signal_connect/gui_signal_connect_image.i: gui/gui_signal_connect/gui_signal_connect_image.c.i
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.i
+
+# target to preprocess a source file
+gui/gui_signal_connect/gui_signal_connect_image.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.i
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.c.i
+
+gui/gui_signal_connect/gui_signal_connect_image.s: gui/gui_signal_connect/gui_signal_connect_image.c.s
+
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect/gui_signal_connect_image.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.s
+.PHONY : gui/gui_signal_connect/gui_signal_connect_image.c.s
+
 gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o: gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c.o
 
 .PHONY : gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o
@@ -2066,6 +2093,33 @@ gui/gui_signal_x/gui_signal_exit.s: gui/gui_signal_x/gui_signal_exit.c.s
 gui/gui_signal_x/gui_signal_exit.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.s
 .PHONY : gui/gui_signal_x/gui_signal_exit.c.s
+
+gui/gui_signal_x/gui_signal_image_click.o: gui/gui_signal_x/gui_signal_image_click.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_image_click.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_image_click.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.o
+.PHONY : gui/gui_signal_x/gui_signal_image_click.c.o
+
+gui/gui_signal_x/gui_signal_image_click.i: gui/gui_signal_x/gui_signal_image_click.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_image_click.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_image_click.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.i
+.PHONY : gui/gui_signal_x/gui_signal_image_click.c.i
+
+gui/gui_signal_x/gui_signal_image_click.s: gui/gui_signal_x/gui_signal_image_click.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_image_click.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_image_click.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.s
+.PHONY : gui/gui_signal_x/gui_signal_image_click.c.s
 
 gui/gui_signal_x/gui_signal_key.o: gui/gui_signal_x/gui_signal_key.c.o
 
@@ -2595,6 +2649,9 @@ help:
 	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.o"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.i"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_camera.s"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_image.o"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_image.i"
+	@echo "... gui/gui_signal_connect/gui_signal_connect_image.s"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.o"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.i"
 	@echo "... gui/gui_signal_connect/gui_signal_connect_object_edit_plane.s"
@@ -2616,6 +2673,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_exit.o"
 	@echo "... gui/gui_signal_x/gui_signal_exit.i"
 	@echo "... gui/gui_signal_x/gui_signal_exit.s"
+	@echo "... gui/gui_signal_x/gui_signal_image_click.o"
+	@echo "... gui/gui_signal_x/gui_signal_image_click.i"
+	@echo "... gui/gui_signal_x/gui_signal_image_click.s"
 	@echo "... gui/gui_signal_x/gui_signal_key.o"
 	@echo "... gui/gui_signal_x/gui_signal_key.i"
 	@echo "... gui/gui_signal_x/gui_signal_key.s"
