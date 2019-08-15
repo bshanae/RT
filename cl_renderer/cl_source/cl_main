@@ -17,7 +17,7 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	intersection.ray = camera_build_ray(camera, &screen);
+	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
 
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);

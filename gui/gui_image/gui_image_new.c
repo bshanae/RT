@@ -16,8 +16,8 @@ t_gui_image			*gui_image_new(GtkBuilder *builder)
 	t_gui_image		*new;
 
 	new = malloc(sizeof(t_gui_image));
-	new->width = RT_GUI_DEFAULT_WIDTH;
-	new->height = RT_GUI_DEFAULT_HEIGHT;
+	new->width = RT_GUI_WIDTH;
+	new->height = RT_GUI_HEIGHT;
 	new->event_box = GTK_EVENT_BOX(RT_GUI_GET(builder, "image_event_box"));
 	gtk_widget_set_can_focus(GTK_WIDGET(new->event_box), TRUE);
 	new->image = GTK_IMAGE(RT_GUI_GET(builder, "image"));

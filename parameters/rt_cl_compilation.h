@@ -14,6 +14,7 @@
 # define CL_SOURCE_SETTINGS				"cl_settings"
 # define CL_SOURCE_RANDOM				"cl_random"
 # define CL_SOURCE_RAY					"cl_ray"
+# define CL_SOURCE_FILTER				"cl_filter"
 # define CL_SOURCE_CAMERA				"cl_camera"
 # define CL_SOURCE_COLOR				"cl_color"
 # define CL_SOURCE_MATERIAL				"cl_material"

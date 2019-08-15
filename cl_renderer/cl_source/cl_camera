@@ -11,9 +11,26 @@ typedef struct 		s_camera
 	RT_F4			forward_backup;
 	int				width;
 	int				height;
+	int 			antialiasing;
+    int 			focus;
+    RT_F			aperture_size;
+    RT_F			focal_length;
 }					t_camera;
 
-static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
+static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
+{
+	RT_F4			focal_point;
+
+	focal_point = camera->position + ray->direction * camera->focal_length;
+
+	ray->origin.x += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.y += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.z += (.5 - rng(rng_state)) * camera->aperture_size;
+
+	ray->direction = normalize(focal_point - ray->origin);
+}
+
+static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global ulong *rng_state)
 {
 	t_ray			result;
 	RT_F4			up;
@@ -23,10 +40,17 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
 
 	xf = (RT_F)screen->x;
 	yf = (RT_F)screen->y;
+	if (camera->antialiasing)
+	{
+		filter_jitter(&xf, rng_state);
+    	filter_jitter(&yf, rng_state);
+	}
 	result.origin = camera->position;
 	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
 	right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
 	result.direction = up + right + camera->forward;
 	result.direction = normalize(result.direction);
+	if (camera->focus)
+		camera_focus(camera, &result, rng_state);
 	return (result);
 }

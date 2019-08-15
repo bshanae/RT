@@ -1,0 +1,13 @@
+// cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+static void			filter_jitter(RT_F *x, global ulong *rng_state)
+{
+	RT_F			dx;
+
+	dx = 2. * rng(rng_state);
+	if (dx < 1.)
+    	dx = RT_SQRT(dx) - 1;
+    else
+    	dx = 1. - RT_SQRT((RT_F)2. - dx);
+    *x += dx;
+}

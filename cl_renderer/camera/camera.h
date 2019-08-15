@@ -22,6 +22,10 @@ typedef struct 		s_camera
 	RT_F4_API		forward_backup;
 	int				width;
 	int				height;
+	int 			antialiasing;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
 }					t_camera;
 
 t_camera			*camera_new(INT_REF width, INT_REF height);
@@ -36,8 +40,6 @@ typedef enum		e_camera_movement
 	rt_movement_forward,
 	rt_movement_backward
 }					t_camera_movement;
-
-
 
 void 				camera_move
 					(t_camera *camera,

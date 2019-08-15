@@ -67,6 +67,7 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 	cl_program_read(&renderer->program, CL_SOURCE_SETTINGS);
 	cl_program_read(&renderer->program, CL_SOURCE_RANDOM);
 	cl_program_read(&renderer->program, CL_SOURCE_RAY);
+	cl_program_read(&renderer->program, CL_SOURCE_FILTER);
 	cl_program_read(&renderer->program, CL_SOURCE_CAMERA);
 	cl_program_read(&renderer->program, CL_SOURCE_COLOR);
 	cl_program_read(&renderer->program, CL_SOURCE_MATERIAL);

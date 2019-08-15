@@ -33,16 +33,16 @@ static void			radiance_add(
 		}
 
 		intersection->ray.origin = intersection->hit;
-		if (RT_CL_COSINE)
-		{
-			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
-			mask *= intersection->material.color;
-		}
-		else
-		{
-			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-			mask *= intersection->material.color * cosine;
-		}
+
+#ifdef RT_CL_UNIFORM
+		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+		mask *= intersection->material.color * cosine;
+#endif
+
+#ifdef RT_CL_COSINE
+		intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
+		mask *= intersection->material.color;
+#endif
 	}
 	if (settings->sample_count == 1)
 		*sample = radiance;

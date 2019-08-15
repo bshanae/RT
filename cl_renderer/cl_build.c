@@ -73,6 +73,20 @@ static RT_F4		ray_intersect(t_ray *ray)
 {
 	return (ray->origin + ray->direction * ray->t);
 }
+// cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+static void			filter_jitter(RT_F *x, global ulong *rng_state)
+{
+	RT_F			dx;
+
+	dx = 2. * rng(rng_state);
+	if (dx < 1.)
+    	dx = RT_SQRT(dx) - 1;
+    else
+    	dx = 1. - RT_SQRT((RT_F)2. - dx);
+    *x += dx;
+}
+
 // cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_camera
@@ -86,9 +100,26 @@ typedef struct 		s_camera
 	RT_F4			forward_backup;
 	int				width;
 	int				height;
+	int 			antialiasing;
+    int 			focus;
+    RT_F			aperture_size;
+    RT_F			focal_length;
 }					t_camera;
 
-static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
+static void			camera_focus(t_camera *camera, t_ray *ray, global ulong *rng_state)
+{
+	RT_F4			focal_point;
+
+	focal_point = camera->position + ray->direction * camera->focal_length;
+
+	ray->origin.x += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.y += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.z += (.5 - rng(rng_state)) * camera->aperture_size;
+
+	ray->direction = normalize(focal_point - ray->origin);
+}
+
+static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global ulong *rng_state)
 {
 	t_ray			result;
 	RT_F4			up;
@@ -98,11 +129,18 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen)
 
 	xf = (RT_F)screen->x;
 	yf = (RT_F)screen->y;
+	if (camera->antialiasing)
+	{
+		filter_jitter(&xf, rng_state);
+    	filter_jitter(&yf, rng_state);
+	}
 	result.origin = camera->position;
 	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
 	right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
 	result.direction = up + right + camera->forward;
 	result.direction = normalize(result.direction);
+	if (camera->focus)
+		camera_focus(camera, &result, rng_state);
 	return (result);
 }
 // cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -169,7 +207,7 @@ typedef struct		s_object
 	int				id;
 	t_object_type	type;
 	t_material		material;
-	char			data[RT_OBJECT_DATA_CAPACITY];
+	char			data[RT_CL_OBJECT_DATA_CAPACITY];
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -283,7 +321,7 @@ static RT_F4		object_normal(constant t_object *object, t_intersection *intersect
 
 typedef struct		s_scene
 {
-	t_object		objects[RT_SCENE_OBJECTS_CAPACITY];
+	t_object		objects[RT_CL_SCENE_OBJECTS_CAPACITY];
 	int				objects_length;
 }					t_scene;
 
@@ -476,11 +514,10 @@ static void			radiance_add(
 		if (!scene_intersect(scene, intersection))
 			break ;
 
-		if (depth < settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
+		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
 		radiance += mask * intersection->material.emission;
-		printf("%f %f %f %f\n", )
 
 		if (settings->light_explicit)
 		{
@@ -531,7 +568,7 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	intersection.ray = camera_build_ray(camera, &screen);
+	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
 
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
