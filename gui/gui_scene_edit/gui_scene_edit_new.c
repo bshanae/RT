@@ -15,5 +15,6 @@ t_gui_scene_edit		*gui_scene_edit_new(GtkBuilder *builder)
 		GTK_DIALOG(RT_GUI_GET(builder, "scene_edit_remove_dialog"));
 	gui_scene_edit_set_sphere(new, builder);
 	gui_scene_edit_set_plane(new, builder);
+	gui_scene_edit_set_material(new, builder);
 	return (new);
 }

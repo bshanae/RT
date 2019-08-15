@@ -16,6 +16,7 @@ void 				gui_signal_object_edit_plane_position_x
 	((t_object_plane *)object->data)->position.x = value;
 	gui->renderer->flags.update_scene = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_position_y
@@ -34,6 +35,7 @@ void 				gui_signal_object_edit_plane_position_y
 	((t_object_plane *)object->data)->position.y = value;
 	gui->renderer->flags.update_scene = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }
 
 void 				gui_signal_object_edit_plane_position_z
@@ -52,4 +54,5 @@ void 				gui_signal_object_edit_plane_position_z
 	((t_object_plane *)object->data)->position.z = value;
 	gui->renderer->flags.update_scene = 1;
 	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_render(gui->renderer);
 }

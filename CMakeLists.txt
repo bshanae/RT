@@ -49,6 +49,8 @@ include_directories(
 	./gui/gui/
 	./gui/gui_camera/
 	./gui/gui_object_x/
+	./gui/gui_color/
+	./gui/gui_material/
 	./gui/gui_scene_edit/
 	./gui/gui_scene_add/
 	./gui/object_add/
@@ -96,9 +98,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	"-framework OpenCL"
-#	"OpenCL"
-#	"m"
+#	"-framework OpenCL"
+	"OpenCL"
+	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN ./main.c)
@@ -111,23 +113,44 @@ set(SOURCE_GUI_GUI
 
 set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
-	./gui/gui_camera/gui_camera_delete.c gui/gui_camera/gui_camera_show.c)
+	./gui/gui_camera/gui_camera_delete.c
+	./gui/gui_camera/gui_camera_show.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_sphere_x.c
-	./gui/gui_object_x/gui_object_plane_x.c cl_renderer/object/object_translate.c gui/gui_object_x/gui_object_x.c)
+	./gui/gui_object_x/gui_object_plane_x.c
+	./gui/gui_object_x/gui_object_x.c)
+
+set(SOURCE_GUI_COLOR
+	./gui/gui_color/gui_color_to_f4.c
+	./gui/gui_color/gui_color_from_f4.c)
+
+set(SOURCE_GUI_MATERIAL
+	./gui/gui_material/gui_material_set.c
+	./gui/gui_material/gui_material_show.c
+	./gui/gui_scene_edit/gui_scene_edit_set_material.c
+	./gui/gui_material/gui_material_build.c gui/gui_scene_add/gui_scene_add_set_material.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
 	./gui/gui_scene_edit/gui_scene_edit_delete.c
-	gui/gui_scene_edit/gui_scene_edit_update.c
+	./gui/gui_scene_edit/gui_scene_edit_update.c
 	./gui/gui_scene_edit/gui_scene_edit_gen_name.c
-	gui/gui_scene_edit/gui_scene_edit_set_sphere.c
-	gui/gui_scene_edit/gui_scene_edit_set_plane.c gui/gui_scene_edit/gui_scene_edit_get_object.c gui/gui_scene_edit/gui_scene_edit_show.c)
+	./gui/gui_scene_edit/gui_scene_edit_set_sphere.c
+	./gui/gui_scene_edit/gui_scene_edit_set_plane.c
+	./gui/gui_scene_edit/gui_scene_edit_get_object.c
+	./gui/gui_scene_edit/gui_scene_edit_show.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
-	./gui/gui_scene_add/gui_scene_add_delete.c gui/gui_scene_add/gui_scene_add_set_sphere.c gui/gui_scene_add/gui_scene_add_update.c gui/gui_scene_add/gui_scene_add_show.c gui/gui_scene_add/gui_scene_add_get_object.c gui/gui_scene_add/gui_scene_add_set_plane.c gui/gui_scene_add/gui_scene_add_gen_name.c gui/gui_scene_add/gui_scene_add_build_object.c)
+	./gui/gui_scene_add/gui_scene_add_delete.c
+	./gui/gui_scene_add/gui_scene_add_set_sphere.c
+	./gui/gui_scene_add/gui_scene_add_update.c
+	./gui/gui_scene_add/gui_scene_add_show.c
+	./gui/gui_scene_add/gui_scene_add_get_object.c
+	./gui/gui_scene_add/gui_scene_add_set_plane.c
+	./gui/gui_scene_add/gui_scene_add_gen_name.c
+	./gui/gui_scene_add/gui_scene_add_build_object.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -148,7 +171,16 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_name.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
-	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c gui/gui_signal_x/gui_signal_scene_add_response_x.c gui/gui_signal_x/gui_signal_scene_edit_add.c gui/gui_signal_x/gui_signal_scene_edit_remove.c gui/gui_signal_x/gui_signal_scene_add_type_x.c gui/gui_signal_x/gui_signal_camera_position_x.c gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c gui/gui_signal_x/gui_signal_image_click.c)
+	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c
+	./gui/gui_signal_x/gui_signal_scene_add_response_x.c
+	./gui/gui_signal_x/gui_signal_scene_edit_add.c
+	./gui/gui_signal_x/gui_signal_scene_edit_remove.c
+	./gui/gui_signal_x/gui_signal_scene_add_type_x.c
+	./gui/gui_signal_x/gui_signal_camera_position_x.c
+	./gui/gui_signal_x/gui_signal_camera_rotation_x.c
+	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
+	./gui/gui_signal_x/gui_signal_image_click.c
+	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c
@@ -156,12 +188,16 @@ set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_macro.h
 	./gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
 	./gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c
-	./gui/gui_signal_connect/gui_signal_connect_scene_add.c gui/gui_signal_connect/gui_signal_connect_camera.c gui/gui_signal_connect/gui_signal_connect_image.c)
+	./gui/gui_signal_connect/gui_signal_connect_scene_add.c
+	./gui/gui_signal_connect/gui_signal_connect_camera.c
+	./gui/gui_signal_connect/gui_signal_connect_image.c)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
 	${SOURCE_GUI_CAMERA}
 	${SOURCE_GUI_OBJECT_X}
+	${SOURCE_GUI_COLOR}
+	${SOURCE_GUI_MATERIAL}
 	${SOURCE_GUI_SCENE_EDIT}
 	${SOURCE_GUI_SCENE_ADD}
 	${SOURCE_GUI_SCENE}
@@ -183,27 +219,33 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_render.c
 	./cl_renderer/cl_renderer/cl_renderer_log.c
 	./cl_renderer/cl_renderer/cl_renderer_update.c
-	)
+	./cl_renderer/cl_renderer/cl_renderer_reset_samples.c
+	./cl_renderer/cl_renderer/cl_renderer_camera_x.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
-	./cl_renderer/scene/scene_delete.c cl_renderer/scene/scene_remove_object.c)
+	./cl_renderer/scene/scene_delete.c
+	./cl_renderer/scene/scene_remove_object.c)
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
 	./cl_renderer/object_x/object_sphere.c
-	./cl_renderer/object_x/object_plane.c)
+	./cl_renderer/object_x/object_plane.c
+	./cl_renderer/object/object_translate.c)
 
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
-	./cl_renderer/f4/f4_mul.c cl_renderer/f4/f4_rotate.c)
+	./cl_renderer/f4/f4_mul.c
+	./cl_renderer/f4/f4_rotate.c)
 
 set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_new.c
 	./cl_renderer/camera/camera_delete.c
-	./cl_renderer/camera/camera_move.c cl_renderer/camera/camera_rotate.c cl_renderer/camera/camera_apply.c)
+	./cl_renderer/camera/camera_move.c
+	./cl_renderer/camera/camera_rotate.c
+	./cl_renderer/camera/camera_apply.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -214,7 +256,7 @@ set(SOURCE_CL_RENDERER
 	${SOURCE_OBJECT}
 	${SOURCE_F4}
 	${SOURCE_CAMERA}
-	${SOURCE_ASSERT} gui/gui_signal_x/gui_signal_camera_rotation_x.c cl_renderer/cl_renderer/cl_renderer_reset_samples.c cl_renderer/cl_renderer/cl_renderer_camera_x.c)
+	${SOURCE_ASSERT})
 
 add_executable(rt
 	${SOURCE_MAIN}

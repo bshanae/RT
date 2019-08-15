@@ -9,5 +9,6 @@ void 				gui_scene_edit_show
 		gui_object_plane_show(&edit->plane, object);
 	else
 		return ;
+	gui_material_show(&edit->material, &object->material);
 	gtk_widget_show(GTK_WIDGET(edit->current_object));
 }

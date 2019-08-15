@@ -65,6 +65,11 @@ void 				gui_signal_object_edit_plane_normal_y
 void 				gui_signal_object_edit_plane_normal_z
 					(GTK_SIGNAL_SIGNATURE);
 
+void 				gui_signal_scene_edit_material_color
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_scene_edit_material_emission
+					(GTK_SIGNAL_SIGNATURE);
+
 void				gui_signal_scene_add_response_cancel
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_scene_add_response_yes

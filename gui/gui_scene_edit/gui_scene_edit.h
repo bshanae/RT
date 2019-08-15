@@ -4,6 +4,7 @@
 # include "rt_float.h"
 
 # include "gui_object_x.h"
+# include "gui_material.h"
 # include "scene.h"
 
 # include <gtk/gtk.h>
@@ -20,6 +21,7 @@ typedef struct 					s_gui_scene_edit
 {
 	t_gui_object_sphere			sphere;
 	t_gui_object_plane			plane;
+	t_gui_material				material;
 	GtkOverlay					*overlay;
 	GtkListStore				*list;
 	GtkTreeSelection			*selection;
@@ -37,6 +39,8 @@ void 							gui_scene_edit_delete
 void 							gui_scene_edit_set_sphere
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_set_plane
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_set_material
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 
 void							gui_scene_edit_gen_name

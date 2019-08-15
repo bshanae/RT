@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1149,6 +1149,60 @@ gui/gui_camera/gui_camera_show.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.s
 .PHONY : gui/gui_camera/gui_camera_show.c.s
 
+gui/gui_color/gui_color_from_f4.o: gui/gui_color/gui_color_from_f4.c.o
+
+.PHONY : gui/gui_color/gui_color_from_f4.o
+
+# target to build an object file
+gui/gui_color/gui_color_from_f4.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.o
+.PHONY : gui/gui_color/gui_color_from_f4.c.o
+
+gui/gui_color/gui_color_from_f4.i: gui/gui_color/gui_color_from_f4.c.i
+
+.PHONY : gui/gui_color/gui_color_from_f4.i
+
+# target to preprocess a source file
+gui/gui_color/gui_color_from_f4.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.i
+.PHONY : gui/gui_color/gui_color_from_f4.c.i
+
+gui/gui_color/gui_color_from_f4.s: gui/gui_color/gui_color_from_f4.c.s
+
+.PHONY : gui/gui_color/gui_color_from_f4.s
+
+# target to generate assembly for a file
+gui/gui_color/gui_color_from_f4.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.s
+.PHONY : gui/gui_color/gui_color_from_f4.c.s
+
+gui/gui_color/gui_color_to_f4.o: gui/gui_color/gui_color_to_f4.c.o
+
+.PHONY : gui/gui_color/gui_color_to_f4.o
+
+# target to build an object file
+gui/gui_color/gui_color_to_f4.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.o
+.PHONY : gui/gui_color/gui_color_to_f4.c.o
+
+gui/gui_color/gui_color_to_f4.i: gui/gui_color/gui_color_to_f4.c.i
+
+.PHONY : gui/gui_color/gui_color_to_f4.i
+
+# target to preprocess a source file
+gui/gui_color/gui_color_to_f4.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.i
+.PHONY : gui/gui_color/gui_color_to_f4.c.i
+
+gui/gui_color/gui_color_to_f4.s: gui/gui_color/gui_color_to_f4.c.s
+
+.PHONY : gui/gui_color/gui_color_to_f4.s
+
+# target to generate assembly for a file
+gui/gui_color/gui_color_to_f4.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.s
+.PHONY : gui/gui_color/gui_color_to_f4.c.s
+
 gui/gui_image/gui_image_delete.o: gui/gui_image/gui_image_delete.c.o
 
 .PHONY : gui/gui_image/gui_image_delete.o
@@ -1202,6 +1256,87 @@ gui/gui_image/gui_image_new.s: gui/gui_image/gui_image_new.c.s
 gui/gui_image/gui_image_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.s
 .PHONY : gui/gui_image/gui_image_new.c.s
+
+gui/gui_material/gui_material_build.o: gui/gui_material/gui_material_build.c.o
+
+.PHONY : gui/gui_material/gui_material_build.o
+
+# target to build an object file
+gui/gui_material/gui_material_build.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_build.c.o
+.PHONY : gui/gui_material/gui_material_build.c.o
+
+gui/gui_material/gui_material_build.i: gui/gui_material/gui_material_build.c.i
+
+.PHONY : gui/gui_material/gui_material_build.i
+
+# target to preprocess a source file
+gui/gui_material/gui_material_build.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_build.c.i
+.PHONY : gui/gui_material/gui_material_build.c.i
+
+gui/gui_material/gui_material_build.s: gui/gui_material/gui_material_build.c.s
+
+.PHONY : gui/gui_material/gui_material_build.s
+
+# target to generate assembly for a file
+gui/gui_material/gui_material_build.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_build.c.s
+.PHONY : gui/gui_material/gui_material_build.c.s
+
+gui/gui_material/gui_material_set.o: gui/gui_material/gui_material_set.c.o
+
+.PHONY : gui/gui_material/gui_material_set.o
+
+# target to build an object file
+gui/gui_material/gui_material_set.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o
+.PHONY : gui/gui_material/gui_material_set.c.o
+
+gui/gui_material/gui_material_set.i: gui/gui_material/gui_material_set.c.i
+
+.PHONY : gui/gui_material/gui_material_set.i
+
+# target to preprocess a source file
+gui/gui_material/gui_material_set.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.i
+.PHONY : gui/gui_material/gui_material_set.c.i
+
+gui/gui_material/gui_material_set.s: gui/gui_material/gui_material_set.c.s
+
+.PHONY : gui/gui_material/gui_material_set.s
+
+# target to generate assembly for a file
+gui/gui_material/gui_material_set.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.s
+.PHONY : gui/gui_material/gui_material_set.c.s
+
+gui/gui_material/gui_material_show.o: gui/gui_material/gui_material_show.c.o
+
+.PHONY : gui/gui_material/gui_material_show.o
+
+# target to build an object file
+gui/gui_material/gui_material_show.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.o
+.PHONY : gui/gui_material/gui_material_show.c.o
+
+gui/gui_material/gui_material_show.i: gui/gui_material/gui_material_show.c.i
+
+.PHONY : gui/gui_material/gui_material_show.i
+
+# target to preprocess a source file
+gui/gui_material/gui_material_show.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.i
+.PHONY : gui/gui_material/gui_material_show.c.i
+
+gui/gui_material/gui_material_show.s: gui/gui_material/gui_material_show.c.s
+
+.PHONY : gui/gui_material/gui_material_show.s
+
+# target to generate assembly for a file
+gui/gui_material/gui_material_show.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.s
+.PHONY : gui/gui_material/gui_material_show.c.s
 
 gui/gui_object_x/gui_object_plane_x.o: gui/gui_object_x/gui_object_plane_x.c.o
 
@@ -1473,6 +1608,33 @@ gui/gui_scene_add/gui_scene_add_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_new.c.s
 
+gui/gui_scene_add/gui_scene_add_set_material.o: gui/gui_scene_add/gui_scene_add_set_material.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_set_material.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.c.o
+
+gui/gui_scene_add/gui_scene_add_set_material.i: gui/gui_scene_add/gui_scene_add_set_material.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_set_material.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.c.i
+
+gui/gui_scene_add/gui_scene_add_set_material.s: gui/gui_scene_add/gui_scene_add_set_material.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_set_material.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_set_material.c.s
+
 gui/gui_scene_add/gui_scene_add_set_plane.o: gui/gui_scene_add/gui_scene_add_set_plane.c.o
 
 .PHONY : gui/gui_scene_add/gui_scene_add_set_plane.o
@@ -1688,6 +1850,33 @@ gui/gui_scene_edit/gui_scene_edit_new.s: gui/gui_scene_edit/gui_scene_edit_new.c
 gui/gui_scene_edit/gui_scene_edit_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_new.c.s
+
+gui/gui_scene_edit/gui_scene_edit_set_material.o: gui/gui_scene_edit/gui_scene_edit_set_material.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_set_material.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.c.o
+
+gui/gui_scene_edit/gui_scene_edit_set_material.i: gui/gui_scene_edit/gui_scene_edit_set_material.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_set_material.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.c.i
+
+gui/gui_scene_edit/gui_scene_edit_set_material.s: gui/gui_scene_edit/gui_scene_edit_set_material.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_set_material.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_material.c.s
 
 gui/gui_scene_edit/gui_scene_edit_set_plane.o: gui/gui_scene_edit/gui_scene_edit_set_plane.c.o
 
@@ -2364,6 +2553,33 @@ gui/gui_signal_x/gui_signal_scene_edit_add.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_add.c.s
 .PHONY : gui/gui_signal_x/gui_signal_scene_edit_add.c.s
 
+gui/gui_signal_x/gui_signal_scene_edit_material_x.o: gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
+
+gui/gui_signal_x/gui_signal_scene_edit_material_x.i: gui/gui_signal_x/gui_signal_scene_edit_material_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_scene_edit_material_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.c.i
+
+gui/gui_signal_x/gui_signal_scene_edit_material_x.s: gui/gui_signal_x/gui_signal_scene_edit_material_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_scene_edit_material_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.c.s
+
 gui/gui_signal_x/gui_signal_scene_edit_remove.o: gui/gui_signal_x/gui_signal_scene_edit_remove.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_scene_edit_remove.o
@@ -2479,8 +2695,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... rt"
+	@echo "... edit_cache"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -2595,12 +2811,27 @@ help:
 	@echo "... gui/gui_camera/gui_camera_show.o"
 	@echo "... gui/gui_camera/gui_camera_show.i"
 	@echo "... gui/gui_camera/gui_camera_show.s"
+	@echo "... gui/gui_color/gui_color_from_f4.o"
+	@echo "... gui/gui_color/gui_color_from_f4.i"
+	@echo "... gui/gui_color/gui_color_from_f4.s"
+	@echo "... gui/gui_color/gui_color_to_f4.o"
+	@echo "... gui/gui_color/gui_color_to_f4.i"
+	@echo "... gui/gui_color/gui_color_to_f4.s"
 	@echo "... gui/gui_image/gui_image_delete.o"
 	@echo "... gui/gui_image/gui_image_delete.i"
 	@echo "... gui/gui_image/gui_image_delete.s"
 	@echo "... gui/gui_image/gui_image_new.o"
 	@echo "... gui/gui_image/gui_image_new.i"
 	@echo "... gui/gui_image/gui_image_new.s"
+	@echo "... gui/gui_material/gui_material_build.o"
+	@echo "... gui/gui_material/gui_material_build.i"
+	@echo "... gui/gui_material/gui_material_build.s"
+	@echo "... gui/gui_material/gui_material_set.o"
+	@echo "... gui/gui_material/gui_material_set.i"
+	@echo "... gui/gui_material/gui_material_set.s"
+	@echo "... gui/gui_material/gui_material_show.o"
+	@echo "... gui/gui_material/gui_material_show.i"
+	@echo "... gui/gui_material/gui_material_show.s"
 	@echo "... gui/gui_object_x/gui_object_plane_x.o"
 	@echo "... gui/gui_object_x/gui_object_plane_x.i"
 	@echo "... gui/gui_object_x/gui_object_plane_x.s"
@@ -2631,6 +2862,9 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_new.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_material.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_material.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_material.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_plane.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_plane.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_plane.s"
@@ -2655,6 +2889,9 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_plane.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_plane.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_plane.s"
@@ -2730,6 +2967,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.s"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_remove.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_remove.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_remove.s"
