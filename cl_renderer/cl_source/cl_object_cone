@@ -1,0 +1,55 @@
+// cl_object_cone /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_object_cone
+{
+	RT_F4   		top;
+	RT_F4   		bottom;
+	RT_F4   		normal;
+	RT_F 			radius;
+	RT_F          	tangens;
+}					t_object_cone;
+
+static int			cone_intersect(constant t_object *object, t_intersection *intersection)
+{
+	t_object_cone	data;
+	RT_F4			temp;
+	RT_F            discriminant;
+	RT_F            t[2];
+	RT_F            k[3];
+
+	data = *(t_object_cone *)object->data;
+	temp = intersection->ray.origin - data.top;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.normal), (RT_F)2.)
+			* (1 + data.tangens * data.tangens);
+	k[1] = 2 * (dot(temp, intersection->ray.direction) - (1 + data.tangens * data.tangens)
+			* dot(intersection->ray.direction, data.normal) * dot(temp, data.normal));
+	k[2] = dot(temp, temp) - (1 + data.tangens * data.tangens)
+			* pow((RT_F)dot(temp, data.normal), (RT_F)2.);
+
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+		return (0);
+	t[0] = (-k[1] - RT_SQRT_API(discriminant)) / (2 * k[0]);
+	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t[0];
+	intersection->object_id = object->id;
+		return (1);
+}
+
+static RT_F4		cone_normal(constant t_object *object, t_intersection *intersection)
+{
+	t_object_cone	data;
+	RT_F4			temp[2];
+	RT_F4			result;
+	RT_F            t;
+
+	data = *(t_object_cone *)object->data;
+	temp[0] = intersection->ray.origin - data.top;
+	temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
+	t = dot(intersection->ray.direction, data.normal) * intersection->ray.t + dot(temp[0], data.normal);
+	result = (temp[1] - data.top) - (data.normal * (1 + data.tangens * data.tangens) * t);
+	return (normalize(result));
+}

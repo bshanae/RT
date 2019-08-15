@@ -2,23 +2,22 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+#pkg_check_modules(GTK3 REQUIRED gtk+3)
 
-set(BREW /usr/local/)
+set(BREW /Users/ashari/.brew)
 
 set(GTK_INCLUDES
+	${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0
 	${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
-	${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0/
 	${BREW}/Cellar/glib/2.60.6/include/gio-unix-2.0
 	${BREW}/Cellar/cairo/1.16.0_2/include/cairo
 	${BREW}/Cellar/libepoxy/1.5.3/include
-	${BREW}/Cellar/pango/1.42.4_2/include/pango-1.0
+	${BREW}/Cellar/pango/1.44.5/include/pango-1.0
+	${BREW}/Cellar/fribidi/1.0.5/include/fribidi
 	${BREW}/Cellar/harfbuzz/2.5.3/include/harfbuzz
 	${BREW}/Cellar/graphite2/1.3.13/include
-	${BREW}/Cellar/pango/1.42.4_2/include/pango-1.0
-	${BREW}/Cellar/fribidi/1.0.5/include/fribidi
 	${BREW}/Cellar/atk/2.32.0_1/include/atk-1.0
-	${BREW}/Cellar/cairo/1.16.0_2/include/cair
+	${BREW}/Cellar/cairo/1.16.0_2/include/cairo
 	${BREW}/Cellar/pixman/0.38.4/include/pixman-1
 	${BREW}/Cellar/fontconfig/2.13.1/include
 	${BREW}/opt/freetype/include/freetype2
@@ -32,17 +31,17 @@ set(GTK_INCLUDES
 
 set(GTK_LINKS
 	${BREW}/Cellar/gtk+3/3.24.10/lib
-	${BREW}/Cellar/pango/1.42.4_2/lib
+	${BREW}/Cellar/pango/1.44.5/lib
+	${BREW}/Cellar/harfbuzz/2.5.3/lib
 	${BREW}/Cellar/atk/2.32.0_1/lib
 	${BREW}/Cellar/cairo/1.16.0_2/lib
 	${BREW}/Cellar/gdk-pixbuf/2.38.1_1/lib
 	${BREW}/Cellar/glib/2.60.6/lib
 	${BREW}/opt/gettext/lib)
 
-
 include_directories(
-	#${GTK_INCLUDES}
-	${GTK3_INCLUDE_DIRS}
+	${GTK_INCLUDES}
+#	${GTK3_INCLUDE_DIRS}
 	../21_libft/includes/
 	./parameters/
 	./gui/
@@ -72,7 +71,7 @@ include_directories(
 	./cl_renderer/assert
 	./cl_renderer/material)
 
-set(GTK_LIBS
+set(GTK3_LIBRARY_DIRS
 	"gtk-3"
 	"gdk-3"
 	"pangocairo-1.0"
@@ -90,7 +89,7 @@ set(GTK_LIBS
 	"-framework CoreGraphics")
 
 link_directories(
-	#${GTK_LINKS}
+	${GTK_LINKS}
 	${GTK3_LIBRARY_DIRS}
 	../21_libft/)
 
@@ -101,7 +100,7 @@ link_libraries(
 	"-framework OpenCL"
 #	"OpenCL"
 #	"m"
-	${GTK3_LIBRARIES})
+	${GTK3_LIBRARY_DIRS})
 
 set(SOURCE_MAIN ./main.c)
 
@@ -129,7 +128,8 @@ set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_set.c
 	./gui/gui_material/gui_material_show.c
 	./gui/gui_scene_edit/gui_scene_edit_set_material.c
-	./gui/gui_material/gui_material_build.c gui/gui_scene_add/gui_scene_add_set_material.c)
+	./gui/gui_material/gui_material_build.c
+	./gui/gui_scene_add/gui_scene_add_set_material.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -232,6 +232,8 @@ set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
 	./cl_renderer/object_x/object_sphere.c
 	./cl_renderer/object_x/object_plane.c
+	./cl_renderer/object_x/object_cone.c
+	./cl_renderer/object_x/object_cylinder.c
 	./cl_renderer/object/object_translate.c)
 
 set(SOURCE_F4

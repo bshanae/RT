@@ -1,0 +1,54 @@
+// cl_object_cylinder /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		    s_object_cylinder
+{
+	RT_F4   		    top;
+	RT_F4   		    bottom;
+	RT_F4   		    normal;
+	RT_F 			    radius;
+}					    t_object_cylinder;
+
+static int			    cylinder_intersect(constant t_object *object, t_intersection *intersection)
+{
+	t_object_cylinder	data;
+	RT_F4			    temp;
+	RT_F                discriminant;
+	RT_F                t[2];
+	RT_F                k[3];
+
+	data = *(t_object_cylinder *)object->data;
+	temp = intersection->ray.origin - data.bottom;
+
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.normal), (RT_F)2.);
+	k[1] = 2 * (dot(intersection->ray.direction, temp)
+			- dot(intersection->ray.direction, data.normal)
+			* dot(temp, data.normal));
+	k[2] =  dot(temp, temp) - pow((RT_F)dot(temp, data.normal), (RT_F)2.)
+			- pow((RT_F)data.radius, (RT_F)2.);
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+		return (0);
+	t[0] = (-k[1] - RT_SQRT_API(discriminant)) / (2 * k[0]);
+	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t[0];
+	intersection->object_id = object->id;
+	return (1);
+}
+
+static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
+{
+	t_object_cylinder   data;
+	RT_F4			    temp[2];
+	RT_F4			    result;
+	RT_F                tmp;
+
+	data = *(t_object_cylinder *)object->data;
+	temp[0] = intersection->ray.origin - data.bottom;
+	temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
+	tmp = dot(intersection->ray.direction, (data.normal * intersection->ray.t)) + dot(temp[0], data.normal);
+	result = (temp[1] - data.bottom) - (data.normal * tmp);
+	return (normalize(result));
+}

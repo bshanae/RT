@@ -9,8 +9,6 @@
 # include "gui_image.h"
 # include "cl_renderer.h"
 
-# include <gtk/gtk.h>
-
 typedef struct		s_gui
 {
 	GtkCssProvider	*css_provider;

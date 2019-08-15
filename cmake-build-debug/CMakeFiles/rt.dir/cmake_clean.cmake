@@ -84,6 +84,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"

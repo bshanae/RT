@@ -13,6 +13,10 @@ void				object_build(
 		object_sphere_build(space, &args);
 	else if (type == object_plane)
 		object_plane_build(space, &args);
+	else if (type == object_cone)
+		object_cone_build(space, &args);
+	else if (type == object_cylinder)
+		object_cylinder_build(space, &args);
 	space->material = material;
 	space->name[0] = '\0';
 	va_end(args);
