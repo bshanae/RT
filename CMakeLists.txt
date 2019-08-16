@@ -4,7 +4,7 @@ project(rt C)
 find_package(PkgConfig REQUIRED)
 #pkg_check_modules(GTK3 REQUIRED gtk+3)
 
-set(BREW /Users/ashari/.brew)
+set(BREW ~/.brew)
 
 set(GTK_INCLUDES
 	${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0
