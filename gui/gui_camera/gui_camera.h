@@ -15,6 +15,10 @@ typedef struct		s_gui_camera
 	GtkEntry		*rotation_x;
 	GtkEntry		*rotation_y;
 	GtkEntry		*rotation_z;
+	GtkSwitch		*antialiasing;
+	GtkSwitch		*focus;
+	GtkEntry		*focal_length;
+	GtkEntry		*aperture_size;
 }					t_gui_camera;
 
 t_gui_camera		*gui_camera_new(GtkBuilder *builder);

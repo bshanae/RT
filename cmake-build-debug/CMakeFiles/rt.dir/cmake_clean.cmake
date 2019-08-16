@@ -56,6 +56,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o"
+  "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c.o"

@@ -25,6 +25,14 @@ void 				gui_signal_camera_rotation_y
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_camera_rotation_z
 					(GTK_SIGNAL_SIGNATURE);
+gboolean			gui_signal_camera_filter_antialiasing
+					(GtkWidget *widget, gboolean state, gpointer ptr);
+gboolean			gui_signal_camera_filter_focus
+					(GtkWidget *widget, gboolean state, gpointer ptr);
+void 				gui_signal_camera_filter_focal_length
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_filter_aperture_size
+					(GTK_SIGNAL_SIGNATURE);
 
 void 				gui_signal_scene_edit_select
 					(GTK_SIGNAL_SIGNATURE);
