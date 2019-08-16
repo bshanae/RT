@@ -421,8 +421,8 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
         return (plane_intersect(object, intersection));
     else if (object->type == object_cone)
         return (cone_intersect(object, intersection));
-    else if (object->type == object_cylinder)
-        return (cylinder_intersect(object, intersection));
+  //  else if (object->type == object_cylinder)
+    //    return (cylinder_intersect(object, intersection));
 	return (0);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
