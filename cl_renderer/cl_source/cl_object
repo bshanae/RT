@@ -7,10 +7,7 @@ typedef enum		e_object_type
 	object_light_point,
 	object_light_direct,
 	object_sphere,
-	object_plane,
-	object_cone,
-	object_cylinder,
-	object_end
+	object_plane
 }					t_object_type;
 
 typedef struct		s_object

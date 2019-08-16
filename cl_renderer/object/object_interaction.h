@@ -2,7 +2,6 @@
 # define OBJECT_INTERACTION_H
 
 # include "assert.h"
-# include "f4.h"
 # include "object_definition.h"
 # include "object_x.h"
 # include "rt_float.h"
@@ -17,7 +16,5 @@ void				object_build(
 
 void				object_sphere_build(t_object *space, va_list *args);
 void				object_plane_build(t_object *space, va_list *args);
-void				object_cone_build(t_object *space, va_list *args);
-void				object_cylinder_build(t_object *space, va_list *args);
 
 #endif

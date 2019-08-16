@@ -234,13 +234,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_length.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c">
@@ -253,12 +247,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object/object_translate.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cone.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cylinder.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_plane.c">

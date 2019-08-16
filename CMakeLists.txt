@@ -232,15 +232,13 @@ set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
 	./cl_renderer/object_x/object_sphere.c
 	./cl_renderer/object_x/object_plane.c
-	./cl_renderer/object_x/object_cone.c
-	./cl_renderer/object_x/object_cylinder.c
 	./cl_renderer/object/object_translate.c)
 
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
 	./cl_renderer/f4/f4_mul.c
-	./cl_renderer/f4/f4_rotate.c cl_renderer/f4/f4_length.c cl_renderer/f4/f4_normalize.c)
+	./cl_renderer/f4/f4_rotate.c)
 
 set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_new.c

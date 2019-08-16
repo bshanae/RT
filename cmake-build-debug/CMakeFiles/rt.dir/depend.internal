@@ -9059,24 +9059,12 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o
  .././parameters/rt_float.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_add.c
-CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o
- .././parameters/rt_cl_include.h
- .././parameters/rt_control.h
- .././parameters/rt_float.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_length.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c
-CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o
- .././parameters/rt_cl_include.h
- .././parameters/rt_control.h
- .././parameters/rt_float.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -9094,7 +9082,6 @@ CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
@@ -9112,42 +9099,11 @@ CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o
  .././parameters/rt_parameters.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object/object_definition.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object/object_translate.c
-CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
- ../../21_libft/includes/libft_ft_printf.h
- ../../21_libft/includes/libft_standart.h
- ../../21_libft/includes/libft_vector.h
- .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
- .././cl_renderer/material/material.h
- .././cl_renderer/object/object_definition.h
- .././cl_renderer/object/object_interaction.h
- .././cl_renderer/object_x/object_x.h
- .././parameters/rt_cl_include.h
- .././parameters/rt_control.h
- .././parameters/rt_float.h
- .././parameters/rt_parameters.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cone.c
-CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
- ../../21_libft/includes/libft_ft_printf.h
- ../../21_libft/includes/libft_standart.h
- ../../21_libft/includes/libft_vector.h
- .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
- .././cl_renderer/material/material.h
- .././cl_renderer/object/object_definition.h
- .././cl_renderer/object/object_interaction.h
- .././cl_renderer/object_x/object_x.h
- .././parameters/rt_cl_include.h
- .././parameters/rt_control.h
- .././parameters/rt_float.h
- .././parameters/rt_parameters.h
- /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -9162,7 +9118,6 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -9177,7 +9132,6 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -9193,7 +9147,6 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -9209,7 +9162,6 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -9225,7 +9177,6 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -20039,7 +19990,6 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -20682,7 +20632,6 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -27675,7 +27624,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -28316,7 +28264,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -28957,7 +28904,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_get_object.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -29598,7 +29544,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -30239,7 +30184,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -30880,7 +30824,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_plane.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -31521,7 +31464,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -32162,7 +32104,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
@@ -32803,7 +32744,6 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.o
  ../../21_libft/includes/libft_standart.h
  ../../21_libft/includes/libft_vector.h
  .././cl_renderer/assert/assert.h
- .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h

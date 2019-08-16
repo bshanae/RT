@@ -7,6 +7,22 @@ void				scene_test(t_scene *scene)
 {
 	object_build(
 		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){-10., -10., -40.}, 2.);
+	object_build(
+		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){10., -10., -40.}, 2.);
+	object_build(
+		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){-10., 10., -40.}, 2.);
+	object_build(
+		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){10., 10., -40.}, 2.);
+	object_build(
+		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
 		(RT_F4_API){-10., 0., -20.}, 3.);
 	object_build(
@@ -49,13 +65,6 @@ void				scene_test(t_scene *scene)
 		MATERIAL_WHITE,
 		(RT_F4_API){0., -50., 0.},
 		(RT_F4_API){0., 1., 0.});
-	object_build(
-		scene_get_space(scene),
-		object_cone,
-		MATERIAL_RED,
-		(RT_F4_API){0., 10., -30.},
-		(RT_F4_API){0., -10., -30.},
-		2.);
 }
 
 int					main(int argc, char **argv)
