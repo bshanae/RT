@@ -7,6 +7,7 @@ typedef struct		s_intersection
 	t_ray			ray;
 	RT_F4			hit;
 	RT_F4			normal;
+	int				flag;
 	t_material		material;
 	int 			object_id;
 }					t_intersection;
