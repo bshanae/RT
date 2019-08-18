@@ -182,6 +182,7 @@ typedef struct		s_intersection
 	RT_F4			normal;
 	t_material		material;
 	int 			object_id;
+	int			cups_flag;
 }					t_intersection;
 
 static void			intersection_reset(t_intersection *intersection)
@@ -308,6 +309,10 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
         return (plane_intersect(object, intersection));
+    else if (object->type == object_cone)
+        return (cone_intersect(object, intersection));
+    else if (object->type == object_cylinder)
+        return (cylinder_intersect(object, intersection));
 	return (0);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -540,6 +545,7 @@ static void			radiance_add(
 		mask *= intersection->material.color;
 #endif
 	}
+
 	if (settings->sample_count == 1)
 		*sample = radiance;
 	else
@@ -575,8 +581,7 @@ kernel void			cl_main(
 	intersection_reset(&intersection);
 
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
-    image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
-    printf("%d %d %d %d\n", image[global_id].r, image[global_id].g, image[global_id].b, image[global_id].a);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }
 
 
