@@ -6,11 +6,11 @@ void 				gui_signal_camera_rotation_x
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->rotation.x =
+	gui->renderer->data.camera->rotation.x =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_x), NULL);
-	camera_apply(gui->renderer->data_host.camera);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	camera_apply(gui->renderer->data.camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }
 
@@ -20,11 +20,11 @@ void 				gui_signal_camera_rotation_y
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->rotation.y =
+	gui->renderer->data.camera->rotation.y =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_y), NULL);
-	camera_apply(gui->renderer->data_host.camera);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	camera_apply(gui->renderer->data.camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }
 
@@ -34,10 +34,10 @@ void 				gui_signal_camera_rotation_z
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->rotation.z =
+	gui->renderer->data.camera->rotation.z =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->rotation_z), NULL);
-	camera_apply(gui->renderer->data_host.camera);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	camera_apply(gui->renderer->data.camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }

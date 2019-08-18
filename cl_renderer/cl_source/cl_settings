@@ -9,4 +9,4 @@ typedef struct 			s_cl_settings
 	int					srgb;
 	int					light_pb;
 	int 				light_explicit;
-}						t_cl_settings;
+}						t_cl_renderer_settings;

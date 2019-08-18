@@ -9,7 +9,7 @@
 
 typedef struct				s_scene
 {
-	t_object				objects[RT_CL_SCENE_OBJECTS_CAPACITY];
+	t_object				objects[RT_CL_SCENE_CAPACITY];
 	int						objects_length;
 }							t_scene;
 

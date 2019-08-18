@@ -7,4 +7,7 @@
 #  include <CL/cl.h>
 # endif
 
+# define CL_SILENCE_DEPRECATION
+# pragma OPENCL EXTENSION cl_khr_fp64 : enable
+
 #endif

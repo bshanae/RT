@@ -9,8 +9,6 @@
 # define _RT_1_PI		0.318309886183790671537767526745028724
 # define _RT_2_PI		0.636619772367581343075535053490057448
 
-
-
 # ifdef RT_FLOAT
 #  define RT_F			float
 #  define RT_F4			float4

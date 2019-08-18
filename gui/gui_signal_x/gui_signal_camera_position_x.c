@@ -6,10 +6,10 @@ void 				gui_signal_camera_position_x
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->position.x =
+	gui->renderer->data.camera->position.x =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_x), NULL);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }
 
@@ -19,10 +19,10 @@ void 				gui_signal_camera_position_y
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->position.y =
+	gui->renderer->data.camera->position.y =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_y), NULL);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }
 
@@ -32,9 +32,9 @@ void 				gui_signal_camera_position_z
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data_host.camera->position.z =
+	gui->renderer->data.camera->position.z =
 		(RT_F)strtod(gtk_entry_get_text(gui->camera->position_z), NULL);
-	gui->renderer->flags.update_camera = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }

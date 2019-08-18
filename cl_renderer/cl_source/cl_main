@@ -5,7 +5,7 @@ kernel void			cl_main(
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
-					constant t_cl_settings *settings,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	int				global_id;

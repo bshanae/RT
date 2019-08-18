@@ -1,9 +1,6 @@
 #ifndef CL_COMPILATION_H
 # define CL_COMPILATION_H
 
-# define CL_SILENCE_DEPRECATION
-# pragma OPENCL EXTENSION cl_khr_fp64 : enable
-
 # define CL_FLAGS						"-I ./parameters/"
 
 # define CL_MAIN_FUNCTION				"cl_main"

@@ -6,7 +6,7 @@ static void			radiance_add(
 					constant t_scene *scene,
 					t_intersection *intersection,
 					global RT_F4 *sample,
-					constant t_cl_settings *settings,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	RT_F4			radiance;
@@ -52,7 +52,7 @@ static void			radiance_add(
 
 static RT_F4		radiance_get(
 					global RT_F4 *sample,
-					constant t_cl_settings *settings)
+					constant t_cl_renderer_settings *settings)
 {
 	return (*sample / settings->sample_count);
 }

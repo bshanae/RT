@@ -14,7 +14,7 @@ void 				gui_signal_scene_edit_select
 		gtk_widget_hide(GTK_WIDGET(gui->scene->edit->current_object));
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
 		scene_edit_object_id, &gui->scene->edit->current_id ,-1);
-	object = gui->renderer->data_host.scene->objects +
+	object = gui->renderer->data.scene->objects +
 		gui->scene->edit->current_id;
 	gui->scene->edit->current_object =
 		gui_scene_edit_get_object(gui->scene->edit, object->type);

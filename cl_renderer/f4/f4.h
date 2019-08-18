@@ -29,4 +29,7 @@ RT_F4_API 			f4_rotate(
 					t_f4_rotation_direction direction,
 					RT_F theta);
 
+RT_F				f4_length(RT_F4_API f4);
+RT_F4_API			f4_normalize(RT_F4_API source);
+
 #endif

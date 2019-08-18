@@ -59,7 +59,6 @@ include_directories(
 	./gui/gui_image/
 	./gui/gui_signal_x
 	./gui/gui_signal_connect/
-	./cl_renderer/cl_renderer/
 	./cl_renderer/color/
 	./cl_renderer/light/
 	./cl_renderer/object/
@@ -70,7 +69,11 @@ include_directories(
 	./cl_renderer/ray/
 	./cl_renderer/intersection/
 	./cl_renderer/assert
-	./cl_renderer/material)
+	./cl_renderer/material
+	./cl_renderer/cl_program/
+	./cl_renderer/cl_arg_list/
+	./cl_renderer/cl_builder/
+	./cl_renderer/cl_renderer/)
 
 set(GTK_LIBS
 	"gtk-3"
@@ -98,12 +101,13 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
 	${GTK3_LIBRARIES})
 
-set(SOURCE_MAIN ./main.c)
+set(SOURCE_MAIN
+	./main.c)
 
 set(SOURCE_GUI_GUI
 	./gui/gui/gui_new.c
@@ -129,7 +133,8 @@ set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_set.c
 	./gui/gui_material/gui_material_show.c
 	./gui/gui_scene_edit/gui_scene_edit_set_material.c
-	./gui/gui_material/gui_material_build.c gui/gui_scene_add/gui_scene_add_set_material.c)
+	./gui/gui_material/gui_material_build.c
+	./gui/gui_scene_add/gui_scene_add_set_material.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -180,7 +185,8 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_camera_rotation_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
 	./gui/gui_signal_x/gui_signal_image_click.c
-	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c gui/gui_signal_x/gui_signal_camera_filter_x.c)
+	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c
+	./gui/gui_signal_x/gui_signal_camera_filter_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c
@@ -206,21 +212,23 @@ set(SOURCE_GUI
 	${SOURCE_GUI_SIGNAL_X}
 	${SOURCE_GUI_SIGNAL_CONNECT})
 
-set(SOURCE_CL_RENDERER_
-	./cl_renderer/cl_renderer/cl_renderer_new.c
-	./cl_renderer/cl_renderer/cl_renderer_delete.c
-	./cl_renderer/cl_renderer/cl_renderer_init_device.c
-	./cl_renderer/cl_renderer/cl_renderer_init_context.c
-	./cl_renderer/cl_renderer/cl_renderer_create_program.c
-	./cl_renderer/cl_renderer/cl_renderer_create_queue.c
-	./cl_renderer/cl_renderer/cl_renderer_create_kernel.c
-	./cl_renderer/cl_renderer/cl_renderer_init_data.c
-	./cl_renderer/cl_renderer/cl_renderer_set_arguments.c
-	./cl_renderer/cl_renderer/cl_renderer_render.c
-	./cl_renderer/cl_renderer/cl_renderer_log.c
-	./cl_renderer/cl_renderer/cl_renderer_update.c
-	./cl_renderer/cl_renderer/cl_renderer_reset_samples.c
-	./cl_renderer/cl_renderer/cl_renderer_camera_x.c)
+set(SOURCE_F4
+	./cl_renderer/f4/f4_add.c
+	./cl_renderer/f4/f4_sub.c
+	./cl_renderer/f4/f4_mul.c
+	./cl_renderer/f4/f4_rotate.c
+	./cl_renderer/f4/f4_length.c
+	./cl_renderer/f4/f4_normalize.c)
+
+set(SOURCE_OBJECT
+	./cl_renderer/object/object_build.c
+	./cl_renderer/object/object_translate.c)
+
+set(SOURCE_OBJECT_X
+	./cl_renderer/object_x/object_sphere.c
+	./cl_renderer/object_x/object_plane.c
+	./cl_renderer/object_x/object_cone.c
+	./cl_renderer/object_x/object_cylinder.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -228,17 +236,8 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c)
 
-set(SOURCE_OBJECT
-	./cl_renderer/object/object_build.c
-	./cl_renderer/object_x/object_sphere.c
-	./cl_renderer/object_x/object_plane.c
-	./cl_renderer/object/object_translate.c)
-
-set(SOURCE_F4
-	./cl_renderer/f4/f4_add.c
-	./cl_renderer/f4/f4_sub.c
-	./cl_renderer/f4/f4_mul.c
-	./cl_renderer/f4/f4_rotate.c)
+set(SOURCE_RAY
+	./cl_renderer/ray/ray)
 
 set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_new.c
@@ -247,18 +246,47 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c)
 
-set(SOURCE_RAY
-	./cl_renderer/ray/ray)
+set(SOURCE_CL_PROGRAM
+	./cl_renderer/cl_program/cl_program_new.c
+	./cl_renderer/cl_program/cl_program_delete.c
+	./cl_renderer/cl_program/cl_program_concat.c
+	./cl_renderer/cl_program/cl_program_build.c)
 
-set(SOURCE_CL_RENDERER
-	${SOURCE_CL_RENDERER_}
-	${SOURCE_SCENE}
-	${SOURCE_OBJECT}
+set(SOURCE_CL_ARG_LIST
+	./cl_renderer/cl_arg_list/cl_arg_list_new.c
+	./cl_renderer/cl_arg_list/cl_arg_list_delete.c
+	./cl_renderer/cl_arg_list/cl_arg_list_push.c
+	./cl_renderer/cl_arg_list/cl_arg_list_update.c
+	./cl_renderer/cl_arg_list/cl_arg_list_read.c
+	./cl_renderer/cl_arg_list/cl_arg_list_write.c)
+
+set(SOURCE_CL_BUILDER
+	./cl_renderer/cl_builder/cl_builder_new.c
+	./cl_renderer/cl_builder/cl_builder_delete.c
+	./cl_renderer/cl_builder/cl_builder_init_device.c
+	./cl_renderer/cl_builder/cl_builder_create_x.c
+	./cl_renderer/cl_builder/cl_builder_log.c
+	./cl_renderer/cl_builder/cl_builder_set_args.c)
+
+set(SOURCE_CL_RENDERER_
+	./cl_renderer/cl_renderer/cl_renderer_new.c
+	./cl_renderer/cl_renderer/cl_renderer_delete.c
+	./cl_renderer/cl_renderer/cl_renderer_render.c
+	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
+	./cl_renderer/cl_renderer/cl_renderer_flag_x.c)
+
+set(SOURCE_RENDERER
 	${SOURCE_F4}
+	${SOURCE_OBJECT}
+	${SOURCE_OBJECT_X}
+	${SOURCE_SCENE}
 	${SOURCE_CAMERA}
-	${SOURCE_ASSERT})
+	${SOURCE_CL_PROGRAM}
+	${SOURCE_CL_ARG_LIST}
+	${SOURCE_CL_BUILDER}
+	${SOURCE_CL_RENDERER_})
 
-add_executable(rt
+add_executable(
 	${SOURCE_MAIN}
 	${SOURCE_GUI}
-	${SOURCE_CL_RENDERER})
+	${SOURCE_RENDERER})

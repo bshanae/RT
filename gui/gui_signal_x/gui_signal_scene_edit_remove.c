@@ -15,7 +15,10 @@ void					gui_signal_scene_edit_remove
 		return ;
 	if (gtk_list_store_iter_is_valid(edit->list, &edit->iter))
 	{
-		scene_remove_object(gui->renderer->data_host.scene, edit->current_id);
+		scene_remove_object(gui->renderer->data.scene, edit->current_id);
 		gtk_list_store_remove(edit->list, &edit->iter);
 	}
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
+	cl_renderer_render(gui->renderer);
 }
