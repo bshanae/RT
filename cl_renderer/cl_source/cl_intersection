@@ -9,6 +9,7 @@ typedef struct		s_intersection
 	RT_F4			normal;
 	t_material		material;
 	int 			object_id;
+    int             cups_flag;
 }					t_intersection;
 
 static void			intersection_reset(t_intersection *intersection)
