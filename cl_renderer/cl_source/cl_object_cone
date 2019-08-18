@@ -1,0 +1,98 @@
+// cl_object_cone /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_object_cone
+{
+	RT_F4   		top;
+	RT_F4   		bottom;
+	RT_F4   		axis;
+	RT_F 			radius;
+	RT_F          	tangent;
+}					t_object_cone;
+
+static RT_F         cone_cap_intersect(constant t_object *object, t_intersection *intersection)
+{
+    t_object_cone	data;
+    RT_F            t;
+
+    data = *(constant t_object_cone *)object->data;
+    if (!dot(intersection->ray.direction, data.axis))
+        return (INFINITY);
+    t = dot((data.bottom - intersection->ray.origin), data.axis)
+            / dot(intersection->ray.direction, data.axis);
+    if (t <= INTERSECTION_MIN)
+        return (INFINITY);
+    if (length(data.bottom - (intersection->ray.origin + (intersection->ray.direction * t))) < data.radius)
+        intersection->cups_flag = 1;
+    else
+        return (INFINITY);
+    return (t);
+}
+
+static int			cone_intersect(constant t_object *object, t_intersection *intersection)
+{
+	t_object_cone	data;
+    RT_F4           temp[3];
+	RT_F            discriminant;
+    int             is_infinity;
+    RT_F            angle[2];
+	RT_F            t[2];
+	RT_F            k[3];
+
+	data = *(constant t_object_cone *)object->data;
+	temp[0] = intersection->ray.origin - data.top;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.)
+			* (1 + data.tangent * data.tangent);
+	k[1] = 2 * (dot(temp[0], intersection->ray.direction) - (1 + data.tangent * data.tangent)
+			* dot(intersection->ray.direction, data.axis) * dot(temp[0], data.axis));
+	k[2] = dot(temp[0], temp[0]) - (1 + data.tangent * data.tangent)
+			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+		return (0);
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+		return (0);
+
+	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[0]);
+    temp[2] = temp[1] - data.bottom;
+    angle[0] = dot((temp[1] - data.top), data.axis);
+    angle[1] = dot((temp[1] - data.bottom), data.axis);
+    is_infinity = (length(temp[2]) > length(data.top - data.bottom))
+                 || (dot(temp[2], data.axis) > 0.);
+    t[1] = cone_cap_intersect(object, intersection);
+    if (t[1] != INFINITY && is_infinity)
+	    t[0] = t[1];
+    else if (!is_infinity)
+        intersection->cups_flag = 0;
+    else
+        return (0);
+	intersection->ray.t = t[0];
+	intersection->object_id = object->id;
+	return (1);
+}
+
+static RT_F4		calculate_cone_normal(constant t_object *object, t_intersection *intersection)
+{
+    t_object_cone	data;
+    RT_F4			temp[2];
+    RT_F            tmp_value;
+    RT_F4           result;
+
+    data = *(constant t_object_cone *)object->data;
+    temp[0] = intersection->ray.origin - data.top;
+    temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
+    tmp_value = dot(intersection->ray.direction, data.axis)
+                * intersection->ray.t + dot(temp[0], data.axis);
+    result = (temp[1] - data.top) - (data.axis * ((1 + data.tangent * data.tangent) * tmp_value));
+    return (normalize(result));
+}
+
+static RT_F4		cone_normal(constant t_object *object, t_intersection *intersection)
+{
+    if (!intersection->cups_flag)
+        return(calculate_cone_normal(object, intersection));
+    else
+        return(normalize(((constant t_object_cone *)object->data)->axis * -1));
+}

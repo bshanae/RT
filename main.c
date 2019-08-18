@@ -65,6 +65,13 @@ void				scene_test(t_scene *scene)
 		MATERIAL_WHITE,
 		(RT_F4_API){0., -50., 0.},
 		(RT_F4_API){0., 1., 0.});
+    object_build(
+        scene_get_space(scene),
+        object_cone,
+        MATERIAL_RED,
+        (RT_F4_API){0., 10., -40.},
+        (RT_F4_API){0., 0., -30.},
+        2.);
 }
 
 int					main(int argc, char **argv)

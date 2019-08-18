@@ -20,6 +20,11 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
 
+	//if (scene_intersect(scene, &intersection))
+    //		image[global_id] = color_unpack(intersection.material.color, settings->srgb);
+    //	else
+    //		image[global_id] = (t_color){0, 0, 0, 255};
+
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
     image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }

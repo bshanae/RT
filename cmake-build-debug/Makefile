@@ -48,10 +48,10 @@ RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer-master
+CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer-master/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer-master/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer-master/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer-master/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -663,6 +663,33 @@ cl_renderer/f4/f4_add.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.s
 .PHONY : cl_renderer/f4/f4_add.c.s
 
+cl_renderer/f4/f4_length.o: cl_renderer/f4/f4_length.c.o
+
+.PHONY : cl_renderer/f4/f4_length.o
+
+# target to build an object file
+cl_renderer/f4/f4_length.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o
+.PHONY : cl_renderer/f4/f4_length.c.o
+
+cl_renderer/f4/f4_length.i: cl_renderer/f4/f4_length.c.i
+
+.PHONY : cl_renderer/f4/f4_length.i
+
+# target to preprocess a source file
+cl_renderer/f4/f4_length.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.i
+.PHONY : cl_renderer/f4/f4_length.c.i
+
+cl_renderer/f4/f4_length.s: cl_renderer/f4/f4_length.c.s
+
+.PHONY : cl_renderer/f4/f4_length.s
+
+# target to generate assembly for a file
+cl_renderer/f4/f4_length.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.s
+.PHONY : cl_renderer/f4/f4_length.c.s
+
 cl_renderer/f4/f4_mul.o: cl_renderer/f4/f4_mul.c.o
 
 .PHONY : cl_renderer/f4/f4_mul.o
@@ -689,6 +716,33 @@ cl_renderer/f4/f4_mul.s: cl_renderer/f4/f4_mul.c.s
 cl_renderer/f4/f4_mul.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.s
 .PHONY : cl_renderer/f4/f4_mul.c.s
+
+cl_renderer/f4/f4_normalize.o: cl_renderer/f4/f4_normalize.c.o
+
+.PHONY : cl_renderer/f4/f4_normalize.o
+
+# target to build an object file
+cl_renderer/f4/f4_normalize.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o
+.PHONY : cl_renderer/f4/f4_normalize.c.o
+
+cl_renderer/f4/f4_normalize.i: cl_renderer/f4/f4_normalize.c.i
+
+.PHONY : cl_renderer/f4/f4_normalize.i
+
+# target to preprocess a source file
+cl_renderer/f4/f4_normalize.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.i
+.PHONY : cl_renderer/f4/f4_normalize.c.i
+
+cl_renderer/f4/f4_normalize.s: cl_renderer/f4/f4_normalize.c.s
+
+.PHONY : cl_renderer/f4/f4_normalize.s
+
+# target to generate assembly for a file
+cl_renderer/f4/f4_normalize.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.s
+.PHONY : cl_renderer/f4/f4_normalize.c.s
 
 cl_renderer/f4/f4_rotate.o: cl_renderer/f4/f4_rotate.c.o
 
@@ -797,6 +851,60 @@ cl_renderer/object/object_translate.s: cl_renderer/object/object_translate.c.s
 cl_renderer/object/object_translate.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.s
 .PHONY : cl_renderer/object/object_translate.c.s
+
+cl_renderer/object_x/object_cone.o: cl_renderer/object_x/object_cone.c.o
+
+.PHONY : cl_renderer/object_x/object_cone.o
+
+# target to build an object file
+cl_renderer/object_x/object_cone.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
+.PHONY : cl_renderer/object_x/object_cone.c.o
+
+cl_renderer/object_x/object_cone.i: cl_renderer/object_x/object_cone.c.i
+
+.PHONY : cl_renderer/object_x/object_cone.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_cone.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.i
+.PHONY : cl_renderer/object_x/object_cone.c.i
+
+cl_renderer/object_x/object_cone.s: cl_renderer/object_x/object_cone.c.s
+
+.PHONY : cl_renderer/object_x/object_cone.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_cone.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.s
+.PHONY : cl_renderer/object_x/object_cone.c.s
+
+cl_renderer/object_x/object_cylinder.o: cl_renderer/object_x/object_cylinder.c.o
+
+.PHONY : cl_renderer/object_x/object_cylinder.o
+
+# target to build an object file
+cl_renderer/object_x/object_cylinder.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
+.PHONY : cl_renderer/object_x/object_cylinder.c.o
+
+cl_renderer/object_x/object_cylinder.i: cl_renderer/object_x/object_cylinder.c.i
+
+.PHONY : cl_renderer/object_x/object_cylinder.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_cylinder.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.i
+.PHONY : cl_renderer/object_x/object_cylinder.c.i
+
+cl_renderer/object_x/object_cylinder.s: cl_renderer/object_x/object_cylinder.c.s
+
+.PHONY : cl_renderer/object_x/object_cylinder.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_cylinder.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s
+.PHONY : cl_renderer/object_x/object_cylinder.c.s
 
 cl_renderer/object_x/object_plane.o: cl_renderer/object_x/object_plane.c.o
 
@@ -2784,9 +2892,15 @@ help:
 	@echo "... cl_renderer/f4/f4_add.o"
 	@echo "... cl_renderer/f4/f4_add.i"
 	@echo "... cl_renderer/f4/f4_add.s"
+	@echo "... cl_renderer/f4/f4_length.o"
+	@echo "... cl_renderer/f4/f4_length.i"
+	@echo "... cl_renderer/f4/f4_length.s"
 	@echo "... cl_renderer/f4/f4_mul.o"
 	@echo "... cl_renderer/f4/f4_mul.i"
 	@echo "... cl_renderer/f4/f4_mul.s"
+	@echo "... cl_renderer/f4/f4_normalize.o"
+	@echo "... cl_renderer/f4/f4_normalize.i"
+	@echo "... cl_renderer/f4/f4_normalize.s"
 	@echo "... cl_renderer/f4/f4_rotate.o"
 	@echo "... cl_renderer/f4/f4_rotate.i"
 	@echo "... cl_renderer/f4/f4_rotate.s"
@@ -2799,6 +2913,12 @@ help:
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
+	@echo "... cl_renderer/object_x/object_cone.o"
+	@echo "... cl_renderer/object_x/object_cone.i"
+	@echo "... cl_renderer/object_x/object_cone.s"
+	@echo "... cl_renderer/object_x/object_cylinder.o"
+	@echo "... cl_renderer/object_x/object_cylinder.i"
+	@echo "... cl_renderer/object_x/object_cylinder.s"
 	@echo "... cl_renderer/object_x/object_plane.o"
 	@echo "... cl_renderer/object_x/object_plane.i"
 	@echo "... cl_renderer/object_x/object_plane.s"
