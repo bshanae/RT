@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1256,6 +1256,33 @@ cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c
 cl_renderer/scene/scene_remove_object.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
 .PHONY : cl_renderer/scene/scene_remove_object.c.s
+
+cl_renderer/scene/scene_set_ids.o: cl_renderer/scene/scene_set_ids.c.o
+
+.PHONY : cl_renderer/scene/scene_set_ids.o
+
+# target to build an object file
+cl_renderer/scene/scene_set_ids.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o
+.PHONY : cl_renderer/scene/scene_set_ids.c.o
+
+cl_renderer/scene/scene_set_ids.i: cl_renderer/scene/scene_set_ids.c.i
+
+.PHONY : cl_renderer/scene/scene_set_ids.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_set_ids.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.i
+.PHONY : cl_renderer/scene/scene_set_ids.c.i
+
+cl_renderer/scene/scene_set_ids.s: cl_renderer/scene/scene_set_ids.c.s
+
+.PHONY : cl_renderer/scene/scene_set_ids.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_set_ids.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.s
+.PHONY : cl_renderer/scene/scene_set_ids.c.s
 
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
@@ -3019,8 +3046,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... rt"
 	@echo "... edit_cache"
+	@echo "... rt"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -3147,6 +3174,9 @@ help:
 	@echo "... cl_renderer/scene/scene_remove_object.o"
 	@echo "... cl_renderer/scene/scene_remove_object.i"
 	@echo "... cl_renderer/scene/scene_remove_object.s"
+	@echo "... cl_renderer/scene/scene_set_ids.o"
+	@echo "... cl_renderer/scene/scene_set_ids.i"
+	@echo "... cl_renderer/scene/scene_set_ids.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

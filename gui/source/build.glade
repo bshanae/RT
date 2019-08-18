@@ -759,7 +759,7 @@
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
                             <signal name="activate" handler="gui_signal_object_edit_plane_normal_z" swapped="no"/>
-                            <signal name="changed" handler="gui_signal_object_edit_plane_normal_z" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_normal_z" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>

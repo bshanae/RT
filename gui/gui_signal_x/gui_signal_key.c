@@ -16,7 +16,7 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_camera_move(gui->renderer, rt_movement_down);
 	else
 		return (0);
-	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
 	return (1);
@@ -38,7 +38,7 @@ static int			try_rotate_camera(t_gui *gui, int key)
 			rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
-	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
 	return (1);

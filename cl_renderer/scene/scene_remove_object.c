@@ -11,4 +11,5 @@ void 				scene_remove_object(t_scene *scene, int object_id)
 		i++;
 	}
 	scene->objects_length--;
+	scene_set_ids(scene);
 }

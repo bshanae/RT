@@ -80,6 +80,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"

@@ -101,9 +101,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -234,7 +234,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
 	./cl_renderer/scene/scene_delete.c
-	./cl_renderer/scene/scene_remove_object.c)
+	./cl_renderer/scene/scene_remove_object.c cl_renderer/scene/scene_set_ids.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
