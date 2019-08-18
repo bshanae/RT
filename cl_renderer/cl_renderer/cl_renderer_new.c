@@ -8,7 +8,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 		camera_new(&renderer->image->width, &renderer->image->height);
 	renderer->data.scene = scene_new();
 	renderer->data.image = renderer->image->color_buffer;
-	renderer->data.settings.sample_count = 0;
+	renderer->data.settings.sample_count = 1;
 	renderer->data.settings.sample_limit = RT_CL_SAMPLES;
 	renderer->data.settings.sample_depth = RT_CL_PATH_DEPTH;
 	renderer->data.settings.russian_depth = RT_CL_RUSSIAN_DEPTH;

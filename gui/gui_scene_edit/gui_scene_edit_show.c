@@ -6,7 +6,7 @@ void 				gui_scene_edit_show
 	if (object->type == object_sphere)
 		gui_object_sphere_show(&edit->sphere, object);
 	else if (object->type == object_plane)
-		;//gui_object_plane_show(&edit->plane, object);
+		gui_object_plane_show(&edit->plane, object);
 	else
 		return ;
 	gui_material_show(&edit->material, &object->material);

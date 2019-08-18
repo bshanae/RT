@@ -9,13 +9,13 @@ static void			static_run_queue(t_cl_renderer *renderer)
 		&renderer->pixel_number, NULL, 0, NULL, NULL);
 	ASSERT(error == 0)
 	cl_args_list_read(renderer->args, cl_arg_image);
+	renderer->data.settings.sample_count++;
+	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 }
 
 void				cl_renderer_render(t_cl_renderer *renderer)
 {
 #ifndef RT_NO_OPEN_CL
-	renderer->data.settings.sample_count++;
-	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 	cl_renderer_flag_perform(renderer);
 	static_run_queue(renderer);
 	gtk_image_set_from_pixbuf(renderer->image->image,

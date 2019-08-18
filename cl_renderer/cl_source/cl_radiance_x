@@ -45,7 +45,7 @@ static void			radiance_add(
 #endif
 	}
 
-	if (settings->sample_count == 0)
+	if (settings->sample_count == 1)
 		*sample = radiance;
 	else
 		*sample += radiance;

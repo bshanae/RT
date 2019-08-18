@@ -24,7 +24,7 @@ void						cl_renderer_flag_perform(t_cl_renderer *renderer)
 		renderer->args->array[cl_arg_settings].update_need = 1;
 	if (renderer->flags.reset_samples)
 	{
-		renderer->data.settings.sample_count = 0;
+		renderer->data.settings.sample_count = 1;
 		renderer->args->array[cl_arg_settings].update_need = 1;
 	}
 	cl_arg_list_update(renderer->args);
