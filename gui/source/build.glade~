@@ -374,7 +374,7 @@
                       <object class="GtkEntry" id="object_edit_sphere_name">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <signal name="changed" handler="gui_signal_object_edit_sphere_name" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_object_edit_sphere_name" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -452,7 +452,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_sphere_position_x" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_sphere_position_x" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -465,7 +465,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_sphere_position_y" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_sphere_position_y" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -478,7 +478,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_sphere_position_z" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_sphere_position_z" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -521,7 +521,7 @@
                       <object class="GtkEntry" id="object_edit_sphere_radius">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <signal name="changed" handler="gui_signal_object_edit_sphere_radius" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_object_edit_sphere_radius" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -580,7 +580,7 @@
                       <object class="GtkEntry" id="object_edit_plane_name">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <signal name="changed" handler="gui_signal_object_edit_plane_name" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_object_edit_plane_name" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -658,7 +658,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_plane_position_x" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_position_x" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -671,7 +671,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_plane_position_y" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_position_y" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -684,7 +684,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_plane_position_z" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_position_z" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -732,7 +732,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
-                            <signal name="changed" handler="gui_signal_object_edit_plane_normal_x" swapped="no"/>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_normal_x" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -745,6 +745,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_normal_y" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -757,6 +758,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">4</property>
+                            <signal name="activate" handler="gui_signal_object_edit_plane_normal_z" swapped="no"/>
                             <signal name="changed" handler="gui_signal_object_edit_plane_normal_z" swapped="no"/>
                           </object>
                           <packing>
@@ -921,7 +923,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_position_x" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_position_x" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -934,7 +936,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_position_y" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_position_y" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -947,7 +949,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_position_z" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_position_z" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -998,7 +1000,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_rotation_x" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_rotation_x" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -1011,7 +1013,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_rotation_y" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_rotation_y" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -1024,7 +1026,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">4</property>
-                        <signal name="changed" handler="gui_signal_camera_rotation_z" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_rotation_z" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -1164,7 +1166,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">8</property>
-                        <signal name="changed" handler="gui_signal_camera_filter_focal_length" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_filter_focal_length" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -1203,7 +1205,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="width_chars">8</property>
-                        <signal name="changed" handler="gui_signal_camera_filter_aperture_size" swapped="no"/>
+                        <signal name="activate" handler="gui_signal_camera_filter_aperture_size" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">True</property>

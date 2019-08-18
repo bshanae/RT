@@ -1,14 +1,14 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Vladimir/workspace/21_ray_tracer
--- The C compiler identification is AppleClang 10.0.1.10010046
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
+/home/vladimir/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/vladimir/workspace/21_ray_tracer
+-- The C compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Found PkgConfig: /usr/local/bin/pkg-config (found version "0.29.2") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
 -- Checking for module 'gtk+-3.0'
---   Found gtk+-3.0, version 3.24.10
+--   Found gtk+-3.0, version 3.22.30
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+-- Build files have been written to: /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
