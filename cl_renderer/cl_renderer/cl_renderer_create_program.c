@@ -75,9 +75,6 @@ void				cl_renderer_create_program(t_cl_renderer *renderer)
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_SPHERE);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_PLANE);
-    cl_program_read(&renderer->program, CL_SOURCE_OBJECT_CONE);
-    cl_program_read(&renderer->program, CL_SOURCE_OBJECT_CYLINDER);
-    //cl_program_read(&renderer->program, CL_SOURCE_OBJECT_AABB);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_INTERSECT);
 	cl_program_read(&renderer->program, CL_SOURCE_OBJECT_NORMAL);
 	cl_program_read(&renderer->program, CL_SOURCE_SCENE);

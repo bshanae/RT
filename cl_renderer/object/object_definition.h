@@ -10,9 +10,6 @@ typedef enum		e_object_type
 	object_light_direct,
 	object_sphere,
 	object_plane,
-    object_cone,
-    object_cylinder,
-    object_aabb,
 	object_end
 }					t_object_type;
 

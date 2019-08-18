@@ -8,7 +8,7 @@
 # define RT_GUI_WIDTH					480
 # define RT_GUI_HEIGHT					480
 
-# define RT_CL_OBJECT_DATA_CAPACITY		64
+# define RT_CL_OBJECT_DATA_CAPACITY		32
 # define RT_CL_SCENE_OBJECTS_CAPACITY	16
 
 # define RT_CL_PATH_DEPTH				1
