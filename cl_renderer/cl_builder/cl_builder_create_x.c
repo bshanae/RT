@@ -3,7 +3,7 @@
 void				cl_builder_create_context(t_cl_builder *builder)
 {
 	builder->context = clCreateContext(NULL, 1,
-									   &builder->device_id, 0, 0, &builder->error);
+		&builder->device_id, 0, 0, &builder->error);
 	ASSERT(builder->error == 0)
 }
 
@@ -26,7 +26,7 @@ void				cl_builder_create_program(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_SCENE);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_EXPLICIT);
-	cl_program_concat(builder->program, CL_SOURCE_RADIANCE);
+	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_X);
 	cl_program_concat(builder->program, CL_SOURCE_MAIN);
 	if (cl_program_build(builder->program, builder->context, CL_FLAGS) != 0)
 		cl_builder_log(builder);

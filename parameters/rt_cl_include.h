@@ -1,5 +1,5 @@
-#ifndef CL_INCLUDE_H
-# define CL_INCLUDE_H
+#ifndef RT_CL_INCLUDE_H
+# define RT_CL_INCLUDE_H
 
 # ifdef __APPLE__
 #  include <OpenCL/opencl.h>

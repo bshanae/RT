@@ -24,7 +24,7 @@
 # define CL_SOURCE_SCENE				"cl_scene"
 # define CL_SOURCE_SAMPLE				"cl_sample"
 # define CL_SOURCE_RADIANCE_EXPLICIT	"cl_radiance_explicit"
-# define CL_SOURCE_RADIANCE				"cl_radiance"
+# define CL_SOURCE_RADIANCE_X			"cl_radiance_x"
 # define CL_SOURCE_MAIN					"cl_main"
 
 #endif

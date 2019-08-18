@@ -22,7 +22,7 @@ typedef struct 			s_cl_settings
 	int					srgb;
 	int					light_pb;
 	int 				light_explicit;
-}						t_cl_settings;
+}						t_cl_renderer_settings;
 
 // cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -106,7 +106,7 @@ typedef struct 		s_camera
     RT_F			focal_length;
 }					t_camera;
 
-static void			camera_focus(t_camera *camera, t_ray *ray, global ulong *rng_state)
+static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
 {
 	RT_F4			focal_point;
 
@@ -198,7 +198,10 @@ typedef enum		e_object_type
 	object_light_point,
 	object_light_direct,
 	object_sphere,
-	object_plane
+	object_plane,
+	object_cone,
+	object_cylinder,
+	object_end
 }					t_object_type;
 
 typedef struct		s_object
@@ -207,7 +210,7 @@ typedef struct		s_object
 	int				id;
 	t_object_type	type;
 	t_material		material;
-	char			data[RT_CL_OBJECT_DATA_CAPACITY];
+	char			data[RT_CL_OBJECT_CAPACITY];
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -321,7 +324,7 @@ static RT_F4		object_normal(constant t_object *object, t_intersection *intersect
 
 typedef struct		s_scene
 {
-	t_object		objects[RT_CL_SCENE_OBJECTS_CAPACITY];
+	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
 }					t_scene;
 
@@ -499,7 +502,7 @@ static void			radiance_add(
 					constant t_scene *scene,
 					t_intersection *intersection,
 					global RT_F4 *sample,
-					constant t_cl_settings *settings,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	RT_F4			radiance;
@@ -526,16 +529,16 @@ static void			radiance_add(
 		}
 
 		intersection->ray.origin = intersection->hit;
-		if (RT_CL_COSINE)
-		{
-			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
-			mask *= intersection->material.color;
-		}
-		else
-		{
-			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-			mask *= intersection->material.color * cosine;
-		}
+
+#ifdef RT_CL_UNIFORM
+		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+		mask *= intersection->material.color * cosine;
+#endif
+
+#ifdef RT_CL_COSINE
+		intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
+		mask *= intersection->material.color;
+#endif
 	}
 	if (settings->sample_count == 1)
 		*sample = radiance;
@@ -545,7 +548,7 @@ static void			radiance_add(
 
 static RT_F4		radiance_get(
 					global RT_F4 *sample,
-					constant t_cl_settings *settings)
+					constant t_cl_renderer_settings *settings)
 {
 	return (*sample / settings->sample_count);
 }
@@ -556,7 +559,7 @@ kernel void			cl_main(
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
-					constant t_cl_settings *settings,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	int				global_id;
@@ -573,6 +576,7 @@ kernel void			cl_main(
 
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
     image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
+    printf("%d %d %d %d\n", image[global_id].r, image[global_id].g, image[global_id].b, image[global_id].a);
 }
 
 

@@ -1,46 +1,21 @@
 #ifndef CL_RENDERER_H
 # define CL_RENDERER_H
 
+# include "rt_cl_include.h"
 # include "rt_control.h"
 # include "rt_float.h"
 
 # include "gui_image.h"
-# include "cl_arg_list.h"
-# include "cl_builder.h"
 # include "scene.h"
 # include "camera.h"
 # include "ray.h"
+# include "cl_arg_list.h"
+# include "cl_builder.h"
+# include "cl_renderer_flag_x.h"
+# include "cl_renderer_settings.h"
 
 # include <stdlib.h>
 # include <time.h>
-
-typedef struct 				s_cl_renderer_settings
-{
-	int						sample_count;
-	int						sample_limit;
-	int 					sample_depth;
-	int						russian_depth;
-	int						srgb;
-	int						light_pb;
-	int 					light_explicit;
-}							t_cl_renderer_settings;
-
-typedef struct 				s_cl_renderer_flag_list
-{
-	int 					summary;
-	int						update_camera;
-	int 					update_scene;
-	int						update_settings;
-	int						reset_samples;
-}							t_cl_renderer_flag_list;
-
-typedef enum				e_cl_renderer_flag
-{
-	cl_flag_update_camera,
-	cl_flag_update_scene,
-	cl_flag_update_settings,
-	cl_flag_reset_samples
-}							t_cl_renderer_flag;
 
 typedef	struct 				s_cl_renderer_data
 {
@@ -66,8 +41,8 @@ typedef enum				e_cl_renderer_arg
 	cl_arg_camera,
 	cl_arg_scene,
 	cl_arg_image,
-	cl_arg_settings,
 	cl_arg_samples,
+	cl_arg_settings,
 	cl_arg_rng_state
 }							t_cl_renderer_arg;
 

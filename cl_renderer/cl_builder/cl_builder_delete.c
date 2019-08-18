@@ -9,4 +9,6 @@ void				cl_builder_delete(t_cl_builder **builder)
 	clReleaseCommandQueue((*builder)->queue);
 	cl_program_delete(&(*builder)->program);
 #endif
+	free(*builder);
+	*builder = NULL;
 }

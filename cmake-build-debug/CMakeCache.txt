@@ -14,18 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Value Computed by CMake
-./renderer_BINARY_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
-
-//Value Computed by CMake
-./renderer_SOURCE_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer
-
-//Value Computed by CMake
-./rt_BINARY_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
-
-//Value Computed by CMake
-./rt_SOURCE_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer
-
 //Path to a program.
 CMAKE_AR:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ar
 
@@ -212,12 +200,6 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
-//Value Computed by CMake
-cl_renderer_BINARY_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
-
-//Value Computed by CMake
-cl_renderer_SOURCE_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer
-
 //Path to a library.
 pkgcfg_lib_GTK3_atk-1.0:FILEPATH=/usr/local/Cellar/atk/2.32.0_1/lib/libatk-1.0.dylib
 
@@ -253,12 +235,6 @@ pkgcfg_lib_GTK3_pango-1.0:FILEPATH=/usr/local/Cellar/pango/1.42.4_2/lib/libpango
 
 //Path to a library.
 pkgcfg_lib_GTK3_pangocairo-1.0:FILEPATH=/usr/local/Cellar/pango/1.42.4_2/lib/libpangocairo-1.0.dylib
-
-//Value Computed by CMake
-renderer_BINARY_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
-
-//Value Computed by CMake
-renderer_SOURCE_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer
 
 //Value Computed by CMake
 rt_BINARY_DIR:STATIC=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug

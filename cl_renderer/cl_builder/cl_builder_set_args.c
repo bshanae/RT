@@ -9,7 +9,7 @@ void				cl_builder_set_args
 	while (i < list->length)
 	{
 		builder->error = clSetKernelArg(builder->kernel,
-			0, sizeof(cl_mem), &list->array[i].device);
+			(u_long)i, sizeof(cl_mem), &list->array[i].device);
 		ASSERT(builder->error == 0)
 		i++;
 	}

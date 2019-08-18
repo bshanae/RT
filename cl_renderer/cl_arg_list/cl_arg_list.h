@@ -1,6 +1,7 @@
 #ifndef CL_ARG_LIST_H
 # define CL_ARG_LIST_H
 
+# include "rt_control.h"
 # include "rt_parameters.h"
 
 # include "assert.h"

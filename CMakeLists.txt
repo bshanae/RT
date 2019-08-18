@@ -286,7 +286,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_BUILDER}
 	${SOURCE_CL_RENDERER_})
 
-add_executable(
+add_executable(rt
 	${SOURCE_MAIN}
 	${SOURCE_GUI}
 	${SOURCE_RENDERER})

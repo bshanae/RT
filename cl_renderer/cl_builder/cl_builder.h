@@ -1,6 +1,7 @@
 #ifndef CL_BUILDER_H
 # define CL_BUILDER_H
 
+# include "rt_control.h"
 # include "rt_cl_include.h"
 # include "rt_cl_compilation.h"
 
