@@ -11,5 +11,12 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 	new->rotation_x = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_x"));
 	new->rotation_y = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_y"));
 	new->rotation_z = GTK_ENTRY(RT_GUI_GET(builder, "camera_rotation_z"));
+	new->antialiasing =
+		GTK_SWITCH(RT_GUI_GET(builder, "camera_filter_antialiasing"));
+	new->focus = GTK_SWITCH(RT_GUI_GET(builder, "camera_filter_focus"));
+	new->focal_length =
+		GTK_ENTRY(RT_GUI_GET(builder, "camera_filter_focal_length"));
+	new->aperture_size =
+		GTK_ENTRY(RT_GUI_GET(builder, "camera_filter_aperture_size"));
 	return (new);
 }

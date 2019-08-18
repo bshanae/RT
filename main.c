@@ -7,20 +7,20 @@ void				scene_test(t_scene *scene)
 {
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_WHITE,
+		MATERIAL_RED,
 		(RT_F4_API){-10., -10., -40.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_WHITE,
+		MATERIAL_RED,
 		(RT_F4_API){10., -10., -40.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_WHITE,
+		MATERIAL_RED,
 		(RT_F4_API){-10., 10., -40.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_WHITE,
-		(RT_F4_API){-10., 0., -20.}, 2.);
+		MATERIAL_RED,
+		(RT_F4_API){10., 10., -40.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
@@ -74,7 +74,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	scene_test(gui->renderer->data_host.scene);
-	gui->renderer->data_host.camera->position.z = 300.;
+	gui->renderer->data_host.camera->position.z = 70.;
 	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);

@@ -34,19 +34,20 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 
 static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
 {
-	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
+	return (normalize(intersection->hit - ((constant t_object_sphere *)object->data)->position));
 }
 
 static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
 {
-	t_object_sphere				*data;
+	constant t_object_sphere	*data;
 	RT_F 						theta;
 	RT_F 						phi;
 	RT_F4						random;
 
-	data = (t_object_sphere *)object->data;
+	data = (constant t_object_sphere *)object->data;
 	theta = rng(rng_state) * RT_PI;
 	phi = rng(rng_state) * 2 * RT_PI;
+
 	random.x = 0.99 * data->radius * RT_SIN(theta) * RT_COS(phi);
 	random.y = 0.99 * data->radius * RT_SIN(theta) * RT_SIN(phi);
 	random.z = 0.99 * data->radius * RT_COS(theta);

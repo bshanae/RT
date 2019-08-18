@@ -14,16 +14,14 @@ static void			radiance_add(
 	RT_F4			mask;
 	RT_F			cosine;
 
-	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
+	radiance = (RT_F4){0.f, 0.f, 0.f, 0.f};
 	mask = 1;
+
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+
 		if (!scene_intersect(scene, intersection))
 			break ;
-
-		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
-			break ;
-
 		radiance += mask * intersection->material.emission;
 
 		if (settings->light_explicit)
@@ -31,7 +29,6 @@ static void			radiance_add(
 			explicit = radiance_explicit(scene, intersection, rng_state);
 			radiance += explicit * mask * intersection->material.color;
 		}
-
 		intersection->ray.origin = intersection->hit;
 
 #ifdef RT_CL_UNIFORM

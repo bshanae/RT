@@ -19,11 +19,12 @@ static RT_F4		radiance_explicit(
 	{
 		if (i == intersection_object->object_id)
 			continue ;
+
 		if (scene->objects[i].type != object_sphere)
 			continue ;
+
 		if (f4_max_component(scene->objects[i].material.emission) == 0.f)
 			continue ;
-
 		light_position = sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
@@ -33,14 +34,14 @@ static RT_F4		radiance_explicit(
 
 		if (!scene_intersect(scene, &intersection_light))
 			continue ;
+
 		if (intersection_light.object_id != i)
 			continue ;
-
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;
 
-		sphere_radius = ((t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
+		sphere_radius = ((constant t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;

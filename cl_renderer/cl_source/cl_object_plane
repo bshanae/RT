@@ -14,7 +14,7 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 	RT_F4			temp[2];
 	RT_F			value[3];
 
-	data = *(t_object_plane *)object->data;
+	data = *(constant t_object_plane *)object->data;
 	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
 		return (0);
 	temp[0] = data.position - intersection->ray.origin;
@@ -28,5 +28,5 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 
 static RT_F4		plane_normal(constant t_object *object, t_intersection *intersection)
 {
-	return (((t_object_plane *)object->data)->normal);
+	return (((constant t_object_plane *)object->data)->normal);
 }

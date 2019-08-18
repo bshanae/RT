@@ -11,9 +11,9 @@
 # define RT_CL_OBJECT_DATA_CAPACITY		32
 # define RT_CL_SCENE_OBJECTS_CAPACITY	16
 
-# define RT_CL_PATH_DEPTH				40
-# define RT_CL_SAMPLES					20
-# define RT_CL_RUSSIAN_DEPTH			5
+# define RT_CL_PATH_DEPTH				1
+# define RT_CL_SAMPLES					2
+# define RT_CL_RUSSIAN_DEPTH			10
 # define RT_CL_SRGB						1
 # define RT_CL_LIGHT_PB					1
 # define RT_CL_LIGHT_EXPLICIT			1

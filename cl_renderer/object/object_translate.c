@@ -10,9 +10,5 @@ const char 			*object_translate(t_object_type type)
 		return ("sphere");
 	else if (type == object_plane)
 		return ("plane");
-	else if (type == object_cone)
-		return ("cone");
-	else if (type == object_cylinder)
-		return ("cylinder");
 	return ("unknown");
 }
