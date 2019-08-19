@@ -15,6 +15,10 @@ static void				static_data_init(t_cl_renderer *renderer)
 	renderer->data.settings.russian_depth = RT_CL_SRGB;
 	renderer->data.settings.light_pb = RT_CL_LIGHT_PB;
 	renderer->data.settings.light_explicit = RT_CL_LIGHT_EXPLICIT;
+	renderer->data.settings.rm_mod = RT_CL_RM_MOD;
+	renderer->data.settings.rm_step_limit = RT_CL_RM_STEP_LIMIT;
+	renderer->data.settings.rm_step_part = RT_CL_STEP_PART;
+	renderer->data.settings.rm_max_distance = RT_CL_RM_MAX_DISTANCE;
 	i = 0;
 	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
 	srand(21);

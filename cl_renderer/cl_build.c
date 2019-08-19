@@ -13,16 +13,20 @@ static RT_F			f4_max_component(RT_F4 vector)
 }
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 			s_cl_settings
+typedef struct 		s_cl_renderer_settings
 {
-	int					sample_count;
-	int					sample_limit;
-	int 				sample_depth;
-	int					russian_depth;
-	int					srgb;
-	int					light_pb;
-	int 				light_explicit;
-}						t_cl_renderer_settings;
+	int				sample_count;
+	int				sample_limit;
+	int 			sample_depth;
+	int				russian_depth;
+	int				srgb;
+	int				light_pb;
+	int 			light_explicit;
+	int 			rm_mod;
+	int 			rm_step_limit;
+	RT_F			rm_step_part;
+	int 			rm_max_distance;
+}					t_cl_renderer_settings;
 
 // cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -187,7 +191,8 @@ typedef struct		s_intersection
 
 static void			intersection_reset(t_intersection *intersection)
 {
-	intersection->ray.t = RT_INTERSECTION_MAX;
+	intersection->ray.t = RT_INFINITY;
+	intersection->object_id = -1;
 }
 
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -241,7 +246,7 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	if (discriminant < 0.f)
 		return (0);
 	t = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t <= INTERSECTION_MIN || t >= intersection->ray.t)
+	if (t <= RT_EPSILON || t >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = t;
 	intersection->object_id = object->id;
@@ -250,24 +255,32 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 
 static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
 {
-	return (normalize(intersection->hit - ((t_object_sphere *)object->data)->position));
+	return (normalize(intersection->hit - ((constant t_object_sphere *)object->data)->position));
 }
 
 static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
 {
-	t_object_sphere				*data;
+	t_object_sphere				data;
 	RT_F 						theta;
 	RT_F 						phi;
 	RT_F4						random;
 
-	data = (t_object_sphere *)object->data;
+	data = *(constant t_object_sphere *)object->data;
 	theta = rng(rng_state) * RT_PI;
 	phi = rng(rng_state) * 2 * RT_PI;
-	random.x = 0.99 * data->radius * RT_SIN(theta) * RT_COS(phi);
-	random.y = 0.99 * data->radius * RT_SIN(theta) * RT_SIN(phi);
-	random.z = 0.99 * data->radius * RT_COS(theta);
-	random += data->position;
+	random.x = 0.99 * data.radius * RT_SIN(theta) * RT_COS(phi);
+	random.y = 0.99 * data.radius * RT_SIN(theta) * RT_SIN(phi);
+	random.z = 0.99 * data.radius * RT_COS(theta);
+	random += data.position;
 	return (random);
+}
+
+static RT_F 					sdf_sphere(constant t_object *object, RT_F4 point)
+{
+	t_object_sphere				data;
+
+    data = *(constant t_object_sphere *)object->data;
+	return (length(data.position - point) - data.radius);
 }
 // cl_object_plane /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -285,12 +298,12 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 	RT_F4			temp[2];
 	RT_F			value[3];
 
-	data = *(t_object_plane *)object->data;
+	data = *(constant t_object_plane *)object->data;
 	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
 		return (0);
 	temp[0] = data.position - intersection->ray.origin;
 	value[1] = dot(temp[0], data.normal) / value[0];
-	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->ray.t)
+	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = value[1];
 	intersection->object_id = object->id;
@@ -299,7 +312,15 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 
 static RT_F4		plane_normal(constant t_object *object, t_intersection *intersection)
 {
-	return (((t_object_plane *)object->data)->normal);
+	return (((constant t_object_plane *)object->data)->normal);
+}
+
+static RT_F 		sdf_plane(constant t_object *object, RT_F4 point)
+{
+	t_object_plane	data;
+
+    data = *(constant t_object_plane *)object->data;
+	return (dot(data.normal, point - data.position));
 }
 // cl_object_cone /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -324,7 +345,7 @@ static RT_F         cone_cap_intersect(constant t_object *object, t_intersection
         return (INFINITY);
     t = dot((data.bottom - intersection->ray.origin), data.axis)
             / dot(intersection->ray.direction, data.axis);
-    if (t <= INTERSECTION_MIN)
+    if (t <= RT_EPSILON)
         return (INFINITY);
     if (length(data.bottom - (intersection->ray.origin + (intersection->ray.direction * t))) < data.radius)
         intersection->cups_flag = 1;
@@ -355,7 +376,7 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 		return (0);
 
 	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[0]);
@@ -422,7 +443,7 @@ static RT_F             cylinder_cap_intersect(constant t_object *object, t_inte
         return (INFINITY);
     t[0] = dot((data.top - intersection->ray.origin), data.axis)
             / dot(intersection->ray.direction, data.axis);
-    if (t[0] <= INTERSECTION_MIN)
+    if (t[0] <= RT_EPSILON)
         return (INFINITY);
     if (length(data.top - (intersection->ray.origin + (intersection->ray.direction * t[0]))) < data.radius)
         intersection->cups_flag = 1;
@@ -430,7 +451,7 @@ static RT_F             cylinder_cap_intersect(constant t_object *object, t_inte
         t[0] = INFINITY;
     t[1] = dot((data.bottom - intersection->ray.origin), data.axis)
             / dot(intersection->ray.direction, data.axis);
-    if (t[1] <= INTERSECTION_MIN)
+    if (t[1] <= RT_EPSILON)
         return (INFINITY);
     if (length(data.bottom - (intersection->ray.origin + (intersection->ray.direction * t[1]))) < data.radius
         && t[1] < t[0])
@@ -462,7 +483,7 @@ static int			    cylinder_intersect(constant t_object *object, t_intersection *i
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 		return (0);
     temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
     angle[0] = dot((temp[0] - data.top), data.axis);
@@ -512,35 +533,93 @@ static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *int
     else
         return (normalize(((constant t_object_cylinder *)object->data)->axis));
 }
-// cl_object_intersect /////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
-        return (plane_intersect(object, intersection));
-    else if (object->type == object_cone)
-        return (cone_intersect(object, intersection));
-    else if (object->type == object_cylinder)
-        return (cylinder_intersect(object, intersection));
+		return (plane_intersect(object, intersection));
+	else if (object->type == object_cone)
+		return (cone_intersect(object, intersection));
+	else if (object->type == object_cylinder)
+		return (cylinder_intersect(object, intersection));
 	return (0);
+}
+
+static RT_F			object_sdf(constant t_object *object, RT_F4 point)
+{
+	if (object->type == object_sphere)
+		return (sdf_sphere(object, point));
+	else if (object->type == object_plane)
+		return (sdf_plane(object, point));
+	return (RT_INFINITY);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4		object_normal(constant t_object *object, t_intersection *intersection)
+#include "rt_parameters.h"
+
+static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
+{
+	RT_F4			nudged_hit;
+	RT_F4			normal;
+	RT_F4			normal_negative;
+	RT_F4			nudge;
+
+	nudge = (RT_F4){RT_CL_RM_NORMAL_EPSILON, 0., 0., 0.};
+	nudged_hit = hit + nudge;
+	normal.x = object_sdf(object, nudged_hit);
+	nudged_hit = hit - nudge;
+	normal_negative.x = object_sdf(object, nudged_hit);
+	normal.x -= normal_negative.x;
+
+	nudge = (RT_F4){0., RT_CL_RM_NORMAL_EPSILON, 0., 0.};
+	nudged_hit = hit + nudge;
+	normal.y = object_sdf(object, nudged_hit);
+	nudged_hit = hit - nudge;
+	normal_negative.y = object_sdf(object, nudged_hit);
+	normal.y -= normal_negative.y;
+
+	nudge = (RT_F4){0., 0., RT_CL_RM_NORMAL_EPSILON, 0.};
+	nudged_hit = hit + nudge;
+	normal.z = object_sdf(object, nudged_hit);
+	nudged_hit = hit - nudge;
+	normal_negative.z = object_sdf(object, nudged_hit);
+	normal.z -= normal_negative.z;
+
+    return (normalize(normal));
+}
+
+static RT_F4		object_normal_rt(
+					constant t_object *object,
+                    t_intersection *intersection)
 {
 	if (object->type == object_sphere)
 		return (sphere_normal(object, intersection));
 	else if (object->type == object_plane)
-        return (plane_normal(object, intersection));
-    else if (object->type == object_cone)
-        return (cone_normal(object, intersection));
-    else if (object->type == object_cylinder)
-        return (cylinder_normal(object, intersection));
-	return (0);
+		return (plane_normal(object, intersection));
+	else if (object->type == object_cone)
+	    return (cone_normal(object, intersection));
+	else if (object->type == object_cylinder)
+	    return (cylinder_normal(object, intersection));
+ 	return (0);
+}
+
+static RT_F4		object_normal(
+					constant t_object *object,
+					t_intersection *intersection,
+					constant t_cl_renderer_settings *settings)
+{
+	return (!settings->rm_mod ?
+		object_normal_rt(object, intersection) :
+		object_normal_rm(object, intersection->hit));
 }
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
 
 typedef struct		s_scene
 {
@@ -548,20 +627,78 @@ typedef struct		s_scene
 	int				objects_length;
 }					t_scene;
 
-static int			scene_intersect(constant t_scene *scene, t_intersection *intersection)
+static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
 	result = 0;
-	for (int i = 0; i < scene->objects_length; i++)
-		result += object_intersect(scene->objects + i, intersection);
-	if (result != 0)
+	for (int object_i = 0; object_i < scene->objects_length; object_i++)
+    	result += object_intersect(scene->objects + object_i, intersection);
+    return (result != 0);
+}
+
+static int			scene_intersect_rm(
+					constant t_scene *scene,
+                    t_intersection *intersection,
+                    constant t_cl_renderer_settings *settings)
+{
+	int				result;
+	RT_F4			ray;
+	RT_F			total_distance;
+	RT_F			temp_distance;
+	RT_F			current_distance;
+	int				current_id;
+
+	result = 0;
+	total_distance = 0.;
+	current_distance = RT_INFINITY;
+	ray = intersection->ray.origin;
+	for (int step = 0; step < settings->rm_step_limit; step++)
+    {
+    	for (int object_i = 0; object_i < scene->objects_length; object_i++)
+		{
+			temp_distance = object_sdf(scene->objects + object_i, ray);
+			if (temp_distance < current_distance)
+			{
+				current_distance = temp_distance;
+				current_id = object_i;
+			}
+		}
+    	if (current_distance < RT_EPSILON)
+    	{
+    		result = 1;
+    		intersection->object_id = current_id;
+    		intersection->ray.t = total_distance;
+    		break ;
+    	}
+    	total_distance += current_distance;
+		ray = ray + intersection->ray.direction * current_distance * settings->rm_step_part;
+    	if (total_distance > settings->rm_max_distance)
+    		break ;
+    }
+    if (result)
+    	intersection->hit = ray;
+    return (result);
+}
+
+static int			scene_intersect(
+					constant t_scene *scene,
+					t_intersection *intersection,
+					constant t_cl_renderer_settings *settings)
+{
+	int				result;
+
+	result = !settings->rm_mod ?
+		scene_intersect_rt(scene, intersection) :
+		scene_intersect_rm(scene, intersection, settings);
+	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		intersection->hit = ray_intersect(&intersection->ray);
-		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection);
+		if (!settings->rm_mod)
+			intersection->hit = ray_intersect(&intersection->ray);
+		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
-	return (result != 0);
+	return (result);
 }
 // cl_sample ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -666,9 +803,12 @@ static RT_F4			sample_cosine(
 }
 // cl_radiance_explicit ////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include "rt_parameters.h"
+
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	t_intersection	intersection_light;
@@ -683,7 +823,7 @@ static RT_F4		radiance_explicit(
 	radiance = 0;
 	for (int i = 0; i < scene->objects_length; i++)
 	{
-		if (i == intersection_object->object_id)
+ 		if (i == intersection_object->object_id)
 			continue ;
 		if (scene->objects[i].type != object_sphere)
 			continue ;
@@ -693,24 +833,21 @@ static RT_F4		radiance_explicit(
 		light_position = sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
-		intersection_light.ray.origin = intersection_object->hit;
+		intersection_light.ray.origin = intersection_object->hit + RT_EPSILON * ;
 		intersection_light.ray.direction = light_direction;
 		intersection_reset(&intersection_light);
 
-		if (!scene_intersect(scene, &intersection_light))
+		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
+		printf("%f\n", intersection_light.ray.t);
 		if (intersection_light.object_id != i)
 			continue ;
-
-		radiance += 0.5;
-
-		continue;
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;
 
-		sphere_radius = ((t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
+		sphere_radius = ((constant t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
@@ -738,7 +875,7 @@ static void			radiance_add(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		if (!scene_intersect(scene, intersection))
+		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -748,7 +885,7 @@ static void			radiance_add(
 
 		if (settings->light_explicit)
 		{
-			explicit = radiance_explicit(scene, intersection, rng_state);
+			explicit = radiance_explicit(scene, intersection, settings, rng_state);
 			radiance += explicit * mask * intersection->material.color;
 		}
 
