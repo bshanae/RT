@@ -17,7 +17,7 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 	gui_scene_add_set_sphere(new, builder);
 	gui_scene_add_set_plane(new, builder);
 	gui_scene_add_set_cone(new, builder);
-	gui_scene_add_set_ylinder(new, builder);
+	gui_scene_add_set_cylinder(new, builder);
 	gui_scene_add_set_material(new, builder);
 	return (new);
 }
