@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1662,6 +1662,60 @@ gui/gui_material/gui_material_show.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.s
 .PHONY : gui/gui_material/gui_material_show.c.s
 
+gui/gui_object_x/gui_object_cone_x.o: gui/gui_object_x/gui_object_cone_x.c.o
+
+.PHONY : gui/gui_object_x/gui_object_cone_x.o
+
+# target to build an object file
+gui/gui_object_x/gui_object_cone_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o
+.PHONY : gui/gui_object_x/gui_object_cone_x.c.o
+
+gui/gui_object_x/gui_object_cone_x.i: gui/gui_object_x/gui_object_cone_x.c.i
+
+.PHONY : gui/gui_object_x/gui_object_cone_x.i
+
+# target to preprocess a source file
+gui/gui_object_x/gui_object_cone_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.i
+.PHONY : gui/gui_object_x/gui_object_cone_x.c.i
+
+gui/gui_object_x/gui_object_cone_x.s: gui/gui_object_x/gui_object_cone_x.c.s
+
+.PHONY : gui/gui_object_x/gui_object_cone_x.s
+
+# target to generate assembly for a file
+gui/gui_object_x/gui_object_cone_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.s
+.PHONY : gui/gui_object_x/gui_object_cone_x.c.s
+
+gui/gui_object_x/gui_object_cylinder_x.o: gui/gui_object_x/gui_object_cylinder_x.c.o
+
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.o
+
+# target to build an object file
+gui/gui_object_x/gui_object_cylinder_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.c.o
+
+gui/gui_object_x/gui_object_cylinder_x.i: gui/gui_object_x/gui_object_cylinder_x.c.i
+
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.i
+
+# target to preprocess a source file
+gui/gui_object_x/gui_object_cylinder_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.i
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.c.i
+
+gui/gui_object_x/gui_object_cylinder_x.s: gui/gui_object_x/gui_object_cylinder_x.c.s
+
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.s
+
+# target to generate assembly for a file
+gui/gui_object_x/gui_object_cylinder_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.s
+.PHONY : gui/gui_object_x/gui_object_cylinder_x.c.s
+
 gui/gui_object_x/gui_object_plane_x.o: gui/gui_object_x/gui_object_plane_x.c.o
 
 .PHONY : gui/gui_object_x/gui_object_plane_x.o
@@ -1932,6 +1986,60 @@ gui/gui_scene_add/gui_scene_add_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_new.c.s
 
+gui/gui_scene_add/gui_scene_add_set_cone.o: gui/gui_scene_add/gui_scene_add_set_cone.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_set_cone.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.c.o
+
+gui/gui_scene_add/gui_scene_add_set_cone.i: gui/gui_scene_add/gui_scene_add_set_cone.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_set_cone.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.c.i
+
+gui/gui_scene_add/gui_scene_add_set_cone.s: gui/gui_scene_add/gui_scene_add_set_cone.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_set_cone.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cone.c.s
+
+gui/gui_scene_add/gui_scene_add_set_cylinder.o: gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_set_cylinder.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
+
+gui/gui_scene_add/gui_scene_add_set_cylinder.i: gui/gui_scene_add/gui_scene_add_set_cylinder.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_set_cylinder.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.c.i
+
+gui/gui_scene_add/gui_scene_add_set_cylinder.s: gui/gui_scene_add/gui_scene_add_set_cylinder.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_set_cylinder.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_set_cylinder.c.s
+
 gui/gui_scene_add/gui_scene_add_set_material.o: gui/gui_scene_add/gui_scene_add_set_material.c.o
 
 .PHONY : gui/gui_scene_add/gui_scene_add_set_material.o
@@ -2174,6 +2282,60 @@ gui/gui_scene_edit/gui_scene_edit_new.s: gui/gui_scene_edit/gui_scene_edit_new.c
 gui/gui_scene_edit/gui_scene_edit_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_new.c.s
+
+gui/gui_scene_edit/gui_scene_edit_set_cone.o: gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_set_cone.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
+
+gui/gui_scene_edit/gui_scene_edit_set_cone.i: gui/gui_scene_edit/gui_scene_edit_set_cone.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_set_cone.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.c.i
+
+gui/gui_scene_edit/gui_scene_edit_set_cone.s: gui/gui_scene_edit/gui_scene_edit_set_cone.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_set_cone.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cone.c.s
+
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.o: gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
+
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.i: gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.i
+
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.s: gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.s
 
 gui/gui_scene_edit/gui_scene_edit_set_material.o: gui/gui_scene_edit/gui_scene_edit_set_material.c.o
 
@@ -2715,32 +2877,86 @@ gui/gui_signal_x/gui_signal_key.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.s
 .PHONY : gui/gui_signal_x/gui_signal_key.c.s
 
-gui/gui_signal_x/gui_signal_object_edit_plane_name.o: gui/gui_signal_x/gui_signal_object_edit_plane_name.c.o
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.o: gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.o
 
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.o
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.o
 
 # target to build an object file
-gui/gui_signal_x/gui_signal_object_edit_plane_name.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_name.c.o
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.c.o
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.o
 
-gui/gui_signal_x/gui_signal_object_edit_plane_name.i: gui/gui_signal_x/gui_signal_object_edit_plane_name.c.i
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.i: gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.i
 
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.i
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.i
 
 # target to preprocess a source file
-gui/gui_signal_x/gui_signal_object_edit_plane_name.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_name.c.i
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.c.i
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.i
 
-gui/gui_signal_x/gui_signal_object_edit_plane_name.s: gui/gui_signal_x/gui_signal_object_edit_plane_name.c.s
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.s: gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.s
 
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.s
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.s
 
 # target to generate assembly for a file
-gui/gui_signal_x/gui_signal_object_edit_plane_name.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_name.c.s
-.PHONY : gui/gui_signal_x/gui_signal_object_edit_plane_name.c.s
+gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.s
+
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.o: gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.o
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.o
+
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.i: gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.i
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.i
+
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.s: gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.s
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.s
+
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.o: gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.o
+
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.i: gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.i
+
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.s: gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.s
 
 gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.o: gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c.o
 
@@ -2822,6 +3038,33 @@ gui/gui_signal_x/gui_signal_object_edit_sphere_x.s: gui/gui_signal_x/gui_signal_
 gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.s
+
+gui/gui_signal_x/gui_signal_object_edit_x_name.o: gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_object_edit_x_name.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
+
+gui/gui_signal_x/gui_signal_object_edit_x_name.i: gui/gui_signal_x/gui_signal_object_edit_x_name.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_object_edit_x_name.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.i
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.c.i
+
+gui/gui_signal_x/gui_signal_object_edit_x_name.s: gui/gui_signal_x/gui_signal_object_edit_x_name.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_object_edit_x_name.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.s
+.PHONY : gui/gui_signal_x/gui_signal_object_edit_x_name.c.s
 
 gui/gui_signal_x/gui_signal_scene_add_response_x.o: gui/gui_signal_x/gui_signal_scene_add_response_x.c.o
 
@@ -3046,8 +3289,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... rt"
+	@echo "... edit_cache"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -3219,6 +3462,12 @@ help:
 	@echo "... gui/gui_material/gui_material_show.o"
 	@echo "... gui/gui_material/gui_material_show.i"
 	@echo "... gui/gui_material/gui_material_show.s"
+	@echo "... gui/gui_object_x/gui_object_cone_x.o"
+	@echo "... gui/gui_object_x/gui_object_cone_x.i"
+	@echo "... gui/gui_object_x/gui_object_cone_x.s"
+	@echo "... gui/gui_object_x/gui_object_cylinder_x.o"
+	@echo "... gui/gui_object_x/gui_object_cylinder_x.i"
+	@echo "... gui/gui_object_x/gui_object_cylinder_x.s"
 	@echo "... gui/gui_object_x/gui_object_plane_x.o"
 	@echo "... gui/gui_object_x/gui_object_plane_x.i"
 	@echo "... gui/gui_object_x/gui_object_plane_x.s"
@@ -3249,6 +3498,12 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_new.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cone.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cone.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cone.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cylinder.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cylinder.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_set_cylinder.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_material.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_material.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_set_material.s"
@@ -3276,6 +3531,12 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cone.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cone.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cone.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cylinder.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cylinder.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_set_cylinder.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_set_material.s"
@@ -3336,9 +3597,15 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_key.o"
 	@echo "... gui/gui_signal_x/gui_signal_key.i"
 	@echo "... gui/gui_signal_x/gui_signal_key.s"
-	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_name.o"
-	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_name.i"
-	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_name.s"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_radius.o"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_radius.i"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_radius.s"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_top_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_top_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_cone_top_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.s"
@@ -3348,6 +3615,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_sphere_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_sphere_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_object_edit_sphere_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_x_name.o"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_x_name.i"
+	@echo "... gui/gui_signal_x/gui_signal_object_edit_x_name.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.s"

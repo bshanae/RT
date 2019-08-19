@@ -21,6 +21,8 @@ typedef struct 					s_gui_scene_edit
 {
 	t_gui_object_sphere			sphere;
 	t_gui_object_plane			plane;
+	t_gui_object_cone			cone;
+	t_gui_object_cylinder		cylinder;
 	t_gui_material				material;
 	GtkOverlay					*overlay;
 	GtkListStore				*list;
@@ -39,6 +41,10 @@ void 							gui_scene_edit_delete
 void 							gui_scene_edit_set_sphere
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_set_plane
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_set_cone
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_set_cylinder
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_set_material
 								(t_gui_scene_edit *edit, GtkBuilder *builder);

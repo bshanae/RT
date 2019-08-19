@@ -101,9 +101,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	"-framework OpenCL"
-#	"OpenCL"
-#	"m"
+#	"-framework OpenCL"
+	"OpenCL"
+	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -123,7 +123,7 @@ set(SOURCE_GUI_CAMERA
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_sphere_x.c
 	./gui/gui_object_x/gui_object_plane_x.c
-	./gui/gui_object_x/gui_object_x.c)
+	./gui/gui_object_x/gui_object_x.c gui/gui_object_x/gui_object_cone_x.c gui/gui_object_x/gui_object_cylinder_x.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
@@ -144,7 +144,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_set_sphere.c
 	./gui/gui_scene_edit/gui_scene_edit_set_plane.c
 	./gui/gui_scene_edit/gui_scene_edit_get_object.c
-	./gui/gui_scene_edit/gui_scene_edit_show.c)
+	./gui/gui_scene_edit/gui_scene_edit_show.c gui/gui_scene_edit/gui_scene_edit_set_cone.c gui/gui_scene_edit/gui_scene_edit_set_cylinder.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -155,7 +155,7 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_get_object.c
 	./gui/gui_scene_add/gui_scene_add_set_plane.c
 	./gui/gui_scene_add/gui_scene_add_gen_name.c
-	./gui/gui_scene_add/gui_scene_add_build_object.c)
+	./gui/gui_scene_add/gui_scene_add_build_object.c gui/gui_scene_add/gui_scene_add_set_cone.c gui/gui_scene_add/gui_scene_add_set_cylinder.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -174,7 +174,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_key.c
 	./gui/gui_signal_x/gui_signal_scene_edit_select.c
 	./gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
-	./gui/gui_signal_x/gui_signal_object_edit_plane_name.c
+	gui/gui_signal_x/gui_signal_object_edit_x_name.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
 	./gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c
 	./gui/gui_signal_x/gui_signal_scene_add_response_x.c
@@ -186,7 +186,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
 	./gui/gui_signal_x/gui_signal_image_click.c
 	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c
-	./gui/gui_signal_x/gui_signal_camera_filter_x.c)
+	./gui/gui_signal_x/gui_signal_camera_filter_x.c gui/gui_signal_x/gui_signal_object_edit_cone_radius.c gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c

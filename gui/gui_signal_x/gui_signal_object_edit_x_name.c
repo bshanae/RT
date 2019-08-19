@@ -1,6 +1,6 @@
 #include "gui_signal_connect.h"
 
-void 				gui_signal_object_edit_plane_name
+void 				gui_signal_object_edit_x_name
 					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;

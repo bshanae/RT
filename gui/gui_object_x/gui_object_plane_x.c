@@ -21,33 +21,21 @@ t_gui_object_plane		gui_object_plane_set
 }
 
 void 					gui_object_plane_show
-						(t_gui_object_plane *edit, t_object *object)
+						(t_gui_object_plane *gui, t_object *object)
 {
 	t_object_plane		*data;
-	char 				buffer[32];
 
 	data = object ? (t_object_plane *)object->data : NULL;
-	if (edit->name && object)
-		gtk_entry_set_text(edit->name, object->name);
-	ft_bzero(buffer, 32);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.x);
-	gtk_entry_set_text(edit->position_x, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.y);
-	gtk_entry_set_text(edit->position_y, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.z);
-	gtk_entry_set_text(edit->position_z, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->normal.x);
-	gtk_entry_set_text(edit->normal_x, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->normal.y);
-	gtk_entry_set_text(edit->normal_y, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->normal.z);
-	gtk_entry_set_text(edit->normal_z, buffer);
+	if (gui->name && object)
+		gtk_entry_set_text(gui->name, object->name);
+	if (!data)
+		return ;
+	gui_object_x_set_f(gui->position_x, data->position.x);
+	gui_object_x_set_f(gui->position_y, data->position.y);
+	gui_object_x_set_f(gui->position_z, data->position.z);
+	gui_object_x_set_f(gui->normal_x, data->normal.x);
+	gui_object_x_set_f(gui->normal_y, data->normal.y);
+	gui_object_x_set_f(gui->normal_z, data->normal.z);
 }
 
 void 					gui_object_plane_build
@@ -56,18 +44,12 @@ void 					gui_object_plane_build
 	t_object_plane		*data;
 
 	data = (t_object_plane *)object->data;
-	ft_strcpy(object->name, gui_object_x_get_parameter(gui->name));
+	ft_strcpy(object->name, gui_object_x_get_str(gui->name));
 	object->type = object_plane;
-	data->position.x =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_x), NULL);
-	data->position.y =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_y), NULL);
-	data->position.z =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_z), NULL);
-	data->normal.x =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->normal_x), NULL);
-	data->normal.y =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->normal_y), NULL);
-	data->normal.z =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->normal_z), NULL);
+	data->position.x = gui_object_x_get_f(gui->position_x);
+	data->position.y = gui_object_x_get_f(gui->position_y);
+	data->position.z = gui_object_x_get_f(gui->position_z);
+	data->normal.x = gui_object_x_get_f(gui->normal_x);
+	data->normal.y = gui_object_x_get_f(gui->normal_y);
+	data->normal.z = gui_object_x_get_f(gui->normal_z);
 }
