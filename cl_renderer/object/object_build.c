@@ -17,8 +17,8 @@ void				object_build(
         object_cone_build(space, &args);
     else if (type == object_cylinder)
         object_cylinder_build(space, &args);
-    //else if (type == object_aabb)
-    //    object_aabb_build(space, &args);
+    else if (type == object_aabb)
+        object_aabb_build(space, &args);
     space->material = material;
     space->name[0] = '\0';
     va_end(args);

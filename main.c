@@ -8,7 +8,7 @@ void				scene_test(t_scene *scene)
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_RED,
-		(RT_F4_API){-10., -10., -40.}, 2.);
+		(RT_F4_API){0., 0., -40.}, 20.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_RED,
@@ -67,11 +67,10 @@ void				scene_test(t_scene *scene)
 		(RT_F4_API){0., 1., 0.});
     object_build( // lower
         scene_get_space(scene),
-        object_cylinder,
+        object_aabb,
         MATERIAL_RED,
-        (RT_F4_API){0., 10., -40.},
-        (RT_F4_API){0., 0., -40.},
-        2.);
+        (RT_F4_API){40., 40., 40.},
+        (RT_F4_API){-40., -40., -40.});
 }
 
 int					main(int argc, char **argv)

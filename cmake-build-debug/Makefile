@@ -852,6 +852,33 @@ cl_renderer/object/object_translate.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.s
 .PHONY : cl_renderer/object/object_translate.c.s
 
+cl_renderer/object_x/object_aabb.o: cl_renderer/object_x/object_aabb.c.o
+
+.PHONY : cl_renderer/object_x/object_aabb.o
+
+# target to build an object file
+cl_renderer/object_x/object_aabb.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_aabb.c.o
+.PHONY : cl_renderer/object_x/object_aabb.c.o
+
+cl_renderer/object_x/object_aabb.i: cl_renderer/object_x/object_aabb.c.i
+
+.PHONY : cl_renderer/object_x/object_aabb.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_aabb.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_aabb.c.i
+.PHONY : cl_renderer/object_x/object_aabb.c.i
+
+cl_renderer/object_x/object_aabb.s: cl_renderer/object_x/object_aabb.c.s
+
+.PHONY : cl_renderer/object_x/object_aabb.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_aabb.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_aabb.c.s
+.PHONY : cl_renderer/object_x/object_aabb.c.s
+
 cl_renderer/object_x/object_cone.o: cl_renderer/object_x/object_cone.c.o
 
 .PHONY : cl_renderer/object_x/object_cone.o
@@ -2913,6 +2940,9 @@ help:
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
+	@echo "... cl_renderer/object_x/object_aabb.o"
+	@echo "... cl_renderer/object_x/object_aabb.i"
+	@echo "... cl_renderer/object_x/object_aabb.s"
 	@echo "... cl_renderer/object_x/object_cone.o"
 	@echo "... cl_renderer/object_x/object_cone.i"
 	@echo "... cl_renderer/object_x/object_cone.s"

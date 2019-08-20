@@ -19,6 +19,6 @@ void				object_sphere_build(t_object *space, va_list *args);
 void				object_plane_build(t_object *space, va_list *args);
 void				object_cone_build(t_object *space, va_list *args);
 void				object_cylinder_build(t_object *space, va_list *args);
-//void				object_aabb_build(t_object *space, va_list *args);
+void				object_aabb_build(t_object *space, va_list *args);
 
 #endif

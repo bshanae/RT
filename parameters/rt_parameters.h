@@ -22,6 +22,10 @@
 # define RT_CL_APERTURE_SIZE			5.
 # define RT_CL_FOCAL_LENGTH				40.
 
+# define RM_STEPS_LIMIT					255
+# define RM_DISTANCE_LIMIT				100
+# define RM_EPSILON						0.0001
+
 #ifdef RT_FLOAT
 #  define INTERSECTION_MIN				0.0001
 #endif

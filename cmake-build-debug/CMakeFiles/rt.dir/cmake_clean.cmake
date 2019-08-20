@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_aabb.c.o"
   "CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.o"
   "CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.o"
   "CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o"

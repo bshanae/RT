@@ -33,4 +33,10 @@ typedef struct 		s_object_cylinder
     RT_F 			radius;
 }					t_object_cylinder;
 
+typedef struct 		s_object_aabb
+{
+    RT_F4_API		min;
+    RT_F4_API		max;
+}					t_object_aabb;
+
 #endif

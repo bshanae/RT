@@ -21,3 +21,34 @@ static int			scene_intersect(constant t_scene *scene, t_intersection *intersecti
 	}
 	return (result != 0);
 }
+
+static int			scene_rm_intersect(constant t_scene *scene, constant t_camera *camera, t_intersection *intersection)
+{
+	t_object_sphere	data;
+	RT_F4			hit;
+	RT_F4			step;
+	RT_F			distance;
+	RT_F			total_distance;
+	int				i;
+
+	data = *(constant t_object_sphere *)scene->objects[0].data;
+	hit = camera->position;
+	total_distance = 0.;
+	i = 0;
+	while (i < RM_STEPS_LIMIT)
+	{
+		distance = sphere_sdf(data.position, data.radius, hit);
+		total_distance += distance;
+		step = intersection->ray.direction * total_distance;
+		hit = intersection->ray.origin + step;
+		if (distance < RM_EPSILON)
+		{
+			intersection->hit = hit;
+			return (1);
+		}
+		if (total_distance > RM_DISTANCE_LIMIT)
+			return (0);
+		i++;
+	}
+	return (0);
+}

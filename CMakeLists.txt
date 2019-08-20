@@ -118,7 +118,7 @@ set(SOURCE_GUI_CAMERA
 set(SOURCE_GUI_OBJECT_X
 		./gui/gui_object_x/gui_object_sphere_x.c
 		./gui/gui_object_x/gui_object_plane_x.c
-		./gui/gui_object_x/gui_object_x.c cl_renderer/object_x/object_cone.c cl_renderer/object_x/object_cylinder.c)
+		./gui/gui_object_x/gui_object_x.c cl_renderer/object_x/object_cone.c cl_renderer/object_x/object_cylinder.c cl_renderer/object_x/object_aabb.c)
 
 set(SOURCE_GUI_COLOR
 		./gui/gui_color/gui_color_to_f4.c

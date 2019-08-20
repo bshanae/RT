@@ -32,6 +32,14 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	return (1);
 }
 
+static RT_F 					sphere_sdf(const RT_F4 center, const RT_F radius, const RT_F4 point)
+{
+	RT_F4						temp;
+
+	temp = point - center;
+	return (length(temp) - radius);
+}
+
 static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
 {
 	return (normalize(intersection->hit - ((constant t_object_sphere *)object->data)->position));
