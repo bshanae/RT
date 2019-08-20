@@ -19,7 +19,7 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 		return (0);
 	temp[0] = data.position - intersection->ray.origin;
 	value[1] = dot(temp[0], data.normal) / value[0];
-	if (value[1] <= INTERSECTION_MIN || value[1] >= intersection->ray.t)
+	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
 		return (0);
 	intersection->ray.t = value[1];
 	intersection->object_id = object->id;
@@ -29,4 +29,12 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 static RT_F4		plane_normal(constant t_object *object, t_intersection *intersection)
 {
 	return (((constant t_object_plane *)object->data)->normal);
+}
+
+static RT_F 		sdf_plane(constant t_object *object, RT_F4 point)
+{
+	t_object_plane	data;
+
+    data = *(constant t_object_plane *)object->data;
+	return (dot(data.normal, point - data.position));
 }

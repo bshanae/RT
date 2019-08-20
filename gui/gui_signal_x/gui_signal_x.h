@@ -47,8 +47,9 @@ void				gui_signal_scene_edit_remove_response_yes
 void				gui_signal_scene_edit_remove_response_no
 					(GTK_SIGNAL_SIGNATURE);
 
-void 				gui_signal_object_edit_sphere_name
+void 				gui_signal_object_edit_x_name
 					(GTK_SIGNAL_SIGNATURE);
+
 void 				gui_signal_object_edit_sphere_position_x
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_object_edit_sphere_position_y
@@ -58,8 +59,6 @@ void 				gui_signal_object_edit_sphere_position_z
 void 				gui_signal_object_edit_sphere_radius
 					(GTK_SIGNAL_SIGNATURE);
 
-void 				gui_signal_object_edit_plane_name
-					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_object_edit_plane_position_x
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_object_edit_plane_position_y
@@ -71,6 +70,21 @@ void 				gui_signal_object_edit_plane_normal_x
 void 				gui_signal_object_edit_plane_normal_y
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_object_edit_plane_normal_z
+					(GTK_SIGNAL_SIGNATURE);
+
+void 				gui_signal_object_edit_cone_top_x
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_top_y
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_top_z
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_bottom_x
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_bottom_y
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_bottom_z
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_object_edit_cone_radius
 					(GTK_SIGNAL_SIGNATURE);
 
 void 				gui_signal_scene_edit_material_color

@@ -1,54 +1,83 @@
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#include "rt_parameters.h"
+
 typedef struct		s_scene
 {
-	t_object		objects[RT_CL_SCENE_OBJECTS_CAPACITY];
+	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
 }					t_scene;
 
-static int			scene_intersect(constant t_scene *scene, t_intersection *intersection)
+static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
 	result = 0;
-	for (int i = 0; i < scene->objects_length; i++)
-		result += object_intersect(scene->objects + i, intersection);
-	if (result != 0)
-	{
-		intersection->material = scene->objects[intersection->object_id].material;
-		intersection->hit = ray_intersect(&intersection->ray);
-		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection);
-	}
-	return (result != 0);
+	for (int object_i = 0; object_i < scene->objects_length; object_i++)
+    	result += object_intersect(scene->objects + object_i, intersection);
+    return (result != 0);
 }
 
-static int			scene_rm_intersect(constant t_scene *scene, constant t_camera *camera, t_intersection *intersection)
+static int			scene_intersect_rm(
+					constant t_scene *scene,
+                    t_intersection *intersection,
+                    constant t_cl_renderer_settings *settings)
 {
-	t_object_sphere	data;
-	RT_F4			hit;
-	RT_F4			step;
-	RT_F			distance;
+	int				result;
+	RT_F4			ray;
 	RT_F			total_distance;
-	int				i;
+	RT_F			temp_distance;
+	RT_F			current_distance;
+	int				current_id;
 
-	data = *(constant t_object_sphere *)scene->objects[0].data;
-	hit = camera->position;
+	result = 0;
 	total_distance = 0.;
-	i = 0;
-	while (i < RM_STEPS_LIMIT)
-	{
-		distance = sphere_sdf(data.position, data.radius, hit);
-		total_distance += distance;
-		step = intersection->ray.direction * total_distance;
-		hit = intersection->ray.origin + step;
-		if (distance < RM_EPSILON)
+	ray = intersection->ray.origin;
+	for (int step = 0; step < settings->rm_step_limit; step++)
+    {
+    	current_distance = RT_INFINITY;
+    	for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		{
-			intersection->hit = hit;
-			return (1);
+			temp_distance = object_sdf(scene->objects + object_i, ray);
+			if (temp_distance < current_distance)
+			{
+				current_distance = temp_distance;
+				current_id = object_i;
+			}
 		}
-		if (total_distance > RM_DISTANCE_LIMIT)
-			return (0);
-		i++;
+    	if (current_distance < RT_EPSILON)
+    	{
+    		result = 1;
+    		intersection->object_id = current_id;
+    		intersection->ray.t = total_distance;
+    		break ;
+    	}
+    	total_distance += current_distance;
+		ray = ray + intersection->ray.direction * current_distance * settings->rm_step_part;
+    	if (total_distance > settings->rm_max_distance)
+    		break ;
+    }
+    if (result)
+    	intersection->hit = ray;
+    return (result);
+}
+
+static int			scene_intersect(
+					constant t_scene *scene,
+					t_intersection *intersection,
+					constant t_cl_renderer_settings *settings)
+{
+	int				result;
+
+	result = !settings->rm_mod ?
+		scene_intersect_rt(scene, intersection) :
+		scene_intersect_rm(scene, intersection, settings);
+	if (result)
+	{
+		intersection->material = scene->objects[intersection->object_id].material;
+		if (!settings->rm_mod)
+			intersection->hit = ray_intersect(&intersection->ray);
+		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
-	return (0);
+	return (result);
 }

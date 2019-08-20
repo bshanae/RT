@@ -5,7 +5,7 @@ kernel void			cl_main(
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
-					constant t_cl_settings *settings,
+					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	int				global_id;
@@ -20,61 +20,6 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
 
-    //radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
-    //image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
-
-    if (scene_rm_intersect(scene, camera, &intersection))
-    	image[global_id] = (t_color){100, 255, 255, 255};
-    else
-    	image[global_id] = (t_color){50, 50, 50, 255}; // todo define background
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }
-
-//static t_color				light(constant t_scene *scene, t_intersection intersection, t_color color)
-//{
-//	t_color					result_color;
-//	RT_F					total_intensity;
-//
-//	intersection_normal = object_normal(scene->objects[0].data, intersection.hit);
-//	total_intensity = 0.;
-//	return (result_color);
-//}
-
-/*
-static int 					scene_light
-							(constant t_scene *scene,
-							constant t_object *obj,
-							constant t_render_params *obj_params,
-							t_vector3 *hit)
-{
-	int 			i;
-	t_vector3		normal;
-	double 			total_intensity;
-	double 			current_intensity;
-	double 			shadow_intensity;
-	t_ray			shadow_ray;
-
-	if (!scene->light_mod)
-		return (color_unpack(COLOR));
-	normal = object_normal(obj, obj_params, hit);
-	total_intensity = 0.;
-	i = 0;
-	while (i < scene->lights_length)
-	{
-		current_intensity = vector3_s_dot(normal, (t_vector3)scene->lights[i].opposite);
-		current_intensity *= scene->lights[i].intensity;
-		if (scene->shadow_mod)
-		{
-			shadow_ray.position = *hit;
-			shadow_ray.direction = scene->lights[i].opposite;
-			shadow_intensity = scene_shadow(scene, &shadow_ray, obj, obj_params);
-			if (obj->iter == SDF_I_MANDELBROT)
-				shadow_intensity = fmax(.55, shadow_intensity);
-			current_intensity *= shadow_intensity;
-		}
-		total_intensity += fmax(current_intensity, 0.);
-		i++;
-	}
-	total_intensity = fmax(AMBIENT_VALUE, total_intensity);
-	return (color_unpack(vector3_s_mul(COLOR, total_intensity)));
-}
-*/

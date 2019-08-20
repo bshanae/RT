@@ -11,13 +11,3 @@ static RT_F			f4_max_component(RT_F4 vector)
 {
 	return (fmax(vector.x, fmax(vector.y, vector.z)));
 }
-
-static RT_F			f4_iter(RT_F4 vector, int i)
-{
-    if (i == 0)
-        return (vector.x);
-    else if (i == 1)
-        return (vector.y);
-    else if (i == 2)
-        return (vector.z);;
-}

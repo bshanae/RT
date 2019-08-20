@@ -1,125 +1,65 @@
 #ifndef CL_RENDERER_H
 # define CL_RENDERER_H
 
+# include "rt_cl_include.h"
 # include "rt_control.h"
 # include "rt_float.h"
-# include "rt_cl_compilation.h"
 
-# include "assert.h"
 # include "gui_image.h"
 # include "scene.h"
 # include "camera.h"
 # include "ray.h"
+# include "cl_arg_list.h"
+# include "cl_builder.h"
+# include "cl_renderer_flag_x.h"
+# include "cl_renderer_settings.h"
 
 # include <stdlib.h>
 # include <time.h>
 
-typedef struct 			s_cl_settings
+typedef	struct 				s_cl_renderer_data
 {
-	int					sample_count;
-	int					sample_limit;
-	int 				sample_depth;
-	int					russian_depth;
-	int					srgb;
-	int					light_pb;
-	int 				light_explicit;
-}						t_cl_settings;
+	t_camera				*camera;
+	t_scene					*scene;
+	t_color					*image;
+	t_cl_renderer_settings	settings;
+	u_long					*rng_state;
+}							t_cl_renderer_data;
 
-typedef struct 			s_cl_program
+typedef struct 				s_cl_renderer
 {
-	cl_program 			program;
-	char 				*buffer;
-	u_long 				capacity;
-	u_long				length;
-	int 				error;
-}						t_cl_program;
+	t_gui_image				*image;
+	u_long 					pixel_number;
+	t_cl_builder			*builder;
+	t_cl_arg_list			*args;
+	t_cl_renderer_flag_list	flags;
+	t_cl_renderer_data		data;
+}							t_cl_renderer;
 
-typedef struct 			s_cl_data_size
+typedef enum				e_cl_renderer_arg
 {
-	u_long				camera;
-	u_long				scene;
-	u_long 				image;
-	u_long 				settings;
-	u_long 				sample_store;
-	u_long				rng_state;
-}						t_cl_data_size;
+	cl_arg_camera,
+	cl_arg_scene,
+	cl_arg_image,
+	cl_arg_samples,
+	cl_arg_settings,
+	cl_arg_rng_state
+}							t_cl_renderer_arg;
 
-typedef	struct 			s_cl_data_host
-{
-	t_camera			*camera;
-	t_scene				*scene;
-	t_color				*image;
-	t_cl_settings		settings;
-	u_long				*rng_state;
-}						t_cl_data_host;
+t_cl_renderer				*cl_renderer_new(t_gui_image *image);
+void						cl_renderer_delete(t_cl_renderer **renderer);
 
-typedef	struct 			s_cl_data_device
-{
-	cl_mem				camera;
-	cl_mem				scene;
-	cl_mem				image;
-	cl_mem 				settings;
-	cl_mem				sample_store;
-	cl_mem 				rng_state;
-}						t_cl_data_device;
+void						cl_renderer_flag_set(t_cl_renderer *renderer,
+												 t_cl_renderer_flag flag);
+void						cl_renderer_flag_perform(t_cl_renderer *renderer);
 
-typedef struct 			s_cl_flags
-{
-	int					update_camera;
-	int 				update_scene;
-	int					update_settings;
-}						t_cl_flags;
+void 						cl_renderer_camera_move
+							(t_cl_renderer *renderer, t_camera_movement movement);
+void 						cl_renderer_camera_rotate(
+							t_cl_renderer *renderer,
+		 					t_f4_rotation_axis axis,
+		 					t_f4_rotation_direction direction);
 
-typedef struct 			s_cl_renderer
-{
-	int 				error;
-	t_gui_image			*image;
-	t_cl_data_size		data_size;
-	t_cl_data_host		data_host;
-	t_cl_data_device	data_device;
-	cl_device_id 		device_id;
-	cl_context 			context;
-	t_cl_program		program;
-	cl_kernel 			kernel;
-	cl_command_queue 	queue;
-	u_long 				queue_length;
-	t_cl_flags			flags;
-}						t_cl_renderer;
-
-t_cl_renderer			*cl_renderer_new(t_gui_image *image);
-void					cl_renderer_delete(t_cl_renderer **renderer);
-
-void					cl_renderer_log(t_cl_renderer *renderer);
-
-void 					cl_renderer_init_data(t_cl_renderer *renderer);
-void					cl_renderer_init_device(t_cl_renderer *renderer);
-void					cl_renderer_init_context(t_cl_renderer *renderer);
-
-void					cl_renderer_create_program(t_cl_renderer *renderer);
-void					cl_renderer_create_queue(t_cl_renderer *renderer);
-void					cl_renderer_create_kernel(t_cl_renderer *renderer);
-
-void					cl_renderer_set_arguments(t_cl_renderer *renderer);
-
-typedef enum 			e_cl_update
-{
-	rt_update_camera,
-	rt_update_scene,
-	rt_update_settings
-
-}						t_cl_update;
-
-void					cl_renderer_update
-						(t_cl_renderer *renderer, t_cl_update update);
-void 					cl_renderer_reset_samples(t_cl_renderer *renderer);
-
-void 					cl_renderer_camera_move
-						(t_cl_renderer *renderer, t_camera_movement movement);
-void 					cl_renderer_camera_rotate(
-						t_cl_renderer *renderer,
-		 				t_f4_rotation_axis axis,
-		 				t_f4_rotation_direction direction);
-
-void					cl_renderer_render(t_cl_renderer *renderer);
+void						cl_renderer_render(t_cl_renderer *renderer);
 
 #endif

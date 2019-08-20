@@ -6,7 +6,11 @@ static const char	*gui_scene_edit_translate_type(t_object_type type)
 		return ("sphere_");
 	else if (type == object_plane)
 		return ("plane_");
-	return ("unknown");
+	else if (type == object_cone)
+		return ("cone");
+	else if (type == object_cylinder)
+		return ("cylinder_");
+	return ("unknown_");
 }
 
 void				gui_scene_edit_gen_name(t_object *object)

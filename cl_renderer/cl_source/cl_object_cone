@@ -21,7 +21,7 @@ static RT_F         cone_cap_intersect(constant t_object *object, t_intersection
         return (INFINITY);
     t = dot((data.bottom - intersection->ray.origin), data.axis)
             / dot(intersection->ray.direction, data.axis);
-    if (t <= INTERSECTION_MIN)
+    if (t <= RT_EPSILON)
         return (INFINITY);
     if (length(data.bottom - (intersection->ray.origin + (intersection->ray.direction * t))) < data.radius)
         intersection->cups_flag = 1;
@@ -52,7 +52,7 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= INTERSECTION_MIN || t[0] >= intersection->ray.t)
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 		return (0);
 
 	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[0]);

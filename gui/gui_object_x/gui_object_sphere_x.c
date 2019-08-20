@@ -19,27 +19,19 @@ t_gui_object_sphere		gui_object_sphere_set
 }
 
 void					gui_object_sphere_show
-						(t_gui_object_sphere *edit, t_object *object)
+						(t_gui_object_sphere *gui, t_object *object)
 {
 	t_object_sphere		*data;
-	char 				buffer[32];
 
 	data = object ? (t_object_sphere *)object->data : NULL;
-	ft_bzero(buffer, 32);
-	if (edit->name && object)
-		gtk_entry_set_text(edit->name, object->name);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.x);
-	gtk_entry_set_text(edit->position_x, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.y);
-	gtk_entry_set_text(edit->position_y, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->position.z);
-	gtk_entry_set_text(edit->position_z, buffer);
-	if (data)
-		sprintf(buffer, "%.2f", data->radius);
-	gtk_entry_set_text(edit->radius, buffer);
+	if (gui->name && object)
+		gtk_entry_set_text(gui->name, object->name);
+	if (!data)
+		return ;
+	gui_object_x_set_f(gui->position_x, data->position.x);
+	gui_object_x_set_f(gui->position_y, data->position.y);
+	gui_object_x_set_f(gui->position_z, data->position.z);
+	gui_object_x_set_f(gui->radius, data->radius);
 }
 
 void 					gui_object_sphere_build
@@ -48,13 +40,10 @@ void 					gui_object_sphere_build
 	t_object_sphere	*data;
 
 	data = (t_object_sphere *)object->data;
-	ft_strcpy(object->name, gui_object_x_get_parameter(gui->name));
+	ft_strcpy(object->name, gui_object_x_get_str(gui->name));
 	object->type = object_sphere;
-	data->position.x =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_x), NULL);
-	data->position.y =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_y), NULL);
-	data->position.z =
-		(RT_F)strtod(gui_object_x_get_parameter(gui->position_z), NULL);
-	data->radius = (RT_F)strtod(gui_object_x_get_parameter(gui->radius), NULL);
+	data->position.x = gui_object_x_get_f(gui->position_x);
+	data->position.y = gui_object_x_get_f(gui->position_y);
+	data->position.z = gui_object_x_get_f(gui->position_z);
+	data->radius = gui_object_x_get_f(gui->radius);
 }

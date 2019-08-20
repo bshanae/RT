@@ -1,0 +1,50 @@
+// cl_object_paraboloid ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 					s_object_paraboloid
+{
+	RT_F4						extremum_point;
+	RT_F4						axis;
+	RT_F 						radius;
+}								t_object_paraboloid;
+
+static int     					paraboloid_intersect(constant t_object *object, t_intersection *intersection)
+{
+	t_object_paraboloid			data;
+	RT_F4						vector_x;
+    RT_F 						t;
+    RT_F 						discriminant;
+    RT_F 						k[3];
+    RT_F 						x_dot_axis;
+    RT_F 						dir_dot_axis;
+
+    data = *(constant t_object_paraboloid *)object->data;
+    vector_x = intersection->ray.origin - data.extremum_point;
+    x_dot_axis = dot(vector_x, data.axis);
+    dir_dot_axis = dot(intersection->ray.direction, data.axis);
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction) - dir_dot_axis * dir_dot_axis;
+   	k[1] = 2 * (dot(intersection->ray.direction, vector_x) - dir_dot_axis * (x_dot_axis + 2 * data.radius));
+   	k[2] = dot(vector_x, vector_x) - x_dot_axis * (x_dot_axis + 4 * data.radius);
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+		return (0);
+	t = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t <= RT_EPSILON || t >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t;
+	intersection->object_id = object->id;
+	return (1);
+}
+
+static RT_F4					paraboloid_normal(constant t_object *object, t_intersection *intersection)
+{
+	t_object_paraboloid			data;
+	RT_F4						normal;
+	RT_F						tmp_value;
+
+	data = *(constant t_object_paraboloid *)object->data;
+	tmp_value = dot(data.axis, intersection->hit - data.extremum_point);
+	normal = (intersection->hit - data.extremum_point) - (data.axis * tmp_value);
+	return (normalize(normal));
+}

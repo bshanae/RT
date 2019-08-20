@@ -9,10 +9,11 @@ typedef struct		s_intersection
 	RT_F4			normal;
 	t_material		material;
 	int 			object_id;
-    int             cups_flag;
+	int				cups_flag;
 }					t_intersection;
 
 static void			intersection_reset(t_intersection *intersection)
 {
-	intersection->ray.t = RT_INTERSECTION_MAX;
+	intersection->ray.t = RT_INFINITY;
+	intersection->object_id = -1;
 }

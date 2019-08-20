@@ -15,8 +15,8 @@ void				gui_signal_scene_edit_add
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
 	{
-		new_object = gui->renderer->data_host.scene->objects +
-			gui->renderer->data_host.scene->objects_length - 1;
+		new_object = gui->renderer->data.scene->objects +
+			gui->renderer->data.scene->objects_length - 1;
 		gtk_list_store_append(gui->scene->edit->list, &iter);
 		gtk_list_store_set(
 			gui->scene->edit->list, &iter,

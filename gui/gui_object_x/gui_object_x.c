@@ -10,7 +10,7 @@ void 				gui_object_x_set
 	gtk_widget_hide(GTK_WIDGET(object->box));
 }
 
-const char			*gui_object_x_get_parameter(GtkEntry *entry)
+const char			*gui_object_x_get_str(GtkEntry *entry)
 {
 	const char		*str;
 
@@ -18,4 +18,20 @@ const char			*gui_object_x_get_parameter(GtkEntry *entry)
 	if (!str[0])
 		str = gtk_entry_get_placeholder_text(entry);
 	return (str);
+}
+
+RT_F				gui_object_x_get_f(GtkEntry *entry)
+{
+	const char		*str;
+
+	str = gui_object_x_get_str(entry);
+	return ((RT_F)strtod(str, NULL));
+}
+
+void				gui_object_x_set_f(GtkEntry *entry, RT_F value)
+{
+	static char 	buffer[32];
+
+	sprintf(buffer, "%.2f", value);
+	gtk_entry_set_text(entry, buffer);
 }

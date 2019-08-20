@@ -26,6 +26,8 @@ typedef struct 				s_gui_scene_add
 	GtkOverlay				*overlay;
 	t_gui_object_sphere		sphere;
 	t_gui_object_plane		plane;
+	t_gui_object_cone		cone;
+	t_gui_object_cylinder	cylinder;
 	t_gui_material			material;
 	GtkBox					*current_object;
 	t_object_type			current_type;
@@ -38,6 +40,10 @@ void 						gui_scene_add_delete(t_gui_scene_add **object);
 void 						gui_scene_add_set_sphere
 							(t_gui_scene_add *add, GtkBuilder *builder);
 void 						gui_scene_add_set_plane
+							(t_gui_scene_add *add, GtkBuilder *builder);
+void 						gui_scene_add_set_cone
+							(t_gui_scene_add *add, GtkBuilder *builder);
+void 						gui_scene_add_set_cylinder
 							(t_gui_scene_add *add, GtkBuilder *builder);
 void						gui_scene_add_set_material
 							(t_gui_scene_add *add, GtkBuilder *builder);

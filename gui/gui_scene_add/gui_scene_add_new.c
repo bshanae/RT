@@ -16,6 +16,8 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 	new->overlay = GTK_OVERLAY(RT_GUI_GET(builder, "scene_add_overlay"));
 	gui_scene_add_set_sphere(new, builder);
 	gui_scene_add_set_plane(new, builder);
+	gui_scene_add_set_cone(new, builder);
+	gui_scene_add_set_cylinder(new, builder);
 	gui_scene_add_set_material(new, builder);
 	return (new);
 }

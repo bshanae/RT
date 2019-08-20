@@ -6,29 +6,19 @@
 void				scene_test(t_scene *scene)
 {
 	object_build(
-		scene_get_space(scene), object_sphere,
+		scene_get_space(scene), object_paraboloid,
 		MATERIAL_RED,
-		(RT_F4_API){0., 0., -40.}, 20.);
-	object_build(
-		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){10., -10., -40.}, 2.);
-	object_build(
-		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){-10., 10., -40.}, 2.);
-	object_build(
-		scene_get_space(scene), object_sphere,
-		MATERIAL_RED,
-		(RT_F4_API){10., 10., -40.}, 2.);
+		(RT_F4_API){10., -5., -50.},
+		(RT_F4_API){0., 1., 0.},
+		2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){-10., 0., -20.}, 3.);
+		(RT_F4_API){-10., 0., -10.}, 3.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){10., 0., -20.}, 3.);
+		(RT_F4_API){10., 0., -10.}, 3.);
 	object_build( // front
 		scene_get_space(scene),
 		object_plane,
@@ -65,12 +55,6 @@ void				scene_test(t_scene *scene)
 		MATERIAL_WHITE,
 		(RT_F4_API){0., -50., 0.},
 		(RT_F4_API){0., 1., 0.});
-    object_build( // lower
-        scene_get_space(scene),
-        object_aabb,
-        MATERIAL_RED,
-        (RT_F4_API){40., 40., 40.},
-        (RT_F4_API){-40., -40., -40.});
 }
 
 int					main(int argc, char **argv)
@@ -79,12 +63,10 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
-	scene_test(gui->renderer->data_host.scene);
-	gui->renderer->data_host.camera->position.z = 70.;
+	scene_test(gui->renderer->data.scene);
+	gui->renderer->data.camera->position.z = 30.;
 	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);
 }
-
-// todo add symbol °

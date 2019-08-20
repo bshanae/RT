@@ -10,12 +10,12 @@ void 				gui_signal_scene_edit_material_color
 	gui = (t_gui *)ptr;
 	if (gui->scene->edit->current_id == -1)
 		return ;
-	object = gui->renderer->data_host.scene->objects +
+	object = gui->renderer->data.scene->objects +
 		gui->scene->edit->current_id;
 	gtk_color_button_get_rgba(gui->scene->edit->material.color, &color_gdk);
 	object->material.color = gui_color_to_f4(&color_gdk);
-	gui->renderer->flags.update_scene = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }
 
@@ -29,11 +29,11 @@ void 				gui_signal_scene_edit_material_emission
 	gui = (t_gui *)ptr;
 	if (gui->scene->edit->current_id == -1)
 		return ;
-	object = gui->renderer->data_host.scene->objects +
+	object = gui->renderer->data.scene->objects +
 		gui->scene->edit->current_id;
 	gtk_color_button_get_rgba(gui->scene->edit->material.emission, &color_gdk);
 	object->material.color = gui_color_to_f4(&color_gdk);
-	gui->renderer->flags.update_scene = 1;
-	cl_renderer_reset_samples(gui->renderer);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
 }

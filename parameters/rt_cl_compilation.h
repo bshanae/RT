@@ -1,9 +1,6 @@
 #ifndef CL_COMPILATION_H
 # define CL_COMPILATION_H
 
-# define CL_SILENCE_DEPRECATION
-# pragma OPENCL EXTENSION cl_khr_fp64 : enable
-
 # define CL_FLAGS						"-I ./parameters/"
 
 # define CL_MAIN_FUNCTION				"cl_main"
@@ -24,13 +21,13 @@
 # define CL_SOURCE_OBJECT_PLANE			"cl_object_plane"
 # define CL_SOURCE_OBJECT_CONE			"cl_object_cone"
 # define CL_SOURCE_OBJECT_CYLINDER		"cl_object_cylinder"
-# define CL_SOURCE_OBJECT_AABB			"cl_object_aabb"
-# define CL_SOURCE_OBJECT_INTERSECT		"cl_object_intersect"
+# define CL_SOURCE_OBJECT_PARABOLOID	"cl_object_paraboloid"
+# define CL_SOURCE_OBJECT_X				"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL		"cl_object_normal"
 # define CL_SOURCE_SCENE				"cl_scene"
 # define CL_SOURCE_SAMPLE				"cl_sample"
 # define CL_SOURCE_RADIANCE_EXPLICIT	"cl_radiance_explicit"
-# define CL_SOURCE_RADIANCE				"cl_radiance"
+# define CL_SOURCE_RADIANCE_X			"cl_radiance_x"
 # define CL_SOURCE_MAIN					"cl_main"
 
 #endif
