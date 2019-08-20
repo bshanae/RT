@@ -6,11 +6,13 @@
 void				scene_test(t_scene *scene)
 {
 	object_build(
-		scene_get_space(scene), object_paraboloid,
+		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){-10., 10., -40.}, 2.);
+	object_build(
+		scene_get_space(scene), object_sphere,
 		MATERIAL_RED,
-		(RT_F4_API){10., -5., -50.},
-		(RT_F4_API){0., 1., 0.},
-		2.);
+		(RT_F4_API){10., 10., -40.}, 2.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,

@@ -38,7 +38,6 @@ static RT_F4		radiance_explicit(
 			continue ;
 		if (intersection_light.object_id != i)
 			continue ;
-
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;

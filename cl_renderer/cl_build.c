@@ -560,17 +560,17 @@ static int     					paraboloid_intersect(constant t_object *object, t_intersecti
     x_dot_axis = dot(vector_x, data.axis);
     dir_dot_axis = dot(intersection->ray.direction, data.axis);
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction) - dir_dot_axis * dir_dot_axis;
-    k[1] = 2 * (dot(intersection->ray.direction, vector_x) - dir_dot_axis * (x_dot_axis + 2 * data.radius));
-    k[2] = vector3_dot(vector_x, vector_x) - x_dot_axis * (x_dot_axis + 4 * data.radius);
-	//discriminant = k[1] * k[1] - 4 * k[0] * k[2];
-	//if (discriminant < 0.f)
-	//	return (0);
-	//t = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	//if (t <= RT_EPSILON || t >= intersection->ray.t)
-	//	return (0);
-	//intersection->ray.t = t;
-	//intersection->object_id = object->id;
-	//return (1);
+   	k[1] = 2 * (dot(intersection->ray.direction, vector_x) - dir_dot_axis * (x_dot_axis + 2 * data.radius));
+   	k[2] = dot(vector_x, vector_x) - x_dot_axis * (x_dot_axis + 4 * data.radius);
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+		return (0);
+	t = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t <= RT_EPSILON || t >= intersection->ray.t)
+		return (0);
+	intersection->ray.t = t;
+	intersection->object_id = object->id;
+	return (1);
 }
 
 static RT_F4					paraboloid_normal(constant t_object *object, t_intersection *intersection)
@@ -707,7 +707,7 @@ static int			scene_intersect_rm(
 
 	result = 0;
 	total_distance = 0.;
-	ray = intersection->ray.origin;
+	ray = intersection->ray.origin + 15 * intersection->ray.direction;
 	for (int step = 0; step < settings->rm_step_limit; step++)
     {
     	current_distance = RT_INFINITY;
@@ -897,7 +897,6 @@ static RT_F4		radiance_explicit(
 			continue ;
 		if (intersection_light.object_id != i)
 			continue ;
-
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;
@@ -932,15 +931,13 @@ static void			radiance_add(
 	{
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
-
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
 		radiance += mask * intersection->material.emission;
-
 		if (settings->light_explicit)
 		{
-			explicit = radiance_explicit(scene, intersection, settings, rng_state);
+			explicit = radiance_explicit(scene, intersection, settings, rng_state, global_id);
 			radiance += explicit * mask * intersection->material.color;
 		}
 

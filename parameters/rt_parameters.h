@@ -14,18 +14,18 @@
 # define RT_CL_SCENE_CAPACITY		32
 
 # define RT_CL_PATH_DEPTH			3
-# define RT_CL_SAMPLES				2
+# define RT_CL_SAMPLES				10
 # define RT_CL_RUSSIAN_DEPTH		10
 # define RT_CL_SRGB					1
 # define RT_CL_LIGHT_PB				1
 # define RT_CL_LIGHT_EXPLICIT		1
 
-# define RT_CL_RM_MOD				0
+# define RT_CL_RM_MOD				1
 # define RT_CL_RM_STEP_LIMIT		64
 # define RT_CL_STEP_PART			1.
 # define RT_CL_RM_MAX_DISTANCE		200
 
-# define RT_CL_ANTIALIASING			1
+# define RT_CL_ANTIALIASING			0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		5.
 # define RT_CL_FOCAL_LENGTH			40.
