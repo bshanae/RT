@@ -1095,6 +1095,33 @@ cl_renderer/object_x/object_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s
 .PHONY : cl_renderer/object_x/object_cylinder.c.s
 
+cl_renderer/object_x/object_moebius.o: cl_renderer/object_x/object_moebius.c.o
+
+.PHONY : cl_renderer/object_x/object_moebius.o
+
+# target to build an object file
+cl_renderer/object_x/object_moebius.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
+.PHONY : cl_renderer/object_x/object_moebius.c.o
+
+cl_renderer/object_x/object_moebius.i: cl_renderer/object_x/object_moebius.c.i
+
+.PHONY : cl_renderer/object_x/object_moebius.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_moebius.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.i
+.PHONY : cl_renderer/object_x/object_moebius.c.i
+
+cl_renderer/object_x/object_moebius.s: cl_renderer/object_x/object_moebius.c.s
+
+.PHONY : cl_renderer/object_x/object_moebius.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_moebius.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s
+.PHONY : cl_renderer/object_x/object_moebius.c.s
+
 cl_renderer/object_x/object_paraboloid.o: cl_renderer/object_x/object_paraboloid.c.o
 
 .PHONY : cl_renderer/object_x/object_paraboloid.o
@@ -3426,6 +3453,9 @@ help:
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"
+	@echo "... cl_renderer/object_x/object_moebius.o"
+	@echo "... cl_renderer/object_x/object_moebius.i"
+	@echo "... cl_renderer/object_x/object_moebius.s"
 	@echo "... cl_renderer/object_x/object_paraboloid.o"
 	@echo "... cl_renderer/object_x/object_paraboloid.i"
 	@echo "... cl_renderer/object_x/object_paraboloid.s"

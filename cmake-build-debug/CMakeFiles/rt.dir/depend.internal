@@ -252,6 +252,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -915,6 +916,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -1578,6 +1580,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -2241,6 +2244,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -2904,6 +2908,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -3595,6 +3600,7 @@ CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o
  .././cl_renderer/assert/assert.h
  .././cl_renderer/f4/f4.h
  .././cl_renderer/material/material.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3620,6 +3626,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3635,12 +3642,29 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
  /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
+CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
+ ../../21_libft/includes/libft_ft_printf.h
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././cl_renderer/assert/assert.h
+ .././cl_renderer/f4/f4.h
+ .././cl_renderer/material/material.h
+ .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
+ .././cl_renderer/object_x/object_x.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_control.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3650,6 +3674,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3665,6 +3690,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3680,6 +3706,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3695,6 +3722,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3711,6 +3739,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3727,6 +3756,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3743,6 +3773,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3759,6 +3790,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -3784,6 +3816,7 @@ CMakeFiles/rt.dir/gui/gui/gui_delete.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -4456,6 +4489,7 @@ CMakeFiles/rt.dir/gui/gui/gui_load.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -5128,6 +5162,7 @@ CMakeFiles/rt.dir/gui/gui/gui_loop.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -5800,6 +5835,7 @@ CMakeFiles/rt.dir/gui/gui/gui_new.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -12892,6 +12928,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -13538,6 +13575,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -14184,6 +14222,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_plane_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -14830,6 +14869,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -15476,6 +15516,7 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -16127,6 +16168,7 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -16784,6 +16826,7 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -17436,6 +17479,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -18085,6 +18129,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -18734,6 +18779,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_gen_name.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -19383,6 +19429,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_get_object.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -20032,6 +20079,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -20681,6 +20729,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -21330,6 +21379,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -21979,6 +22029,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -22628,6 +22679,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -23277,6 +23329,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -23926,6 +23979,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_show.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -24575,6 +24629,7 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././gui/gui_color/gui_color.h
  .././gui/gui_material/gui_material.h
@@ -25229,6 +25284,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -25884,6 +25940,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -26539,6 +26596,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_get_object.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -27194,6 +27252,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -27849,6 +27908,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -28504,6 +28564,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -29159,6 +29220,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -29814,6 +29876,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_plane.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -30469,6 +30532,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_sphere.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -31124,6 +31188,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -31779,6 +31844,7 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/scene/scene.h
  .././gui/gui_color/gui_color.h
@@ -33719,6 +33785,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -34394,6 +34461,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -35069,6 +35137,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -35744,6 +35813,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c.
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -36419,6 +36489,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -37094,6 +37165,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -37769,6 +37841,7 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -38444,6 +38517,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -39117,6 +39191,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -39790,6 +39865,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_rotation_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -40463,6 +40539,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -41136,6 +41213,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -41809,6 +41887,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -42488,6 +42567,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -43161,6 +43241,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -43834,6 +43915,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -44507,6 +44589,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -45182,6 +45265,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_response_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -45855,6 +45939,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -46528,6 +46613,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_add.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -47201,6 +47287,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -47874,6 +47961,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -48547,6 +48635,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -49220,6 +49309,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o
  .././cl_renderer/material/material.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h
@@ -49895,6 +49985,7 @@ CMakeFiles/rt.dir/main.c.o
  .././cl_renderer/material/material_list.h
  .././cl_renderer/object/object_definition.h
  .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
  .././cl_renderer/object_x/object_x.h
  .././cl_renderer/ray/ray.h
  .././cl_renderer/scene/scene.h

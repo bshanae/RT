@@ -170,9 +170,13 @@ rt_float.h
 stdarg.h
 -
 
+.././cl_renderer/object_x/object_fractals.h
+
 .././cl_renderer/object_x/object_x.h
 rt_cl_include.h
 .././cl_renderer/object_x/rt_cl_include.h
+object_fractals.h
+.././cl_renderer/object_x/object_fractals.h
 rt_float.h
 .././cl_renderer/object_x/rt_float.h
 
@@ -5185,6 +5189,10 @@ object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
 
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c
 object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
 

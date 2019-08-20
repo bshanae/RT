@@ -19,6 +19,8 @@ void				object_build(
 		object_cylinder_build(space, &args);
 	else if (type == object_paraboloid)
 		object_paraboloid_build(space, &args);
+    else if (type == object_moebius)
+        object_moebius_build(space, &args);
 	space->material = material;
 	space->name[0] = '\0';
 	va_end(args);

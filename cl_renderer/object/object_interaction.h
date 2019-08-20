@@ -20,5 +20,6 @@ void				object_plane_build(t_object *space, va_list *args);
 void				object_cone_build(t_object *space, va_list *args);
 void				object_cylinder_build(t_object *space, va_list *args);
 void				object_paraboloid_build(t_object *space, va_list *args);
+void                object_moebius_build(t_object *space, va_list *args);
 
 #endif

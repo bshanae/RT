@@ -13,6 +13,10 @@ typedef enum		e_object_type
 	object_cone,
 	object_cylinder,
 	object_paraboloid,
+	object_moebius,
+	object_tetrahedron,
+	object_mandelbulb,
+	object_julia,
 	object_end
 }					t_object_type;
 
