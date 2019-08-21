@@ -277,7 +277,7 @@ set(SOURCE_CL_BUILDER
 	./cl_renderer/cl_builder/cl_builder_init_device.c
 	./cl_renderer/cl_builder/cl_builder_create_x.c
 	./cl_renderer/cl_builder/cl_builder_log.c
-	./cl_renderer/cl_builder/cl_builder_set_args.c)
+	./cl_renderer/cl_builder/cl_builder_set_args.c cl_renderer/cl_builder/cl_rng_delete.c)
 
 set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_new.c
@@ -295,7 +295,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_PROGRAM}
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
-	${SOURCE_CL_RENDERER_})
+	${SOURCE_CL_RENDERER_} cl_renderer/cl_builder/cl_rng_delete.c)
 
 add_executable(rt
 	${SOURCE_MAIN}

@@ -113,6 +113,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o"

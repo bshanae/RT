@@ -233,6 +233,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_rng_delete.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c">
 			<Option target="rt"/>
 		</Unit>

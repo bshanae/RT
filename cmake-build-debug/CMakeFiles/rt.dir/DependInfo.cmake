@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_rng_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o"

@@ -2,6 +2,8 @@
 
 #include "rt_parameters.h"
 
+# define MOEBIUS // todo: strange bug, fix needed
+
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
@@ -36,8 +38,10 @@ static RT_F4		radiance_explicit(
 
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
+#ifndef	MOEBIUS
 		if (intersection_light.object_id != i)
 			continue ;
+#endif
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;

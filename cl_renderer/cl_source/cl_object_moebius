@@ -255,12 +255,13 @@ static RT_F4					moebius_normal(constant t_object *object, t_intersection *inter
 	RT_F4						vector_x;
 
 	data = *(constant t_object_moebius *)object->data;
-	vector_x = intersection->hit - data.position;
+	vector_x = intersection->hit;
 	init_moebius_coefficients(&moebius_coefficients, &data, &intersection->ray);
+
 	normal.x = -2 * data.radius * vector_x.z + 2 * vector_x.x * vector_x.y - 4 * vector_x.x * vector_x.z;
-	normal.y = -data.radius * data.radius + vector_x.x * vector_x.x + 3 * vector_x.y * vector_x.y - 4
-    	* vector_x.y * vector_x.z + vector_x.z * vector_x.z;
-    normal.z = -2 * data.radius * vector_x.x - 2 * vector_x.x * vector_x.x - 2 * vector_x.y *
-       	vector_x.y + 2 * vector_x.y * vector_x.z;
+	normal.y = -data.radius * data.radius + vector_x.x * vector_x.x + 3 * vector_x.y * vector_x.y
+		- 4 * vector_x.y * vector_x.z + vector_x.z * vector_x.z;
+    normal.z = -2 * data.radius * vector_x.x - 2 * vector_x.x * vector_x.x - 2 * vector_x.y
+    	* vector_x.y + 2 * vector_x.y * vector_x.z;
 	return (normalize(normal));
 }

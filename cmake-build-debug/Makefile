@@ -582,6 +582,33 @@ cl_renderer/cl_builder/cl_builder_set_args.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.s
 .PHONY : cl_renderer/cl_builder/cl_builder_set_args.c.s
 
+cl_renderer/cl_builder/cl_rng_delete.o: cl_renderer/cl_builder/cl_rng_delete.c.o
+
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.o
+
+# target to build an object file
+cl_renderer/cl_builder/cl_rng_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.c.o
+
+cl_renderer/cl_builder/cl_rng_delete.i: cl_renderer/cl_builder/cl_rng_delete.c.i
+
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.i
+
+# target to preprocess a source file
+cl_renderer/cl_builder/cl_rng_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.i
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.c.i
+
+cl_renderer/cl_builder/cl_rng_delete.s: cl_renderer/cl_builder/cl_rng_delete.c.s
+
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.s
+
+# target to generate assembly for a file
+cl_renderer/cl_builder/cl_rng_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.s
+.PHONY : cl_renderer/cl_builder/cl_rng_delete.c.s
+
 cl_renderer/cl_program/cl_program_build.o: cl_renderer/cl_program/cl_program_build.c.o
 
 .PHONY : cl_renderer/cl_program/cl_program_build.o
@@ -3396,6 +3423,9 @@ help:
 	@echo "... cl_renderer/cl_builder/cl_builder_set_args.o"
 	@echo "... cl_renderer/cl_builder/cl_builder_set_args.i"
 	@echo "... cl_renderer/cl_builder/cl_builder_set_args.s"
+	@echo "... cl_renderer/cl_builder/cl_rng_delete.o"
+	@echo "... cl_renderer/cl_builder/cl_rng_delete.i"
+	@echo "... cl_renderer/cl_builder/cl_rng_delete.s"
 	@echo "... cl_renderer/cl_program/cl_program_build.o"
 	@echo "... cl_renderer/cl_program/cl_program_build.i"
 	@echo "... cl_renderer/cl_program/cl_program_build.s"

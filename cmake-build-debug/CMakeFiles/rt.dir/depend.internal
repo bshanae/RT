@@ -201,6 +201,20 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o
  .././parameters/rt_parameters.h
  /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
  /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c
+CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o
+ ../../21_libft/includes/libft_ft_printf.h
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././cl_renderer/assert/assert.h
+ .././cl_renderer/cl_arg_list/cl_arg.h
+ .././cl_renderer/cl_arg_list/cl_arg_list.h
+ .././cl_renderer/cl_program/cl_program.h
+ .././parameters/rt_cl_compilation.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_control.h
+ .././parameters/rt_parameters.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_rng_delete.c
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
