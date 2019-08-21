@@ -11,6 +11,19 @@ static RT_F			f4_max_component(RT_F4 vector)
 {
 	return (fmax(vector.x, fmax(vector.y, vector.z)));
 }
+
+static RT_F4		f4_square(RT_F4 vector)
+{
+	return ((RT_F4)(
+			vector.x * vector.x
+			- vector.y * vector.y
+			- vector.z * vector.z
+			- vector.w * vector.w,
+			2 * vector.x * vector.y,
+			2 * vector.x * vector.z,
+			2 * vector.x * vector.w));
+}
+
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_cl_renderer_settings
@@ -173,6 +186,8 @@ typedef struct 		s_material
 {
 	RT_F4			color;
 	RT_F4			emission;
+	RT_F			reflection;
+	RT_F			refraction;
 }					t_material;
 
 // cl_intersection /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -193,6 +208,40 @@ static void			intersection_reset(t_intersection *intersection)
 {
 	intersection->ray.t = RT_INFINITY;
 	intersection->object_id = -1;
+}
+
+static void			intersection_reflect(t_intersection *destination, const t_intersection *source)
+{
+	RT_F4			reflected;
+
+	reflected = source->normal * (-2 * dot(source->normal, source->ray.direction));
+	reflected += source->ray.direction;
+	reflected = normalize(reflected);
+	destination->ray.direction = reflected;
+	destination->ray.origin = source->hit;
+}
+
+static void			intersection_refract(t_intersection *destination, const t_intersection *source)
+{
+	RT_F4			refracted;
+	RT_F4			a, b;
+	RT_F4			m;
+	RT_F			sin_alpha;
+	RT_F			sin_beta;
+	RT_F			cos_beta;
+
+	m = source->normal * (-1 * dot(source->normal, source->ray.direction));
+	m += source->ray.direction;
+	m = normalize(m);
+	sin_alpha = length(cross(source->ray.direction * -1, source->normal));
+	sin_beta = sin_alpha / 1.02;
+	cos_beta = RT_SQRT(1 - sin_beta * sin_beta);
+	a = source->normal * (-1 * cos_beta);
+	b = m * sin_beta;
+	refracted = a + b;
+	refracted = normalize(refracted);
+	destination->ray.direction = refracted;
+	destination->ray.origin = source->hit;
 }
 
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -854,10 +903,10 @@ static RT_F4					moebius_normal(constant t_object *object, t_intersection *inter
 typedef struct		s_object_julia
 {
 	int				iterations;
-	RT_F4_API		value;
+	RT_F4			value;
 }					t_object_julia;
 
-static int			sdf_julia(constant t_object *object, RT_F4 point)
+static int					sdf_julia(constant t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
@@ -870,7 +919,7 @@ static int			sdf_julia(constant t_object *object, RT_F4 point)
 	for (int iter = 0; iter < data.iterations; iter++)
 	{
 		md *= 4. * mz;
-		point = RT_SQRT(point);
+		point = f4_square(point);
 		point += data.value;
 		mz = dot(point, point);
 		if (mz > 4.)
@@ -1251,6 +1300,7 @@ static void			radiance_add(
 	RT_F4			explicit;
 	RT_F4			mask;
 	RT_F			cosine;
+	RT_F			choice;
 
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
@@ -1261,24 +1311,36 @@ static void			radiance_add(
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
-		radiance += mask * intersection->material.emission;
-		if (settings->light_explicit)
+		if (intersection->material.reflection || intersection->material.refraction)
 		{
-			explicit = radiance_explicit(scene, intersection, settings, rng_state);
-			radiance += explicit * mask * intersection->material.color;
+			choice = rng(rng_state);
+			if (choice < intersection->material.reflection)
+				intersection_reflect(intersection, intersection);
+			else
+				intersection_refract(intersection, intersection);
+			mask /= choice < intersection->material.reflection ? 1. : intersection->material.refraction;
 		}
+		else
+		{
+			radiance += mask * intersection->material.emission;
+			if (settings->light_explicit)
+			{
+				explicit = radiance_explicit(scene, intersection, settings, rng_state);
+				radiance += explicit * mask * intersection->material.color;
+			}
 
-		intersection->ray.origin = intersection->hit;
+			intersection->ray.origin = intersection->hit;
 
 #ifdef RT_CL_UNIFORM
-		intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-		mask *= intersection->material.color * cosine;
+			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+			mask *= intersection->material.color * cosine;
 #endif
 
 #ifdef RT_CL_COSINE
-		intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
-		mask *= intersection->material.color;
+			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
+			mask *= intersection->material.color;
 #endif
+		}
 	}
 
 	if (settings->sample_count == 1)
@@ -1294,8 +1356,6 @@ static RT_F4		radiance_get(
 	return (*sample / settings->sample_count);
 }
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#define DEBUG_OPEN_CL
 
 kernel void			cl_main(
 					constant t_camera *camera,
@@ -1316,13 +1376,10 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
-#ifdef DEBUG_OPEN_CL
-	if (scene_intersect(scene, &intersection, settings))
-		image[global_id] = color_unpack(intersection.material.color, settings->srgb);
-#elif
+	//if (scene_intersect(scene, &intersection, settings))
+	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
 	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
-#endif
 }
 
 
