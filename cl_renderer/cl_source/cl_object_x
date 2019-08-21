@@ -14,6 +14,8 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (cylinder_intersect(object, intersection));
 	else if (object->type == object_paraboloid)
 		return (paraboloid_intersect(object, intersection));
+	else if (object->type == object_moebius)
+		return (moebius_intersect(object, intersection));
 	return (0);
 }
 

@@ -45,8 +45,10 @@ static RT_F4		object_normal_rt(
 	    return (cone_normal(object, intersection));
 	else if (object->type == object_cylinder)
 	    return (cylinder_normal(object, intersection));
-//	else if (object->type == object_paraboloid)
-//		return (paraboloid_normal(object, intersection));
+	else if (object->type == object_paraboloid)
+		return (paraboloid_normal(object, intersection));
+	else if (object->type == object_moebius)
+		return (moebius_normal(object, intersection));
  	return (0);
 }
 

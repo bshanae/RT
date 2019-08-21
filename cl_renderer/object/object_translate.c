@@ -16,5 +16,7 @@ const char 			*object_translate(t_object_type type)
 		return ("cylinder");
 	else if (type == object_paraboloid)
 		return ("paraboloid");
+	else if (type == object_moebius)
+		return ("moebius strip");
 	return ("unknown");
 }

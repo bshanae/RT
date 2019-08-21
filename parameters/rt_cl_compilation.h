@@ -22,6 +22,7 @@
 # define CL_SOURCE_OBJECT_CONE			"cl_object_cone"
 # define CL_SOURCE_OBJECT_CYLINDER		"cl_object_cylinder"
 # define CL_SOURCE_OBJECT_PARABOLOID	"cl_object_paraboloid"
+# define CL_SOURCE_OBJECT_MOEBIUS		"cl_object_moebius"
 # define CL_SOURCE_OBJECT_X				"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL		"cl_object_normal"
 # define CL_SOURCE_SCENE				"cl_scene"

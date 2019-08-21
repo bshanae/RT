@@ -6,9 +6,9 @@
 void				scene_test(t_scene *scene)
 {
 	object_build(
-		scene_get_space(scene), object_sphere,
-		MATERIAL_WHITE,
-		(RT_F4_API){-10., 10., -40.}, 2.);
+		scene_get_space(scene), object_moebius,
+		MATERIAL_RED,
+		(RT_F4_API){-10., 10., 50.}, 2., 1.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_RED,
@@ -16,7 +16,7 @@ void				scene_test(t_scene *scene)
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){-10., 0., -10.}, 3.);
+		(RT_F4_API){-10., 0., 10.}, 3.);
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,

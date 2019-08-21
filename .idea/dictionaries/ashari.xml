@@ -2,8 +2,10 @@
   <dictionary name="ashari">
     <words>
       <w>aabb</w>
+      <w>coeffs</w>
       <w>mandelbulb</w>
       <w>moebius</w>
+      <w>struct</w>
     </words>
   </dictionary>
 </component>
