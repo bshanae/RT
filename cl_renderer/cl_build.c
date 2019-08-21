@@ -427,7 +427,7 @@ static RT_F4		cone_normal(constant t_object *object, t_intersection *intersectio
         return(normalize(((constant t_object_cone *)object->data)->axis * -1));
 }
 
-// cl_object_cylinder /////////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_object_cylinder //////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
@@ -521,17 +521,6 @@ static RT_F4		    calculate_cylinder_normal(constant t_object *object, t_interse
 
 static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
 {
-    /*t_object_cylinder   data;
-    RT_F4			    temp[2];
-    RT_F4			    result;
-    RT_F                tmp;
-
-    data = *(constant t_object_cylinder *)object->data;
-    temp[0] = intersection->ray.origin - data.bottom;
-    temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
-    tmp = dot(intersection->ray.direction, (data.axis * intersection->ray.t)) + dot(temp[0], data.axis);
-    result = (temp[1] - data.bottom) - (data.axis * tmp);
-    return (normalize(result));*/
     if (!intersection->cups_flag)
         return (calculate_cylinder_normal(object, intersection));
     else if (intersection->cups_flag == -1)
@@ -858,6 +847,61 @@ static RT_F4					moebius_normal(constant t_object *object, t_intersection *inter
 	return (normalize(normal));
 }
 
+// cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct		s_object_julia
+{
+	int				iterations;
+	RT_F4_API		value;
+}					t_object_julia;
+
+static int			sdf_julia(constant t_object *object, RT_F4 point)
+{
+	t_object_julia	data;
+	RT_F			md;
+	RT_F			mz;
+
+	data = *(constant t_object_julia *)object->data;
+	md = 1.;
+	mz = dot(point, point);
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		md *= 4. * mz;
+		point = RT_SQRT(point);
+		point += data.value;
+		mz = dot(point, point);
+		if (mz > 4.)
+			break ;
+	}
+	return (.25 * sqrt(mz / md) * log(mz));
+}
+
+/*
+	static double 				sdf_julia(constant t_object *obj, const t_vector3 *point)
+    {
+    	t_vector4 z;
+    	double md;
+    	double mz;
+
+    	z = vector4_cast3(point);
+    	md = 1.;
+    	mz = vector4_dot(&z, &z);
+
+    	for (int i = 0; i < obj->julia.iterations; i++) {
+    		md *= 4. * mz;
+    		z = vector4_square(&z);
+    		vector4_s_add_eq(&z, (t_vector4)obj->julia.value);
+    		mz = vector4_dot(&z, &z);
+    		if (mz > 4.)
+    			break;
+    	}
+    	return (.25 * sqrt(mz / md) * log(mz));
+    }
+*/
+
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -885,6 +929,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_sphere(object, point));
 	else if (object->type == object_plane)
 		return (sdf_plane(object, point));
+	else if (object->type == object_julia)
+		return (sdf_julia(object, point));
 	return (RT_INFINITY);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1138,6 +1184,8 @@ static RT_F4			sample_cosine(
 
 #include "rt_parameters.h"
 
+# define MOEBIUS // todo: strange bug, fix needed
+
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
@@ -1172,8 +1220,10 @@ static RT_F4		radiance_explicit(
 
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
+#ifndef	MOEBIUS
 		if (intersection_light.object_id != i)
 			continue ;
+#endif
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
 			continue ;
@@ -1245,6 +1295,8 @@ static RT_F4		radiance_get(
 }
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#define DEBUG_OPEN_CL
+
 kernel void			cl_main(
 					constant t_camera *camera,
 					constant t_scene *scene,
@@ -1264,10 +1316,13 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
-	if (scene_intersect(scene, &intersection))
+#ifdef DEBUG_OPEN_CL
+	if (scene_intersect(scene, &intersection, settings))
 		image[global_id] = color_unpack(intersection.material.color, settings->srgb);
-    //radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
-	//image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
+#elif
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
+#endif
 }
 
 

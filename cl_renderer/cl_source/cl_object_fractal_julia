@@ -1,0 +1,54 @@
+// cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct		s_object_julia
+{
+	int				iterations;
+	RT_F4			value;
+}					t_object_julia;
+
+static int					sdf_julia(constant t_object *object, RT_F4 point)
+{
+	t_object_julia	data;
+	RT_F			md;
+	RT_F			mz;
+
+	data = *(constant t_object_julia *)object->data;
+	md = 1.;
+	mz = dot(point, point);
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		md *= 4. * mz;
+		point = f4_square(point);
+		point += data.value;
+		mz = dot(point, point);
+		if (mz > 4.)
+			break ;
+	}
+	return (.25 * sqrt(mz / md) * log(mz));
+}
+
+/*
+	static double 				sdf_julia(constant t_object *obj, const t_vector3 *point)
+    {
+    	t_vector4 z;
+    	double md;
+    	double mz;
+
+    	z = vector4_cast3(point);
+    	md = 1.;
+    	mz = vector4_dot(&z, &z);
+
+    	for (int i = 0; i < obj->julia.iterations; i++) {
+    		md *= 4. * mz;
+    		z = vector4_square(&z);
+    		vector4_s_add_eq(&z, (t_vector4)obj->julia.value);
+    		mz = vector4_dot(&z, &z);
+    		if (mz > 4.)
+    			break;
+    	}
+    	return (.25 * sqrt(mz / md) * log(mz));
+    }
+*/

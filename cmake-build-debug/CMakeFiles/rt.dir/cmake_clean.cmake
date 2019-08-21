@@ -87,6 +87,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"

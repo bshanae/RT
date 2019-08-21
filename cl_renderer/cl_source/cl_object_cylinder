@@ -1,4 +1,4 @@
-// cl_object_cylinder /////////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_object_cylinder //////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
@@ -92,17 +92,6 @@ static RT_F4		    calculate_cylinder_normal(constant t_object *object, t_interse
 
 static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
 {
-    /*t_object_cylinder   data;
-    RT_F4			    temp[2];
-    RT_F4			    result;
-    RT_F                tmp;
-
-    data = *(constant t_object_cylinder *)object->data;
-    temp[0] = intersection->ray.origin - data.bottom;
-    temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
-    tmp = dot(intersection->ray.direction, (data.axis * intersection->ray.t)) + dot(temp[0], data.axis);
-    result = (temp[1] - data.bottom) - (data.axis * tmp);
-    return (normalize(result));*/
     if (!intersection->cups_flag)
         return (calculate_cylinder_normal(object, intersection));
     else if (intersection->cups_flag == -1)
