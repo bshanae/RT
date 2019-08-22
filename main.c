@@ -12,23 +12,37 @@ void				scene_test(t_scene *scene)
 //		(RT_F4_API){.1, .3, .5, .5});
 	object_build(
 		scene_get_space(scene), object_sphere,
+		MATERIAL_MIRROR,
+		(RT_F4_API){-15., 0., 0.}, 7.);
+	object_build(
+		scene_get_space(scene), object_sphere,
+		MATERIAL_WHITE,
+		(RT_F4_API){0., 0., 20.}, 7.);
+	object_build(
+		scene_get_space(scene), object_sphere,
 		MATERIAL_GLASS,
-		(RT_F4_API){-10., 0., -10.}, 3.);
+		(RT_F4_API){5., 0., 50.}, 7.);
+
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){10., 0., 10.}, 3.);
+		(RT_F4_API){-10., 25., 45.}, 2.5);
+	object_build(
+		scene_get_space(scene), object_sphere,
+		MATERIAL_LIGHT,
+		(RT_F4_API){10., 25., 45.}, 2.5);
+
 	object_build( // front
 		scene_get_space(scene),
 		object_plane,
 		MATERIAL_WHITE,
-		(RT_F4_API){0., 0., -70.},
+		(RT_F4_API){0., 0., -40.},
 		(RT_F4_API){0., 0., 1.});
 	object_build( // back
 		scene_get_space(scene),
 		object_plane,
-		MATERIAL_WHITE,
-		(RT_F4_API){0., 0., 100.},
+		MATERIAL_GREEN,
+		(RT_F4_API){0., 0., 120.},
 		(RT_F4_API){0., 0., -1.});
 	object_build( // left
 		scene_get_space(scene),
@@ -46,13 +60,13 @@ void				scene_test(t_scene *scene)
 		scene_get_space(scene),
 		object_plane,
 		MATERIAL_WHITE,
-		(RT_F4_API){0., 50., 0.},
+		(RT_F4_API){0., 35., 0.},
 		(RT_F4_API){0., -1., 0.});
 	object_build( // lower
 		scene_get_space(scene),
 		object_plane,
 		MATERIAL_WHITE,
-		(RT_F4_API){0., -50., 0.},
+		(RT_F4_API){0., -15., 0.},
 		(RT_F4_API){0., 1., 0.});
 }
 
@@ -63,7 +77,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	scene_test(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 30.;
+	gui->renderer->data.camera->position.z = 110.;
 	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);

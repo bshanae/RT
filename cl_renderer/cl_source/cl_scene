@@ -78,6 +78,8 @@ static int			scene_intersect(
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+		//if (dot(intersection->normal, intersection->ray.direction) > 0.)
+		//	intersection->normal *= -1;
 	}
 	return (result);
 }

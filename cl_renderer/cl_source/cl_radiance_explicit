@@ -2,7 +2,7 @@
 
 #include "rt_parameters.h"
 
-# define MOEBIUS // todo: strange bug, fix needed
+//# define MOEBIUS // todo: strange bug, fix needed
 
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,

@@ -1125,6 +1125,8 @@ static int			scene_intersect(
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+		//if (dot(intersection->normal, intersection->ray.direction) > 0.)
+		//	intersection->normal *= -1;
 	}
 	return (result);
 }
@@ -1233,7 +1235,7 @@ static RT_F4			sample_cosine(
 
 #include "rt_parameters.h"
 
-# define MOEBIUS // todo: strange bug, fix needed
+//# define MOEBIUS // todo: strange bug, fix needed
 
 static RT_F4		radiance_explicit(
 					constant t_scene *scene,
@@ -1289,6 +1291,8 @@ static RT_F4		radiance_explicit(
 
 #include "rt_parameters.h"
 
+// todo : normal changing (reflectance) && refractive (maybe problem in plane)
+
 static void			radiance_add(
 					constant t_scene *scene,
 					t_intersection *intersection,
@@ -1302,8 +1306,8 @@ static void			radiance_add(
 	RT_F			cosine;
 	RT_F			choice;
 
-	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
-	mask = 1;
+	radiance = (RT_F4){0.f, 0.f, 0.f, 0.f};
+	mask = (RT_F4){1.f, 1.f, 1.f, 1.f};
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		if (!scene_intersect(scene, intersection, settings))
@@ -1318,7 +1322,7 @@ static void			radiance_add(
 				intersection_reflect(intersection, intersection);
 			else
 				intersection_refract(intersection, intersection);
-			mask /= choice < intersection->material.reflection ? 1. : intersection->material.refraction;
+			mask = mask / (choice < intersection->material.reflection ? 1. : intersection->material.refraction);
 		}
 		else
 		{

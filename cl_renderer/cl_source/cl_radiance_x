@@ -9,7 +9,8 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state,
+					int global_id)
 {
 	RT_F4			radiance;
 	RT_F4			explicit;
@@ -17,12 +18,26 @@ static void			radiance_add(
 	RT_F			cosine;
 	RT_F			choice;
 
-	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
-	mask = 1;
+	radiance = (RT_F4){0.f, 0.f, 0.f, 0.f};
+	mask = (RT_F4){1.f, 1.f, 1.f, 1.f};
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+
 		if (!scene_intersect(scene, intersection, settings))
-			break ;
+		{
+
+			if (global_id == 8){printf("no: \n");
+			printf("origin %f %f %f\n", intersection->ray.origin.x, intersection->ray.origin.y, intersection->ray.origin.z);
+			printf("hit %f %f %f\n", intersection->hit.x, intersection->hit.y, intersection->hit.z);
+			printf("%d\n", intersection->object_id);}
+			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
+			break;
+		}
+
+		if (global_id == 8){printf("yes: \n");
+		printf("origin %f %f %f\n", intersection->ray.origin.x, intersection->ray.origin.y, intersection->ray.origin.z);
+		printf("hit %f %f %f\n", intersection->hit.x, intersection->hit.y, intersection->hit.z);
+		printf("%d\n", intersection->object_id);}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
@@ -33,7 +48,7 @@ static void			radiance_add(
 				intersection_reflect(intersection, intersection);
 			else
 				intersection_refract(intersection, intersection);
-			mask /= choice < intersection->material.reflection ? 1 : intersection->material.refraction;
+			mask = mask / (choice < intersection->material.reflection ? 1 : intersection->material.refraction);
 		}
 		else
 		{
@@ -44,7 +59,7 @@ static void			radiance_add(
 				radiance += explicit * mask * intersection->material.color;
 			}
 
-			intersection->ray.origin = intersection->hit;
+			intersection->ray.origin = intersection->hit + intersection->normal * RT_EPSILON;
 
 #ifdef RT_CL_UNIFORM
 			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
