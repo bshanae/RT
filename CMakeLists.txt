@@ -238,7 +238,7 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
 	./cl_renderer/object_x/object_plane.c
 	./cl_renderer/object_x/object_cone.c
-	./cl_renderer/object_x/object_cylinder.c cl_renderer/object_x/object_moebius.c cl_renderer/object_x/object_fractal_julia.c cl_renderer/object_x/object_torus.c)
+	./cl_renderer/object_x/object_cylinder.c cl_renderer/object_x/object_moebius.c cl_renderer/object_x/object_fractal_julia.c cl_renderer/object_x/object_torus.c cl_renderer/object_x/object_box.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c

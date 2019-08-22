@@ -24,6 +24,7 @@
 # define CL_SOURCE_OBJECT_PARABOLOID		"cl_object_paraboloid"
 # define CL_SOURCE_OBJECT_MOEBIUS			"cl_object_moebius"
 # define CL_SOURCE_OBJECT_TORUS				"cl_object_torus"
+# define CL_SOURCE_OBJECT_BOX				"cl_object_box"
 # define CL_SOURCE_OBJECT_FRACTAL_JULIA		"cl_object_fractal_julia"
 # define CL_SOURCE_OBJECT_X					"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL			"cl_object_normal"

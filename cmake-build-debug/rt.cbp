@@ -290,6 +290,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cone.c">
 			<Option target="rt"/>
 		</Unit>

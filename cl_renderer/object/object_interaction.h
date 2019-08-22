@@ -22,6 +22,7 @@ void				object_cylinder_build(t_object *space, va_list *args);
 void				object_paraboloid_build(t_object *space, va_list *args);
 void                object_moebius_build(t_object *space, va_list *args);
 void                object_torus_build(t_object *space, va_list *args);
+void                object_box_build(t_object *space, va_list *args);
 
 void                object_fractal_julia_build(t_object *space, va_list *args);
 

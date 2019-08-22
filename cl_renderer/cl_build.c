@@ -262,6 +262,7 @@ typedef enum		e_object_type
     object_mandelbulb,
     object_julia,
     object_torus,
+    object_box,
     object_end
 }					t_object_type;
 
@@ -922,17 +923,37 @@ static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
 	RT_F2			q;
 
 	data = *(constant t_object_torus *)object->data;
-	q = (RT_F2)(length(data.position - point.xz) - data.t_0, point.y);
+	q = (RT_F2)(length(data.position.xz - point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
 }
 
-/*
- * sdTorus(     pos-vec3( 0.0,0.25, 1.0), vec2(0.20,0.05) ));
- *	float sdTorus( vec3 position, vec2 t )
+// cl_object_box ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_object_box
 {
-    return length( vec2(length(p.xz)-t.x,p.y) )-t.y;
+	RT_F4   		position;
+	RT_F4   		size;
+}					t_object_box;
+
+static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
+{
+	t_object_box	data;
+	RT_F4			d;
+
+	data = *(constant t_object_box *)object->data;
+	d = RT_ABS(point) - data.size;
+	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0) + length((RT_F4){RT_MAX((RT_F)d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f)}));
 }
- */
+
+/*
+	float sdBox( vec3 p, vec3 b )
+    {
+        vec3 d = abs(p) - b;
+        return RT_MIN(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
+    }
+*/
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1020,6 +1041,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_julia(object, point));
 	else if (object->type == object_torus)
 		return (sdf_torus(object, point));
+	else if (object->type == object_box)
+		return (sdf_box(object, point));
 	return (RT_INFINITY);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////

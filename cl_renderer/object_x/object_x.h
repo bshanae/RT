@@ -55,4 +55,10 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
+typedef struct 		s_object_box
+{
+	RT_F4_API  		position;
+	RT_F4_API  		size;
+}					t_object_box;
+
 #endif

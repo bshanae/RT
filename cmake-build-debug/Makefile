@@ -1068,6 +1068,33 @@ cl_renderer/object/object_translate.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.s
 .PHONY : cl_renderer/object/object_translate.c.s
 
+cl_renderer/object_x/object_box.o: cl_renderer/object_x/object_box.c.o
+
+.PHONY : cl_renderer/object_x/object_box.o
+
+# target to build an object file
+cl_renderer/object_x/object_box.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
+.PHONY : cl_renderer/object_x/object_box.c.o
+
+cl_renderer/object_x/object_box.i: cl_renderer/object_x/object_box.c.i
+
+.PHONY : cl_renderer/object_x/object_box.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_box.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.i
+.PHONY : cl_renderer/object_x/object_box.c.i
+
+cl_renderer/object_x/object_box.s: cl_renderer/object_x/object_box.c.s
+
+.PHONY : cl_renderer/object_x/object_box.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_box.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s
+.PHONY : cl_renderer/object_x/object_box.c.s
+
 cl_renderer/object_x/object_cone.o: cl_renderer/object_x/object_cone.c.o
 
 .PHONY : cl_renderer/object_x/object_cone.o
@@ -3531,6 +3558,9 @@ help:
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
+	@echo "... cl_renderer/object_x/object_box.o"
+	@echo "... cl_renderer/object_x/object_box.i"
+	@echo "... cl_renderer/object_x/object_box.s"
 	@echo "... cl_renderer/object_x/object_cone.o"
 	@echo "... cl_renderer/object_x/object_cone.i"
 	@echo "... cl_renderer/object_x/object_cone.s"

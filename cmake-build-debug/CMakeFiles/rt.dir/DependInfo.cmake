@@ -39,6 +39,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cone.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_julia.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o"

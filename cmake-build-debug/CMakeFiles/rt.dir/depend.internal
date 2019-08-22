@@ -3631,6 +3631,22 @@ CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o
  .././parameters/rt_parameters.h
  /Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
  /Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c
+CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
+ ../../21_libft/includes/libft_ft_printf.h
+ ../../21_libft/includes/libft_standart.h
+ ../../21_libft/includes/libft_vector.h
+ .././cl_renderer/assert/assert.h
+ .././cl_renderer/f4/f4.h
+ .././cl_renderer/material/material.h
+ .././cl_renderer/object/object_definition.h
+ .././cl_renderer/object/object_interaction.h
+ .././cl_renderer/object_x/object_fractals.h
+ .././cl_renderer/object_x/object_x.h
+ .././parameters/rt_cl_include.h
+ .././parameters/rt_control.h
+ .././parameters/rt_float.h
+ .././parameters/rt_parameters.h
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h

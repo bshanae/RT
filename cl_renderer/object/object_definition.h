@@ -18,6 +18,7 @@ typedef enum		e_object_type
 	object_mandelbulb,
 	object_julia,
 	object_torus,
+	object_box,
 	object_end
 }					t_object_type;
 
