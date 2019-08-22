@@ -27,5 +27,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_plane(object, point));
 	else if (object->type == object_julia)
 		return (sdf_julia(object, point));
+	else if (object->type == object_torus)
+		return (sdf_torus(object, point));
 	return (RT_INFINITY);
 }

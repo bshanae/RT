@@ -1257,6 +1257,33 @@ cl_renderer/object_x/object_sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.s
 .PHONY : cl_renderer/object_x/object_sphere.c.s
 
+cl_renderer/object_x/object_torus.o: cl_renderer/object_x/object_torus.c.o
+
+.PHONY : cl_renderer/object_x/object_torus.o
+
+# target to build an object file
+cl_renderer/object_x/object_torus.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o
+.PHONY : cl_renderer/object_x/object_torus.c.o
+
+cl_renderer/object_x/object_torus.i: cl_renderer/object_x/object_torus.c.i
+
+.PHONY : cl_renderer/object_x/object_torus.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_torus.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.i
+.PHONY : cl_renderer/object_x/object_torus.c.i
+
+cl_renderer/object_x/object_torus.s: cl_renderer/object_x/object_torus.c.s
+
+.PHONY : cl_renderer/object_x/object_torus.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_torus.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
+.PHONY : cl_renderer/object_x/object_torus.c.s
+
 cl_renderer/scene/scene_delete.o: cl_renderer/scene/scene_delete.c.o
 
 .PHONY : cl_renderer/scene/scene_delete.o
@@ -3525,6 +3552,9 @@ help:
 	@echo "... cl_renderer/object_x/object_sphere.o"
 	@echo "... cl_renderer/object_x/object_sphere.i"
 	@echo "... cl_renderer/object_x/object_sphere.s"
+	@echo "... cl_renderer/object_x/object_torus.o"
+	@echo "... cl_renderer/object_x/object_torus.i"
+	@echo "... cl_renderer/object_x/object_torus.s"
 	@echo "... cl_renderer/scene/scene_delete.o"
 	@echo "... cl_renderer/scene/scene_delete.i"
 	@echo "... cl_renderer/scene/scene_delete.s"

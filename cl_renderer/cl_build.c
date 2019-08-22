@@ -261,6 +261,7 @@ typedef enum		e_object_type
     object_tetrahedron,
     object_mandelbulb,
     object_julia,
+    object_torus,
     object_end
 }					t_object_type;
 
@@ -475,6 +476,14 @@ static RT_F4		cone_normal(constant t_object *object, t_intersection *intersectio
     else
         return(normalize(((constant t_object_cone *)object->data)->axis * -1));
 }
+
+//static RT_F 		sdf_cone(constant t_object *object, RT_F4 point)
+//{
+//	t_object_sphere				data;
+//
+//	data = *(constant t_object_sphere *)object->data;
+//	return (length(data.position - point) - data.radius);
+//}
 
 // cl_object_cylinder //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -896,6 +905,35 @@ static RT_F4					moebius_normal(constant t_object *object, t_intersection *inter
 	return (normalize(normal));
 }
 
+// cl_object_torus /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_object_torus
+{
+	RT_F4   		position;
+	RT_F 			t_0;
+	RT_F          	t_1;
+}					t_object_torus;
+
+static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
+{
+	t_object_torus	data;
+	RT_F2			q;
+
+	data = *(constant t_object_torus *)object->data;
+	q = (RT_F2)(length(data.position - point.xz) - data.t_0, point.y);
+	return (length(q) - data.t_1);
+}
+
+/*
+ * sdTorus(     pos-vec3( 0.0,0.25, 1.0), vec2(0.20,0.05) ));
+ *	float sdTorus( vec3 position, vec2 t )
+{
+    return length( vec2(length(p.xz)-t.x,p.y) )-t.y;
+}
+ */
+
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -980,6 +1018,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_plane(object, point));
 	else if (object->type == object_julia)
 		return (sdf_julia(object, point));
+	else if (object->type == object_torus)
+		return (sdf_torus(object, point));
 	return (RT_INFINITY);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1298,7 +1338,8 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state,
+					int global_id)
 {
 	RT_F4			radiance;
 	RT_F4			explicit;
@@ -1310,8 +1351,12 @@ static void			radiance_add(
 	mask = (RT_F4){1.f, 1.f, 1.f, 1.f};
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+
 		if (!scene_intersect(scene, intersection, settings))
-			break ;
+		{
+			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
+			break;
+		}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
@@ -1322,7 +1367,7 @@ static void			radiance_add(
 				intersection_reflect(intersection, intersection);
 			else
 				intersection_refract(intersection, intersection);
-			mask = mask / (choice < intersection->material.reflection ? 1. : intersection->material.refraction);
+			mask = mask / (choice < intersection->material.reflection ? 1 : intersection->material.refraction);
 		}
 		else
 		{
@@ -1333,8 +1378,6 @@ static void			radiance_add(
 				radiance += explicit * mask * intersection->material.color;
 			}
 
-			intersection->ray.origin = intersection->hit;
-
 #ifdef RT_CL_UNIFORM
 			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
 			mask *= intersection->material.color * cosine;
@@ -1344,6 +1387,7 @@ static void			radiance_add(
 			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
 			mask *= intersection->material.color;
 #endif
+			intersection->ray.origin = intersection->hit;
 		}
 	}
 
@@ -1382,7 +1426,7 @@ kernel void			cl_main(
 	intersection_reset(&intersection);
 	//if (scene_intersect(scene, &intersection, settings))
 	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
-    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
 	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
 }
 

@@ -13,20 +13,32 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_explicit" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_explicit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/material/material_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/material/material_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_sphere.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_sphere.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_float.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_float.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -59,23 +71,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+            <state relative-caret-position="257">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -89,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_scene">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parameters/rt_float.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="91" lean-forward="true" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
+            <state relative-caret-position="585">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -101,30 +104,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-              <folding>
-                <element signature="e#1525#1663#0" expanded="true" />
-                <element signature="e#1695#1814#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_main">
+        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+            <state relative-caret-position="255">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cl_renderer/material/material_list.h">
+        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+            <state relative-caret-position="405">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_delete.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -132,8 +149,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="833">
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parameters/rt_cl_compilation.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -146,16 +172,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_plane" />
-        <option value="$PROJECT_DIR$/cl_renderer/f4/f4_length.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/f4/f4_normalize.c" />
         <option value="$PROJECT_DIR$/cl_renderer/f4/f4.h" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_object_cone" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_object_cylinder" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_cone.c" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_cylinder.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_aabb.c" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_create_program.c" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_intersect" />
@@ -164,9 +185,6 @@
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_render.c" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_moebius_strip.c" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/object/object_definition.h" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" />
-        <option value="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_fractals.h" />
         <option value="$PROJECT_DIR$/cl_renderer/object/object_translate.c" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_normal" />
@@ -175,13 +193,8 @@
         <option value="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder.h" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer.h" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_delete.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/object/object_build.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" />
         <option value="$PROJECT_DIR$/cl_renderer/object_x/object_fractal_julia.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" />
-        <option value="$PROJECT_DIR$/parameters/rt_cl_compilation.h" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_fractal_julia" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_f4" />
         <option value="$PROJECT_DIR$/cl_renderer/material/material.h" />
@@ -189,14 +202,27 @@
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_explicit" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_random" />
         <option value="$PROJECT_DIR$/cl_renderer/material/material_list.h" />
-        <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" />
-        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_intersection" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere" />
-        <option value="$PROJECT_DIR$/parameters/rt_parameters.h" />
         <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" />
+        <option value="$PROJECT_DIR$/cl_renderer/object/object_definition.h" />
+        <option value="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" />
+        <option value="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" />
+        <option value="$PROJECT_DIR$/cl_renderer/object/object_build.c" />
+        <option value="$PROJECT_DIR$/cl_renderer/object_x/object_torus.c" />
+        <option value="$PROJECT_DIR$/cl_renderer/object_x/object_sphere.c" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" />
+        <option value="$PROJECT_DIR$/parameters/rt_cl_compilation.h" />
+        <option value="$PROJECT_DIR$/parameters/rt_parameters.h" />
+        <option value="$PROJECT_DIR$/parameters/rt_float.h" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" />
+        <option value="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -230,19 +256,7 @@
               <item name="rt" type="b2602c69:ProjectViewProjectNode" />
               <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
               <item name="cl_renderer" type="462c0819:PsiDirectoryNode" />
-              <item name="cl_builder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="cl_renderer" type="462c0819:PsiDirectoryNode" />
               <item name="cl_source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="21_ray_tracer" type="462c0819:PsiDirectoryNode" />
-              <item name="cl_renderer" type="462c0819:PsiDirectoryNode" />
-              <item name="material" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rt" type="b2602c69:ProjectViewProjectNode" />
@@ -274,15 +288,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cl_renderer/cl_source" />
       <recent name="$PROJECT_DIR$/gui/build" />
       <recent name="$PROJECT_DIR$/gui/gui_object_x" />
       <recent name="$PROJECT_DIR$/gui/gui_names" />
       <recent name="$PROJECT_DIR$/gui/gui_object_edit" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -374,12 +388,12 @@
       <workItem from="1566306162185" duration="1359000" />
       <workItem from="1566314967914" duration="1757000" />
       <workItem from="1566378234048" duration="10452000" />
-      <workItem from="1566463643139" duration="5947000" />
+      <workItem from="1566463643139" duration="8413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45551000" />
+    <option name="totallyTimeSpent" value="48017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,18 +430,18 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13383637" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13463067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32919708" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.10583942" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28613138" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32967743" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.22189781" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.43065694" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -486,59 +500,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_translate.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_cylinder.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_definition.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#36#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_build.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11945" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_moebius">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3825">
           <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_log.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_new.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -549,22 +514,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_delete.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_delete.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_new.c">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/scene/scene_delete.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -618,54 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_x.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding>
-            <element signature="e#46#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_interaction.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
-          <folding>
-            <element signature="e#60#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_cone.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_build.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_concat.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parameters/rt_cl_compilation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -711,27 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="96" column="77" selection-start-line="96" selection-start-column="77" selection-end-line="96" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_normal">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_build.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_material">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -767,31 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="60" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cl_renderer/material/material_list.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_intersection">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="165">
+          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -802,14 +671,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x">
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="709">
+          <caret line="99" column="2" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_x.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
           <folding>
-            <element signature="e#1525#1663#0" expanded="true" />
-            <element signature="e#1695#1814#0" expanded="true" />
+            <element signature="e#46#73#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_interaction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="71" />
+          <folding>
+            <element signature="e#60#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_definition.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#36#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object/object_build.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_sphere.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_scene">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_intersection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_normal">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="53" lean-forward="true" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/object_x/object_torus.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_concat.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_new.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_program/cl_program_build.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_new.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_log.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters/rt_cl_compilation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_delete.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters/rt_float.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -820,27 +829,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c">
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+        <state relative-caret-position="257">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cl_renderer/cl_source/cl_scene">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="91" lean-forward="true" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
         </state>
       </provider>
     </entry>

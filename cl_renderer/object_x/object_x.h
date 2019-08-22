@@ -48,4 +48,11 @@ typedef struct		s_object_moebius
     RT_F			half_width;
 }					t_object_moebius;
 
+typedef struct 		s_object_torus
+{
+	RT_F4_API  		position;
+	RT_F 			t_0;
+	RT_F          	t_1;
+}					t_object_torus;
+
 #endif

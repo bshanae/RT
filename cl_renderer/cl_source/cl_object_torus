@@ -1,0 +1,20 @@
+// cl_object_torus /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_object_torus
+{
+	RT_F4   		position;
+	RT_F 			t_0;
+	RT_F          	t_1;
+}					t_object_torus;
+
+static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
+{
+	t_object_torus	data;
+	RT_F2			q;
+
+	data = *(constant t_object_torus *)object->data;
+	q = (RT_F2)(length(data.position.xz - point.xz) - data.t_0, point.y);
+	return (length(q) - data.t_1);
+}

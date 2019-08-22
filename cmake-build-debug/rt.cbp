@@ -311,6 +311,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c">
 			<Option target="rt"/>
 		</Unit>

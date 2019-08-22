@@ -46,6 +46,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_plane.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_get_space.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"

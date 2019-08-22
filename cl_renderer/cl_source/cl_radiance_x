@@ -25,19 +25,9 @@ static void			radiance_add(
 
 		if (!scene_intersect(scene, intersection, settings))
 		{
-
-			if (global_id == 8){printf("no: \n");
-			printf("origin %f %f %f\n", intersection->ray.origin.x, intersection->ray.origin.y, intersection->ray.origin.z);
-			printf("hit %f %f %f\n", intersection->hit.x, intersection->hit.y, intersection->hit.z);
-			printf("%d\n", intersection->object_id);}
 			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
 			break;
 		}
-
-		if (global_id == 8){printf("yes: \n");
-		printf("origin %f %f %f\n", intersection->ray.origin.x, intersection->ray.origin.y, intersection->ray.origin.z);
-		printf("hit %f %f %f\n", intersection->hit.x, intersection->hit.y, intersection->hit.z);
-		printf("%d\n", intersection->object_id);}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
@@ -59,8 +49,6 @@ static void			radiance_add(
 				radiance += explicit * mask * intersection->material.color;
 			}
 
-			intersection->ray.origin = intersection->hit + intersection->normal * RT_EPSILON;
-
 #ifdef RT_CL_UNIFORM
 			intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
 			mask *= intersection->material.color * cosine;
@@ -70,6 +58,7 @@ static void			radiance_add(
 			intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
 			mask *= intersection->material.color;
 #endif
+			intersection->ray.origin = intersection->hit;
 		}
 	}
 
