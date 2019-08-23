@@ -12,5 +12,6 @@ void 				gui_scene_add_show(t_gui_scene_add *add)
 		gui_object_cylinder_show(&add->cylinder, NULL);
 	else
 		return ;
-	gtk_widget_show(GTK_WIDGET(add->current_object));
+	gtk_stack_set_visible_child_name(add->stack,
+		object_translate(add->current_type));
 }

@@ -84,3 +84,8 @@ int					main(int argc, char **argv)
 	gui_delete(&gui);
 	return (0);
 }
+
+/*
+ * IMPORTANT :
+ * 1. light_explicit deleted for t_cl_renderer_settings
+ */

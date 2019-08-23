@@ -8,17 +8,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 		camera_new(&renderer->image->width, &renderer->image->height);
 	renderer->data.scene = scene_new();
 	renderer->data.image = renderer->image->color_buffer;
-	renderer->data.settings.sample_count = 1;
-	renderer->data.settings.sample_limit = RT_CL_SAMPLES;
-	renderer->data.settings.sample_depth = RT_CL_PATH_DEPTH;
-	renderer->data.settings.russian_depth = RT_CL_RUSSIAN_DEPTH;
-	renderer->data.settings.russian_depth = RT_CL_SRGB;
-	renderer->data.settings.light_pb = RT_CL_LIGHT_PB;
-	renderer->data.settings.light_explicit = RT_CL_LIGHT_EXPLICIT;
-	renderer->data.settings.rm_mod = RT_CL_RM_MOD;
-	renderer->data.settings.rm_step_limit = RT_CL_RM_STEP_LIMIT;
-	renderer->data.settings.rm_step_part = RT_CL_STEP_PART;
-	renderer->data.settings.rm_max_distance = RT_CL_RM_MAX_DISTANCE;
+	cl_renderer_settings_init(&renderer->data.settings);
 	i = 0;
 	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
 	srand(21);

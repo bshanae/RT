@@ -26,11 +26,8 @@ static void			radiance_add(
 
 		radiance += mask * intersection->material.emission;
 
-		if (settings->light_explicit)
-		{
-			explicit = radiance_explicit(scene, intersection, settings, rng_state);
-			radiance += explicit * mask * intersection->material.color;
-		}
+		explicit = radiance_explicit(scene, intersection, settings, rng_state);
+		radiance += explicit * mask * intersection->material.color;
 
 		intersection->ray.origin = intersection->hit;
 

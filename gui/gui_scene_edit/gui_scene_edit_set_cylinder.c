@@ -6,8 +6,6 @@ void 					gui_scene_edit_set_cylinder
 	t_gui_init_cylinder	init;
 
 	ft_strcpy(init.box, "object_edit_cylinder_box");
-	ft_strcpy(init.offscreen, "object_edit_cylinder_offscreen");
-	ft_strcpy(init.name, "object_edit_cylinder_name");
 	ft_strcpy(init.top_x, "object_edit_cylinder_top_x");
 	ft_strcpy(init.top_y, "object_edit_cylinder_top_y");
 	ft_strcpy(init.top_z, "object_edit_cylinder_top_z");
@@ -16,5 +14,4 @@ void 					gui_scene_edit_set_cylinder
 	ft_strcpy(init.bottom_z, "object_edit_cylinder_bottom_z");
 	ft_strcpy(init.radius, "object_edit_cylinder_radius");
 	edit->cylinder = gui_object_cylinder_set(&init, builder);
-	gui_object_x_set((t_gui_object_x *)&edit->cylinder, edit->overlay);
 }

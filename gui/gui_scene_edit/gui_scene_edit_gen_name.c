@@ -7,7 +7,7 @@ static const char	*gui_scene_edit_translate_type(t_object_type type)
 	else if (type == object_plane)
 		return ("plane_");
 	else if (type == object_cone)
-		return ("cone");
+		return ("cone_");
 	else if (type == object_cylinder)
 		return ("cylinder_");
 	return ("unknown_");

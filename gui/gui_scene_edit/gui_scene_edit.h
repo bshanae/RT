@@ -19,16 +19,19 @@ typedef enum 					s_gui_scene_edit_list
 
 typedef struct 					s_gui_scene_edit
 {
+	GtkEntry					*name;
+	GtkEntry					*type;
 	t_gui_object_sphere			sphere;
 	t_gui_object_plane			plane;
 	t_gui_object_cone			cone;
 	t_gui_object_cylinder		cylinder;
 	t_gui_material				material;
-	GtkOverlay					*overlay;
+	GtkStack					*stack;
+	GtkBox						*control;
+	GtkBox						*info;
 	GtkListStore				*list;
 	GtkTreeSelection			*selection;
 	int 						current_id;
-	GtkBox						*current_object;
 	GtkTreeIter					iter;
 	GtkDialog					*remove_dialog;
 }								t_gui_scene_edit;
@@ -55,7 +58,7 @@ void 							gui_scene_edit_update
 								(t_gui_scene_edit *edit, t_scene *scene);
 void 							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);
-GtkBox							*gui_scene_edit_get_object
-								(t_gui_scene_edit *edit, t_object_type type);
+void							gui_scene_edit_apply
+								(t_gui_scene_edit *edit, t_object* object);
 
 #endif
