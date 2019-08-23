@@ -93,29 +93,6 @@ static RT_F4		ray_intersect(t_ray *ray)
 {
 	return (ray->origin + ray->direction * ray->t);
 }
-// cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct		s_color
-{
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-	unsigned char	a;
-}					t_color;
-
-static t_color		color_unpack(RT_F4 source, constant t_cl_renderer_settings *settings)
-{
-
-    if (settings->srgb)
-		source = pow(source, .4f);
-	source.x = RT_MIN(source.x, 1.f);
-	source.y = RT_MIN(source.y, 1.f);
-	source.z = RT_MIN(source.z, 1.f);
-	if (settings->filter_sepia)
-		return(filter_sepia(&source));
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
-}
-
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
@@ -128,14 +105,6 @@ static void			filter_jitter(RT_F *x, global ulong *rng_state)
     else
     	dx = 1. - RT_SQRT((RT_F)2. - dx);
     *x += dx;
-}
-
-static t_color		filter_sepia(RT_F4 *source)
-{
-	unsigned char	sepia_color;
-
-	sepia_color = (255 * source->x) * 0.3 + (255 * source->y) * 0.59 + (255 * source->z) * 0.11;
-	return((t_color){sepia_color, sepia_color, sepia_color, 255});
 }
 
 // cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -194,6 +163,37 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global u
 		camera_focus(camera, &result, rng_state);
 	return (result);
 }
+// cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct		s_color
+{
+	unsigned char	r;
+	unsigned char	g;
+	unsigned char	b;
+	unsigned char	a;
+}					t_color;
+
+static t_color		filter_sepia(RT_F4 *source)
+{
+	unsigned char	sepia_color;
+
+	sepia_color = (255 * source->x) * 0.3 + (255 * source->y) * 0.59 + (255 * source->z) * 0.11;
+	return((t_color){sepia_color, sepia_color, sepia_color, 255});
+}
+
+static t_color		color_unpack(RT_F4 source, constant t_cl_renderer_settings *settings)
+{
+
+    if (settings->srgb)
+		source = pow(source, .4f);
+	source.x = RT_MIN(source.x, 1.f);
+	source.y = RT_MIN(source.y, 1.f);
+	source.z = RT_MIN(source.z, 1.f);
+	if (settings->filter_sepia)
+		return(filter_sepia(&source));
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
+}
+
 // cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_material
@@ -1014,6 +1014,7 @@ typedef struct				s_object_mandelbulb
 static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 {
 	t_object_mandelbulb		data;
+	RT_F4					z;
 	RT_F					zr;
 	RT_F					dr;
 	RT_F					r;
@@ -1024,25 +1025,45 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	point = data.position - point;
 	r = 0.;
     dr = 1.;
-
+	z = point;
 	for (int iter = 0; iter < data.iterations; iter++)
 	{
-		r = length(point);
+		r = length(z);
 		if (r > data.bailout)
         	break ;
-        theta = acos(point.z / r);
-        phi = atan2(point.y, point.x);
+        theta = acos(z.z / r);
+        phi = atan2(z.y, z.x);
 
         dr = pow((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
+
         zr = pow(r, data.power);
         theta *= data.power;
         phi *= data.power;
 
-        point = (RT_F4){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta), 0.} * zr;
-        point += point;
+        z = (RT_F4){RT_SIN(theta) * RT_COS(phi), RT_SIN(phi) * RT_SIN(theta), RT_COS(theta), 0.} * zr;
+        z += point;
 	}
 	return (.5 * log(r) * r / dr);
 }
+    	for (i = 0; i < obj->mandelbulb.iterations; i++)
+    	{
+    		r = vector3_length(&z);
+    		if (r > obj->mandelbulb.bailout)
+    			break ;
+    		theta = acos(z.z / r);
+    		phi = atan2(z.y, z.x);
+    		dr = pow(r, obj->mandelbulb.power - 1.) * obj->mandelbulb.power * dr + 1.;
+
+    		zr = pow(r, obj->mandelbulb.power);
+    		theta *= obj->mandelbulb.power;
+    		phi *= obj->mandelbulb.power;
+
+    		z = vector3_s_mul((t_vector3){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta)}, zr);
+    		vector3_add_eq(&z, point);
+    	}
+    	return (.5 * log(r) * r / dr);
+    }
+*/
 
 // cl_object_tetrahedron ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1560,10 +1581,12 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
-	//if (scene_intersect(scene, &intersection, settings))
-	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
-    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
-	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
+	if (scene_intersect(scene, &intersection, settings))
+		image[global_id] = color_unpack(intersection.material.color, settings->srgb);
+	else
+		image[global_id] = color_unpack((RT_F){0., 0., 0., 0.}, settings->srgb);
+    //radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
+	//image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
 }
 
 

@@ -5,18 +5,18 @@
 
 void				scene_fractals(t_scene *scene)
 {
+//	object_build(
+//		scene_get_space(scene), object_julia,
+//		MATERIAL_RED,
+//		(RT_F4_API){0., 0., 10.},
+//		100,
+//		(RT_F4_API){.1, .3, .5, .5});
+
 	object_build(
-		scene_get_space(scene), object_julia,
+		scene_get_space(scene), object_mandelbulb,
 		MATERIAL_RED,
 		(RT_F4_API){0., 0., 10.},
-		100,
-		(RT_F4_API){.1, .3, .5, .5});
-//
-//	object_build(
-//		scene_get_space(scene), object_mandelbulb,
-//		MATERIAL_RED,
-//		(RT_F4_API){0., 0., 0.},
-//		50,	8.,	2.);
+		50,	8.,	2.);
 //	object_build(
 //		scene_get_space(scene), object_tetrahedron,
 //		MATERIAL_RED,
@@ -31,7 +31,7 @@ void				scene_fractals(t_scene *scene)
 	object_build(
 		scene_get_space(scene), object_sphere,
 		MATERIAL_LIGHT,
-		(RT_F4_API){5., 5., 5.}, 2.5);
+		(RT_F4_API){5., -5., 10.}, 2.5);
 }
 
 void				scene_room(t_scene *scene)
@@ -95,9 +95,9 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
-	//scene_fractals(gui->renderer->data.scene);
-	scene_room(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 120.;
+	scene_fractals(gui->renderer->data.scene);
+	//scene_room(gui->renderer->data.scene);
+	gui->renderer->data.camera->position.z = 10.;
 	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);
