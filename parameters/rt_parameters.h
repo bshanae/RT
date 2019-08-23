@@ -21,8 +21,8 @@
 # define RT_CL_LIGHT_EXPLICIT		1
 
 # define RT_CL_RM_MOD				1
-# define RT_CL_RM_STEP_LIMIT		512
-# define RT_CL_STEP_PART			0.6
+# define RT_CL_RM_STEP_LIMIT		1024
+# define RT_CL_STEP_PART			0.4
 # define RT_CL_RM_MAX_DISTANCE		500
 
 # define RT_CL_ANTIALIASING			1

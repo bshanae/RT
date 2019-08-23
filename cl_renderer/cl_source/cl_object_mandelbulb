@@ -1,0 +1,42 @@
+// cl_object_mandelbulb/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct				s_object_mandelbulb
+{
+	int						iterations;
+	RT_F					power;
+	RT_F					bailout;
+}							t_object_mandelbulb;
+
+static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
+{
+	t_object_mandelbulb		data;
+	RT_F					zr;
+	RT_F					dr;
+	RT_F					r;
+	RT_F					phi;
+	RT_F					theta;
+
+	data = *(constant t_object_mandelbulb *)object->data;
+	r = 0.;
+    dr = 1.;
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		r = length(point);
+		if (r > data.bailout)
+        	break ;
+        theta = acos(point.z / r);
+        phi = atan2(point.y, point.x);
+
+        dr = pow((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
+        zr = pow(r, data.power);
+        theta *= data.power;
+        phi *= data.power;
+
+        point = (RT_F4){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta), 0.} * zr;
+        point += point;
+	}
+	return (.5 * log(r) * r / dr);
+}

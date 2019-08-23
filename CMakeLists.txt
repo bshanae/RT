@@ -238,7 +238,7 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
 	./cl_renderer/object_x/object_plane.c
 	./cl_renderer/object_x/object_cone.c
-	./cl_renderer/object_x/object_cylinder.c cl_renderer/object_x/object_moebius.c cl_renderer/object_x/object_fractal_julia.c cl_renderer/object_x/object_torus.c cl_renderer/object_x/object_box.c cl_renderer/object_x/object_fractal_tetrahedron.c)
+	./cl_renderer/object_x/object_cylinder.c cl_renderer/object_x/object_moebius.c cl_renderer/object_x/object_julia.c cl_renderer/object_x/object_torus.c cl_renderer/object_x/object_box.c cl_renderer/object_x/object_tetrahedron.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -295,7 +295,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_PROGRAM}
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
-	${SOURCE_CL_RENDERER_} cl_renderer/cl_builder/cl_rng_delete.c cl_renderer/object_x/object_fractal_mandelbulb.c)
+	${SOURCE_CL_RENDERER_} cl_renderer/cl_builder/cl_rng_delete.c cl_renderer/object_x/object_mandelbulb.c)
 
 add_executable(rt
 	${SOURCE_MAIN}

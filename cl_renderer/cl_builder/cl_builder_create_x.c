@@ -7,6 +7,23 @@ void				cl_builder_create_context(t_cl_builder *builder)
 	ASSERT(builder->error == 0)
 }
 
+static void			cl_builder_create_program_objects(t_cl_builder *builder)
+{
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_SPHERE);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PLANE);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CONE);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CYLINDER);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PARABOLOID);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MOEBIUS);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_BOX);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MANDELBULB);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);
+}
+
 void				cl_builder_create_program(t_cl_builder *builder)
 {
 	cl_program_concat(builder->program, CL_SOURCE_F4);
@@ -18,18 +35,7 @@ void				cl_builder_create_program(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_COLOR);
 	cl_program_concat(builder->program, CL_SOURCE_MATERIAL);
 	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_SPHERE);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PLANE);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CONE);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CYLINDER);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PARABOLOID);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MOEBIUS);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_BOX);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_FRACTAL_JULIA);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);
+	cl_builder_create_program_objects(builder);
 	cl_program_concat(builder->program, CL_SOURCE_SCENE);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_EXPLICIT);

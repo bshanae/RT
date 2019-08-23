@@ -947,7 +947,8 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	data = *(constant t_object_box *)object->data;
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
-	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), 0.f) + length({RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
+	return (RT_MIN(RT_MAX(d.x, RT_MAX(d.y, d.z)), 0.f)
+		+ length((RT_F4){RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
 }
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -960,7 +961,7 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static int					sdf_julia(constant t_object *object, RT_F4 point)
+static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
@@ -979,29 +980,83 @@ static int					sdf_julia(constant t_object *object, RT_F4 point)
 		if (mz > 4.)
 			break ;
 	}
-	return (.25 * sqrt(mz / md) * log(mz));
+	return (.25 * RT_SQRT(mz / md) * log(mz));
+}
+
+// cl_object_mandelbulb/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct				s_object_mandelbulb
+{
+	int						iterations;
+	RT_F					power;
+	RT_F					bailout;
+}							t_object_mandelbulb;
+
+static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
+{
+	t_object_mandelbulb		data;
+	RT_F					zr;
+	RT_F					dr;
+	RT_F					r;
+	RT_F					phi;
+	RT_F					theta;
+
+	data = *(constant t_object_mandelbulb *)object->data;
+	r = 0.;
+    dr = 1.;
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		r = length(point);
+		if (r > data.bailout)
+        	break ;
+        theta = acos(point.z / r);
+        phi = atan2(point.y, point.x);
+
+        dr = pow((RT_F)r, data.power - 1.) * data.power * dr + 1.;
+        zr = pow(r, data.power);
+        theta *= data.power;
+        phi *= data.power;
+
+        point = (RT_F4){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta), 0.} * zr;
+        point += point;
+	}
+	return (.5 * log(r) * r / dr);
 }
 
 /*
-	static double 				sdf_julia(constant t_object *obj, const t_vector3 *point)
+	static double 				sdf_mandelbulb(constant t_object *obj,const t_vector3 *point)
     {
-    	t_vector4 z;
-    	double md;
-    	double mz;
+    	t_vector3		z;
+    	double 			dr;
+    	double 			r;
+    	double 			theta;
+    	double 			phi;
+    	double 			zr;
 
-    	z = vector4_cast3(point);
-    	md = 1.;
-    	mz = vector4_dot(&z, &z);
+    	r = 0.;
+    	dr = 1.;
+    	z = *point;
+    	int i;
+    	for (i = 0; i < obj->mandelbulb.iterations; i++)
+    	{
+    		r = vector3_length(&z);
+    		if (r > obj->mandelbulb.bailout)
+    			break ;
+    		theta = acos(z.z / r);
+    		phi = atan2(z.y, z.x);
+    		dr = pow(r, obj->mandelbulb.power - 1.) * obj->mandelbulb.power * dr + 1.;
 
-    	for (int i = 0; i < obj->julia.iterations; i++) {
-    		md *= 4. * mz;
-    		z = vector4_square(&z);
-    		vector4_s_add_eq(&z, (t_vector4)obj->julia.value);
-    		mz = vector4_dot(&z, &z);
-    		if (mz > 4.)
-    			break;
+    		zr = pow(r, obj->mandelbulb.power);
+    		theta *= obj->mandelbulb.power;
+    		phi *= obj->mandelbulb.power;
+
+    		z = vector3_s_mul((t_vector3){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta)}, zr);
+    		vector3_add_eq(&z, point);
     	}
-    	return (.25 * sqrt(mz / md) * log(mz));
+    	return (.5 * log(r) * r / dr);
     }
 */
 
@@ -1032,12 +1087,14 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_sphere(object, point));
 	else if (object->type == object_plane)
 		return (sdf_plane(object, point));
-	else if (object->type == object_julia)
-		return (sdf_julia(object, point));
 	else if (object->type == object_torus)
 		return (sdf_torus(object, point));
 	else if (object->type == object_box)
 		return (sdf_box(object, point));
+	else if (object->type == object_julia)
+		return (sdf_julia(object, point));
+	else if (object->type == object_mandelbulb)
+		return (sdf_mandelbulb(object, point));
 	return (RT_INFINITY);
 }
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////

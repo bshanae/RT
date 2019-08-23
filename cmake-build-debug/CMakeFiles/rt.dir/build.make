@@ -1201,18 +1201,18 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o: ../cl_renderer/object_x/object_fractal_julia.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_julia.c
+CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o: ../cl_renderer/object_x/object_julia.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_julia.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.i
+CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_julia.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.s
+CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o: ../cl_renderer/object_x/object_torus.c
@@ -1240,18 +1240,18 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o: ../cl_renderer/object_x/object_fractal_tetrahedron.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_tetrahedron.c
+CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o: ../cl_renderer/object_x/object_tetrahedron.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_tetrahedron.c
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_tetrahedron.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.i
+CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_tetrahedron.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.i
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_tetrahedron.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.s
+CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_tetrahedron.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.s
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o: ../cl_renderer/scene/scene_new.c
@@ -1669,18 +1669,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.s
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o: ../cl_renderer/object_x/object_fractal_mandelbulb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_mandelbulb.c
+CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o: ../cl_renderer/object_x/object_mandelbulb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_mandelbulb.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.i
+CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c > CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.i
 
-CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_mandelbulb.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.s
+CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c -o CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -1772,10 +1772,10 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" \
@@ -1808,7 +1808,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o"
+"CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -1901,10 +1901,10 @@ rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
@@ -1937,7 +1937,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Linking C executable rt"

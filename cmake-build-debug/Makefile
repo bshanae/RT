@@ -1149,86 +1149,59 @@ cl_renderer/object_x/object_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s
 .PHONY : cl_renderer/object_x/object_cylinder.c.s
 
-cl_renderer/object_x/object_fractal_julia.o: cl_renderer/object_x/object_fractal_julia.c.o
+cl_renderer/object_x/object_julia.o: cl_renderer/object_x/object_julia.c.o
 
-.PHONY : cl_renderer/object_x/object_fractal_julia.o
-
-# target to build an object file
-cl_renderer/object_x/object_fractal_julia.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o
-.PHONY : cl_renderer/object_x/object_fractal_julia.c.o
-
-cl_renderer/object_x/object_fractal_julia.i: cl_renderer/object_x/object_fractal_julia.c.i
-
-.PHONY : cl_renderer/object_x/object_fractal_julia.i
-
-# target to preprocess a source file
-cl_renderer/object_x/object_fractal_julia.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.i
-.PHONY : cl_renderer/object_x/object_fractal_julia.c.i
-
-cl_renderer/object_x/object_fractal_julia.s: cl_renderer/object_x/object_fractal_julia.c.s
-
-.PHONY : cl_renderer/object_x/object_fractal_julia.s
-
-# target to generate assembly for a file
-cl_renderer/object_x/object_fractal_julia.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.s
-.PHONY : cl_renderer/object_x/object_fractal_julia.c.s
-
-cl_renderer/object_x/object_fractal_mandelbulb.o: cl_renderer/object_x/object_fractal_mandelbulb.c.o
-
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.o
+.PHONY : cl_renderer/object_x/object_julia.o
 
 # target to build an object file
-cl_renderer/object_x/object_fractal_mandelbulb.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.c.o
+cl_renderer/object_x/object_julia.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o
+.PHONY : cl_renderer/object_x/object_julia.c.o
 
-cl_renderer/object_x/object_fractal_mandelbulb.i: cl_renderer/object_x/object_fractal_mandelbulb.c.i
+cl_renderer/object_x/object_julia.i: cl_renderer/object_x/object_julia.c.i
 
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.i
+.PHONY : cl_renderer/object_x/object_julia.i
 
 # target to preprocess a source file
-cl_renderer/object_x/object_fractal_mandelbulb.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.i
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.c.i
+cl_renderer/object_x/object_julia.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i
+.PHONY : cl_renderer/object_x/object_julia.c.i
 
-cl_renderer/object_x/object_fractal_mandelbulb.s: cl_renderer/object_x/object_fractal_mandelbulb.c.s
+cl_renderer/object_x/object_julia.s: cl_renderer/object_x/object_julia.c.s
 
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.s
+.PHONY : cl_renderer/object_x/object_julia.s
 
 # target to generate assembly for a file
-cl_renderer/object_x/object_fractal_mandelbulb.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.s
-.PHONY : cl_renderer/object_x/object_fractal_mandelbulb.c.s
+cl_renderer/object_x/object_julia.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s
+.PHONY : cl_renderer/object_x/object_julia.c.s
 
-cl_renderer/object_x/object_fractal_tetrahedron.o: cl_renderer/object_x/object_fractal_tetrahedron.c.o
+cl_renderer/object_x/object_mandelbulb.o: cl_renderer/object_x/object_mandelbulb.c.o
 
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.o
+.PHONY : cl_renderer/object_x/object_mandelbulb.o
 
 # target to build an object file
-cl_renderer/object_x/object_fractal_tetrahedron.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.c.o
+cl_renderer/object_x/object_mandelbulb.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.o
 
-cl_renderer/object_x/object_fractal_tetrahedron.i: cl_renderer/object_x/object_fractal_tetrahedron.c.i
+cl_renderer/object_x/object_mandelbulb.i: cl_renderer/object_x/object_mandelbulb.c.i
 
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.i
+.PHONY : cl_renderer/object_x/object_mandelbulb.i
 
 # target to preprocess a source file
-cl_renderer/object_x/object_fractal_tetrahedron.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.i
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.c.i
+cl_renderer/object_x/object_mandelbulb.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.i
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.i
 
-cl_renderer/object_x/object_fractal_tetrahedron.s: cl_renderer/object_x/object_fractal_tetrahedron.c.s
+cl_renderer/object_x/object_mandelbulb.s: cl_renderer/object_x/object_mandelbulb.c.s
 
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.s
+.PHONY : cl_renderer/object_x/object_mandelbulb.s
 
 # target to generate assembly for a file
-cl_renderer/object_x/object_fractal_tetrahedron.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.s
-.PHONY : cl_renderer/object_x/object_fractal_tetrahedron.c.s
+cl_renderer/object_x/object_mandelbulb.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.s
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.s
 
 cl_renderer/object_x/object_moebius.o: cl_renderer/object_x/object_moebius.c.o
 
@@ -1337,6 +1310,33 @@ cl_renderer/object_x/object_sphere.s: cl_renderer/object_x/object_sphere.c.s
 cl_renderer/object_x/object_sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.s
 .PHONY : cl_renderer/object_x/object_sphere.c.s
+
+cl_renderer/object_x/object_tetrahedron.o: cl_renderer/object_x/object_tetrahedron.c.o
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.o
+
+# target to build an object file
+cl_renderer/object_x/object_tetrahedron.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.o
+
+cl_renderer/object_x/object_tetrahedron.i: cl_renderer/object_x/object_tetrahedron.c.i
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_tetrahedron.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.i
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.i
+
+cl_renderer/object_x/object_tetrahedron.s: cl_renderer/object_x/object_tetrahedron.c.s
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_tetrahedron.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.s
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.s
 
 cl_renderer/object_x/object_torus.o: cl_renderer/object_x/object_torus.c.o
 
@@ -3621,15 +3621,12 @@ help:
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"
-	@echo "... cl_renderer/object_x/object_fractal_julia.o"
-	@echo "... cl_renderer/object_x/object_fractal_julia.i"
-	@echo "... cl_renderer/object_x/object_fractal_julia.s"
-	@echo "... cl_renderer/object_x/object_fractal_mandelbulb.o"
-	@echo "... cl_renderer/object_x/object_fractal_mandelbulb.i"
-	@echo "... cl_renderer/object_x/object_fractal_mandelbulb.s"
-	@echo "... cl_renderer/object_x/object_fractal_tetrahedron.o"
-	@echo "... cl_renderer/object_x/object_fractal_tetrahedron.i"
-	@echo "... cl_renderer/object_x/object_fractal_tetrahedron.s"
+	@echo "... cl_renderer/object_x/object_julia.o"
+	@echo "... cl_renderer/object_x/object_julia.i"
+	@echo "... cl_renderer/object_x/object_julia.s"
+	@echo "... cl_renderer/object_x/object_mandelbulb.o"
+	@echo "... cl_renderer/object_x/object_mandelbulb.i"
+	@echo "... cl_renderer/object_x/object_mandelbulb.s"
 	@echo "... cl_renderer/object_x/object_moebius.o"
 	@echo "... cl_renderer/object_x/object_moebius.i"
 	@echo "... cl_renderer/object_x/object_moebius.s"
@@ -3642,6 +3639,9 @@ help:
 	@echo "... cl_renderer/object_x/object_sphere.o"
 	@echo "... cl_renderer/object_x/object_sphere.i"
 	@echo "... cl_renderer/object_x/object_sphere.s"
+	@echo "... cl_renderer/object_x/object_tetrahedron.o"
+	@echo "... cl_renderer/object_x/object_tetrahedron.i"
+	@echo "... cl_renderer/object_x/object_tetrahedron.s"
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"
