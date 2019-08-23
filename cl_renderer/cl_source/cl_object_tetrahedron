@@ -52,5 +52,6 @@ static RT_F					sdf_tetrahedron(constant t_object *object, RT_F4 point)
         point *= data.scale;
         point -= c * (RT_F)(data.scale - 1.);
 	}
-	return (length(point) * pow(data.scale, (RT_F)(data.iterations)));
+	return (length(point) * pow(data.scale, (RT_F)(-data.iterations)));
 }
+

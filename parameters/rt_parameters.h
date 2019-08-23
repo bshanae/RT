@@ -22,7 +22,7 @@
 
 # define RT_CL_CARTOON_EFFECT		0
 # define RT_CL_FILTER_SEPIA			0
-# define RT_CL_FILTER_STEREOSCOPY	1
+# define RT_CL_FILTER_STEREOSCOPY	0
 
 # define RT_CL_RM_MOD				1
 # define RT_CL_RM_STEP_LIMIT		512

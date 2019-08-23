@@ -12,16 +12,16 @@ void				scene_fractals(t_scene *scene)
 //		100,
 //		(RT_F4_API){.1, .3, .5, .5});
 
-	object_build(
-		scene_get_space(scene), object_mandelbulb,
-		MATERIAL_RED,
-		(RT_F4_API){0., 0., 10.},
-		50,	8.,	2.);
 //	object_build(
-//		scene_get_space(scene), object_tetrahedron,
+//		scene_get_space(scene), object_mandelbulb,
 //		MATERIAL_RED,
-//		(RT_F4_API){0., 0., 0.},
-//		100,	10.875);
+//		(RT_F4_API){0., 0., 10.},
+//		50,	8.,	2.);
+	object_build(
+		scene_get_space(scene), object_tetrahedron,
+		MATERIAL_RED,
+		(RT_F4_API){0., 0., 0.},
+		10,	1.875);
 
 	// LIGHT
 	object_build(
