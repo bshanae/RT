@@ -15,6 +15,7 @@ static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
 	RT_F2			q;
 
 	data = *(constant t_object_torus *)object->data;
-	q = (RT_F2)(length(data.position.xz - point.xz) - data.t_0, point.y);
+	point = data.position - point;
+	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
 }
