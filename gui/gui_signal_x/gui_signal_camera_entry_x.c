@@ -9,6 +9,8 @@ void				gui_signal_camera_entry_insert
 	char			old[64];
 
 	gui = (t_gui *)ptr;
+	if (gui->camera->control_silent)
+		return ;
 	ft_strcpy(old, gtk_entry_get_text(entry));
 	g_signal_stop_emission_by_name(G_OBJECT(entry), "insert_text");
 	i = 0;
@@ -33,6 +35,8 @@ void 				gui_signal_camera_entry_delete
 	char			old[64];
 
 	gui = (t_gui *)ptr;
+	if (gui->camera->control_silent)
+		return ;
 	ft_strcpy(old, gtk_entry_get_text(entry));
 	g_signal_stop_emission_by_name(G_OBJECT(entry), "delete_text");
 	g_signal_handlers_block_by_func(G_OBJECT(entry),

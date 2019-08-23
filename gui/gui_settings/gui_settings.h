@@ -4,6 +4,7 @@
 # include "rt_parameters.h"
 # include "cl_renderer_settings.h"
 
+# include "libft_standart.h"
 # include "gui_entry.h"
 
 # include <gtk/gtk.h>

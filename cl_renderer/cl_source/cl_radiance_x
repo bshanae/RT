@@ -2,15 +2,41 @@
 
 #include "rt_parameters.h"
 
+static RT_F4					test(
+								constant t_scene *scene,
+								constant t_camera *camera,
+								t_intersection *intersection)
+{
+	constant t_object_sphere	*sphere;
+	RT_F						x;
+	RT_F4						k;
+	RT_F4						illumination;
+
+	illumination = 0.;
+	for (int i = 0; i < scene->objects_length; i++)
+	{
+        if (scene->objects[i].type != object_sphere)
+        	continue ;
+        if (f4_max_component(scene->objects[i].material.emission) == 0.f)
+        	continue ;
+        sphere = (constant t_object_sphere	*)scene->objects[i].data;
+		k = normalize(cross(normalize(camera->axis_y), intersection->ray.direction));
+		x = dot(intersection->ray.origin - sphere->position, k);
+		illumination += (RT_F)(.2 * sphere->radius / x) * scene->objects[i].material.emission;
+	}
+	return (illumination);
+}
+
 static void			radiance_add(
 					constant t_scene *scene,
+					constant t_camera *camera,
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
 {
 	RT_F4			radiance;
-	RT_F4			explicit;
+	RT_F4			light;
 	RT_F4			mask;
 	RT_F			cosine;
 
@@ -24,10 +50,27 @@ static void			radiance_add(
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
+		if (depth == 0)
+        {
+        	light = test(scene, camera, intersection);
+            radiance += light;
+		}
+
 		radiance += mask * intersection->material.emission;
 
-		explicit = radiance_explicit(scene, intersection, settings, rng_state);
-		radiance += explicit * mask * intersection->material.color;
+		if (settings->light_basic)
+		{
+			light = light_basic(scene, intersection, settings);
+            radiance += light * mask;
+		}
+
+		if (settings->light_area)
+		{
+			light = light_area(scene, intersection, settings, rng_state);
+			radiance += light * mask * intersection->material.color;
+		}
+
+
 
 		intersection->ray.origin = intersection->hit;
 

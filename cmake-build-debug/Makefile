@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1068,6 +1068,33 @@ cl_renderer/object/object_translate.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.s
 .PHONY : cl_renderer/object/object_translate.c.s
 
+cl_renderer/object_x/object_box.o: cl_renderer/object_x/object_box.c.o
+
+.PHONY : cl_renderer/object_x/object_box.o
+
+# target to build an object file
+cl_renderer/object_x/object_box.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
+.PHONY : cl_renderer/object_x/object_box.c.o
+
+cl_renderer/object_x/object_box.i: cl_renderer/object_x/object_box.c.i
+
+.PHONY : cl_renderer/object_x/object_box.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_box.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.i
+.PHONY : cl_renderer/object_x/object_box.c.i
+
+cl_renderer/object_x/object_box.s: cl_renderer/object_x/object_box.c.s
+
+.PHONY : cl_renderer/object_x/object_box.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_box.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s
+.PHONY : cl_renderer/object_x/object_box.c.s
+
 cl_renderer/object_x/object_cone.o: cl_renderer/object_x/object_cone.c.o
 
 .PHONY : cl_renderer/object_x/object_cone.o
@@ -1122,6 +1149,114 @@ cl_renderer/object_x/object_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s
 .PHONY : cl_renderer/object_x/object_cylinder.c.s
 
+cl_renderer/object_x/object_julia.o: cl_renderer/object_x/object_julia.c.o
+
+.PHONY : cl_renderer/object_x/object_julia.o
+
+# target to build an object file
+cl_renderer/object_x/object_julia.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o
+.PHONY : cl_renderer/object_x/object_julia.c.o
+
+cl_renderer/object_x/object_julia.i: cl_renderer/object_x/object_julia.c.i
+
+.PHONY : cl_renderer/object_x/object_julia.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_julia.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i
+.PHONY : cl_renderer/object_x/object_julia.c.i
+
+cl_renderer/object_x/object_julia.s: cl_renderer/object_x/object_julia.c.s
+
+.PHONY : cl_renderer/object_x/object_julia.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_julia.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s
+.PHONY : cl_renderer/object_x/object_julia.c.s
+
+cl_renderer/object_x/object_light_x.o: cl_renderer/object_x/object_light_x.c.o
+
+.PHONY : cl_renderer/object_x/object_light_x.o
+
+# target to build an object file
+cl_renderer/object_x/object_light_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o
+.PHONY : cl_renderer/object_x/object_light_x.c.o
+
+cl_renderer/object_x/object_light_x.i: cl_renderer/object_x/object_light_x.c.i
+
+.PHONY : cl_renderer/object_x/object_light_x.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_light_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.i
+.PHONY : cl_renderer/object_x/object_light_x.c.i
+
+cl_renderer/object_x/object_light_x.s: cl_renderer/object_x/object_light_x.c.s
+
+.PHONY : cl_renderer/object_x/object_light_x.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_light_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.s
+.PHONY : cl_renderer/object_x/object_light_x.c.s
+
+cl_renderer/object_x/object_moebius.o: cl_renderer/object_x/object_moebius.c.o
+
+.PHONY : cl_renderer/object_x/object_moebius.o
+
+# target to build an object file
+cl_renderer/object_x/object_moebius.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
+.PHONY : cl_renderer/object_x/object_moebius.c.o
+
+cl_renderer/object_x/object_moebius.i: cl_renderer/object_x/object_moebius.c.i
+
+.PHONY : cl_renderer/object_x/object_moebius.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_moebius.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.i
+.PHONY : cl_renderer/object_x/object_moebius.c.i
+
+cl_renderer/object_x/object_moebius.s: cl_renderer/object_x/object_moebius.c.s
+
+.PHONY : cl_renderer/object_x/object_moebius.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_moebius.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s
+.PHONY : cl_renderer/object_x/object_moebius.c.s
+
+cl_renderer/object_x/object_paraboloid.o: cl_renderer/object_x/object_paraboloid.c.o
+
+.PHONY : cl_renderer/object_x/object_paraboloid.o
+
+# target to build an object file
+cl_renderer/object_x/object_paraboloid.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o
+.PHONY : cl_renderer/object_x/object_paraboloid.c.o
+
+cl_renderer/object_x/object_paraboloid.i: cl_renderer/object_x/object_paraboloid.c.i
+
+.PHONY : cl_renderer/object_x/object_paraboloid.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_paraboloid.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.i
+.PHONY : cl_renderer/object_x/object_paraboloid.c.i
+
+cl_renderer/object_x/object_paraboloid.s: cl_renderer/object_x/object_paraboloid.c.s
+
+.PHONY : cl_renderer/object_x/object_paraboloid.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_paraboloid.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.s
+.PHONY : cl_renderer/object_x/object_paraboloid.c.s
+
 cl_renderer/object_x/object_plane.o: cl_renderer/object_x/object_plane.c.o
 
 .PHONY : cl_renderer/object_x/object_plane.o
@@ -1175,6 +1310,33 @@ cl_renderer/object_x/object_sphere.s: cl_renderer/object_x/object_sphere.c.s
 cl_renderer/object_x/object_sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.s
 .PHONY : cl_renderer/object_x/object_sphere.c.s
+
+cl_renderer/object_x/object_torus.o: cl_renderer/object_x/object_torus.c.o
+
+.PHONY : cl_renderer/object_x/object_torus.o
+
+# target to build an object file
+cl_renderer/object_x/object_torus.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o
+.PHONY : cl_renderer/object_x/object_torus.c.o
+
+cl_renderer/object_x/object_torus.i: cl_renderer/object_x/object_torus.c.i
+
+.PHONY : cl_renderer/object_x/object_torus.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_torus.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.i
+.PHONY : cl_renderer/object_x/object_torus.c.i
+
+cl_renderer/object_x/object_torus.s: cl_renderer/object_x/object_torus.c.s
+
+.PHONY : cl_renderer/object_x/object_torus.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_torus.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
+.PHONY : cl_renderer/object_x/object_torus.c.s
 
 cl_renderer/scene/scene_delete.o: cl_renderer/scene/scene_delete.c.o
 
@@ -1284,32 +1446,32 @@ cl_renderer/scene/scene_remove_object.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
 .PHONY : cl_renderer/scene/scene_remove_object.c.s
 
-cl_renderer/scene/scene_set_ids.o: cl_renderer/scene/scene_set_ids.c.o
+cl_renderer/scene/scene_update.o: cl_renderer/scene/scene_update.c.o
 
-.PHONY : cl_renderer/scene/scene_set_ids.o
+.PHONY : cl_renderer/scene/scene_update.o
 
 # target to build an object file
-cl_renderer/scene/scene_set_ids.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o
-.PHONY : cl_renderer/scene/scene_set_ids.c.o
+cl_renderer/scene/scene_update.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o
+.PHONY : cl_renderer/scene/scene_update.c.o
 
-cl_renderer/scene/scene_set_ids.i: cl_renderer/scene/scene_set_ids.c.i
+cl_renderer/scene/scene_update.i: cl_renderer/scene/scene_update.c.i
 
-.PHONY : cl_renderer/scene/scene_set_ids.i
+.PHONY : cl_renderer/scene/scene_update.i
 
 # target to preprocess a source file
-cl_renderer/scene/scene_set_ids.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.i
-.PHONY : cl_renderer/scene/scene_set_ids.c.i
+cl_renderer/scene/scene_update.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.i
+.PHONY : cl_renderer/scene/scene_update.c.i
 
-cl_renderer/scene/scene_set_ids.s: cl_renderer/scene/scene_set_ids.c.s
+cl_renderer/scene/scene_update.s: cl_renderer/scene/scene_update.c.s
 
-.PHONY : cl_renderer/scene/scene_set_ids.s
+.PHONY : cl_renderer/scene/scene_update.s
 
 # target to generate assembly for a file
-cl_renderer/scene/scene_set_ids.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.s
-.PHONY : cl_renderer/scene/scene_set_ids.c.s
+cl_renderer/scene/scene_update.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.s
+.PHONY : cl_renderer/scene/scene_update.c.s
 
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
@@ -3613,8 +3775,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... rt"
 	@echo "... edit_cache"
+	@echo "... rt"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -3720,18 +3882,36 @@ help:
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
+	@echo "... cl_renderer/object_x/object_box.o"
+	@echo "... cl_renderer/object_x/object_box.i"
+	@echo "... cl_renderer/object_x/object_box.s"
 	@echo "... cl_renderer/object_x/object_cone.o"
 	@echo "... cl_renderer/object_x/object_cone.i"
 	@echo "... cl_renderer/object_x/object_cone.s"
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"
+	@echo "... cl_renderer/object_x/object_julia.o"
+	@echo "... cl_renderer/object_x/object_julia.i"
+	@echo "... cl_renderer/object_x/object_julia.s"
+	@echo "... cl_renderer/object_x/object_light_x.o"
+	@echo "... cl_renderer/object_x/object_light_x.i"
+	@echo "... cl_renderer/object_x/object_light_x.s"
+	@echo "... cl_renderer/object_x/object_moebius.o"
+	@echo "... cl_renderer/object_x/object_moebius.i"
+	@echo "... cl_renderer/object_x/object_moebius.s"
+	@echo "... cl_renderer/object_x/object_paraboloid.o"
+	@echo "... cl_renderer/object_x/object_paraboloid.i"
+	@echo "... cl_renderer/object_x/object_paraboloid.s"
 	@echo "... cl_renderer/object_x/object_plane.o"
 	@echo "... cl_renderer/object_x/object_plane.i"
 	@echo "... cl_renderer/object_x/object_plane.s"
 	@echo "... cl_renderer/object_x/object_sphere.o"
 	@echo "... cl_renderer/object_x/object_sphere.i"
 	@echo "... cl_renderer/object_x/object_sphere.s"
+	@echo "... cl_renderer/object_x/object_torus.o"
+	@echo "... cl_renderer/object_x/object_torus.i"
+	@echo "... cl_renderer/object_x/object_torus.s"
 	@echo "... cl_renderer/scene/scene_delete.o"
 	@echo "... cl_renderer/scene/scene_delete.i"
 	@echo "... cl_renderer/scene/scene_delete.s"
@@ -3744,9 +3924,9 @@ help:
 	@echo "... cl_renderer/scene/scene_remove_object.o"
 	@echo "... cl_renderer/scene/scene_remove_object.i"
 	@echo "... cl_renderer/scene/scene_remove_object.s"
-	@echo "... cl_renderer/scene/scene_set_ids.o"
-	@echo "... cl_renderer/scene/scene_set_ids.i"
-	@echo "... cl_renderer/scene/scene_set_ids.s"
+	@echo "... cl_renderer/scene/scene_update.o"
+	@echo "... cl_renderer/scene/scene_update.i"
+	@echo "... cl_renderer/scene/scene_update.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

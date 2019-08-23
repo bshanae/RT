@@ -11,3 +11,15 @@ static RT_F			f4_max_component(RT_F4 vector)
 {
 	return (fmax(vector.x, fmax(vector.y, vector.z)));
 }
+
+static RT_F4		f4_square(RT_F4 vector)
+{
+	return ((RT_F4)(
+		vector.x * vector.x
+		- vector.y * vector.y
+		- vector.z * vector.z
+		- vector.w * vector.w,
+		2 * vector.x * vector.y,
+		2 * vector.x * vector.z,
+		2 * vector.x * vector.w));
+}

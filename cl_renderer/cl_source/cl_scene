@@ -6,6 +6,8 @@ typedef struct		s_scene
 {
 	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
+	int				lights[RT_CL_SCENE_CAPACITY];
+    int 			lights_length;
 }					t_scene;
 
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)

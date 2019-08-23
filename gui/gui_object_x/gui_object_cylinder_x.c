@@ -36,10 +36,10 @@ void 					gui_object_cylinder_show
 void 					gui_object_cylinder_build
 						(t_gui_object_cylinder *gui, t_object *object)
 {
-	t_object_cone		*data;
+	t_object_cylinder	*data;
 
-	data = (t_object_cone *)object->data;
-	object->type = object_sphere;
+	data = (t_object_cylinder *)object->data;
+	object->type = object_cylinder;
 	data->top.x = gui_entry_get_f(gui->top_x);
 	data->top.y = gui_entry_get_f(gui->top_y);
 	data->top.z = gui_entry_get_f(gui->top_z);
@@ -47,4 +47,5 @@ void 					gui_object_cylinder_build
 	data->bottom.y = gui_entry_get_f(gui->bottom_y);
 	data->bottom.z = gui_entry_get_f(gui->bottom_z);
 	data->radius = gui_entry_get_f(gui->radius);
+	data->axis = f4_normalize(f4_sub(data->top, data->bottom));
 }

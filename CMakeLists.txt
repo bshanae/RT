@@ -102,9 +102,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -177,7 +177,10 @@ set(SOURCE_GUI_SCENE
 
 set(SOURCE_GUI_SETTINGS
 	./gui/gui_settings/gui_settings_new.c
-	./gui/gui_settings/gui_settings_delete.c gui/gui_settings/gui_settings_reset.c gui/gui_settings/gui_settings_apply.c gui/gui_settings/gui_settings_show.c)
+	./gui/gui_settings/gui_settings_delete.c
+	./gui/gui_settings/gui_settings_reset.c
+	./gui/gui_settings/gui_settings_apply.c
+	./gui/gui_settings/gui_settings_show.c)
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c
@@ -200,14 +203,22 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_camera_entry_x.c
 	./gui/gui_signal_x/gui_signal_camera_apply.c
 	./gui/gui_signal_x/gui_signal_camera_reset.c
-	./gui/gui_signal_x/gui_signal_camera_filter_x.c gui/gui_signal_x/gui_signal_settings_srgb.c gui/gui_signal_x/gui_signal_settings_light_x.c gui/gui_signal_x/gui_signal_settings_pt_russian.c gui/gui_signal_x/gui_signal_settings_tracing_x.c gui/gui_signal_x/gui_signal_settings_reset.c gui/gui_signal_x/gui_signal_settings_apply.c gui/gui_signal_x/gui_signal_settings_entry_x.c)
+	./gui/gui_signal_x/gui_signal_camera_filter_x.c
+	./gui/gui_signal_x/gui_signal_settings_srgb.c
+	./gui/gui_signal_x/gui_signal_settings_light_x.c
+	./gui/gui_signal_x/gui_signal_settings_pt_russian.c
+	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
+	./gui/gui_signal_x/gui_signal_settings_reset.c
+	./gui/gui_signal_x/gui_signal_settings_apply.c
+	./gui/gui_signal_x/gui_signal_settings_entry_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c
 	./gui/gui_signal_connect/gui_signal_connect_scene_edit.c
 	./gui/gui_signal_connect/gui_signal_connect_scene_add.c
 	./gui/gui_signal_connect/gui_signal_connect_camera.c
-	./gui/gui_signal_connect/gui_signal_connect_image.c gui/gui_signal_connect/gui_signal_connect_settings.c)
+	./gui/gui_signal_connect/gui_signal_connect_image.c
+	./gui/gui_signal_connect/gui_signal_connect_settings.c)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
@@ -240,14 +251,19 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
 	./cl_renderer/object_x/object_plane.c
 	./cl_renderer/object_x/object_cone.c
-	./cl_renderer/object_x/object_cylinder.c)
+	./cl_renderer/object_x/object_cylinder.c
+	./cl_renderer/object_x/object_box.c
+	./cl_renderer/object_x/object_paraboloid.c
+	./cl_renderer/object_x/object_moebius.c
+	./cl_renderer/object_x/object_torus.c
+	./cl_renderer/object_x/object_julia.c cl_renderer/object_x/object_light_x.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c
-	./cl_renderer/scene/scene_set_ids.c)
+	cl_renderer/scene/scene_update.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -257,7 +273,8 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_delete.c
 	./cl_renderer/camera/camera_move.c
 	./cl_renderer/camera/camera_rotate.c
-	./cl_renderer/camera/camera_apply.c gui/gui_camera/gui_camera_reset.c)
+	./cl_renderer/camera/camera_apply.c
+	./gui/gui_camera/gui_camera_reset.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -286,7 +303,8 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_delete.c
 	./cl_renderer/cl_renderer/cl_renderer_render.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
-	./cl_renderer/cl_renderer/cl_renderer_flag_x.c cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c)
+	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
+	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_F4}

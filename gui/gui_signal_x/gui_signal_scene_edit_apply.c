@@ -10,4 +10,7 @@ void				gui_signal_scene_edit_apply
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_apply(gui->scene->edit, object);
 	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 0.);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
+	cl_renderer_render(gui->renderer);
 }

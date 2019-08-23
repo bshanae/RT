@@ -37,6 +37,7 @@ void 					gui_object_cone_build
 						(t_gui_object_cone *gui, t_object *object)
 {
 	t_object_cone		*data;
+	RT_F4_API			temp_axis;
 
 	data = (t_object_cone *)object->data;
 	object->type = object_cone;
@@ -47,4 +48,7 @@ void 					gui_object_cone_build
 	data->bottom.y = gui_entry_get_f(gui->bottom_y);
 	data->bottom.z = gui_entry_get_f(gui->bottom_z);
 	data->radius = gui_entry_get_f(gui->radius);
+	temp_axis = f4_sub(data->bottom, data->top);
+	data->tangent = data->radius / f4_length(temp_axis);
+	data->axis = f4_normalize(temp_axis);
 }

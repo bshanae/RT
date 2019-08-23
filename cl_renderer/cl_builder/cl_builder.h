@@ -27,7 +27,8 @@ void					cl_builder_delete(t_cl_builder **builder);
 void					cl_builder_init_device(t_cl_builder *builder);
 void					cl_builder_create_context(t_cl_builder *builder);
 
-void					cl_builder_create_program(t_cl_builder *builder);
+void					cl_builder_create_program_a(t_cl_builder *builder);
+void					cl_builder_create_program_b(t_cl_builder *builder);
 void					cl_builder_create_kernel(t_cl_builder *builder);
 void					cl_builder_create_queue(t_cl_builder *builder);
 

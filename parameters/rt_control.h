@@ -3,10 +3,11 @@
 
 # define RT_FLOAT
 
-# define RT_NO_OPEN_CL
+//# define RT_NO_OPEN_CL
 
-//# define RT_DEBUG
-//# define RT_DEBUG_PIXEL_NUMBER 20
+# define RT_DEBUG
+# define RT_DEBUG_PIXEL_NUMBER 480 * 480
+# define RT_DEBUG_CL_RT
 
 # define RT_CL_UNIFORM
 

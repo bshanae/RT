@@ -6,6 +6,7 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 
 	new = malloc(sizeof(t_gui_camera));
 	new->control = RT_GUI_GET(builder, "camera_control");
+	new->control_silent = 0;
 	gtk_widget_set_opacity(GTK_WIDGET(new->control), 0.);
 	new->position_x = RT_GUI_GET(builder, "camera_position_x");
 	new->position_y = RT_GUI_GET(builder, "camera_position_y");

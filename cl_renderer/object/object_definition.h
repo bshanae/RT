@@ -6,12 +6,20 @@
 
 typedef enum		e_object_type
 {
+	object_light_ambient,
 	object_light_point,
 	object_light_direct,
 	object_sphere,
 	object_plane,
 	object_cone,
 	object_cylinder,
+	object_box,
+	object_paraboloid,
+	object_moebius,
+	object_torus,
+	object_tetrahedron,
+	object_mandelbulb,
+	object_julia,
 	object_end
 }					t_object_type;
 

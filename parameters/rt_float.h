@@ -11,9 +11,12 @@
 
 # ifdef RT_FLOAT
 #  define RT_F			float
+#  define RT_F2			float2
+#  define RT_F2_API		cl_float2
 #  define RT_F4			float4
 #  define RT_F4_API		cl_float4
 #  define RT_SQRT		sqrt
+#  define RT_POW		pow
 #  define RT_SIN		sin
 #  define RT_COS		cos
 #  define RT_MIN		fmin
@@ -34,9 +37,12 @@
 
 # ifdef RT_DOUBLE
 #  define RT_F			double
+#  define RT_F2			double2
+#  define RT_F2_API		cl_double2
 #  define RT_F4			double4
 #  define RT_F4_API		cl_double4
 #  define RT_SQRT		sqrt
+#  define RT_POW		pow
 #  define RT_SIN		sin
 #  define RT_COS		cos
 #  define RT_MIN		fmin

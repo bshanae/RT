@@ -7,7 +7,7 @@ void				cl_builder_create_context(t_cl_builder *builder)
 	ASSERT(builder->error == 0)
 }
 
-void				cl_builder_create_program(t_cl_builder *builder)
+void				cl_builder_create_program_a(t_cl_builder *builder)
 {
 	cl_program_concat(builder->program, CL_SOURCE_F4);
 	cl_program_concat(builder->program, CL_SOURCE_SETTINGS);
@@ -23,13 +23,23 @@ void				cl_builder_create_program(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PLANE);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CONE);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CYLINDER);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_BOX);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PARABOLOID);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MOEBIUS);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);
 	cl_program_concat(builder->program, CL_SOURCE_SCENE);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE);
-	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_EXPLICIT);
+	cl_program_concat(builder->program, CL_SOURCE_LIGHT_BASIC);
+	cl_program_concat(builder->program, CL_SOURCE_LIGHT_AREA);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_X);
 	cl_program_concat(builder->program, CL_SOURCE_MAIN);
+}
+
+void				cl_builder_create_program_b(t_cl_builder *builder)
+{
 	if (cl_program_build(builder->program, builder->context, CL_FLAGS) != 0)
 		cl_builder_log(builder);
 }
