@@ -5,16 +5,23 @@
 
 void				scene_test_fractal(t_scene *scene)
 {
-//	object_build(
-//		scene_get_space(scene), object_julia,
-//		MATERIAL_RED,
-//		50,
-//		(RT_F4_API){.1, .3, .5, .5});
-
 	object_build(
-		scene_get_space(scene), object_mandelbulb,
+		scene_get_space(scene), object_julia,
 		MATERIAL_RED,
-		50,	8.,	2.);
+		(RT_F4_API){0., 0., 10.},
+		100,
+		(RT_F4_API){.1, .3, .5, .5});
+//
+//	object_build(
+//		scene_get_space(scene), object_mandelbulb,
+//		MATERIAL_RED,
+//		(RT_F4_API){0., 0., 0.},
+//		50,	8.,	2.);
+//	object_build(
+//		scene_get_space(scene), object_tetrahedron,
+//		MATERIAL_RED,
+//		(RT_F4_API){0., 0., 0.},
+//		100,	10.875);
 
 	// LIGHT
 	object_build(
@@ -34,7 +41,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	scene_test_fractal(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 20.;
+	gui->renderer->data.camera->position.z = 40.;
 	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);

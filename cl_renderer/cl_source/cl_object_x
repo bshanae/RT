@@ -33,5 +33,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_julia(object, point));
 	else if (object->type == object_mandelbulb)
 		return (sdf_mandelbulb(object, point));
+	else if (object->type == object_tetrahedron)
+		return (sdf_tetrahedron(object, point));
 	return (RT_INFINITY);
 }

@@ -1,9 +1,10 @@
-// cl_object_mandelbulb/////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_object_mandelbulb ////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
 typedef struct				s_object_mandelbulb
 {
+	RT_F4					position;
 	int						iterations;
 	RT_F					power;
 	RT_F					bailout;
@@ -19,6 +20,7 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	RT_F					theta;
 
 	data = *(constant t_object_mandelbulb *)object->data;
+	point = data.position - point;
 	r = 0.;
     dr = 1.;
 

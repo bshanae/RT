@@ -4,12 +4,12 @@
 
 static RT_F			f4_min_component(RT_F4 vector)
 {
-	return (fmin(vector.x, fmin(vector.y, vector.z)));
+	return (RT_MIN(vector.x, RT_MIN(vector.y, vector.z)));
 }
 
 static RT_F			f4_max_component(RT_F4 vector)
 {
-	return (fmax(vector.x, fmax(vector.y, vector.z)));
+	return (RT_MAX(vector.x, RT_MAX(vector.y, vector.z)));
 }
 
 static RT_F4		f4_square(RT_F4 vector)
@@ -174,9 +174,9 @@ static t_color		color_unpack(RT_F4 source, int srgb)
 {
     if (srgb)
 		source = pow(source, .4f);
-	source.x = fmin(source.x, 1.f);
-	source.y = fmin(source.y, 1.f);
-	source.z = fmin(source.z, 1.f);
+	source.x = RT_MIN((RT_F)source.x, (RT_F)1.f);
+	source.y = RT_MIN((RT_F)source.y, (RT_F)1.f);
+	source.z = RT_MIN((RT_F)source.z, (RT_F)1.f);
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
@@ -947,8 +947,8 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	data = *(constant t_object_box *)object->data;
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
-	return (RT_MIN(RT_MAX(d.x, RT_MAX(d.y, d.z)), 0.f)
-		+ length((RT_F4){RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
+	return (RT_MIN((RT_F)RT_MAX(d.x, RT_MAX(d.y, d.z)), (RT_F)0.f)
+		+ length((RT_F4){RT_MAX((RT_F)d.x, (RT_F)0.f), RT_MAX((RT_F)d.y, (RT_F)0.f), (RT_F)RT_MAX((RT_F)d.z, 0.f), (RT_F)0.f}));
 }
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -957,6 +957,7 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 
 typedef struct		s_object_julia
 {
+	RT_F4			position;
 	int				iterations;
 	RT_F4			value;
 }					t_object_julia;
@@ -969,6 +970,7 @@ static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 
 	data = *(constant t_object_julia *)object->data;
 	md = 1.;
+	point = data.position - point;
 	mz = dot(point, point);
 
 	for (int iter = 0; iter < data.iterations; iter++)
@@ -983,7 +985,7 @@ static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 	return (.25 * RT_SQRT(mz / md) * log(mz));
 }
 
-// cl_object_mandelbulb/////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_object_mandelbulb ////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
 
@@ -1015,7 +1017,7 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
         theta = acos(point.z / r);
         phi = atan2(point.y, point.x);
 
-        dr = pow((RT_F)r, data.power - 1.) * data.power * dr + 1.;
+        dr = pow((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
         zr = pow(r, data.power);
         theta *= data.power;
         phi *= data.power;
@@ -1026,39 +1028,60 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	return (.5 * log(r) * r / dr);
 }
 
-/*
-	static double 				sdf_mandelbulb(constant t_object *obj,const t_vector3 *point)
-    {
-    	t_vector3		z;
-    	double 			dr;
-    	double 			r;
-    	double 			theta;
-    	double 			phi;
-    	double 			zr;
+// cl_object_tetrahedron ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    	r = 0.;
-    	dr = 1.;
-    	z = *point;
-    	int i;
-    	for (i = 0; i < obj->mandelbulb.iterations; i++)
-    	{
-    		r = vector3_length(&z);
-    		if (r > obj->mandelbulb.bailout)
-    			break ;
-    		theta = acos(z.z / r);
-    		phi = atan2(z.y, z.x);
-    		dr = pow(r, obj->mandelbulb.power - 1.) * obj->mandelbulb.power * dr + 1.;
+#include "rt_parameters.h"
 
-    		zr = pow(r, obj->mandelbulb.power);
-    		theta *= obj->mandelbulb.power;
-    		phi *= obj->mandelbulb.power;
+typedef struct				s_object_tetrahedron
+{
+	int						iterations;
+	RT_F					scale;
+}							t_object_tetrahedron;
 
-    		z = vector3_s_mul((t_vector3){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta)}, zr);
-    		vector3_add_eq(&z, point);
-    	}
-    	return (.5 * log(r) * r / dr);
-    }
-*/
+static RT_F					sdf_tetrahedron(constant t_object *object, RT_F4 point)
+{
+	t_object_tetrahedron	data;
+	RT_F4					vertex[4];
+	RT_F4					c;
+	RT_F					distance[2];
+
+	data = *(constant t_object_tetrahedron *)object->data;
+	vertex[0] = (RT_F4){1., 1., 1., 0.};
+	vertex[1] = (RT_F4){-1., -1., 1., 0.};
+	vertex[2] = (RT_F4){1., -1., -1., 0.};
+	vertex[3] = (RT_F4){-1., 1., -1., 0.};
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		c = vertex[0];
+        distance[0] = length(point - vertex[0]);
+
+        distance[1] = length(point - vertex[1]);
+        if (distance[1] < distance[0])
+        {
+        	c = vertex[1];
+        	distance[0] = distance[1];
+        }
+
+        distance[1] = length(point - vertex[2]);
+        if (distance[1] < distance[0])
+        {
+        	c = vertex[2];
+        	distance[0] = distance[1];
+        }
+
+        distance[1] = length(point - vertex[3]);
+        if (distance[1] < distance[0])
+        {
+        	c = vertex[3];
+        	distance[0] = distance[1];
+        }
+
+        point *= data.scale;
+        point -= c * (RT_F)(data.scale - 1.);
+	}
+	return (length(point) * pow(data.scale, (RT_F)(data.iterations)));
+}
 
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1095,8 +1118,11 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_julia(object, point));
 	else if (object->type == object_mandelbulb)
 		return (sdf_mandelbulb(object, point));
+	else if (object->type == object_tetrahedron)
+		return (sdf_tetrahedron(object, point));
 	return (RT_INFINITY);
 }
+
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"

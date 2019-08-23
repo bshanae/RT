@@ -4,6 +4,7 @@
 
 typedef struct		s_object_julia
 {
+	RT_F4			position;
 	int				iterations;
 	RT_F4			value;
 }					t_object_julia;
@@ -16,6 +17,7 @@ static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 
 	data = *(constant t_object_julia *)object->data;
 	md = 1.;
+	point = data.position - point;
 	mz = dot(point, point);
 
 	for (int iter = 0; iter < data.iterations; iter++)

@@ -9,12 +9,14 @@
 
 typedef struct				s_object_tetrahedron
 {
+	RT_F4_API				position;
 	int						iterations;
 	RT_F					scale;
 }							t_object_tetrahedron;
 
 typedef struct				s_object_mandelbulb
 {
+	RT_F4_API				position;
 	int						iterations;
 	RT_F					power;
 	RT_F					bailout;
@@ -22,6 +24,7 @@ typedef struct				s_object_mandelbulb
 
 typedef struct				s_object_julia
 {
+	RT_F4_API				position;
 	int						iterations;
 	RT_F4_API				value;
 }							t_object_julia;

@@ -27,6 +27,7 @@
 # define CL_SOURCE_OBJECT_BOX				"cl_object_box"
 # define CL_SOURCE_OBJECT_JULIA				"cl_object_julia"
 # define CL_SOURCE_OBJECT_MANDELBULB		"cl_object_mandelbulb"
+# define CL_SOURCE_OBJECT_TETRAHEDRON		"cl_object_tetrahedron"
 # define CL_SOURCE_OBJECT_X					"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL			"cl_object_normal"
 # define CL_SOURCE_SCENE					"cl_scene"
