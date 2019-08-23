@@ -22,8 +22,8 @@
 
 # define RT_CL_RM_MOD				1
 # define RT_CL_RM_STEP_LIMIT		512
-# define RT_CL_STEP_PART			1.
-# define RT_CL_RM_MAX_DISTANCE		200
+# define RT_CL_STEP_PART			0.6
+# define RT_CL_RM_MAX_DISTANCE		500
 
 # define RT_CL_ANTIALIASING			1
 # define RT_CL_FOCUS				0

@@ -379,6 +379,7 @@ static RT_F 		sdf_plane(constant t_object *object, RT_F4 point)
     data = *(constant t_object_plane *)object->data;
 	return (dot(data.normal, point - data.position));
 }
+
 // cl_object_cone /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -923,7 +924,8 @@ static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
 	RT_F2			q;
 
 	data = *(constant t_object_torus *)object->data;
-	q = (RT_F2)(length(data.position.xz - point.xz) - data.t_0, point.y);
+	point = data.position - point;
+	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
 }
 
@@ -943,17 +945,10 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	RT_F4			d;
 
 	data = *(constant t_object_box *)object->data;
+	point = data.position - point;
 	d = RT_ABS(point) - data.size;
-	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0) + length((RT_F4){RT_MAX((RT_F)d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f)}));
+	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), 0.f) + length({RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
 }
-
-/*
-	float sdBox( vec3 p, vec3 b )
-    {
-        vec3 d = abs(p) - b;
-        return RT_MIN(max(d.x,max(d.y,d.z)),0.0) + length(max(d,0.0));
-    }
-*/
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
 

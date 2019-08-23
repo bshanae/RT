@@ -90,6 +90,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_julia.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_tetrahedron.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
@@ -122,6 +123,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_fractal_mandelbulb.c.o"
   "rt.pdb"
   "rt"
 )

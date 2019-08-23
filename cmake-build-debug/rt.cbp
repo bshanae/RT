@@ -302,6 +302,12 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_julia.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_mandelbulb.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_fractal_tetrahedron.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c">
 			<Option target="rt"/>
 		</Unit>

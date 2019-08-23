@@ -8,7 +8,7 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static int					sdf_julia(constant t_object *object, RT_F4 point)
+static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
@@ -27,28 +27,5 @@ static int					sdf_julia(constant t_object *object, RT_F4 point)
 		if (mz > 4.)
 			break ;
 	}
-	return (.25 * sqrt(mz / md) * log(mz));
+	return (.25 * RT_SQRT(mz / md) * log(mz));
 }
-
-/*
-	static double 				sdf_julia(constant t_object *obj, const t_vector3 *point)
-    {
-    	t_vector4 z;
-    	double md;
-    	double mz;
-
-    	z = vector4_cast3(point);
-    	md = 1.;
-    	mz = vector4_dot(&z, &z);
-
-    	for (int i = 0; i < obj->julia.iterations; i++) {
-    		md *= 4. * mz;
-    		z = vector4_square(&z);
-    		vector4_s_add_eq(&z, (t_vector4)obj->julia.value);
-    		mz = vector4_dot(&z, &z);
-    		if (mz > 4.)
-    			break;
-    	}
-    	return (.25 * sqrt(mz / md) * log(mz));
-    }
-*/

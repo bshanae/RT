@@ -23,6 +23,10 @@ void				object_build(
         object_moebius_build(space, &args);
 	else if (type == object_julia)
 		object_fractal_julia_build(space, &args);
+	else if (type == object_tetrahedron)
+		object_fractal_tetrahedron_build(space, &args);
+	else if (type == object_mandelbulb)
+		object_fractal_mandelbulb_build(space, &args);
 	else if (type == object_torus)
 		object_torus_build(space, &args);
 	else if (type == object_box)
