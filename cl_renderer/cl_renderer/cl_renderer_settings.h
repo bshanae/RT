@@ -14,6 +14,9 @@ typedef struct 		s_cl_renderer_settings
 	int 			rm_step_limit;
 	RT_F			rm_step_part;
 	int 			rm_max_distance;
+	int				cartoon_effect; // todo: for this we need Phong lightning
+	int				filter_sepia;
+	int 			filter_stereoscopy;
 }					t_cl_renderer_settings;
 
 #endif

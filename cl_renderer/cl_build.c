@@ -39,6 +39,9 @@ typedef struct 		s_cl_renderer_settings
 	int 			rm_step_limit;
 	RT_F			rm_step_part;
 	int 			rm_max_distance;
+	int				cartoon_effect; // todo: for this we need Phong lightning
+	int				filter_sepia;
+	int 			filter_stereoscopy;
 }					t_cl_renderer_settings;
 
 // cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -90,6 +93,29 @@ static RT_F4		ray_intersect(t_ray *ray)
 {
 	return (ray->origin + ray->direction * ray->t);
 }
+// cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct		s_color
+{
+	unsigned char	r;
+	unsigned char	g;
+	unsigned char	b;
+	unsigned char	a;
+}					t_color;
+
+static t_color		color_unpack(RT_F4 source, constant t_cl_renderer_settings *settings)
+{
+
+    if (settings->srgb)
+		source = pow(source, .4f);
+	source.x = RT_MIN(source.x, 1.f);
+	source.y = RT_MIN(source.y, 1.f);
+	source.z = RT_MIN(source.z, 1.f);
+	if (settings->filter_sepia)
+		return(filter_sepia(&source));
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
+}
+
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
@@ -102,6 +128,14 @@ static void			filter_jitter(RT_F *x, global ulong *rng_state)
     else
     	dx = 1. - RT_SQRT((RT_F)2. - dx);
     *x += dx;
+}
+
+static t_color		filter_sepia(RT_F4 *source)
+{
+	unsigned char	sepia_color;
+
+	sepia_color = (255 * source->x) * 0.3 + (255 * source->y) * 0.59 + (255 * source->z) * 0.11;
+	return((t_color){sepia_color, sepia_color, sepia_color, 255});
 }
 
 // cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,26 +194,6 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global u
 		camera_focus(camera, &result, rng_state);
 	return (result);
 }
-// cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct		s_color
-{
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-	unsigned char	a;
-}					t_color;
-
-static t_color		color_unpack(RT_F4 source, int srgb)
-{
-    if (srgb)
-		source = pow(source, .4f);
-	source.x = RT_MIN((RT_F)source.x, (RT_F)1.f);
-	source.y = RT_MIN((RT_F)source.y, (RT_F)1.f);
-	source.z = RT_MIN((RT_F)source.z, (RT_F)1.f);
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
-}
-
 // cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_material
@@ -948,7 +962,7 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
 	return (RT_MIN((RT_F)RT_MAX(d.x, RT_MAX(d.y, d.z)), (RT_F)0.f)
-		+ length((RT_F4){RT_MAX((RT_F)d.x, (RT_F)0.f), RT_MAX((RT_F)d.y, (RT_F)0.f), (RT_F)RT_MAX((RT_F)d.z, 0.f), (RT_F)0.f}));
+		+ length((RT_F4){RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
 }
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -991,6 +1005,7 @@ static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
 
 typedef struct				s_object_mandelbulb
 {
+	RT_F4					position;
 	int						iterations;
 	RT_F					power;
 	RT_F					bailout;
@@ -1006,6 +1021,7 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	RT_F					theta;
 
 	data = *(constant t_object_mandelbulb *)object->data;
+	point = data.position - point;
 	r = 0.;
     dr = 1.;
 
@@ -1034,6 +1050,7 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 
 typedef struct				s_object_tetrahedron
 {
+	RT_F4					position;
 	int						iterations;
 	RT_F					scale;
 }							t_object_tetrahedron;
@@ -1046,6 +1063,7 @@ static RT_F					sdf_tetrahedron(constant t_object *object, RT_F4 point)
 	RT_F					distance[2];
 
 	data = *(constant t_object_tetrahedron *)object->data;
+	point = data.position - point;
 	vertex[0] = (RT_F4){1., 1., 1., 0.};
 	vertex[1] = (RT_F4){-1., -1., 1., 0.};
 	vertex[2] = (RT_F4){1., -1., -1., 0.};
@@ -1186,6 +1204,23 @@ static RT_F4		object_normal(
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection->hit));
 }
+// cl_rm_constructive_solid_geometry ///////////////////////////////////////////////////////////////////////////////////
+
+static	RT_F		csg_sdf_intersect(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_union(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MIN(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, -distance_b));
+}
+
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1455,7 +1490,7 @@ static void			radiance_add(
 
 		if (!scene_intersect(scene, intersection, settings))
 		{
-			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
+//			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
 			break;
 		}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -1528,7 +1563,7 @@ kernel void			cl_main(
 	//if (scene_intersect(scene, &intersection, settings))
 	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
-	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
 }
 
 

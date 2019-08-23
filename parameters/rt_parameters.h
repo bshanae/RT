@@ -20,9 +20,13 @@
 # define RT_CL_LIGHT_PB				1
 # define RT_CL_LIGHT_EXPLICIT		1
 
-# define RT_CL_RM_MOD				1
+# define RT_CL_CARTOON_EFFECT		0
+# define RT_CL_FILTER_SEPIA			0
+# define RT_CL_FILTER_STEREOSCOPY	1
+
+# define RT_CL_RM_MOD				0
 # define RT_CL_RM_STEP_LIMIT		512
-# define RT_CL_STEP_PART			0.4
+# define RT_CL_STEP_PART			1.
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1

@@ -1,0 +1,16 @@
+// cl_rm_constructive_solid_geometry ///////////////////////////////////////////////////////////////////////////////////
+
+static	RT_F		csg_sdf_intersect(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_union(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MIN(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, -distance_b));
+}

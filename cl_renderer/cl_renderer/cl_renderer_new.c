@@ -19,6 +19,9 @@ static void				static_data_init(t_cl_renderer *renderer)
 	renderer->data.settings.rm_step_limit = RT_CL_RM_STEP_LIMIT;
 	renderer->data.settings.rm_step_part = RT_CL_STEP_PART;
 	renderer->data.settings.rm_max_distance = RT_CL_RM_MAX_DISTANCE;
+	renderer->data.settings.cartoon_effect = RT_CL_CARTOON_EFFECT;
+	renderer->data.settings.filter_sepia = RT_CL_FILTER_SEPIA;
+	renderer->data.settings.filter_stereoscopy = RT_CL_FILTER_STEREOSCOPY;
 	i = 0;
 	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
 	srand(21);

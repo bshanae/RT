@@ -25,7 +25,7 @@ static void			radiance_add(
 
 		if (!scene_intersect(scene, intersection, settings))
 		{
-			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
+//			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
 			break;
 		}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))

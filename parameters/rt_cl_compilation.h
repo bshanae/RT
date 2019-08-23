@@ -31,6 +31,7 @@
 # define CL_SOURCE_OBJECT_X					"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL			"cl_object_normal"
 # define CL_SOURCE_SCENE					"cl_scene"
+# define CL_SOURCE_RM_CSG					"cl_rm_constructive_solid_geometry"
 # define CL_SOURCE_SAMPLE					"cl_sample"
 # define CL_SOURCE_RADIANCE_EXPLICIT		"cl_radiance_explicit"
 # define CL_SOURCE_RADIANCE_X				"cl_radiance_x"

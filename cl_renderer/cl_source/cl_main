@@ -22,5 +22,5 @@ kernel void			cl_main(
 	//if (scene_intersect(scene, &intersection, settings))
 	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
-	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings->srgb);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
 }
