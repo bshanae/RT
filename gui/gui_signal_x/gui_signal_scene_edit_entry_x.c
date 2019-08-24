@@ -43,3 +43,12 @@ void 				gui_signal_scene_edit_entry_delete
 	if (old[0] && strtod(old, NULL) != strtod(gtk_entry_get_text(entry), NULL))
 		gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
 }
+
+void 				gui_signal_scene_edit_entry_changed
+					(GtkWidget *widget, gpointer ptr)
+{
+	t_gui			*gui;
+
+	gui = (t_gui *)ptr;
+	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+}

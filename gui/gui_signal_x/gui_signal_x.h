@@ -10,7 +10,7 @@ void 				gui_signal_exit
 					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_key
 					(GtkWidget *widget, GdkEventKey *key, gpointer ptr);
-
+gboolean			gui_signal_repeated(gpointer ptr);
 gboolean 			gui_signal_image_click
 					(GtkWidget *event_box, GdkEventButton *event, gpointer ptr);
 
@@ -33,9 +33,9 @@ void				gui_signal_scene_edit_entry_insert
 					int length, int *position, gpointer ptr);
 void 				gui_signal_scene_edit_entry_delete
 					(GtkEntry *entry, int start, int end, gpointer ptr);
-void 				gui_signal_scene_edit_select
+void 				gui_signal_scene_edit_entry_changed
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_scene_edit_name
+void 				gui_signal_scene_edit_select
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_reset
 					(GTK_SIGNAL_SIGNATURE);
@@ -62,9 +62,11 @@ void 				gui_signal_scene_add_response_yes
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_scene_add_response_no
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_scene_add_type_auto
+void 				gui_signal_scene_add_type
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_scene_add_type_manual
+void				gui_signal_scene_add_material_color
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_add_material_emission
 					(GTK_SIGNAL_SIGNATURE);
 
 void				gui_signal_settings_entry_changed
@@ -90,7 +92,5 @@ void 				gui_signal_settings_reset
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_apply
 					(GTK_SIGNAL_SIGNATURE);
-
-
 
 #endif

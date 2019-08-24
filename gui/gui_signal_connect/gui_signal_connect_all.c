@@ -1,13 +1,34 @@
 #include "gui_signal_connect.h"
 
-void				test(GtkWidget *widget, gpointer ptr)
+gboolean			task_add(gpointer ptr)
 {
-	printf("hi\n");
+	t_gui			*gui;
+
+	gui = (t_gui *)ptr;
+	g_thread_pool_push(gui->pool, gui, NULL);
+	return (TRUE);
 }
+
+int					i = 0;
+
+void				task_execute(gpointer user, gpointer user_ptr)
+{
+	t_gui			*gui;
+
+	gui = (t_gui *)user_ptr;
+	if (g_thread_pool_unprocessed(gui->pool) > 10)
+		return ;
+	printf("%d : %d\n", i++, g_thread_pool_unprocessed(gui->pool));
+	sleep(3);
+}
+
 
 void 				gui_signal_connect_all(t_gui *gui)
 {
-	RT_GUI_CONNECT(gui->builder, test);
+	gui->pool = g_thread_pool_new(task_execute, gui, 1, FALSE, NULL);
+
+	g_timeout_add(200, (GSourceFunc)task_add, gui);
+
 
 	RT_GUI_CONNECT(gui->builder, gui_signal_exit);
 	RT_GUI_CONNECT(gui->builder, gui_signal_key);

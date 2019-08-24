@@ -9,120 +9,367 @@
 
 # include <gtk/gtk.h>
 
-typedef struct 			s_gui_init_sphere
+/*
+********************************************************************************
+**							LIGHT_POINT
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_light_point
 {
-	char				box[64];
-	char				position_x[64];
-	char				position_y[64];
-	char				position_z[64];
-	char				radius[64];
-}						t_gui_init_sphere;
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+}							t_gui_init_light_point;
 
-typedef struct 			s_gui_object_sphere
+typedef struct 				s_gui_object_light_point
 {
-	GtkBox				*box;
-	GtkEntry			*position_x;
-	GtkEntry			*position_y;
-	GtkEntry			*position_z;
-	GtkEntry			*radius;
-}						t_gui_object_sphere;
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+}							t_gui_object_light_point;
 
-t_gui_object_sphere		gui_object_sphere_set
-						(t_gui_init_sphere *init, GtkBuilder *builder);
-void					gui_object_sphere_show
-						(t_gui_object_sphere *gui, t_object *object);
-void 					gui_object_sphere_build
-						(t_gui_object_sphere *gui, t_object *object);
+t_gui_object_light_point	gui_object_light_point_init
+							(t_gui_init_light_point *init, GtkBuilder *builder);
+void						gui_object_light_point_get
+							(t_gui_object_light_point *gui, t_object *object);
+void 						gui_object_light_point_set
+							(t_gui_object_light_point *gui, t_object *object);
 
-typedef struct 			s_gui_init_plane
+/*
+********************************************************************************
+**							LIGHT_DIRECT
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_light_direct
 {
-	char				box[64];
-	char				position_x[64];
-	char				position_y[64];
-	char				position_z[64];
-	char				normal_x[64];
-	char				normal_y[64];
-	char				normal_z[64];
-}						t_gui_init_plane;
+	char					direction_x[64];
+	char					direction_y[64];
+	char					direction_z[64];
+}							t_gui_init_light_direct;
 
-typedef struct 			s_gui_object_plane
+typedef struct 				s_gui_object_light_direct
 {
-	GtkBox				*box;
-	GtkEntry			*position_x;
-	GtkEntry			*position_y;
-	GtkEntry			*position_z;
-	GtkEntry			*normal_x;
-	GtkEntry			*normal_y;
-	GtkEntry			*normal_z;
-}						t_gui_object_plane;
+	GtkEntry				*direction_x;
+	GtkEntry				*direction_y;
+	GtkEntry				*direction_z;
+}							t_gui_object_light_direct;
 
-t_gui_object_plane		gui_object_plane_set
-						(t_gui_init_plane *init, GtkBuilder *builder);
-void 					gui_object_plane_show
-						(t_gui_object_plane *gui, t_object *object);
-void 					gui_object_plane_build
-						(t_gui_object_plane *gui, t_object *object);
+t_gui_object_light_direct	gui_object_light_direct_init
+							(t_gui_init_light_direct *i, GtkBuilder *builder);
+void						gui_object_light_direct_get
+							(t_gui_object_light_direct *gui, t_object *object);
+void 						gui_object_light_direct_set
+							(t_gui_object_light_direct *gui, t_object *object);
 
-typedef struct			s_gui_init_cone
+/*
+********************************************************************************
+**							SPHERE
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_sphere
 {
-	char				box[64];
-	char				top_x[64];
-	char				top_y[64];
-	char				top_z[64];
-	char				bottom_x[64];
-	char				bottom_y[64];
-	char				bottom_z[64];
-	char				radius[64];
-}						t_gui_init_cone;
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					radius[64];
+}							t_gui_init_sphere;
 
-typedef struct			s_gui_object_cone
+typedef struct 				s_gui_object_sphere
 {
-	GtkBox				*box;
-	GtkEntry			*top_x;
-	GtkEntry			*top_y;
-	GtkEntry			*top_z;
-	GtkEntry			*bottom_x;
-	GtkEntry			*bottom_y;
-	GtkEntry			*bottom_z;
-	GtkEntry			*radius;
-}						t_gui_object_cone;
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*radius;
+}							t_gui_object_sphere;
 
-t_gui_object_cone		gui_object_cone_set
-						(t_gui_init_cone *init, GtkBuilder *builder);
-void 					gui_object_cone_show
-						(t_gui_object_cone *gui, t_object *object);
-void 					gui_object_cone_build
-						(t_gui_object_cone *gui, t_object *object);
+t_gui_object_sphere			gui_object_sphere_init
+							(t_gui_init_sphere *init, GtkBuilder *builder);
+void						gui_object_sphere_get
+							(t_gui_object_sphere *gui, t_object *object);
+void 						gui_object_sphere_set
+							(t_gui_object_sphere *gui, t_object *object);
 
-typedef struct			s_gui_init_cylinder
+/*
+********************************************************************************
+**							PLANE
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_plane
 {
-	char				box[64];
-	char				top_x[64];
-	char				top_y[64];
-	char				top_z[64];
-	char				bottom_x[64];
-	char				bottom_y[64];
-	char				bottom_z[64];
-	char				radius[64];
-}						t_gui_init_cylinder;
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					normal_x[64];
+	char					normal_y[64];
+	char					normal_z[64];
+}							t_gui_init_plane;
 
-typedef struct			s_gui_object_cylinder
+typedef struct 				s_gui_object_plane
 {
-	GtkBox				*box;
-	GtkEntry			*top_x;
-	GtkEntry			*top_y;
-	GtkEntry			*top_z;
-	GtkEntry			*bottom_x;
-	GtkEntry			*bottom_y;
-	GtkEntry			*bottom_z;
-	GtkEntry			*radius;
-}						t_gui_object_cylinder;
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*normal_x;
+	GtkEntry				*normal_y;
+	GtkEntry				*normal_z;
+}							t_gui_object_plane;
 
-t_gui_object_cylinder	gui_object_cylinder_set
-						(t_gui_init_cylinder *init, GtkBuilder *builder);
-void 					gui_object_cylinder_show
-						(t_gui_object_cylinder *gui, t_object *object);
-void 					gui_object_cylinder_build
-						(t_gui_object_cylinder *gui, t_object *object);
+t_gui_object_plane			gui_object_plane_init
+							(t_gui_init_plane *init, GtkBuilder *builder);
+void 						gui_object_plane_get
+							(t_gui_object_plane *gui, t_object *object);
+void 						gui_object_plane_set
+							(t_gui_object_plane *gui, t_object *object);
+
+/*
+********************************************************************************
+**							CONE
+********************************************************************************
+*/
+
+typedef struct				s_gui_init_cone
+{
+	char					top_x[64];
+	char					top_y[64];
+	char					top_z[64];
+	char					bottom_x[64];
+	char					bottom_y[64];
+	char					bottom_z[64];
+	char					radius[64];
+}							t_gui_init_cone;
+
+typedef struct				s_gui_object_cone
+{
+	GtkBox					*box;
+	GtkEntry				*top_x;
+	GtkEntry				*top_y;
+	GtkEntry				*top_z;
+	GtkEntry				*bottom_x;
+	GtkEntry				*bottom_y;
+	GtkEntry				*bottom_z;
+	GtkEntry				*radius;
+}							t_gui_object_cone;
+
+t_gui_object_cone			gui_object_cone_init
+							(t_gui_init_cone *init, GtkBuilder *builder);
+void 						gui_object_cone_get
+							(t_gui_object_cone *gui, t_object *object);
+void 						gui_object_cone_set
+							(t_gui_object_cone *gui, t_object *object);
+
+/*
+********************************************************************************
+**							CYLINDER
+********************************************************************************
+*/
+
+typedef struct				s_gui_init_cylinder
+{
+	char					top_x[64];
+	char					top_y[64];
+	char					top_z[64];
+	char					bottom_x[64];
+	char					bottom_y[64];
+	char					bottom_z[64];
+	char					radius[64];
+}							t_gui_init_cylinder;
+
+typedef struct				s_gui_object_cylinder
+{
+	GtkEntry				*top_x;
+	GtkEntry				*top_y;
+	GtkEntry				*top_z;
+	GtkEntry				*bottom_x;
+	GtkEntry				*bottom_y;
+	GtkEntry				*bottom_z;
+	GtkEntry				*radius;
+}							t_gui_object_cylinder;
+
+t_gui_object_cylinder		gui_object_cylinder_init
+							(t_gui_init_cylinder *init, GtkBuilder *builder);
+void 						gui_object_cylinder_get
+							(t_gui_object_cylinder *gui, t_object *object);
+void 						gui_object_cylinder_set
+							(t_gui_object_cylinder *gui, t_object *object);
+
+/*
+********************************************************************************
+**							BOX
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_box
+{
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					size_x[64];
+	char					size_y[64];
+	char					size_z[64];
+}							t_gui_init_box;
+
+typedef struct 				s_gui_object_box
+{
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*size_x;
+	GtkEntry				*size_y;
+	GtkEntry				*size_z;
+}							t_gui_object_box;
+
+t_gui_object_box			gui_object_box_init
+							(t_gui_init_box *init, GtkBuilder *builder);
+void						gui_object_box_get
+							(t_gui_object_box *gui, t_object *object);
+void 						gui_object_box_set
+							(t_gui_object_box *gui, t_object *object);
+
+/*
+********************************************************************************
+**							PARABOLOID
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_paraboloid
+{
+	char					extremum_x[64];
+	char					extremum_y[64];
+	char					extremum_z[64];
+	char					axis_x[64];
+	char					axis_y[64];
+	char					axis_z[64];
+	char					radius[64];
+}							t_gui_init_paraboloid;
+
+typedef struct 				s_gui_object_paraboloid
+{
+	GtkEntry				*extremum_x;
+	GtkEntry				*extremum_y;
+	GtkEntry				*extremum_z;
+	GtkEntry				*axis_x;
+	GtkEntry				*axis_y;
+	GtkEntry				*axis_z;
+	GtkEntry				*radius;
+}							t_gui_object_paraboloid;
+
+t_gui_object_paraboloid		gui_object_paraboloid_init
+							(t_gui_init_paraboloid *init, GtkBuilder *builder);
+void						gui_object_paraboloid_get
+							(t_gui_object_paraboloid *gui, t_object *object);
+void 						gui_object_paraboloid_set
+							(t_gui_object_paraboloid *gui, t_object *object);
+
+/*
+********************************************************************************
+**							MOEBIUS
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_moebius
+{
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					radius[64];
+	char					width[64];
+}							t_gui_init_moebius;
+
+typedef struct 				s_gui_object_moebius
+{
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*radius;
+	GtkEntry				*width;
+}							t_gui_object_moebius;
+
+t_gui_object_moebius		gui_object_moebius_init
+							(t_gui_init_moebius *init, GtkBuilder *builder);
+void						gui_object_moebius_get
+							(t_gui_object_moebius *gui, t_object *object);
+void 						gui_object_moebius_set
+							(t_gui_object_moebius *gui, t_object *object);
+
+/*
+********************************************************************************
+**							TORUS
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_torus
+{
+}							t_gui_init_torus;
+
+typedef struct 				s_gui_object_torus
+{
+}							t_gui_object_torus;
+
+t_gui_object_torus			gui_object_torus_init
+							(t_gui_init_torus *init, GtkBuilder *builder);
+void						gui_object_torus_get
+							(t_gui_object_torus *gui, t_object *object);
+void 						gui_object_torus_set
+							(t_gui_object_torus *gui, t_object *object);
+
+/*
+********************************************************************************
+**							MANDELBULB
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_mandelbulb
+{
+	char					iterations[64];
+	char					power[64];
+}							t_gui_init_mandelbulb;
+
+typedef struct 				s_gui_object_mandelbulb
+{
+	GtkEntry				*iterations;
+	GtkEntry				*power;
+}							t_gui_object_mandelbulb;
+
+t_gui_object_mandelbulb		gui_object_mandelbulb_init
+							(t_gui_init_mandelbulb *init, GtkBuilder *builder);
+void						gui_object_mandelbulb_get
+							(t_gui_object_mandelbulb *gui, t_object *object);
+void 						gui_object_mandelbulb_set
+							(t_gui_object_mandelbulb *gui, t_object *object);
+
+/*
+********************************************************************************
+**							JULIA
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_julia
+{
+	char					iterations[64];
+	char					value_x[64];
+	char					value_y[64];
+	char					value_z[64];
+	char					value_w[64];
+}							t_gui_init_julia;
+
+typedef struct 				s_gui_object_julia
+{
+	GtkEntry				*iterations;
+	GtkEntry				*value_x;
+	GtkEntry				*value_y;
+	GtkEntry				*value_z;
+	GtkEntry				*value_w;
+}							t_gui_object_julia;
+
+t_gui_object_julia			gui_object_julia_init
+							(t_gui_init_julia *init, GtkBuilder *builder);
+void						gui_object_julia_get
+							(t_gui_object_julia *gui, t_object *object);
+void 						gui_object_julia_set
+							(t_gui_object_julia *gui, t_object *object);
 
 #endif

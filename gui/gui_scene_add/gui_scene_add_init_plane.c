@@ -1,0 +1,15 @@
+#include "gui_scene_add.h"
+
+void 					gui_scene_add_init_plane
+						(t_gui_scene_add *add, GtkBuilder *builder)
+{
+	t_gui_init_plane	init;
+
+	ft_strcpy(init.position_x , "object_add_plane_position_x");
+	ft_strcpy(init.position_y , "object_add_plane_position_y");
+	ft_strcpy(init.position_z , "object_add_plane_position_z");
+	ft_strcpy(init.normal_x , "object_add_plane_normal_x");
+	ft_strcpy(init.normal_y , "object_add_plane_normal_y");
+	ft_strcpy(init.normal_z , "object_add_plane_normal_z");
+	add->plane = gui_object_plane_init(&init, builder);
+}

@@ -31,6 +31,8 @@ void				object_build(
 		object_moebius_build(space, &args);
 	else if (type == object_torus)
 		object_torus_build(space, &args);
+	else if (type == object_mandelbulb)
+		;//object_mandelbulb_build(space, &args);
 	else if (type == object_julia)
 		object_julia_build(space, &args);
 	space->material = material;

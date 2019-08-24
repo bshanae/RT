@@ -16,6 +16,7 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 	new->rotation_z = RT_GUI_GET(builder, "camera_rotation_z");
 	new->antialiasing = RT_GUI_GET(builder, "camera_filter_antialiasing");
 	new->focus = RT_GUI_GET(builder, "camera_filter_focus");
+	new->focus_box = RT_GUI_GET(builder, "camera_filter_focus_box");
 	new->focal_length = RT_GUI_GET(builder, "camera_filter_focal_length");
 	new->aperture_size = RT_GUI_GET(builder, "camera_filter_aperture_size");
 	return (new);

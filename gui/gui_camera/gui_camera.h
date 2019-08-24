@@ -20,6 +20,7 @@ typedef struct		s_gui_camera
 	GtkEntry		*rotation_z;
 	GtkSwitch		*antialiasing;
 	GtkSwitch		*focus;
+	GtkWidget		*focus_box;
 	GtkEntry		*focal_length;
 	GtkEntry		*aperture_size;
 }					t_gui_camera;
@@ -30,5 +31,6 @@ void 				gui_camera_delete(t_gui_camera **camera);
 void 				gui_camera_show(t_gui_camera *gui, const t_camera *camera);
 void 				gui_camera_reset(t_gui_camera *gui, const t_camera *camera);
 void 				gui_camera_apply(t_gui_camera *gui, t_camera *camera);
-
+void 				gui_camera_focus_enable(t_gui_camera *camera);
+void 				gui_camera_focus_disable(t_gui_camera *camera);
 #endif

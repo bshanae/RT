@@ -33,12 +33,12 @@ typedef struct 		s_gui_material
 	GtkColorButton	*emission_button;
 }					t_gui_material;
 
-t_gui_material		gui_material_set
+t_gui_material		gui_material_init
 					(const t_gui_init_material *init, GtkBuilder *builder);
 
-void 				gui_material_show
+void 				gui_material_get
 					(t_gui_material *gui, t_material *material);
-void 				gui_material_build
+void 				gui_material_set
 					(t_gui_material *gui, t_material *material);
 
 #endif

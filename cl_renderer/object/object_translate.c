@@ -2,7 +2,9 @@
 
 const char 			*object_translate(t_object_type type)
 {
-	if (type == object_light_point)
+	if (type == object_light_ambient)
+		return ("Ambient Light");
+	else if (type == object_light_point)
 		return ("Point Light");
 	else if (type == object_light_direct)
 		return ("Direct Light");

@@ -20,6 +20,10 @@ gboolean			gui_signal_camera_filter_focus
 
 	gui = (t_gui *)ptr;
 	gui->renderer->data.camera->focus = state;
+	if (state)
+		gui_camera_focus_enable(gui->camera);
+	else
+		gui_camera_focus_disable(gui->camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);

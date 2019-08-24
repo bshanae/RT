@@ -102,9 +102,9 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	"-framework OpenCL"
-#	"OpenCL"
-#	"m"
+#	"-framework OpenCL"
+	"OpenCL"
+	"m"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -124,52 +124,73 @@ set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
-	./gui/gui_camera/gui_camera_apply.c)
+	./gui/gui_camera/gui_camera_apply.c
+	gui/gui_camera/gui_camera_focus_x.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_sphere_x.c
 	./gui/gui_object_x/gui_object_plane_x.c
 	./gui/gui_object_x/gui_object_cone_x.c
-	./gui/gui_object_x/gui_object_cylinder_x.c)
+	./gui/gui_object_x/gui_object_cylinder_x.c
+	./gui/gui_object_x/gui_object_light_point_x.c
+	./gui/gui_object_x/gui_object_light_direct_x.c
+	./gui/gui_object_x/gui_object_box_x.c
+	./gui/gui_object_x/gui_object_paraboloid_x.c
+	./gui/gui_object_x/gui_object_moebius_x.c
+	./gui/gui_object_x/gui_object_torus_x.c
+	./gui/gui_object_x/gui_object_mandelbulb_x.c
+	./gui/gui_object_x/gui_object_julia_x.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
 	./gui/gui_color/gui_color_from_f4.c)
 
 set(SOURCE_GUI_MATERIAL
-	./gui/gui_material/gui_material_set.c
-	./gui/gui_material/gui_material_show.c
-	./gui/gui_material/gui_material_build.c
-	./gui/gui_scene_add/gui_scene_add_set_material.c)
+	./gui/gui_material/gui_material_init.c
+	gui/gui_material/gui_material_get.c
+	gui/gui_material/gui_material_set.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
 	./gui/gui_scene_edit/gui_scene_edit_delete.c
 	./gui/gui_scene_edit/gui_scene_edit_update.c
 	./gui/gui_scene_edit/gui_scene_edit_gen_name.c
-	./gui/gui_scene_edit/gui_scene_edit_get_object.c
 	./gui/gui_scene_edit/gui_scene_edit_show.c
-	./gui/gui_scene_edit/gui_scene_edit_set_sphere.c
-	./gui/gui_scene_edit/gui_scene_edit_set_plane.c
-	./gui/gui_scene_edit/gui_scene_edit_set_cone.c
-	./gui/gui_scene_edit/gui_scene_edit_set_cylinder.c
-	./gui/gui_scene_edit/gui_scene_edit_set_material.c
-	gui/gui_scene_edit/gui_scene_edit_apply.c
-	./gui/gui_signal_x/gui_signal_scene_edit_name.c)
+	./gui/gui_scene_edit/gui_scene_edit_init_sphere.c
+	./gui/gui_scene_edit/gui_scene_edit_init_plane.c
+	./gui/gui_scene_edit/gui_scene_edit_init_cone.c
+	./gui/gui_scene_edit/gui_scene_edit_init_cylinder.c
+	./gui/gui_scene_edit/gui_scene_edit_init_material.c
+	./gui/gui_scene_edit/gui_scene_edit_apply.c
+	./gui/gui_scene_edit/gui_scene_edit_init_light_x.c
+	./gui/gui_scene_edit/gui_scene_edit_init_box.c
+	./gui/gui_scene_edit/gui_scene_edit_init_paraboloid.c
+	./gui/gui_scene_edit/gui_scene_edit_init_moebius.c
+	./gui/gui_scene_edit/gui_scene_edit_init_torus.c
+	./gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
+	./gui/gui_scene_edit/gui_scene_edit_init_julia.c
+	./gui/gui_scene_edit/gui_scene_edit_init_own.c
+	./gui/gui_scene_edit/gui_scene_edit_material_color_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
 	./gui/gui_scene_add/gui_scene_add_delete.c
-	./gui/gui_scene_add/gui_scene_add_set_sphere.c
+	./gui/gui_scene_add/gui_scene_add_init_sphere.c
 	./gui/gui_scene_add/gui_scene_add_update.c
-	./gui/gui_scene_add/gui_scene_add_show.c
-	./gui/gui_scene_add/gui_scene_add_get_object.c
-	./gui/gui_scene_add/gui_scene_add_set_plane.c
+	./gui/gui_scene_add/gui_scene_add_init_plane.c
 	./gui/gui_scene_add/gui_scene_add_gen_name.c
 	./gui/gui_scene_add/gui_scene_add_build_object.c
-	./gui/gui_scene_add/gui_scene_add_set_cone.c
-	./gui/gui_scene_add/gui_scene_add_set_cylinder.c
-	)
+	./gui/gui_scene_add/gui_scene_add_init_cone.c
+	./gui/gui_scene_add/gui_scene_add_init_cylinder.c
+	./gui/gui_scene_add/gui_scene_add_init_material.c
+	./gui/gui_scene_add/gui_scene_add_init_light_x.c
+	./gui/gui_scene_add/gui_scene_add_init_box.c
+	./gui/gui_scene_add/gui_scene_add_init_paraboloid.c
+	./gui/gui_scene_add/gui_scene_add_init_moebius.c
+	./gui/gui_scene_add/gui_scene_add_init_torus.c
+	./gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
+	./gui/gui_scene_add/gui_scene_add_init_julia.c
+	gui/gui_scene_add/gui_scene_add_init_own.c gui/gui_scene_add/gui_scene_add_material_state_x.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -193,7 +214,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_add_response_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_add.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove.c
-	./gui/gui_signal_x/gui_signal_scene_add_type_x.c
+	gui/gui_signal_x/gui_signal_scene_add_type.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
 	./gui/gui_signal_x/gui_signal_image_click.c
 	./gui/gui_signal_x/gui_signal_scene_edit_reset.c
@@ -210,7 +231,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
 	./gui/gui_signal_x/gui_signal_settings_apply.c
-	./gui/gui_signal_x/gui_signal_settings_entry_x.c)
+	./gui/gui_signal_x/gui_signal_settings_entry_x.c gui/gui_signal_x/gui_signal_repeated.c gui/gui_signal_x/gui_signal_scene_add_material_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT
 	./gui/gui_signal_connect/gui_signal_connect_all.c

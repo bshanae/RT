@@ -16,6 +16,7 @@ typedef struct		s_gui
 	GtkCssProvider	*css_provider;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
+	GThreadPool		*pool;
 	t_gui_camera	*camera;
 	t_gui_scene		*scene;
 	t_gui_settings	*settings;

@@ -6,7 +6,6 @@ void						object_light_ambient_build
 	t_object_light_ambient	*data;
 
 	data = (t_object_light_ambient *)space->data;
-	data->color = va_arg(*args, RT_F4_API);
 	space->type = object_light_ambient;
 }
 
@@ -17,7 +16,6 @@ void						object_light_point_build
 
 	data = (t_object_light_point *)space->data;
 	data->position = va_arg(*args, RT_F4_API);
-	data->color = va_arg(*args, RT_F4_API);
 	space->type = object_light_point;
 }
 
@@ -29,6 +27,5 @@ void						object_light_direct_build
 
 	data = (t_object_light_direct *)space->data;
 	data->direction = va_arg(*args, RT_F4_API);
-	data->color = va_arg(*args, RT_F4_API);
-	space->type = object_light_point;
+	space->type = object_light_direct;
 }

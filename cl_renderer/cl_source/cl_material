@@ -4,7 +4,6 @@ typedef struct 		s_material
 {
 	RT_F4			color;
 	RT_F4			emission;
-	RT_F			diffuse;
 	RT_F			specular;
 	RT_F			reflectance;
 	RT_F			transparence;

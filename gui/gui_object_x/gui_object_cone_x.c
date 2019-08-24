@@ -1,11 +1,10 @@
 #include "gui_object_x.h"
 
-t_gui_object_cone		gui_object_cone_set
+t_gui_object_cone		gui_object_cone_init
 						(t_gui_init_cone *init, GtkBuilder *builder)
 {
 	t_gui_object_cone	cone;
 
-	cone.box = RT_GUI_GET(builder, init->box);
 	cone.top_x = RT_GUI_GET(builder, init->top_x);
 	cone.top_y = RT_GUI_GET(builder, init->top_y);
 	cone.top_z = RT_GUI_GET(builder, init->top_z);
@@ -16,14 +15,12 @@ t_gui_object_cone		gui_object_cone_set
 	return (cone);
 }
 
-void 					gui_object_cone_show
+void 					gui_object_cone_get
 						(t_gui_object_cone *gui, t_object *object)
 {
 	t_object_cone		*data;
 
-	data = object ? (t_object_cone *)object->data : NULL;
-	if (!data)
-		return ;
+	data = (t_object_cone *)object->data;
 	gui_entry_set_f(gui->top_x, data->top.x);
 	gui_entry_set_f(gui->top_y, data->top.y);
 	gui_entry_set_f(gui->top_z, data->top.z);
@@ -33,14 +30,13 @@ void 					gui_object_cone_show
 	gui_entry_set_f(gui->radius, data->radius);
 }
 
-void 					gui_object_cone_build
+void 					gui_object_cone_set
 						(t_gui_object_cone *gui, t_object *object)
 {
 	t_object_cone		*data;
 	RT_F4_API			temp_axis;
 
 	data = (t_object_cone *)object->data;
-	object->type = object_cone;
 	data->top.x = gui_entry_get_f(gui->top_x);
 	data->top.y = gui_entry_get_f(gui->top_y);
 	data->top.z = gui_entry_get_f(gui->top_z);

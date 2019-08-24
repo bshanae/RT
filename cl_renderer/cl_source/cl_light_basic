@@ -4,19 +4,16 @@
 
 typedef struct			s_object_light_ambient
 {
-	RT_F4				color;
 }						t_object_light_ambient;
 
 typedef struct			s_object_light_point
 {
 	RT_F4				position;
-	RT_F4				color;
 }						t_object_light_point;
 
 typedef struct			s_object_light_direct
 {
 	RT_F4				direction;
-	RT_F4				color;
 }						t_object_light_direct;
 
 static RT_F4			static_get_direction(
@@ -30,41 +27,29 @@ static RT_F4			static_get_direction(
 	return (0.);
 }
 
-static RT_F4			static_get_color
-						(constant t_object *object)
-{
-	if (object->type == object_light_direct)
-		return (((constant t_object_light_direct *)object->data)->color);
-	else if (object->type == object_light_point)
-		return (((constant t_object_light_point *)object->data)->color);
-	return (0.);
-}
-
-static RT_F4			static_get_diffuse
+static RT_F4			static_get_diffuse_intensity
 						(t_intersection *intersection,
-						RT_F4 *light_direction,
-						RT_F4 *light_color)
+						RT_F4 *light_direction)
 {
     RT_F	          		dot_value;
 
 	dot_value = dot(*light_direction, intersection->normal);
 	if (dot_value > 0.)
-		return (*light_color * dot_value / length(*light_direction));
+		return (dot_value / length(*light_direction));
 	return (0.);
 }
 
-static RT_F4            static_get_specular
+static RT_F4            static_get_specular_intensity
 						(t_intersection *intersection,
-						RT_F4 *light_direction,
-						RT_F4 *light_color)
+						RT_F4 *light_direction)
 {
-	RT_F4            		halfway;
-    RT_F	          		dot_value;
+	RT_F4            	halfway;
+    RT_F	          	dot_value;
 
 	halfway = normalize(*light_direction + intersection->ray.direction);
 	dot_value = dot(halfway, intersection->normal);
 	if (dot_value > 0.)
-		return (*light_color * RT_POW(dot_value, RT_CL_LIGHT_BASIC_BLINN));
+		return (RT_POW(dot_value, RT_CL_LIGHT_BASIC_BLINN));
 	return (0.);
 
 }
@@ -92,7 +77,6 @@ static RT_F4			light_basic(
 	constant t_object	*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
-	RT_F4				light_color;
 	RT_F4				light_direction;
 
 	color_diffuse = 0.;
@@ -109,9 +93,8 @@ static RT_F4			light_basic(
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
 			continue ;
 		light_color = static_get_color(object);
-		color_diffuse += static_get_diffuse(intersection, &light_direction, &light_color);
-		color_specular += static_get_specular(intersection, &light_direction, &light_color);
+		color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
+		color_specular += static_get_specular_intensity(intersection, &light_direction);
 	}
-	return (intersection->material.color * intersection->material.diffuse * color_diffuse +
-		(RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
+	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }
