@@ -5,6 +5,23 @@
 # include "object_fractals.h"
 # include "rt_float.h"
 
+typedef struct		s_object_light_ambient
+{
+	RT_F4_API		color;
+}					t_object_light_ambient;
+
+typedef struct		s_object_light_point
+{
+	RT_F4_API		position;
+	RT_F4_API		color;
+}					t_object_light_point;
+
+typedef struct		s_object_light_direct
+{
+	RT_F4_API		direction;
+	RT_F4_API		color;
+}					t_object_light_direct;
+
 typedef struct		s_object_sphere
 {
 	RT_F4_API		position;

@@ -11,9 +11,6 @@ void 				gui_signal_scene_add_type_auto
 		return ;
 	gtk_tree_model_get(GTK_TREE_MODEL(gui->scene->add->type_list), &iter,
 		scene_add_type_id, &gui->scene->add->current_type, -1);
-	if (gui->scene->add->current_object)
-		gtk_widget_hide(GTK_WIDGET(gui->scene->add->current_object));
-	gui->scene->add->current_object =
 		gui_scene_add_get_object(gui->scene->add);
 	gui_scene_add_show(gui->scene->add);
 }
@@ -36,10 +33,6 @@ void 				gui_signal_scene_add_type_manual
 	}
 	if (type == object_end)
 		return;
-	if (gui->scene->add->current_object)
-		gtk_widget_hide(GTK_WIDGET(gui->scene->add->current_object));
 	gui->scene->add->current_type = type;
-	gui->scene->add->current_object =
-		gui_scene_add_get_object(gui->scene->add);
 	gui_scene_add_show(gui->scene->add);
 }

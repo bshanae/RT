@@ -27,6 +27,6 @@ t_gui				*gui_new(int *ac, char ***av);
 void				gui_delete(t_gui **gui);
 
 void				gui_loop(t_gui *gui);
-void 				gui_load(t_gui *gui);
+void 				gui_update(t_gui *gui);
 
 #endif

@@ -10,5 +10,6 @@
 # define COLOR_BLACK	(RT_F4_API){0., 0., 0., 1.}
 # define COLOR_RED		(RT_F4_API){1., 0., 0., 1.}
 # define COLOR_GREEN	(RT_F4_API){0., 1., 0., 1.}
+# define COLOR_NONE		(RT_F4_API){-1., -1., -1., -1.}
 
 #endif

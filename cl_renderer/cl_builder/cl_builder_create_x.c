@@ -40,7 +40,8 @@ void				cl_builder_create_program(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_RM_CSG);
 	cl_program_concat(builder->program, CL_SOURCE_SCENE);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE);
-	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_EXPLICIT);
+	cl_program_concat(builder->program, CL_SOURCE_LIGHT_BASIC);
+	cl_program_concat(builder->program, CL_SOURCE_LIGHT_AREA);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_X);
 	cl_program_concat(builder->program, CL_SOURCE_MAIN);
 	if (cl_program_build(builder->program, builder->context, CL_FLAGS) != 0)
@@ -59,5 +60,4 @@ void				cl_builder_create_queue(t_cl_builder *builder)
 	builder->queue = clCreateCommandQueue(builder->context,
 		 builder->device_id, 0, &builder->error);
 	ASSERT(builder->error == 0)
-
 }

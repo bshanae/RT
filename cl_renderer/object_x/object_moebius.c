@@ -8,5 +8,6 @@ void				    object_moebius_build(t_object *space, va_list *args)
     data->position = va_arg(*args, RT_F4_API);
     data->radius = (RT_F)va_arg(*args, double);
     data->half_width = (RT_F)va_arg(*args, double);
+    //data->half_width = 2 * (RT_F)va_arg(*args, double);
     space->type = object_moebius;
 }

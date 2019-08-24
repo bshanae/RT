@@ -1,9 +1,11 @@
 #ifndef RT_PARAMETERS_H
 # define RT_PARAMETERS_H
 
+# include "rt_control.h"
+
 # define RT_GUI_BUILD				"./gui/source/build.glade"
 # define RT_GUI_THEME				"./gui/source/theme_breeze/gtk-3.20/gtk.css"
-# define RT_GUI_GET					gtk_builder_get_object
+# define RT_GUI_GET					(void *)gtk_builder_get_object
 
 # define RT_GUI_WIDTH				480
 # define RT_GUI_HEIGHT				480
@@ -13,12 +15,14 @@
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
-# define RT_CL_PATH_DEPTH			10
-# define RT_CL_SAMPLES				10
-# define RT_CL_RUSSIAN_DEPTH		5
+# define RT_CL_DEPTH				2
+# define RT_CL_SAMPLES				2
+# define RT_CL_RUSSIAN_MOD			1
+# define RT_CL_RUSSIAN_DEPTH		10
 # define RT_CL_SRGB					1
-# define RT_CL_LIGHT_PB				1
-# define RT_CL_LIGHT_EXPLICIT		1
+# define RT_CL_LIGHT_BASIC			0
+# define RT_CL_LIGHT_BASIC_BLINN	20.
+# define RT_CL_LIGHT_AREA			1
 
 # define RT_CL_CARTOON_EFFECT		0
 # define RT_CL_FILTER_SEPIA			0
