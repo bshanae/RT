@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ashari/21_ray_tracer
+# Install script for directory: /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ashari/21_ray_tracer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

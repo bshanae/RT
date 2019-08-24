@@ -21,9 +21,9 @@ static t_color		color_unpack(RT_F4 source, constant t_cl_renderer_settings *sett
 
     if (settings->srgb)
 		source = pow(source, .4f);
-	source.x = RT_MIN(source.x, 1.f);
-	source.y = RT_MIN(source.y, 1.f);
-	source.z = RT_MIN(source.z, 1.f);
+	source.x = RT_MIN(source.x, (RT_F)1.f);
+	source.y = RT_MIN(source.y, (RT_F)1.f);
+	source.z = RT_MIN(source.z, (RT_F)1.f);
 	if (settings->filter_sepia)
 		return(filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});

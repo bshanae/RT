@@ -48,10 +48,10 @@ RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cmake-build-debug/CMakeFiles" "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -1121,6 +1121,33 @@ cl_renderer/object_x/object_cone.s: cl_renderer/object_x/object_cone.c.s
 cl_renderer/object_x/object_cone.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.s
 .PHONY : cl_renderer/object_x/object_cone.c.s
+
+cl_renderer/object_x/object_csg.o: cl_renderer/object_x/object_csg.c.o
+
+.PHONY : cl_renderer/object_x/object_csg.o
+
+# target to build an object file
+cl_renderer/object_x/object_csg.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o
+.PHONY : cl_renderer/object_x/object_csg.c.o
+
+cl_renderer/object_x/object_csg.i: cl_renderer/object_x/object_csg.c.i
+
+.PHONY : cl_renderer/object_x/object_csg.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_csg.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.i
+.PHONY : cl_renderer/object_x/object_csg.c.i
+
+cl_renderer/object_x/object_csg.s: cl_renderer/object_x/object_csg.c.s
+
+.PHONY : cl_renderer/object_x/object_csg.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_csg.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.s
+.PHONY : cl_renderer/object_x/object_csg.c.s
 
 cl_renderer/object_x/object_cylinder.o: cl_renderer/object_x/object_cylinder.c.o
 
@@ -3618,6 +3645,9 @@ help:
 	@echo "... cl_renderer/object_x/object_cone.o"
 	@echo "... cl_renderer/object_x/object_cone.i"
 	@echo "... cl_renderer/object_x/object_cone.s"
+	@echo "... cl_renderer/object_x/object_csg.o"
+	@echo "... cl_renderer/object_x/object_csg.i"
+	@echo "... cl_renderer/object_x/object_csg.s"
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"

@@ -13,6 +13,7 @@ void				object_build(
 					t_object *space,
 					t_object_type type,
 					t_material material,
+					int visiable,
 					...);
 
 void				object_sphere_build(t_object *space, va_list *args);
@@ -24,6 +25,7 @@ void                object_moebius_build(t_object *space, va_list *args);
 
 void                object_torus_build(t_object *space, va_list *args);
 void                object_box_build(t_object *space, va_list *args);
+void                object_csg_build(t_object *space, va_list *args);
 
 void                object_julia_build(t_object *space, va_list *args);
 void                object_tetrahedron_build(t_object *space, va_list *args);

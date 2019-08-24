@@ -21,6 +21,7 @@ static void			cl_builder_create_program_objects(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MANDELBULB);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TETRAHEDRON);
+	cl_program_concat(builder->program, CL_SOURCE_RM_CSG);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);
 }
@@ -37,7 +38,6 @@ void				cl_builder_create_program(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_MATERIAL);
 	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION);
 	cl_builder_create_program_objects(builder);
-	cl_program_concat(builder->program, CL_SOURCE_RM_CSG);
 	cl_program_concat(builder->program, CL_SOURCE_SCENE);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_EXPLICIT);

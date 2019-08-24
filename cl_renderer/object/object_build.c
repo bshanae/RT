@@ -4,11 +4,12 @@ void				object_build(
 					t_object *space,
 					t_object_type type,
 					t_material material,
+					int visiable,
 					...)
 {
 	va_list		args;
 
-	va_start(args, material);
+	va_start(args, visiable);
 	if (type == object_sphere)
 		object_sphere_build(space, &args);
 	else if (type == object_plane)
@@ -31,7 +32,10 @@ void				object_build(
 		object_torus_build(space, &args);
 	else if (type == object_box)
 		object_box_build(space, &args);
+	else if (type == object_csg)
+		object_csg_build(space, &args);
 	space->material = material;
 	space->name[0] = '\0';
+	space->visiable = visiable;
 	va_end(args);
 }

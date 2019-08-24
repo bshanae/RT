@@ -61,4 +61,18 @@ typedef struct 		s_object_box
 	RT_F4_API  		size;
 }					t_object_box;
 
+typedef enum 		e_csg_mod
+{
+	csg_union,
+	csg_intersection,
+	csg_difference
+}					t_csg_mod;
+
+typedef struct 		s_object_csg
+{
+	t_object		object_0;
+	t_object		object_1;
+	t_csg_mod		mod;
+}					t_object_csg;
+
 #endif

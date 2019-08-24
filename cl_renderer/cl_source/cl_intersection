@@ -22,7 +22,7 @@ static void			intersection_reflect(t_intersection *destination, const t_intersec
 {
 	RT_F4			reflected;
 
-	reflected = source->normal * (-2 * dot(source->normal, source->ray.direction));
+	reflected = source->normal * ((RT_F)-2. * dot(source->normal, source->ray.direction));
 	reflected += source->ray.direction;
 	reflected = normalize(reflected);
 	destination->ray.direction = reflected;

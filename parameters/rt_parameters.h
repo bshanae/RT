@@ -10,7 +10,7 @@
 
 # define RT_CL_PROGRAM_INIT			128
 # define RT_CL_ARGS_CAPACITY		16
-# define RT_CL_OBJECT_CAPACITY		64
+# define RT_CL_OBJECT_CAPACITY		128
 # define RT_CL_SCENE_CAPACITY		32
 
 # define RT_CL_PATH_DEPTH			10
@@ -26,7 +26,7 @@
 
 # define RT_CL_RM_MOD				1
 # define RT_CL_RM_STEP_LIMIT		512
-# define RT_CL_STEP_PART			.4
+# define RT_CL_STEP_PART			1.
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1

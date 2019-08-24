@@ -21,13 +21,13 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-	if (object->type == object_sphere)
+	if (object->type == object_sphere && object->visiable)
 		return (sdf_sphere(object, point));
 	else if (object->type == object_plane)
 		return (sdf_plane(object, point));
 	else if (object->type == object_torus)
 		return (sdf_torus(object, point));
-	else if (object->type == object_box)
+	else if (object->type == object_box && object->visiable)
 		return (sdf_box(object, point));
 	else if (object->type == object_julia)
 		return (sdf_julia(object, point));
@@ -35,5 +35,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_mandelbulb(object, point));
 	else if (object->type == object_tetrahedron)
 		return (sdf_tetrahedron(object, point));
+	else if (object->type == object_csg)
+		return (sdf_csg(object, point));
 	return (RT_INFINITY);
 }

@@ -186,9 +186,9 @@ static t_color		color_unpack(RT_F4 source, constant t_cl_renderer_settings *sett
 
     if (settings->srgb)
 		source = pow(source, .4f);
-	source.x = RT_MIN(source.x, 1.f);
-	source.y = RT_MIN(source.y, 1.f);
-	source.z = RT_MIN(source.z, 1.f);
+	source.x = RT_MIN(source.x, (RT_F)1.f);
+	source.y = RT_MIN(source.y, (RT_F)1.f);
+	source.z = RT_MIN(source.z, (RT_F)1.f);
 	if (settings->filter_sepia)
 		return(filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
@@ -228,7 +228,7 @@ static void			intersection_reflect(t_intersection *destination, const t_intersec
 {
 	RT_F4			reflected;
 
-	reflected = source->normal * (-2 * dot(source->normal, source->ray.direction));
+	reflected = source->normal * ((RT_F)-2. * dot(source->normal, source->ray.direction));
 	reflected += source->ray.direction;
 	reflected = normalize(reflected);
 	destination->ray.direction = reflected;
@@ -277,6 +277,7 @@ typedef enum		e_object_type
     object_julia,
     object_torus,
     object_box,
+    object_csg,
     object_end
 }					t_object_type;
 
@@ -287,6 +288,7 @@ typedef struct		s_object
 	t_object_type	type;
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
+	int 			visiable;
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -962,7 +964,7 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
 	return (RT_MIN((RT_F)RT_MAX(d.x, RT_MAX(d.y, d.z)), (RT_F)0.f)
-		+ length((RT_F4){RT_MAX(d.x, 0.f), RT_MAX(d.y, 0.f), RT_MAX(d.z, 0.f), 0.f}));
+		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
 
 // cl_object_julia /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1045,25 +1047,6 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	}
 	return (.5 * log(r) * r / dr);
 }
-    	for (i = 0; i < obj->mandelbulb.iterations; i++)
-    	{
-    		r = vector3_length(&z);
-    		if (r > obj->mandelbulb.bailout)
-    			break ;
-    		theta = acos(z.z / r);
-    		phi = atan2(z.y, z.x);
-    		dr = pow(r, obj->mandelbulb.power - 1.) * obj->mandelbulb.power * dr + 1.;
-
-    		zr = pow(r, obj->mandelbulb.power);
-    		theta *= obj->mandelbulb.power;
-    		phi *= obj->mandelbulb.power;
-
-    		z = vector3_s_mul((t_vector3){sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta)}, zr);
-    		vector3_add_eq(&z, point);
-    	}
-    	return (.5 * log(r) * r / dr);
-    }
-*/
 
 // cl_object_tetrahedron ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1119,7 +1102,65 @@ static RT_F					sdf_tetrahedron(constant t_object *object, RT_F4 point)
         point *= data.scale;
         point -= c * (RT_F)(data.scale - 1.);
 	}
-	return (length(point) * pow(data.scale, (RT_F)(data.iterations)));
+	return (length(point) * pow(data.scale, (RT_F)(-data.iterations)));
+}
+
+// cl_rm_constructive_solid_geometry ///////////////////////////////////////////////////////////////////////////////////
+
+typedef enum 		e_csg_mod
+{
+	csg_union,
+	csg_intersection,
+	csg_difference
+}					t_csg_mod;
+
+typedef struct 		s_object_csg
+{
+	t_object		object_0;
+	t_object		object_1;
+	t_csg_mod		mod;
+}					t_object_csg;
+
+static	RT_F		csg_sdf_intersect(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_union(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MIN(distance_a, distance_b));
+}
+
+static	RT_F		csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
+{
+	return (RT_MAX(distance_a, -distance_b));
+}
+
+static RT_F			sdf_csg_compute(constant t_object *object, RT_F4 point)
+{
+	if (object->type == object_sphere)
+		return (sdf_sphere(object, point));
+	else if (object->type == object_box)
+        return (sdf_box(object, point));
+    return (INFINITY);
+}
+
+static RT_F 		sdf_csg(constant t_object *object, RT_F4 point)
+{
+	constant t_object_csg	*data;
+	RT_F					sdf[2];
+
+    data = (constant t_object_csg *)object->data;
+    sdf[0] = sdf_csg_compute(&data->object_0, point);
+    sdf[1] = sdf_csg_compute(&data->object_1, point);
+
+    //if (1 == csg_intersection)
+    //	return (csg_sdf_intersect(sdf[0], sdf[1]));
+    //else if (data->mod == csg_difference)
+    	return (csg_sdf_difference(sdf[0], sdf[1]));
+    //else if (data->mod == csg_union)
+    //	return (csg_sdf_union(sdf[0], sdf[1]));
+    //return (INFINITY);
 }
 
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1145,13 +1186,13 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-	if (object->type == object_sphere)
+	if (object->type == object_sphere && object->visiable)
 		return (sdf_sphere(object, point));
 	else if (object->type == object_plane)
 		return (sdf_plane(object, point));
 	else if (object->type == object_torus)
 		return (sdf_torus(object, point));
-	else if (object->type == object_box)
+	else if (object->type == object_box && object->visiable)
 		return (sdf_box(object, point));
 	else if (object->type == object_julia)
 		return (sdf_julia(object, point));
@@ -1159,6 +1200,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (sdf_mandelbulb(object, point));
 	else if (object->type == object_tetrahedron)
 		return (sdf_tetrahedron(object, point));
+	else if (object->type == object_csg)
+		return (sdf_csg(object, point));
 	return (RT_INFINITY);
 }
 
@@ -1225,23 +1268,6 @@ static RT_F4		object_normal(
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection->hit));
 }
-// cl_rm_constructive_solid_geometry ///////////////////////////////////////////////////////////////////////////////////
-
-static	RT_F		csg_sdf_intersect(const RT_F distance_a, const RT_F distance_b)
-{
-	return (RT_MAX(distance_a, distance_b));
-}
-
-static	RT_F		csg_sdf_union(const RT_F distance_a, const RT_F distance_b)
-{
-	return (RT_MIN(distance_a, distance_b));
-}
-
-static	RT_F		csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
-{
-	return (RT_MAX(distance_a, -distance_b));
-}
-
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1276,7 +1302,7 @@ static int			scene_intersect_rm(
 
 	result = 0;
 	total_distance = 0.;
-	ray = intersection->ray.origin + 15 * intersection->ray.direction;
+	ray = intersection->ray.origin + intersection->ray.direction * 10 * RT_EPSILON;
 	for (int step = 0; step < settings->rm_step_limit; step++)
     {
     	current_distance = RT_INFINITY;
@@ -1371,7 +1397,7 @@ static RT_F4		sample_uniform
 
 	r[0] = rng(rng_state);
 	r[1] = rng(rng_state);
-	sin_theta = RT_SQRT(RT_MAX(0.0f , 1.0f - r[0] * r[0]));
+	sin_theta = RT_SQRT(RT_MAX((RT_F)0.0f , 1.0f - r[0] * r[0]));
 	phi = 2.0f * RT_PI * r[1];
 	*cosine = r[0];
 	sample = (RT_F4)
@@ -1581,12 +1607,12 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
-	if (scene_intersect(scene, &intersection, settings))
-		image[global_id] = color_unpack(intersection.material.color, settings->srgb);
-	else
-		image[global_id] = color_unpack((RT_F){0., 0., 0., 0.}, settings->srgb);
-    //radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
-	//image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
+	//if (scene_intersect(scene, &intersection, settings))
+	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
+	//else
+	//	image[global_id] = color_unpack((RT_F){0., 0., 0., 0.}, settings->srgb);
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings)
 }
 
 

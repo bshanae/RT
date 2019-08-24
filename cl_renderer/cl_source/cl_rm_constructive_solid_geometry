@@ -1,5 +1,19 @@
 // cl_rm_constructive_solid_geometry ///////////////////////////////////////////////////////////////////////////////////
 
+typedef enum 		e_csg_mod
+{
+	csg_union,
+	csg_intersection,
+	csg_difference
+}					t_csg_mod;
+
+typedef struct 		s_object_csg
+{
+	t_object		object_0;
+	t_object		object_1;
+	t_csg_mod		mod;
+}					t_object_csg;
+
 static	RT_F		csg_sdf_intersect(const RT_F distance_a, const RT_F distance_b)
 {
 	return (RT_MAX(distance_a, distance_b));
@@ -13,4 +27,31 @@ static	RT_F		csg_sdf_union(const RT_F distance_a, const RT_F distance_b)
 static	RT_F		csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
 {
 	return (RT_MAX(distance_a, -distance_b));
+}
+
+static RT_F			sdf_csg_compute(constant t_object *object, RT_F4 point)
+{
+	if (object->type == object_sphere)
+		return (sdf_sphere(object, point));
+	else if (object->type == object_box)
+        return (sdf_box(object, point));
+    return (INFINITY);
+}
+
+static RT_F 		sdf_csg(constant t_object *object, RT_F4 point)
+{
+	constant t_object_csg	*data;
+	RT_F					sdf[2];
+
+    data = (constant t_object_csg *)object->data;
+    sdf[0] = sdf_csg_compute(&data->object_0, point);
+    sdf[1] = sdf_csg_compute(&data->object_1, point);
+
+    //if (1 == csg_intersection)
+    //	return (csg_sdf_intersect(sdf[0], sdf[1]));
+    //else if (data->mod == csg_difference)
+    	return (csg_sdf_difference(sdf[0], sdf[1]));
+    //else if (data->mod == csg_union)
+    //	return (csg_sdf_union(sdf[0], sdf[1]));
+    //return (INFINITY);
 }
