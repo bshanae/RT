@@ -59,7 +59,7 @@ include_directories(
 	./gui/gui_settings/
 	./gui/gui_image/
 	./gui/gui_signal_x
-	./gui/gui_signal_connect/
+	gui/gui_signal_connect_x/
 	./cl_renderer/color/
 	./cl_renderer/light/
 	./cl_renderer/object/
@@ -125,7 +125,7 @@ set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
 	./gui/gui_camera/gui_camera_apply.c
-	gui/gui_camera/gui_camera_focus_x.c)
+	./gui/gui_camera/gui_camera_focus_x.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_sphere_x.c
@@ -147,8 +147,8 @@ set(SOURCE_GUI_COLOR
 
 set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_init.c
-	gui/gui_material/gui_material_get.c
-	gui/gui_material/gui_material_set.c)
+	./gui/gui_material/gui_material_get.c
+	./gui/gui_material/gui_material_set.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -190,7 +190,8 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_init_torus.c
 	./gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
 	./gui/gui_scene_add/gui_scene_add_init_julia.c
-	gui/gui_scene_add/gui_scene_add_init_own.c gui/gui_scene_add/gui_scene_add_material_state_x.c)
+	./gui/gui_scene_add/gui_scene_add_init_own.c
+	./gui/gui_scene_add/gui_scene_add_material_state_x.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -214,7 +215,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_add_response_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_add.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove.c
-	gui/gui_signal_x/gui_signal_scene_add_type.c
+	./gui/gui_signal_x/gui_signal_scene_add_type.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
 	./gui/gui_signal_x/gui_signal_image_click.c
 	./gui/gui_signal_x/gui_signal_scene_edit_reset.c
@@ -231,15 +232,18 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
 	./gui/gui_signal_x/gui_signal_settings_apply.c
-	./gui/gui_signal_x/gui_signal_settings_entry_x.c gui/gui_signal_x/gui_signal_repeated.c gui/gui_signal_x/gui_signal_scene_add_material_x.c)
+	./gui/gui_signal_x/gui_signal_settings_entry_x.c
+	./gui/gui_signal_x/gui_signal_scene_add_material_x.c
+	./gui/gui_signal_x/gui_singal_task_x.c gui/gui_signal_x/gui_signal_notebook_fix.c gui/gui_signal_x/gui_signal_camera_screen_x.c)
 
-set(SOURCE_GUI_SIGNAL_CONNECT
-	./gui/gui_signal_connect/gui_signal_connect_all.c
-	./gui/gui_signal_connect/gui_signal_connect_scene_edit.c
-	./gui/gui_signal_connect/gui_signal_connect_scene_add.c
-	./gui/gui_signal_connect/gui_signal_connect_camera.c
-	./gui/gui_signal_connect/gui_signal_connect_image.c
-	./gui/gui_signal_connect/gui_signal_connect_settings.c)
+set(SOURCE_GUI_SIGNAL_CONNECT_X
+	./gui/gui_signal_connect_x/gui_signal_connect_all.c
+	./gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c
+	./gui/gui_signal_connect_x/gui_signal_connect_scene_add.c
+	./gui/gui_signal_connect_x/gui_signal_connect_camera.c
+	./gui/gui_signal_connect_x/gui_signal_connect_image.c
+	./gui/gui_signal_connect_x/gui_signal_connect_settings.c
+	./gui/gui_signal_connect_x/gui_signal_connect_task.c)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
@@ -254,7 +258,7 @@ set(SOURCE_GUI
 	${SOURCE_GUI_SETTINGS}
 	${SOURCE_GUI_IMAGE}
 	${SOURCE_GUI_SIGNAL_X}
-	${SOURCE_GUI_SIGNAL_CONNECT})
+	${SOURCE_GUI_SIGNAL_CONNECT_X})
 
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
@@ -277,14 +281,15 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_paraboloid.c
 	./cl_renderer/object_x/object_moebius.c
 	./cl_renderer/object_x/object_torus.c
-	./cl_renderer/object_x/object_julia.c cl_renderer/object_x/object_light_x.c)
+	./cl_renderer/object_x/object_julia.c
+	./cl_renderer/object_x/object_light_x.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c
-	cl_renderer/scene/scene_update.c)
+	./cl_renderer/scene/scene_update.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

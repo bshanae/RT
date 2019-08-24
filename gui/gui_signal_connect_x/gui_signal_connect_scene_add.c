@@ -1,4 +1,4 @@
-#include "gui_signal_connect.h"
+#include "gui_signal_connect_x.h"
 
 void				gui_signal_connect_scene_add(t_gui *gui)
 {

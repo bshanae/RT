@@ -316,12 +316,6 @@ gui_entry.h
 gtk/gtk.h
 -
 
-.././gui/gui_signal_x/gui_signal_x.h
-gui_entry.h
-.././gui/gui_signal_x/gui_entry.h
-gui.h
-.././gui/gui_signal_x/gui.h
-
 .././parameters/rt_cl_compilation.h
 
 .././parameters/rt_cl_include.h
@@ -340,19 +334,17 @@ rt_control.h
 rt_control.h
 .././parameters/rt_control.h
 
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
-gui_signal_connect_macro.h
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
-gui.h
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c
 gui_signal_x.h
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_x.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c
-gui_signal_connect.h
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
-
-/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+gui_entry.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_entry.h
+gui.h
+/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui.h
+time.h
+-
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h

@@ -1,5 +1,5 @@
 #include "gui.h"
-#include "gui_signal_connect.h"
+#include "gui_signal_connect_x.h"
 #include "cl_renderer.h"
 #include "material_list.h"
 

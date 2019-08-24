@@ -17,6 +17,7 @@ typedef struct		s_gui
 	GtkBuilder		*builder;
 	GtkWindow		*window;
 	GThreadPool		*pool;
+	GtkEntry		*notebook_fix[3];
 	t_gui_camera	*camera;
 	t_gui_scene		*scene;
 	t_gui_settings	*settings;

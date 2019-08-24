@@ -1370,22 +1370,9 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o: ../gui/gui_signal_x/gui_signal_repeated.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_repeated.c
-
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_repeated.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.i
-
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_repeated.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.s
-
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o: ../gui/gui_signal_x/gui_signal_scene_add_material_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c
 
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.i: cmake_force
@@ -1396,87 +1383,139 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o: ../gui/gui_signal_connect/gui_signal_connect_all.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o: ../gui/gui_signal_x/gui_singal_task_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_singal_task_x.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.i
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_singal_task_x.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.s
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_singal_task_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o: ../gui/gui_signal_connect/gui_signal_connect_scene_edit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o: ../gui/gui_signal_x/gui_signal_notebook_fix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.i
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.s
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o: ../gui/gui_signal_connect/gui_signal_connect_scene_add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_add.c
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o: ../gui/gui_signal_x/gui_signal_camera_screen_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_add.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.i
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_add.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.s
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o: ../gui/gui_signal_connect/gui_signal_connect_camera.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_all.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.i
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.s
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o: ../gui/gui_signal_connect/gui_signal_connect_image.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_image.c
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_image.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.i
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_image.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.s
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o: ../gui/gui_signal_connect/gui_signal_connect_settings.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_settings.c
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_scene_add.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_settings.c > CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.i
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_settings.c -o CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.s
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.s
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_camera.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.i
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.s
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_image.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.i
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.s
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_settings.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.i
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.s
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o: ../gui/gui_signal_connect_x/gui_signal_connect_task.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c > CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.i
+
+CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c -o CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.s
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o: ../cl_renderer/f4/f4_add.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_add.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.i: cmake_force
@@ -1489,7 +1528,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o: ../cl_renderer/f4/f4_sub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.i: cmake_force
@@ -1502,7 +1541,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o: ../cl_renderer/f4/f4_mul.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.i: cmake_force
@@ -1515,7 +1554,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o: ../cl_renderer/f4/f4_rotate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.i: cmake_force
@@ -1528,7 +1567,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o: ../cl_renderer/f4/f4_length.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_length.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.i: cmake_force
@@ -1541,7 +1580,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o: ../cl_renderer/f4/f4_normalize.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.i: cmake_force
@@ -1554,7 +1593,7 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o: ../cl_renderer/object/object_build.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object/object_build.c
 
 CMakeFiles/rt.dir/cl_renderer/object/object_build.c.i: cmake_force
@@ -1567,7 +1606,7 @@ CMakeFiles/rt.dir/cl_renderer/object/object_build.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o: ../cl_renderer/object/object_translate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object/object_translate.c
 
 CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.i: cmake_force
@@ -1580,7 +1619,7 @@ CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o: ../cl_renderer/object_x/object_sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_sphere.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.i: cmake_force
@@ -1593,7 +1632,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o: ../cl_renderer/object_x/object_plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_plane.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.i: cmake_force
@@ -1606,7 +1645,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o: ../cl_renderer/object_x/object_cone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cone.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.i: cmake_force
@@ -1619,7 +1658,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o: ../cl_renderer/object_x/object_cylinder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.i: cmake_force
@@ -1632,7 +1671,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o: ../cl_renderer/object_x/object_box.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_box.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.i: cmake_force
@@ -1645,7 +1684,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o: ../cl_renderer/object_x/object_paraboloid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.i: cmake_force
@@ -1658,7 +1697,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o: ../cl_renderer/object_x/object_moebius.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_moebius.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.i: cmake_force
@@ -1671,7 +1710,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o: ../cl_renderer/object_x/object_torus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_torus.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.i: cmake_force
@@ -1684,7 +1723,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o: ../cl_renderer/object_x/object_julia.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_julia.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.i: cmake_force
@@ -1697,7 +1736,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o: ../cl_renderer/object_x/object_light_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_light_x.c
 
 CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.i: cmake_force
@@ -1710,7 +1749,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o: ../cl_renderer/scene/scene_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.i: cmake_force
@@ -1723,7 +1762,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o: ../cl_renderer/scene/scene_get_space.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.i: cmake_force
@@ -1736,7 +1775,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o: ../cl_renderer/scene/scene_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.i: cmake_force
@@ -1749,7 +1788,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o: ../cl_renderer/scene/scene_remove_object.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i: cmake_force
@@ -1762,7 +1801,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o: ../cl_renderer/scene/scene_update.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_update.c
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.i: cmake_force
@@ -1775,7 +1814,7 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o: ../cl_renderer/camera/camera_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_new.c
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.i: cmake_force
@@ -1788,7 +1827,7 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o: ../cl_renderer/camera/camera_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.i: cmake_force
@@ -1801,7 +1840,7 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o: ../cl_renderer/camera/camera_move.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_move.c
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.i: cmake_force
@@ -1814,7 +1853,7 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o: ../cl_renderer/camera/camera_rotate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_rotate.c
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.i: cmake_force
@@ -1827,7 +1866,7 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o: ../cl_renderer/camera/camera_apply.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_apply.c
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.i: cmake_force
@@ -1840,7 +1879,7 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.s: cmake_force
 
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o: ../gui/gui_camera/gui_camera_reset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_reset.c
 
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.i: cmake_force
@@ -1853,7 +1892,7 @@ CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o: ../cl_renderer/cl_program/cl_program_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.i: cmake_force
@@ -1866,7 +1905,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o: ../cl_renderer/cl_program/cl_program_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.i: cmake_force
@@ -1879,7 +1918,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o: ../cl_renderer/cl_program/cl_program_concat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.i: cmake_force
@@ -1892,7 +1931,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o: ../cl_renderer/cl_program/cl_program_build.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.i: cmake_force
@@ -1905,7 +1944,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_new.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.i: cmake_force
@@ -1918,7 +1957,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.i: cmake_force
@@ -1931,7 +1970,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_push.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_push.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.i: cmake_force
@@ -1944,7 +1983,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_update.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_update.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.i: cmake_force
@@ -1957,7 +1996,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_read.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.i: cmake_force
@@ -1970,7 +2009,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o: ../cl_renderer/cl_arg_list/cl_arg_list_write.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_write.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.i: cmake_force
@@ -1983,7 +2022,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o: ../cl_renderer/cl_builder/cl_builder_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.i: cmake_force
@@ -1996,7 +2035,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o: ../cl_renderer/cl_builder/cl_builder_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.i: cmake_force
@@ -2009,7 +2048,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o: ../cl_renderer/cl_builder/cl_builder_init_device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.i: cmake_force
@@ -2022,7 +2061,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o: ../cl_renderer/cl_builder/cl_builder_create_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.i: cmake_force
@@ -2035,7 +2074,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o: ../cl_renderer/cl_builder/cl_builder_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.i: cmake_force
@@ -2048,7 +2087,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o: ../cl_renderer/cl_builder/cl_builder_set_args.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.i: cmake_force
@@ -2061,7 +2100,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o: ../cl_renderer/cl_renderer/cl_renderer_new.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.i: cmake_force
@@ -2074,7 +2113,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o: ../cl_renderer/cl_renderer/cl_renderer_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.i: cmake_force
@@ -2087,7 +2126,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o: ../cl_renderer/cl_renderer/cl_renderer_render.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.i: cmake_force
@@ -2100,7 +2139,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o: ../cl_renderer/cl_renderer/cl_renderer_camera_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.i: cmake_force
@@ -2113,7 +2152,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o: ../cl_renderer/cl_renderer/cl_renderer_flag_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.i: cmake_force
@@ -2126,7 +2165,7 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.s: cmake_force
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o: ../cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
 
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.i: cmake_force
@@ -2240,14 +2279,17 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.o" \
 "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_apply.c.o" \
 "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o" \
 "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o" \
@@ -2404,14 +2446,17 @@ rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.o
 rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_apply.c.o
 rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_repeated.c.o
 rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_material_x.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_settings.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o
@@ -2465,7 +2510,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

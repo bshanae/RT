@@ -2,6 +2,63 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkDialog" id="camera_screen_dialog_fail">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Screenshot Info</property>
+    <property name="default_width">240</property>
+    <property name="default_height">80</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">window</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">5</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">Oh no, that's so sad</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_camera_screen_fail_close" swapped="no"/>
+                <signal name="destroy" handler="gui_signal_camera_screen_fail_close" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Error occured</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkListStore" id="scene_add_list">
     <columns>
       <!-- column-name type_name -->
@@ -46,6 +103,7 @@
             <property name="height_request">480</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <signal name="switch-page" handler="gui_signal_notebook_fix" swapped="no"/>
             <child>
               <object class="GtkBox">
                 <property name="visible">True</property>
@@ -67,6 +125,21 @@
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">Save Screenshot</property>
+                    <property name="width_request">77</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="gui_signal_camera_screen_save" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
@@ -78,7 +151,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -137,7 +210,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
                 <child>
@@ -152,7 +225,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
                 <child>
@@ -211,7 +284,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">4</property>
+                    <property name="position">5</property>
                   </packing>
                 </child>
                 <child>
@@ -226,7 +299,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">5</property>
+                    <property name="position">8</property>
                   </packing>
                 </child>
                 <child>
@@ -268,7 +341,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">6</property>
+                    <property name="position">9</property>
                   </packing>
                 </child>
                 <child>
@@ -370,7 +443,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">7</property>
+                    <property name="position">10</property>
                   </packing>
                 </child>
                 <child>
@@ -385,7 +458,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">8</property>
+                    <property name="position">11</property>
                   </packing>
                 </child>
                 <child>
@@ -427,7 +500,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">9</property>
+                    <property name="position">12</property>
                   </packing>
                 </child>
                 <child>
@@ -527,11 +600,8 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">10</property>
+                    <property name="position">13</property>
                   </packing>
-                </child>
-                <child>
-                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkBox" id="camera_control">
@@ -574,7 +644,17 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">14</property>
+                    <property name="position">15</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="notebook_fix_0">
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">17</property>
                   </packing>
                 </child>
               </object>
@@ -636,6 +716,7 @@
                                 <property name="model">scene_edit_list</property>
                                 <property name="headers_visible">False</property>
                                 <property name="search_column">1</property>
+                                <property name="rubber_banding">True</property>
                                 <child internal-child="selection">
                                   <object class="GtkTreeSelection" id="scene_edit_selection">
                                     <signal name="changed" handler="gui_signal_scene_edit_select" swapped="no"/>
@@ -2882,7 +2963,17 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">3</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="notebook_fix_1">
+                            <property name="can_focus">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">6</property>
                           </packing>
                         </child>
                       </object>
@@ -3477,7 +3568,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">4</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
                 <child>
@@ -3524,7 +3615,17 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">5</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="notebook_fix_2">
+                    <property name="can_focus">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">6</property>
                   </packing>
                 </child>
               </object>
@@ -3584,6 +3685,63 @@
       </object>
     </child>
   </object>
+  <object class="GtkDialog" id="camera_screen_dialog_success">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Screenshot Info</property>
+    <property name="default_width">240</property>
+    <property name="default_height">80</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">window</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">5</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">Nice.</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_camera_screen_success_close" swapped="no"/>
+                <signal name="destroy" handler="gui_signal_camera_screen_success_close" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Screenshot had been saved!</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkDialog" id="dialog">
     <property name="width_request">240</property>
     <property name="height_request">420</property>
@@ -3607,7 +3765,7 @@
           <object class="GtkButtonBox">
             <property name="can_focus">False</property>
             <property name="homogeneous">True</property>
-            <property name="layout_style">end</property>
+            <property name="layout_style">center</property>
             <child>
               <object class="GtkButton">
                 <property name="visible">True</property>
@@ -5690,6 +5848,8 @@
   <object class="GtkDialog" id="scene_edit_remove_dialog">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">warning</property>
+    <property name="default_width">360</property>
+    <property name="default_height">100</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">window</property>
     <signal name="close" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
@@ -5705,10 +5865,11 @@
         <child internal-child="action_area">
           <object class="GtkButtonBox">
             <property name="can_focus">False</property>
+            <property name="margin_bottom">10</property>
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">no</property>
+                <property name="label" translatable="yes">Nope</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -5722,7 +5883,7 @@
             </child>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">yes</property>
+                <property name="label" translatable="yes">Yep</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -5750,7 +5911,7 @@
             <property name="label" translatable="yes">Are you sure you want to remove object?</property>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>

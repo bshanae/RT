@@ -5,7 +5,6 @@ t_gui_scene_edit		*gui_scene_edit_new(GtkBuilder *builder)
 	t_gui_scene_edit	*new;
 
 	new = malloc(sizeof(t_gui_scene_edit));
-	new->current_id = -1;
 	gui_scene_edit_init_own(new, builder);
 	gui_scene_edit_init_light_point(new, builder);
 	gui_scene_edit_init_light_direct(new, builder);
@@ -20,5 +19,6 @@ t_gui_scene_edit		*gui_scene_edit_new(GtkBuilder *builder)
 	gui_scene_edit_init_mandelbulb(new, builder);
 	gui_scene_edit_init_julia(new, builder);
 	gui_scene_edit_init_material(new, builder);
+	new->current_id = -1;
 	return (new);
 }
