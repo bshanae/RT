@@ -97,3 +97,10 @@ static RT_F4		cone_normal(constant t_object *object, t_intersection *intersectio
         return(normalize(((constant t_object_cone *)object->data)->axis * -1));
 }
 
+//static RT_F 		sdf_cone(constant t_object *object, RT_F4 point)
+//{
+//	t_object_sphere				data;
+//
+//	data = *(constant t_object_sphere *)object->data;
+//	return (length(data.position - point) - data.radius);
+//}

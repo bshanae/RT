@@ -6,7 +6,6 @@
 
 typedef enum		e_object_type
 {
-	object_light_ambient,
 	object_light_point,
 	object_light_direct,
 	object_sphere,

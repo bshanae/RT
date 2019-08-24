@@ -9,13 +9,7 @@ void				object_build(
 	va_list		args;
 
 	va_start(args, material);
-	if (type == object_light_ambient)
-		object_light_ambient_build(space, &args);
-	else if (type == object_light_point)
-		object_light_point_build(space, &args);
-	else if (type == object_light_direct)
-		object_light_direct_build(space, &args);
-	else if (type == object_sphere)
+	if (type == object_sphere)
 		object_sphere_build(space, &args);
 	else if (type == object_plane)
 		object_plane_build(space, &args);

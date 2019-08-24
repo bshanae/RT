@@ -23,12 +23,13 @@ typedef struct 				s_gui_scene_add
 	GtkComboBox				*type_combo;
 	GtkEntry				*type_entry;
 	GtkListStore			*type_list;
-	GtkStack				*stack;
+	GtkOverlay				*overlay;
 	t_gui_object_sphere		sphere;
 	t_gui_object_plane		plane;
 	t_gui_object_cone		cone;
 	t_gui_object_cylinder	cylinder;
 	t_gui_material			material;
+	GtkBox					*current_object;
 	t_object_type			current_type;
 	int 					gen_name_next;
 }							t_gui_scene_add;

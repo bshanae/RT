@@ -3,30 +3,20 @@
 const char 			*object_translate(t_object_type type)
 {
 	if (type == object_light_point)
-		return ("Point Light");
+		return ("point light");
 	else if (type == object_light_direct)
-		return ("Direct Light");
+		return ("direct light");
 	else if (type == object_sphere)
-		return ("Sphere");
+		return ("sphere");
 	else if (type == object_plane)
-		return ("Plane");
+		return ("plane");
 	else if (type == object_cone)
-		return ("Cone");
+		return ("cone");
 	else if (type == object_cylinder)
-		return ("Cylinder");
-	else if (type == object_box)
-		return ("Box");
+		return ("cylinder");
 	else if (type == object_paraboloid)
-		return ("Paraboloid");
+		return ("paraboloid");
 	else if (type == object_moebius)
-		return ("Moebius Strip");
-	else if (type == object_torus)
-		return ("Torus");
-	else if (type == object_tetrahedron)
-		return ("Tetrahedron");
-	else if (type == object_mandelbulb)
-		return ("Mandelbulb");
-	else if (type == object_julia)
-		return ("Julia");
-	return ("Unknown");
+		return ("moebius strip");
+	return ("unknown");
 }

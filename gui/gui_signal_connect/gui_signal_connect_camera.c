@@ -2,10 +2,14 @@
 
 void 				gui_signal_connect_camera(t_gui *gui)
 {
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_entry_insert);
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_entry_delete);
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_apply);
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_reset);
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_filter_antialiasing);
-	RT_GUI_CONNECT(gui->builder, gui_signal_camera_filter_focus);
+	GUI_CONNECT(gui->builder, gui_signal_camera_position_x)
+	GUI_CONNECT(gui->builder, gui_signal_camera_position_y)
+	GUI_CONNECT(gui->builder, gui_signal_camera_position_z)
+	GUI_CONNECT(gui->builder, gui_signal_camera_rotation_x)
+	GUI_CONNECT(gui->builder, gui_signal_camera_rotation_y)
+	GUI_CONNECT(gui->builder, gui_signal_camera_rotation_z)
+	GUI_CONNECT(gui->builder, gui_signal_camera_filter_antialiasing)
+	GUI_CONNECT(gui->builder, gui_signal_camera_filter_focus)
+	GUI_CONNECT(gui->builder, gui_signal_camera_filter_focal_length)
+	GUI_CONNECT(gui->builder, gui_signal_camera_filter_aperture_size)
 }

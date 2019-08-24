@@ -97,21 +97,9 @@ int					main(int argc, char **argv)
 	gui_signal_connect_all(gui);
 	scene_fractals(gui->renderer->data.scene);
 	//scene_room(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 10.
-	scene_update(gui->renderer->data.scene);
-	gui_update(gui);
+	gui->renderer->data.camera->position.z = 10.;
+	gui_load(gui);
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);
 }
-
-/*
- * IMPORTANT :
- * 1. light_explicit deleted for t_cl_renderer_settings
- * TODO :
- * 1. Hide focal settings when focus is disabled
- * 2. Disable pop-up appearing when using keys on a list element
- * 3. Fix object creation
- * 4. Add cone and cylinder creation
- * 5. Add auto hint when choosing type for new object
- */

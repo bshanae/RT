@@ -6,6 +6,8 @@ void 					gui_scene_add_set_cone
 	t_gui_init_cone		init;
 
 	ft_strcpy(init.box, "object_add_cone_box");
+	ft_strcpy(init.offscreen, "object_add_cone_offscreen");
+	ft_strcpy(init.name, "");
 	ft_strcpy(init.top_x, "object_add_cone_top_x");
 	ft_strcpy(init.top_y, "object_add_cone_top_y");
 	ft_strcpy(init.top_z, "object_add_cone_top_z");
@@ -14,4 +16,6 @@ void 					gui_scene_add_set_cone
 	ft_strcpy(init.bottom_z, "object_add_cone_bottom_z");
 	ft_strcpy(init.radius, "object_add_cone_radius");
 	add->cone = gui_object_cone_set(&init, builder);
+	add->cone.name = add->name;
+	gui_object_x_set((t_gui_object_x *)&add->cone, add->overlay);
 }

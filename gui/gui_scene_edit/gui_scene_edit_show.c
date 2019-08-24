@@ -3,13 +3,6 @@
 void 				gui_scene_edit_show
 					(t_gui_scene_edit *edit, t_object *object)
 {
-	const char		*type_str;
-
-	gtk_widget_show(GTK_WIDGET(edit->info));
-	type_str = object_translate(object->type);
-	gui_entry_set_str(edit->name, object->name);
-	gui_entry_set_str(edit->type, type_str);
-	gtk_stack_set_visible_child_name(edit->stack, type_str);
 	if (object->type == object_sphere)
 		gui_object_sphere_show(&edit->sphere, object);
 	else if (object->type == object_plane)
@@ -21,4 +14,5 @@ void 				gui_scene_edit_show
 	else
 		return ;
 	gui_material_show(&edit->material, &object->material);
+	gtk_widget_show(GTK_WIDGET(edit->current_object));
 }

@@ -6,6 +6,6 @@ t_scene				*scene_new(void)
 
 	new = malloc(sizeof(t_scene));
 	new->objects_length = 0;
-	new->lights_length = 0;
+	scene_set_ids(new);
 	return (new);
 }

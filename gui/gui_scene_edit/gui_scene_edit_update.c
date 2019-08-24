@@ -1,13 +1,11 @@
 #include "gui_scene_edit.h"
 
-void 				gui_scene_edit_update
-					(t_gui_scene_edit *edit, t_scene *scene)
+void 				gui_scene_edit_update(t_gui_scene_edit *edit, t_scene *scene)
 {
 	GtkTreeIter		iter;
 	int 			i;
 
 	i = 0;
-	gtk_list_store_clear(edit->list);
 	while (i < scene->objects_length)
 	{
 		if (!scene->objects[i].name[0])

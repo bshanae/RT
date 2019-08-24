@@ -6,8 +6,6 @@ typedef struct		s_scene
 {
 	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
-	int				lights[RT_CL_SCENE_CAPACITY];
-    int 			lights_length;
 }					t_scene;
 
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
@@ -34,7 +32,7 @@ static int			scene_intersect_rm(
 
 	result = 0;
 	total_distance = 0.;
-	ray = intersection->ray.origin + intersection->ray.direction * 10 * RT_EPSILON;
+	ray = intersection->ray.origin + intersection->ray.direction * 10;
 	for (int step = 0; step < settings->rm_step_limit; step++)
     {
     	current_distance = RT_INFINITY;
@@ -80,6 +78,8 @@ static int			scene_intersect(
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+		//if (dot(intersection->normal, intersection->ray.direction) > 0.)
+		//	intersection->normal *= -1;
 	}
 	return (result);
 }

@@ -84,9 +84,9 @@ static int						solve_third_case(t_moebius_equation c, const RT_F *coefficients,
 	c.ratio = c.sgnbr * RT_SQRT(c.br2 / c.bq3);
 	c.theta = acos(c.ratio);
 	c.norm = -2 * RT_SQRT(c.bq);
-	c.r0 = c.norm * RT_COS((RT_F)c.theta / 3) - coefficients[2] / 3;
-	c.r1 = c.norm * RT_COS((RT_F)(c.theta + 2.0 * RT_PI) / 3) - coefficients[2] / 3;
-	c.r2 = c.norm * RT_COS((RT_F)(c.theta - 2.0 * RT_PI) / 3) - coefficients[2] / 3;
+	c.r0 = c.norm * RT_COS(c.theta / 3) - coefficients[2] / 3;
+	c.r1 = c.norm * RT_COS((c.theta + 2.0 * M_PI) / 3) - coefficients[2] / 3;
+	c.r2 = c.norm * RT_COS((c.theta - 2.0 * M_PI) / 3) - coefficients[2] / 3;
 	if (c.r0 > c.r1)
 		ft_swap(&c.r0, &c.r1);
 	if (c.r1 > c.r2)
