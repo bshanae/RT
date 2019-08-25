@@ -1157,8 +1157,8 @@ static RT_F 		sdf_csg(constant t_scene *scene, constant t_object *object, RT_F4 
 	RT_F					sdf[2];
 
     data = (constant t_object_csg *)object->data;
-    sdf[0] = sdf_csg_compute(&scene->object[data->id_subtrahend], point);
-    sdf[1] = sdf_csg_compute(&scene->object[data->id_subtractor], point);
+    sdf[0] = sdf_csg_compute(&scene->objects[data->id_subtrahend], point);
+    sdf[1] = sdf_csg_compute(&scene->objects[data->id_subtractor], point);
 
     if (data->mod == csg_intersection)
     	return (csg_sdf_intersect(sdf[0], sdf[1]));
@@ -1515,9 +1515,50 @@ static RT_F4		radiance_explicit(
 
 #include "rt_parameters.h"
 
-// todo : normal changing (reflectance) && refractive (maybe problem in plane)
+static RT_F4                    my_max(RT_F4 v0, RT_F4 v1)
+{
+    if (v0.x < v1.x)
+        return (v1);
+    if (v0.y < v1.y)
+        return (v1);
+    if (v0.z < v1.z)
+        return (v1);
+    return (v0);
+}
+
+#define FT_ABS(x) x < 0 ? x * -1 : x
+
+static RT_F4					test(
+                                constant t_scene *scene,
+                                constant t_camera *camera,
+                                t_intersection *intersection)
+{
+    constant t_object_sphere	*sphere;
+    RT_F						x;
+    RT_F4						k;
+    RT_F4						tmp;
+    RT_F4						illumination;
+    int gi = get_global_id(0);
+
+    illumination = 0.;
+    for (int i = 0; i < scene->objects_length; i++)
+    {
+        if (scene->objects[i].type != object_sphere)
+            continue ;
+        if (f4_max_component(scene->objects[i].material.emission) == 0.f)
+            continue ;
+        sphere = (constant t_object_sphere	*)scene->objects[i].data;
+        //k = normalize(cross(normalize(camera->axis_z), intersection->ray.direction));
+        tmp = sphere->position - (intersection->ray.origin + intersection->ray.direction * (intersection->ray.t * 0.8));
+        //x = dot(normalize(intersection->ray.origin - sphere->position), k);
+        x = length(tmp);
+        illumination += (RT_F)(0.02 * sphere->radius / (FT_ABS(x))) * scene->objects[i].material.emission;
+    }
+    return ((RT_F4){FT_ABS(illumination.x), FT_ABS(illumination.y), FT_ABS(illumination.z), 0.});
+}
 
 static void			radiance_add(
+                    constant t_camera *camera,
 					constant t_scene *scene,
 					t_intersection *intersection,
 					global RT_F4 *sample,
@@ -1537,12 +1578,15 @@ static void			radiance_add(
 	{
 
 		if (!scene_intersect(scene, intersection, settings))
-		{
-//			radiance += mask * (RT_F4){0.15f, 0.15f, 0.15f, 0.15f};
 			break;
-		}
 		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
+
+		if (depth == 0)
+        {
+            explicit = test(scene, camera, intersection);
+            mask += explicit;
+        }
 
 		if (intersection->material.reflection || intersection->material.refraction)
 		{
@@ -1612,7 +1656,7 @@ kernel void			cl_main(
 	//	image[global_id] = color_unpack(intersection.material.color, settings->srgb);
 	//else
 	//	image[global_id] = color_unpack((RT_F){0., 0., 0., 0.}, settings->srgb);
-    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
+    radiance_add(camera, scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
 	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
 }
 

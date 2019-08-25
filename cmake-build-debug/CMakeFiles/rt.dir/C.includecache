@@ -88,7 +88,7 @@ cl_arg_list.h
 stdio.h
 -
 
-/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c
 cl_builder.h
 /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
 

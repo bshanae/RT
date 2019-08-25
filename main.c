@@ -40,21 +40,21 @@ void				scene_room(t_scene *scene)
 
 	object_build(
 		scene_get_space(scene), object_sphere,
-		MATERIAL_MIRROR, 0,
+		MATERIAL_WHITE, 1,
 		(RT_F4_API){-5., -10., -10.}, 10.);
 
-	object_build(
-		scene_get_space(scene), object_box,
-		MATERIAL_RED, 0,
-		(RT_F4_API){5., -10., -10.},
-		(RT_F4_API){8., 8., 8.});
+//	object_build(
+//		scene_get_space(scene), object_box,
+//		MATERIAL_RED, 0,
+//		(RT_F4_API){5., -10., -10.},
+//		(RT_F4_API){8., 8., 8.});
 
-	object_build(
-		scene_get_space(scene), object_csg,
-		MATERIAL_WHITE, 1,
-		0,
-		1,
-		csg_difference);
+//	object_build(
+//		scene_get_space(scene), object_csg,
+//		MATERIAL_WHITE, 1,
+//		0,
+//		1,
+//		csg_difference);
 
 	//
 
