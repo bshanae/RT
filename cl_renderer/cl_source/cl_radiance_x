@@ -2,17 +2,6 @@
 
 #include "rt_parameters.h"
 
-static RT_F4                    my_max(RT_F4 v0, RT_F4 v1)
-{
-    if (v0.x < v1.x)
-        return (v1);
-    if (v0.y < v1.y)
-        return (v1);
-    if (v0.z < v1.z)
-        return (v1);
-    return (v0);
-}
-
 #define FT_ABS(x) x < 0 ? x * -1 : x
 
 static RT_F4					test(
@@ -37,7 +26,7 @@ static RT_F4					test(
         sphere = (constant t_object_sphere	*)scene->objects[i].data;
         k = intersection->ray.direction - normalize(sphere->position - intersection->ray.origin);
         x = dot(intersection->ray.origin - sphere->position, normalize(k));
-        illumination += (RT_F)(sphere->radius / (FT_ABS(x))) * scene->objects[i].material.emission;
+        illumination += (RT_F)(0.2 * sphere->radius / (FT_ABS(x))) * scene->objects[i].material.emission;
     }
     return ((RT_F4){FT_ABS(illumination.x), FT_ABS(illumination.y), FT_ABS(illumination.z), 0.});
 }
