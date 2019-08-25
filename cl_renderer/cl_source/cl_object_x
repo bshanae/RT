@@ -19,7 +19,7 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 	return (0);
 }
 
-static RT_F			object_sdf(constant t_object *object, RT_F4 point)
+static RT_F			object_sdf(constant t_scene *scene, constant t_object *object, RT_F4 point)
 {
 	if (object->type == object_sphere && object->visiable)
 		return (sdf_sphere(object, point));
@@ -36,6 +36,6 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	else if (object->type == object_tetrahedron)
 		return (sdf_tetrahedron(object, point));
 	else if (object->type == object_csg)
-		return (sdf_csg(object, point));
+		return (sdf_csg(scene, object, point));
 	return (RT_INFINITY);
 }

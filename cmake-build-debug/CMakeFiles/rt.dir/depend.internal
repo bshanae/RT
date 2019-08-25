@@ -9,8 +9,8 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_apply.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera_apply.c
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_apply.c
 CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/f4/f4.h
@@ -19,8 +19,8 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_delete.c
 CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/f4/f4.h
@@ -29,8 +29,8 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera_move.c
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_move.c
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/f4/f4.h
@@ -39,8 +39,8 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_new.c
 CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/f4/f4.h
@@ -49,8 +49,8 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/camera/camera_rotate.c
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+ /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_rotate.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -59,9 +59,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -70,9 +70,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_new.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -81,9 +81,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_push.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_push.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_push.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -92,9 +92,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_read.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_read.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -103,9 +103,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_update.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_update.c
 CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -114,9 +114,9 @@ CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_arg_list/cl_arg_list_write.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_write.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -129,8 +129,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_create_x.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -143,8 +143,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -157,8 +157,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_init_device.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -171,8 +171,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_log.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_log.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -185,8 +185,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_new.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -199,8 +199,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_set_args.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder_set_args.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c
 CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -213,8 +213,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_rng_delete.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_builder.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_builder/cl_rng_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_rng_delete.c
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -222,8 +222,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_build.c.o
  .././cl_renderer/assert/assert.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program_build.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -231,8 +231,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o
  .././cl_renderer/assert/assert.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program_concat.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -240,8 +240,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o
  .././cl_renderer/assert/assert.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c
 CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -249,8 +249,8 @@ CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o
  .././cl_renderer/assert/assert.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_program/cl_program_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -911,10 +911,10 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_camera_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_settings.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -1575,10 +1575,10 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_delete.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_settings.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -2239,10 +2239,10 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_settings.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -2903,10 +2903,10 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_new.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_settings.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3567,46 +3567,46 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_flag_x.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_render.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/cl_renderer/cl_renderer_settings.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c
+ /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_add.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_add.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_length.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_length.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_mul.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_mul.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_normalize.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_normalize.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_rotate.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_rotate.c
 CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/f4/f4_sub.c
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4.h
+ /Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c
 CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3620,17 +3620,17 @@ CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object/object_build.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object/object_definition.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object/object_interaction.h
+ /Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
+ /Users/ashari/21_ray_tracer/cl_renderer/object/object_interaction.h
 CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o
  .././cl_renderer/material/material.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object/object_definition.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object/object_translate.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
+ /Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3646,7 +3646,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_box.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3662,7 +3662,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_cone.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cone.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3678,7 +3678,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_csg.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_csg.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3694,7 +3694,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_cylinder.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3710,7 +3710,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_julia.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3726,7 +3726,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_mandelbulb.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3742,7 +3742,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_moebius.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3758,7 +3758,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_paraboloid.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3774,7 +3774,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_plane.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_plane.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3790,7 +3790,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_sphere.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3806,7 +3806,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_tetrahedron.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_tetrahedron.c
 CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3822,7 +3822,7 @@ CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/object_x/object_torus.c
+ /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c
 CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3838,8 +3838,8 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene_delete.c
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c
 CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3855,8 +3855,8 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene_get_space.c
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_get_space.c
 CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3872,8 +3872,8 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene_new.c
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c
 CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3889,8 +3889,8 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene_remove_object.c
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
 CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -3906,8 +3906,8 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_set_ids.c.o
  .././parameters/rt_control.h
  .././parameters/rt_float.h
  .././parameters/rt_parameters.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/cl_renderer/scene/scene_set_ids.c
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+ /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_set_ids.c
 CMakeFiles/rt.dir/gui/gui/gui_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -4579,8 +4579,8 @@ CMakeFiles/rt.dir/gui/gui/gui_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui/gui.h
+ /Users/ashari/21_ray_tracer/gui/gui/gui_delete.c
 CMakeFiles/rt.dir/gui/gui/gui_load.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -5252,8 +5252,8 @@ CMakeFiles/rt.dir/gui/gui/gui_load.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui_load.c
+ /Users/ashari/21_ray_tracer/gui/gui/gui.h
+ /Users/ashari/21_ray_tracer/gui/gui/gui_load.c
 CMakeFiles/rt.dir/gui/gui/gui_loop.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -5925,8 +5925,8 @@ CMakeFiles/rt.dir/gui/gui/gui_loop.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui_loop.c
+ /Users/ashari/21_ray_tracer/gui/gui/gui.h
+ /Users/ashari/21_ray_tracer/gui/gui/gui_loop.c
 CMakeFiles/rt.dir/gui/gui/gui_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -6598,8 +6598,8 @@ CMakeFiles/rt.dir/gui/gui/gui_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui/gui_new.c
+ /Users/ashari/21_ray_tracer/gui/gui/gui.h
+ /Users/ashari/21_ray_tracer/gui/gui/gui_new.c
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/camera/camera.h
@@ -7244,8 +7244,8 @@ CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_delete.c
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/camera/camera.h
@@ -7890,8 +7890,8 @@ CMakeFiles/rt.dir/gui/gui_camera/gui_camera_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_new.c
 CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/camera/camera.h
@@ -8536,8 +8536,8 @@ CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_camera/gui_camera_show.c
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+ /Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_show.c
 CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -9177,8 +9177,8 @@ CMakeFiles/rt.dir/gui/gui_color/gui_color_from_f4.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_color/gui_color.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_color/gui_color_from_f4.c
+ /Users/ashari/21_ray_tracer/gui/gui_color/gui_color.h
+ /Users/ashari/21_ray_tracer/gui/gui_color/gui_color_from_f4.c
 CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.o
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
@@ -9818,8 +9818,8 @@ CMakeFiles/rt.dir/gui/gui_color/gui_color_to_f4.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_color/gui_color.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_color/gui_color_to_f4.c
+ /Users/ashari/21_ray_tracer/gui/gui_color/gui_color.h
+ /Users/ashari/21_ray_tracer/gui/gui_color/gui_color_to_f4.c
 CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/color/color.h
@@ -10459,8 +10459,8 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_image/gui_image.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_image/gui_image_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_image/gui_image.h
+ /Users/ashari/21_ray_tracer/gui/gui_image/gui_image_delete.c
 CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/color/color.h
@@ -11100,8 +11100,8 @@ CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_image/gui_image.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_image/gui_image_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_image/gui_image.h
+ /Users/ashari/21_ray_tracer/gui/gui_image/gui_image_new.c
 CMakeFiles/rt.dir/gui/gui_material/gui_material_build.c.o
  .././cl_renderer/material/material.h
  .././gui/gui_color/gui_color.h
@@ -11744,8 +11744,8 @@ CMakeFiles/rt.dir/gui/gui_material/gui_material_build.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material_build.c
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material_build.c
 CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o
  .././cl_renderer/material/material.h
  .././gui/gui_color/gui_color.h
@@ -12388,8 +12388,8 @@ CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material_set.c
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material_set.c
 CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.o
  .././cl_renderer/material/material.h
  .././gui/gui_color/gui_color.h
@@ -13032,8 +13032,8 @@ CMakeFiles/rt.dir/gui/gui_material/gui_material_show.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_material/gui_material_show.c
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+ /Users/ashari/21_ray_tracer/gui/gui_material/gui_material_show.c
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -13679,8 +13679,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_cone_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cone_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -14326,8 +14326,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_cylinder_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cylinder_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_plane_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -14973,8 +14973,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_plane_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_plane_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_plane_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -15620,8 +15620,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_sphere_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_sphere_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -16267,8 +16267,8 @@ CMakeFiles/rt.dir/gui/gui_object_x/gui_object_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_object_x/gui_object_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
 CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -16925,8 +16925,8 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene/gui_scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene/gui_scene_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_delete.c
 CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -17583,8 +17583,8 @@ CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene/gui_scene.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene/gui_scene_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_new.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -18233,8 +18233,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_build_object.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_build_object.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -18883,8 +18883,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_delete.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_gen_name.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -19533,8 +19533,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_gen_name.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_gen_name.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_gen_name.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_get_object.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -20183,8 +20183,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_get_object.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_get_object.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_get_object.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -20833,8 +20833,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -21483,8 +21483,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cone.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_set_cone.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_cone.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -22133,8 +22133,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_cylinder.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_set_cylinder.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_cylinder.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -22783,8 +22783,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_material.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_set_material.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_material.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_plane.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -23433,8 +23433,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_plane.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_set_plane.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_plane.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_sphere.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -24083,8 +24083,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_set_sphere.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_set_sphere.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_sphere.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_show.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -24733,8 +24733,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_show.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_show.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_show.c
 CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.o
  ../../21_libft/includes/libft_standart.h
  .././cl_renderer/material/material.h
@@ -25383,8 +25383,8 @@ CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_add/gui_scene_add_update.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -26039,8 +26039,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -26695,8 +26695,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_gen_name.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_get_object.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -27351,8 +27351,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_get_object.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_get_object.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_get_object.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -28007,8 +28007,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -28663,8 +28663,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cone.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_set_cone.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_cone.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -29319,8 +29319,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -29975,8 +29975,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_material.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_set_material.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_material.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_plane.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -30631,8 +30631,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_plane.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_set_plane.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_plane.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_sphere.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -31287,8 +31287,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_set_sphere.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_set_sphere.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_sphere.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -31943,8 +31943,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_show.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -32599,8 +32599,8 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_scene_edit/gui_scene_edit_update.c
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+ /Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_update.c
 CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o
  /Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
  /Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
@@ -33237,8 +33237,8 @@ CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_settings/gui_settings.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_settings/gui_settings_delete.c
+ /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+ /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_delete.c
 CMakeFiles/rt.dir/gui/gui_settings/gui_settings_new.c.o
  /Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
  /Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
@@ -33875,8 +33875,8 @@ CMakeFiles/rt.dir/gui/gui_settings/gui_settings_new.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_settings/gui_settings.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_settings/gui_settings_new.c
+ /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+ /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_new.c
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -34550,9 +34550,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_all.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_all.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -35226,9 +35226,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_camera.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_camera.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -35902,9 +35902,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_image.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_image.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_image.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -36578,9 +36578,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c.
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -37254,9 +37254,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -37930,9 +37930,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_add.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_scene_add.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_add.c
 CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -38606,9 +38606,9 @@ CMakeFiles/rt.dir/gui/gui_signal_connect/gui_signal_connect_scene_edit.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_macro.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_connect/gui_signal_connect_scene_edit.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -39281,8 +39281,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_camera_filter_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -39955,8 +39955,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_position_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_camera_position_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_position_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_rotation_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -40629,8 +40629,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_rotation_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_camera_rotation_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_rotation_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -41303,8 +41303,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_exit.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_exit.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -41977,8 +41977,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_image_click.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_image_click.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -42651,14 +42651,14 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_key.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c.o
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c.o
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c.o
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -43331,8 +43331,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -44005,8 +44005,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -44679,8 +44679,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -45356,7 +45356,7 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_object_edit_x_name.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_object_edit_x_name.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_x_name.c
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_response_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -46029,8 +46029,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_response_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_add_response_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -46703,8 +46703,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_add_type_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_add.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -47377,8 +47377,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_add.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_edit_add.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -48051,8 +48051,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_edit_material_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -48725,8 +48725,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_edit_remove.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -49399,8 +49399,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -50073,8 +50073,8 @@ CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_scene_edit_select.c
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/gui/gui_signal_x/gui_signal_x.h
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c
+ /Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
 CMakeFiles/rt.dir/main.c.o
  ../../21_libft/includes/libft_ft_printf.h
  ../../21_libft/includes/libft_standart.h
@@ -50752,4 +50752,4 @@ CMakeFiles/rt.dir/main.c.o
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
  /Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
- /Users/ashari/21_ray_tracer-b03c94c5cd721c18c89023aa898af4449c91df3e 2/main.c
+ /Users/ashari/21_ray_tracer/main.c

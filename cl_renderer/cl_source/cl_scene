@@ -2,12 +2,6 @@
 
 #include "rt_parameters.h"
 
-typedef struct		s_scene
-{
-	t_object		objects[RT_CL_SCENE_CAPACITY];
-	int				objects_length;
-}					t_scene;
-
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
 	int				result;
@@ -38,7 +32,7 @@ static int			scene_intersect_rm(
     	current_distance = RT_INFINITY;
     	for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		{
-			temp_distance = object_sdf(scene->objects + object_i, ray);
+			temp_distance = object_sdf(scene, scene->objects + object_i, ray);
 			if (temp_distance < current_distance)
 			{
 				current_distance = temp_distance;
@@ -77,7 +71,7 @@ static int			scene_intersect(
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
-		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+		intersection->normal = object_normal(scene, scene->objects + intersection->object_id, intersection, settings);
 		//if (dot(intersection->normal, intersection->ray.direction) > 0.)
 		//	intersection->normal *= -1;
 	}

@@ -70,8 +70,8 @@ typedef enum 		e_csg_mod
 
 typedef struct 		s_object_csg
 {
-	t_object		object_0;
-	t_object		object_1;
+    int     		id_subtrahend;
+    int     		id_subtractor;
 	t_csg_mod		mod;
 }					t_object_csg;
 

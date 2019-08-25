@@ -204,9 +204,48 @@ typedef struct 		s_material
 	RT_F			refraction;
 }					t_material;
 
+// cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef enum		e_object_type
+{
+    object_light_point,
+    object_light_direct,
+    object_sphere,
+    object_plane,
+    object_cone,
+    object_cylinder,
+    object_paraboloid,
+    object_moebius,
+    object_tetrahedron,
+    object_mandelbulb,
+    object_julia,
+    object_torus,
+    object_box,
+    object_csg,
+    object_end
+}					t_object_type;
+
+typedef struct		s_object
+{
+	char 			name[32];
+	int				id;
+	t_object_type	type;
+	t_material		material;
+	char			data[RT_CL_OBJECT_CAPACITY];
+	int 			visiable;
+}					t_object;
+
 // cl_intersection /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
+
+typedef struct		s_scene
+{
+    t_object		objects[RT_CL_SCENE_CAPACITY];
+    int				objects_length;
+}					t_scene;
 
 typedef struct		s_intersection
 {
@@ -257,39 +296,6 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	destination->ray.direction = refracted;
 	destination->ray.origin = source->hit;
 }
-
-// cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include "rt_parameters.h"
-
-typedef enum		e_object_type
-{
-    object_light_point,
-    object_light_direct,
-    object_sphere,
-    object_plane,
-    object_cone,
-    object_cylinder,
-    object_paraboloid,
-    object_moebius,
-    object_tetrahedron,
-    object_mandelbulb,
-    object_julia,
-    object_torus,
-    object_box,
-    object_csg,
-    object_end
-}					t_object_type;
-
-typedef struct		s_object
-{
-	char 			name[32];
-	int				id;
-	t_object_type	type;
-	t_material		material;
-	char			data[RT_CL_OBJECT_CAPACITY];
-	int 			visiable;
-}					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1116,8 +1122,8 @@ typedef enum 		e_csg_mod
 
 typedef struct 		s_object_csg
 {
-	t_object		object_0;
-	t_object		object_1;
+    int     		id_subtrahend;
+    int     		id_subtractor;
 	t_csg_mod		mod;
 }					t_object_csg;
 
@@ -1145,22 +1151,22 @@ static RT_F			sdf_csg_compute(constant t_object *object, RT_F4 point)
     return (INFINITY);
 }
 
-static RT_F 		sdf_csg(constant t_object *object, RT_F4 point)
+static RT_F 		sdf_csg(constant t_scene *scene, constant t_object *object, RT_F4 point)
 {
 	constant t_object_csg	*data;
 	RT_F					sdf[2];
 
     data = (constant t_object_csg *)object->data;
-    sdf[0] = sdf_csg_compute(&data->object_0, point);
-    sdf[1] = sdf_csg_compute(&data->object_1, point);
+    sdf[0] = sdf_csg_compute(&scene->object[data->id_subtrahend], point);
+    sdf[1] = sdf_csg_compute(&scene->object[data->id_subtractor], point);
 
-    //if (1 == csg_intersection)
-    //	return (csg_sdf_intersect(sdf[0], sdf[1]));
-    //else if (data->mod == csg_difference)
+    if (data->mod == csg_intersection)
+    	return (csg_sdf_intersect(sdf[0], sdf[1]));
+    else if (data->mod == csg_difference)
     	return (csg_sdf_difference(sdf[0], sdf[1]));
-    //else if (data->mod == csg_union)
-    //	return (csg_sdf_union(sdf[0], sdf[1]));
-    //return (INFINITY);
+    else if (data->mod == csg_union)
+    	return (csg_sdf_union(sdf[0], sdf[1]));
+    return (INFINITY);
 }
 
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1184,7 +1190,7 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 	return (0);
 }
 
-static RT_F			object_sdf(constant t_object *object, RT_F4 point)
+static RT_F			object_sdf(constant t_scene *scene, constant t_object *object, RT_F4 point)
 {
 	if (object->type == object_sphere && object->visiable)
 		return (sdf_sphere(object, point));
@@ -1201,7 +1207,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	else if (object->type == object_tetrahedron)
 		return (sdf_tetrahedron(object, point));
 	else if (object->type == object_csg)
-		return (sdf_csg(object, point));
+		return (sdf_csg(scene, object, point));
 	return (RT_INFINITY);
 }
 
@@ -1209,7 +1215,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 
 #include "rt_parameters.h"
 
-static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
+static RT_F4		object_normal_rm(constant t_scene *scene, constant t_object *object, RT_F4 hit)
 {
 	RT_F4			nudged_hit;
 	RT_F4			normal;
@@ -1218,23 +1224,23 @@ static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
 
 	nudge = (RT_F4){RT_CL_RM_NORMAL_EPSILON, 0., 0., 0.};
 	nudged_hit = hit + nudge;
-	normal.x = object_sdf(object, nudged_hit);
+	normal.x = object_sdf(scene, object, nudged_hit);
 	nudged_hit = hit - nudge;
-	normal_negative.x = object_sdf(object, nudged_hit);
+	normal_negative.x = object_sdf(scene, object, nudged_hit);
 	normal.x -= normal_negative.x;
 
 	nudge = (RT_F4){0., RT_CL_RM_NORMAL_EPSILON, 0., 0.};
 	nudged_hit = hit + nudge;
-	normal.y = object_sdf(object, nudged_hit);
+	normal.y = object_sdf(scene, object, nudged_hit);
 	nudged_hit = hit - nudge;
-	normal_negative.y = object_sdf(object, nudged_hit);
+	normal_negative.y = object_sdf(scene, object, nudged_hit);
 	normal.y -= normal_negative.y;
 
 	nudge = (RT_F4){0., 0., RT_CL_RM_NORMAL_EPSILON, 0.};
 	nudged_hit = hit + nudge;
-	normal.z = object_sdf(object, nudged_hit);
+	normal.z = object_sdf(scene, object, nudged_hit);
 	nudged_hit = hit - nudge;
-	normal_negative.z = object_sdf(object, nudged_hit);
+	normal_negative.z = object_sdf(scene, object, nudged_hit);
 	normal.z -= normal_negative.z;
 
     return (normalize(normal));
@@ -1260,23 +1266,18 @@ static RT_F4		object_normal_rt(
 }
 
 static RT_F4		object_normal(
-					constant t_object *object,
+                    constant t_scene *scene,
+                    constant t_object *object,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {
 	return (!settings->rm_mod ?
 		object_normal_rt(object, intersection) :
-		object_normal_rm(object, intersection->hit));
+		object_normal_rm(scene, object, intersection->hit));
 }
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
-
-typedef struct		s_scene
-{
-	t_object		objects[RT_CL_SCENE_CAPACITY];
-	int				objects_length;
-}					t_scene;
 
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
@@ -1308,7 +1309,7 @@ static int			scene_intersect_rm(
     	current_distance = RT_INFINITY;
     	for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		{
-			temp_distance = object_sdf(scene->objects + object_i, ray);
+			temp_distance = object_sdf(scene, scene->objects + object_i, ray);
 			if (temp_distance < current_distance)
 			{
 				current_distance = temp_distance;
@@ -1347,7 +1348,7 @@ static int			scene_intersect(
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
-		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+		intersection->normal = object_normal(scene, scene->objects + intersection->object_id, intersection, settings);
 		//if (dot(intersection->normal, intersection->ray.direction) > 0.)
 		//	intersection->normal *= -1;
 	}
@@ -1612,7 +1613,7 @@ kernel void			cl_main(
 	//else
 	//	image[global_id] = color_unpack((RT_F){0., 0., 0., 0.}, settings->srgb);
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state, global_id);
-	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings)
+	image[global_id] = color_unpack(radiance_get(sample_store + global_id, settings), settings);
 }
 
 
