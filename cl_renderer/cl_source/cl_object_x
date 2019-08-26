@@ -5,12 +5,11 @@
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
-#ifdef RT_DEBUG_CL_RT
+#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RT
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
 		return (plane_intersect(object, intersection));
-	/*
 	else if (object->type == object_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_cylinder)
@@ -19,24 +18,31 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_moebius)
 		return (moebius_intersect(object, intersection));
-	*/
 #endif
 	return (0);
 }
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-#ifdef RT_DEBUG_CL_RM
+#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RM
+	if (object->is_csg)
+		return (RT_INFINITY);
 	if (object->type == object_sphere)
 		return (sdf_sphere(object, point));
 	else if (object->type == object_plane)
 		return (sdf_plane(object, point));
 	else if (object->type == object_julia)
 		return (sdf_julia(object, point));
+	else if (object->type == object_mandelbulb)
+		return (sdf_mandelbulb(object, point));
+	else if (object->type == object_tetrahedron)
+		return (sdf_tetrahedron(object, point));
 	else if (object->type == object_torus)
 		return (sdf_torus(object, point));
 	else if (object->type == object_box)
 		return (sdf_box(object, point));
+	else if (object->type == object_csg)
+		return (sdf_csg(object, point));
 #endif
 	return (RT_INFINITY);
 }

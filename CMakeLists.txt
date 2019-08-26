@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+#pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
-set(BREW /usr/local/)
+set(BREW ~/.brew/)
 
 set(GTK_INCLUDES
 	${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
@@ -41,8 +41,8 @@ set(GTK_LINKS
 
 
 include_directories(
-	#${GTK_INCLUDES}
-	${GTK3_INCLUDE_DIRS}
+	${GTK_INCLUDES}
+#	${GTK3_INCLUDE_DIRS}
 	../21_libft/includes/
 	./parameters/
 	./gui/
@@ -94,18 +94,20 @@ set(GTK_LIBS
 	"-framework CoreGraphics")
 
 link_directories(
-	#${GTK_LINKS}
-	${GTK3_LIBRARY_DIRS}
+	${GTK_LINKS}
+#	${GTK3_LIBRARY_DIRS}
 	../21_libft/)
 
-add_definitions(${GTK3_CFLAGS_OTHER})
+#add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
-	${GTK3_LIBRARIES})
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
+#	${GTK3_LIBRARIES}
+	${GTK3_LIBRARIES}
+)
 
 set(SOURCE_MAIN
 	./main.c)
@@ -139,7 +141,7 @@ set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_moebius_x.c
 	./gui/gui_object_x/gui_object_torus_x.c
 	./gui/gui_object_x/gui_object_mandelbulb_x.c
-	./gui/gui_object_x/gui_object_julia_x.c)
+	./gui/gui_object_x/gui_object_julia_x.c cl_renderer/object_x/object_csg.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
@@ -282,7 +284,7 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_moebius.c
 	./cl_renderer/object_x/object_torus.c
 	./cl_renderer/object_x/object_julia.c
-	./cl_renderer/object_x/object_light_x.c)
+	./cl_renderer/object_x/object_light_x.c cl_renderer/object_x/object_mandelbulb.c cl_renderer/object_x/object_tetrahedron.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c

@@ -1,4 +1,4 @@
-// cl_sample ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_sample_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static void			create_coordinate_system(RT_F4 *normal, RT_F4 *nt, RT_F4 *nb)
 {
@@ -42,7 +42,7 @@ static RT_F4		sample_uniform
 
 	r[0] = rng(rng_state);
 	r[1] = rng(rng_state);
-	sin_theta = RT_SQRT(RT_MAX(0.0f , 1.0f - r[0] * r[0]));
+	sin_theta = RT_SQRT(RT_MAX((RT_F)0.0f , (RT_F)1.0f - r[0] * r[0]));
 	phi = 2.0f * RT_PI * r[1];
 	*cosine = r[0];
 	sample = (RT_F4)
@@ -94,7 +94,7 @@ static RT_F4			sample_cosine(
 	}
 	sample.z = RT_SQRT(RT_MAX((RT_F)0., (RT_F)1. - sample.x * sample.x - sample.y * sample.y));
 
-	RT_F				temp = sample.y;
+	RT_F            temp = sample.y;
 	sample.y = sample.z;
 	sample.z = temp;
 	return (sampler_transform(normal, &sample));

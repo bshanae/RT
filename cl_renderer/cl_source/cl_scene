@@ -34,7 +34,7 @@ static int			scene_intersect_rm(
 
 	result = 0;
 	total_distance = 0.;
-	ray = intersection->ray.origin;
+	ray = intersection->ray.origin + intersection->ray.direction * 10 * RT_EPSILON;
 	for (int step = 0; step < settings->rm_step_limit; step++)
     {
     	current_distance = RT_INFINITY;

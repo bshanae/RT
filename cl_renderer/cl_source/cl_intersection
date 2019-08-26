@@ -17,3 +17,37 @@ static void			intersection_reset(t_intersection *intersection)
 	intersection->ray.t = RT_INFINITY;
 	intersection->object_id = -1;
 }
+
+static void			intersection_reflect(t_intersection *destination, const t_intersection *source)
+{
+	RT_F4			reflected;
+
+	reflected = source->normal * ((RT_F)-2. * dot(source->normal, source->ray.direction));
+	reflected += source->ray.direction;
+	reflected = normalize(reflected);
+	destination->ray.direction = reflected;
+	destination->ray.origin = source->hit;
+}
+
+static void			intersection_refract(t_intersection *destination, const t_intersection *source)
+{
+	RT_F4			refracted;
+	RT_F4			a, b;
+	RT_F4			m;
+	RT_F			sin_alpha;
+	RT_F			sin_beta;
+	RT_F			cos_beta;
+
+	m = source->normal * (-1 * dot(source->normal, source->ray.direction));
+	m += source->ray.direction;
+	m = normalize(m);
+	sin_alpha = length(cross(source->ray.direction * -1, source->normal));
+	sin_beta = sin_alpha / 1.02;
+	cos_beta = RT_SQRT(1 - sin_beta * sin_beta);
+	a = source->normal * (-1 * cos_beta);
+	b = m * sin_beta;
+	refracted = a + b;
+	refracted = normalize(refracted);
+	destination->ray.direction = refracted;
+	destination->ray.origin = source->hit;
+}

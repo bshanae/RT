@@ -32,9 +32,13 @@ void				object_build(
 	else if (type == object_torus)
 		object_torus_build(space, &args);
 	else if (type == object_mandelbulb)
-		;//object_mandelbulb_build(space, &args);
+		object_mandelbulb_build(space, &args);
+	else if (type == object_tetrahedron)
+		object_tetrahedron_build(space, &args);
 	else if (type == object_julia)
 		object_julia_build(space, &args);
+	else if (type == object_csg)
+		object_csg_build(space, &args);
 	space->material = material;
 	space->name[0] = '\0';
 	va_end(args);

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/bshanae/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/bshanae/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1122,6 +1122,33 @@ cl_renderer/object_x/object_cone.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.s
 .PHONY : cl_renderer/object_x/object_cone.c.s
 
+cl_renderer/object_x/object_csg.o: cl_renderer/object_x/object_csg.c.o
+
+.PHONY : cl_renderer/object_x/object_csg.o
+
+# target to build an object file
+cl_renderer/object_x/object_csg.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o
+.PHONY : cl_renderer/object_x/object_csg.c.o
+
+cl_renderer/object_x/object_csg.i: cl_renderer/object_x/object_csg.c.i
+
+.PHONY : cl_renderer/object_x/object_csg.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_csg.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.i
+.PHONY : cl_renderer/object_x/object_csg.c.i
+
+cl_renderer/object_x/object_csg.s: cl_renderer/object_x/object_csg.c.s
+
+.PHONY : cl_renderer/object_x/object_csg.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_csg.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.s
+.PHONY : cl_renderer/object_x/object_csg.c.s
+
 cl_renderer/object_x/object_cylinder.o: cl_renderer/object_x/object_cylinder.c.o
 
 .PHONY : cl_renderer/object_x/object_cylinder.o
@@ -1202,6 +1229,33 @@ cl_renderer/object_x/object_light_x.s: cl_renderer/object_x/object_light_x.c.s
 cl_renderer/object_x/object_light_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.s
 .PHONY : cl_renderer/object_x/object_light_x.c.s
+
+cl_renderer/object_x/object_mandelbulb.o: cl_renderer/object_x/object_mandelbulb.c.o
+
+.PHONY : cl_renderer/object_x/object_mandelbulb.o
+
+# target to build an object file
+cl_renderer/object_x/object_mandelbulb.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.o
+
+cl_renderer/object_x/object_mandelbulb.i: cl_renderer/object_x/object_mandelbulb.c.i
+
+.PHONY : cl_renderer/object_x/object_mandelbulb.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_mandelbulb.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.i
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.i
+
+cl_renderer/object_x/object_mandelbulb.s: cl_renderer/object_x/object_mandelbulb.c.s
+
+.PHONY : cl_renderer/object_x/object_mandelbulb.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_mandelbulb.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.s
+.PHONY : cl_renderer/object_x/object_mandelbulb.c.s
 
 cl_renderer/object_x/object_moebius.o: cl_renderer/object_x/object_moebius.c.o
 
@@ -1310,6 +1364,33 @@ cl_renderer/object_x/object_sphere.s: cl_renderer/object_x/object_sphere.c.s
 cl_renderer/object_x/object_sphere.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.s
 .PHONY : cl_renderer/object_x/object_sphere.c.s
+
+cl_renderer/object_x/object_tetrahedron.o: cl_renderer/object_x/object_tetrahedron.c.o
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.o
+
+# target to build an object file
+cl_renderer/object_x/object_tetrahedron.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.o
+
+cl_renderer/object_x/object_tetrahedron.i: cl_renderer/object_x/object_tetrahedron.c.i
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_tetrahedron.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.i
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.i
+
+cl_renderer/object_x/object_tetrahedron.s: cl_renderer/object_x/object_tetrahedron.c.s
+
+.PHONY : cl_renderer/object_x/object_tetrahedron.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_tetrahedron.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.s
+.PHONY : cl_renderer/object_x/object_tetrahedron.c.s
 
 cl_renderer/object_x/object_torus.o: cl_renderer/object_x/object_torus.c.o
 
@@ -4531,8 +4612,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... rt"
 	@echo "... edit_cache"
+	@echo "... rt"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -4644,6 +4725,9 @@ help:
 	@echo "... cl_renderer/object_x/object_cone.o"
 	@echo "... cl_renderer/object_x/object_cone.i"
 	@echo "... cl_renderer/object_x/object_cone.s"
+	@echo "... cl_renderer/object_x/object_csg.o"
+	@echo "... cl_renderer/object_x/object_csg.i"
+	@echo "... cl_renderer/object_x/object_csg.s"
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"
@@ -4653,6 +4737,9 @@ help:
 	@echo "... cl_renderer/object_x/object_light_x.o"
 	@echo "... cl_renderer/object_x/object_light_x.i"
 	@echo "... cl_renderer/object_x/object_light_x.s"
+	@echo "... cl_renderer/object_x/object_mandelbulb.o"
+	@echo "... cl_renderer/object_x/object_mandelbulb.i"
+	@echo "... cl_renderer/object_x/object_mandelbulb.s"
 	@echo "... cl_renderer/object_x/object_moebius.o"
 	@echo "... cl_renderer/object_x/object_moebius.i"
 	@echo "... cl_renderer/object_x/object_moebius.s"
@@ -4665,6 +4752,9 @@ help:
 	@echo "... cl_renderer/object_x/object_sphere.o"
 	@echo "... cl_renderer/object_x/object_sphere.i"
 	@echo "... cl_renderer/object_x/object_sphere.s"
+	@echo "... cl_renderer/object_x/object_tetrahedron.o"
+	@echo "... cl_renderer/object_x/object_tetrahedron.i"
+	@echo "... cl_renderer/object_x/object_tetrahedron.s"
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"

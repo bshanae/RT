@@ -19,6 +19,11 @@ void 				scene_update(t_scene *scene)
 			scene->objects[i].type == object_light_point ||
 			scene->objects[i].type == object_light_direct)
 			scene->lights[j++] = scene->objects[i].id;
+		if (scene->objects[i].type == object_csg)
+		{
+			scene->objects[((t_object_csg *)scene->objects[i].data)->id_positive].is_csg = 1;
+			scene->objects[((t_object_csg *)scene->objects[i].data)->id_negative].is_csg = 1;
+		}
 		i++;
 	}
 	scene->lights_length = j;

@@ -86,13 +86,12 @@ static RT_F4			light_basic(
 		object = scene->objects + scene->lights[i];
 		if (object->type == object_light_ambient)
 		{
-			color_diffuse += ((constant t_object_light_ambient *)object->data)->color;
+			color_diffuse += object->material.emission;
 			continue ;
 		}
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
 			continue ;
-		light_color = static_get_color(object);
 		color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
 		color_specular += static_get_specular_intensity(intersection, &light_direction);
 	}

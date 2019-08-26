@@ -17,6 +17,7 @@ void				cl_program_concat(t_cl_program *program, CHAR_REF file)
 	ft_strcpy(file_full, program->path);
 	ft_strcat(file_full, file);
 	fd = open(file_full, O_RDONLY);
+
 	ASSERT(fd != -1)
 	while (1)
 	{

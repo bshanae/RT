@@ -30,5 +30,7 @@ const char 			*object_translate(t_object_type type)
 		return ("Mandelbulb");
 	else if (type == object_julia)
 		return ("Julia");
+	else if (type == object_csg)
+		return ("CSG");
 	return ("Unknown");
 }

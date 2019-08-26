@@ -20,6 +20,7 @@ typedef enum		e_object_type
 	object_tetrahedron,
 	object_mandelbulb,
 	object_julia,
+	object_csg,
 	object_end
 }					t_object_type;
 
@@ -28,6 +29,7 @@ typedef struct		s_object
 	char 			name[32];
 	int				id;
 	t_object_type	type;
+	int 			is_csg;
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
 }					t_object;

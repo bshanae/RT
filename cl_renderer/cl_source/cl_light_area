@@ -37,7 +37,7 @@ static RT_F4		light_area(
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
 		if (intersection_light.object_id != i)
-			continue ;
+			continue;
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)

@@ -6,6 +6,7 @@ void				cl_renderer_delete(t_cl_renderer **renderer)
 	cl_arg_list_delete(&(*renderer)->args);
 	camera_delete(&(*renderer)->data.camera);
 	scene_delete(&(*renderer)->data.scene);
+	free((*renderer)->data.rng_state);
 	free(*renderer);
 	*renderer = NULL;
 }

@@ -15,13 +15,13 @@
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
-# define RT_CL_DEPTH				2
+# define RT_CL_DEPTH				3
 # define RT_CL_SAMPLES				2
 # define RT_CL_RUSSIAN_MOD			1
 # define RT_CL_RUSSIAN_DEPTH		10
 # define RT_CL_SRGB					1
 # define RT_CL_LIGHT_BASIC			0
-# define RT_CL_LIGHT_BASIC_BLINN	20.
+# define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 # define RT_CL_LIGHT_AREA			1
 
 # ifdef RT_DEGUB_CL_RM
@@ -29,14 +29,14 @@
 # else
 #  define RT_CL_RM_MOD				0
 # endif
-# define RT_CL_RM_STEP_LIMIT		64
-# define RT_CL_STEP_PART			1.
+# define RT_CL_RM_STEP_LIMIT		128
+# define RT_CL_STEP_PART			(RT_F)0.5
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1
 # define RT_CL_FOCUS				0
-# define RT_CL_APERTURE_SIZE		5.
-# define RT_CL_FOCAL_LENGTH			40.
+# define RT_CL_APERTURE_SIZE		(RT_F)5.
+# define RT_CL_FOCAL_LENGTH			(RT_F)40.
 
 #ifdef RT_FLOAT
 #  define RT_EPSILON				0.0001f
@@ -48,6 +48,6 @@
 #  define RT_CL_RM_NORMAL_EPSILON	0.000001
 #endif
 
-# define RT_INFINITY		INFINITY
+# define RT_INFINITY				INFINITY
 
 #endif
