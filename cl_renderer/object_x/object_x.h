@@ -2,8 +2,21 @@
 # define OBJECT_DATA_H
 
 # include "rt_cl_include.h"
-# include "object_fractals.h"
 # include "rt_float.h"
+
+typedef struct		s_object_light_ambient
+{
+}					t_object_light_ambient;
+
+typedef struct		s_object_light_point
+{
+	RT_F4_API		position;
+}					t_object_light_point;
+
+typedef struct		s_object_light_direct
+{
+	RT_F4_API		direction;
+}					t_object_light_direct;
 
 typedef struct		s_object_sphere
 {
@@ -34,18 +47,24 @@ typedef struct 		s_object_cylinder
 	RT_F 			radius;
 }					t_object_cylinder;
 
+typedef struct 		s_object_box
+{
+	RT_F4_API  		position;
+	RT_F4_API  		size;
+}					t_object_box;
+
 typedef struct 		s_object_paraboloid
 {
-	RT_F4_API		extremum_point;
+	RT_F4_API		extremum;
 	RT_F4_API		axis;
 	RT_F 			radius;
 }					t_object_paraboloid;
 
 typedef struct		s_object_moebius
 {
-    RT_F4_API		position;
-    RT_F 			radius;
-    RT_F			half_width;
+	RT_F4_API		position;
+	RT_F 			radius;
+	RT_F			half_width;
 }					t_object_moebius;
 
 typedef struct 		s_object_torus
@@ -55,24 +74,24 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-typedef struct 		s_object_box
+typedef struct		s_object_mandelbulb
+{
+	RT_F4_API		position;
+	int				iterations;
+	RT_F			power;
+}					t_object_mandelbulb;
+
+typedef struct		s_object_julia
 {
 	RT_F4_API  		position;
-	RT_F4_API  		size;
-}					t_object_box;
-
-typedef enum 		e_csg_mod
-{
-	csg_union,
-	csg_intersection,
-	csg_difference
-}					t_csg_mod;
+	int				iterations;
+	RT_F4_API		value;
+}					t_object_julia;
 
 typedef struct 		s_object_csg
 {
-    int     		id_subtrahend;
-    int     		id_subtractor;
-	t_csg_mod		mod;
+	int     		id_positive;
+	int     		id_negative;
 }					t_object_csg;
 
 #endif

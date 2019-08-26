@@ -18,13 +18,15 @@ t_gui				*gui_new(int *ac, char ***av)
 	new = (t_gui *)malloc(sizeof(t_gui));
 	gui_css(new);
 	new->builder = gtk_builder_new_from_file(RT_GUI_BUILD);
-	new->window = GTK_WINDOW(RT_GUI_GET(new->builder, "window"));
+	new->window = RT_GUI_GET(new->builder, "window");
+	new->notebook_fix[0] = RT_GUI_GET(new->builder, "notebook_fix_0");
+	new->notebook_fix[1] = RT_GUI_GET(new->builder, "notebook_fix_1");
+	new->notebook_fix[2] = RT_GUI_GET(new->builder, "notebook_fix_2");
 	new->camera = gui_camera_new(new->builder);
 	new->scene = gui_scene_new(new->builder);
 	new->settings = gui_settings_new(new->builder);
 	new->image = gui_image_new(new->builder);
 	new->renderer = cl_renderer_new(new->image);
-	gui_camera_show(new->camera, new->renderer->data.camera);
 	gtk_widget_show(GTK_WIDGET(new->window));
 	gtk_widget_grab_focus(GTK_WIDGET(new->image->event_box));
 	return (new);

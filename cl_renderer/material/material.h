@@ -8,8 +8,9 @@ typedef struct 		s_material
 {
 	RT_F4_API		color;
 	RT_F4_API		emission;
-	RT_F			reflection;
-	RT_F			refraction;
+	RT_F			specular;
+	RT_F			reflectance;
+	RT_F			transparence;
 }					t_material;
 
 #endif

@@ -68,6 +68,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
@@ -79,7 +80,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect"/>
+					<Add directory="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/light"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object"/>
@@ -140,6 +141,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
@@ -151,7 +153,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect"/>
+					<Add directory="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/light"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object"/>
@@ -233,9 +235,6 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_rng_delete.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c">
 			<Option target="rt"/>
 		</Unit>
@@ -264,6 +263,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_add.c">
@@ -305,6 +307,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_light_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c">
 			<Option target="rt"/>
 		</Unit>
@@ -318,9 +323,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_tetrahedron.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c">
@@ -338,7 +340,7 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_set_ids.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c">
@@ -353,10 +355,19 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_apply.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_focus_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_show.c">
@@ -368,19 +379,28 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_color/gui_color_to_f4.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_entry/gui_entry_get_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_entry/gui_entry_set_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_delete.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_build.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_get.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_init.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_set.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_show.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_box_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cone_x.c">
@@ -389,16 +409,31 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cylinder_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_julia_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_direct_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_point_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_mandelbulb_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_moebius_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_paraboloid_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_plane_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_sphere_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_torus_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">
@@ -416,31 +451,55 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_gen_name.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_get_object.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_box.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cone.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cylinder.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_julia.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_light_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_mandelbulb.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_material.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_moebius.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_own.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_paraboloid.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_plane.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_sphere.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_torus.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_material_state_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_cone.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_cylinder.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_material.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_plane.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_set_sphere.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_show.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">
@@ -449,25 +508,49 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_get_object.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_box.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cone.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cylinder.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_julia.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_light_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_material.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_moebius.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_own.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_paraboloid.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_plane.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_sphere.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_torus.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_material_color_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_cone.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_cylinder.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_material.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_plane.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_set_sphere.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c">
@@ -476,43 +559,55 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_update.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_apply.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_delete.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_all.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_camera.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_image.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_macro.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_object_edit_plane.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_object_edit_sphere.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_add.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect/gui_signal_connect_scene_edit.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_position_x.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_rotation_x.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
@@ -524,34 +619,25 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_bottom_x.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_radius.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_cone_top_x.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_plane_normal_x.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_plane_position_x.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_sphere_x.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_object_edit_x_name.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type_x.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_apply.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c">
@@ -563,7 +649,34 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_reset.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_pt_russian.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_srgb.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_singal_task_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/main.c">

@@ -7,10 +7,9 @@ typedef struct				s_object_mandelbulb
 	RT_F4					position;
 	int						iterations;
 	RT_F					power;
-	RT_F					bailout;
 }							t_object_mandelbulb;
 
-static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
+static RT_F					mandelbulb_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_mandelbulb		data;
 	RT_F4					z;
@@ -28,14 +27,14 @@ static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
 	for (int iter = 0; iter < data.iterations; iter++)
 	{
 		r = length(z);
-		if (r > data.bailout)
+		if (r > 2.)
         	break ;
         theta = acos(z.z / r);
         phi = atan2(z.y, z.x);
 
-        dr = pow((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
+        dr = RT_POW((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
 
-        zr = pow(r, data.power);
+        zr = RT_POW(r, data.power);
         theta *= data.power;
         phi *= data.power;
 

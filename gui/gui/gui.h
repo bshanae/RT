@@ -16,6 +16,8 @@ typedef struct		s_gui
 	GtkCssProvider	*css_provider;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
+	GThreadPool		*pool;
+	GtkEntry		*notebook_fix[3];
 	t_gui_camera	*camera;
 	t_gui_scene		*scene;
 	t_gui_settings	*settings;
@@ -27,6 +29,6 @@ t_gui				*gui_new(int *ac, char ***av);
 void				gui_delete(t_gui **gui);
 
 void				gui_loop(t_gui *gui);
-void 				gui_load(t_gui *gui);
+void 				gui_update(t_gui *gui);
 
 #endif

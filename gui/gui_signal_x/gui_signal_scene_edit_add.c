@@ -12,6 +12,7 @@ void				gui_signal_scene_edit_add
 	gtk_entry_set_placeholder_text(gui->scene->add->name,
 		gui_scene_add_gen_name(gui->scene->add));
 	gtk_widget_grab_focus(GTK_WIDGET(gui->scene->add->type_combo));
+	gui_scene_add_material_state_non_light(gui->scene->add);
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
 	{

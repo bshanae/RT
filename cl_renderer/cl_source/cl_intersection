@@ -2,12 +2,6 @@
 
 #include "rt_parameters.h"
 
-typedef struct		s_scene
-{
-    t_object		objects[RT_CL_SCENE_CAPACITY];
-    int				objects_length;
-}					t_scene;
-
 typedef struct		s_intersection
 {
 	t_ray			ray;

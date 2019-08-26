@@ -47,14 +47,14 @@ static RT_F4					sphere_random(constant t_object *object, global ulong *rng_stat
 	data = *(constant t_object_sphere *)object->data;
 	theta = rng(rng_state) * RT_PI;
 	phi = rng(rng_state) * 2 * RT_PI;
-	random.x = 0.99 * data.radius * RT_SIN(theta) * RT_COS(phi);
-	random.y = 0.99 * data.radius * RT_SIN(theta) * RT_SIN(phi);
-	random.z = 0.99 * data.radius * RT_COS(theta);
+	random.x = 0.9 * data.radius * RT_SIN(theta) * RT_COS(phi);
+	random.y = 0.9 * data.radius * RT_SIN(theta) * RT_SIN(phi);
+	random.z = 0.9 * data.radius * RT_COS(theta);
 	random += data.position;
 	return (random);
 }
 
-static RT_F 					sdf_sphere(constant t_object *object, RT_F4 point)
+static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_sphere				data;
 

@@ -9,7 +9,7 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
+static RT_F 		torus_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_torus	data;
 	RT_F2			q;
