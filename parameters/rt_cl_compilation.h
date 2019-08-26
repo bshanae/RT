@@ -27,7 +27,6 @@
 # define CL_SOURCE_OBJECT_TORUS			"cl_object_torus"
 # define CL_SOURCE_OBJECT_JULIA			"cl_object_julia"
 # define CL_SOURCE_OBJECT_MANDELBULB	"cl_object_mandelbulb"
-# define CL_SOURCE_OBJECT_TETRAHEDRON	"cl_object_tetrahedron"
 # define CL_SOURCE_OBJECT_CSG			"cl_object_csg"
 # define CL_SOURCE_OBJECT_X				"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL		"cl_object_normal"

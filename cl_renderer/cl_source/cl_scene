@@ -47,7 +47,7 @@ static int			scene_intersect_rm(
 				current_id = object_i;
 			}
 		}
-    	if (current_distance < RT_EPSILON)
+    	if (current_distance < RT_RM_EPSILON)
     	{
     		result = 1;
     		intersection->object_id = current_id;

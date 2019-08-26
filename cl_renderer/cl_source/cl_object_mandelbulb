@@ -9,7 +9,7 @@ typedef struct				s_object_mandelbulb
 	RT_F					power;
 }							t_object_mandelbulb;
 
-static RT_F					sdf_mandelbulb(constant t_object *object, RT_F4 point)
+static RT_F					mandelbulb_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_mandelbulb		data;
 	RT_F4					z;

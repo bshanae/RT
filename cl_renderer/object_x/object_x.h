@@ -74,13 +74,6 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-typedef struct		s_object_tetrahedron
-{
-	RT_F4_API		position;
-	int				iterations;
-	RT_F			scale;
-}					t_object_tetrahedron;
-
 typedef struct		s_object_mandelbulb
 {
 	RT_F4_API		position;

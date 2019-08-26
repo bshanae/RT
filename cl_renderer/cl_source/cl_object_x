@@ -28,21 +28,19 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
-		return (sdf_sphere(object, point));
+		return (sphere_sdf(object, point));
 	else if (object->type == object_plane)
-		return (sdf_plane(object, point));
+		return (plane_sdf(object, point));
 	else if (object->type == object_julia)
-		return (sdf_julia(object, point));
+		return (julia_sdf(object, point));
 	else if (object->type == object_mandelbulb)
-		return (sdf_mandelbulb(object, point));
-	else if (object->type == object_tetrahedron)
-		return (sdf_tetrahedron(object, point));
+		return (mandelbulb_sdf(object, point));
 	else if (object->type == object_torus)
-		return (sdf_torus(object, point));
+		return (torus_sdf(object, point));
 	else if (object->type == object_box)
-		return (sdf_box(object, point));
+		return (box_sdf(object, point));
 	else if (object->type == object_csg)
-		return (sdf_csg(object, point));
+		return (csg_sdf(object, point));
 #endif
 	return (RT_INFINITY);
 }

@@ -54,7 +54,7 @@ static RT_F4					sphere_random(constant t_object *object, global ulong *rng_stat
 	return (random);
 }
 
-static RT_F 					sdf_sphere(constant t_object *object, RT_F4 point)
+static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_sphere				data;
 

@@ -43,7 +43,6 @@ static void			radiance_add(
 		}
 
         if (f4_max_component(intersection->material.reflectance) > 0.|| f4_max_component(intersection->material.transparence) > 0.)
-
         {
             choice = rng(rng_state);
             if (choice < intersection->material.reflectance)

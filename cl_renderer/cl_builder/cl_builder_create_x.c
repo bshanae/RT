@@ -29,7 +29,6 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MANDELBULB);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TETRAHEDRON);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CSG);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);

@@ -17,7 +17,6 @@ typedef enum		e_object_type
 	object_paraboloid,
 	object_moebius,
 	object_torus,
-	object_tetrahedron,
 	object_mandelbulb,
 	object_julia,
 	object_csg,

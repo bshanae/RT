@@ -40,11 +40,13 @@
 
 #ifdef RT_FLOAT
 #  define RT_EPSILON				0.0001f
+#  define RT_RM_EPSILON				0.0001f
 #  define RT_CL_RM_NORMAL_EPSILON	0.0001f
 #endif
 
 #ifdef RT_DOUBLE
 #  define RT_EPSILON				0.000001
+#  define RT_RM_EPSILON				0.000001
 #  define RT_CL_RM_NORMAL_EPSILON	0.000001
 #endif
 

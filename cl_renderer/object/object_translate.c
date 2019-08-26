@@ -24,8 +24,6 @@ const char 			*object_translate(t_object_type type)
 		return ("Moebius Strip");
 	else if (type == object_torus)
 		return ("Torus");
-	else if (type == object_tetrahedron)
-		return ("Tetrahedron");
 	else if (type == object_mandelbulb)
 		return ("Mandelbulb");
 	else if (type == object_julia)

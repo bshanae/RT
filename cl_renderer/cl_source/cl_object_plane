@@ -31,7 +31,7 @@ static RT_F4		plane_normal(constant t_object *object, t_intersection *intersecti
 	return (((constant t_object_plane *)object->data)->normal);
 }
 
-static RT_F 		sdf_plane(constant t_object *object, RT_F4 point)
+static RT_F 		plane_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_plane	data;
 

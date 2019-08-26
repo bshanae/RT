@@ -33,8 +33,6 @@ void				object_build(
 		object_torus_build(space, &args);
 	else if (type == object_mandelbulb)
 		object_mandelbulb_build(space, &args);
-	else if (type == object_tetrahedron)
-		object_tetrahedron_build(space, &args);
 	else if (type == object_julia)
 		object_julia_build(space, &args);
 	else if (type == object_csg)

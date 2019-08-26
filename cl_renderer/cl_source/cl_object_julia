@@ -9,7 +9,7 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static RT_F			sdf_julia(constant t_object *object, RT_F4 point)
+static RT_F			julia_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;

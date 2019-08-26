@@ -152,6 +152,10 @@ rt_cl_include.h
 rt_float.h
 .././cl_renderer/material/rt_float.h
 
+.././cl_renderer/material/material_list.h
+color_list.h
+.././cl_renderer/material/color_list.h
+
 .././cl_renderer/object/object_definition.h
 rt_parameters.h
 .././cl_renderer/object/rt_parameters.h
@@ -342,13 +346,23 @@ rt_control.h
 rt_control.h
 .././parameters/rt_control.h
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
+../gui/gui_signal_connect_x/gui_signal_connect_macro.h
+
+../gui/gui_signal_connect_x/gui_signal_connect_x.h
+gui_signal_connect_macro.h
+../gui/gui_signal_connect_x/gui_signal_connect_macro.h
+gui.h
+../gui/gui_signal_connect_x/gui.h
+gui_signal_x.h
+../gui/gui_signal_connect_x/gui_signal_x.h
+
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h
 -
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk.h
 atk/atkobject.h
 -
 atk/atkaction.h
@@ -416,69 +430,69 @@ atk/atkversion.h
 atk/atkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkaction.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkaction.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkcomponent.h
-atk/atkobject.h
--
-atk/atkutil.h
--
-
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkdocument.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkcomponent.h
 atk/atkobject.h
 -
 atk/atkutil.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkeditabletext.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkdocument.h
+atk/atkobject.h
+-
+atk/atkutil.h
+-
+
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkeditabletext.h
 atk/atkobject.h
 -
 atk/atktext.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkgobjectaccessible.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkgobjectaccessible.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhyperlink.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhyperlink.h
 atk/atkaction.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhyperlinkimpl.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhyperlinkimpl.h
 atk/atkobject.h
 -
 atk/atkhyperlink.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhypertext.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkhypertext.h
 atk/atkobject.h
 -
 atk/atkhyperlink.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkimage.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkimage.h
 atk/atkobject.h
 -
 atk/atkutil.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkmisc.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkmisc.h
 glib-object.h
 -
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atknoopobject.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atknoopobject.h
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atknoopobjectfactory.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atknoopobjectfactory.h
 atk/atkobjectfactory.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobject.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobject.h
 glib-object.h
 -
 atk/atkversion.h
@@ -488,29 +502,29 @@ atk/atkstate.h
 atk/atkrelationtype.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobjectfactory.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobjectfactory.h
 glib-object.h
 -
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkplug.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkplug.h
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrange.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrange.h
 glib-object.h
 -
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkregistry.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkregistry.h
 glib-object.h
 -
 atkobjectfactory.h
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobjectfactory.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkobjectfactory.h
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelation.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelation.h
 glib-object.h
 -
 atk/atkrelationtype.h
@@ -518,7 +532,7 @@ atk/atkrelationtype.h
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelationset.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelationset.h
 glib-object.h
 -
 atk/atkobject.h
@@ -526,25 +540,25 @@ atk/atkobject.h
 atk/atkrelation.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelationtype.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkrelationtype.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkselection.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkselection.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atksocket.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atksocket.h
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstate.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstate.h
 glib-object.h
 -
 atk/atkversion.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstateset.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstateset.h
 glib-object.h
 -
 atk/atkobject.h
@@ -552,19 +566,19 @@ atk/atkobject.h
 atk/atkstate.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstreamablecontent.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkstreamablecontent.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktable.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktable.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktablecell.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktablecell.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktext.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atktext.h
 glib-object.h
 -
 atk/atkobject.h
@@ -574,47 +588,47 @@ atk/atkutil.h
 atk/atkcomponent.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkutil.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkutil.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkvalue.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkvalue.h
 atk/atkobject.h
 -
 atk/atkrange.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkversion.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkversion.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkwindow.h
+/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atkwindow.h
 atk/atkobject.h
 -
 
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-deprecated.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-deprecated.h
 
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-features.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-features.h
 
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-version.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-version.h
 
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo.h
 cairo-version.h
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-version.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-version.h
 cairo-features.h
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-features.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-features.h
 cairo-deprecated.h
-/Users/bshanae/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-deprecated.h
+/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo/cairo-deprecated.h
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 glib-object.h
 -
 gdk-pixbuf/gdk-pixbuf-core.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 glib.h
 -
 glib-object.h
@@ -624,17 +638,17 @@ gio/gio.h
 gdk-pixbuf/gdk-pixbuf-macros.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
 glib-object.h
 -
 gdk-pixbuf/gdk-pixbuf-macros.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
 stdio.h
 -
 glib.h
@@ -646,7 +660,7 @@ gdk-pixbuf/gdk-pixbuf-core.h
 gdk-pixbuf/gdk-pixbuf-animation.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 glib.h
 -
 glib-object.h
@@ -658,23 +672,23 @@ gdk-pixbuf/gdk-pixbuf-animation.h
 gdk-pixbuf/gdk-pixbuf-io.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h
 glib.h
 -
 gdk-pixbuf/gdk-pixbuf-features.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 gdk-pixbuf/gdk-pixbuf-animation.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 glib.h
 -
 gdk-pixbuf/gdk-pixbuf-core.h
 -
 
-/Users/bshanae/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h
+/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h
 glib.h
 -
 gdk-pixbuf/gdk-pixbuf-macros.h
@@ -700,85 +714,85 @@ gdk-pixbuf/gdk-pixbuf-enum-types.h
 gdk-pixbuf/gdk-pixbuf-autocleanups.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gaction.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gaction.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroup.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroupexporter.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroupexporter.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactionmap.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactionmap.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gappinfo.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gappinfo.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gapplication.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gapplication.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gapplicationcommandline.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gapplicationcommandline.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gasyncinitable.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gasyncinitable.h
 gio/giotypes.h
 -
 gio/ginitable.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gasyncresult.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gasyncresult.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbufferedinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbufferedinputstream.h
 gio/gfilterinputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbufferedoutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbufferedoutputstream.h
 gio/gfilteroutputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbytesicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gbytesicon.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcancellable.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcancellable.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcharsetconverter.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcharsetconverter.h
 gio/gconverter.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcontenttype.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcontenttype.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverter.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverter.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverterinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverterinputstream.h
 gio/gfilterinputstream.h
 -
 gio/gconverter.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverteroutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gconverteroutputstream.h
 gio/gfilteroutputstream.h
 -
 gio/gconverter.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcredentials.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gcredentials.h
 gio/giotypes.h
 -
 unistd.h
@@ -786,209 +800,209 @@ unistd.h
 sys/types.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdatagrambased.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdatagrambased.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdatainputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdatainputstream.h
 gio/gbufferedinputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdataoutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdataoutputstream.h
 gio/gfilteroutputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusactiongroup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusactiongroup.h
 giotypes.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giotypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giotypes.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusaddress.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusauthobserver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusauthobserver.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusconnection.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbuserror.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbuserror.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusinterface.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusinterface.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusintrospection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusintrospection.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmenumodel.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmenumodel.h
 gio/gdbusconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmessage.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmessage.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmethodinvocation.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusmethodinvocation.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusnameowning.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusnameowning.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusnamewatching.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusnamewatching.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobject.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobject.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanager.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanager.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectproxy.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectproxy.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectskeleton.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusobjectskeleton.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusproxy.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusproxy.h
 gio/giotypes.h
 -
 gio/gdbusintrospection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusserver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusserver.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdbusutils.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdrive.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdrive.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsclientconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsclientconnection.h
 gio/gdtlsconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsconnection.h
 gio/gdatagrambased.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsserverconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gdtlsserverconnection.h
 gio/gdtlsconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gemblem.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gemblem.h
 gio/gioenums.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gemblemedicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gemblemedicon.h
 gio/gicon.h
 -
 gio/gemblem.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfile.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfile.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileattribute.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileattribute.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileenumerator.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileenumerator.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileicon.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileinfo.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileinfo.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileinputstream.h
 gio/ginputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileiostream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileiostream.h
 gio/giostream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilemonitor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilemonitor.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilenamecompleter.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilenamecompleter.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileoutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfileoutputstream.h
 gio/goutputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilterinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilterinputstream.h
 gio/ginputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilteroutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gfilteroutputstream.h
 gio/goutputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gicon.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetaddress.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetaddressmask.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetaddressmask.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetsocketaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginetsocketaddress.h
 gio/gsocketaddress.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginitable.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginitable.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/ginputstream.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gio-autocleanups.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gio-autocleanups.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gio.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gio.h
 gio/giotypes.h
 -
 gio/gaction.h
@@ -1278,31 +1292,31 @@ gio/gliststore.h
 gio/gio-autocleanups.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioenums.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioenums.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioenumtypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioenumtypes.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioerror.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioerror.h
 glib.h
 -
 gio/gioenums.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giomodule.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giomodule.h
 gio/giotypes.h
 -
 gmodule.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioscheduler.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gioscheduler.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giostream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giostream.h
 gio/ginputstream.h
 -
 gio/goutputstream.h
@@ -1312,191 +1326,191 @@ gio/gcancellable.h
 gio/gioerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giotypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/giotypes.h
 gio/gioenums.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/glistmodel.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/glistmodel.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gliststore.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gliststore.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gloadableicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gloadableicon.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmemoryinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmemoryinputstream.h
 gio/ginputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmemoryoutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmemoryoutputstream.h
 gio/goutputstream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenu.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenu.h
 gio/gmenumodel.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenuexporter.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenuexporter.h
 gio/gdbusconnection.h
 -
 gio/gmenumodel.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenumodel.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmenumodel.h
 glib-object.h
 -
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmount.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmount.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmountoperation.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gmountoperation.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnativevolumemonitor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnativevolumemonitor.h
 gio/gvolumemonitor.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkaddress.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkmonitor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkmonitor.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkservice.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnetworkservice.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnotification.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gnotification.h
 gio/giotypes.h
 -
 gio/gioenums.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/goutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/goutputstream.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpermission.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpermission.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableinputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableinputstream.h
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableoutputstream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableoutputstream.h
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpollableutils.h
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpropertyaction.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gpropertyaction.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxy.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxy.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyaddress.h
 gio/ginetsocketaddress.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyaddressenumerator.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyaddressenumerator.h
 gio/gsocketaddressenumerator.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyresolver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gproxyresolver.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gremoteactiongroup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gremoteactiongroup.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gresolver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gresolver.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gresource.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gresource.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gseekable.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gseekable.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsettings.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsettings.h
 gio/gsettingsschema.h
 -
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsettingsschema.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsettingsschema.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleaction.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleaction.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleactiongroup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleactiongroup.h
 gactiongroup.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactiongroup.h
 gactionmap.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactionmap.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gactionmap.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleasyncresult.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleasyncresult.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleiostream.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleiostream.h
 gio/giotypes.h
 -
 gio/giostream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimplepermission.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimplepermission.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleproxyresolver.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsimpleproxyresolver.h
 gio/gproxyresolver.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocket.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocket.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketaddress.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketaddress.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketaddressenumerator.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketaddressenumerator.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketclient.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketclient.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketconnectable.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketconnectable.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketconnection.h
 glib-object.h
 -
 gio/gsocket.h
@@ -1504,115 +1518,115 @@ gio/gsocket.h
 gio/giostream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketcontrolmessage.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketcontrolmessage.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketlistener.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketlistener.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketservice.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsocketservice.h
 gio/gsocketlistener.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsrvtarget.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsrvtarget.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsubprocess.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsubprocess.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsubprocesslauncher.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gsubprocesslauncher.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtask.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtask.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtcpconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtcpconnection.h
 gio/gsocketconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtcpwrapperconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtcpwrapperconnection.h
 gio/gtcpconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtestdbus.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtestdbus.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gthemedicon.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gthemedicon.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gthreadedsocketservice.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gthreadedsocketservice.h
 gio/gsocketservice.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsbackend.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsbackend.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlscertificate.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlscertificate.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsclientconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsclientconnection.h
 gio/gtlsconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsconnection.h
 gio/giostream.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsdatabase.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsdatabase.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsfiledatabase.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsfiledatabase.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsinteraction.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsinteraction.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlspassword.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlspassword.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsserverconnection.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gtlsserverconnection.h
 gio/gtlsconnection.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvfs.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvfs.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvolume.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvolume.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvolumemonitor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gvolumemonitor.h
 gio/giotypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gzlibcompressor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gzlibcompressor.h
 gio/gconverter.h
 -
 gio/gfileinfo.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gzlibdecompressor.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gio/gzlibdecompressor.h
 gio/gconverter.h
 -
 gio/gfileinfo.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib-object.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib-object.h
 gobject/gbinding.h
 -
 gobject/gboxed.h
@@ -1646,7 +1660,7 @@ gobject/glib-enumtypes.h
 gobject/gobject-autocleanups.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib.h
 glib/galloca.h
 -
 glib/garray.h
@@ -1806,27 +1820,27 @@ glib/deprecated/gthread.h
 glib/glib-autocleanups.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gallocator.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gallocator.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gcache.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gcache.h
 glib/glist.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gcompletion.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gcompletion.h
 glib/glist.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gmain.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gmain.h
 glib/gmain.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/grel.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/grel.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gthread.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/deprecated/gthread.h
 glib/gthread.h
 -
 sys/types.h
@@ -1834,7 +1848,7 @@ sys/types.h
 pthread.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/galloca.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/galloca.h
 glib/gtypes.h
 -
 alloca.h
@@ -1844,19 +1858,19 @@ alloca.h
 malloc.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/garray.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/garray.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gasyncqueue.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gasyncqueue.h
 glib/gthread.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gatomic.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gatomic.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbacktrace.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbacktrace.h
 glib/gtypes.h
 -
 sys/select.h
@@ -1864,45 +1878,45 @@ sys/select.h
 signal.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbase64.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbase64.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbitlock.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbitlock.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbookmarkfile.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbookmarkfile.h
 glib/gerror.h
 -
 time.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbytes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gbytes.h
 glib/gtypes.h
 -
 glib/garray.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gcharset.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gcharset.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gchecksum.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gchecksum.h
 glib/gtypes.h
 -
 glib/gbytes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gconvert.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gconvert.h
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdataset.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdataset.h
 glib/gquark.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdate.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdate.h
 time.h
 -
 glib/gtypes.h
@@ -1910,57 +1924,57 @@ glib/gtypes.h
 glib/gquark.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdatetime.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdatetime.h
 glib/gtimezone.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdir.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gdir.h
 glib/gerror.h
 -
 dirent.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/genviron.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/genviron.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gerror.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gerror.h
 stdarg.h
 -
 glib/gquark.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gfileutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gfileutils.h
 glibconfig.h
 -
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ggettext.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ggettext.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghash.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghash.h
 glib/gtypes.h
 -
 glib/glist.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghmac.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghmac.h
 glib/gtypes.h
 -
 gchecksum.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gchecksum.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gchecksum.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghook.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghook.h
 glib/gmem.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghostutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/ghostutils.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/giochannel.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/giochannel.h
 glib/gconvert.h
 -
 glib/gmain.h
@@ -1968,25 +1982,25 @@ glib/gmain.h
 glib/gstring.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gkeyfile.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gkeyfile.h
 glib/gbytes.h
 -
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/glib-autocleanups.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/glib-autocleanups.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/glist.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/glist.h
 glib/gmem.h
 -
 glib/gnode.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmacros.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmacros.h
 stddef.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmain.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmain.h
 glib/gpoll.h
 -
 glib/gslist.h
@@ -1994,13 +2008,13 @@ glib/gslist.h
 glib/gthread.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmappedfile.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmappedfile.h
 glib/gbytes.h
 -
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmarkup.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmarkup.h
 stdarg.h
 -
 glib/gerror.h
@@ -2008,11 +2022,11 @@ glib/gerror.h
 glib/gslist.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmem.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmem.h
 glib/gutils.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmessages.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmessages.h
 stdarg.h
 -
 glib/gtypes.h
@@ -2022,97 +2036,97 @@ glib/gmacros.h
 glib/gvariant.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gnode.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gnode.h
 glib/gmem.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/goption.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/goption.h
 glib/gerror.h
 -
 glib/gquark.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gpattern.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gpattern.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gpoll.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gpoll.h
 glibconfig.h
 -
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gprimes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gprimes.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gqsort.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gqsort.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gquark.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gquark.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gqueue.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gqueue.h
 glib/glist.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grand.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grand.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grcbox.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grcbox.h
 glib/gmem.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grefcount.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grefcount.h
 glib/gatomic.h
 -
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grefstring.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/grefstring.h
 gmem.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmem.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmem.h
 gmacros.h
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmacros.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gmacros.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gregex.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gregex.h
 glib/gerror.h
 -
 glib/gstring.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gscanner.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gscanner.h
 glib/gdataset.h
 -
 glib/ghash.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gsequence.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gsequence.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gshell.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gshell.h
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gslice.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gslice.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gslist.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gslist.h
 glib/gmem.h
 -
 glib/gnode.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gspawn.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gspawn.h
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstrfuncs.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstrfuncs.h
 stdarg.h
 -
 glib/gmacros.h
@@ -2122,7 +2136,7 @@ glib/gtypes.h
 glib/gerror.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstring.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstring.h
 glib/gtypes.h
 -
 glib/gunicode.h
@@ -2132,11 +2146,11 @@ glib/gbytes.h
 glib/gutils.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstringchunk.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gstringchunk.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtestutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtestutils.h
 glib/gmessages.h
 -
 glib/gstring.h
@@ -2148,7 +2162,7 @@ glib/gslist.h
 string.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gthread.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gthread.h
 glib/gatomic.h
 -
 glib/gerror.h
@@ -2156,27 +2170,27 @@ glib/gerror.h
 glib/gutils.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gthreadpool.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gthreadpool.h
 glib/gthread.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtimer.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtimer.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtimezone.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtimezone.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtrashstack.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtrashstack.h
 glib/gutils.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtree.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtree.h
 glib/gnode.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gtypes.h
 glibconfig.h
 -
 glib/gmacros.h
@@ -2186,17 +2200,17 @@ glib/gversionmacros.h
 time.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gunicode.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gunicode.h
 glib/gerror.h
 -
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gurifuncs.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gurifuncs.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gutils.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gutils.h
 glib/gtypes.h
 -
 stdarg.h
@@ -2204,11 +2218,11 @@ stdarg.h
 stdlib.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/guuid.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/guuid.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gvariant.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gvariant.h
 glib/gvarianttype.h
 -
 glib/gstring.h
@@ -2216,57 +2230,57 @@ glib/gstring.h
 glib/gbytes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gvarianttype.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gvarianttype.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gversion.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gversion.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gversionmacros.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gversionmacros.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gwin32.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/glib/gwin32.h
 glib/gtypes.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gmodule.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gmodule.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gbinding.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gbinding.h
 glib.h
 -
 gobject/gobject.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gboxed.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gboxed.h
 gobject/gtype.h
 -
 gobject/glib-types.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gclosure.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gclosure.h
 gobject/gtype.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/genums.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/genums.h
 gobject/gtype.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/glib-enumtypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/glib-enumtypes.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/glib-types.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/glib-types.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gmarshal.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gmarshal.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gobject-autocleanups.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gobject-autocleanups.h
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gobject.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gobject.h
 gobject/gtype.h
 -
 gobject/gvalue.h
@@ -2280,11 +2294,11 @@ gobject/gsignal.h
 gobject/gboxed.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gparam.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gparam.h
 gobject/gvalue.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gparamspecs.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gparamspecs.h
 gobject/gvalue.h
 -
 gobject/genums.h
@@ -2294,7 +2308,7 @@ gobject/gboxed.h
 gobject/gobject.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gsignal.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gsignal.h
 gobject/gclosure.h
 -
 gobject/gvalue.h
@@ -2304,39 +2318,39 @@ gobject/gparam.h
 gobject/gmarshal.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gsourceclosure.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gsourceclosure.h
 gobject/gclosure.h
 -
 gobject/glib-types.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtype.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtype.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtypemodule.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtypemodule.h
 gobject/gobject.h
 -
 gobject/genums.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtypeplugin.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gtypeplugin.h
 gobject/gtype.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvalue.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvalue.h
 gobject/gtype.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvaluearray.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvaluearray.h
 gobject/gvalue.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvaluetypes.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0/gobject/gvaluetypes.h
 gobject/gvalue.h
 -
 
-/Users/bshanae/.brew/Cellar/glib/2.60.6/lib/glib-2.0/include/glibconfig.h
+/Users/ashari/.brew/Cellar/glib/2.60.6/lib/glib-2.0/include/glibconfig.h
 glib/gmacros.h
 -
 limits.h
@@ -2344,7 +2358,7 @@ limits.h
 float.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/deprecated/gdkcolor.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/deprecated/gdkcolor.h
 cairo.h
 -
 gdk/gdktypes.h
@@ -2352,9 +2366,9 @@ gdk/gdktypes.h
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdk-autocleanup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdk-autocleanup.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdk.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdk.h
 gdk/gdkconfig.h
 -
 gdk/gdkversionmacros.h
@@ -2430,7 +2444,7 @@ gdk/deprecated/gdkcolor.h
 gdk/gdk-autocleanup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkapplaunchcontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkapplaunchcontext.h
 gio/gio.h
 -
 gdk/gdkversionmacros.h
@@ -2440,7 +2454,7 @@ gdk/gdktypes.h
 gdk/gdkscreen.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkcairo.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkcairo.h
 gdk/gdkversionmacros.h
 -
 gdk/deprecated/gdkcolor.h
@@ -2454,11 +2468,11 @@ gdk/gdkpixbuf.h
 pango/pangocairo.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkconfig.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkconfig.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkcursor.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkcursor.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
@@ -2466,31 +2480,31 @@ gdk/gdktypes.h
 gdk-pixbuf/gdk-pixbuf.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevice.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevice.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicemanager.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicemanager.h
 gdk/gdktypes.h
 -
 gdk/gdkdevice.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicepad.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicepad.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicetool.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdevicetool.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdisplay.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdisplay.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
@@ -2504,13 +2518,13 @@ gdk/gdkseat.h
 gdk/gdkmonitor.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdisplaymanager.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdisplaymanager.h
 gdk/gdktypes.h
 -
 gdk/gdkdisplay.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdnd.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdnd.h
 gdk/gdktypes.h
 -
 gdk/gdkdevice.h
@@ -2518,19 +2532,19 @@ gdk/gdkdevice.h
 gdk/gdkevents.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdrawingcontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkdrawingcontext.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkenumtypes.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkenumtypes.h
 glib-object.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkevents.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkevents.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
@@ -2542,37 +2556,37 @@ gdk/gdkdevice.h
 gdk/gdkdevicetool.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkframeclock.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkframeclock.h
 gdk/gdkframetimings.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkframetimings.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkframetimings.h
 glib-object.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkglcontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkglcontext.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkkeys.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkkeys.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkkeysyms.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkkeysyms.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkmain.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkmain.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkmonitor.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkmonitor.h
 gdk/gdkversionmacros.h
 -
 gdk/gdkrectangle.h
@@ -2580,13 +2594,13 @@ gdk/gdkrectangle.h
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkpango.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkpango.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkpixbuf.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkpixbuf.h
 cairo.h
 -
 gdk-pixbuf/gdk-pixbuf.h
@@ -2596,25 +2610,25 @@ gdk/gdktypes.h
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkproperty.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkproperty.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkrectangle.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkrectangle.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkrgba.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkrgba.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkscreen.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkscreen.h
 cairo.h
 -
 gdk/gdkversionmacros.h
@@ -2624,7 +2638,7 @@ gdk/gdktypes.h
 gdk/gdkdisplay.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkseat.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkseat.h
 glib-object.h
 -
 gdk/gdkwindow.h
@@ -2634,23 +2648,23 @@ gdk/gdkevents.h
 gdk/gdktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkselection.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkselection.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdktestutils.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdktestutils.h
 gdk/gdkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkthreads.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkthreads.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdktypes.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdktypes.h
 glib.h
 -
 pango/pango.h
@@ -2662,17 +2676,17 @@ cairo.h
 gdk/gdkconfig.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkversionmacros.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkversionmacros.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkvisual.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkvisual.h
 gdk/gdktypes.h
 -
 gdk/gdkversionmacros.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gdk/gdkwindow.h
 gdk/gdkversionmacros.h
 -
 gdk/gdktypes.h
@@ -2684,47 +2698,47 @@ gdk/gdkevents.h
 gdk/gdkframeclock.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkaction.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkaction.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkactiongroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkactiongroup.h
 gtk/deprecated/gtkaction.h
 -
 gtk/deprecated/gtkstock.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkactivatable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkactivatable.h
 gtk/deprecated/gtkaction.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkalignment.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkalignment.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkarrow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkarrow.h
 gtk/deprecated/gtkmisc.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h
 gtk/gtkdialog.h
 -
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkcolorseldialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkcolorseldialog.h
 gtk/gtkdialog.h
 -
 gtk/deprecated/gtkcolorsel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkfontsel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkfontsel.h
 gtk/gtkdialog.h
 -
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkgradient.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkgradient.h
 gdk/gdk.h
 -
 gtk/gtkstylecontext.h
@@ -2734,39 +2748,39 @@ gtk/deprecated/gtkstyleproperties.h
 gtk/deprecated/gtksymboliccolor.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhandlebox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhandlebox.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhbbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhbbox.h
 gtk/gtkbbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhbox.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhpaned.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhpaned.h
 gtk/gtkpaned.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhscale.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhscale.h
 gtk/gtkscale.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhscrollbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhscrollbar.h
 gtk/gtkscrollbar.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhseparator.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhseparator.h
 gtk/gtkseparator.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhsv.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkhsv.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkiconfactory.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkiconfactory.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
@@ -2774,47 +2788,47 @@ gtk/gtkenums.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h
 gtk/gtkmenuitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkmisc.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkmisc.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtknumerableicon.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtknumerableicon.h
 gio/gio.h
 -
 gtk/gtkstylecontext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkradioaction.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkradioaction.h
 gtk/deprecated/gtktoggleaction.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkrc.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkrc.h
 gtk/gtkwidget.h
 -
 gtk/gtkbindings.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h
 gtk/deprecated/gtkaction.h
 -
 gtk/gtkrecentmanager.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h
 gtk/gtkimage.h
 -
 gtk/gtkmenu.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstock.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstock.h
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstyle.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstyle.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
@@ -2822,7 +2836,7 @@ gtk/gtkenums.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstyleproperties.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkstyleproperties.h
 glib-object.h
 -
 gdk/gdk.h
@@ -2830,21 +2844,21 @@ gdk/gdk.h
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtksymboliccolor.h
 gdk/gdk.h
 -
 gtk/deprecated/gtkstyleproperties.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktable.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h
 gtk/gtkmenuitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h
 glib-object.h
 -
 cairo.h
@@ -2858,11 +2872,11 @@ gtk/deprecated/gtkstyleproperties.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktoggleaction.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtktoggleaction.h
 gtk/deprecated/gtkaction.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkuimanager.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkuimanager.h
 gtk/gtkaccelgroup.h
 -
 gtk/gtkwidget.h
@@ -2872,33 +2886,33 @@ gtk/deprecated/gtkaction.h
 gtk/deprecated/gtkactiongroup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvbbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvbbox.h
 gtk/gtkbbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvbox.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvpaned.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvpaned.h
 gtk/gtkpaned.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvscale.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvscale.h
 gtk/gtkscale.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h
 gtk/gtkscrollbar.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvseparator.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/deprecated/gtkvseparator.h
 gtk/gtkseparator.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtk-autocleanups.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtk-autocleanups.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtk.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtk.h
 gdk/gdk.h
 -
 gtk/gtkaboutdialog.h
@@ -3420,47 +3434,47 @@ gtk/deprecated/gtkvseparator.h
 gtk/gtk-autocleanups.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaboutdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaboutdialog.h
 gtk/gtkdialog.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccelgroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccelgroup.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccellabel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccellabel.h
 gtk/gtklabel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccelmap.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccelmap.h
 gtk/gtkaccelgroup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccessible.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaccessible.h
 atk/atk.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkactionable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkactionable.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkactionbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkactionbar.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkadjustment.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkadjustment.h
 gdk/gdk.h
 -
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooser.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooser.h
 glib.h
 -
 gio/gio.h
@@ -3468,19 +3482,19 @@ gio/gio.h
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserbutton.h
 gtk/gtkcombobox.h
 -
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserdialog.h
 gtk/gtkdialog.h
 -
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkappchooserwidget.h
 gtk/gtkbox.h
 -
 gtk/gtkmenu.h
@@ -3488,71 +3502,71 @@ gtk/gtkmenu.h
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkapplication.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkapplication.h
 gtk/gtkwidget.h
 -
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkapplicationwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkapplicationwindow.h
 gtk/gtkwindow.h
 -
 gtk/gtkshortcutswindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaspectframe.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkaspectframe.h
 gtk/gtkframe.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkassistant.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkassistant.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbbox.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbin.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbin.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbindings.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbindings.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkborder.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkborder.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbox.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbuildable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbuildable.h
 gtk/gtkbuilder.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbuilder.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbuilder.h
 gtk/gtkapplication.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkbutton.h
 gtk/gtkbin.h
 -
 gtk/gtkimage.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcalendar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcalendar.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellarea.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellarea.h
 gtk/gtkcellrenderer.h
 -
 gtk/gtkwidget.h
@@ -3560,19 +3574,19 @@ gtk/gtkwidget.h
 gtk/gtktreemodel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellareabox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellareabox.h
 gtk/gtkcellarea.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellareacontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellareacontext.h
 gtk/gtkcellarea.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcelleditable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcelleditable.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcelllayout.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcelllayout.h
 gtk/gtkcellrenderer.h
 -
 gtk/gtkcellarea.h
@@ -3582,45 +3596,45 @@ gtk/gtkbuildable.h
 gtk/gtkbuilder.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderer.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderer.h
 gtk/gtkcelleditable.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendereraccel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendereraccel.h
 gtk/gtkcellrenderertext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderercombo.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderercombo.h
 gtk/gtktreemodel.h
 -
 gtk/gtkcellrenderertext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererpixbuf.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererpixbuf.h
 gtk/gtkcellrenderer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererprogress.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererprogress.h
 gtk/gtkcellrenderer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererspin.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererspin.h
 gtk/gtkcellrenderertext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererspinner.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrendererspinner.h
 gtk/gtkcellrenderer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderertext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderertext.h
 gtk/gtkcellrenderer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderertoggle.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellrenderertoggle.h
 gtk/gtkcellrenderer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellview.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcellview.h
 gtk/gtkwidget.h
 -
 gtk/gtkcellrenderer.h
@@ -3632,41 +3646,41 @@ gtk/gtkcellareacontext.h
 gtk/gtktreemodel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcheckbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcheckbutton.h
 gtk/gtktogglebutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcheckmenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcheckmenuitem.h
 gtk/gtkmenuitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkclipboard.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkclipboard.h
 gtk/gtkselection.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorbutton.h
 gtk/gtkbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooser.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooser.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooserdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooserdialog.h
 gtk/gtkdialog.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooserwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorchooserwidget.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorutils.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcolorutils.h
 glib.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcombobox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcombobox.h
 gtk/gtkbin.h
 -
 gtk/gtktreemodel.h
@@ -3674,63 +3688,63 @@ gtk/gtktreemodel.h
 gtk/gtktreeview.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcomboboxtext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcomboboxtext.h
 gtk/gtkcombobox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcontainer.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcontainer.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcssprovider.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcssprovider.h
 gio/gio.h
 -
 gtk/gtkcsssection.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcsssection.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkcsssection.h
 gio/gio.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdebug.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdebug.h
 glib.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdialog.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdnd.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdnd.h
 gtk/gtkwidget.h
 -
 gtk/gtkselection.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdragdest.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdragdest.h
 gtk/gtkselection.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdragsource.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdragsource.h
 gtk/gtkselection.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdrawingarea.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkdrawingarea.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeditable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeditable.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentry.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentry.h
 gtk/gtkeditable.h
 -
 gtk/gtkimcontext.h
@@ -3746,13 +3760,13 @@ gtk/gtkimage.h
 gtk/gtkselection.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentrybuffer.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentrybuffer.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentrycompletion.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkentrycompletion.h
 gdk/gdk.h
 -
 gtk/gtktreemodel.h
@@ -3766,15 +3780,15 @@ gtk/gtktreeviewcolumn.h
 gtk/gtktreemodelfilter.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkenums.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkenums.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventbox.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontroller.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontroller.h
 gdk/gdk.h
 -
 gtk/gtktypes.h
@@ -3782,7 +3796,7 @@ gtk/gtktypes.h
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollerkey.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollerkey.h
 gdk/gdk.h
 -
 gtk/gtkeventcontroller.h
@@ -3790,153 +3804,153 @@ gtk/gtkeventcontroller.h
 gtk/gtkimcontext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollermotion.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollermotion.h
 gdk/gdk.h
 -
 gtk/gtkeventcontroller.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollerscroll.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkeventcontrollerscroll.h
 gdk/gdk.h
 -
 gtk/gtkeventcontroller.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkexpander.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkexpander.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooser.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooser.h
 gtk/gtkfilefilter.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserbutton.h
 gtk/gtkbox.h
 -
 gtk/gtkfilechooser.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserdialog.h
 gtk/gtkdialog.h
 -
 gtk/gtkfilechooser.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechoosernative.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechoosernative.h
 gtk/gtkfilechooser.h
 -
 gtk/gtknativedialog.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilechooserwidget.h
 gtk/gtkfilechooser.h
 -
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilefilter.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfilefilter.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfixed.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfixed.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkflowbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkflowbox.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontbutton.h
 gtk/gtkbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooser.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooser.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooserdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooserdialog.h
 gtk/gtkdialog.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooserwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkfontchooserwidget.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkframe.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkframe.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesture.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesture.h
 gtk/gtkeventcontroller.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturedrag.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturedrag.h
 gtk/gtkwidget.h
 -
 gtk/gtkgesturesingle.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturelongpress.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturelongpress.h
 gtk/gtkgesturesingle.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturemultipress.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturemultipress.h
 gtk/gtkwidget.h
 -
 gtk/gtkgesturesingle.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturepan.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturepan.h
 gtk/gtkenums.h
 -
 gtk/gtkgesturedrag.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturerotate.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturerotate.h
 gtk/gtkwidget.h
 -
 gtk/gtkgesture.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturesingle.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturesingle.h
 gtk/gtkgesture.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturestylus.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturestylus.h
 gtk/gtkgesture.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgestureswipe.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgestureswipe.h
 gtk/gtkwidget.h
 -
 gtk/gtkgesturesingle.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturezoom.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgesturezoom.h
 gtk/gtkgesture.h
 -
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkglarea.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkglarea.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgrid.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkgrid.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkheaderbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkheaderbar.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkicontheme.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkicontheme.h
 gdk-pixbuf/gdk-pixbuf.h
 -
 gdk/gdk.h
@@ -3944,7 +3958,7 @@ gdk/gdk.h
 gtk/gtkstylecontext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkiconview.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkiconview.h
 gtk/gtkcontainer.h
 -
 gtk/gtktreemodel.h
@@ -3958,41 +3972,41 @@ gtk/gtkselection.h
 gtk/gtktooltip.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimage.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimage.h
 gio/gio.h
 -
 gtk/deprecated/gtkmisc.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontext.h
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontextinfo.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontextinfo.h
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontextsimple.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimcontextsimple.h
 gtk/gtkimcontext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimmulticontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkimmulticontext.h
 gtk/gtkimcontext.h
 -
 gtk/gtkmenushell.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkinfobar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkinfobar.h
 gtk/gtkbox.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkinvisible.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkinvisible.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklabel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklabel.h
 gtk/deprecated/gtkmisc.h
 -
 gtk/gtkwindow.h
@@ -4000,23 +4014,23 @@ gtk/gtkwindow.h
 gtk/gtkmenu.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklayout.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklayout.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklevelbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklevelbar.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklinkbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklinkbutton.h
 gtk/gtkbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklistbox.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklistbox.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkliststore.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkliststore.h
 gdk/gdk.h
 -
 gtk/gtktreemodel.h
@@ -4024,13 +4038,13 @@ gtk/gtktreemodel.h
 gtk/gtktreesortable.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklockbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtklockbutton.h
 gtk/gtkbutton.h
 -
 gio/gio.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmain.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmain.h
 gdk/gdk.h
 -
 gtk/gtkwidget.h
@@ -4040,17 +4054,17 @@ gtk/gtkbox.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenu.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenu.h
 gtk/gtkaccelgroup.h
 -
 gtk/gtkmenushell.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenubar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenubar.h
 gtk/gtkmenushell.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenubutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenubutton.h
 gtk/gtktogglebutton.h
 -
 gtk/gtkmenu.h
@@ -4058,95 +4072,95 @@ gtk/gtkmenu.h
 gtk/gtkpopover.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenuitem.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenushell.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenushell.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenutoolbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmenutoolbutton.h
 gtk/gtkmenu.h
 -
 gtk/gtktoolbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmessagedialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmessagedialog.h
 gtk/gtkdialog.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmodelbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmodelbutton.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmodules.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmodules.h
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmountoperation.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkmountoperation.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtknativedialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtknativedialog.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtknotebook.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtknotebook.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkoffscreenwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkoffscreenwindow.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkorientable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkorientable.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkoverlay.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkoverlay.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpadcontroller.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpadcontroller.h
 gdk/gdk.h
 -
 gtk/gtkeventcontroller.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpagesetup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpagesetup.h
 gtk/gtkpapersize.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpaned.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpaned.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpapersize.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpapersize.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkplacessidebar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkplacessidebar.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpopover.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpopover.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpopovermenu.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkpopovermenu.h
 gtk/gtkpopover.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintcontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintcontext.h
 pango/pango.h
 -
 gtk/gtkpagesetup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintoperation.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintoperation.h
 cairo.h
 -
 gtk/gtkmain.h
@@ -4162,37 +4176,37 @@ gtk/gtkprintcontext.h
 gtk/gtkprintoperationpreview.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintoperationpreview.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintoperationpreview.h
 cairo.h
 -
 gtk/gtkprintcontext.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintsettings.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprintsettings.h
 gtk/gtkpapersize.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprogressbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkprogressbar.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiobutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiobutton.h
 gtk/gtkcheckbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiomenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiomenuitem.h
 gtk/gtkcheckmenuitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiotoolbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkradiotoolbutton.h
 gtk/gtktoggletoolbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrange.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrange.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooser.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooser.h
 gtk/gtkwidget.h
 -
 gtk/gtkrecentmanager.h
@@ -4200,31 +4214,31 @@ gtk/gtkrecentmanager.h
 gtk/gtkrecentfilter.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooserdialog.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooserdialog.h
 gtk/gtkdialog.h
 -
 gtk/gtkrecentchooser.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchoosermenu.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchoosermenu.h
 gtk/gtkmenu.h
 -
 gtk/gtkrecentchooser.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooserwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentchooserwidget.h
 gtk/gtkrecentchooser.h
 -
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentfilter.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentfilter.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentmanager.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrecentmanager.h
 gdk-pixbuf/gdk-pixbuf.h
 -
 gdk/gdk.h
@@ -4232,7 +4246,7 @@ gdk/gdk.h
 time.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrender.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrender.h
 cairo.h
 -
 pango/pango.h
@@ -4244,19 +4258,19 @@ gtk/gtkenums.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrevealer.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkrevealer.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscale.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscale.h
 gtk/gtkrange.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscalebutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscalebutton.h
 gtk/gtkbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrollable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrollable.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
@@ -4266,109 +4280,109 @@ gtk/gtktypes.h
 gtk/gtkborder.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrollbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrollbar.h
 gtk/gtkrange.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrolledwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkscrolledwindow.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksearchbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksearchbar.h
 gtk/gtkrevealer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksearchentry.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksearchentry.h
 gtk/gtkentry.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkselection.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkselection.h
 gtk/gtkwidget.h
 -
 gtk/gtktextiter.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparator.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparator.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparatormenuitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparatormenuitem.h
 gtk/gtkmenuitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparatortoolitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkseparatortoolitem.h
 gtk/gtktoolitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksettings.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksettings.h
 gdk/gdk.h
 -
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutlabel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutlabel.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutsgroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutsgroup.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutssection.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutssection.h
 gtk/gtkbox.h
 -
 gtk/gtkshortcutsgroup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutsshortcut.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutsshortcut.h
 gtk/gtk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutswindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshortcutswindow.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkshow.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksizegroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksizegroup.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksizerequest.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtksizerequest.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkspinbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkspinbutton.h
 gtk/gtkentry.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkspinner.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkspinner.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstack.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstack.h
 gtk/gtkcontainer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstacksidebar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstacksidebar.h
 gtk/gtkbin.h
 -
 gtk/gtkstack.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstackswitcher.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstackswitcher.h
 gtk/gtkbox.h
 -
 gtk/gtkstack.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstatusbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstatusbar.h
 gtk/gtkbox.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstylecontext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstylecontext.h
 gtk/gtkborder.h
 -
 gtk/gtkcsssection.h
@@ -4380,7 +4394,7 @@ gtk/gtktypes.h
 atk/atk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstyleprovider.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkstyleprovider.h
 glib-object.h
 -
 gtk/gtkenums.h
@@ -4392,23 +4406,23 @@ gtk/deprecated/gtkstyleproperties.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkswitch.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkswitch.h
 gtk/gtkwidget.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktestutils.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktestutils.h
 gtk/gtkwidget.h
 -
 gtk/gtkspinbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextattributes.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextattributes.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextbuffer.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextbuffer.h
 gtk/gtkwidget.h
 -
 gtk/gtkclipboard.h
@@ -4422,17 +4436,17 @@ gtk/gtktextmark.h
 gtk/gtktextchild.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextbufferrichtext.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextbufferrichtext.h
 gtk/gtktextbuffer.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextchild.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextchild.h
 gdk/gdk.h
 -
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextiter.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextiter.h
 gtk/gtktextattributes.h
 -
 gtk/gtktextchild.h
@@ -4440,19 +4454,19 @@ gtk/gtktextchild.h
 gtk/gtktexttag.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextmark.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextmark.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktexttag.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktexttag.h
 gdk/gdk.h
 -
 gtk/gtkenums.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktexttagtable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktexttagtable.h
 gtk/gtktexttag.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextview.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktextview.h
 gtk/gtkcontainer.h
 -
 gtk/gtkimcontext.h
@@ -4462,25 +4476,25 @@ gtk/gtktextbuffer.h
 gtk/gtkmenu.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktogglebutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktogglebutton.h
 gtk/gtkbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoggletoolbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoggletoolbutton.h
 gtk/gtktoolbutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolbar.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolbar.h
 gtk/gtkcontainer.h
 -
 gtk/gtktoolitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolbutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolbutton.h
 gtk/gtktoolitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolitem.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolitem.h
 gtk/gtkbin.h
 -
 gtk/gtkmenuitem.h
@@ -4488,13 +4502,13 @@ gtk/gtkmenuitem.h
 gtk/gtksizegroup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolitemgroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolitemgroup.h
 gtk/gtkcontainer.h
 -
 gtk/gtktoolitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolpalette.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolpalette.h
 gtk/gtkcontainer.h
 -
 gtk/gtkdnd.h
@@ -4502,7 +4516,7 @@ gtk/gtkdnd.h
 gtk/gtktoolitem.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolshell.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktoolshell.h
 gtk/gtkenums.h
 -
 pango/pango.h
@@ -4510,27 +4524,27 @@ pango/pango.h
 gtk/gtksizegroup.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktooltip.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktooltip.h
 gtk/gtkwindow.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreednd.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreednd.h
 gtk/gtktreemodel.h
 -
 gtk/gtkdnd.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodel.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodel.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodelfilter.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodelfilter.h
 gtk/gtktreemodel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodelsort.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreemodelsort.h
 gdk/gdk.h
 -
 gtk/gtktreemodel.h
@@ -4538,17 +4552,17 @@ gtk/gtktreemodel.h
 gtk/gtktreesortable.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeselection.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeselection.h
 gtk/gtktreeview.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreesortable.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreesortable.h
 gtk/gtkenums.h
 -
 gtk/gtktreemodel.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreestore.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreestore.h
 gdk/gdk.h
 -
 gtk/gtktreemodel.h
@@ -4558,7 +4572,7 @@ gtk/gtktreesortable.h
 stdarg.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeview.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeview.h
 gtk/gtkcontainer.h
 -
 gtk/gtktreemodel.h
@@ -4570,7 +4584,7 @@ gtk/gtkdnd.h
 gtk/gtkentry.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeviewcolumn.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktreeviewcolumn.h
 gtk/gtkcellrenderer.h
 -
 gtk/gtktreemodel.h
@@ -4580,25 +4594,25 @@ gtk/gtktreesortable.h
 gtk/gtkcellarea.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktypebuiltins.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktypebuiltins.h
 glib-object.h
 -
 gdk/gdk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktypes.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtktypes.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkversion.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkversion.h
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkviewport.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkviewport.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkvolumebutton.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkvolumebutton.h
 gtk/gtkscalebutton.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwidget.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwidget.h
 gdk/gdk.h
 -
 gtk/gtkaccelgroup.h
@@ -4610,7 +4624,7 @@ gtk/gtktypes.h
 atk/atk.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwidgetpath.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwidgetpath.h
 glib-object.h
 -
 gdk/gdk.h
@@ -4620,7 +4634,7 @@ gtk/gtkenums.h
 gtk/gtktypes.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindow.h
 gtk/gtkapplication.h
 -
 gtk/gtkaccelgroup.h
@@ -4628,43 +4642,153 @@ gtk/gtkaccelgroup.h
 gtk/gtkbin.h
 -
 
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindowgroup.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindowgroup.h
 gtkwindow.h
-/Users/bshanae/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindow.h
+/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0/gtk/gtkwindow.h
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-attributes.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-blob.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-buffer.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-unicode.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-unicode.h
+hb-font.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+inttypes.h
+-
+sys/inttypes.h
+-
+stdint.h
+-
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-deprecated.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-unicode.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-unicode.h
+hb-font.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+hb-set.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-set.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-face.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-blob.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-blob.h
+hb-set.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-set.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-face.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-face.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-map.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-set.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-shape-plan.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-font.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-shape.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-buffer.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-buffer.h
+hb-font.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-unicode.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-version.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb.h
+hb-blob.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-blob.h
+hb-buffer.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-buffer.h
+hb-common.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-common.h
+hb-deprecated.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-deprecated.h
+hb-face.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-face.h
+hb-font.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-font.h
+hb-map.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-map.h
+hb-set.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-set.h
+hb-shape.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-shape.h
+hb-shape-plan.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-shape-plan.h
+hb-unicode.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-unicode.h
+hb-version.h
+/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz/hb-version.h
+
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-attributes.h
 pango/pango-font.h
 -
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-bidi-type.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-bidi-type.h
 glib.h
 -
 pango/pango-version-macros.h
 -
+pango/pango-direction.h
+-
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-break.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-break.h
 glib.h
 -
 pango/pango-item.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-context.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-context.h
 pango/pango-font.h
 -
 pango/pango-fontmap.h
 -
 pango/pango-attributes.h
 -
+pango/pango-direction.h
+-
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-coverage.h
-glib.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-coverage.h
+glib-object.h
 -
 pango/pango-version-macros.h
 -
+hb.h
+-
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-engine.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-direction.h
+glib.h
+-
+
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-engine.h
 pango/pango-types.h
 -
 pango/pango-item.h
@@ -4676,29 +4800,31 @@ pango/pango-glyph.h
 pango/pango-script.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-enum-types.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-enum-types.h
 glib-object.h
 -
 pango/pango-version-macros.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-features.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-features.h
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-font.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-font.h
 pango/pango-coverage.h
 -
 pango/pango-types.h
 -
 glib-object.h
 -
+hb.h
+-
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-fontmap.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-fontmap.h
 pango/pango-font.h
 -
 pango/pango-fontset.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-fontset.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-fontset.h
 pango/pango-coverage.h
 -
 pango/pango-types.h
@@ -4706,7 +4832,7 @@ pango/pango-types.h
 glib-object.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-glyph-item.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-glyph-item.h
 pango/pango-attributes.h
 -
 pango/pango-break.h
@@ -4716,13 +4842,13 @@ pango/pango-item.h
 pango/pango-glyph.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-glyph.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-glyph.h
 pango/pango-types.h
 -
 pango/pango-item.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-gravity.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-gravity.h
 glib.h
 -
 pango/pango-matrix.h
@@ -4730,11 +4856,13 @@ pango/pango-matrix.h
 pango/pango-script.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-item.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-item.h
 pango/pango-types.h
 -
+pango/pango-attributes.h
+-
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-language.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-language.h
 glib.h
 -
 glib-object.h
@@ -4744,7 +4872,7 @@ pango/pango-version-macros.h
 pango/pango-script.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-layout.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-layout.h
 pango/pango-attributes.h
 -
 pango/pango-context.h
@@ -4754,7 +4882,7 @@ pango/pango-glyph-item.h
 pango/pango-tabs.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-matrix.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-matrix.h
 glib.h
 -
 glib-object.h
@@ -4762,23 +4890,23 @@ glib-object.h
 pango/pango-types.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-renderer.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-renderer.h
 pango/pango-layout.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-script.h
-glib.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-script.h
+glib-object.h
 -
 pango/pango-version-macros.h
 -
 pango/pango-language.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-tabs.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-tabs.h
 pango/pango-types.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-types.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-types.h
 glib.h
 -
 glib-object.h
@@ -4796,7 +4924,7 @@ pango/pango-script.h
 pango/pango-bidi-type.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-utils.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-utils.h
 stdio.h
 -
 glib.h
@@ -4804,13 +4932,13 @@ glib.h
 pango/pango-font.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango-version-macros.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango-version-macros.h
 pango/pango-features.h
 -
 glib.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pango.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pango.h
 pango/pango-attributes.h
 -
 pango/pango-bidi-type.h
@@ -4820,6 +4948,8 @@ pango/pango-break.h
 pango/pango-context.h
 -
 pango/pango-coverage.h
+-
+pango/pango-direction.h
 -
 pango/pango-engine.h
 -
@@ -4858,13 +4988,887 @@ pango/pango-utils.h
 pango/pango-version-macros.h
 -
 
-/Users/bshanae/.brew/Cellar/pango/1.42.4_2/include/pango-1.0/pango/pangocairo.h
+/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0/pango/pangocairo.h
 pango/pango.h
 -
 cairo.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/rt_parameters.h
+rt_float.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/rt_float.h
+f4.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/f4.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/libft_standart.h
+ray.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/ray.h
+stdlib.h
+-
+math.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_apply.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_delete.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_move.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_new.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_rotate.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+rt_cl_include.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/rt_cl_include.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+rt_control.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/rt_control.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/rt_parameters.h
+assert.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/assert.h
+cl_arg.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_new.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_push.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_read.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_update.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_write.c
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+rt_control.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/rt_control.h
+rt_cl_include.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/rt_cl_include.h
+rt_cl_compilation.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/rt_cl_compilation.h
+assert.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/assert.h
+cl_program.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_program.h
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_arg_list.h
+stdio.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/rt_parameters.h
+rt_cl_include.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/rt_cl_include.h
+assert.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/assert.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/libft_standart.h
+stdlib.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c
+cl_program.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c
+cl_program.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c
+cl_program.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c
+cl_program.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+rt_cl_include.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_cl_include.h
+rt_control.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_control.h
+rt_float.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_float.h
+gui_image.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/gui_image.h
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/scene.h
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/camera.h
+ray.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/ray.h
+cl_arg_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_arg_list.h
+cl_builder.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_builder.h
+cl_renderer_flag_x.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+cl_renderer_settings.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
+stdlib.h
+-
+time.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
+rt_cl_include.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_cl_include.h
+rt_float.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_float.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/rt_parameters.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
+cl_renderer_settings.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/rt_parameters.h
+material.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/material.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_interaction.h
+assert.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/assert.h
+f4.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/f4.h
+object_definition.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
+object_x.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_x.h
+rt_float.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/rt_float.h
+stdarg.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c
+object_definition.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_definition.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cone.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_csg.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_light_x.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_plane.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/rt_parameters.h
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/object_interaction.h
+stdlib.h
+-
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_get_space.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/gui/gui/gui.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui/rt_parameters.h
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui/gui_camera.h
+gui_scene.h
+/Users/ashari/21_ray_tracer/gui/gui/gui_scene.h
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui/gui_settings.h
+gui_image.h
+/Users/ashari/21_ray_tracer/gui/gui/gui_image.h
+cl_renderer.h
+/Users/ashari/21_ray_tracer/gui/gui/cl_renderer.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui/gui.h
+
+/Users/ashari/21_ray_tracer/gui/gui/gui_load.c
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui/gui.h
+
+/Users/ashari/21_ray_tracer/gui/gui/gui_loop.c
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui/gui.h
+
+/Users/ashari/21_ray_tracer/gui/gui/gui_new.c
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui/gui.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/rt_parameters.h
+gui_entry.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_entry.h
+camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/camera.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_apply.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_delete.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_focus_x.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_new.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_reset.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_show.c
+gui_camera.h
+/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera.h
+
+/Users/ashari/21_ray_tracer/gui/gui_image/gui_image.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/gui/gui_image/libft_standart.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui_image/rt_parameters.h
+color.h
+/Users/ashari/21_ray_tracer/gui/gui_image/color.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_delete.c
+gui_image.h
+/Users/ashari/21_ray_tracer/gui/gui_image/gui_image.h
+
+/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_new.c
+gui_image.h
+/Users/ashari/21_ray_tracer/gui/gui_image/gui_image.h
+
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui_material/rt_parameters.h
+gui_entry.h
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_entry.h
+gui_color.h
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_color.h
+material.h
+/Users/ashari/21_ray_tracer/gui/gui_material/material.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_get.c
+gui_material.h
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_init.c
+gui_material.h
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_set.c
+gui_material.h
+/Users/ashari/21_ray_tracer/gui/gui_material/gui_material.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_box_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cone_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cylinder_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_julia_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_direct_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_point_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_mandelbulb_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_moebius_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_paraboloid_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_plane_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_sphere_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_torus_x.c
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_x.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/libft_standart.h
+gui_entry.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_entry.h
+f4.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/f4.h
+object_definition.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/object_definition.h
+object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_object_x/object_x.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene.h
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_edit.h
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_add.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_delete.c
+gui_scene.h
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_new.c
+gui_scene.h
+/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/rt_parameters.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/libft_standart.h
+gui_material.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_material.h
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_object_x.h
+object_definition.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/object_definition.h
+color_list.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/color_list.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_build_object.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_delete.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_gen_name.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_box.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cone.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cylinder.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_julia.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_light_x.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_material.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_moebius.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_own.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_paraboloid.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_plane.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_sphere.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_torus.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_material_state_x.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c
+gui_scene_add.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+rt_float.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/rt_float.h
+gui_object_x.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_object_x.h
+gui_material.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_material.h
+scene.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/scene.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_box.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cone.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cylinder.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_julia.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_light_x.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_material.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_moebius.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_own.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_paraboloid.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_plane.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_sphere.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_torus.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_material_color_x.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_update.c
+gui_scene_edit.h
+/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit.h
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+rt_parameters.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/rt_parameters.h
+cl_renderer_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/cl_renderer_settings.h
+libft_standart.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/libft_standart.h
+gui_entry.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_entry.h
+gtk/gtk.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_apply.c
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_delete.c
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_new.c
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_reset.c
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c
+gui_settings.h
+/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_macro.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_task.c
 gui_signal_x.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
+gui_signal_connect_macro.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_macro.h
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui.h
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_entry_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_apply.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_reset.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_pt_russian.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_srgb.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+gui_entry.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_entry.h
+gui.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui.h
+time.h
+-
+
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_singal_task_x.c
+gui_signal_x.h
+/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/ashari/21_ray_tracer/main.c
+gui.h
+/Users/ashari/21_ray_tracer/gui.h
+gui_signal_connect_x.h
+/Users/ashari/21_ray_tracer/gui_signal_connect_x.h
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer.h
+material_list.h
+/Users/ashari/21_ray_tracer/material_list.h
 
