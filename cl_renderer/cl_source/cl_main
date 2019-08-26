@@ -57,5 +57,6 @@ kernel void			cl_main(
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
     radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings), settings->srgb);
+	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
+	                                settings->srgb, camera->filter_sepia);
 }

@@ -109,19 +109,21 @@ static void			filter_jitter(RT_F *x, global ulong *rng_state)
 
 typedef struct 		s_camera
 {
-	RT_F4			position;
-	RT_F4			rotation;
-	RT_F4			axis_x;
-	RT_F4			axis_y;
-	RT_F4			axis_z;
-	RT_F4			forward;
-	RT_F4			forward_backup;
+	RT_F4   		position;
+	RT_F4   		rotation;
+	RT_F4   		axis_x;
+	RT_F4   		axis_y;
+	RT_F4   		axis_z;
+	RT_F4   		forward;
+	RT_F4   		forward_backup;
 	int				width;
 	int				height;
 	int 			antialiasing;
-    int 			focus;
-    RT_F			aperture_size;
-    RT_F			focal_length;
+	int             cartoon_effect;
+	int             filter_sepia;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
 }					t_camera;
 
 static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
@@ -171,13 +173,23 @@ typedef struct		s_color
 	unsigned char	a;
 }					t_color;
 
-static t_color		color_unpack(RT_F4 source, int srgb)
+static t_color		filter_sepia(RT_F4 *source)
+{
+	unsigned char	sepia_color;
+
+	sepia_color = (255 * source->x) * 0.3 + (255 * source->y) * 0.59 + (255 * source->z) * 0.11;
+	return((t_color){sepia_color, sepia_color, sepia_color, 255});
+}
+
+static t_color		color_unpack(RT_F4 source, int srgb, int filter_sepia)
 {
     if (srgb)
 		source = RT_POW(source, (RT_F).4);
 	source.x = RT_MIN(source.x, (RT_F)1.);
 	source.y = RT_MIN(source.y, (RT_F)1.);
 	source.z = RT_MIN(source.z, (RT_F)1.);
+	if (filter_sepia)
+	    return(filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
@@ -263,7 +275,6 @@ typedef enum		e_object_type
 	object_paraboloid,
 	object_moebius,
 	object_torus,
-	object_tetrahedron,
 	object_mandelbulb,
 	object_julia,
 	object_csg,
@@ -336,7 +347,7 @@ static RT_F4					sphere_random(constant t_object *object, global ulong *rng_stat
 	return (random);
 }
 
-static RT_F 					sdf_sphere(constant t_object *object, RT_F4 point)
+static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_sphere				data;
 
@@ -376,7 +387,7 @@ static RT_F4		plane_normal(constant t_object *object, t_intersection *intersecti
 	return (((constant t_object_plane *)object->data)->normal);
 }
 
-static RT_F 		sdf_plane(constant t_object *object, RT_F4 point)
+static RT_F 		plane_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_plane	data;
 
@@ -576,17 +587,6 @@ static RT_F4		    calculate_cylinder_normal(constant t_object *object, t_interse
 
 static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
 {
-    /*t_object_cylinder   data;
-    RT_F4			    temp[2];
-    RT_F4			    result;
-    RT_F                tmp;
-
-    data = *(constant t_object_cylinder *)object->data;
-    temp[0] = intersection->ray.origin - data.bottom;
-    temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
-    tmp = dot(intersection->ray.direction, (data.axis * intersection->ray.t)) + dot(temp[0], data.axis);
-    result = (temp[1] - data.bottom) - (data.axis * tmp);
-    return (normalize(result));*/
     if (!intersection->cups_flag)
         return (calculate_cylinder_normal(object, intersection));
     else if (intersection->cups_flag == -1)
@@ -604,7 +604,7 @@ typedef struct 		s_object_box
 	RT_F4   		size;
 }					t_object_box;
 
-static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
+static RT_F 		box_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_box	data;
 	RT_F4			d;
@@ -612,7 +612,8 @@ static RT_F 		sdf_box(constant t_object *object, RT_F4 point)
 	data = *(constant t_object_box *)object->data;
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
-	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0) + length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
+	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
+	    + length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
 
 // cl_object_paraboloid ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -945,7 +946,7 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
+static RT_F 		torus_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_torus	data;
 	RT_F2			q;
@@ -962,11 +963,12 @@ static RT_F 		sdf_torus(constant t_object *object, RT_F4 point)
 
 typedef struct		s_object_julia
 {
+	RT_F4			position;
 	int				iterations;
 	RT_F4			value;
 }					t_object_julia;
 
-static int			sdf_julia(constant t_object *object, RT_F4 point)
+static RT_F			julia_sdf(constant t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
@@ -974,6 +976,7 @@ static int			sdf_julia(constant t_object *object, RT_F4 point)
 
 	data = *(constant t_object_julia *)object->data;
 	md = 1.;
+	point = data.position - point;
 	mz = dot(point, point);
 
 	for (int iter = 0; iter < data.iterations; iter++)
@@ -985,31 +988,54 @@ static int			sdf_julia(constant t_object *object, RT_F4 point)
 		if (mz > 4.)
 			break ;
 	}
-	return (.25 * sqrt(mz / md) * log(mz));
+	return (.25 * RT_SQRT(mz / md) * log(mz));
 }
 
-/*
-	static double 				sdf_julia(constant t_object *obj, const t_vector3 *point)
-    {
-    	t_vector4 z;
-    	double md;
-    	double mz;
+// cl_object_mandelbulb ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    	z = vector4_cast3(point);
-    	md = 1.;
-    	mz = vector4_dot(&z, &z);
+#include "rt_parameters.h"
 
-    	for (int i = 0; i < obj->julia.iterations; i++) {
-    		md *= 4. * mz;
-    		z = vector4_square(&z);
-    		vector4_s_add_eq(&z, (t_vector4)obj->julia.value);
-    		mz = vector4_dot(&z, &z);
-    		if (mz > 4.)
-    			break;
-    	}
-    	return (.25 * sqrt(mz / md) * log(mz));
-    }
-*/
+typedef struct				s_object_mandelbulb
+{
+	RT_F4					position;
+	int						iterations;
+	RT_F					power;
+}							t_object_mandelbulb;
+
+static RT_F					mandelbulb_sdf(constant t_object *object, RT_F4 point)
+{
+	t_object_mandelbulb		data;
+	RT_F4					z;
+	RT_F					zr;
+	RT_F					dr;
+	RT_F					r;
+	RT_F					phi;
+	RT_F					theta;
+
+	data = *(constant t_object_mandelbulb *)object->data;
+	point = data.position - point;
+	r = 0.;
+    dr = 1.;
+	z = point;
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		r = length(z);
+		if (r > 2.)
+        	break ;
+        theta = acos(z.z / r);
+        phi = atan2(z.y, z.x);
+
+        dr = RT_POW((RT_F)r, (RT_F)(data.power - 1.)) * data.power * dr + 1.;
+
+        zr = RT_POW(r, data.power);
+        theta *= data.power;
+        phi *= data.power;
+
+        z = (RT_F4){RT_SIN(theta) * RT_COS(phi), RT_SIN(phi) * RT_SIN(theta), RT_COS(theta), 0.} * zr;
+        z += point;
+	}
+	return (.5 * log(r) * r / dr);
+}
 
 // cl_rm_csg ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1027,13 +1053,13 @@ static	RT_F		        csg_sdf_difference(const RT_F distance_a, const RT_F distan
 static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
 {
 	if (object->type == object_sphere)
-		return (sdf_sphere(object, point));
+		return (sphere_sdf(object, point));
 	else if (object->type == object_box)
-        return (sdf_box(object, point));
+        return (box_sdf(object, point));
     return (INFINITY);
 }
 
-static RT_F 		        sdf_csg(constant t_object *object, RT_F4 point)
+static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 {
 	constant t_object_csg	*data;
 	constant t_object       *scene_begin;
@@ -1077,19 +1103,19 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
-		return (sdf_sphere(object, point));
+		return (sphere_sdf(object, point));
 	else if (object->type == object_plane)
-		return (sdf_plane(object, point));
+		return (plane_sdf(object, point));
 	else if (object->type == object_julia)
-		return (sdf_julia(object, point));
+		return (julia_sdf(object, point));
 	else if (object->type == object_mandelbulb)
-		return (sdf_mandelbulb(object, point));
+		return (mandelbulb_sdf(object, point));
 	else if (object->type == object_torus)
-		return (sdf_torus(object, point));
+		return (torus_sdf(object, point));
 	else if (object->type == object_box)
-		return (sdf_box(object, point));
+		return (box_sdf(object, point));
 	else if (object->type == object_csg)
-		return (sdf_csg(object, point));
+		return (csg_sdf(object, point));
 #endif
 	return (RT_INFINITY);
 }
@@ -1201,7 +1227,7 @@ static int			scene_intersect_rm(
 				current_id = object_i;
 			}
 		}
-    	if (current_distance < RT_EPSILON)
+    	if (current_distance < RT_RM_EPSILON)
     	{
     		result = 1;
     		intersection->object_id = current_id;
@@ -1535,7 +1561,6 @@ static void			radiance_add(
 		}
 
         if (f4_max_component(intersection->material.reflectance) > 0.|| f4_max_component(intersection->material.transparence) > 0.)
-
         {
             choice = rng(rng_state);
             if (choice < intersection->material.reflectance)
@@ -1631,7 +1656,8 @@ kernel void			cl_main(
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
     radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings), settings->srgb);
+	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
+	                                settings->srgb, camera->filter_sepia);
 }
 
 

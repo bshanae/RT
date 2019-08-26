@@ -2,19 +2,21 @@
 
 typedef struct 		s_camera
 {
-	RT_F4			position;
-	RT_F4			rotation;
-	RT_F4			axis_x;
-	RT_F4			axis_y;
-	RT_F4			axis_z;
-	RT_F4			forward;
-	RT_F4			forward_backup;
+	RT_F4   		position;
+	RT_F4   		rotation;
+	RT_F4   		axis_x;
+	RT_F4   		axis_y;
+	RT_F4   		axis_z;
+	RT_F4   		forward;
+	RT_F4   		forward_backup;
 	int				width;
 	int				height;
 	int 			antialiasing;
-    int 			focus;
-    RT_F			aperture_size;
-    RT_F			focal_length;
+	int             cartoon_effect;
+	int             filter_sepia;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
 }					t_camera;
 
 static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
