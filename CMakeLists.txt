@@ -74,7 +74,8 @@ include_directories(
 		./cl_renderer/cl_program/
 		./cl_renderer/cl_arg_list/
 		./cl_renderer/cl_builder/
-		./cl_renderer/cl_renderer/)
+		./cl_renderer/cl_renderer/
+		./cl_renderer/json)
 
 
 set(GTK3_LIBRARY_DIRS
@@ -261,6 +262,13 @@ set(SOURCE_GUI
 		${SOURCE_GUI_SIGNAL_X}
 		${SOURCE_GUI_SIGNAL_CONNECT_X})
 
+set(SOURCE_JSON
+		./cl_renderer/json/json.c
+		./cl_renderer/json/json_helper.c
+		./cl_renderer/json/json_worker.c
+		./cl_renderer/json/json_objects.c
+		./cl_renderer/json/readfile.c)
+
 set(SOURCE_F4
 		./cl_renderer/f4/f4_add.c
 		./cl_renderer/f4/f4_sub.c
@@ -335,6 +343,7 @@ set(SOURCE_CL_RENDERER_
 		./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c)
 
 set(SOURCE_RENDERER
+		${SOURCE_JSON}
 		${SOURCE_F4}
 		${SOURCE_OBJECT}
 		${SOURCE_OBJECT_X}

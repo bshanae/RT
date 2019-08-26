@@ -37,6 +37,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_normalize.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_rotate.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/json.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/json_helper.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/json_objects.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/json_worker.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/readfile.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o"
@@ -226,6 +231,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././cl_renderer/cl_arg_list"
   ".././cl_renderer/cl_builder"
   ".././cl_renderer/cl_renderer"
+  ".././cl_renderer/json"
   )
 
 # Targets to which this target links.
