@@ -1,31 +1,23 @@
 #include "gui_signal_x.h"
 
-gboolean			gui_signal_camera_filter_antialiasing
-					(GtkWidget *widget, gboolean state, gpointer ptr)
+void				gui_signal_camera_filter
+					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
+	t_camera		*camera;
+	int 			state[2];
 
 	gui = (t_gui *)ptr;
-	gui->renderer->data.camera->antialiasing = state;
+	camera = gui->renderer->data.camera;
+	state[0] = gtk_toggle_button_get_active(gui->camera->filter_cartoon);
+	state[1] = gtk_toggle_button_get_active(gui->camera->filter_sepia);
+	if (state[0] == camera->filter_cartoon && state[1] == camera->filter_sepia)
+		return ;
+	camera->filter_cartoon = state[0];
+	camera->filter_sepia = state[1];
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	cl_renderer_render(gui->renderer);
-	return (FALSE);
 }
 
-gboolean			gui_signal_camera_filter_focus
-					(GtkWidget *widget, gboolean state, gpointer ptr)
-{
-	t_gui			*gui;
 
-	gui = (t_gui *)ptr;
-	gui->renderer->data.camera->focus = state;
-	if (state)
-		gui_camera_focus_enable(gui->camera);
-	else
-		gui_camera_focus_disable(gui->camera);
-	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
-	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
-	return (FALSE);
-}

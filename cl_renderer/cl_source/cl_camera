@@ -11,12 +11,13 @@ typedef struct 		s_camera
 	RT_F4   		forward_backup;
 	int				width;
 	int				height;
-	int 			antialiasing;
-	int             cartoon_effect;
+	int 			filter_antialiasing;
+	int             filter_cartoon;
 	int             filter_sepia;
 	int 			focus;
 	RT_F			aperture_size;
 	RT_F			focal_length;
+	int 			focus_request;
 }					t_camera;
 
 static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
@@ -42,7 +43,7 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global u
 
 	xf = (RT_F)screen->x;
 	yf = (RT_F)screen->y;
-	if (camera->antialiasing)
+	if (camera->filter_antialiasing)
 	{
 		filter_jitter(&xf, rng_state);
     	filter_jitter(&yf, rng_state);

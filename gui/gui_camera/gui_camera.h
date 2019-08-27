@@ -3,6 +3,7 @@
 
 # include "rt_parameters.h"
 
+# include "assert.h"
 # include "gui_entry.h"
 # include "camera.h"
 
@@ -21,10 +22,13 @@ typedef struct				s_gui_camera
 	GtkDialog				*screen_success;
 	GtkDialog				*screen_fail;
 	GtkSwitch				*antialiasing;
+	GtkToggleButton			*filter_none;
+	GtkToggleButton			*filter_cartoon;
+	GtkToggleButton			*filter_sepia;
 	GtkSwitch				*focus;
 	GtkWidget				*focus_box;
-	GtkEntry				*focal_length;
-	GtkEntry				*aperture_size;
+	GtkEntry				*focus_focal_length;
+	GtkEntry				*focus_aperture_size;
 }							t_gui_camera;
 
 t_gui_camera				*gui_camera_new(GtkBuilder *builder);

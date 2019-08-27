@@ -1,7 +1,14 @@
 #include "gui_signal_connect_x.h"
 
+void				test(void *widget, gpointer ptr)
+{
+	printf("hi\n");
+}
+
 void 				gui_signal_connect_all(t_gui *gui)
 {
+	RT_GUI_CONNECT(gui, test);
+
 	RT_GUI_CONNECT(gui, gui_signal_exit);
 	RT_GUI_CONNECT(gui, gui_signal_key);
 	RT_GUI_CONNECT(gui, gui_signal_notebook_fix);

@@ -4038,6 +4038,33 @@ gui/gui_signal_connect_x/gui_signal_connect_task.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_task.c.s
 .PHONY : gui/gui_signal_connect_x/gui_signal_connect_task.c.s
 
+gui/gui_signal_x/gui_signal_camera_antialiasing.o: gui/gui_signal_x/gui_signal_camera_antialiasing.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_camera_antialiasing.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_antialiasing.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.c.o
+
+gui/gui_signal_x/gui_signal_camera_antialiasing.i: gui/gui_signal_x/gui_signal_camera_antialiasing.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_camera_antialiasing.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_antialiasing.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.c.i
+
+gui/gui_signal_x/gui_signal_camera_antialiasing.s: gui/gui_signal_x/gui_signal_camera_antialiasing.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_camera_antialiasing.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_antialiasing.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_antialiasing.c.s
+
 gui/gui_signal_x/gui_signal_camera_apply.o: gui/gui_signal_x/gui_signal_camera_apply.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_camera_apply.o
@@ -4118,6 +4145,33 @@ gui/gui_signal_x/gui_signal_camera_filter_x.s: gui/gui_signal_x/gui_signal_camer
 gui/gui_signal_x/gui_signal_camera_filter_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_camera_filter_x.c.s
+
+gui/gui_signal_x/gui_signal_camera_focus.o: gui/gui_signal_x/gui_signal_camera_focus.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_camera_focus.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.o
+
+gui/gui_signal_x/gui_signal_camera_focus.i: gui/gui_signal_x/gui_signal_camera_focus.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_camera_focus.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.i
+
+gui/gui_signal_x/gui_signal_camera_focus.s: gui/gui_signal_x/gui_signal_camera_focus.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_camera_focus.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.s
 
 gui/gui_signal_x/gui_signal_camera_reset.o: gui/gui_signal_x/gui_signal_camera_reset.c.o
 
@@ -4713,32 +4767,32 @@ gui/gui_signal_x/gui_signal_settings_entry_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.c.s
 
-gui/gui_signal_x/gui_signal_settings_light_x.o: gui/gui_signal_x/gui_signal_settings_light_x.c.o
+gui/gui_signal_x/gui_signal_settings_light.o: gui/gui_signal_x/gui_signal_settings_light.c.o
 
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.o
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.o
 
 # target to build an object file
-gui/gui_signal_x/gui_signal_settings_light_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light_x.c.o
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.c.o
+gui/gui_signal_x/gui_signal_settings_light.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.o
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.c.o
 
-gui/gui_signal_x/gui_signal_settings_light_x.i: gui/gui_signal_x/gui_signal_settings_light_x.c.i
+gui/gui_signal_x/gui_signal_settings_light.i: gui/gui_signal_x/gui_signal_settings_light.c.i
 
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.i
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.i
 
 # target to preprocess a source file
-gui/gui_signal_x/gui_signal_settings_light_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light_x.c.i
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.c.i
+gui/gui_signal_x/gui_signal_settings_light.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.i
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.c.i
 
-gui/gui_signal_x/gui_signal_settings_light_x.s: gui/gui_signal_x/gui_signal_settings_light_x.c.s
+gui/gui_signal_x/gui_signal_settings_light.s: gui/gui_signal_x/gui_signal_settings_light.c.s
 
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.s
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.s
 
 # target to generate assembly for a file
-gui/gui_signal_x/gui_signal_settings_light_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light_x.c.s
-.PHONY : gui/gui_signal_x/gui_signal_settings_light_x.c.s
+gui/gui_signal_x/gui_signal_settings_light.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.s
+.PHONY : gui/gui_signal_x/gui_signal_settings_light.c.s
 
 gui/gui_signal_x/gui_signal_settings_pt_russian.o: gui/gui_signal_x/gui_signal_settings_pt_russian.c.o
 
@@ -5346,6 +5400,9 @@ help:
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_task.o"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_task.i"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_task.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_antialiasing.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_antialiasing.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_antialiasing.s"
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.s"
@@ -5355,6 +5412,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus.s"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.s"
@@ -5421,9 +5481,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.s"
-	@echo "... gui/gui_signal_x/gui_signal_settings_light_x.o"
-	@echo "... gui/gui_signal_x/gui_signal_settings_light_x.i"
-	@echo "... gui/gui_signal_x/gui_signal_settings_light_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_settings_light.o"
+	@echo "... gui/gui_signal_x/gui_signal_settings_light.i"
+	@echo "... gui/gui_signal_x/gui_signal_settings_light.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.s"

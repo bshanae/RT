@@ -36,9 +36,11 @@ void				gui_signal_camera_entry_insert
 					int length, int *position, gpointer ptr);
 void 				gui_signal_camera_entry_delete
 					(GtkEntry *entry, int start, int end, gpointer ptr);
-gboolean			gui_signal_camera_filter_antialiasing
+gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
-gboolean			gui_signal_camera_filter_focus
+void				gui_signal_camera_filter
+					(GtkWidget *widget, gpointer ptr);
+gboolean			gui_signal_camera_focus
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_screen_save
 					(GtkWidget *widget, gpointer ptr);
@@ -99,22 +101,20 @@ void				gui_signal_settings_entry_insert
 					int length, int *position, gpointer ptr);
 void 				gui_signal_settings_entry_delete
 					(GtkEntry *entry, int start, int end, gpointer ptr);
-gboolean			gui_signal_settings_srgb
-					(GtkWidget *widget, gboolean state, gpointer ptr);
-gboolean			gui_signal_settings_light_basic
-					(GtkWidget *widget, gboolean state, gpointer ptr);
-gboolean			gui_signal_settings_light_area
-					(GtkWidget *widget, gboolean state, gpointer ptr);
-void 				gui_signal_settings_pt_russian
-					(GtkWidget *widget, gboolean state, gpointer ptr);
-void 				gui_signal_settings_tracing_rt
-					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_settings_tracing_rm
-					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_reset
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_apply
 					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_settings_light
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_settings_tracing_rt
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_settings_tracing_rm
+					(GTK_SIGNAL_SIGNATURE);
+gboolean			gui_signal_settings_srgb
+					(GtkWidget *widget, gboolean state, gpointer ptr);
+void 				gui_signal_settings_pt_russian
+					(GtkWidget *widget, gboolean state, gpointer ptr);
 
 gboolean 			gui_signal_image_click
 					(GtkWidget *event_box, GdkEventButton *event, gpointer ptr);

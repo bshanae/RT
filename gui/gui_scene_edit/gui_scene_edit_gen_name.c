@@ -7,7 +7,7 @@ void				gui_scene_edit_gen_name(t_object *object)
 
 	ft_strcpy(object->name, object_translate(object->type));
 	temp = ft_itoa(id[object->type]++);
-	ft_strcat(object->name, " No. ");
+	ft_strcat(object->name, " no. ");
 	ft_strcat(object->name, temp);
 	free(temp);
 }

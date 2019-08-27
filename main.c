@@ -138,9 +138,8 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
-//	scene_test_a(gui->renderer->data.scene);
-//	gui->renderer->data.camera->position.z = 30.;
-//    cl_renderer_load(gui->renderer, "./scenes/test.json");
+	scene_test_a(gui->renderer->data.scene);
+	gui->renderer->data.camera->position.z = 30.;
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);
@@ -152,5 +151,4 @@ int					main(int argc, char **argv)
  * TODO :
  * 4. Figure out how to resize image
  * 5. RM objects greyed out when RT is chosen
- * 6. Write entry block for scene_add
  */
