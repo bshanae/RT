@@ -133,6 +133,16 @@ void				scene_test_b(t_scene *scene)
             (RT_F4_API){1., 2., 3., 4,});
 }
 
+void                light_basic(t_scene *scene)
+{
+    object_build(
+            scene_get_space(scene),
+            object_light_point,
+            MATERIAL_LIGHT_POINT,
+            (RT_F4_API){0., 30., 0.}
+            );
+}
+
 int					main(int argc, char **argv)
 {
 	t_gui			*gui;
@@ -142,6 +152,7 @@ int					main(int argc, char **argv)
 //	scene_test_a(gui->renderer->data.scene);
 //	gui->renderer->data.camera->position.z = 30.;
     renderer_load(gui->renderer, "/Users/ashari/21_ray_tracer/test.json");
+    light_basic(gui->renderer->data.scene);
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

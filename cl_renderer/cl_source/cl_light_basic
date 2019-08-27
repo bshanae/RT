@@ -28,15 +28,15 @@ static RT_F4			static_get_direction(
 }
 
 static RT_F4			static_get_diffuse_intensity
-						(t_intersection *intersection,
-						RT_F4 *light_direction)
+                        (t_intersection *intersection,
+                         RT_F4 *light_direction)
 {
     RT_F	          		dot_value;
 
-	dot_value = dot(*light_direction, intersection->normal);
-	if (dot_value > 0.)
-		return (dot_value / length(*light_direction));
-	return (0.);
+    dot_value = dot(*light_direction, intersection->normal);
+    if (dot_value > 0.)
+        return (dot_value / length(*light_direction));
+    return (0.);
 }
 
 static RT_F4            static_get_specular_intensity
@@ -52,6 +52,26 @@ static RT_F4            static_get_specular_intensity
 		return (RT_POW(dot_value, RT_CL_LIGHT_BASIC_BLINN));
 	return (0.);
 
+}
+
+static RT_F4			static_get_cartoon_intensity
+                        (t_intersection *intersection,
+                         RT_F4 *light_direction)
+{
+    RT_F	          	dot_value;
+    RT_F                intensity;
+
+    dot_value = dot(*light_direction, intersection->normal);
+    if (dot_value > 0.)
+    {
+        if ((intensity = dot_value / length(*light_direction)) > (RT_F)0.7)
+            return ((RT_F)0.6);
+        else if (intensity > (RT_F)0.3)
+            return ((RT_F)0.4);
+        else
+            return ((RT_F)0.3);
+    }
+    return ((RT_F)0.2);
 }
 
 static int				static_is_shadowed(
@@ -72,11 +92,13 @@ static int				static_is_shadowed(
 static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
-						constant t_cl_renderer_settings *settings)
+						constant t_cl_renderer_settings *settings,
+						int cartoon_effect_mod, int gi)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
+    RT_F4				color_cartoon;
 	RT_F4				light_direction;
 
 	color_diffuse = 0.;
@@ -92,8 +114,18 @@ static RT_F4			light_basic(
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
 			continue ;
-		color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
-		color_specular += static_get_specular_intensity(intersection, &light_direction);
+		if (cartoon_effect_mod)
+		    color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
+		else
+        {
+            color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
+            color_specular += static_get_specular_intensity(intersection, &light_direction);
+        }
 	}
+	if (cartoon_effect_mod)
+{
+	    if (!gi)
+	        printf("%f %f %f\n", color_cartoon.x, color_cartoon.y, color_cartoon.z);
+	    return (intersection->material.color * color_cartoon);}
 	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }

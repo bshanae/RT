@@ -11,13 +11,13 @@
 		"material": "white"
 	},
 	{
-		"type": "sphere",
+		"type": "1sphere",
 		"position": [10, 10, 10],
 		"material": "light",
 		"radius": 2.5
 	},
 	{
-		"type": "sphere",
+		"type": "1sphere",
 		"position": [-10, 10, 10],
 		"material": "light",
 		"radius": 2.5

@@ -10,7 +10,7 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state, int gi)
 {
 	RT_F4			radiance;
 	RT_F4			light;
@@ -32,7 +32,7 @@ static void			radiance_add(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings);
+			light = light_basic(scene, intersection, settings, camera->cartoon_effect, gi);
             radiance += light * mask;
 		}
 

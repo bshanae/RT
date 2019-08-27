@@ -173,7 +173,7 @@ typedef struct		s_color
 	unsigned char	a;
 }					t_color;
 
-static t_color		filter_sepia(RT_F4 *source)
+static t_color		color_filter_sepia(RT_F4 *source)
 {
 	unsigned char	sepia_color;
 
@@ -189,7 +189,7 @@ static t_color		color_unpack(RT_F4 source, int srgb, int filter_sepia)
 	source.y = RT_MIN(source.y, (RT_F)1.);
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
-	    return(filter_sepia(&source));
+	    return(color_filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
@@ -1394,15 +1394,15 @@ static RT_F4			static_get_direction(
 }
 
 static RT_F4			static_get_diffuse_intensity
-						(t_intersection *intersection,
-						RT_F4 *light_direction)
+                        (t_intersection *intersection,
+                         RT_F4 *light_direction)
 {
     RT_F	          		dot_value;
 
-	dot_value = dot(*light_direction, intersection->normal);
-	if (dot_value > 0.)
-		return (dot_value / length(*light_direction));
-	return (0.);
+    dot_value = dot(*light_direction, intersection->normal);
+    if (dot_value > 0.)
+        return (dot_value / length(*light_direction));
+    return (0.);
 }
 
 static RT_F4            static_get_specular_intensity
@@ -1418,6 +1418,26 @@ static RT_F4            static_get_specular_intensity
 		return (RT_POW(dot_value, RT_CL_LIGHT_BASIC_BLINN));
 	return (0.);
 
+}
+
+static RT_F4			static_get_cartoon_intensity
+                        (t_intersection *intersection,
+                         RT_F4 *light_direction)
+{
+    RT_F	          	dot_value;
+    RT_F                intensity;
+
+    dot_value = dot(*light_direction, intersection->normal);
+    if (dot_value > 0.)
+    {
+        if ((intensity = dot_value / length(*light_direction)) > (RT_F)0.7)
+            return ((RT_F)0.6);
+        else if (intensity > (RT_F)0.3)
+            return ((RT_F)0.4);
+        else
+            return ((RT_F)0.3);
+    }
+    return ((RT_F)0.2);
 }
 
 static int				static_is_shadowed(
@@ -1438,11 +1458,13 @@ static int				static_is_shadowed(
 static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
-						constant t_cl_renderer_settings *settings)
+						constant t_cl_renderer_settings *settings,
+						int cartoon_effect_mod, int gi)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
+    RT_F4				color_cartoon;
 	RT_F4				light_direction;
 
 	color_diffuse = 0.;
@@ -1458,9 +1480,19 @@ static RT_F4			light_basic(
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
 			continue ;
-		color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
-		color_specular += static_get_specular_intensity(intersection, &light_direction);
+		if (cartoon_effect_mod)
+		    color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction, gi);
+		else
+        {
+            color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
+            color_specular += static_get_specular_intensity(intersection, &light_direction);
+        }
 	}
+	if (cartoon_effect_mod)
+{
+	    if (!gi)
+	        printf("%f %f %f\n", color_cartoon.x, color_cartoon.y, color_cartoon.z);
+	    return (intersection->material.color * color_cartoon);}
 	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }
 // cl_light_area ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1528,7 +1560,7 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state, int gi)
 {
 	RT_F4			radiance;
 	RT_F4			light;
@@ -1550,7 +1582,7 @@ static void			radiance_add(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings);
+			light = light_basic(scene, intersection, settings, camera->cartoon_effect, gi);
             radiance += light * mask;
 		}
 
@@ -1655,7 +1687,7 @@ kernel void			cl_main(
 
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state, global_id);
 	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
 	                                settings->srgb, camera->filter_sepia);
 }

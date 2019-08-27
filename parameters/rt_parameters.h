@@ -20,9 +20,9 @@
 # define RT_CL_RUSSIAN_MOD			1
 # define RT_CL_RUSSIAN_DEPTH		10
 # define RT_CL_SRGB					1
-# define RT_CL_LIGHT_BASIC			0
+# define RT_CL_LIGHT_BASIC			1
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
-# define RT_CL_LIGHT_AREA			1
+# define RT_CL_LIGHT_AREA			0
 
 # ifdef RT_DEGUB_CL_RM
 #  define RT_CL_RM_MOD				1
@@ -34,7 +34,7 @@
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1
-# define RT_CL_CARTOON_EFFECT   	0
+# define RT_CL_CARTOON_EFFECT   	1
 # define RT_CL_FILTER_SEPIA        	0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		(RT_F)5.
