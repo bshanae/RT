@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1823,33 +1823,6 @@ gui/gui_camera/gui_camera_delete.s: gui/gui_camera/gui_camera_delete.c.s
 gui/gui_camera/gui_camera_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.s
 .PHONY : gui/gui_camera/gui_camera_delete.c.s
-
-gui/gui_camera/gui_camera_focus_x.o: gui/gui_camera/gui_camera_focus_x.c.o
-
-.PHONY : gui/gui_camera/gui_camera_focus_x.o
-
-# target to build an object file
-gui/gui_camera/gui_camera_focus_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_focus_x.c.o
-.PHONY : gui/gui_camera/gui_camera_focus_x.c.o
-
-gui/gui_camera/gui_camera_focus_x.i: gui/gui_camera/gui_camera_focus_x.c.i
-
-.PHONY : gui/gui_camera/gui_camera_focus_x.i
-
-# target to preprocess a source file
-gui/gui_camera/gui_camera_focus_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_focus_x.c.i
-.PHONY : gui/gui_camera/gui_camera_focus_x.c.i
-
-gui/gui_camera/gui_camera_focus_x.s: gui/gui_camera/gui_camera_focus_x.c.s
-
-.PHONY : gui/gui_camera/gui_camera_focus_x.s
-
-# target to generate assembly for a file
-gui/gui_camera/gui_camera_focus_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_focus_x.c.s
-.PHONY : gui/gui_camera/gui_camera_focus_x.c.s
 
 gui/gui_camera/gui_camera_new.o: gui/gui_camera/gui_camera_new.c.o
 
@@ -4146,32 +4119,32 @@ gui/gui_signal_x/gui_signal_camera_filter_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_camera_filter_x.c.s
 
-gui/gui_signal_x/gui_signal_camera_focus.o: gui/gui_signal_x/gui_signal_camera_focus.c.o
+gui/gui_signal_x/gui_signal_camera_focus_x.o: gui/gui_signal_x/gui_signal_camera_focus_x.c.o
 
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.o
 
 # target to build an object file
-gui/gui_signal_x/gui_signal_camera_focus.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.o
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.o
+gui/gui_signal_x/gui_signal_camera_focus_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.c.o
 
-gui/gui_signal_x/gui_signal_camera_focus.i: gui/gui_signal_x/gui_signal_camera_focus.c.i
+gui/gui_signal_x/gui_signal_camera_focus_x.i: gui/gui_signal_x/gui_signal_camera_focus_x.c.i
 
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.i
 
 # target to preprocess a source file
-gui/gui_signal_x/gui_signal_camera_focus.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.i
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.i
+gui/gui_signal_x/gui_signal_camera_focus_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.c.i
 
-gui/gui_signal_x/gui_signal_camera_focus.s: gui/gui_signal_x/gui_signal_camera_focus.c.s
+gui/gui_signal_x/gui_signal_camera_focus_x.s: gui/gui_signal_x/gui_signal_camera_focus_x.c.s
 
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.s
 
 # target to generate assembly for a file
-gui/gui_signal_x/gui_signal_camera_focus.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus.c.s
-.PHONY : gui/gui_signal_x/gui_signal_camera_focus.c.s
+gui/gui_signal_x/gui_signal_camera_focus_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.c.s
 
 gui/gui_signal_x/gui_signal_camera_reset.o: gui/gui_signal_x/gui_signal_camera_reset.c.o
 
@@ -4963,8 +4936,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... rt"
+	@echo "... edit_cache"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -5154,9 +5127,6 @@ help:
 	@echo "... gui/gui_camera/gui_camera_delete.o"
 	@echo "... gui/gui_camera/gui_camera_delete.i"
 	@echo "... gui/gui_camera/gui_camera_delete.s"
-	@echo "... gui/gui_camera/gui_camera_focus_x.o"
-	@echo "... gui/gui_camera/gui_camera_focus_x.i"
-	@echo "... gui/gui_camera/gui_camera_focus_x.s"
 	@echo "... gui/gui_camera/gui_camera_new.o"
 	@echo "... gui/gui_camera/gui_camera_new.i"
 	@echo "... gui/gui_camera/gui_camera_new.s"
@@ -5412,9 +5382,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.s"
-	@echo "... gui/gui_signal_x/gui_signal_camera_focus.o"
-	@echo "... gui/gui_signal_x/gui_signal_camera_focus.i"
-	@echo "... gui/gui_signal_x/gui_signal_camera_focus.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.s"

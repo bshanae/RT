@@ -21,6 +21,7 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 	new->filter_cartoon = RT_GUI_GET(builder, "camera_filter_cartoon");
 	new->filter_sepia = RT_GUI_GET(builder, "camera_filter_sepia");
 	new->focus = RT_GUI_GET(builder, "camera_focus");
+	new->focus_request = 0;
 	new->focus_box = RT_GUI_GET(builder, "camera_focus_box");
 	new->focus_focal_length = RT_GUI_GET(builder, "camera_focus_focal_length");
 	new->focus_aperture_size =

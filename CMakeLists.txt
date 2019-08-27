@@ -104,10 +104,10 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-	"-framework OpenCL"
-#	"OpenCL"
-#	"m"
-#	"bsd"
+#	"-framework OpenCL"
+	"OpenCL"
+	"m"
+	"bsd"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -135,7 +135,7 @@ set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
 	./gui/gui_camera/gui_camera_apply.c
-	./gui/gui_camera/gui_camera_focus_x.c)
+	)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_sphere_x.c
@@ -251,7 +251,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus.c)
+	gui/gui_signal_x/gui_signal_camera_focus_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

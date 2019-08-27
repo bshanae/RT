@@ -40,8 +40,10 @@ gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_filter
 					(GtkWidget *widget, gpointer ptr);
-gboolean			gui_signal_camera_focus
+gboolean			gui_signal_camera_focus_enable
 					(GtkWidget *widget, gboolean state, gpointer ptr);
+void				gui_signal_camera_focus_auto
+					(GtkWidget *widget, gpointer ptr);
 void				gui_signal_camera_screen_save
 					(GtkWidget *widget, gpointer ptr);
 void				gui_signal_camera_screen_success_close
@@ -117,7 +119,7 @@ void 				gui_signal_settings_pt_russian
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 
 gboolean 			gui_signal_image_click
-					(GtkWidget *event_box, GdkEventButton *event, gpointer ptr);
+					(GtkWidget *widget, GdkEventButton *event, gpointer ptr);
 
 gboolean			gui_signal_task_add(gpointer ptr);
 void				gui_signal_task_execute(gpointer ptr, gpointer user_ptr);

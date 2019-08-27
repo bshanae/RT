@@ -26,7 +26,8 @@ typedef struct				s_gui_camera
 	GtkToggleButton			*filter_cartoon;
 	GtkToggleButton			*filter_sepia;
 	GtkSwitch				*focus;
-	GtkWidget				*focus_box;
+	int						focus_request;
+	GtkBox					*focus_box;
 	GtkEntry				*focus_focal_length;
 	GtkEntry				*focus_aperture_size;
 }							t_gui_camera;
@@ -40,6 +41,4 @@ void 						gui_camera_reset
 							(t_gui_camera *gui, const t_camera *camera);
 void 						gui_camera_apply
 							(t_gui_camera *gui, t_camera *camera);
-void 						gui_camera_focus_enable(t_gui_camera *camera);
-void 						gui_camera_focus_disable(t_gui_camera *camera);
 #endif
