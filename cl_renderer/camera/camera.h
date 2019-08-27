@@ -29,6 +29,8 @@ typedef struct 		s_camera
 	RT_F			aperture_size;
 	RT_F			focal_length;
 	int 			focus_request;
+	int				focus_request_x;
+	int				focus_request_y;
 }					t_camera;
 
 t_camera			*camera_new(INT_REF width, INT_REF height);

@@ -22,5 +22,9 @@ t_camera			*camera_new(INT_REF width, INT_REF height)
 	new->aperture_size = RT_CL_APERTURE_SIZE;
 	new->focal_length = RT_CL_FOCAL_LENGTH;
 	new->focus_request = 0;
+
+	new->focus_request_x = 240;
+	new->focus_request_y = 240;
+
 	return (new);
 }

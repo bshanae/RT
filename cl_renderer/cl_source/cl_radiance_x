@@ -6,7 +6,6 @@
 
 static void			radiance_add(
 					constant t_scene *scene,
-					constant t_camera *camera,
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,

@@ -104,10 +104,10 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
-	"bsd"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
+#	"bsd"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
@@ -123,7 +123,12 @@ set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
 	./gui/gui_entry/gui_entry_get_x.c)
 
-set(SOURCE_GUI_PARSER gui/gui_parser/gui_parser_new.c gui/gui_parser/gui_parser_delete.c gui/gui_parser/gui_parser_update.c gui/gui_signal_connect_x/gui_signal_connect_parser.c gui/gui_signal_x/gui_signal_parser_dialog_x.c)
+set(SOURCE_GUI_PARSER
+	./gui/gui_parser/gui_parser_new.c
+	./gui/gui_parser/gui_parser_delete.c
+	./gui/gui_parser/gui_parser_update.c
+	./gui/gui_signal_connect_x/gui_signal_connect_parser.c
+	./gui/gui_signal_x/gui_signal_parser_dialog_x.c)
 
 set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
@@ -233,7 +238,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_camera_reset.c
 	./gui/gui_signal_x/gui_signal_camera_filter_x.c
 	./gui/gui_signal_x/gui_signal_settings_srgb.c
-	gui/gui_signal_x/gui_signal_settings_light.c
+	./gui/gui_signal_x/gui_signal_settings_light.c
 	./gui/gui_signal_x/gui_signal_settings_pt_russian.c
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
@@ -242,7 +247,11 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_add_material_x.c
 	./gui/gui_signal_x/gui_singal_task_x.c
 	./gui/gui_signal_x/gui_signal_notebook_fix.c
-	./gui/gui_signal_x/gui_signal_camera_screen_x.c gui/gui_signal_x/gui_signal_parser_select.c gui/gui_signal_x/gui_signal_parser_load.c gui/gui_signal_x/gui_signal_camera_antialiasing.c gui/gui_signal_x/gui_signal_camera_focus.c)
+	./gui/gui_signal_x/gui_signal_camera_screen_x.c
+	./gui/gui_signal_x/gui_signal_parser_select.c
+	./gui/gui_signal_x/gui_signal_parser_load.c
+	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
+	./gui/gui_signal_x/gui_signal_camera_focus.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c
@@ -346,7 +355,8 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_render.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
-	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c cl_renderer/cl_renderer/cl_renderer_load.c)
+	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
+	./cl_renderer/cl_renderer/cl_renderer_load.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

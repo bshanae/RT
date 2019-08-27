@@ -2,7 +2,7 @@
 
 static RT_F4					test(
 								constant t_scene *scene,
-								constant t_camera *camera,
+								global t_camera *camera,
 								t_intersection *intersection,
 								constant t_cl_renderer_settings *settings)
 {
@@ -34,7 +34,7 @@ static RT_F4					test(
 }
 
 kernel void			cl_main(
-					constant t_camera *camera,
+					global t_camera *camera,
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
@@ -54,9 +54,12 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
 
+	if (!global_id && camera->focus_request)
+		camera_auto_focus(camera, scene, settings);
+
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
 	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
 	                                settings->srgb, camera->filter_sepia);
 }

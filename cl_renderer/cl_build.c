@@ -91,78 +91,6 @@ static RT_F4		ray_intersect(t_ray *ray)
 {
 	return (ray->origin + ray->direction * ray->t);
 }
-// cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-static void			filter_jitter(RT_F *x, global ulong *rng_state)
-{
-	RT_F			dx;
-
-	dx = 2. * rng(rng_state);
-	if (dx < 1.)
-    	dx = RT_SQRT(dx) - 1;
-    else
-    	dx = 1. - RT_SQRT((RT_F)2. - dx);
-    *x += dx;
-}
-
-// cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct 		s_camera
-{
-	RT_F4   		position;
-	RT_F4   		rotation;
-	RT_F4   		axis_x;
-	RT_F4   		axis_y;
-	RT_F4   		axis_z;
-	RT_F4   		forward;
-	RT_F4   		forward_backup;
-	int				width;
-	int				height;
-	int 			antialiasing;
-	int             cartoon_effect;
-	int             filter_sepia;
-	int 			focus;
-	RT_F			aperture_size;
-	RT_F			focal_length;
-}					t_camera;
-
-static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
-{
-	RT_F4			focal_point;
-
-	focal_point = camera->position + ray->direction * camera->focal_length;
-
-	ray->origin.x += (.5 - rng(rng_state)) * camera->aperture_size;
-	ray->origin.y += (.5 - rng(rng_state)) * camera->aperture_size;
-	ray->origin.z += (.5 - rng(rng_state)) * camera->aperture_size;
-
-	ray->direction = normalize(focal_point - ray->origin);
-}
-
-static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global ulong *rng_state)
-{
-	t_ray			result;
-	RT_F4			up;
-	RT_F4			right;
-	RT_F 			xf;
-	RT_F 			yf;
-
-	xf = (RT_F)screen->x;
-	yf = (RT_F)screen->y;
-	if (camera->antialiasing)
-	{
-		filter_jitter(&xf, rng_state);
-    	filter_jitter(&yf, rng_state);
-	}
-	result.origin = camera->position;
-	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
-	right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
-	result.direction = up + right + camera->forward;
-	result.direction = normalize(result.direction);
-	if (camera->focus)
-		camera_focus(camera, &result, rng_state);
-	return (result);
-}
 // cl_color ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct		s_color
@@ -173,7 +101,7 @@ typedef struct		s_color
 	unsigned char	a;
 }					t_color;
 
-static t_color		filter_sepia(RT_F4 *source)
+static t_color		color_filter_sepia(RT_F4 *source)
 {
 	unsigned char	sepia_color;
 
@@ -189,7 +117,7 @@ static t_color		color_unpack(RT_F4 source, int srgb, int filter_sepia)
 	source.y = RT_MIN(source.y, (RT_F)1.);
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
-	    return(filter_sepia(&source));
+	    return(color_filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
@@ -1080,11 +1008,12 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
-#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RT
+#if !defined RT_DEBUG_CL_RM
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
 		return (plane_intersect(object, intersection));
+	/*
 	else if (object->type == object_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_cylinder)
@@ -1093,13 +1022,14 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_moebius)
 		return (moebius_intersect(object, intersection));
+	*/
 #endif
 	return (0);
 }
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RM
+#if !defined RT_DEBUG_CL_RT
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
@@ -1597,11 +1527,109 @@ static RT_F4		radiance_get(
 {
 	return (*sample / settings->sample_count);
 }
+// cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+static void			filter_jitter(RT_F *x, global ulong *rng_state)
+{
+	RT_F			dx;
+
+	dx = 2. * rng(rng_state);
+	if (dx < 1.)
+    	dx = RT_SQRT(dx) - 1;
+    else
+    	dx = 1. - RT_SQRT((RT_F)2. - dx);
+    *x += dx;
+}
+
+// cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		s_camera
+{
+	RT_F4   		position;
+	RT_F4   		rotation;
+	RT_F4   		axis_x;
+	RT_F4   		axis_y;
+	RT_F4   		axis_z;
+	RT_F4   		forward;
+	RT_F4   		forward_backup;
+	int				width;
+	int				height;
+	int 			filter_antialiasing;
+	int             filter_cartoon;
+	int             filter_sepia;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
+	int 			focus_request;
+	int				focus_request_x;
+	int				focus_request_y;
+}					t_camera;
+
+static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rng_state)
+{
+	RT_F4			focal_point;
+
+	focal_point = camera->position + ray->direction * camera->focal_length;
+
+	ray->origin.x += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.y += (.5 - rng(rng_state)) * camera->aperture_size;
+	ray->origin.z += (.5 - rng(rng_state)) * camera->aperture_size;
+
+	ray->direction = normalize(focal_point - ray->origin);
+}
+
+static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulong *rng_state)
+{
+	t_ray			result;
+	RT_F4			up;
+	RT_F4			right;
+	RT_F 			xf;
+	RT_F 			yf;
+
+	xf = (RT_F)screen->x;
+	yf = (RT_F)screen->y;
+	if (camera->filter_antialiasing)
+	{
+		filter_jitter(&xf, rng_state);
+    	filter_jitter(&yf, rng_state);
+	}
+	result.origin = camera->position;
+	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
+	right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
+	result.direction = up + right + camera->forward;
+	result.direction = normalize(result.direction);
+	if (camera->focus)
+		camera_focus(camera, &result, rng_state);
+	return (result);
+}
+
+static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+{
+    t_intersection	intersection;
+    RT_F4			up;
+    RT_F4			right;
+    RT_F 			xf;
+    RT_F 			yf;
+
+	xf = camera->focus_request_x;
+    yf = camera->focus_request_y;
+
+    intersection.ray.origin = camera->position;
+    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
+    right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
+    intersection.ray.direction = up + right + camera->forward;
+    intersection.ray.direction = normalize(intersection.ray.direction);
+
+    intersection_reset(&intersection);
+    if (scene_intersect(scene, &intersection, settings))
+    	camera->focal_length = intersection.ray.t;
+    camera->focus_request = 0;
+}
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static RT_F4					test(
 								constant t_scene *scene,
-								constant t_camera *camera,
+								global t_camera *camera,
 								t_intersection *intersection,
 								constant t_cl_renderer_settings *settings)
 {
@@ -1633,7 +1661,7 @@ static RT_F4					test(
 }
 
 kernel void			cl_main(
-					constant t_camera *camera,
+					global t_camera *camera,
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
@@ -1652,6 +1680,9 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 	intersection_reset(&intersection);
+
+	if (!global_id && camera->focus_request)
+		camera_auto_focus(camera, scene, settings);
 
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
