@@ -4,7 +4,7 @@
 # include "rt_control.h"
 
 # define RT_GUI_BUILD				"./gui/source/build.glade"
-# define RT_GUI_THEME				"./gui/source/theme_breeze/gtk-3.20/gtk.css"
+# define RT_GUI_THEME				"./gui/source/theme_aurora/gtk.css"
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
 # define RT_GUI_WIDTH				480

@@ -5,11 +5,12 @@
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
-#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RT
+#if !defined RT_DEBUG_CL_RM
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
 		return (plane_intersect(object, intersection));
+	/*
 	else if (object->type == object_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_cylinder)
@@ -18,13 +19,14 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_moebius)
 		return (moebius_intersect(object, intersection));
+	*/
 #endif
 	return (0);
 }
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RM
+#if !defined RT_DEBUG_CL_RT
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)

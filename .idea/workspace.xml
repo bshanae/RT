@@ -14,38 +14,21 @@
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_box" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_box" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_julia" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_julia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_mandelbulb" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_mandelbulb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_plane" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_plane" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_tetrahedron" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_build.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_translate.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_translate.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_tetrahedron.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" afterDir="false" />
@@ -95,21 +78,19 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_tetrahedron.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_focus_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_camera/gui_camera_focus_x.c.o" afterDir="false" />
@@ -219,14 +200,280 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_singal_task_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_singal_task_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_singal_task_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-down-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-down-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-down-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-left-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-left-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-left-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-right-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-right-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-right-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-down-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-down-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-down-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-left-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-left-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-left-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-right-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-right-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-right-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-up-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-up-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-up-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-small-up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-up-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-up-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-up-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/arrow-up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/button-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/button-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/button-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-checked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-mixed-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-checked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-selectionmode-unchecked@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/check-unchecked@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry-button-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry-button-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/combo-entry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/entry-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/entry-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/entry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/frame-gap-end.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/frame-gap-start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/handle-h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/handle-v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/line-h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/line-v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/menu-arrow-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/menu-arrow-selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/menu-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/menubar-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/notebook-frame-bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/notebook-frame-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/notebook-frame-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/notebook-gap-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/notebook-gap-vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/null.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/progressbar-bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/progressbar-trough.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-checked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-mixed-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-backdrop-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-backdrop-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked-insensitive@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/radio-unchecked@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-slider-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-slider-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-slider-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-slider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-trough-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scale-trough-vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-horizontal@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-slider-vertical@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-trough-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-trough-horizontal@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-trough-vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/scrollbar-trough-vertical@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-down-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-down-rtl-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-down-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-up-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-up-rtl-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-up-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/spinbutton-up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-bottom-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-bottom-inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-left-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-left-inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-right-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-right-inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-top-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tab-top-inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-active-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-active-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-hover-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-hover-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-close@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-active-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-active-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-hover-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-hover-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-active-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-active-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-hover-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-hover-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize-maximized@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-maximize@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-active-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-active-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-active@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-hover-backdrop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-hover-backdrop@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize-hover@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/titlebutton-minimize@2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/togglebutton-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/togglebutton-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/togglebutton-insensitive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/togglebutton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/toolbar-background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/toolbutton-active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/toolbutton-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/toolbutton-toggled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/assets/tree-header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/gtkrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/buttons" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/default" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/entry" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/menu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/misc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/notebook" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/progressbar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/range" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/scrollbar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/styles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-2.0/widgets/toolbar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.0/gtk-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.0/gtk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.18/gtk-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.18/gtk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.20/gtk-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/gtk-3.20/gtk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/theme_breeze/index.theme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_control.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_control.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/screenshotd26_m8_h11_m11_s1.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -403,6 +650,7 @@
       <workItem from="1566675368134" duration="6206000" />
       <workItem from="1566806635398" duration="6948000" />
       <workItem from="1566814340829" duration="8342000" />
+      <workItem from="1566888914659" duration="4197000" />
     </task>
     <servers />
   </component>

@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 find_package(PkgConfig REQUIRED)
-#pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
-set(BREW ~/.brew/)
+set(BREW /usr/local)
 
 set(GTK_INCLUDES
 		${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
@@ -41,8 +41,8 @@ set(GTK_LINKS
 
 
 include_directories(
-		${GTK_INCLUDES}
-		#	${GTK3_INCLUDE_DIRS}
+#		${GTK_INCLUDES}
+			${GTK3_INCLUDE_DIRS}
 		../21_libft/includes/
 		./parameters/
 		./gui/
@@ -94,19 +94,19 @@ set(GTK_LIBS
 		"-framework CoreGraphics")
 
 link_directories(
-		${GTK_LINKS}
-		#	${GTK3_LIBRARY_DIRS}
+#		${GTK_LINKS}
+		${GTK3_LIBRARY_DIRS}
 		../21_libft/)
 
-#add_definitions(${GTK3_CFLAGS_OTHER})
+add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 		"ft"
 		"-framework OpenCL"
 		#	"OpenCL"
 		#	"m"
-		#	${GTK3_LIBRARIES}
 		${GTK3_LIBRARIES}
+#		${GTK_LIBRARIES}
 )
 
 set(SOURCE_MAIN
