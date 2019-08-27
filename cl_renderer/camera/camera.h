@@ -23,6 +23,8 @@ typedef struct 		s_camera
 	int				width;
 	int				height;
 	int 			antialiasing;
+	int             cartoon_effect;
+	int             filter_sepia;
 	int 			focus;
 	RT_F			aperture_size;
 	RT_F			focal_length;

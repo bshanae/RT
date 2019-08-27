@@ -109,19 +109,21 @@ static void			filter_jitter(RT_F *x, global ulong *rng_state)
 
 typedef struct 		s_camera
 {
-	RT_F4			position;
-	RT_F4			rotation;
-	RT_F4			axis_x;
-	RT_F4			axis_y;
-	RT_F4			axis_z;
-	RT_F4			forward;
-	RT_F4			forward_backup;
+	RT_F4   		position;
+	RT_F4   		rotation;
+	RT_F4   		axis_x;
+	RT_F4   		axis_y;
+	RT_F4   		axis_z;
+	RT_F4   		forward;
+	RT_F4   		forward_backup;
 	int				width;
 	int				height;
 	int 			antialiasing;
-    int 			focus;
-    RT_F			aperture_size;
-    RT_F			focal_length;
+	int             cartoon_effect;
+	int             filter_sepia;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
 }					t_camera;
 
 static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
@@ -171,13 +173,23 @@ typedef struct		s_color
 	unsigned char	a;
 }					t_color;
 
-static t_color		color_unpack(RT_F4 source, int srgb)
+static t_color		filter_sepia(RT_F4 *source)
+{
+	unsigned char	sepia_color;
+
+	sepia_color = (255 * source->x) * 0.3 + (255 * source->y) * 0.59 + (255 * source->z) * 0.11;
+	return((t_color){sepia_color, sepia_color, sepia_color, 255});
+}
+
+static t_color		color_unpack(RT_F4 source, int srgb, int filter_sepia)
 {
     if (srgb)
 		source = RT_POW(source, (RT_F).4);
 	source.x = RT_MIN(source.x, (RT_F)1.);
 	source.y = RT_MIN(source.y, (RT_F)1.);
 	source.z = RT_MIN(source.z, (RT_F)1.);
+	if (filter_sepia)
+	    return(filter_sepia(&source));
 	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
@@ -1068,7 +1080,7 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
-#if !defined RT_DEBUG_CL_RM
+#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RT
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
@@ -1087,14 +1099,13 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-#if !defined RT_DEBUG_CL_RT
+#if !defined RT_DEBUG || !defined RT_DEBUG_CL_RM
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
 		return (sphere_sdf(object, point));
 	else if (object->type == object_plane)
 		return (plane_sdf(object, point));
-	/*
 	else if (object->type == object_julia)
 		return (julia_sdf(object, point));
 	else if (object->type == object_mandelbulb)
@@ -1103,7 +1114,6 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (torus_sdf(object, point));
 	else if (object->type == object_box)
 		return (box_sdf(object, point));
-	*/
 	else if (object->type == object_csg)
 		return (csg_sdf(object, point));
 #endif
@@ -1646,7 +1656,8 @@ kernel void			cl_main(
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
     radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings), settings->srgb);
+	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
+	                                settings->srgb, camera->filter_sepia);
 }
 
 

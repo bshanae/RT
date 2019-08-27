@@ -4,7 +4,7 @@
 # include "rt_control.h"
 
 # define RT_GUI_BUILD				"./gui/source/build.glade"
-# define RT_GUI_THEME				"./gui/source/theme_aurora/gtk.css"
+# define RT_GUI_THEME				"./gui/source/theme_breeze/gtk-3.20/gtk.css"
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
 # define RT_GUI_WIDTH				480
@@ -34,6 +34,8 @@
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1
+# define RT_CL_CARTOON_EFFECT   	0
+# define RT_CL_FILTER_SEPIA        	0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		(RT_F)5.
 # define RT_CL_FOCAL_LENGTH			(RT_F)40.

@@ -5,7 +5,7 @@ gboolean			gui_signal_task_add(gpointer ptr)
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	//g_thread_pool_push(gui->pool, gui, NULL);
+	g_thread_pool_push(gui->pool, gui, NULL);
 	return (TRUE);
 }
 
