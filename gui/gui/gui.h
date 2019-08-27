@@ -3,6 +3,7 @@
 
 # include "rt_parameters.h"
 
+# include "gui_parser.h"
 # include "gui_camera.h"
 # include "gui_scene.h"
 # include "gui_settings.h"
@@ -17,7 +18,8 @@ typedef struct		s_gui
 	GtkBuilder		*builder;
 	GtkWindow		*window;
 	GThreadPool		*pool;
-	GtkEntry		*notebook_fix[3];
+	GtkEntry		*notebook_fix[4];
+	t_gui_parser	*parser;
 	t_gui_camera	*camera;
 	t_gui_scene		*scene;
 	t_gui_settings	*settings;

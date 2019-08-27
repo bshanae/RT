@@ -2,7 +2,6 @@
 #include "gui_signal_connect_x.h"
 #include "cl_renderer.h"
 #include "material_list.h"
-#include "json.h"
 
 void				scene_test_a(t_scene *scene)
 {
@@ -141,7 +140,7 @@ int					main(int argc, char **argv)
 	gui_signal_connect_all(gui);
 //	scene_test_a(gui->renderer->data.scene);
 //	gui->renderer->data.camera->position.z = 30.;
-    renderer_load(gui->renderer, "/Users/ashari/21_ray_tracer/test.json");
+//    cl_renderer_load(gui->renderer, "./scenes/test.json");
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

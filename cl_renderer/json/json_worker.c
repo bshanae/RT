@@ -1,9 +1,9 @@
 #include "jsmn.h"
 #include "json_parse.h"
 
-void	work_object(void *data, char *json, jsmntok_t *tokens)
+void				work_object(void *data, char *json, jsmntok_t *tokens)
 {
-	char	*type;
+	char			*type;
 
 	type = get_string_in_object(json, tokens, "type");
 	if (!type)
@@ -21,10 +21,10 @@ void	work_object(void *data, char *json, jsmntok_t *tokens)
 	free(type);
 }
 
-void	work_tokens(void *data, char *json, jsmntok_t *tokens)
+void				work_tokens(void *data, char *json, jsmntok_t *tokens)
 {
-	int			qt;
-	const int	len = tokens[0].size;
+	int				qt;
+	const int		len = tokens[0].size;
 
 	tokens++;
 	qt = 0;
@@ -36,22 +36,27 @@ void	work_tokens(void *data, char *json, jsmntok_t *tokens)
 	}
 }
 
-void	load_scene(void *data, char *path)
+void 				static_load_error()
 {
-	char		*json;
-	int			res;
-	jsmn_parser	parser;
-	jsmntok_t	*tokens;
+	ft_printf("{red}JSON Parser : Couldn't parse file\n");
+}
+
+void				load_scene(void *data, const char *path)
+{
+	char			*json;
+	int				res;
+	jsmn_parser		parser;
+	jsmntok_t		*tokens;
 
 	if (!data || !path)
-		return ;
+		return (static_load_error());
 	json = read_file(path);
 	if (!json)
-		return ;
+		return (static_load_error());
 	jsmn_init(&parser);
 	res = jsmn_parse(&parser, json, strlen(json), NULL, 1);
 	if (res <= 0)
-		return ;
+		return (static_load_error());
 	tokens = malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
 	jsmn_parse(&parser, json, strlen(json), tokens, res);

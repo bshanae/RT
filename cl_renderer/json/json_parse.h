@@ -2,6 +2,8 @@
 # define JSON_PARSE
 
 # define JSMN_HEADER
+
+# include "libft_ft_printf.h"
 # include "jsmn.h"
 
 # include <stdio.h>
@@ -36,9 +38,9 @@ typedef struct	s_parse_object
 	t_material	material;
 }				t_obj;
 
-void		load_scene(void *data, char *path);
+void		load_scene(void *data, const char *path);
 
-char		*read_file(char *path);
+char		*read_file(const char *path);
 int			ft_strequ(char const *s1, char const *s2);
 
 jsmntok_t	*next_item(jsmntok_t *tokens);

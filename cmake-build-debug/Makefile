@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -771,6 +771,33 @@ cl_renderer/cl_renderer/cl_renderer_flag_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_flag_x.c.s
 
+cl_renderer/cl_renderer/cl_renderer_load.o: cl_renderer/cl_renderer/cl_renderer_load.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.c.o
+
+cl_renderer/cl_renderer/cl_renderer_load.i: cl_renderer/cl_renderer/cl_renderer_load.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.c.i
+
+cl_renderer/cl_renderer/cl_renderer_load.s: cl_renderer/cl_renderer/cl_renderer_load.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_load.c.s
+
 cl_renderer/cl_renderer/cl_renderer_new.o: cl_renderer/cl_renderer/cl_renderer_new.c.o
 
 .PHONY : cl_renderer/cl_renderer/cl_renderer_new.o
@@ -1013,33 +1040,6 @@ cl_renderer/f4/f4_sub.s: cl_renderer/f4/f4_sub.c.s
 cl_renderer/f4/f4_sub.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.s
 .PHONY : cl_renderer/f4/f4_sub.c.s
-
-cl_renderer/json/json.o: cl_renderer/json/json.c.o
-
-.PHONY : cl_renderer/json/json.o
-
-# target to build an object file
-cl_renderer/json/json.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.o
-.PHONY : cl_renderer/json/json.c.o
-
-cl_renderer/json/json.i: cl_renderer/json/json.c.i
-
-.PHONY : cl_renderer/json/json.i
-
-# target to preprocess a source file
-cl_renderer/json/json.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.i
-.PHONY : cl_renderer/json/json.c.i
-
-cl_renderer/json/json.s: cl_renderer/json/json.c.s
-
-.PHONY : cl_renderer/json/json.s
-
-# target to generate assembly for a file
-cl_renderer/json/json.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.s
-.PHONY : cl_renderer/json/json.c.s
 
 cl_renderer/json/json_helper.o: cl_renderer/json/json_helper.c.o
 
@@ -2499,6 +2499,87 @@ gui/gui_object_x/gui_object_torus_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_object_x/gui_object_torus_x.c.s
 .PHONY : gui/gui_object_x/gui_object_torus_x.c.s
 
+gui/gui_parser/gui_parser_delete.o: gui/gui_parser/gui_parser_delete.c.o
+
+.PHONY : gui/gui_parser/gui_parser_delete.o
+
+# target to build an object file
+gui/gui_parser/gui_parser_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_delete.c.o
+.PHONY : gui/gui_parser/gui_parser_delete.c.o
+
+gui/gui_parser/gui_parser_delete.i: gui/gui_parser/gui_parser_delete.c.i
+
+.PHONY : gui/gui_parser/gui_parser_delete.i
+
+# target to preprocess a source file
+gui/gui_parser/gui_parser_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_delete.c.i
+.PHONY : gui/gui_parser/gui_parser_delete.c.i
+
+gui/gui_parser/gui_parser_delete.s: gui/gui_parser/gui_parser_delete.c.s
+
+.PHONY : gui/gui_parser/gui_parser_delete.s
+
+# target to generate assembly for a file
+gui/gui_parser/gui_parser_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_delete.c.s
+.PHONY : gui/gui_parser/gui_parser_delete.c.s
+
+gui/gui_parser/gui_parser_new.o: gui/gui_parser/gui_parser_new.c.o
+
+.PHONY : gui/gui_parser/gui_parser_new.o
+
+# target to build an object file
+gui/gui_parser/gui_parser_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_new.c.o
+.PHONY : gui/gui_parser/gui_parser_new.c.o
+
+gui/gui_parser/gui_parser_new.i: gui/gui_parser/gui_parser_new.c.i
+
+.PHONY : gui/gui_parser/gui_parser_new.i
+
+# target to preprocess a source file
+gui/gui_parser/gui_parser_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_new.c.i
+.PHONY : gui/gui_parser/gui_parser_new.c.i
+
+gui/gui_parser/gui_parser_new.s: gui/gui_parser/gui_parser_new.c.s
+
+.PHONY : gui/gui_parser/gui_parser_new.s
+
+# target to generate assembly for a file
+gui/gui_parser/gui_parser_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_new.c.s
+.PHONY : gui/gui_parser/gui_parser_new.c.s
+
+gui/gui_parser/gui_parser_update.o: gui/gui_parser/gui_parser_update.c.o
+
+.PHONY : gui/gui_parser/gui_parser_update.o
+
+# target to build an object file
+gui/gui_parser/gui_parser_update.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_update.c.o
+.PHONY : gui/gui_parser/gui_parser_update.c.o
+
+gui/gui_parser/gui_parser_update.i: gui/gui_parser/gui_parser_update.c.i
+
+.PHONY : gui/gui_parser/gui_parser_update.i
+
+# target to preprocess a source file
+gui/gui_parser/gui_parser_update.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_update.c.i
+.PHONY : gui/gui_parser/gui_parser_update.c.i
+
+gui/gui_parser/gui_parser_update.s: gui/gui_parser/gui_parser_update.c.s
+
+.PHONY : gui/gui_parser/gui_parser_update.s
+
+# target to generate assembly for a file
+gui/gui_parser/gui_parser_update.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_parser/gui_parser_update.c.s
+.PHONY : gui/gui_parser/gui_parser_update.c.s
+
 gui/gui_scene/gui_scene_delete.o: gui/gui_scene/gui_scene_delete.c.o
 
 .PHONY : gui/gui_scene/gui_scene_delete.o
@@ -3822,6 +3903,33 @@ gui/gui_signal_connect_x/gui_signal_connect_image.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.s
 .PHONY : gui/gui_signal_connect_x/gui_signal_connect_image.c.s
 
+gui/gui_signal_connect_x/gui_signal_connect_parser.o: gui/gui_signal_connect_x/gui_signal_connect_parser.c.o
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.o
+
+# target to build an object file
+gui/gui_signal_connect_x/gui_signal_connect_parser.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_parser.c.o
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.c.o
+
+gui/gui_signal_connect_x/gui_signal_connect_parser.i: gui/gui_signal_connect_x/gui_signal_connect_parser.c.i
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.i
+
+# target to preprocess a source file
+gui/gui_signal_connect_x/gui_signal_connect_parser.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_parser.c.i
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.c.i
+
+gui/gui_signal_connect_x/gui_signal_connect_parser.s: gui/gui_signal_connect_x/gui_signal_connect_parser.c.s
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect_x/gui_signal_connect_parser.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_parser.c.s
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_parser.c.s
+
 gui/gui_signal_connect_x/gui_signal_connect_scene_add.o: gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o
 
 .PHONY : gui/gui_signal_connect_x/gui_signal_connect_scene_add.o
@@ -4172,6 +4280,87 @@ gui/gui_signal_x/gui_signal_notebook_fix.s: gui/gui_signal_x/gui_signal_notebook
 gui/gui_signal_x/gui_signal_notebook_fix.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s
 .PHONY : gui/gui_signal_x/gui_signal_notebook_fix.c.s
+
+gui/gui_signal_x/gui_signal_parser_dialog_x.o: gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_parser_dialog_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
+
+gui/gui_signal_x/gui_signal_parser_dialog_x.i: gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_parser_dialog_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
+
+gui/gui_signal_x/gui_signal_parser_dialog_x.s: gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_parser_dialog_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
+
+gui/gui_signal_x/gui_signal_parser_load.o: gui/gui_signal_x/gui_signal_parser_load.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_parser_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_load.c.o
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.c.o
+
+gui/gui_signal_x/gui_signal_parser_load.i: gui/gui_signal_x/gui_signal_parser_load.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_parser_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_load.c.i
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.c.i
+
+gui/gui_signal_x/gui_signal_parser_load.s: gui/gui_signal_x/gui_signal_parser_load.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_parser_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_load.c.s
+.PHONY : gui/gui_signal_x/gui_signal_parser_load.c.s
+
+gui/gui_signal_x/gui_signal_parser_select.o: gui/gui_signal_x/gui_signal_parser_select.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_parser_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_select.c.o
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.c.o
+
+gui/gui_signal_x/gui_signal_parser_select.i: gui/gui_signal_x/gui_signal_parser_select.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_parser_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_select.c.i
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.c.i
+
+gui/gui_signal_x/gui_signal_parser_select.s: gui/gui_signal_x/gui_signal_parser_select.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_parser_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_select.c.s
+.PHONY : gui/gui_signal_x/gui_signal_parser_select.c.s
 
 gui/gui_signal_x/gui_signal_scene_add_material_x.o: gui/gui_signal_x/gui_signal_scene_add_material_x.c.o
 
@@ -4720,8 +4909,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... rt"
+	@echo "... edit_cache"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -4794,6 +4983,9 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_flag_x.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_flag_x.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_flag_x.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_load.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_load.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_load.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.s"
@@ -4821,9 +5013,6 @@ help:
 	@echo "... cl_renderer/f4/f4_sub.o"
 	@echo "... cl_renderer/f4/f4_sub.i"
 	@echo "... cl_renderer/f4/f4_sub.s"
-	@echo "... cl_renderer/json/json.o"
-	@echo "... cl_renderer/json/json.i"
-	@echo "... cl_renderer/json/json.s"
 	@echo "... cl_renderer/json/json_helper.o"
 	@echo "... cl_renderer/json/json_helper.i"
 	@echo "... cl_renderer/json/json_helper.s"
@@ -4986,6 +5175,15 @@ help:
 	@echo "... gui/gui_object_x/gui_object_torus_x.o"
 	@echo "... gui/gui_object_x/gui_object_torus_x.i"
 	@echo "... gui/gui_object_x/gui_object_torus_x.s"
+	@echo "... gui/gui_parser/gui_parser_delete.o"
+	@echo "... gui/gui_parser/gui_parser_delete.i"
+	@echo "... gui/gui_parser/gui_parser_delete.s"
+	@echo "... gui/gui_parser/gui_parser_new.o"
+	@echo "... gui/gui_parser/gui_parser_new.i"
+	@echo "... gui/gui_parser/gui_parser_new.s"
+	@echo "... gui/gui_parser/gui_parser_update.o"
+	@echo "... gui/gui_parser/gui_parser_update.i"
+	@echo "... gui/gui_parser/gui_parser_update.s"
 	@echo "... gui/gui_scene/gui_scene_delete.o"
 	@echo "... gui/gui_scene/gui_scene_delete.i"
 	@echo "... gui/gui_scene/gui_scene_delete.s"
@@ -5133,6 +5331,9 @@ help:
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.o"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.i"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.s"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_parser.o"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_parser.i"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_parser.s"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_scene_add.o"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_scene_add.i"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_scene_add.s"
@@ -5172,6 +5373,15 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.o"
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.i"
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.s"
+	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_parser_load.o"
+	@echo "... gui/gui_signal_x/gui_signal_parser_load.i"
+	@echo "... gui/gui_signal_x/gui_signal_parser_load.s"
+	@echo "... gui/gui_signal_x/gui_signal_parser_select.o"
+	@echo "... gui/gui_signal_x/gui_signal_parser_select.i"
+	@echo "... gui/gui_signal_x/gui_signal_parser_select.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.s"

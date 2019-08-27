@@ -16,8 +16,20 @@ void				gui_signal_notebook_fix
 					(GtkNotebook *notebook, GtkWidget *page,
 					guint page_num, gpointer ptr);
 
-gboolean			gui_signal_task_add(gpointer ptr);
-void				gui_signal_task_execute(gpointer ptr, gpointer user_ptr);
+void 				gui_signal_parser_select
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_load
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_dialog_run
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_dialog_select
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_dialog_response_close
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_dialog_response_no
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_parser_dialog_response_yes
+					(GTK_SIGNAL_SIGNATURE);
 
 void				gui_signal_camera_entry_insert
 					(GtkEntry *entry, const char *new,
@@ -106,5 +118,8 @@ void 				gui_signal_settings_apply
 
 gboolean 			gui_signal_image_click
 					(GtkWidget *event_box, GdkEventButton *event, gpointer ptr);
+
+gboolean			gui_signal_task_add(gpointer ptr);
+void				gui_signal_task_execute(gpointer ptr, gpointer user_ptr);
 
 #endif
