@@ -12,8 +12,7 @@ static void					radiance_add(
 							t_intersection *intersection,
 							global RT_F4 *sample,
 							constant t_cl_renderer_settings *settings,
-							global ulong *rng_state,
-							int gi)
+							global ulong *rng_state)
 {
 	RT_F4					radiance;
 	RT_F4					light;
@@ -28,10 +27,7 @@ static void					radiance_add(
 	{
 		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
-		{
-			radiance = (RT_F4){0.f, 0.f, 1.f, 1.f};
 			continue ;
-		}
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;

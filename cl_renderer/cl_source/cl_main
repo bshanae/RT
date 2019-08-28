@@ -28,7 +28,7 @@ kernel void			cl_main(
 	else
 		illumination_effect = 0.;
 
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state, global_id);
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
 
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings),
 									camera->filter_sepia);
