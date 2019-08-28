@@ -15,7 +15,7 @@ void				scene_test_a(t_scene *scene)
             (RT_F4_API){10., 10., -40.}, 2.);
     object_build(
             scene_get_space(scene), object_sphere,
-            MATERIAL_RED,
+            MATERIAL_MIRROR,
             (RT_F4_API){-10., 2., -10.}, 3.1);
     object_build(
             scene_get_space(scene), object_sphere,

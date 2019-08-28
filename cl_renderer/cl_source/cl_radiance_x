@@ -2,28 +2,36 @@
 
 #include "rt_parameters.h"
 
+# define RT_CHOICE_DIFFUSE	0
+# define RT_CHOICE_REFLECT	1
+# define RT_CHOICE_REFRACT	2
 
-
-static void			radiance_add(
-					constant t_scene *scene,
-					global t_camera *camera,
-					t_intersection *intersection,
-					global RT_F4 *sample,
-					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+static void					radiance_add(
+							constant t_scene *scene,
+							global t_camera *camera,
+							t_intersection *intersection,
+							global RT_F4 *sample,
+							constant t_cl_renderer_settings *settings,
+							global ulong *rng_state,
+							int gi)
 {
-	RT_F4			radiance;
-	RT_F4			light;
-	RT_F4			mask;
-	RT_F			cosine;
-	RT_F			choice;
+	RT_F4					radiance;
+	RT_F4					light;
+	RT_F4					mask;
+	RT_F					cosine;
+	RT_F					choice_value;
+	RT_F					choice_result;
 
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
-    		break;
+		{
+			radiance = (RT_F4){0.f, 0.f, 1.f, 1.f};
+			continue ;
+		}
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
@@ -42,22 +50,29 @@ static void			radiance_add(
 			radiance += light * mask * intersection->material.color;
 		}
 
-        if (f4_max_component(intersection->material.reflectance) > 0.|| f4_max_component(intersection->material.transparence) > 0.)
-        {
-            choice = rng(rng_state);
-            if (choice < intersection->material.reflectance)
-                intersection_reflect(intersection, intersection);
-            else
-                intersection_refract(intersection, intersection);
-            mask /= choice < intersection->material.reflectance ? 1 : intersection->material.transparence;
-        }
-        else
+		choice_value = rng(rng_state);
+		choice_result = RT_CHOICE_DIFFUSE;
+		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
+			choice_result = RT_CHOICE_REFLECT;
+		else if (intersection->material.transparence == (RT_F)1. || (intersection->material.transparence > 0. && choice_value < intersection->material.transparence))
+			choice_result = RT_CHOICE_REFRACT;
+
+		if (choice_result == RT_CHOICE_REFLECT)
+		{
+			intersection_reflect(intersection, intersection);
+			mask /= intersection->material.reflectance;
+		}
+		else if (choice_result == RT_CHOICE_REFRACT)
+		{
+			intersection_refract(intersection, intersection);
+			mask /= intersection->material.transparence;
+		}
+		else if (choice_result == RT_CHOICE_DIFFUSE)
 		{
 		    intersection->ray.origin = intersection->hit;
-
-		    intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-		    mask *= intersection->material.color * cosine;
-        }
+            intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+            mask *= intersection->material.color * cosine;
+		}
 	}
 
 	if (settings->sample_count == 1)
@@ -66,9 +81,9 @@ static void			radiance_add(
 		*sample += radiance;
 }
 
-static RT_F4		radiance_get(
-					global RT_F4 *sample,
-					constant t_cl_renderer_settings *settings)
+static RT_F4				radiance_get(
+							global RT_F4 *sample,
+							constant t_cl_renderer_settings *settings)
 {
 	return (*sample / settings->sample_count);
 }

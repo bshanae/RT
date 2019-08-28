@@ -1279,7 +1279,7 @@ static RT_F4			static_get_direction(
 						constant t_object *object)
 {
 	if (object->type == object_light_direct)
-		return (((constant t_object_light_direct *)object->data)->direction);
+		return (((constant t_object_light_direct *)object->data)->direction * (RT_F)-1.);
 	else if (object->type == object_light_point)
 		return (((constant t_object_light_point *)object->data)->position - intersection->hit);
 	return (0.);
@@ -1342,9 +1342,9 @@ static int				static_is_shadowed(
 
 	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
-	shadow.ray.direction = *light_direction;
+	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);
-	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(light_direction));
+	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
 static RT_F4			light_basic(
@@ -1372,23 +1372,19 @@ static RT_F4			light_basic(
 		}
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
-		{
-//			if (get_global_id(0) < 200)
-//				printf("%d\n", intersection->object_id);
 			continue;
-		}
 		if (filter_cartoon_mod)
 			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
 		else
 		{
-			color_diffuse += object->material.
-			emission *static_get_diffuse_intensity(intersection, &light_direction);
+			color_diffuse += object->material.emission *static_get_diffuse_intensity(intersection, &light_direction);
 			color_specular += static_get_specular_intensity(intersection, &light_direction);
 		}
 	}
 	if (filter_cartoon_mod)
 		return (intersection->material.color * color_cartoon);
-	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
+	return (intersection->material.color * color_diffuse
+		+ (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }
 // cl_light_area ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1548,7 +1544,8 @@ static void			radiance_add(
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state,
+					int gi)
 {
 	RT_F4			radiance;
 	RT_F4			light;
@@ -1560,11 +1557,15 @@ static void			radiance_add(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
-    		break;
+		{
+			radiance = (RT_F4){0.f, 0.f, 1.f, 1.f};
+			continue ;
+		}
 
-		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
-			break ;
+//		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
+//			break ;
 
 		radiance += mask * intersection->material.emission;
 
@@ -1638,6 +1639,7 @@ static RT_F4		radiance_get(
  		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
+ 		intersection_reset(scene, &shadow, settings);
  		scene_intersect(scene, &shadow, settings);
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;
@@ -1667,7 +1669,6 @@ kernel void			cl_main(
 	screen.y = global_id / camera->width;
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
-	intersection_reset(&intersection);
 
 	if (!global_id && camera->focus_request)
 		camera_auto_focus(camera, scene, settings);
@@ -1677,7 +1678,7 @@ kernel void			cl_main(
 	else
 		illumination_effect = 0.;
 
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state, global_id);
 
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings),
 									camera->filter_sepia);

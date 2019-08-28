@@ -19,6 +19,8 @@ static int			try_move_camera(t_gui *gui, int key)
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
+	gui_queue_execute_force(gui->queue);
+
 	return (1);
 }
 
@@ -41,6 +43,8 @@ static int			try_rotate_camera(t_gui *gui, int key)
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
+	gui_queue_execute_force(gui->queue);
+
 	return (1);
 }
 
@@ -71,7 +75,6 @@ gboolean			gui_signal_key
 	if (finish_condition)
 		return (FALSE);
 //	gui_queue_block(gui->queue);
-	gui_queue_execute_force(gui->queue);
 //	cl_renderer_render(gui->renderer);
 //	gui_queue_unblock(gui->queue);
 	return (TRUE);
