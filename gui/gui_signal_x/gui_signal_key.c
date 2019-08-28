@@ -16,7 +16,6 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_camera_move(gui->renderer, rt_movement_down);
 	else
 		return (0);
-	gui_queue_block(gui->queue);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
@@ -39,7 +38,6 @@ static int			try_rotate_camera(t_gui *gui, int key)
 			rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
-	gui_queue_block(gui->queue);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
@@ -71,11 +69,10 @@ gboolean			gui_signal_key
 	else
 		finish_condition = 1;
 	if (finish_condition)
-	{
-		gui_queue_unblock(gui->queue);
 		return (FALSE);
-	}
-	gui_queue_execute_force(NULL, gui->queue);
-	gui_queue_unblock(gui->queue);
+//	gui_queue_block(gui->queue);
+	gui_queue_execute_force(gui->queue);
+//	cl_renderer_render(gui->renderer);
+//	gui_queue_unblock(gui->queue);
 	return (TRUE);
 }

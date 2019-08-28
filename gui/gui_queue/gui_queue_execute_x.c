@@ -1,15 +1,28 @@
 #include "gui_queue.h"
 
-void				gui_queue_execute_normal(void *ptr, t_gui_queue *queue)
+void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 {
-	if (g_thread_pool_unprocessed(queue->pool) > RT_GUI_QUEUE_CEILING)
+	int 			force;
+
+	force = queue->force_execute;
+	if (queue->force_execute)
+		queue->force_execute = 0;
+	if (!force && queue->wait)
+	{
+		queue->wait--;
 		return ;
-	if (queue->block)
+	}
+	if (!force && g_thread_pool_unprocessed(queue->pool) > RT_GUI_QUEUE_CEILING)
+		return ;
+	if (!force && queue->block)
 		return ;
 	queue->master_function(queue->master_data);
 }
 
-void				gui_queue_execute_force(void *ptr, t_gui_queue *queue)
+
+void				gui_queue_execute_force(t_gui_queue *queue)
 {
-	queue->master_function(queue->master_data);
+	gui_queue_push(queue);
+	queue->force_execute = 1;
+	queue->wait = RT_GUI_QUEUE_WAIT;
 }

@@ -15,6 +15,8 @@ typedef struct 		s_gui_queue
 	int 			block;
 	int 			block_last_state;
 	int 			kill_timeout;
+	int 			force_execute;
+	int 			wait;
 }					t_gui_queue;
 
 t_gui_queue			*gui_queue_new(void *data, void (*function)(void *ptr));
@@ -25,8 +27,7 @@ void				gui_queue_finish(t_gui_queue *queue);
 void				gui_queue_block(t_gui_queue *queue);
 void				gui_queue_unblock(t_gui_queue *queue);
 gboolean			gui_queue_push(t_gui_queue *queue);
-void				gui_queue_execute_normal(void *ptr, t_gui_queue *queue);
-void				gui_queue_execute_force(void *ptr, t_gui_queue *queue);
-
+void				gui_queue_execute(void *ptr, t_gui_queue *queue);
+void				gui_queue_execute_force(t_gui_queue *queue);
 
 #endif
