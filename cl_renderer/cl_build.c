@@ -1034,23 +1034,19 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
-	{
-//		printf("a\n");
-		printf("%f %f %f\n", (*(constant t_object_sphere *)object->data).position.x, (*(constant t_sphere *)object->data).position.y, (*(constant t_sphere *)object->data).position.z);
-		return (sphere_sdf(object, point));}
-	else if (object->type == object_plane){
-//		printf("b\n");
-		return (plane_sdf(object, point));}
-//	else if (object->type == object_julia)
-//		return (julia_sdf(object, point));
-//	else if (object->type == object_mandelbulb)
-//		return (mandelbulb_sdf(object, point));
-//	else if (object->type == object_torus)
-//		return (torus_sdf(object, point));
-//	else if (object->type == object_box)
-//		return (box_sdf(object, point));
-//	else if (object->type == object_csg)
-//		return (csg_sdf(object, point));
+		return (sphere_sdf(object, point));
+	else if (object->type == object_plane)
+		return (plane_sdf(object, point));
+	else if (object->type == object_julia)
+		return (julia_sdf(object, point));
+	else if (object->type == object_mandelbulb)
+		return (mandelbulb_sdf(object, point));
+	else if (object->type == object_torus)
+		return (torus_sdf(object, point));
+	else if (object->type == object_box)
+		return (box_sdf(object, point));
+	else if (object->type == object_csg)
+		return (csg_sdf(object, point));
 	return (RT_INFINITY);
 }
 
@@ -1316,6 +1312,26 @@ static RT_F4            static_get_specular_intensity
 
 }
 
+static RT_F4			static_get_cartoon_intensity
+		(t_intersection *intersection,
+		 RT_F4 *light_direction)
+{
+	RT_F	          	dot_value;
+	RT_F                intensity;
+
+	dot_value = dot(*light_direction, intersection->normal);
+	if (dot_value > 0.)
+	{
+		if ((intensity = dot_value / length(*light_direction)) > (RT_F)0.7)
+			return ((RT_F)0.6);
+		else if (intensity > (RT_F)0.3)
+			return ((RT_F)0.4);
+		else
+			return ((RT_F)0.3);
+	}
+	return ((RT_F)0.2);
+}
+
 static int				static_is_shadowed(
 						constant t_scene *scene,
 						t_intersection *intersection,
@@ -1334,15 +1350,18 @@ static int				static_is_shadowed(
 static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
-						constant t_cl_renderer_settings *settings)
+						constant t_cl_renderer_settings *settings,
+						int cartoon_effect_mod)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
+	RT_F4				color_cartoon;
 	RT_F4				light_direction;
 
 	color_diffuse = 0.;
 	color_specular = 0.;
+	color_cartoon = 0.;
 	for (int i = 0; i < scene->lights_length; i++)
 	{
 		object = scene->objects + scene->lights[i];
@@ -1354,9 +1373,17 @@ static RT_F4			light_basic(
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
 			continue ;
-		color_diffuse += object->material.emission * static_get_diffuse_intensity(intersection, &light_direction);
-		color_specular += static_get_specular_intensity(intersection, &light_direction);
+		if (cartoon_effect_mod)
+			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
+		else
+		{
+			color_diffuse += object->material.
+			emission *static_get_diffuse_intensity(intersection, &light_direction);
+			color_specular += static_get_specular_intensity(intersection, &light_direction);
+		}
 	}
+	if (cartoon_effect_mod)
+		return (intersection->material.color * color_cartoon);
 	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }
 // cl_light_area ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1412,79 +1439,6 @@ static RT_F4		light_area(
 	return (radiance);
 }
 
-// cl_radiance /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include "rt_parameters.h"
-
-
-
-static void			radiance_add(
-					constant t_scene *scene,
-					t_intersection *intersection,
-					global RT_F4 *sample,
-					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
-{
-	RT_F4			radiance;
-	RT_F4			light;
-	RT_F4			mask;
-	RT_F			cosine;
-	RT_F			choice;
-
-	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
-	mask = 1;
-	for (int depth = 0; depth < settings->sample_depth; depth++)
-	{
-		if (!scene_intersect(scene, intersection, settings))
-    		break;
-
-		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
-			break ;
-
-		radiance += mask * intersection->material.emission;
-
-		if (settings->light_basic)
-		{
-			light = light_basic(scene, intersection, settings);
-            radiance += light * mask;
-		}
-
-		if (settings->light_area)
-		{
-			light = light_area(scene, intersection, settings, rng_state);
-			radiance += light * mask * intersection->material.color;
-		}
-
-        if (f4_max_component(intersection->material.reflectance) > 0.|| f4_max_component(intersection->material.transparence) > 0.)
-        {
-            choice = rng(rng_state);
-            if (choice < intersection->material.reflectance)
-                intersection_reflect(intersection, intersection);
-            else
-                intersection_refract(intersection, intersection);
-            mask /= choice < intersection->material.reflectance ? 1 : intersection->material.transparence;
-        }
-        else
-		{
-		    intersection->ray.origin = intersection->hit;
-
-		    intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
-		    mask *= intersection->material.color * cosine;
-        }
-	}
-
-	if (settings->sample_count == 1)
-		*sample = radiance;
-	else
-		*sample += radiance;
-}
-
-static RT_F4		radiance_get(
-					global RT_F4 *sample,
-					constant t_cl_renderer_settings *settings)
-{
-	return (*sample / settings->sample_count);
-}
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
@@ -1578,6 +1532,80 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
 
     camera->focus_request = 0;
 }
+// cl_radiance /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+
+
+static void			radiance_add(
+					constant t_scene *scene,
+					global t_camera *camera,
+					t_intersection *intersection,
+					global RT_F4 *sample,
+					constant t_cl_renderer_settings *settings,
+					global ulong *rng_state)
+{
+	RT_F4			radiance;
+	RT_F4			light;
+	RT_F4			mask;
+	RT_F			cosine;
+	RT_F			choice;
+
+	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
+	mask = 1;
+	for (int depth = 0; depth < settings->sample_depth; depth++)
+	{
+		if (!scene_intersect(scene, intersection, settings))
+    		break;
+
+		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
+			break ;
+
+		radiance += mask * intersection->material.emission;
+
+		if (settings->light_basic)
+		{
+			light = light_basic(scene, intersection, settings, camera->cartoon_effect);
+            radiance += light * mask;
+		}
+
+		if (settings->light_area)
+		{
+			light = light_area(scene, intersection, settings, rng_state);
+			radiance += light * mask * intersection->material.color;
+		}
+
+        if (f4_max_component(intersection->material.reflectance) > 0.|| f4_max_component(intersection->material.transparence) > 0.)
+        {
+            choice = rng(rng_state);
+            if (choice < intersection->material.reflectance)
+                intersection_reflect(intersection, intersection);
+            else
+                intersection_refract(intersection, intersection);
+            mask /= choice < intersection->material.reflectance ? 1 : intersection->material.transparence;
+        }
+        else
+		{
+		    intersection->ray.origin = intersection->hit;
+
+		    intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
+		    mask *= intersection->material.color * cosine;
+        }
+	}
+
+	if (settings->sample_count == 1)
+		*sample = radiance;
+	else
+		*sample += radiance;
+}
+
+static RT_F4		radiance_get(
+					global RT_F4 *sample,
+					constant t_cl_renderer_settings *settings)
+{
+	return (*sample / settings->sample_count);
+}
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
  static RT_F4					illumination(
@@ -1645,7 +1673,7 @@ kernel void			cl_main(
 	else
 		illumination_effect = 0.;
 
-    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
 
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings),
 									camera->filter_sepia);
