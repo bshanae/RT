@@ -2,6 +2,7 @@
 
 void 				gui_signal_connect_camera(t_gui *gui)
 {
+	printf("Connecting camera signals\n");
 	RT_GUI_CONNECT(gui, gui_signal_camera_entry_insert);
 	RT_GUI_CONNECT(gui, gui_signal_camera_entry_delete);
 	RT_GUI_CONNECT(gui, gui_signal_camera_antialiasing);

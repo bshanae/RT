@@ -2,6 +2,8 @@
 
 void				gui_signal_connect_settings(t_gui *gui)
 {
+	printf("Connecting settings signals\n");
+
 	RT_GUI_CONNECT(gui, gui_signal_settings_entry_changed);
 	RT_GUI_CONNECT(gui, gui_signal_settings_entry_insert);
 	RT_GUI_CONNECT(gui, gui_signal_settings_entry_delete);

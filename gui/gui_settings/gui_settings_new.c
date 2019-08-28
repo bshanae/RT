@@ -4,6 +4,7 @@ t_gui_settings		*gui_settings_new(GtkBuilder *builder)
 {
 	t_gui_settings	*new;
 
+	printf("Initializing settings controller\n");
 	new = malloc(sizeof(t_gui_settings));
 	new->control = RT_GUI_GET(builder, "settings_control");
 	new->tracing_rt = RT_GUI_GET(builder, "settings_tracing_rt");

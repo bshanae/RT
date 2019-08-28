@@ -174,19 +174,26 @@ spinner {
 spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer entry,
 notebook > stack:not(:only-child) revealer spinbutton:not(.vertical),
 entry {
-  min-height: 36px;
+  min-height: 28px;
   padding: 0 8px;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
-  border-image: none;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #a3a3a3 0%, transparent 0%) 0 0 0/0 0 0px;
+  /*border-radius: 2px;*/
+  /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);*/
+  /*border-image: none;*/
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.8); }
   spinbutton:focus:not(.vertical), notebook > stack:not(:only-child) revealer entry:focus,
   notebook > stack:not(:only-child) revealer spinbutton:focus:not(.vertical),
-  entry:focus {
-    border-image: none;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+  entry:focus
+  {
+    /*border-image: none;*/
+    /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);*/
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #a3a3a3 100%, transparent 0%) 0 0 2/0 0 2px;
+    box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+  }
   spinbutton:disabled:not(.vertical), notebook > stack:not(:only-child) revealer entry:disabled,
   notebook > stack:not(:only-child) revealer spinbutton:disabled:not(.vertical),
   entry:disabled {
@@ -198,16 +205,18 @@ entry {
   notebook > stack:not(:only-child) revealer spinbutton.flat:not(.vertical), colorchooser .popover.osd spinbutton:not(.vertical), layoutpane entry.search, editortweak entry.search, #login_window entry,
   entry.flat {
     border-radius: 0;
-    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #a3a3a3 0%, transparent 0%) 0 0 0/0 0 0px;
-    box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+    /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);*/
+    /*border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #a3a3a3 0%, transparent 0%) 0 0 0/0 0 0px;*/
+    /*box-shadow: inset 0 -1px alpha(currentColor, 0.3);*/
     background-color: transparent;
     color: rgba(0, 0, 0, 0.8); }
     spinbutton.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry:focus,
     notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), colorchooser .popover.osd spinbutton:focus:not(.vertical), layoutpane entry.search:focus, editortweak entry.search:focus, #login_window entry:focus,
-    entry.flat:focus {
+    entry.flat:focus
+    {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #a3a3a3 100%, transparent 0%) 0 0 2/0 0 2px;
-      box-shadow: inset 0 -1px alpha(currentColor, 0.3); }
+      box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+    }
     spinbutton.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry:disabled,
     notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), colorchooser .popover.osd spinbutton:disabled:not(.vertical), layoutpane entry.search:disabled, editortweak entry.search:disabled, #login_window entry:disabled,
     entry.flat:disabled {
@@ -4134,3 +4143,18 @@ these are pretty self explicative */
 @define-color success_color #00C853;
 @define-color content_view_bg #FFFFFF;
 @define-color placeholder_text_color rgba(128, 128, 128, 0.88);
+
+*
+{
+  font: 15px "Helvetica";
+  font-weight: lighter;
+}
+
+entry
+{
+  min-height: 25px;
+  min-width: 25px;
+  padding-top: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
