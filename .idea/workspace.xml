@@ -12,8 +12,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_render.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_render.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_color" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_color" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_basic" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_basic" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/color/color_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/color/color_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/material/material_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/material/material_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_queue/gui_queue_execute_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_queue/gui_queue_execute_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_settings/gui_settings_show.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_settings/gui_settings_show.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_control.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_control.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +211,7 @@
       <workItem from="1566932407753" duration="2126000" />
       <workItem from="1566942031843" duration="3644000" />
       <workItem from="1566947622311" duration="840000" />
-      <workItem from="1566976750794" duration="19751000" />
+      <workItem from="1566976750794" duration="25230000" />
     </task>
     <servers />
   </component>

@@ -81,19 +81,19 @@ void				scene_test_b(t_scene *scene)
 			(RT_F4_API){10., 10., -40.}, 2.);
 	object_build(
 			scene_get_space(scene), object_sphere,
-			MATERIAL_RED,
+			MATERIAL_MIRROR,
 			(RT_F4_API){-10., 0., -10.}, 3.1);
 	object_build( // front
 			scene_get_space(scene),
 			object_plane,
-			MATERIAL_WHITE,
-			(RT_F4_API){0., 0., -70.},
+			MATERIAL_BLUE,
+			(RT_F4_API){0., 0., -140.},
 			(RT_F4_API){0., 0., 1.});
 	object_build( // back
 			scene_get_space(scene),
 			object_plane,
-			MATERIAL_WHITE,
-			(RT_F4_API){0., 0., 100.},
+			MATERIAL_BLUE,
+			(RT_F4_API){0., 0., 140.},
 			(RT_F4_API){0., 0., -1.});
 	object_build( // left
 			scene_get_space(scene),

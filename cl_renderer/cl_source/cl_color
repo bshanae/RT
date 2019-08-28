@@ -16,7 +16,7 @@ static t_color		color_filter_sepia(RT_F4 *source)
 	return((t_color){sepia_color, sepia_color, sepia_color, 255});
 }
 
-static t_color		color_unpack(RT_F4 source, int filter_sepia)
+static t_color		color_unpack(RT_F4 source, int filter_sepia, int alpha)
 {
 	source = RT_POW(source, (RT_F).4);
 	source.x = RT_MIN(source.x, (RT_F)1.);
@@ -24,5 +24,5 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia)
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
 	    return(color_filter_sepia(&source));
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, alpha});
 }

@@ -20,12 +20,15 @@
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
-# define RT_CL_DEPTH				3
-# define RT_CL_SAMPLES				2
-# define RT_CL_LIGHT_BASIC			1
+# define RT_CL_DEPTH				4
+# define RT_CL_SAMPLES				250
+
+# define RT_CL_LIGHT_BASIC			0
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
+
 # define RT_CL_LIGHT_AREA			1
-# define RT_CL_ILLUMINATION			0
+
+# define RT_CL_ILLUMINATION			1
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
 
 # ifdef RT_DEGUB_CL_RM

@@ -125,6 +125,5 @@ static RT_F4			light_basic(
 	}
 	if (filter_cartoon_mod)
 		return (intersection->material.color * color_cartoon);
-	return (intersection->material.color * color_diffuse
-		+ (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
+	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }

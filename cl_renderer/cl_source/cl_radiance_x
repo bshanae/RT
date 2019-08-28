@@ -27,7 +27,7 @@ static void					radiance_add(
 	{
 		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
-			continue ;
+			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
@@ -57,11 +57,13 @@ static void					radiance_add(
 		{
 			intersection_reflect(intersection, intersection);
 			mask /= intersection->material.reflectance;
+			depth--;
 		}
 		else if (choice_result == RT_CHOICE_REFRACT)
 		{
 			intersection_refract(intersection, intersection);
 			mask /= intersection->material.transparence;
+			depth--;
 		}
 		else if (choice_result == RT_CHOICE_DIFFUSE)
 		{

@@ -9,7 +9,9 @@ static void			static_run_queue(t_cl_renderer *renderer)
 		&renderer->pixel_number, NULL, 0, NULL, NULL);
 	ASSERT(error == 0)
 	cl_args_list_read(renderer->args, cl_arg_image);
-	cl_args_list_read(renderer->args, cl_arg_camera);
+	if (renderer->data.camera->focus_request)
+		cl_args_list_read(renderer->args, cl_arg_camera);
+	renderer->data.camera->focus_request = 0;
 	renderer->data.settings.sample_count++;
 	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 }

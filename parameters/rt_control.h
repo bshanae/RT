@@ -2,7 +2,6 @@
 # define RT_CONTROL_H
 
 //# define RT_NO_OPEN_CL
-#define RT_IGNORE_SPECULAR
 
 //# define RT_DEBUG
 //# define RT_DEBUG_PIXEL_NUMBER 480 * 480
