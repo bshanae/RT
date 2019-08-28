@@ -46,3 +46,10 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 #endif
 	return (RT_INFINITY);
 }
+
+static RT_F			object_center_shift(constant t_object *object)
+{
+	if (object->type == object_sphere)
+		return (sphere_center_shift(object));
+	return (0);
+}

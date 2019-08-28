@@ -282,6 +282,14 @@ static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
     data = *(constant t_object_sphere *)object->data;
 	return (length(data.position - point) - data.radius);
 }
+
+static RT_F						sphere_center(constant t_object *object)
+{
+	t_object_sphere				data;
+
+	data = *(constant t_object_sphere *)object->data;
+    return (data.radius);
+}
 // cl_object_plane /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1049,6 +1057,13 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 #endif
 	return (RT_INFINITY);
 }
+
+static RT_F			object_center(constant t_object *object)
+{
+	if (object->type == object_sphere)
+		return (sphere_center(object, point));
+	return (0);
+}
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1454,7 +1469,6 @@ static RT_F4		light_area(
 
 static void			radiance_add(
 					constant t_scene *scene,
-					constant t_camera *camera,
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
@@ -1561,8 +1575,7 @@ typedef struct 		s_camera
 	RT_F			aperture_size;
 	RT_F			focal_length;
 	int 			focus_request;
-	int				focus_request_x;
-	int				focus_request_y;
+	RT_F2			focus_request_value;
 }					t_camera;
 
 static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rng_state)
@@ -1608,21 +1621,17 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
     t_intersection	intersection;
     RT_F4			up;
     RT_F4			right;
-    RT_F 			xf;
-    RT_F 			yf;
-
-	xf = camera->focus_request_x;
-    yf = camera->focus_request_y;
 
     intersection.ray.origin = camera->position;
-    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
-    right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
+    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * camera->focus_request_value.y + (camera->height - 1.f) / 2.f);
+    right = (RT_F4)camera->axis_x * (RT_F)(camera->focus_request_value.x - (camera->width - 1.f) / 2.f);
     intersection.ray.direction = up + right + camera->forward;
     intersection.ray.direction = normalize(intersection.ray.direction);
 
     intersection_reset(&intersection);
     if (scene_intersect(scene, &intersection, settings))
-    	camera->focal_length = intersection.ray.t;
+    	camera->focal_length = intersection.ray.t + object_center(scene->objects + intersection.object_id);
+
     camera->focus_request = 0;
 }
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1686,9 +1695,8 @@ kernel void			cl_main(
 
 	//illumination = test(scene, camera, &intersection, settings);
     illumination = 0.;
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings),
-	                                settings->srgb, camera->filter_sepia);
+    radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
+	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings), settings->srgb, camera->filter_sepia);
 }
 
 

@@ -104,10 +104,10 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 link_libraries(
 	"ft"
-#	"-framework OpenCL"
-	"OpenCL"
-	"m"
-	"bsd"
+	"-framework OpenCL"
+#	"OpenCL"
+#	"m"
+#	"bsd"
 	${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
