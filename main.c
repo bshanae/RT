@@ -16,7 +16,7 @@ void				scene_test_a(t_scene *scene)
     object_build(
             scene_get_space(scene), object_sphere,
             MATERIAL_RED,
-            (RT_F4_API){-10., 0., -10.}, 3.1);
+            (RT_F4_API){-10., 2., -10.}, 3.1);
     object_build(
             scene_get_space(scene), object_sphere,
             MATERIAL_LIGHT,
@@ -127,8 +127,8 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
-	scene_test_b(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 30.;
+	scene_test_a(gui->renderer->data.scene);
+	gui->renderer->data.camera->position.z = 100.;
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

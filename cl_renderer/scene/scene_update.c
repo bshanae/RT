@@ -24,6 +24,8 @@ void 				scene_update(t_scene *scene)
 			scene->objects[((t_object_csg *)scene->objects[i].data)->id_positive].is_csg = 1;
 			scene->objects[((t_object_csg *)scene->objects[i].data)->id_negative].is_csg = 1;
 		}
+		else
+			scene->objects[i].is_csg = 0;
 		i++;
 	}
 	scene->lights_length = j;

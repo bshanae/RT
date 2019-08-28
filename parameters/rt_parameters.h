@@ -30,10 +30,10 @@
 # ifdef RT_DEGUB_CL_RM
 #  define RT_CL_RM_MOD				1
 # else
-#  define RT_CL_RM_MOD				0
+#  define RT_CL_RM_MOD				1
 # endif
 # define RT_CL_RM_STEP_LIMIT		128
-# define RT_CL_STEP_PART			(RT_F)0.5
+# define RT_CL_STEP_PART			(RT_F)1.
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1

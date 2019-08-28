@@ -1014,12 +1014,10 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 
 static int			object_intersect(constant t_object *object, t_intersection *intersection)
 {
-#if !defined RT_DEBUG_CL_RM
 	if (object->type == object_sphere)
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
 		return (plane_intersect(object, intersection));
-	/*
 	else if (object->type == object_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_cylinder)
@@ -1028,31 +1026,31 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_moebius)
 		return (moebius_intersect(object, intersection));
-	*/
-#endif
 	return (0);
 }
 
 static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 {
-#if !defined RT_DEBUG_CL_RT
 	if (object->is_csg)
 		return (RT_INFINITY);
 	if (object->type == object_sphere)
-		return (sphere_sdf(object, point));
-	else if (object->type == object_plane)
-		return (plane_sdf(object, point));
-	else if (object->type == object_julia)
-		return (julia_sdf(object, point));
-	else if (object->type == object_mandelbulb)
-		return (mandelbulb_sdf(object, point));
-	else if (object->type == object_torus)
-		return (torus_sdf(object, point));
-	else if (object->type == object_box)
-		return (box_sdf(object, point));
-	else if (object->type == object_csg)
-		return (csg_sdf(object, point));
-#endif
+	{
+//		printf("a\n");
+		printf("%f %f %f\n", (*(constant t_object_sphere *)object->data).position.x, (*(constant t_sphere *)object->data).position.y, (*(constant t_sphere *)object->data).position.z);
+		return (sphere_sdf(object, point));}
+	else if (object->type == object_plane){
+//		printf("b\n");
+		return (plane_sdf(object, point));}
+//	else if (object->type == object_julia)
+//		return (julia_sdf(object, point));
+//	else if (object->type == object_mandelbulb)
+//		return (mandelbulb_sdf(object, point));
+//	else if (object->type == object_torus)
+//		return (torus_sdf(object, point));
+//	else if (object->type == object_box)
+//		return (box_sdf(object, point));
+//	else if (object->type == object_csg)
+//		return (csg_sdf(object, point));
 	return (RT_INFINITY);
 }
 
@@ -1603,13 +1601,6 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
         	continue ;
         if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
-
-        if (i == 3)
-        	printf("%f %f %f %f\n",
-        		scene->objects[i].material.emission.x,
-        		scene->objects[i].material.emission.y
-        		scene->objects[i].material.emission.z
-        		scene->objects[i].material.emission.w);
 
 		sphere = (constant t_object_sphere	*)scene->objects[i].data;
  		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
