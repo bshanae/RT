@@ -12,8 +12,6 @@ void 				gui_settings_show
 	ASSERT(settings->light_basic || settings->light_area);
 	gtk_toggle_button_set_active(gui->light_basic, settings->light_basic);
 	gtk_toggle_button_set_active(gui->light_area, settings->light_area);
-	gtk_switch_set_state(gui->srgb, settings->srgb);
 	gui_entry_set_i(gui->pt_samples, settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, settings->sample_depth);
-	gtk_switch_set_state(gui->pt_russian, settings->russian_mod);
 }

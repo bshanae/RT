@@ -14,9 +14,7 @@ t_gui_settings		*gui_settings_new(GtkBuilder *builder)
 	new->rm_distance = RT_GUI_GET(builder, "settings_rm_distance");
 	new->light_basic = RT_GUI_GET(builder, "settings_light_basic");
 	new->light_area = RT_GUI_GET(builder, "settings_light_area");
-	new->srgb = RT_GUI_GET(builder, "settings_srgb");
 	new->pt_samples = RT_GUI_GET(builder, "settings_pt_samples");
 	new->pt_depth = RT_GUI_GET(builder, "settings_pt_depth");
-	new->pt_russian = RT_GUI_GET(builder, "settings_pt_russian");
 	return (new);
 }

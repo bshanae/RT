@@ -1,38 +1,5 @@
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4					test(
-								constant t_scene *scene,
-								global t_camera *camera,
-								t_intersection *intersection,
-								constant t_cl_renderer_settings *settings)
-{
-	constant t_object_sphere	*sphere;
-	RT_F						x;
-	RT_F						y;
-	RT_F4						k;
-	RT_F4						illumination;
-	t_intersection              shadow;
-
-	illumination = 0.;
-	shadow = *intersection;
-	for (int i = 0; i < scene->objects_length; i++)
-	{
-        if (scene->objects[i].type != object_sphere)
-        	continue ;
-        if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
-        	continue ;
-        sphere = (constant t_object_sphere	*)scene->objects[i].data;
-		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
-		y = length(sphere->position - intersection->ray.origin + k * x);
-		scene_intersect(scene, &shadow, settings);
-        if (shadow.ray.t < y * (RT_F)0.95)
-            continue;
-		illumination += RT_POW((RT_F)(1.5 * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
-	}
-	return (illumination);
-}
-
 kernel void			cl_main(
 					global t_camera *camera,
 					constant t_scene *scene,
@@ -44,7 +11,7 @@ kernel void			cl_main(
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
-	RT_F4           illumination;
+	RT_F4           illumination_effect;
 
     global_id = get_global_id(0);
 
@@ -57,8 +24,13 @@ kernel void			cl_main(
 	if (!global_id && camera->focus_request)
 		camera_auto_focus(camera, scene, settings);
 
-	//illumination = test(scene, camera, &intersection, settings);
-    illumination = 0.;
+	if (settings->illumination)
+		illumination_effect = illumination(scene, camera, &intersection, settings);
+	else
+		illumination_effect = 0.;
+
     radiance_add(scene, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination + radiance_get(sample_store + global_id, settings), settings->srgb, camera->filter_sepia);
+
+	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings),
+									camera->filter_sepia);
 }

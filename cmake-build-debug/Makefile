@@ -4767,33 +4767,6 @@ gui/gui_signal_x/gui_signal_settings_light.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_light.c.s
 
-gui/gui_signal_x/gui_signal_settings_pt_russian.o: gui/gui_signal_x/gui_signal_settings_pt_russian.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_settings_pt_russian.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_pt_russian.c.o
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.c.o
-
-gui/gui_signal_x/gui_signal_settings_pt_russian.i: gui/gui_signal_x/gui_signal_settings_pt_russian.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_settings_pt_russian.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_pt_russian.c.i
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.c.i
-
-gui/gui_signal_x/gui_signal_settings_pt_russian.s: gui/gui_signal_x/gui_signal_settings_pt_russian.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_settings_pt_russian.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_pt_russian.c.s
-.PHONY : gui/gui_signal_x/gui_signal_settings_pt_russian.c.s
-
 gui/gui_signal_x/gui_signal_settings_reset.o: gui/gui_signal_x/gui_signal_settings_reset.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_settings_reset.o
@@ -4820,33 +4793,6 @@ gui/gui_signal_x/gui_signal_settings_reset.s: gui/gui_signal_x/gui_signal_settin
 gui/gui_signal_x/gui_signal_settings_reset.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_reset.c.s
-
-gui/gui_signal_x/gui_signal_settings_srgb.o: gui/gui_signal_x/gui_signal_settings_srgb.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_settings_srgb.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_srgb.c.o
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.c.o
-
-gui/gui_signal_x/gui_signal_settings_srgb.i: gui/gui_signal_x/gui_signal_settings_srgb.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_settings_srgb.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_srgb.c.i
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.c.i
-
-gui/gui_signal_x/gui_signal_settings_srgb.s: gui/gui_signal_x/gui_signal_settings_srgb.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_settings_srgb.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_srgb.c.s
-.PHONY : gui/gui_signal_x/gui_signal_settings_srgb.c.s
 
 gui/gui_signal_x/gui_signal_settings_tracing_x.o: gui/gui_signal_x/gui_signal_settings_tracing_x.c.o
 
@@ -5454,15 +5400,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.s"
-	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.o"
-	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.i"
-	@echo "... gui/gui_signal_x/gui_signal_settings_pt_russian.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.s"
-	@echo "... gui/gui_signal_x/gui_signal_settings_srgb.o"
-	@echo "... gui/gui_signal_x/gui_signal_settings_srgb.i"
-	@echo "... gui/gui_signal_x/gui_signal_settings_srgb.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_tracing_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_tracing_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_tracing_x.s"

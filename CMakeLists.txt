@@ -237,9 +237,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_camera_apply.c
 	./gui/gui_signal_x/gui_signal_camera_reset.c
 	./gui/gui_signal_x/gui_signal_camera_filter_x.c
-	./gui/gui_signal_x/gui_signal_settings_srgb.c
 	./gui/gui_signal_x/gui_signal_settings_light.c
-	./gui/gui_signal_x/gui_signal_settings_pt_russian.c
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
 	./gui/gui_signal_x/gui_signal_settings_apply.c

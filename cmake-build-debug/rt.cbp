@@ -705,13 +705,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_pt_russian.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_srgb.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c">

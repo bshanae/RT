@@ -7,14 +7,13 @@
 
 typedef struct 		s_cl_renderer_settings
 {
-	int				srgb;
 	int 			light_basic;
 	int 			light_area;
+	int 			illumination;
+	RT_F 			illumination_value;
 	int 			sample_count;
 	int 			sample_limit;
 	int 			sample_depth;
-	int 			russian_mod;
-	int				russian_depth;
 	int 			rm_mod;
 	int 			rm_step_limit;
 	RT_F			rm_step_part;
