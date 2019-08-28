@@ -9,6 +9,6 @@ gboolean			gui_signal_camera_antialiasing
 	gui->renderer->data.camera->filter_antialiasing = state;
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
 	return (FALSE);
 }

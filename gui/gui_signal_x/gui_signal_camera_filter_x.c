@@ -17,7 +17,8 @@ void				gui_signal_camera_filter
 	camera->filter_sepia = state[1];
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
+
 }
 
 

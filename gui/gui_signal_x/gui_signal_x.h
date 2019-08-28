@@ -11,7 +11,7 @@
 void 				gui_signal_exit
 					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_key
-					(GtkWidget *widget, GdkEventKey *key, gpointer ptr);
+					(GtkWidget *widget, GdkEventKey *event, gpointer ptr);
 void				gui_signal_notebook_fix
 					(GtkNotebook *notebook, GtkWidget *page,
 					guint page_num, gpointer ptr);

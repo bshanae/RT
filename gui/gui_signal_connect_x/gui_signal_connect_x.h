@@ -14,6 +14,5 @@ void				gui_signal_connect_scene_edit(t_gui *gui);
 void				gui_signal_connect_scene_add(t_gui *gui);
 void				gui_signal_connect_settings(t_gui *gui);
 void 				gui_signal_connect_image(t_gui *gui);
-void 				gui_signal_connect_task(t_gui *gui);
 
 #endif

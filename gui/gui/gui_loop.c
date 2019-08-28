@@ -2,6 +2,6 @@
 
 void				gui_loop(t_gui *gui)
 {
-	cl_renderer_render(gui->renderer);
+	gui_queue_start(gui->queue);
 	gtk_main();
 }

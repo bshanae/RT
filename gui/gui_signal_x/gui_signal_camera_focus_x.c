@@ -10,7 +10,7 @@ gboolean			gui_signal_camera_focus_enable
 	gtk_widget_set_sensitive(GTK_WIDGET(gui->camera->focus_box), state);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
 	return (FALSE);
 }
 

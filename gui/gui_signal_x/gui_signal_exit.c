@@ -2,7 +2,5 @@
 
 void 				gui_signal_exit(GtkWidget *widget, gpointer ptr)
 {
-	widget = NULL;
-	ptr = NULL;
 	gtk_main_quit();
 }

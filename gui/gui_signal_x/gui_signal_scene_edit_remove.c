@@ -20,5 +20,6 @@ void					gui_signal_scene_edit_remove
 	}
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
+
 }

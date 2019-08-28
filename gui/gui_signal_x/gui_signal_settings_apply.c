@@ -10,5 +10,5 @@ void 				gui_signal_settings_apply
 	gtk_widget_set_opacity(GTK_WIDGET(gui->settings->control), 0.);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_settings);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
 }

@@ -12,6 +12,8 @@
 # define RT_GUI_WIDTH				480
 # define RT_GUI_HEIGHT				480
 
+# define RT_GUI_QUEUE_CEILING		10
+
 # define RT_CL_PROGRAM_INIT			128
 # define RT_CL_ARGS_CAPACITY		16
 # define RT_CL_OBJECT_CAPACITY		64
@@ -22,7 +24,7 @@
 # define RT_CL_LIGHT_BASIC			0
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 # define RT_CL_LIGHT_AREA			1
-# define RT_CL_ILLUMINATION			1
+# define RT_CL_ILLUMINATION			0
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
 
 # ifdef RT_DEGUB_CL_RM

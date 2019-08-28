@@ -16,6 +16,7 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_camera_move(gui->renderer, rt_movement_down);
 	else
 		return (0);
+	gui_queue_block(gui->queue);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
@@ -38,6 +39,7 @@ static int			try_rotate_camera(t_gui *gui, int key)
 			rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
+	gui_queue_block(gui->queue);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
@@ -45,22 +47,35 @@ static int			try_rotate_camera(t_gui *gui, int key)
 }
 
 gboolean			gui_signal_key
-					(GtkWidget *widget, GdkEventKey *key, gpointer ptr)
+					(GtkWidget *widget, GdkEventKey *event, gpointer ptr)
 {
 	t_gui			*gui;
 	int 			image_focus;
+	gboolean 		finish_condition;
 
 	gui = (t_gui *)ptr;
-	image_focus = gtk_widget_is_focus(GTK_WIDGET(gui->image->event_box));
-	if (key->keyval == GDK_KEY_Escape)
+	finish_condition = 1;
+	if (event->keyval == GDK_KEY_Escape)
 		gui_signal_exit(widget, ptr);
-	else if (image_focus && key->keyval == GDK_KEY_Return)
-		cl_renderer_render(gui->renderer);
-	else if (image_focus && try_move_camera(gui, key->keyval))
-		cl_renderer_render(gui->renderer);
-	else if (image_focus && try_rotate_camera(gui, key->keyval))
-		cl_renderer_render(gui->renderer);
+	else if (event->keyval == GDK_KEY_Return)
+		gui->queue->block = !gui->queue->block;
+	else if (event->keyval == GDK_KEY_r)
+		;
 	else
+		finish_condition = 0;
+	if (finish_condition)
 		return (FALSE);
+	image_focus = gtk_widget_is_focus(GTK_WIDGET(gui->image->event_box));
+	if (image_focus && try_move_camera(gui, event->keyval));
+	else if (image_focus && try_rotate_camera(gui, event->keyval));
+	else
+		finish_condition = 1;
+	if (finish_condition)
+	{
+		gui_queue_unblock(gui->queue);
+		return (FALSE);
+	}
+	gui_queue_execute_force(NULL, gui->queue);
+	gui_queue_unblock(gui->queue);
 	return (TRUE);
 }

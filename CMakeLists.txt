@@ -45,8 +45,8 @@ include_directories(
 	${GTK3_INCLUDE_DIRS}
 	../21_libft/includes/
 	./parameters/
-	./gui/
 	./gui/gui/
+	./gui/gui_queue/
 	./gui/gui_entry/
 	./gui/gui_parser/
 	./gui/gui_camera/
@@ -117,7 +117,10 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_new.c
 	./gui/gui/gui_delete.c
 	./gui/gui/gui_load.c
-	./gui/gui/gui_loop.c)
+	./gui/gui/gui_loop.c gui/gui/gui_render.c)
+
+set(SOURCE_GUI_QUEUE
+	gui/gui_queue/gui_queue_new.c gui/gui_queue/gui_queue_delete.c gui/gui_queue/gui_queue_push.c gui/gui_queue/gui_queue_execute_x.c gui/gui_queue/gui_queue_start.c "gui/gui_queue/gui_queue_(un)block.c")
 
 set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
@@ -128,7 +131,7 @@ set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_delete.c
 	./gui/gui_parser/gui_parser_update.c
 	./gui/gui_signal_connect_x/gui_signal_connect_parser.c
-	./gui/gui_signal_x/gui_signal_parser_dialog_x.c)
+	./gui/gui_signal_x/gui_signal_parser_dialog_x.c gui/gui_queue/gui_finish.c)
 
 set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
@@ -243,7 +246,6 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_settings_apply.c
 	./gui/gui_signal_x/gui_signal_settings_entry_x.c
 	./gui/gui_signal_x/gui_signal_scene_add_material_x.c
-	./gui/gui_signal_x/gui_singal_task_x.c
 	./gui/gui_signal_x/gui_signal_notebook_fix.c
 	./gui/gui_signal_x/gui_signal_camera_screen_x.c
 	./gui/gui_signal_x/gui_signal_parser_select.c
@@ -258,10 +260,11 @@ set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_camera.c
 	./gui/gui_signal_connect_x/gui_signal_connect_image.c
 	./gui/gui_signal_connect_x/gui_signal_connect_settings.c
-	./gui/gui_signal_connect_x/gui_signal_connect_task.c)
+	)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
+	${SOURCE_GUI_QUEUE}
 	${SOURCE_GUI_ENTRY}
 	${SOURCE_GUI_PARSER}
 	${SOURCE_GUI_CAMERA}

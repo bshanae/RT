@@ -3,6 +3,7 @@
 
 # include "rt_parameters.h"
 
+# include "gui_queue.h"
 # include "gui_parser.h"
 # include "gui_camera.h"
 # include "gui_scene.h"
@@ -17,9 +18,9 @@ typedef struct		s_gui
 	GtkCssProvider	*css_provider;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
-	GThreadPool		*pool;
 	GtkNotebook		*notebook;
 	GtkEntry		*notebook_fix[4];
+	t_gui_queue		*queue;
 	t_gui_parser	*parser;
 	t_gui_camera	*camera;
 	t_gui_scene		*scene;
@@ -33,5 +34,6 @@ void				gui_delete(t_gui **gui);
 
 void				gui_loop(t_gui *gui);
 void 				gui_update(t_gui *gui);
+void 				gui_render(t_gui *gui);
 
 #endif
