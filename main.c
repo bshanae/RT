@@ -65,7 +65,7 @@ void				scene_test_b(t_scene *scene)
     object_build(
             scene_get_space(scene),
             object_light_ambient,
-            MATERIAL_LIGHT_BASIC);
+            MATERIAL_LIGHT_AMBIENT);
     object_build(
             scene_get_space(scene),
             object_light_point,
@@ -127,7 +127,7 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
-	scene_test_b(gui->renderer->data.scene);
+	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 100.;
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);

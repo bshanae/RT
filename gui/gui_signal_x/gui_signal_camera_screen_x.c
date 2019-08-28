@@ -7,7 +7,8 @@ void				static_get_time(char *destination)
 
 	time (&time_raw);
 	time_info = localtime(&time_raw);
-	sprintf(destination, "_d%d_m%d_h%d_m%d_s%d",
+	sprintf(destination, "RT Screen Shot %d-%2d-%02d at %2d.%2d.%2d",
+			time_info->tm_year + 1900,
 			time_info->tm_mday,
 			time_info->tm_mon + 1,
 			time_info->tm_hour,

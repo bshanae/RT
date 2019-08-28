@@ -21,7 +21,7 @@ static RT_F4			static_get_direction(
 						constant t_object *object)
 {
 	if (object->type == object_light_direct)
-		return (((constant t_object_light_direct *)object->data)->direction);
+		return (((constant t_object_light_direct *)object->data)->direction * (RT_F)-1.);
 	else if (object->type == object_light_point)
 		return (((constant t_object_light_point *)object->data)->position - intersection->hit);
 	return (0.);
@@ -84,9 +84,9 @@ static int				static_is_shadowed(
 
 	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
-	shadow.ray.direction = *light_direction;
+	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);
-	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= 1.);
+	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
 static RT_F4			light_basic(
@@ -114,17 +114,17 @@ static RT_F4			light_basic(
 		}
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
-			continue ;
+			continue;
 		if (filter_cartoon_mod)
 			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
 		else
 		{
-			color_diffuse += object->material.
-			emission *static_get_diffuse_intensity(intersection, &light_direction);
+			color_diffuse += object->material.emission *static_get_diffuse_intensity(intersection, &light_direction);
 			color_specular += static_get_specular_intensity(intersection, &light_direction);
 		}
 	}
 	if (filter_cartoon_mod)
 		return (intersection->material.color * color_cartoon);
-	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
+	return (intersection->material.color * color_diffuse
+		+ (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }

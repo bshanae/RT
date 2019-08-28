@@ -5,7 +5,7 @@
 
 # define RT_GUI_BUILD				"./gui/source/build.glade"
 # define RT_GUI_THEME				"./gui/source/theme_aurora/gtk.css"
-# define RT_GUI_SCREENSHOTS			"./screenshots"
+# define RT_GUI_SCREENSHOTS			"./screenshots/"
 # define RT_GUI_SCENES				"./scenes"
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
@@ -30,14 +30,14 @@
 # ifdef RT_DEGUB_CL_RM
 #  define RT_CL_RM_MOD				1
 # else
-#  define RT_CL_RM_MOD				0
+#  define RT_CL_RM_MOD				1
 # endif
 # define RT_CL_RM_STEP_LIMIT		128
 # define RT_CL_STEP_PART			(RT_F)1.
 # define RT_CL_RM_MAX_DISTANCE		200
 
 # define RT_CL_ANTIALIASING			1
-# define RT_CL_CARTOON_EFFECT   	1
+# define RT_CL_CARTOON_EFFECT   	0
 # define RT_CL_FILTER_SEPIA        	0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		(RT_F)5.

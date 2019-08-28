@@ -1344,14 +1344,14 @@ static int				static_is_shadowed(
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = *light_direction;
 	scene_intersect(scene, &shadow, settings);
-	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= 1.);
+	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(light_direction));
 }
 
 static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						int cartoon_effect_mod)
+						int filter_cartoon_mod)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
@@ -1372,8 +1372,12 @@ static RT_F4			light_basic(
 		}
 		light_direction = static_get_direction(intersection, object);
 		if (static_is_shadowed(scene, intersection, settings, &light_direction))
-			continue ;
-		if (cartoon_effect_mod)
+		{
+//			if (get_global_id(0) < 200)
+//				printf("%d\n", intersection->object_id);
+			continue;
+		}
+		if (filter_cartoon_mod)
 			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
 		else
 		{
@@ -1382,7 +1386,7 @@ static RT_F4			light_basic(
 			color_specular += static_get_specular_intensity(intersection, &light_direction);
 		}
 	}
-	if (cartoon_effect_mod)
+	if (filter_cartoon_mod)
 		return (intersection->material.color * color_cartoon);
 	return (intersection->material.color * color_diffuse + (RT_F4){1., 1., 1., 1.} * intersection->material.specular * color_specular);
 }
@@ -1566,7 +1570,7 @@ static void			radiance_add(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings, camera->cartoon_effect);
+			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
 
