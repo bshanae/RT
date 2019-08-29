@@ -30,5 +30,7 @@ const char 			*object_translate(t_object_type type)
 		return ("Julia");
 	else if (type == object_csg)
 		return ("CSG");
+	else if (type == object_perforated_cube)
+		return ("Perforated Cube");
 	return ("Unknown");
 }

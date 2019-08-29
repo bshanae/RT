@@ -94,4 +94,10 @@ typedef struct 		s_object_csg
 	int     		id_negative;
 }					t_object_csg;
 
+typedef struct		s_object_perforated_cube
+{
+	RT_F4_API		position;
+	int				iterations;
+}					t_object_perforated_cube;
+
 #endif

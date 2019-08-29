@@ -61,6 +61,7 @@ static void     				sphere_intersect_t(constant t_object *object, t_intersection
 
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
+	/*
 	int				result;
 
     result = 0;
@@ -109,6 +110,14 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 		result += object_intersect(scene->objects + object_i, intersection);
 
     return (result != 0);
+    */
+	int				result;
+
+	result = 0;
+	for (int object_i = 0; object_i < scene->objects_length; object_i++)
+		result += object_intersect(scene->objects + object_i, intersection);
+
+	return (result != 0);
 }
 
 static int			scene_intersect_rm(

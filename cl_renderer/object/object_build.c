@@ -37,6 +37,8 @@ void				object_build(
 		object_julia_build(space, &args);
 	else if (type == object_csg)
 		object_csg_build(space, &args);
+	else if (type == object_perforated_cube)
+		object_perforated_cube_build(space, &args);
 	space->material = material;
 	space->name[0] = '\0';
 	va_end(args);

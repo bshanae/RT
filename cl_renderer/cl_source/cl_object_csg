@@ -17,7 +17,7 @@ static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
 		return (sphere_sdf(object, point));
 	else if (object->type == object_box)
         return (box_sdf(object, point));
-    return (INFINITY);
+    return (RT_INFINITY);
 }
 
 static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
@@ -28,7 +28,7 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 
     data = (constant t_object_csg *)object->data;
     if (object->id < 2)
-        return (INFINITY);
+        return (RT_INFINITY);
     scene_begin = object - object->id;
     sdf[0] = sdf_csg_compute(scene_begin + data->id_positive, point);
     sdf[1] = sdf_csg_compute(scene_begin + data->id_negative, point);

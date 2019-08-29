@@ -24,6 +24,17 @@ static RT_F4		f4_square(RT_F4 vector)
 		2 * vector.x * vector.w));
 }
 
+
+static RT_F4		f4_mod(const RT_F4 *vector, RT_F value)
+{
+	RT_F4			result;
+
+	result.x = RT_MOD(vector->x, value);
+	result.y = RT_MOD(vector->y, value);
+	result.z = RT_MOD(vector->z, value);
+	return (result);
+}
+
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_cl_renderer_settings
@@ -204,6 +215,7 @@ typedef enum		e_object_type
 	object_mandelbulb,
 	object_julia,
 	object_csg,
+	object_perforated_cube,
 	object_end
 }					t_object_type;
 
@@ -990,7 +1002,7 @@ static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
 		return (sphere_sdf(object, point));
 	else if (object->type == object_box)
         return (box_sdf(object, point));
-    return (INFINITY);
+    return (RT_INFINITY);
 }
 
 static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
@@ -1000,11 +1012,90 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 	RT_F					sdf[2];
 
     data = (constant t_object_csg *)object->data;
+    if (object->id < 2)
+        return (RT_INFINITY);
     scene_begin = object - object->id;
     sdf[0] = sdf_csg_compute(scene_begin + data->id_positive, point);
     sdf[1] = sdf_csg_compute(scene_begin + data->id_negative, point);
 
     return (csg_sdf_difference(sdf[0], sdf[1]));
+}
+
+// todo: decide where is better to check csg validation
+
+// cl_object_perforated_cube ///////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		            s_object_perforated_cube
+{
+    RT_F4                       position;
+	int     		            iterations;
+}					            t_object_perforated_cube;
+
+static RT_F                     static_box_sdf(RT_F4 size, RT_F4 point)
+{
+    RT_F4                       d;
+
+    d = RT_ABS(point) - size;
+    return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
+    	+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
+}
+
+static RT_F                     static_cross_sdf(RT_F4 point)
+{
+	RT_F4						tmp_point;
+	RT_F4						size;
+	RT_F						sdf_value[3];
+
+	size = (RT_F4){RT_INFINITY, 1., 1., 0.};
+	tmp_point = (RT_F4){point.x, point.y, point.z, 0.};
+	sdf_value[0] = static_box_sdf(size, tmp_point);
+
+	size = (RT_F4){1., RT_INFINITY, 1., 0.};
+    tmp_point = (RT_F4){point.y, point.z, point.x, 0.};
+    sdf_value[1] = static_box_sdf(size, tmp_point);
+
+    size = (RT_F4){1., 1., RT_INFINITY, 0.};
+    tmp_point = (RT_F4){point.z, point.x, point.y, 0.};
+    sdf_value[2] = static_box_sdf(size, tmp_point);
+    return (RT_MIN(sdf_value[0], RT_MIN(sdf_value[1], sdf_value[2])));
+}
+
+static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 point)
+{
+	t_object_perforated_cube	data;
+	RT_F                        box_sdf_value;
+	RT_F                        cross_value;
+	RT_F                        cross_period;
+	RT_F                        cross_division;
+	RT_F4                       cross_shift;
+	RT_F4						shifted_point;
+
+	data = *(constant t_object_perforated_cube *)object->data;
+	point = data.position - point;
+
+	box_sdf_value = static_box_sdf((RT_F4){1., 1., 1., 0.}, point);
+
+	cross_period = (RT_F)2.;
+	cross_division = (RT_F)3.;
+	cross_shift = (RT_F4){1., 1., 1., 0.};
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		shifted_point = RT_ABS(point);
+
+		shifted_point += cross_shift;
+        shifted_point = f4_mod(&shifted_point, cross_period);
+        shifted_point -= cross_shift;
+
+        shifted_point *= cross_division;
+        cross_value = static_cross_sdf(shifted_point) / cross_division;
+
+        value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
+        cross_period /= (RT_F)3.;
+        cross_shift /= (RT_F)3.;
+        cross_division *= (RT_F)3.;
+	}
+	return (box_sdf_value);
 }
 
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1047,6 +1138,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (box_sdf(object, point));
 	else if (object->type == object_csg)
 		return (csg_sdf(object, point));
+	else if (object->type == object_perforated_cube)
+		return (perforated_cube_sdf(object, point));
 	return (RT_INFINITY);
 }
 
@@ -1182,7 +1275,7 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 
     result = 0;
 
-    RT_F            dot_value;
+    RT_F            dot_value[0];
     t_object_sphere sphere;
     t_object_plane  plane;
     RT_F            sphere_t[2];
@@ -1194,18 +1287,33 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 	sphere_intersect_t(scene->objects + 0, intersection, sphere_t);
 	plane_intersect_t(scene->objects + 1, intersection, &plane_t);
 
-    dot_value= dot(plane.position - intersection->ray.origin, plane.normal);
+    dot_value[0] = dot(plane.position - intersection->ray.origin, plane.normal);
+    dot_value[1] = dot(intersection->ray.direction, plane.normal);
 
-    if (dot_value <= 0 && sphere_t[0] < plane_t)
+    if (dot_value[0] > 0 && sphere_t[0] < plane_t)
     {
         result++;
-        intersection->ray.t = t;
+        intersection->ray.t = sphere_t[0];
         intersection->object_id = 0;
     }
-    else
-    {
-
+    else if (dot_value[0] == 0 && dot_value[1] <= 0)
+	{
+		result++;
+		intersection->ray.t = sphere_t[0];
+		intersection->object_id = 0;
     }
+    else if (dot_value[0] <= 0 && plane_t > sphere_t[0] && plane_t < sphere_t[1])
+    {
+		result++;
+		intersection->ray.t = plane_t;
+		intersection->object_id = 1;
+    }
+    else if (dot_value[0] <= 0 && sphere_t[0] != RT_INFINITY && plane_t < sphere_t[0])
+    {
+		result++;
+		intersection->ray.t = sphere_t[0];
+		intersection->object_id = 0;
+	}
 
     for (int object_i = 2; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);

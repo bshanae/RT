@@ -53,6 +53,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_perforated_cube.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_plane.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
