@@ -6,6 +6,6 @@ void				object_plane_build(t_object *space, va_list *args)
 
 	data = (t_object_plane *)space->data;
 	data->position = va_arg(*args, RT_F4_API);
-	data->normal = va_arg(*args, RT_F4_API);
+	data->normal = f4_normalize(va_arg(*args, RT_F4_API));
 	space->type = object_plane;
 }
