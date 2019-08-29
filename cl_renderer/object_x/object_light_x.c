@@ -26,6 +26,6 @@ void						object_light_direct_build
 	t_object_light_direct	*data;
 
 	data = (t_object_light_direct *)space->data;
-	data->direction = va_arg(*args, RT_F4_API);
+	data->direction = f4_normalize(va_arg(*args, RT_F4_API));
 	space->type = object_light_direct;
 }

@@ -13,13 +13,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists_Vova.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists_Vova.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_objects.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_objects.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_csg.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_csg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_light_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_light_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -190,6 +192,7 @@
       <workItem from="1566648918380" duration="95000" />
       <workItem from="1566721723851" duration="70000" />
       <workItem from="1566722160981" duration="8209000" />
+      <workItem from="1567095839850" duration="1371000" />
     </task>
     <servers />
   </component>
@@ -222,16 +225,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/cl_renderer/json/json_helper.c</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
