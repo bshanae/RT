@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 find_package(PkgConfig REQUIRED)
-#pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 set(BREW ~/.brew)
 
@@ -41,13 +41,14 @@ set(GTK_LINKS
 
 
 include_directories(
-		${GTK_INCLUDES}
-		#	${GTK3_INCLUDE_DIRS}
+		#	${GTK_INCLUDES}
+		${GTK3_INCLUDE_DIRS}
 		../21_libft/includes/
 		./parameters/
-		./gui/
 		./gui/gui/
+		./gui/gui_queue/
 		./gui/gui_entry/
+		./gui/gui_parser/
 		./gui/gui_camera/
 		./gui/gui_object_x/
 		./gui/gui_color/
@@ -58,8 +59,6 @@ include_directories(
 		./gui/gui_scene/
 		./gui/gui_settings/
 		./gui/gui_image/
-		./gui/gui_queue/
-		./gui/gui_parser/
 		./gui/gui_signal_x
 		./gui/gui_signal_connect_x/
 		./cl_renderer/color/
@@ -79,7 +78,7 @@ include_directories(
 		./cl_renderer/cl_renderer/
 		./cl_renderer/json/)
 
-set(GTK3_LIBRARY_DIRS
+set(GTK_LIBRARY_DIRS
 		"gtk-3"
 		"gdk-3"
 		"pangocairo-1.0"
@@ -97,7 +96,7 @@ set(GTK3_LIBRARY_DIRS
 		"-framework CoreGraphics")
 
 link_directories(
-		${GTK_LINKS}
+		#	${GTK_LINKS}
 		${GTK3_LIBRARY_DIRS}
 		../21_libft/)
 
@@ -108,7 +107,8 @@ link_libraries(
 		"-framework OpenCL"
 		#	"OpenCL"
 		#	"m"
-		${GTK3_LIBRARY_DIRS})
+		#	"bsd"
+		${GTK3_LIBRARIES})
 
 set(SOURCE_MAIN
 		./main.c)
