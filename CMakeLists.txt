@@ -136,7 +136,8 @@ set(SOURCE_GUI_PARSER
 		./gui/gui_parser/gui_parser_delete.c
 		./gui/gui_parser/gui_parser_update.c
 		./gui/gui_signal_connect_x/gui_signal_connect_parser.c
-		./gui/gui_signal_x/gui_signal_parser_dialog_x.c gui/gui_queue/gui_finish.c)
+		./gui/gui_signal_x/gui_signal_parser_dialog_x.c
+	./gui/gui_queue/gui_finish.c)
 
 set(SOURCE_GUI_CAMERA
 		./gui/gui_camera/gui_camera_new.c
@@ -285,8 +286,7 @@ set(SOURCE_GUI
 		${SOURCE_GUI_SIGNAL_CONNECT_X})
 
 set(SOURCE_JSON
-		./cl_renderer/json/json.c
-		./cl_renderer/json/json_helper.c
+	./cl_renderer/json/json_helper.c
 		./cl_renderer/json/json_worker.c
 		./cl_renderer/json/json_objects.c
 		./cl_renderer/json/readfile.c)
@@ -321,7 +321,7 @@ set(SOURCE_SCENE
 		./cl_renderer/scene/scene_get_space.c
 		./cl_renderer/scene/scene_delete.c
 		./cl_renderer/scene/scene_remove_object.c
-		./cl_renderer/scene/scene_update.c)
+		./cl_renderer/scene/scene_update.c cl_renderer/scene/scene_clear.c)
 
 set(SOURCE_RAY
 		./cl_renderer/ray/ray)

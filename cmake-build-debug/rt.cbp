@@ -291,12 +291,6 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json.h">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_helper.c">
 			<Option target="rt"/>
 		</Unit>
@@ -349,6 +343,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_torus.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_clear.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c">
