@@ -3,6 +3,6 @@
 
 # include "cl_renderer.h"
 
-void	renderer_load(t_cl_renderer *r, char *path);
+void	renderer_load(t_cl_renderer *r, const char *path);
 
 #endif

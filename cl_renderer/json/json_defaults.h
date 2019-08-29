@@ -4,10 +4,10 @@
 # include "json_parse.h"
 
 # define GLOBAL_MATERIAL MATERIAL_WHITE
-# define GLOBAL_POSITION (t_vector3){0.f, 0.f, 0.f}
+# define GLOBAL_POSITION (t_vector3){0., 0., 0.}
 
-# define CAMERA_POS (t_vector3){0.f, 0.f, -30.f}
-# define CAMERA_ROT (t_vector3){0.f, 0.f, 0.f}
+# define CAMERA_POS (RT_F4_API){0., 0., -30.}
+# define CAMERA_ROT (RT_F4_API){0., 0., 0.}
 
 # define AMBIENT_NAME "Ambient light"
 # define AMBIENT_MATERIAL GLOBAL_MATERIAL
@@ -18,51 +18,51 @@
 
 # define DIRECT_NAME "Direct light"
 # define DIRECT_MATERIAL GLOBAL_MATERIAL
-# define DIRECT_DIRECTION (t_vector3){0.f, -1.f, 0.f}
+# define DIRECT_DIRECTION (t_vector3){0., -1., 0.}
 
 # define SPHERE_NAME "Sphere"
 # define SPHERE_MATERIAL GLOBAL_MATERIAL
 # define SPHERE_POSITION GLOBAL_POSITION
-# define SPHERE_RADIUS 1.f
+# define SPHERE_RADIUS 1.
 
 # define PLANE_NAME "Plane"
 # define PLANE_MATERIAL GLOBAL_MATERIAL
 # define PLANE_POSITION GLOBAL_POSITION
-# define PLANE_NORMAL (t_vector3){0.f, 1.f, 0.f}
+# define PLANE_NORMAL (t_vector3){0., 1., 0.}
 
 # define CONE_NAME "Cone"
 # define CONE_MATERIAL GLOBAL_MATERIAL
-# define CONE_TOP (t_vector3){0.f, -.5f, 0.f}
-# define CONE_BOTTOM (t_vector3){0.f, .5f, 0.f}
-# define CONE_RADIUS 1.f
+# define CONE_TOP (t_vector3){0., -.5f, 0.}
+# define CONE_BOTTOM (t_vector3){0., .5f, 0.}
+# define CONE_RADIUS 1.
 
 # define CYLINDER_NAME "Cylinder"
 # define CYLINDER_MATERIAL GLOBAL_MATERIAL
-# define CYLINDER_TOP (t_vector3){0.f, -.5f, 0.f}
-# define CYLINDER_BOTTOM (t_vector3){0.f, .5f, 0.f}
-# define CYLINDER_RADIUS 1.f
+# define CYLINDER_TOP (t_vector3){0., -.5f, 0.}
+# define CYLINDER_BOTTOM (t_vector3){0., .5f, 0.}
+# define CYLINDER_RADIUS 1.
 
 # define BOX_NAME "Box"
 # define BOX_MATERIAL GLOBAL_MATERIAL
 # define BOX_POSITION GLOBAL_POSITION
-# define BOX_SIZE (t_vector3){1.f, 1.f, 1.f}
+# define BOX_SIZE (t_vector3){1., 1., 1.}
 
 # define PARABOLOID_NAME "Paraboloid"
 # define PARABOLOID_MATERIAL GLOBAL_MATERIAL
-# define PARABOLOID_EXTREMUM (t_vector3){0.f, 2.f, 0.f}
-# define PARABOLOID_AXIS (t_vector3){0.f, 1.f, 0.f}
-# define PARABOLOID_RADIUS 1.f
+# define PARABOLOID_EXTREMUM (t_vector3){0., 2., 0.}
+# define PARABOLOID_AXIS (t_vector3){0., 1., 0.}
+# define PARABOLOID_RADIUS 1.
 
 # define MOEBIUS_NAME "Moebius strip"
 # define MOEBIUS_MATERIAL GLOBAL_MATERIAL
 # define MOEBIUS_POSITION GLOBAL_POSITION
-# define MOEBIUS_RADIUS 1.f
+# define MOEBIUS_RADIUS 1.
 # define MOEBIUS_HALFWIDTH .5f
 
 # define TORUS_NAME "Torus"
 # define TORUS_MATERIAL GLOBAL_MATERIAL
 # define TORUS_POSITION GLOBAL_POSITION
-# define TORUS_RADIUS 1.f
+# define TORUS_RADIUS 1.
 # define TORUS_WIDTH .5f
 
 # define MANDELBULB_NAME "Mandelbulb"
@@ -75,7 +75,7 @@
 # define JULIA_MATERIAL GLOBAL_MATERIAL
 # define JULIA_POSITION GLOBAL_POSITION
 # define JULIA_ITERATIONS 4
-# define JULIA_VALUE (t_vector3){1.f, 1.f, 1.f}
+# define JULIA_VALUE (t_vector3){1., 1., 1.}
 
 # define CSG_NAME "CSG"
 # define CSG_MATERIAL GLOBAL_MATERIAL

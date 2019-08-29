@@ -25,11 +25,11 @@ void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 	if (box.val_v1)
 		r->data.camera->position = *(RT_F4_API*)box.val_v1;
 	else
-		r->data.camera->position = *(RT_F4_API*)CAMERA_POS;
+		r->data.camera->position = CAMERA_POS;
 	if (box.val_v2)
 		r->data.camera->rotation = *(RT_F4_API*)box.val_v2;
 	else
-		r->data.camera->rotation = *(RT_F4_API*)CAMERA_ROT;
+		r->data.camera->rotation = CAMERA_ROT;
 	free(box.val_v1);
 	free(box.val_v2);
 }
@@ -290,7 +290,7 @@ void	parse_julia(void *data, char *json, jsmntok_t *tokens)
 	free(box.val_f);
 }
 
-void	parse_csg(void *data, char *json, jsmntok_t)
+void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj		box;
 

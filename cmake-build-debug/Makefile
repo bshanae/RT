@@ -1041,6 +1041,33 @@ cl_renderer/f4/f4_sub.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.s
 .PHONY : cl_renderer/f4/f4_sub.c.s
 
+cl_renderer/json/json.o: cl_renderer/json/json.c.o
+
+.PHONY : cl_renderer/json/json.o
+
+# target to build an object file
+cl_renderer/json/json.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.o
+.PHONY : cl_renderer/json/json.c.o
+
+cl_renderer/json/json.i: cl_renderer/json/json.c.i
+
+.PHONY : cl_renderer/json/json.i
+
+# target to preprocess a source file
+cl_renderer/json/json.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.i
+.PHONY : cl_renderer/json/json.c.i
+
+cl_renderer/json/json.s: cl_renderer/json/json.c.s
+
+.PHONY : cl_renderer/json/json.s
+
+# target to generate assembly for a file
+cl_renderer/json/json.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.s
+.PHONY : cl_renderer/json/json.c.s
+
 cl_renderer/json/json_helper.o: cl_renderer/json/json_helper.c.o
 
 .PHONY : cl_renderer/json/json_helper.o
@@ -5148,6 +5175,9 @@ help:
 	@echo "... cl_renderer/f4/f4_sub.o"
 	@echo "... cl_renderer/f4/f4_sub.i"
 	@echo "... cl_renderer/f4/f4_sub.s"
+	@echo "... cl_renderer/json/json.o"
+	@echo "... cl_renderer/json/json.i"
+	@echo "... cl_renderer/json/json.s"
 	@echo "... cl_renderer/json/json_helper.o"
 	@echo "... cl_renderer/json/json_helper.i"
 	@echo "... cl_renderer/json/json_helper.s"

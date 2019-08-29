@@ -38,6 +38,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_normalize.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_rotate.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/json/json.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/json/json_helper.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/json/json_objects.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/json/json_worker.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o"

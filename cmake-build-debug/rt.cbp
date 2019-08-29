@@ -295,6 +295,12 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.h">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json_helper.c">
 			<Option target="rt"/>
 		</Unit>
