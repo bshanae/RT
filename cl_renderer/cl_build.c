@@ -1127,13 +1127,89 @@ typedef struct		s_scene
     int 			lights_length;
 }					t_scene;
 
+static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_plane	data;
+	RT_F4			temp[2];
+	RT_F			value[3];
+
+	data = *(constant t_object_plane *)object->data;
+	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
+	{
+		*t = RT_INFINITY;
+		return ;
+	}
+	temp[0] = data.position - intersection->ray.origin;
+	value[1] = dot(temp[0], data.normal) / value[0];
+	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
+		*t = RT_INFINITY;
+	else
+		*t = value[1];
+}
+
+static void     				sphere_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_sphere				data;
+	RT_F						k[3];
+	RT_F						discriminant;
+	RT_F4						temp;
+
+    data = *(constant t_object_sphere *)object->data;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
+	temp = intersection->ray.origin - data.position;
+	k[1] = 2 * dot(temp, intersection->ray.direction);
+	k[2] = dot(temp, temp) - data.radius * data.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+	{
+	    t[0] = RT_INFINITY;
+	    t[1] = RT_INFINITY;
+	    return ;
+	}
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+    	t[0] = RT_INFINITY;
+    	t[1] = RT_INFINITY;
+    	return ;
+    }
+}
+
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
-	result = 0;
-	for (int object_i = 0; object_i < scene->objects_length; object_i++)
-    	result += object_intersect(scene->objects + object_i, intersection);
+    result = 0;
+
+    RT_F            dot_value;
+    t_object_sphere sphere;
+    t_object_plane  plane;
+    RT_F            sphere_t[2];
+    RT_F            plane_t;
+
+    sphere = *(constant t_object_sphere *)scene->objects[0].data;
+    plane = *(constant t_object_plane *)scene->objects[1].data;
+
+	sphere_intersect_t(scene->objects + 0, intersection, sphere_t);
+	plane_intersect_t(scene->objects + 1, intersection, &plane_t);
+
+    dot_value= dot(plane.position - intersection->ray.origin, plane.normal);
+
+    if (dot_value <= 0 && sphere_t[0] < plane_t)
+    {
+        result++;
+        intersection->ray.t = t;
+        intersection->object_id = 0;
+    }
+    else
+    {
+
+    }
+
+    for (int object_i = 2; object_i < scene->objects_length; object_i++)
+		result += object_intersect(scene->objects + object_i, intersection);
+
     return (result != 0);
 }
 
@@ -1475,7 +1551,7 @@ typedef struct 		s_camera
 	RT_F2			focus_request_value;
 }					t_camera;
 
-static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *rng_state)
+static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rng_state)
 {
 	RT_F4			focal_point;
 
@@ -1488,7 +1564,7 @@ static void			camera_focus(constant t_camera *camera, t_ray *ray, global ulong *
 	ray->direction = normalize(focal_point - ray->origin);
 }
 
-static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global ulong *rng_state)
+static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulong *rng_state)
 {
 	t_ray			result;
 	RT_F4			up;
@@ -1513,7 +1589,7 @@ static t_ray		camera_build_ray(constant t_camera *camera, int2 *screen, global u
 	return (result);
 }
 
-static void			camera_auto_focus(constant t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
     RT_F4			up;
@@ -1560,7 +1636,7 @@ static void					radiance_add(
 	{
 		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
-			continue ;
+			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
@@ -1622,7 +1698,7 @@ static RT_F4				radiance_get(
 
  static RT_F4					illumination(
  								constant t_scene *scene,
- 								constant t_camera *camera,
+ 								global t_camera *camera,
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
  {
@@ -1659,7 +1735,7 @@ static RT_F4				radiance_get(
 
 
 kernel void			cl_main(
-					constant t_camera *camera,
+					global t_camera *camera,
 					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,

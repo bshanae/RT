@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+#find_package(PkgConfig REQUIRED)
+#pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 set(BREW ~/.brew)
 
-set(GTK_INCLUDES
-		${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0
+set(RT_GTK_INCLUDES
 		${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
+		${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0
 		${BREW}/Cellar/glib/2.60.6/include/gio-unix-2.0
 		${BREW}/Cellar/cairo/1.16.0_2/include/cairo
 		${BREW}/Cellar/libepoxy/1.5.3/include
 		${BREW}/Cellar/pango/1.44.5/include/pango-1.0
 		${BREW}/Cellar/fribidi/1.0.5/include/fribidi
-		${BREW}/Cellar/harfbuzz/2.5.3/include/harfbuzz
+		${BREW}/Cellar/harfbuzz/2.6.1/include/harfbuzz
 		${BREW}/Cellar/graphite2/1.3.13/include
 		${BREW}/Cellar/atk/2.32.0_1/include/atk-1.0
 		${BREW}/Cellar/cairo/1.16.0_2/include/cairo
@@ -27,9 +27,10 @@ set(GTK_INCLUDES
 		${BREW}/Cellar/glib/2.60.6/include/glib-2.0
 		${BREW}/Cellar/glib/2.60.6/lib/glib-2.0/include
 		${BREW}/opt/gettext/include
-		${BREW}/Cellar/pcre/8.43/include)
+		${BREW}/Cellar/pcre/8.43/include
+		)
 
-set(GTK_LINKS
+set(RT_GTK_LIBRARY_DIRS
 		${BREW}/Cellar/gtk+3/3.24.10/lib
 		${BREW}/Cellar/pango/1.44.5/lib
 		${BREW}/Cellar/harfbuzz/2.5.3/lib
@@ -41,8 +42,8 @@ set(GTK_LINKS
 
 
 include_directories(
-		#	${GTK_INCLUDES}
-		${GTK3_INCLUDE_DIRS}
+		${RT_GTK_INCLUDES}
+#		${GTK3_INCLUDE_DIRS}
 		../21_libft/includes/
 		./parameters/
 		./gui/gui/
@@ -78,7 +79,7 @@ include_directories(
 		./cl_renderer/cl_renderer/
 		./cl_renderer/json/)
 
-set(GTK_LIBRARY_DIRS
+set(RT_GTK_LIBRARIES
 		"gtk-3"
 		"gdk-3"
 		"pangocairo-1.0"
@@ -96,8 +97,8 @@ set(GTK_LIBRARY_DIRS
 		"-framework CoreGraphics")
 
 link_directories(
-		#	${GTK_LINKS}
-		${GTK3_LIBRARY_DIRS}
+		${RT_GTK_LIBRARY_DIRS}
+#		${GTK3_LIBRARY_DIRS}
 		../21_libft/)
 
 add_definitions(${GTK3_CFLAGS_OTHER})
@@ -108,7 +109,9 @@ link_libraries(
 		#	"OpenCL"
 		#	"m"
 		#	"bsd"
-		${GTK3_LIBRARIES})
+		${RT_GTK_LIBRARIES}
+#		${GTK3_LIBRARIES}
+		)
 
 set(SOURCE_MAIN
 		./main.c)
