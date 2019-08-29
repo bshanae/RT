@@ -4,7 +4,7 @@ t_gui_parser		*gui_parser_new(GtkBuilder *builder)
 {
 	t_gui_parser	*new;
 
-	printf("Initializing parser\n");
+	printf("GUI : Initializing parser\n");
 	new = (t_gui_parser *)malloc(sizeof(t_gui_parser));
 	new->list = RT_GUI_GET(builder, "parser_list");
 	new->tree = RT_GUI_GET(builder, "parser_tree");

@@ -2,7 +2,7 @@
 
 void				gui_signal_connect_scene_edit(t_gui *gui)
 {
-	printf("Connecting object editor signals\n");
+	printf("GUI Signal: Connecting object editor callbacks\n");
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_select);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_entry_changed);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_entry_insert);

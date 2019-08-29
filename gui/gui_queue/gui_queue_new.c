@@ -4,6 +4,7 @@ t_gui_queue			*gui_queue_new(void *data, void (*function)(void *))
 {
 	t_gui_queue		*new;
 
+	printf("GUI : Initializing thread queue\n");
 	new = (t_gui_queue *)malloc(sizeof(t_gui_queue));
 	new->pool = g_thread_pool_new((FUNC_MASK)gui_queue_execute,
 		new, 1, FALSE, NULL);

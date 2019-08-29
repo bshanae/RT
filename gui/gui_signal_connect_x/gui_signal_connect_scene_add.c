@@ -2,8 +2,7 @@
 
 void				gui_signal_connect_scene_add(t_gui *gui)
 {
-	printf("Connecting object creator signals\n");
-
+	printf("GUI Signal: Connecting object creator callbacks\n");
 	RT_GUI_CONNECT(gui, gui_signal_scene_add_response_cancel);
 	RT_GUI_CONNECT(gui, gui_signal_scene_add_response_yes);
 	RT_GUI_CONNECT(gui, gui_signal_scene_add_response_no);

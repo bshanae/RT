@@ -138,6 +138,7 @@ int					main(int argc, char **argv)
 
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
+	gui->renderer = cl_renderer_new(gui->image);
 	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -1.;
 	gui->renderer->data.camera->position.z = 30.;
@@ -147,9 +148,3 @@ int					main(int argc, char **argv)
 	gui_delete(&gui);
 	return (0);
 }
-
-/*
- * TODO :
- * 4. Figure out how to resize image
- * 5. RM objects greyed out when RT is chosen
- */

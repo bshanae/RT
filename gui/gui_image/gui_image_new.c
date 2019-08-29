@@ -15,7 +15,7 @@ t_gui_image			*gui_image_new(GtkBuilder *builder)
 {
 	t_gui_image		*new;
 
-	printf("Initializing image\n");
+	printf("GUI : Initializing image\n");
 	new = malloc(sizeof(t_gui_image));
 	new->width = RT_GUI_WIDTH;
 	new->height = RT_GUI_HEIGHT;

@@ -12,5 +12,6 @@ t_cl_builder		*cl_builder_new(void)
 	cl_builder_create_program_b(new);
 	cl_builder_create_kernel(new);
 	cl_builder_create_queue(new);
+	printf("Kernel Builder : Ready\n\n");
 	return (new);
 }

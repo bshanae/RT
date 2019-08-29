@@ -4,11 +4,14 @@ static void				static_data_init(t_cl_renderer *renderer)
 {
 	int 				i;
 
+	printf("Renderer : Initializing camera\n");
 	renderer->data.camera =
 		camera_new(&renderer->image->width, &renderer->image->height);
+	printf("Renderer : Initializing scene\n");
 	renderer->data.scene = scene_new();
 	renderer->data.image = renderer->image->color_buffer;
 	cl_renderer_settings_init(&renderer->data.settings);
+	printf("Renderer : Initializing rng seeds\n");
 	i = 0;
 	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
 	srand(21);
@@ -18,6 +21,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 
 static void				static_set_args(t_cl_renderer *renderer)
 {
+	printf("Renderer : Initializing arguments\n");
 	// camera
 	cl_arg_list_push(renderer->args, renderer->data.camera,
 		sizeof(t_camera), CL_MEM_READ_WRITE);
@@ -57,5 +61,6 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 #ifndef RT_OPEN_CL_DISABLED
 	static_set_args(new);
 #endif
+	printf("Renderer : Ready\n\n");
 	return (new);
 }

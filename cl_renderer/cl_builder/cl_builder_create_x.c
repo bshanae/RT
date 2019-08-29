@@ -2,6 +2,7 @@
 
 void				cl_builder_create_context(t_cl_builder *builder)
 {
+	printf("Kernel Builder : Initializing context\n");
 	builder->context = clCreateContext(NULL, 1,
 		&builder->device_id, 0, 0, &builder->error);
 	ASSERT(builder->error == 0)
@@ -9,6 +10,7 @@ void				cl_builder_create_context(t_cl_builder *builder)
 
 void				cl_builder_create_program_a(t_cl_builder *builder)
 {
+	printf("Kernel Builder : Buffering program source\n");
 	cl_program_concat(builder->program, CL_SOURCE_F4);
 	cl_program_concat(builder->program, CL_SOURCE_SETTINGS);
 	cl_program_concat(builder->program, CL_SOURCE_RANDOM);
@@ -43,12 +45,14 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 
 void				cl_builder_create_program_b(t_cl_builder *builder)
 {
+	printf("Kernel Builder : Compiling program\n");
 	if (cl_program_build(builder->program, builder->context, CL_FLAGS) != 0)
 		cl_builder_log(builder);
 }
 
 void				cl_builder_create_kernel(t_cl_builder *builder)
 {
+	printf("Kernel Builder : Creating kernel\n");
 	builder->kernel = clCreateKernel(builder->program->program,
 		CL_MAIN_FUNCTION, &builder->error);
 	ASSERT(builder->error == 0)
@@ -56,6 +60,7 @@ void				cl_builder_create_kernel(t_cl_builder *builder)
 
 void				cl_builder_create_queue(t_cl_builder *builder)
 {
+	printf("Kernel Builder : Creating kernels' queue\n");
 	builder->queue = clCreateCommandQueue(builder->context,
 		 builder->device_id, 0, &builder->error);
 	ASSERT(builder->error == 0)
