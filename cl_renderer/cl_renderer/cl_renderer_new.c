@@ -46,7 +46,7 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 	new = malloc(sizeof(t_cl_renderer));
 	new->image = image;
 	new->pixel_number = image->width * image->height;
-#ifndef RT_NO_OPEN_CL
+#ifndef RT_OPEN_CL_DISABLED
 	new->builder = cl_builder_new();
 	new->args = cl_arg_list_new(new->builder->context, new->builder->queue);
 #else
@@ -54,7 +54,7 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 	new->args = NULL;
 #endif
 	static_data_init(new);
-#ifndef RT_NO_OPEN_CL
+#ifndef RT_OPEN_CL_DISABLED
 	static_set_args(new);
 #endif
 	return (new);

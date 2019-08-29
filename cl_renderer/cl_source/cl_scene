@@ -162,9 +162,11 @@ static int			scene_intersect(
 {
 	int				result;
 
-	result = !settings->rm_mod ?
-		scene_intersect_rt(scene, intersection) :
-		scene_intersect_rm(scene, intersection, settings);
+#ifndef RT_OPEN_CL_LOW
+	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
+#else
+	result = scene_intersect_rt(scene, intersection);
+#endif
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;

@@ -20,7 +20,7 @@
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
-# define RT_CL_DEPTH				3
+# define RT_CL_DEPTH				2
 # define RT_CL_SAMPLES				250
 
 # define RT_CL_LIGHT_BASIC			0

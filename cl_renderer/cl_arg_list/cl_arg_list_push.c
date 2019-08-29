@@ -7,7 +7,7 @@ int					cl_arg_list_push
 	int 			i;
 	int 			error;
 
-#ifndef RT_NO_OPEN_CL
+#ifndef RT_OPEN_CL_DISABLED
 	if (list->length == RT_CL_ARGS_CAPACITY)
 		return (-1);
 	i = list->length++;

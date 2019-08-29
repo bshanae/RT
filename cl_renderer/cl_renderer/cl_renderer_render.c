@@ -18,7 +18,7 @@ static void			static_run_queue(t_cl_renderer *renderer)
 
 void				cl_renderer_render(t_cl_renderer *renderer)
 {
-#ifndef RT_NO_OPEN_CL
+#ifndef RT_OPEN_CL_DISABLED
 	cl_renderer_flag_perform(renderer);
 	static_run_queue(renderer);
 	gtk_image_set_from_pixbuf(renderer->image->image,
