@@ -61,3 +61,11 @@ static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
     data = *(constant t_object_sphere *)object->data;
 	return (length(data.position - point) - data.radius);
 }
+
+static RT_F						sphere_center_shift(constant t_object *object)
+{
+	t_object_sphere				data;
+
+	data = *(constant t_object_sphere *)object->data;
+    return (data.radius);
+}

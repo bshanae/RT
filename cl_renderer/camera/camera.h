@@ -22,12 +22,14 @@ typedef struct 		s_camera
 	RT_F4_API		forward_backup;
 	int				width;
 	int				height;
-	int 			antialiasing;
-	int             cartoon_effect;
+	int 			filter_antialiasing;
+	int             filter_cartoon;
 	int             filter_sepia;
 	int 			focus;
 	RT_F			aperture_size;
 	RT_F			focal_length;
+	int 			focus_request;
+	RT_F2_API		focus_request_value;
 }					t_camera;
 
 t_camera			*camera_new(INT_REF width, INT_REF height);

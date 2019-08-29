@@ -1,8 +1,8 @@
 #ifndef JSON_H
 # define JSON_H
 
-#include "cl_renderer.h"
+# include "cl_renderer.h"
 
-void	renderer_load(t_cl_renderer *renderer, char *path);
+void	renderer_load(t_cl_renderer *r, const char *path);
 
 #endif

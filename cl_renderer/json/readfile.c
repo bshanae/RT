@@ -14,16 +14,15 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-// #include <stdio.h>
 
-int		ft_strequ(char const *s1, char const *s2)
+int					ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
 		return (0);
 	return (strcmp(s1, s2) ? 0 : 1);
 }
 
-char	*read_file(char *path)
+char				*read_file(const char *path)
 {
 	int		fd = open(path, O_RDONLY);
 	if (fd < 0)

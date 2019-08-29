@@ -5,26 +5,25 @@
 # include "cl_renderer_settings.h"
 
 # include "libft_standart.h"
+# include "assert.h"
 # include "gui_entry.h"
 
 # include <gtk/gtk.h>
 
 typedef struct 		s_gui_setting
 {
-	GtkSwitch		*srgb;
-	GtkSwitch		*light_basic;
-	GtkSwitch		*light_area;
-	GtkEntry		*pt_samples;
-	GtkEntry		*pt_depth;
-	GtkSwitch		*pt_russian;
+	GtkBox			*control;
+
 	GtkToggleButton	*tracing_rt;
 	GtkToggleButton	*tracing_rm;
 	GtkStack		*stack;
-	GtkBox			*rm_box;
 	GtkEntry		*rm_steps;
 	GtkEntry		*rm_part;
 	GtkEntry		*rm_distance;
-	GtkBox			*control;
+	GtkToggleButton	*light_basic;
+	GtkToggleButton	*light_area;
+	GtkEntry		*pt_samples;
+	GtkEntry		*pt_depth;
 }					t_gui_settings;
 
 t_gui_settings		*gui_settings_new(GtkBuilder *builder);

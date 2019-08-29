@@ -59,6 +59,8 @@ void 						cl_renderer_camera_rotate(
 							t_cl_renderer *renderer,
 		 					t_f4_rotation_axis axis,
 		 					t_f4_rotation_direction direction);
+void						cl_renderer_load
+							(t_cl_renderer *renderer, const char *path);
 
 void						cl_renderer_render(t_cl_renderer *renderer);
 

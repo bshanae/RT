@@ -15,7 +15,7 @@ void 				gui_signal_settings_tracing_rt
 	gtk_stack_set_visible_child_name(gui->settings->stack, "rt");
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_settings);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
 }
 
 void 				gui_signal_settings_tracing_rm
@@ -33,7 +33,7 @@ void 				gui_signal_settings_tracing_rm
 	gtk_stack_set_visible_child_name(gui->settings->stack, "rm");
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_settings);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
-	cl_renderer_render(gui->renderer);
+	gui_queue_push(gui->queue);
 }
 
 

@@ -3,8 +3,8 @@
 void 				gui_scene_edit_update
 					(t_gui_scene_edit *edit, t_scene *scene)
 {
-	GtkTreeIter		iter;
 	int 			i;
+	GtkTreeIter		iter;
 
 	i = 0;
 	gtk_list_store_clear(edit->list);

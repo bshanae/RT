@@ -6,20 +6,18 @@ t_material	decide_material(char *mat_name)
 {
 	if (ft_strequ(mat_name, "light"))
 		return (MATERIAL_LIGHT);
-	else if (ft_strequ(mat_name, "none"))
-		return (MATERIAL_NONE);
 	else if (ft_strequ(mat_name, "red"))
 		return (MATERIAL_RED);
 	else if (ft_strequ(mat_name, "green"))
 		return (MATERIAL_GREEN);
-	// else if (ft_strequ(mat_name, "blue"))
-	// 	return (MATERIAL_BLUE);
-	// else if (ft_strequ(mat_name, "magenta"))
-	// 	return (MATERIAL_MAGENTA);
-	// else if (ft_strequ(mat_name, "cyan"))
-	// 	return (MATERIAL_CYAN);
-	// else if (ft_strequ(mat_name, "yellow"))
-	// 	return (MATERIAL_YELLOW);
+	else if (ft_strequ(mat_name, "light basic"))
+		return (MATERIAL_LIGHT_BASIC);
+	else if (ft_strequ(mat_name, "light ambient"))
+		return (MATERIAL_LIGHT_AMBIENT);
+	else if (ft_strequ(mat_name, "mirror"))
+		return (MATERIAL_MIRROR);
+	else if (ft_strequ(mat_name, "glass"))
+		return (MATERIAL_GLASS);
 	else
 		return (MATERIAL_WHITE);
 }
@@ -33,6 +31,18 @@ char	*get_raw(char *json, jsmntok_t token)
 	strlcpy(res, json + token.start, len);
 	res[len] = 0;
 	return (res);
+}
+
+char	token_is_number(char *json, jsmntok_t *token)
+{
+	char	sym;
+
+	if (token->type != JSMN_PRIMITIVE)
+		return (0);
+	sym = json[token->start];
+	if ((sym >= '0' && sym <= '9') || sym == '+' || sym == '-')
+		return (1);
+	return (0);
 }
 
 jsmntok_t	*next_item(jsmntok_t *tokens)
@@ -96,9 +106,8 @@ float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 	pos = find_by_string(json, object, target);
 	if (!pos)
 		return (NULL);
-	if (pos->type == JSMN_PRIMITIVE)
+	if (token_is_number(json, pos))
 	{
-		//! Check if primitives are actually numbers!
 		res = atof(json + pos->start);
 		out_f = malloc(sizeof(float));
 		if (!out_f)
@@ -121,9 +130,8 @@ t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 		return (NULL);
 	if (pos->type == JSMN_ARRAY && pos->size == 3)
 	{
-		if (pos[1].type == JSMN_PRIMITIVE && pos[2].type == JSMN_PRIMITIVE && pos[3].type == JSMN_PRIMITIVE)
+		if (token_is_number(json, pos + 1) && token_is_number(json, pos + 2) && token_is_number(json, pos + 3))
 		{
-			//! Check if primitives are actually numbers!
 			res.x = atof(json + pos[1].start);
 			res.y = atof(json + pos[2].start);
 			res.z = atof(json + pos[3].start);

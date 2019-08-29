@@ -1,1 +1,1 @@
-GTK_DEBUG=interactive ./cmake-build-debug/cl_renderer
+GTK_DEBUG=interactive ./cmake-build-debug/rt

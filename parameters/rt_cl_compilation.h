@@ -11,8 +11,6 @@
 # define CL_SOURCE_SETTINGS				"cl_settings"
 # define CL_SOURCE_RANDOM				"cl_random"
 # define CL_SOURCE_RAY					"cl_ray"
-# define CL_SOURCE_FILTER				"cl_filter"
-# define CL_SOURCE_CAMERA				"cl_camera"
 # define CL_SOURCE_COLOR				"cl_color"
 # define CL_SOURCE_MATERIAL				"cl_material"
 # define CL_SOURCE_INTERSECTION			"cl_intersection"
@@ -35,6 +33,9 @@
 # define CL_SOURCE_LIGHT_BASIC			"cl_light_basic"
 # define CL_SOURCE_LIGHT_AREA			"cl_light_area"
 # define CL_SOURCE_RADIANCE_X			"cl_radiance_x"
+# define CL_SOURCE_FILTER				"cl_filter"
+# define CL_SOURCE_CAMERA				"cl_camera"
+# define CL_SOURCE_ILLUMINATION			"cl_illumination"
 # define CL_SOURCE_MAIN					"cl_main"
 
 #endif

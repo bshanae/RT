@@ -6,11 +6,11 @@
 
 static void			radiance_add(
 					constant t_scene *scene,
-					constant t_camera *camera,
+					global t_camera *camera,
 					t_intersection *intersection,
 					global RT_F4 *sample,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state, int gi)
+					global ulong *rng_state)
 {
 	RT_F4			radiance;
 	RT_F4			light;
@@ -25,14 +25,14 @@ static void			radiance_add(
 		if (!scene_intersect(scene, intersection, settings))
     		break;
 
-		if (depth > settings->russian_depth && f4_max_component(intersection->material.color) < rng(rng_state))
+		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 
 		radiance += mask * intersection->material.emission;
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings, camera->cartoon_effect, gi);
+			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
 
@@ -55,15 +55,8 @@ static void			radiance_add(
 		{
 		    intersection->ray.origin = intersection->hit;
 
-#ifdef RT_CL_UNIFORM
 		    intersection->ray.direction = sample_uniform(&intersection->normal, &cosine, rng_state);
 		    mask *= intersection->material.color * cosine;
-#endif
-
-#ifdef RT_CL_COSINE
-		    intersection->ray.direction = sample_cosine(&intersection->normal, rng_state);
-		    mask *= intersection->material.color;
-#endif
         }
 	}
 

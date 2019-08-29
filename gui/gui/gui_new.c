@@ -19,9 +19,13 @@ t_gui				*gui_new(int *ac, char ***av)
 	gui_css(new);
 	new->builder = gtk_builder_new_from_file(RT_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
+	new->notebook= RT_GUI_GET(new->builder, "notebook");
 	new->notebook_fix[0] = RT_GUI_GET(new->builder, "notebook_fix_0");
 	new->notebook_fix[1] = RT_GUI_GET(new->builder, "notebook_fix_1");
 	new->notebook_fix[2] = RT_GUI_GET(new->builder, "notebook_fix_2");
+	new->notebook_fix[3] = RT_GUI_GET(new->builder, "notebook_fix_3");
+	new->queue = gui_queue_new(new, (void (*)(void *))gui_render);
+	new->parser = gui_parser_new(new->builder);
 	new->camera = gui_camera_new(new->builder);
 	new->scene = gui_scene_new(new->builder);
 	new->settings = gui_settings_new(new->builder);

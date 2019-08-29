@@ -2,6 +2,8 @@
 # define JSON_PARSE
 
 # define JSMN_HEADER
+
+# include "libft_ft_printf.h"
 # include "jsmn.h"
 
 # include <stdio.h>
@@ -28,17 +30,18 @@ typedef struct	s_parse_object
 	char		*val_s1;
 	char		*val_s2;
 	float		*val_f;
-	int			type;
+	float		*val_f2;
 	t_vector3	v1;
 	t_vector3	v2;
 	float		radius;
+	float		width;
 	char		*name;
 	t_material	material;
 }				t_obj;
 
-void		load_scene(void *data, char *path);
+void		load_scene(void *data, const char *path);
 
-char		*read_file(char *path);
+char		*read_file(const char *path);
 int			ft_strequ(char const *s1, char const *s2);
 
 jsmntok_t	*next_item(jsmntok_t *tokens);
@@ -52,5 +55,13 @@ void		parse_sphere(void *data, char *json, jsmntok_t *tokens);
 void		parse_plane(void *data, char *json, jsmntok_t *tokens);
 void		parse_cone(void *data, char *json, jsmntok_t *tokens);
 void		parse_cylinder(void *data, char *json, jsmntok_t *tokens);
+void		parse_paraboloid(void *data, char *json, jsmntok_t *tokens);
+void		parse_moebius(void *data, char *json, jsmntok_t *tokens);
+void		parse_torus(void *data, char *json, jsmntok_t *tokens);
+void		parse_mandelbulb(void *data, char *json, jsmntok_t *tokens);
+void		parse_julia(void *data, char *json, jsmntok_t *tokens);
+void		parse_ambient(void *data, char *json, jsmntok_t *tokens);
+void		parse_point(void *data, char *json, jsmntok_t *tokens);
+void		parse_direct(void *data, char *json, jsmntok_t *tokens);
 
 #endif

@@ -58,8 +58,10 @@ include_directories(
 		./gui/gui_scene/
 		./gui/gui_settings/
 		./gui/gui_image/
+		./gui/gui_queue/
+		./gui/gui_parser/
 		./gui/gui_signal_x
-		gui/gui_signal_connect_x/
+		./gui/gui_signal_connect_x/
 		./cl_renderer/color/
 		./cl_renderer/light/
 		./cl_renderer/object/
@@ -75,8 +77,7 @@ include_directories(
 		./cl_renderer/cl_arg_list/
 		./cl_renderer/cl_builder/
 		./cl_renderer/cl_renderer/
-		./cl_renderer/json)
-
+		./cl_renderer/json/)
 
 set(GTK3_LIBRARY_DIRS
 		"gtk-3"
@@ -116,18 +117,28 @@ set(SOURCE_GUI_GUI
 		./gui/gui/gui_new.c
 		./gui/gui/gui_delete.c
 		./gui/gui/gui_load.c
-		./gui/gui/gui_loop.c)
+		./gui/gui/gui_loop.c gui/gui/gui_render.c)
+
+set(SOURCE_GUI_QUEUE
+		gui/gui_queue/gui_queue_new.c gui/gui_queue/gui_queue_delete.c gui/gui_queue/gui_queue_push.c gui/gui_queue/gui_queue_execute_x.c gui/gui_queue/gui_queue_start.c "gui/gui_queue/gui_queue_(un)block.c")
 
 set(SOURCE_GUI_ENTRY
 		./gui/gui_entry/gui_entry_set_x.c
 		./gui/gui_entry/gui_entry_get_x.c)
+
+set(SOURCE_GUI_PARSER
+		./gui/gui_parser/gui_parser_new.c
+		./gui/gui_parser/gui_parser_delete.c
+		./gui/gui_parser/gui_parser_update.c
+		./gui/gui_signal_connect_x/gui_signal_connect_parser.c
+		./gui/gui_signal_x/gui_signal_parser_dialog_x.c gui/gui_queue/gui_finish.c)
 
 set(SOURCE_GUI_CAMERA
 		./gui/gui_camera/gui_camera_new.c
 		./gui/gui_camera/gui_camera_delete.c
 		./gui/gui_camera/gui_camera_show.c
 		./gui/gui_camera/gui_camera_apply.c
-		./gui/gui_camera/gui_camera_focus_x.c)
+		)
 
 set(SOURCE_GUI_OBJECT_X
 		./gui/gui_object_x/gui_object_sphere_x.c
@@ -141,7 +152,8 @@ set(SOURCE_GUI_OBJECT_X
 		./gui/gui_object_x/gui_object_moebius_x.c
 		./gui/gui_object_x/gui_object_torus_x.c
 		./gui/gui_object_x/gui_object_mandelbulb_x.c
-		./gui/gui_object_x/gui_object_julia_x.c cl_renderer/object_x/object_csg.c)
+		./gui/gui_object_x/gui_object_julia_x.c
+		./cl_renderer/object_x/object_csg.c)
 
 set(SOURCE_GUI_COLOR
 		./gui/gui_color/gui_color_to_f4.c
@@ -228,15 +240,18 @@ set(SOURCE_GUI_SIGNAL_X
 		./gui/gui_signal_x/gui_signal_camera_apply.c
 		./gui/gui_signal_x/gui_signal_camera_reset.c
 		./gui/gui_signal_x/gui_signal_camera_filter_x.c
-		./gui/gui_signal_x/gui_signal_settings_srgb.c
-		./gui/gui_signal_x/gui_signal_settings_light_x.c
-		./gui/gui_signal_x/gui_signal_settings_pt_russian.c
+		./gui/gui_signal_x/gui_signal_settings_light.c
 		./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 		./gui/gui_signal_x/gui_signal_settings_reset.c
 		./gui/gui_signal_x/gui_signal_settings_apply.c
 		./gui/gui_signal_x/gui_signal_settings_entry_x.c
 		./gui/gui_signal_x/gui_signal_scene_add_material_x.c
-		./gui/gui_signal_x/gui_singal_task_x.c gui/gui_signal_x/gui_signal_notebook_fix.c gui/gui_signal_x/gui_signal_camera_screen_x.c)
+		./gui/gui_signal_x/gui_signal_notebook_fix.c
+		./gui/gui_signal_x/gui_signal_camera_screen_x.c
+		./gui/gui_signal_x/gui_signal_parser_select.c
+		./gui/gui_signal_x/gui_signal_parser_load.c
+		./gui/gui_signal_x/gui_signal_camera_antialiasing.c
+		gui/gui_signal_x/gui_signal_camera_focus_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 		./gui/gui_signal_connect_x/gui_signal_connect_all.c
@@ -245,11 +260,13 @@ set(SOURCE_GUI_SIGNAL_CONNECT_X
 		./gui/gui_signal_connect_x/gui_signal_connect_camera.c
 		./gui/gui_signal_connect_x/gui_signal_connect_image.c
 		./gui/gui_signal_connect_x/gui_signal_connect_settings.c
-		./gui/gui_signal_connect_x/gui_signal_connect_task.c)
+		)
 
 set(SOURCE_GUI
 		${SOURCE_GUI_GUI}
+		${SOURCE_GUI_QUEUE}
 		${SOURCE_GUI_ENTRY}
+		${SOURCE_GUI_PARSER}
 		${SOURCE_GUI_CAMERA}
 		${SOURCE_GUI_OBJECT_X}
 		${SOURCE_GUI_COLOR}
@@ -340,7 +357,8 @@ set(SOURCE_CL_RENDERER_
 		./cl_renderer/cl_renderer/cl_renderer_render.c
 		./cl_renderer/cl_renderer/cl_renderer_camera_x.c
 		./cl_renderer/cl_renderer/cl_renderer_flag_x.c
-		./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c)
+		./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
+		./cl_renderer/cl_renderer/cl_renderer_load.c)
 
 set(SOURCE_RENDERER
 		${SOURCE_JSON}

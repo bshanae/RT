@@ -13,8 +13,6 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_SETTINGS);
 	cl_program_concat(builder->program, CL_SOURCE_RANDOM);
 	cl_program_concat(builder->program, CL_SOURCE_RAY);
-	cl_program_concat(builder->program, CL_SOURCE_FILTER);
-	cl_program_concat(builder->program, CL_SOURCE_CAMERA);
 	cl_program_concat(builder->program, CL_SOURCE_COLOR);
 	cl_program_concat(builder->program, CL_SOURCE_MATERIAL);
 	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION);
@@ -36,7 +34,10 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE_X);
 	cl_program_concat(builder->program, CL_SOURCE_LIGHT_BASIC);
 	cl_program_concat(builder->program, CL_SOURCE_LIGHT_AREA);
+	cl_program_concat(builder->program, CL_SOURCE_FILTER);
+	cl_program_concat(builder->program, CL_SOURCE_CAMERA);
 	cl_program_concat(builder->program, CL_SOURCE_RADIANCE_X);
+	cl_program_concat(builder->program, CL_SOURCE_ILLUMINATION);
 	cl_program_concat(builder->program, CL_SOURCE_MAIN);
 }
 

@@ -20,7 +20,7 @@ static void				static_set_args(t_cl_renderer *renderer)
 {
 	// camera
 	cl_arg_list_push(renderer->args, renderer->data.camera,
-		sizeof(t_camera), CL_MEM_READ_ONLY);
+		sizeof(t_camera), CL_MEM_READ_WRITE);
 	// scene
 	cl_arg_list_push(renderer->args, renderer->data.scene,
 		sizeof(t_scene), CL_MEM_READ_ONLY);
