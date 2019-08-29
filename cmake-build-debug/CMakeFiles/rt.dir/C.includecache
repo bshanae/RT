@@ -4866,15 +4866,15 @@ cairo.h
 stddef.h
 -
 
-/Users/ashari/21_ray_tracer/cl_renderer/json/json.c
-cl_renderer.h
-/Users/ashari/21_ray_tracer/cl_renderer/json/cl_renderer.h
-json.h
-/Users/ashari/21_ray_tracer/cl_renderer/json/json.h
+/Users/ashari/21_ray_tracer/cl_renderer/json/json_defaults.h
 json_parse.h
 /Users/ashari/21_ray_tracer/cl_renderer/json/json_parse.h
 
-/Users/ashari/21_ray_tracer/cl_renderer/json/json.h
+/Users/ashari/21_ray_tracer/cl_renderer/json/json_objects.c
+json_parse.h
+/Users/ashari/21_ray_tracer/cl_renderer/json/json_parse.h
+json_defaults.h
+/Users/ashari/21_ray_tracer/cl_renderer/json/json_defaults.h
 cl_renderer.h
 /Users/ashari/21_ray_tracer/cl_renderer/json/cl_renderer.h
 

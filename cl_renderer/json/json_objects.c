@@ -214,7 +214,7 @@ void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
 	box.v1 = (box.val_v1 ? *box.val_v1 : MOEBIUS_POSITION);
 	box.radius = (box.val_f ? *box.val_f : MOEBIUS_RADIUS);
 	box.width = (box.val_f2 ? *box.val_f2 : MOEBIUS_HALFWIDTH);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : MATERIAL_WHITE);
+	box.material = (box.val_s1 ? decide_material(box.val_s1) : MOEBIUS_MATERIAL);
 	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MOEBIUS_NAME));
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_moebius, box.material, *(RT_F4_API*)&box.v1, box.radius, box.width, box.name);
 	free(box.val_v1);
