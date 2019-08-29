@@ -75,7 +75,7 @@
 # define JULIA_MATERIAL GLOBAL_MATERIAL
 # define JULIA_POSITION GLOBAL_POSITION
 # define JULIA_ITERATIONS 50
-# define JULIA_VALUE (t_vector3){1., 1., 1.}
+# define JULIA_VALUE (t_vector3){.1, .3, .5, .5}
 
 # define CSG_NAME "CSG"
 # define CSG_MATERIAL GLOBAL_MATERIAL

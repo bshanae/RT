@@ -1041,33 +1041,6 @@ cl_renderer/f4/f4_sub.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.s
 .PHONY : cl_renderer/f4/f4_sub.c.s
 
-cl_renderer/json/json.o: cl_renderer/json/json.c.o
-
-.PHONY : cl_renderer/json/json.o
-
-# target to build an object file
-cl_renderer/json/json.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.o
-.PHONY : cl_renderer/json/json.c.o
-
-cl_renderer/json/json.i: cl_renderer/json/json.c.i
-
-.PHONY : cl_renderer/json/json.i
-
-# target to preprocess a source file
-cl_renderer/json/json.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.i
-.PHONY : cl_renderer/json/json.c.i
-
-cl_renderer/json/json.s: cl_renderer/json/json.c.s
-
-.PHONY : cl_renderer/json/json.s
-
-# target to generate assembly for a file
-cl_renderer/json/json.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json.c.s
-.PHONY : cl_renderer/json/json.c.s
-
 cl_renderer/json/json_helper.o: cl_renderer/json/json_helper.c.o
 
 .PHONY : cl_renderer/json/json_helper.o
@@ -1553,6 +1526,33 @@ cl_renderer/object_x/object_torus.s: cl_renderer/object_x/object_torus.c.s
 cl_renderer/object_x/object_torus.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
 .PHONY : cl_renderer/object_x/object_torus.c.s
+
+cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
+
+.PHONY : cl_renderer/scene/scene_clear.o
+
+# target to build an object file
+cl_renderer/scene/scene_clear.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o
+.PHONY : cl_renderer/scene/scene_clear.c.o
+
+cl_renderer/scene/scene_clear.i: cl_renderer/scene/scene_clear.c.i
+
+.PHONY : cl_renderer/scene/scene_clear.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_clear.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.i
+.PHONY : cl_renderer/scene/scene_clear.c.i
+
+cl_renderer/scene/scene_clear.s: cl_renderer/scene/scene_clear.c.s
+
+.PHONY : cl_renderer/scene/scene_clear.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_clear.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.s
+.PHONY : cl_renderer/scene/scene_clear.c.s
 
 cl_renderer/scene/scene_delete.o: cl_renderer/scene/scene_delete.c.o
 
@@ -5175,9 +5175,6 @@ help:
 	@echo "... cl_renderer/f4/f4_sub.o"
 	@echo "... cl_renderer/f4/f4_sub.i"
 	@echo "... cl_renderer/f4/f4_sub.s"
-	@echo "... cl_renderer/json/json.o"
-	@echo "... cl_renderer/json/json.i"
-	@echo "... cl_renderer/json/json.s"
 	@echo "... cl_renderer/json/json_helper.o"
 	@echo "... cl_renderer/json/json_helper.i"
 	@echo "... cl_renderer/json/json_helper.s"
@@ -5232,6 +5229,9 @@ help:
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"
+	@echo "... cl_renderer/scene/scene_clear.o"
+	@echo "... cl_renderer/scene/scene_clear.i"
+	@echo "... cl_renderer/scene/scene_clear.s"
 	@echo "... cl_renderer/scene/scene_delete.o"
 	@echo "... cl_renderer/scene/scene_delete.i"
 	@echo "... cl_renderer/scene/scene_delete.s"

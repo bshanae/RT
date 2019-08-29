@@ -5,8 +5,7 @@ void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 	int 			force;
 
 	force = queue->force_execute;
-	if (queue->force_execute)
-		queue->force_execute = 0;
+	queue->force_execute = 0;
 	if (!force && queue->wait)
 	{
 		queue->wait--;

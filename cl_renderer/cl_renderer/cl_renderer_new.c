@@ -45,13 +45,7 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 
 	new = malloc(sizeof(t_cl_renderer));
 	new->image = image;
-#if defined RT_DEBUG && defined RT_DEBUG_PIXEL_NUMBER
-	new->pixel_number = RT_DEBUG_PIXEL_NUMBER;
-#elif defined RT_DEBUG && !defined RT_DEBUG_PIXEL_NUMBER
-	new->pixel_number = image->width * 5;
-#else
 	new->pixel_number = image->width * image->height;
-#endif
 #ifndef RT_NO_OPEN_CL
 	new->builder = cl_builder_new();
 	new->args = cl_arg_list_new(new->builder->context, new->builder->queue);

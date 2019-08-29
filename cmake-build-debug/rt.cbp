@@ -44,14 +44,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
+					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo"/>
 					<Add directory="/Users/ashari/.brew/Cellar/libepoxy/1.5.3/include"/>
 					<Add directory="/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
+					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.6.1/include/harfbuzz"/>
 					<Add directory="/Users/ashari/.brew/Cellar/graphite2/1.3.13/include"/>
 					<Add directory="/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/pixman/0.38.4/include/pixman-1"/>
@@ -66,9 +66,10 @@
 					<Add directory="/Users/ashari/.brew/Cellar/pcre/8.43/include"/>
 					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
@@ -79,8 +80,6 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
@@ -120,14 +119,14 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
+					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo"/>
 					<Add directory="/Users/ashari/.brew/Cellar/libepoxy/1.5.3/include"/>
 					<Add directory="/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
+					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.6.1/include/harfbuzz"/>
 					<Add directory="/Users/ashari/.brew/Cellar/graphite2/1.3.13/include"/>
 					<Add directory="/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0"/>
 					<Add directory="/Users/ashari/.brew/Cellar/pixman/0.38.4/include/pixman-1"/>
@@ -142,9 +141,10 @@
 					<Add directory="/Users/ashari/.brew/Cellar/pcre/8.43/include"/>
 					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
@@ -155,8 +155,6 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
@@ -295,12 +293,6 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.h">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json_helper.c">
 			<Option target="rt"/>
 		</Unit>
@@ -353,6 +345,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_clear.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c">
