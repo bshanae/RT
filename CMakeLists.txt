@@ -120,7 +120,12 @@ set(SOURCE_GUI_GUI
 		./gui/gui/gui_loop.c gui/gui/gui_render.c)
 
 set(SOURCE_GUI_QUEUE
-		gui/gui_queue/gui_queue_new.c gui/gui_queue/gui_queue_delete.c gui/gui_queue/gui_queue_push.c gui/gui_queue/gui_queue_execute_x.c gui/gui_queue/gui_queue_start.c "gui/gui_queue/gui_queue_(un)block.c")
+		./gui/gui_queue/gui_queue_new.c
+		./gui/gui_queue/gui_queue_delete.c
+		./gui/gui_queue/gui_queue_push.c
+		./gui/gui_queue/gui_queue_execute_x.c
+		./gui/gui_queue/gui_queue_start.c
+		"./gui/gui_queue/gui_queue_(un)block.c")
 
 set(SOURCE_GUI_ENTRY
 		./gui/gui_entry/gui_entry_set_x.c

@@ -8,744 +8,740 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
+				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt">
-				<Option output="/Users/ashari/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libepoxy/1.5.3/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
-					<Add directory="/Users/ashari/.brew/Cellar/graphite2/1.3.13/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pixman/0.38.4/include/pixman-1"/>
-					<Add directory="/Users/ashari/.brew/Cellar/fontconfig/2.13.1/include"/>
-					<Add directory="/Users/ashari/.brew/opt/freetype/include/freetype2"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libpng/1.6.37/include/libpng16"/>
-					<Add directory="/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
-					<Add directory="/Users/ashari/.brew/opt/gettext/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_material"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene_edit"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene_add"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/object_add"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/light"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/scene"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f4"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_builder"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
+					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
+					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
+					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cairo"/>
+					<Add directory="/usr/local/Cellar/libepoxy/1.5.3/include"/>
+					<Add directory="/usr/local/Cellar/pango/1.42.4_2/include/pango-1.0"/>
+					<Add directory="/usr/local/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
+					<Add directory="/usr/local/Cellar/graphite2/1.3.13/include"/>
+					<Add directory="/usr/local/Cellar/fribidi/1.0.5/include/fribidi"/>
+					<Add directory="/usr/local/Cellar/atk/2.32.0_1/include/atk-1.0"/>
+					<Add directory="/usr/local/Cellar/pixman/0.38.4/include/pixman-1"/>
+					<Add directory="/usr/local/Cellar/fontconfig/2.13.1/include"/>
+					<Add directory="/usr/local/opt/freetype/include/freetype2"/>
+					<Add directory="/usr/local/Cellar/libpng/1.6.37/include/libpng16"/>
+					<Add directory="/usr/local/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include/glib-2.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
+					<Add directory="/usr/local/opt/gettext/include"/>
+					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_color"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_material"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/object_add"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal_connect_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/object"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/object_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/scene"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/camera"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/ray"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/intersection"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/material"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_program"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_arg_list"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_builder"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rt/fast">
-				<Option output="/Users/ashari/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ashari/21_ray_tracer/cmake-build-debug"/>
+				<Option output="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/rt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/ashari/.brew/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/cairo/1.16.0_2/include/cairo"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libepoxy/1.5.3/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pango/1.44.5/include/pango-1.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/fribidi/1.0.5/include/fribidi"/>
-					<Add directory="/Users/ashari/.brew/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
-					<Add directory="/Users/ashari/.brew/Cellar/graphite2/1.3.13/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/atk/2.32.0_1/include/atk-1.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pixman/0.38.4/include/pixman-1"/>
-					<Add directory="/Users/ashari/.brew/Cellar/fontconfig/2.13.1/include"/>
-					<Add directory="/Users/ashari/.brew/opt/freetype/include/freetype2"/>
-					<Add directory="/Users/ashari/.brew/Cellar/libpng/1.6.37/include/libpng16"/>
-					<Add directory="/Users/ashari/.brew/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/include/glib-2.0"/>
-					<Add directory="/Users/ashari/.brew/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
-					<Add directory="/Users/ashari/.brew/opt/gettext/include"/>
-					<Add directory="/Users/ashari/.brew/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/ashari/21_ray_tracer/../21_libft/includes"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./parameters"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_entry"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_camera"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_object_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_color"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_material"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene_edit"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene_add"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/object_add"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_scene"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_settings"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_image"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_queue"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_parser"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./gui/gui_signal_connect_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/color"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/light"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object_x"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/scene"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f4"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_builder"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
+					<Add directory="/usr/local/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include"/>
+					<Add directory="/usr/local/Cellar/gtk+3/3.24.10/include/gtk-3.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include/gio-unix-2.0"/>
+					<Add directory="/usr/local/Cellar/cairo/1.16.0_2/include/cairo"/>
+					<Add directory="/usr/local/Cellar/libepoxy/1.5.3/include"/>
+					<Add directory="/usr/local/Cellar/pango/1.42.4_2/include/pango-1.0"/>
+					<Add directory="/usr/local/Cellar/harfbuzz/2.5.3/include/harfbuzz"/>
+					<Add directory="/usr/local/Cellar/graphite2/1.3.13/include"/>
+					<Add directory="/usr/local/Cellar/fribidi/1.0.5/include/fribidi"/>
+					<Add directory="/usr/local/Cellar/atk/2.32.0_1/include/atk-1.0"/>
+					<Add directory="/usr/local/Cellar/pixman/0.38.4/include/pixman-1"/>
+					<Add directory="/usr/local/Cellar/fontconfig/2.13.1/include"/>
+					<Add directory="/usr/local/opt/freetype/include/freetype2"/>
+					<Add directory="/usr/local/Cellar/libpng/1.6.37/include/libpng16"/>
+					<Add directory="/usr/local/Cellar/gdk-pixbuf/2.38.1_1/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/include/glib-2.0"/>
+					<Add directory="/usr/local/Cellar/glib/2.60.6/lib/glib-2.0/include"/>
+					<Add directory="/usr/local/opt/gettext/include"/>
+					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_color"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_material"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/object_add"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_scene"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_settings"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_image"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_signal_connect_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/color"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/light"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/object"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/object_x"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/scene"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/camera"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/ray"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/intersection"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/material"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_program"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_arg_list"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_builder"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ashari/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_move.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_move.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_rotate.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_rotate.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_push.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_push.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_read.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_read.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_update.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_write.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_write.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_build.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_concat.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_flag_x.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_load.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_load.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_add.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_length.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_length.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_mul.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_normalize.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_rotate.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_sub.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json.h">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json.h">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json_helper.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_helper.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json_objects.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_objects.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/json_worker.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_worker.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/json/readfile.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/readfile.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object/object_build.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object/object_translate.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_box.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_box.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cone.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cone.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_csg.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_csg.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_cylinder.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_cylinder.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_julia.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_julia.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_light_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_light_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_moebius.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_moebius.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_paraboloid.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_plane.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_plane.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_sphere.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_torus.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_load.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_load.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_loop.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_loop.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_render.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_render.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_reset.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_camera/gui_camera_show.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_show.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_color/gui_color_from_f4.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_color/gui_color_from_f4.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_color/gui_color_to_f4.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_color/gui_color_to_f4.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_entry/gui_entry_get_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_entry/gui_entry_get_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_entry/gui_entry_set_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_entry/gui_entry_set_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_image/gui_image_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_get.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_get.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_init.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_init.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_material/gui_material_set.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_set.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_box_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_box_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cone_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_cone_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_cylinder_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_cylinder_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_julia_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_julia_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_direct_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_light_direct_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_light_point_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_light_point_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_mandelbulb_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_mandelbulb_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_moebius_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_moebius_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_paraboloid_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_paraboloid_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_plane_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_plane_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_sphere_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_sphere_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_object_x/gui_object_torus_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_object_x/gui_object_torus_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_parser/gui_parser_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_parser/gui_parser_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_parser/gui_parser_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_parser/gui_parser_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_parser/gui_parser_update.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_parser/gui_parser_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_finish.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_finish.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_(un)block.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_(un)block.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_execute_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_execute_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_push.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_push.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_start.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_start.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_build_object.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_build_object.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_gen_name.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_gen_name.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_box.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_box.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cone.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cone.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cylinder.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cylinder.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_julia.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_julia.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_light_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_light_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_mandelbulb.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_mandelbulb.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_material.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_material.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_moebius.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_moebius.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_own.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_own.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_paraboloid.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_paraboloid.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_plane.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_plane.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_sphere.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_torus.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_torus.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_material_state_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_material_state_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_gen_name.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_box.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_box.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cone.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cone.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cylinder.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_cylinder.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_julia.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_julia.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_light_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_light_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_material.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_material.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_moebius.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_moebius.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_own.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_own.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_paraboloid.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_paraboloid.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_plane.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_plane.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_sphere.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_sphere.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_torus.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_torus.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_material_color_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_material_color_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_update.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_delete.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_reset.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_settings/gui_settings_show.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_parser.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_parser.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_settings.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_antialiasing.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_antialiasing.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_entry_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_focus_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_focus_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_dialog_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_dialog_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_load.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_load.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_select.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_select.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_reset.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/main.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/main.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/CMakeLists.txt">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
