@@ -280,6 +280,7 @@ set(SOURCE_GUI
 		${SOURCE_GUI_SIGNAL_CONNECT_X})
 
 set(SOURCE_JSON
+		./cl_renderer/json/json.c
 		./cl_renderer/json/json_helper.c
 		./cl_renderer/json/json_worker.c
 		./cl_renderer/json/json_objects.c

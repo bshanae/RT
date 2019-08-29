@@ -124,6 +124,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_image.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_settings.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/json/json.c.o"
   "CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o"
   "CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o"
   "CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o"

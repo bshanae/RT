@@ -18,6 +18,24 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 		parse_cone(data, json, tokens);
 	else if (ft_strequ(type, "cylinder"))
 		parse_cylinder(data, json, tokens);
+	else if (ft_strequ(type, "box"))
+		parse_box(data, json, tokens);
+	else if (ft_strequ(type, "paraboloid"))
+		parse_paraboloid(data, json, tokens);
+	else if (ft_strequ(type, "moebius"))
+		parse_moebius(data, json, tokens);
+	else if (ft_strequ(type, "torus"))
+		parse_torus(data, json, tokens);
+	else if (ft_strequ(type, "mandelbulb"))
+		parse_mandelbulb(data, json, tokens);
+	else if (ft_strequ(type, "julia"))
+		parse_julia(data, json, tokens);
+	else if (ft_strequ(type, "light ambient"))
+		parse_ambient(data, json, tokens);
+	else if (ft_strequ(type, "light point"))
+		parse_point(data, json, tokens);
+	else if (ft_strequ(type, "light direct"))
+		parse_direct(data, json, tokens);
 	free(type);
 }
 
