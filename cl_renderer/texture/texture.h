@@ -18,6 +18,7 @@ typedef struct 				s_texture
 	RT_F4_API				data[TEXTURE_DATA_SIZE];
 	int 					texture_length[MAX_TEXTURES_NUMBER];
 	int 					textures_number;
+	//RT_F4_API				*texture_pointer[MAX_TEXTURES_NUMBER];
 }							t_texture;
 
 t_texture					*texture_new(void);

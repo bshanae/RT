@@ -8,8 +8,6 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
-	t_texture		*textures[MAX_TEXTURES_NUMBER];
-	global int 		*texture_length;
 }					t_scene;
 
 static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
@@ -169,7 +167,8 @@ static int			scene_intersect_rm(
 static int			scene_intersect(
 					constant t_scene *scene,
 					t_intersection *intersection,
-					constant t_cl_renderer_settings *settings)
+					constant t_cl_renderer_settings *settings,
+					global t_texture *texture)
 {
 	int				result;
 
@@ -179,6 +178,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
+		if (intersection->material.texture_id == 2)
+			intersection->material.color = choose_color_from_texture(intersection, texture);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);

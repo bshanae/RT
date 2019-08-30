@@ -78,7 +78,8 @@ static int				static_is_shadowed(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						RT_F4 *light_direction, RT_F *shadow_ratio)
+						RT_F4 *light_direction, RT_F *shadow_ratio,
+						global t_texture *texture)
 {
 	t_intersection   	shadow;
 	const RT_F			default_transparence_shadow_ratio = 1.3;
@@ -86,7 +87,7 @@ static int				static_is_shadowed(
 	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
-	if (!scene_intersect(scene, &shadow, settings))
+	if (!scene_intersect(scene, &shadow, settings, texture))
 		return (0);
 	if (shadow.material.transparence)
 		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
@@ -97,7 +98,8 @@ static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						int filter_cartoon_mod)
+						int filter_cartoon_mod,
+						global t_texture *texture)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
@@ -119,7 +121,7 @@ static RT_F4			light_basic(
 			continue ;
 		}
 		light_direction = static_get_direction(intersection, object);
-		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio))
+		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio, texture))
 		{
 			color_diffuse *= (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
 			continue ;

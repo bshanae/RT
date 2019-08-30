@@ -6,7 +6,8 @@ static RT_F4		light_area(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state,
+					global t_texture *texture)
 {
 	t_intersection	intersection_light;
 	RT_F4			radiance;
@@ -37,7 +38,7 @@ static RT_F4		light_area(
 		intersection_light.ray.direction = light_direction;
 		intersection_reset(&intersection_light);
 
-		if (!scene_intersect(scene, &intersection_light, settings))
+		if (!scene_intersect(scene, &intersection_light, settings, texture))
 			continue ;
 		if (intersection_light.object_id != i)
 		{

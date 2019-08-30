@@ -141,18 +141,9 @@ typedef struct 		s_material
 	RT_F			transparence;
 }					t_material;
 
-// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+// cl_intersection /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
-
-typedef struct 		s_texture
-{
-	RT_F4			data[TEXTURE_DATA_SIZE];
-	int 			texture_length[MAX_TEXTURES_NUMBER];
-	int 			textures_number;
-}					t_texture;
-
-// cl_intersection /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct		s_intersection
 {
@@ -204,6 +195,22 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	destination->ray.origin = source->hit;
 }
 
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		s_texture
+{
+	RT_F4			data[TEXTURE_DATA_SIZE];
+	int 			texture_length[MAX_TEXTURES_NUMBER];
+	int 			textures_number;
+	//RT_F4			*texture_pointer[MAX_TEXTURES_NUMBER];
+}					t_texture;
+
+static	RT_F4		choose_color_from_texture(
+					t_intersection *intersection,
+					global t_texture *texture)
+{
+	return ((RT_F4){1., 1., 0., 1.});
+}
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1227,8 +1234,6 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
-	t_texture		*textures[MAX_TEXTURES_NUMBER];
-	global int 		*texture_length;
 }					t_scene;
 
 static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
@@ -1388,7 +1393,8 @@ static int			scene_intersect_rm(
 static int			scene_intersect(
 					constant t_scene *scene,
 					t_intersection *intersection,
-					constant t_cl_renderer_settings *settings)
+					constant t_cl_renderer_settings *settings,
+					global t_texture *texture)
 {
 	int				result;
 
@@ -1398,6 +1404,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
+		if (1)
+			intersection->material.color = choose_color_from_texture(intersection, texture);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
@@ -1540,7 +1548,8 @@ static int				static_is_shadowed(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						RT_F4 *light_direction, RT_F *shadow_ratio)
+						RT_F4 *light_direction, RT_F *shadow_ratio,
+						global t_texture *texture)
 {
 	t_intersection   	shadow;
 	const RT_F			default_transparence_shadow_ratio = 1.3;
@@ -1548,7 +1557,7 @@ static int				static_is_shadowed(
 	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
-	if (!scene_intersect(scene, &shadow, settings))
+	if (!scene_intersect(scene, &shadow, settings, texture))
 		return (0);
 	if (shadow.material.transparence)
 		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
@@ -1559,7 +1568,8 @@ static RT_F4			light_basic(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						int filter_cartoon_mod)
+						int filter_cartoon_mod,
+						global t_texture *texture)
 {
 	constant t_object	*object;
 	RT_F4				color_diffuse;
@@ -1581,7 +1591,7 @@ static RT_F4			light_basic(
 			continue ;
 		}
 		light_direction = static_get_direction(intersection, object);
-		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio))
+		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio, texture))
 		{
 			color_diffuse *= (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
 			continue ;
@@ -1606,7 +1616,8 @@ static RT_F4		light_area(
 					constant t_scene *scene,
 					t_intersection *intersection_object,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state)
+					global ulong *rng_state,
+					global t_texture *texture)
 {
 	t_intersection	intersection_light;
 	RT_F4			radiance;
@@ -1637,7 +1648,7 @@ static RT_F4		light_area(
 		intersection_light.ray.direction = light_direction;
 		intersection_reset(&intersection_light);
 
-		if (!scene_intersect(scene, &intersection_light, settings))
+		if (!scene_intersect(scene, &intersection_light, settings, texture))
 			continue ;
 		if (intersection_light.object_id != i)
 		{
@@ -1734,7 +1745,11 @@ static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulo
 	return (result);
 }
 
-static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_auto_focus(
+					global t_camera *camera,
+					constant t_scene *scene,
+					constant t_cl_renderer_settings *settings,
+					global t_texture *texture)
 {
     t_intersection	intersection;
     RT_F4			up;
@@ -1747,7 +1762,7 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
     intersection.ray.direction = normalize(intersection.ray.direction);
 
     intersection_reset(&intersection);
-    if (scene_intersect(scene, &intersection, settings))
+    if (scene_intersect(scene, &intersection, settings, texture))
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
 
     camera->focus_request = 0;
@@ -1766,7 +1781,8 @@ static void					radiance_add(
 							t_intersection *intersection,
 							global RT_F4 *sample,
 							constant t_cl_renderer_settings *settings,
-							global ulong *rng_state)
+							global ulong *rng_state,
+							global t_texture *texture)
 {
 	RT_F4					radiance;
 	RT_F4					light;
@@ -1780,7 +1796,7 @@ static void					radiance_add(
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		intersection_reset(intersection);
-		if (!scene_intersect(scene, intersection, settings))
+		if (!scene_intersect(scene, intersection, settings, texture))
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -1790,13 +1806,13 @@ static void					radiance_add(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, intersection, settings, camera->filter_cartoon, texture);
             radiance += light * mask;
 		}
 
 		if (settings->light_area)
 		{
-			light = light_area(scene, intersection, settings, rng_state);
+			light = light_area(scene, intersection, settings, rng_state, texture);
 			radiance += light * mask * intersection->material.color;
 		}
 
@@ -1845,7 +1861,8 @@ static RT_F4				radiance_get(
  								constant t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
- 								constant t_cl_renderer_settings *settings)
+ 								constant t_cl_renderer_settings *settings,
+ 								global t_texture *texture)
  {
  	constant t_object_sphere	*sphere;
  	RT_F						x;
@@ -1880,7 +1897,7 @@ static RT_F4				radiance_get(
 
 kernel void			cl_main(
 					global t_camera *camera,
-					global t_scene *scene,
+					constant t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_renderer_settings *settings,
@@ -1897,25 +1914,25 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	scene->textures[0] = &texture->data[0];
-	scene->texture_length = &texture->texture_length[0];
-	for (int texture_iter = 1; texture_iter < texture->textures_number; texture_iter++)
-	{
-		scene->textures[texture_iter] = scene->textures[texture_iter - 1]
-			+ texture->texture_length[texture_iter - 1];
-	}
+	//texture_pointer[0] = texture->data;
+	//for (int texture_iter = 1; texture_iter < texture->textures_number; texture_iter++)
+	//{
+	//	texture_pointer[texture_iter] = texture_pointer[texture_iter - 1]
+	//		+ texture->texture_length[texture_iter - 1];
+	//		printf("%f %f %f\n", *(texture_pointer[0]).x, *(texture_pointer[0]).y, *(texture_pointer[0]).z);
+	//}
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	if (!global_id && camera->focus_request)
-		camera_auto_focus(camera, scene, settings);
+		camera_auto_focus(camera, scene, settings, texture);
 
 	if (settings->illumination)
-		illumination_effect = illumination(scene, camera, &intersection, settings);
+		illumination_effect = illumination(scene, camera, &intersection, settings, texture);
 	else
 		illumination_effect = 0.;
 
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state, texture);
 
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
 }

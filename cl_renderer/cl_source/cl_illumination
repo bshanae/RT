@@ -4,7 +4,8 @@
  								constant t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
- 								constant t_cl_renderer_settings *settings)
+ 								constant t_cl_renderer_settings *settings,
+ 								global t_texture *texture)
  {
  	constant t_object_sphere	*sphere;
  	RT_F						x;
@@ -27,7 +28,7 @@
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
  		intersection_reset(&shadow);
- 		scene_intersect(scene, &shadow, settings);
+ 		scene_intersect(scene, &shadow, settings, texture);
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;
  		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;

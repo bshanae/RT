@@ -12,7 +12,8 @@ static void					radiance_add(
 							t_intersection *intersection,
 							global RT_F4 *sample,
 							constant t_cl_renderer_settings *settings,
-							global ulong *rng_state)
+							global ulong *rng_state,
+							global t_texture *texture)
 {
 	RT_F4					radiance;
 	RT_F4					light;
@@ -26,7 +27,7 @@ static void					radiance_add(
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		intersection_reset(intersection);
-		if (!scene_intersect(scene, intersection, settings))
+		if (!scene_intersect(scene, intersection, settings, texture))
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -36,13 +37,13 @@ static void					radiance_add(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, intersection, settings, camera->filter_cartoon, texture);
             radiance += light * mask;
 		}
 
 		if (settings->light_area)
 		{
-			light = light_area(scene, intersection, settings, rng_state);
+			light = light_area(scene, intersection, settings, rng_state, texture);
 			radiance += light * mask * intersection->material.color;
 		}
 

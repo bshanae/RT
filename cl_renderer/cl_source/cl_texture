@@ -1,10 +1,16 @@
 // cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include "rt_parameters.h"
-
 typedef struct 		s_texture
 {
 	RT_F4			data[TEXTURE_DATA_SIZE];
 	int 			texture_length[MAX_TEXTURES_NUMBER];
 	int 			textures_number;
+	//RT_F4			*texture_pointer[MAX_TEXTURES_NUMBER];
 }					t_texture;
+
+static	RT_F4		choose_color_from_texture(
+					t_intersection *intersection,
+					global t_texture *texture)
+{
+	return ((RT_F4){1., 1., 0., 1.});
+}
