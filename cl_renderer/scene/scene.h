@@ -2,6 +2,7 @@
 # define SCENE_H
 
 # include "rt_parameters.h"
+# include "scene_point.h"
 
 # include "object_interaction.h"
 
@@ -22,5 +23,17 @@ void 				scene_clear(t_scene *scene);
 void 				scene_update(t_scene *scene);
 t_object			*scene_get_space(t_scene *scene);
 void 				scene_remove_object(t_scene *scene, int object_id);
+int 				scene_point_check(t_scene *scene, const RT_F4_API *point);
+
+typedef enum		e_scene_name_flag
+{
+	scene_name_next,
+	scene_name_last,
+	scene_name_id,
+	scene_name_reset
+}					t_scene_name_flag;
+
+void				scene_give_name
+					(t_scene *scene, CHAR_REF str, t_scene_name_flag flag, ...);
 
 #endif

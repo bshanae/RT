@@ -4,8 +4,8 @@
 # include "rt_parameters.h"
 # include "rt_float.h"
 
-# include "f4.h"
 # include "libft_standart.h"
+# include "f4.h"
 # include "ray.h"
 
 # include <stdlib.h>
@@ -45,7 +45,7 @@ typedef enum		e_camera_movement
 	rt_movement_backward
 }					t_camera_movement;
 
-void 				camera_move
+RT_F4_API			camera_move
 					(t_camera *camera,
 					 t_camera_movement direction,
 					 RT_F length);

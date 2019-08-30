@@ -65,6 +65,8 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 
     result = 0;
 
+    /*
+
     RT_F            dot_value[0];
     t_object_sphere sphere;
     t_object_plane  plane;
@@ -105,7 +107,9 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 		intersection->object_id = 0;
 	}
 
-    for (int object_i = 2; object_i < scene->objects_length; object_i++)
+	*/
+
+    for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
 
     return (result != 0);

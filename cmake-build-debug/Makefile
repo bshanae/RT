@@ -906,6 +906,33 @@ cl_renderer/f4/f4_add.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.s
 .PHONY : cl_renderer/f4/f4_add.c.s
 
+cl_renderer/f4/f4_dot.o: cl_renderer/f4/f4_dot.c.o
+
+.PHONY : cl_renderer/f4/f4_dot.o
+
+# target to build an object file
+cl_renderer/f4/f4_dot.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o
+.PHONY : cl_renderer/f4/f4_dot.c.o
+
+cl_renderer/f4/f4_dot.i: cl_renderer/f4/f4_dot.c.i
+
+.PHONY : cl_renderer/f4/f4_dot.i
+
+# target to preprocess a source file
+cl_renderer/f4/f4_dot.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.i
+.PHONY : cl_renderer/f4/f4_dot.c.i
+
+cl_renderer/f4/f4_dot.s: cl_renderer/f4/f4_dot.c.s
+
+.PHONY : cl_renderer/f4/f4_dot.s
+
+# target to generate assembly for a file
+cl_renderer/f4/f4_dot.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.s
+.PHONY : cl_renderer/f4/f4_dot.c.s
+
 cl_renderer/f4/f4_length.o: cl_renderer/f4/f4_length.c.o
 
 .PHONY : cl_renderer/f4/f4_length.o
@@ -1527,6 +1554,33 @@ cl_renderer/object_x/object_torus.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
 .PHONY : cl_renderer/object_x/object_torus.c.s
 
+cl_renderer/scene/camera_point_check.o: cl_renderer/scene/camera_point_check.c.o
+
+.PHONY : cl_renderer/scene/camera_point_check.o
+
+# target to build an object file
+cl_renderer/scene/camera_point_check.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o
+.PHONY : cl_renderer/scene/camera_point_check.c.o
+
+cl_renderer/scene/camera_point_check.i: cl_renderer/scene/camera_point_check.c.i
+
+.PHONY : cl_renderer/scene/camera_point_check.i
+
+# target to preprocess a source file
+cl_renderer/scene/camera_point_check.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.i
+.PHONY : cl_renderer/scene/camera_point_check.c.i
+
+cl_renderer/scene/camera_point_check.s: cl_renderer/scene/camera_point_check.c.s
+
+.PHONY : cl_renderer/scene/camera_point_check.s
+
+# target to generate assembly for a file
+cl_renderer/scene/camera_point_check.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.s
+.PHONY : cl_renderer/scene/camera_point_check.c.s
+
 cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
 
 .PHONY : cl_renderer/scene/scene_clear.o
@@ -1607,6 +1661,33 @@ cl_renderer/scene/scene_get_space.s: cl_renderer/scene/scene_get_space.c.s
 cl_renderer/scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.s
 .PHONY : cl_renderer/scene/scene_get_space.c.s
+
+cl_renderer/scene/scene_give_name.o: cl_renderer/scene/scene_give_name.c.o
+
+.PHONY : cl_renderer/scene/scene_give_name.o
+
+# target to build an object file
+cl_renderer/scene/scene_give_name.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o
+.PHONY : cl_renderer/scene/scene_give_name.c.o
+
+cl_renderer/scene/scene_give_name.i: cl_renderer/scene/scene_give_name.c.i
+
+.PHONY : cl_renderer/scene/scene_give_name.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_give_name.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.i
+.PHONY : cl_renderer/scene/scene_give_name.c.i
+
+cl_renderer/scene/scene_give_name.s: cl_renderer/scene/scene_give_name.c.s
+
+.PHONY : cl_renderer/scene/scene_give_name.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_give_name.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
+.PHONY : cl_renderer/scene/scene_give_name.c.s
 
 cl_renderer/scene/scene_new.o: cl_renderer/scene/scene_new.c.o
 
@@ -5160,6 +5241,9 @@ help:
 	@echo "... cl_renderer/f4/f4_add.o"
 	@echo "... cl_renderer/f4/f4_add.i"
 	@echo "... cl_renderer/f4/f4_add.s"
+	@echo "... cl_renderer/f4/f4_dot.o"
+	@echo "... cl_renderer/f4/f4_dot.i"
+	@echo "... cl_renderer/f4/f4_dot.s"
 	@echo "... cl_renderer/f4/f4_length.o"
 	@echo "... cl_renderer/f4/f4_length.i"
 	@echo "... cl_renderer/f4/f4_length.s"
@@ -5229,6 +5313,9 @@ help:
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"
+	@echo "... cl_renderer/scene/camera_point_check.o"
+	@echo "... cl_renderer/scene/camera_point_check.i"
+	@echo "... cl_renderer/scene/camera_point_check.s"
 	@echo "... cl_renderer/scene/scene_clear.o"
 	@echo "... cl_renderer/scene/scene_clear.i"
 	@echo "... cl_renderer/scene/scene_clear.s"
@@ -5238,6 +5325,9 @@ help:
 	@echo "... cl_renderer/scene/scene_get_space.o"
 	@echo "... cl_renderer/scene/scene_get_space.i"
 	@echo "... cl_renderer/scene/scene_get_space.s"
+	@echo "... cl_renderer/scene/scene_give_name.o"
+	@echo "... cl_renderer/scene/scene_give_name.i"
+	@echo "... cl_renderer/scene/scene_give_name.s"
 	@echo "... cl_renderer/scene/scene_new.o"
 	@echo "... cl_renderer/scene/scene_new.i"
 	@echo "... cl_renderer/scene/scene_new.s"

@@ -292,17 +292,24 @@ static RT_F						sphere_center_shift(constant t_object *object)
 
 #include "rt_parameters.h"
 
-typedef struct		s_object_plane
+typedef enum 			e_plane_limiting
 {
-	RT_F4			position;
-	RT_F4			normal;
-}					t_object_plane;
+	plane_limiting_yes,
+	plane_limiting_no
+}						t_plane_limiting;
 
-static int			plane_intersect(constant t_object *object, t_intersection *intersection)
+typedef struct			s_object_plane
 {
-	t_object_plane	data;
-	RT_F4			temp[2];
-	RT_F			value[3];
+	RT_F4_API			position;
+	RT_F4_API			normal;
+	t_plane_limiting	is_limiting;
+}						t_object_plane;
+
+static int				plane_intersect(constant t_object *object, t_intersection *intersection)
+{
+	t_object_plane		data;
+	RT_F4				temp[2];
+	RT_F				value[3];
 
 	data = *(constant t_object_plane *)object->data;
 	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
@@ -316,14 +323,14 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 	return (1);
 }
 
-static RT_F4		plane_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4			plane_normal(constant t_object *object, t_intersection *intersection)
 {
 	return (((constant t_object_plane *)object->data)->normal);
 }
 
-static RT_F 		plane_sdf(constant t_object *object, RT_F4 point)
+static RT_F 			plane_sdf(constant t_object *object, RT_F4 point)
 {
-	t_object_plane	data;
+	t_object_plane		data;
 
     data = *(constant t_object_plane *)object->data;
 	return (dot(data.normal, point - data.position));
@@ -990,7 +997,7 @@ static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
 		return (sphere_sdf(object, point));
 	else if (object->type == object_box)
         return (box_sdf(object, point));
-    return (INFINITY);
+    return (RT_INFINITY);
 }
 
 static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
@@ -1000,12 +1007,16 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 	RT_F					sdf[2];
 
     data = (constant t_object_csg *)object->data;
+    if (object->id < 2)
+    		return (RT_INFINITY);
     scene_begin = object - object->id;
     sdf[0] = sdf_csg_compute(scene_begin + data->id_positive, point);
     sdf[1] = sdf_csg_compute(scene_begin + data->id_negative, point);
 
     return (csg_sdf_difference(sdf[0], sdf[1]));
 }
+
+// todo: improve csg validation
 
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1018,6 +1029,7 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_plane)
 		return (plane_intersect(object, intersection));
+#ifndef RT_OPEN_CL_LOW
 	else if (object->type == object_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_cylinder)
@@ -1026,6 +1038,7 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_moebius)
 		return (moebius_intersect(object, intersection));
+#endif
 	return (0);
 }
 
@@ -1182,7 +1195,7 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 
     result = 0;
 
-    RT_F            dot_value;
+    RT_F            dot_value[0];
     t_object_sphere sphere;
     t_object_plane  plane;
     RT_F            sphere_t[2];
@@ -1194,18 +1207,33 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 	sphere_intersect_t(scene->objects + 0, intersection, sphere_t);
 	plane_intersect_t(scene->objects + 1, intersection, &plane_t);
 
-    dot_value= dot(plane.position - intersection->ray.origin, plane.normal);
+    dot_value[0] = dot(plane.position - intersection->ray.origin, plane.normal);
+    dot_value[1] = dot(intersection->ray.direction, plane.normal);
 
-    if (dot_value <= 0 && sphere_t[0] < plane_t)
+    if (dot_value[0] > 0 && sphere_t[0] < plane_t)
     {
         result++;
-        intersection->ray.t = t;
+        intersection->ray.t = sphere_t[0];
         intersection->object_id = 0;
     }
-    else
-    {
-
+    else if (dot_value[0] == 0 && dot_value[1] <= 0)
+	{
+		result++;
+		intersection->ray.t = sphere_t[0];
+		intersection->object_id = 0;
     }
+    else if (dot_value[0] <= 0 && plane_t > sphere_t[0] && plane_t < sphere_t[1])
+    {
+		result++;
+		intersection->ray.t = plane_t;
+		intersection->object_id = 1;
+    }
+    else if (dot_value[0] <= 0 && sphere_t[0] != RT_INFINITY && plane_t < sphere_t[0])
+    {
+		result++;
+		intersection->ray.t = sphere_t[0];
+		intersection->object_id = 0;
+	}
 
     for (int object_i = 2; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
@@ -1264,9 +1292,11 @@ static int			scene_intersect(
 {
 	int				result;
 
-	result = !settings->rm_mod ?
-		scene_intersect_rt(scene, intersection) :
-		scene_intersect_rm(scene, intersection, settings);
+#ifndef RT_OPEN_CL_LOW
+	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
+#else
+	result = scene_intersect_rt(scene, intersection);
+#endif
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
@@ -1643,11 +1673,13 @@ static void					radiance_add(
 
 		radiance += mask * intersection->material.emission;
 
+#ifndef RT_OPEN_CL_LOW
 		if (settings->light_basic)
 		{
 			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
+#endif
 
 		if (settings->light_area)
 		{
@@ -1754,16 +1786,17 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
+	illumination_effect = 0.;
+
+#ifndef RT_OPEN_CL_LOW
 	if (!global_id && camera->focus_request)
 		camera_auto_focus(camera, scene, settings);
 
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
-	else
-		illumination_effect = 0.;
+#endif
 
     radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
 }
 
