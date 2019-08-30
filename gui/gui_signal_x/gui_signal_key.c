@@ -16,6 +16,7 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_camera_move(gui->renderer, rt_movement_down);
 	else
 		return (0);
+	printf("camera moved\n");
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
@@ -55,6 +56,9 @@ gboolean			gui_signal_key
 	int 			image_focus;
 	gboolean 		finish_condition;
 
+
+	static int i;
+	printf("key signal %i\n", i++);
 	gui = (t_gui *)ptr;
 	finish_condition = 1;
 	if (event->keyval == GDK_KEY_Escape)
@@ -74,8 +78,5 @@ gboolean			gui_signal_key
 		finish_condition = 1;
 	if (finish_condition)
 		return (FALSE);
-//	gui_queue_block(gui->queue);
-//	cl_renderer_render(gui->renderer);
-//	gui_queue_unblock(gui->queue);
 	return (TRUE);
 }

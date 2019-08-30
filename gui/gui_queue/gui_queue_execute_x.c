@@ -16,6 +16,7 @@ void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 	if (!force && queue->block)
 		return ;
 	queue->master_function(queue->master_data);
+
 }
 
 

@@ -400,7 +400,7 @@ button
   {
     /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0;*/
     /*animation: ripple_effect 0.1s cubic-bezier(0, 0, 0.2, 1) forwards;*/
-    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.16), 0 3px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.23);
     color: rgba(0, 0, 0, 0.8);
   }
 
