@@ -11,7 +11,6 @@ typedef struct 		s_material
 	RT_F			specular;
 	RT_F			reflectance;
 	RT_F			transparence;
-	int 			texture_id;
 }					t_material;
 
 #endif

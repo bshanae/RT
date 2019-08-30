@@ -2,15 +2,33 @@
 
 typedef struct 		s_texture
 {
-	RT_F4			data[TEXTURE_DATA_SIZE];
+	global RT_F4	*data;
 	int 			texture_length[MAX_TEXTURES_NUMBER];
+	int				width[MAX_TEXTURES_NUMBER];
+	int				height[MAX_TEXTURES_NUMBER];
 	int 			textures_number;
-	//RT_F4			*texture_pointer[MAX_TEXTURES_NUMBER];
 }					t_texture;
 
-static	RT_F4		choose_color_from_texture(
+static RT_F4		sphere_texture(
 					t_intersection *intersection,
 					global t_texture *texture)
 {
-	return ((RT_F4){1., 1., 0., 1.});
+	RT_F			u;
+	RT_F			v;
+	int				picked_color;
+
+	u = (RT_F)0.5 + atan2(intersection->normal.z, intersection->normal.x) / RT_PI * (RT_F)0.5;
+	v = (RT_F)0.5 - asin(intersection->normal.y) / RT_PI;
+	picked_color = (int)floor(texture->height[0] * v) * texture->width[0] + (int)floor(texture->width[0] * u);
+	return ((RT_F4){texture->data[picked_color].x, texture->data[picked_color].y, texture->data[picked_color].z, 1.});
+}
+
+static	RT_F4		choose_color_from_texture(
+					t_object_type type,
+					t_intersection *intersection,
+					global t_texture *texture)
+{
+	if (type == object_sphere)
+		return (sphere_texture(intersection, texture));
+	return ((RT_F4){0., 0., 1., 1.});
 }

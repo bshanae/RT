@@ -195,22 +195,6 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	destination->ray.origin = source->hit;
 }
 
-// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct 		s_texture
-{
-	RT_F4			data[TEXTURE_DATA_SIZE];
-	int 			texture_length[MAX_TEXTURES_NUMBER];
-	int 			textures_number;
-	//RT_F4			*texture_pointer[MAX_TEXTURES_NUMBER];
-}					t_texture;
-
-static	RT_F4		choose_color_from_texture(
-					t_intersection *intersection,
-					global t_texture *texture)
-{
-	return ((RT_F4){1., 1., 0., 1.});
-}
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -242,9 +226,44 @@ typedef struct		s_object
 	t_object_type	type;
 	int 			is_csg;
 	t_material		material;
+	int 			texture_id;
 	char			data[RT_CL_OBJECT_CAPACITY];
 }					t_object;
 
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		s_texture
+{
+	RT_F4			*data;
+	int 			texture_length[MAX_TEXTURES_NUMBER];
+	int				width[MAX_TEXTURES_NUMBER];
+	int				height[MAX_TEXTURES_NUMBER];
+	int 			textures_number;
+}					t_texture;
+
+static RT_F4		sphere_texture(
+					t_intersection *intersection,
+					global t_texture *texture)
+{
+	RT_F			u;
+	RT_F			v;
+	int				picked_color;
+
+	u = (RT_F)0.5 + atan2(intersection->normal.z, intersection->normal.x) / RT_PI * (RT_F)0.5;
+	v = (RT_F)0.5 - asin(intersection->normal.y) / RT_PI;
+	picked_color = (int)floor(texture->height[0] * v) * texture->width[0] + (int)floor(texture->width[0] * u);
+	return ((RT_F4){texture->data[picked_color].x, texture->data[picked_color].y, texture->data[picked_color].z, 1.});
+}
+
+static	RT_F4		choose_color_from_texture(
+					t_object_type type,
+					t_intersection *intersection,
+					global t_texture *texture)
+{
+	if (type == object_sphere)
+		return (sphere_texture(intersection, texture));
+	return ((RT_F4){0., 0., 1., 1.});
+}
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1404,8 +1423,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		if (1)
-			intersection->material.color = choose_color_from_texture(intersection, texture);
+		if (scene->objects[intersection->object_id].texture_id == 2)
+			intersection->material.color = choose_color_from_texture(scene->objects[intersection->object_id].type, intersection, texture);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
@@ -1885,7 +1904,7 @@ static RT_F4				radiance_get(
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
  		intersection_reset(&shadow);
- 		scene_intersect(scene, &shadow, settings);
+ 		scene_intersect(scene, &shadow, settings, texture);
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;
  		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
@@ -1902,7 +1921,8 @@ kernel void			cl_main(
 					global RT_F4 *sample_store,
 					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state,
-					global t_texture *texture)
+					global t_texture *texture,
+					global RT_F4 *texture_data)
 {
 	int				global_id;
 	int2			screen;
@@ -1914,13 +1934,7 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	//texture_pointer[0] = texture->data;
-	//for (int texture_iter = 1; texture_iter < texture->textures_number; texture_iter++)
-	//{
-	//	texture_pointer[texture_iter] = texture_pointer[texture_iter - 1]
-	//		+ texture->texture_length[texture_iter - 1];
-	//		printf("%f %f %f\n", *(texture_pointer[0]).x, *(texture_pointer[0]).y, *(texture_pointer[0]).z);
-	//}
+	texture->data = texture_data;
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
@@ -1933,7 +1947,6 @@ kernel void			cl_main(
 		illumination_effect = 0.;
 
     radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state, texture);
-
 	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
 }
 

@@ -23,10 +23,10 @@
 # define RT_CL_DEPTH				3
 # define RT_CL_SAMPLES				2
 
-# define RT_CL_LIGHT_BASIC			0
+# define RT_CL_LIGHT_BASIC			1
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 
-# define RT_CL_LIGHT_AREA			1
+# define RT_CL_LIGHT_AREA			0
 
 # define RT_CL_ILLUMINATION			1
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.2

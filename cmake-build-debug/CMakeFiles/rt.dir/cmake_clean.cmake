@@ -131,6 +131,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"
@@ -186,6 +188,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o"
   "rt.pdb"
   "rt"
 )

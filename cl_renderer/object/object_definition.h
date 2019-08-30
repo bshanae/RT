@@ -31,6 +31,7 @@ typedef struct		s_object
 	t_object_type	type;
 	int 			is_csg;
 	t_material		material;
+	int 			texture_id;
 	char			data[RT_CL_OBJECT_CAPACITY];
 }					t_object;
 

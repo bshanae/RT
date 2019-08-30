@@ -298,7 +298,10 @@ set(SOURCE_JSON
 
 set(SOURCE_TEXTURE
 		./cl_renderer/texture/texture_data_load.c
-        ./cl_renderer/texture/texture_new.c cl_renderer/texture/texture_delete.c)
+        ./cl_renderer/texture/texture_new.c
+		./cl_renderer/texture/texture_delete.c
+		./cl_renderer/texture/texture_fill_data.c
+		./cl_renderer/texture/texture_convert.c)
 
 set(SOURCE_F4
 		./cl_renderer/f4/f4_add.c
@@ -387,7 +390,7 @@ set(SOURCE_RENDERER
 		${SOURCE_CL_PROGRAM}
 		${SOURCE_CL_ARG_LIST}
 		${SOURCE_CL_BUILDER}
-		${SOURCE_CL_RENDERER_})
+		${SOURCE_CL_RENDERER_} cl_renderer/texture/texture_get_space.c)
 
 add_executable(rt
 		${SOURCE_MAIN}

@@ -1716,6 +1716,33 @@ cl_renderer/scene/scene_update.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.s
 .PHONY : cl_renderer/scene/scene_update.c.s
 
+cl_renderer/texture/texture_convert.o: cl_renderer/texture/texture_convert.c.o
+
+.PHONY : cl_renderer/texture/texture_convert.o
+
+# target to build an object file
+cl_renderer/texture/texture_convert.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.o
+.PHONY : cl_renderer/texture/texture_convert.c.o
+
+cl_renderer/texture/texture_convert.i: cl_renderer/texture/texture_convert.c.i
+
+.PHONY : cl_renderer/texture/texture_convert.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_convert.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.i
+.PHONY : cl_renderer/texture/texture_convert.c.i
+
+cl_renderer/texture/texture_convert.s: cl_renderer/texture/texture_convert.c.s
+
+.PHONY : cl_renderer/texture/texture_convert.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_convert.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.s
+.PHONY : cl_renderer/texture/texture_convert.c.s
+
 cl_renderer/texture/texture_data_load.o: cl_renderer/texture/texture_data_load.c.o
 
 .PHONY : cl_renderer/texture/texture_data_load.o
@@ -1769,6 +1796,60 @@ cl_renderer/texture/texture_delete.s: cl_renderer/texture/texture_delete.c.s
 cl_renderer/texture/texture_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.s
 .PHONY : cl_renderer/texture/texture_delete.c.s
+
+cl_renderer/texture/texture_fill_data.o: cl_renderer/texture/texture_fill_data.c.o
+
+.PHONY : cl_renderer/texture/texture_fill_data.o
+
+# target to build an object file
+cl_renderer/texture/texture_fill_data.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o
+.PHONY : cl_renderer/texture/texture_fill_data.c.o
+
+cl_renderer/texture/texture_fill_data.i: cl_renderer/texture/texture_fill_data.c.i
+
+.PHONY : cl_renderer/texture/texture_fill_data.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_fill_data.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.i
+.PHONY : cl_renderer/texture/texture_fill_data.c.i
+
+cl_renderer/texture/texture_fill_data.s: cl_renderer/texture/texture_fill_data.c.s
+
+.PHONY : cl_renderer/texture/texture_fill_data.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_fill_data.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.s
+.PHONY : cl_renderer/texture/texture_fill_data.c.s
+
+cl_renderer/texture/texture_get_space.o: cl_renderer/texture/texture_get_space.c.o
+
+.PHONY : cl_renderer/texture/texture_get_space.o
+
+# target to build an object file
+cl_renderer/texture/texture_get_space.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o
+.PHONY : cl_renderer/texture/texture_get_space.c.o
+
+cl_renderer/texture/texture_get_space.i: cl_renderer/texture/texture_get_space.c.i
+
+.PHONY : cl_renderer/texture/texture_get_space.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_get_space.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.i
+.PHONY : cl_renderer/texture/texture_get_space.c.i
+
+cl_renderer/texture/texture_get_space.s: cl_renderer/texture/texture_get_space.c.s
+
+.PHONY : cl_renderer/texture/texture_get_space.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_get_space.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s
+.PHONY : cl_renderer/texture/texture_get_space.c.s
 
 cl_renderer/texture/texture_new.o: cl_renderer/texture/texture_new.c.o
 
@@ -5358,12 +5439,21 @@ help:
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"
+	@echo "... cl_renderer/texture/texture_convert.o"
+	@echo "... cl_renderer/texture/texture_convert.i"
+	@echo "... cl_renderer/texture/texture_convert.s"
 	@echo "... cl_renderer/texture/texture_data_load.o"
 	@echo "... cl_renderer/texture/texture_data_load.i"
 	@echo "... cl_renderer/texture/texture_data_load.s"
 	@echo "... cl_renderer/texture/texture_delete.o"
 	@echo "... cl_renderer/texture/texture_delete.i"
 	@echo "... cl_renderer/texture/texture_delete.s"
+	@echo "... cl_renderer/texture/texture_fill_data.o"
+	@echo "... cl_renderer/texture/texture_fill_data.i"
+	@echo "... cl_renderer/texture/texture_fill_data.s"
+	@echo "... cl_renderer/texture/texture_get_space.o"
+	@echo "... cl_renderer/texture/texture_get_space.i"
+	@echo "... cl_renderer/texture/texture_get_space.s"
 	@echo "... cl_renderer/texture/texture_new.o"
 	@echo "... cl_renderer/texture/texture_new.i"
 	@echo "... cl_renderer/texture/texture_new.s"
