@@ -34,7 +34,7 @@ static void					radiance_add(
 
 		radiance += mask * intersection->material.emission;
 
-#ifndef RT_OPEN_CL_LOW
+#ifndef RT_OPEN_CL_LIGHT_BASIC_DISABLED
 		if (settings->light_basic)
 		{
 			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
@@ -42,14 +42,17 @@ static void					radiance_add(
 		}
 #endif
 
+#ifndef RT_OPEN_CL_LIGHT_AREA_DISABLED
 		if (settings->light_area)
 		{
 			light = light_area(scene, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
 		}
+#endif
 
 		choice_value = rng(rng_state);
 		choice_result = RT_CHOICE_DIFFUSE;
+
 		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
 		else if (intersection->material.transparence == (RT_F)1. || (intersection->material.transparence > 0. && choice_value < intersection->material.transparence))

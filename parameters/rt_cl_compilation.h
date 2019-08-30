@@ -27,7 +27,6 @@
 # define CL_SOURCE_OBJECT_MANDELBULB	"cl_object_mandelbulb"
 # define CL_SOURCE_OBJECT_CSG			"cl_object_csg"
 # define CL_SOURCE_OBJECT_X				"cl_object_x"
-# define CL_SOURCE_OBJECT_NORMAL		"cl_object_normal"
 # define CL_SOURCE_SCENE				"cl_scene"
 # define CL_SOURCE_SAMPLE_X				"cl_sample_x"
 # define CL_SOURCE_LIGHT_BASIC			"cl_light_basic"

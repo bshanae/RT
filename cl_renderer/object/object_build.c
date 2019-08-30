@@ -8,6 +8,8 @@ void				object_build(
 {
 	va_list		args;
 
+	if (!space)
+		return ;
 	va_start(args, material);
 	if (type == object_light_ambient)
 		object_light_ambient_build(space, &args);
