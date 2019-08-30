@@ -20,19 +20,18 @@ static RT_F4		light_area(
 	radiance = 0;
 	for (int i = 0; i < scene->objects_length; i++)
 	{
-		if (i == intersection_object->object_id)
+ 		if (i == intersection_object->object_id)
 			continue ;
 		if (scene->objects[i].type != object_sphere)
 			continue ;
-		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
+		if (f4_max_component(scene->objects[i].material.emission) == 0.f)
 			continue ;
 
 		light_position = sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
-		intersection_light.ray.origin = intersection_object->hit + light_direction * (RT_F)0.1;
+		intersection_light.ray.origin = intersection_object->hit;
 		intersection_light.ray.direction = light_direction;
-
 		intersection_reset(&intersection_light);
 
 		if (!scene_intersect(scene, &intersection_light, settings))
@@ -49,5 +48,5 @@ static RT_F4		light_area(
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return (RT_MIN((RT_F)1. * radiance, (RT_F)0.9));
+	return ((RT_F)5. * radiance);
 }

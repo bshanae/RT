@@ -19,16 +19,14 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	illumination_effect = 0.;
-
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
-#ifndef RT_OPEN_CL_AUTOFOCUS_DISABLED
+	illumination_effect = 0.;
+
+#ifndef RT_OPEN_CL_LOW
 	if (!global_id && camera->focus_request)
 		camera_auto_focus(camera, scene, settings);
-#endif
 
-#ifndef RT_OPEN_CL_ILLUMINATION_DISABLED
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 #endif

@@ -5,7 +5,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX OFF)
+set(RT_LINUX ON)
 
 set(BREW ~/.brew)
 
@@ -342,7 +342,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c
 	./cl_renderer/scene/scene_update.c
-	./cl_renderer/scene/scene_clear.c cl_renderer/scene/scene_give_name.c)
+	./cl_renderer/scene/scene_clear.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

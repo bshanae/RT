@@ -65,8 +65,6 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 
     result = 0;
 
-    /*
-
     RT_F            dot_value[0];
     t_object_sphere sphere;
     t_object_plane  plane;
@@ -106,9 +104,8 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 		intersection->ray.t = sphere_t[0];
 		intersection->object_id = 0;
 	}
-	*/
 
-    for (int object_i = 0; object_i < scene->objects_length; object_i++)
+    for (int object_i = 2; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
 
     return (result != 0);
@@ -165,22 +162,16 @@ static int			scene_intersect(
 {
 	int				result;
 
-#if defined RT_OPEN_CL_RT_ONLY
-	result = scene_intersect_rt(scene, intersection);
-#elif defined RT_OPEN_CL_RM_ONLY
-	result = scene_intersect_rm(scene, intersection);
+#ifndef RT_OPEN_CL_LOW
+	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
 #else
-	result = !settings->rm_mod ?
-		scene_intersect_rt(scene, intersection) :
-		scene_intersect_rm(scene, intersection, settings);
+	result = scene_intersect_rt(scene, intersection);
 #endif
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-#ifndef RT_OPEN_CL_RT_ONLY
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
-#endif
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);
