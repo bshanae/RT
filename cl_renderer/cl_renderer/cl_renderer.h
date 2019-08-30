@@ -50,10 +50,9 @@ typedef enum				e_cl_renderer_arg
 t_cl_renderer				*cl_renderer_new(t_gui_image *image);
 void						cl_renderer_delete(t_cl_renderer **renderer);
 
-void						cl_renderer_flag_set
-							(t_cl_renderer *renderer, t_cl_renderer_flag flag);
-void						cl_renderer_flag_perform
-							(t_cl_renderer *renderer);
+void						cl_renderer_flag_set(t_cl_renderer *renderer,
+												 t_cl_renderer_flag flag);
+void						cl_renderer_flag_perform(t_cl_renderer *renderer);
 
 void 						cl_renderer_camera_move
 							(t_cl_renderer *renderer, t_camera_movement movement);

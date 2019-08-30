@@ -25,6 +25,7 @@ static void					radiance_add(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 

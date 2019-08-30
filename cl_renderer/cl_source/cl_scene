@@ -165,7 +165,6 @@ static int			scene_intersect(
 {
 	int				result;
 
-	intersection_reset(intersection);
 #if defined RT_OPEN_CL_RT_ONLY
 	result = scene_intersect_rt(scene, intersection);
 #elif defined RT_OPEN_CL_RM_ONLY

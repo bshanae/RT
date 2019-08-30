@@ -82,6 +82,7 @@ static int				static_is_shadowed(
 {
 	t_intersection   	shadow;
 
+	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);

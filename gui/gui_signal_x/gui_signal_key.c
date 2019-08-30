@@ -60,11 +60,7 @@ gboolean			gui_signal_key
 	if (event->keyval == GDK_KEY_Escape)
 		gui_signal_exit(widget, ptr);
 	else if (event->keyval == GDK_KEY_Return)
-#ifdef RT_SAMPLE_AUTO
 		gui->queue->block = !gui->queue->block;
-#elif defined RT_SAMPLE_MANUAL
-		cl_renderer_render(gui->renderer);
-#endif
 	else if (event->keyval == GDK_KEY_r)
 		;
 	else
@@ -75,7 +71,11 @@ gboolean			gui_signal_key
 	if (image_focus && try_move_camera(gui, event->keyval));
 	else if (image_focus && try_rotate_camera(gui, event->keyval));
 	else
+		finish_condition = 1;
+	if (finish_condition)
 		return (FALSE);
-	gui_queue_execute_force(gui->queue);
+//	gui_queue_block(gui->queue);
+//	cl_renderer_render(gui->renderer);
+//	gui_queue_unblock(gui->queue);
 	return (TRUE);
 }

@@ -370,6 +370,24 @@ gui_entry.h
 gtk/gtk.h
 -
 
+.././gui/gui_signal_connect_x/gui_signal_connect_macro.h
+
+.././gui/gui_signal_connect_x/gui_signal_connect_x.h
+gui_signal_connect_macro.h
+.././gui/gui_signal_connect_x/gui_signal_connect_macro.h
+gui.h
+.././gui/gui_signal_connect_x/gui.h
+gui_signal_x.h
+.././gui/gui_signal_connect_x/gui_signal_x.h
+
+.././gui/gui_signal_x/gui_signal_x.h
+gui_entry.h
+.././gui/gui_signal_x/gui_entry.h
+gui.h
+.././gui/gui_signal_x/gui.h
+time.h
+-
+
 .././parameters/rt_cl_compilation.h
 
 .././parameters/rt_cl_include.h
@@ -388,17 +406,15 @@ rt_control.h
 rt_control.h
 .././parameters/rt_control.h
 
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c
-gui_signal_x.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
-
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
-gui_entry.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_entry.h
+/Users/Vladimir/workspace/21_ray_tracer/main.c
 gui.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui.h
-time.h
--
+/Users/Vladimir/workspace/21_ray_tracer/gui.h
+gui_signal_connect_x.h
+/Users/Vladimir/workspace/21_ray_tracer/gui_signal_connect_x.h
+cl_renderer.h
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer.h
+material_list.h
+/Users/Vladimir/workspace/21_ray_tracer/material_list.h
 
 /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h

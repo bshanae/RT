@@ -1289,7 +1289,6 @@ static int			scene_intersect(
 {
 	int				result;
 
-	intersection_reset(intersection);
 #if defined RT_OPEN_CL_RT_ONLY
 	result = scene_intersect_rt(scene, intersection);
 #elif defined RT_OPEN_CL_RM_ONLY
@@ -1450,6 +1449,7 @@ static int				static_is_shadowed(
 {
 	t_intersection   	shadow;
 
+	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);
@@ -1526,26 +1526,32 @@ static RT_F4		light_area(
 		light_position = sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
-		intersection_light.ray.origin = intersection_object->hit + light_direction * (RT_F)0.1;
+		intersection_light.ray.origin = intersection_object->hit;
 		intersection_light.ray.direction = light_direction;
 
 		intersection_reset(&intersection_light);
 
+		if (!get_global_id(0)) printf("sphere isect = %d\n", object_intersect(scene->objects + 0, &intersection_light));
+
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
+
+
+
+
 		if (intersection_light.object_id != i)
 			continue;
 
-		emission_intensity = RT_ABS(dot(intersection_object->normal, intersection_light.ray.direction));
-		//if (emission_intensity < 0.00001f)
-		//	continue ;
+		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
+		if (emission_intensity < 0.00001f)
+			continue ;
 
 		sphere_radius = ((constant t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return (RT_MIN((RT_F)radiance, (RT_F)0.5));
+	return ((RT_F)5. * radiance);
 }
 
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1668,6 +1674,7 @@ static void					radiance_add(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
@@ -1689,6 +1696,7 @@ static void					radiance_add(
 		{
 			light = light_area(scene, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
+			if (!get_global_id(0)) printf("light = %f %f %f\n", light.x, light.y, light.z);
 		}
 #endif
 
