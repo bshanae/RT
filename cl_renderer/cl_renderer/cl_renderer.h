@@ -46,7 +46,8 @@ typedef enum				e_cl_renderer_arg
 	cl_arg_image,
 	cl_arg_samples,
 	cl_arg_settings,
-	cl_arg_rng_state
+	cl_arg_rng_state,
+	cl_arg_texture
 }							t_cl_renderer_arg;
 
 t_cl_renderer				*cl_renderer_new(t_gui_image *image);

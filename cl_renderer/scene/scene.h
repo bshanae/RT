@@ -15,6 +15,7 @@ typedef struct		s_scene
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		*textures[MAX_TEXTURES_NUMBER];
+	int 			*texture_length;
 }					t_scene;
 
 t_scene				*scene_new(void);

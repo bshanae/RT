@@ -127,7 +127,7 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia, int alpha)
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
 	    return(color_filter_sepia(&source));
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, alpha});
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
 // cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1228,6 +1228,7 @@ typedef struct		s_scene
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		*textures[MAX_TEXTURES_NUMBER];
+	global int 		*texture_length;
 }					t_scene;
 
 static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
@@ -1877,10 +1878,9 @@ static RT_F4				radiance_get(
 
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 kernel void			cl_main(
 					global t_camera *camera,
-					constant t_scene *scene,
+					global t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_renderer_settings *settings,
@@ -1897,21 +1897,27 @@ kernel void			cl_main(
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
-	image[global_id] = color_unpack(texture[screen.y * camera->width + screen.x], camera->filter_sepia, 255);
+	scene->textures[0] = &texture->data[0];
+	scene->texture_length = &texture->texture_length[0];
+	for (int texture_iter = 1; texture_iter < texture->textures_number; texture_iter++)
+	{
+		scene->textures[texture_iter] = scene->textures[texture_iter - 1]
+			+ texture->texture_length[texture_iter - 1];
+	}
 
-	//intersection.ray = camera_build_ray(camera, &screen, rng_state);
-//
-	//if (!global_id && camera->focus_request)
-	//	camera_auto_focus(camera, scene, settings);
-//
-	//if (settings->illumination)
-	//	illumination_effect = illumination(scene, camera, &intersection, settings);
-	//else
-	//	illumination_effect = 0.;
-//
-    //radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-//
-	//image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
+	intersection.ray = camera_build_ray(camera, &screen, rng_state);
+
+	if (!global_id && camera->focus_request)
+		camera_auto_focus(camera, scene, settings);
+
+	if (settings->illumination)
+		illumination_effect = illumination(scene, camera, &intersection, settings);
+	else
+		illumination_effect = 0.;
+
+    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
+
+	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
 }
 
 

@@ -9,6 +9,7 @@ typedef struct		s_scene
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		*textures[MAX_TEXTURES_NUMBER];
+	global int 		*texture_length;
 }					t_scene;
 
 static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
