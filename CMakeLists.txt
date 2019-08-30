@@ -7,6 +7,8 @@ pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 set(RT_GTK_PKG ON)
 set(RT_LINUX ON)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-deprecated-declarations")
+
 set(BREW ~/.brew)
 
 set(RT_GTK_INCLUDES

@@ -659,6 +659,7 @@ button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
   border-radius: 2px; }
 
 /* menu buttons */
+
 modelbutton.flat,
 .menuitem.button.flat {
   min-height: 28px;
@@ -705,10 +706,10 @@ modelbutton.flat arrow {
   modelbutton.flat arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
-button.color {
-  min-height: 24px;
-  min-width: 24px;
-  padding: 6px; }
+/*button.color {*/
+/*  min-height: 24px;*/
+/*  min-width: 24px;*/
+/*  padding: 6px; }*/
 
 /*********
  * Links *
