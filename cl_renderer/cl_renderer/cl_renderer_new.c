@@ -7,6 +7,8 @@ static void				static_data_init(t_cl_renderer *renderer)
 	printf("Renderer : Initializing camera\n");
 	renderer->data.camera =
 		camera_new(&renderer->image->width, &renderer->image->height);
+	renderer->data.camera_unmodified =
+		camera_new(&renderer->image->width, &renderer->image->height);
 	printf("Renderer : Initializing scene\n");
 	renderer->data.scene = scene_new();
 	renderer->data.image = renderer->image->color_buffer;

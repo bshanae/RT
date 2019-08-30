@@ -10,6 +10,8 @@ int 				cl_renderer_camera_move
 		renderer->data.camera->position = test;
 	else
 		return (0);
+	cl_renderer_flag_set(renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
 	return (1);
 	// todo store step in cl_renderer
 }
@@ -20,5 +22,19 @@ void 				cl_renderer_camera_rotate
 					t_f4_rotation_direction direction)
 {
 	camera_rotate(renderer->data.camera, axis, direction, 0.025f);
+	cl_renderer_flag_set(renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
 	// todo store theta in cl_renderer
+}
+
+void				cl_renderer_camera_reset(t_cl_renderer *renderer)
+{
+	*renderer->data.camera = *renderer->data.camera_unmodified;
+	cl_renderer_flag_set(renderer, cl_flag_update_camera);
+	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
+}
+
+void				cl_renderer_camera_save(t_cl_renderer *renderer)
+{
+	*renderer->data.camera_unmodified = *renderer->data.camera;
 }

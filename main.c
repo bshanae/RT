@@ -93,6 +93,7 @@ int					main(int argc, char **argv)
 	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -1.;
 	gui->renderer->data.camera->position.z = 30.;
+	cl_renderer_camera_save(gui->renderer);
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

@@ -20,6 +20,7 @@
 
 typedef	struct 				s_cl_renderer_data
 {
+	t_camera				*camera_unmodified;
 	t_camera				*camera;
 	t_scene					*scene;
 	t_color					*image;
@@ -60,6 +61,9 @@ void 						cl_renderer_camera_rotate(
 							t_cl_renderer *renderer,
 		 					t_f4_rotation_axis axis,
 		 					t_f4_rotation_direction direction);
+void						cl_renderer_camera_reset(t_cl_renderer *renderer);
+void						cl_renderer_camera_save(t_cl_renderer *renderer);
+
 void						cl_renderer_load
 							(t_cl_renderer *renderer, const char *path);
 
