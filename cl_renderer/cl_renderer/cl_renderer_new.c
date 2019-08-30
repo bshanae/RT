@@ -39,7 +39,7 @@ static void				static_set_args(t_cl_renderer *renderer)
 		sizeof(u_long) * renderer->pixel_number, CL_MEM_READ_WRITE);
 	// texture_data
 	cl_arg_list_push(renderer->args, renderer->data.texture->data,
-					 sizeof(renderer->data.texture->data), CL_MEM_READ_WRITE);
+			sizeof(RT_F4_API) * renderer->data.texture->texture_length[renderer->data.texture->textures_number], CL_MEM_READ_WRITE);
 	// texture
 	cl_arg_list_push(renderer->args, renderer->data.texture,
 		sizeof(t_texture), CL_MEM_READ_WRITE);

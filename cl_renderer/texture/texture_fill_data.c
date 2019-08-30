@@ -8,7 +8,9 @@ void				texture_fill_data(
 	RT_F4_API		*pointer;
 
 	i = 0;
-	texture_get_space(texture);
+	if (!(texture->data = (RT_F4_API *)malloc(sizeof(RT_F4_API)* texture->texture_length[texture->textures_number])))
+		exit (6);
+	//texture_get_space(texture);
 	pointer = &texture->data[0];
 	while (i < texture->textures_number)
 		pointer += texture->texture_length[i++];
