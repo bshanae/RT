@@ -16,8 +16,11 @@ static RT_F4		light_area(
 	RT_F			cos_a_max;
 	RT_F			omega;
 	RT_F			sphere_radius;
+	const RT_F		default_transparence_shadow_ratio = 0.15;
+	RT_F			shadow_ratio;
 
 	radiance = 0;
+	shadow_ratio = 0.;
 	for (int i = 0; i < scene->objects_length; i++)
 	{
  		if (i == intersection_object->object_id)
@@ -37,7 +40,12 @@ static RT_F4		light_area(
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
 		if (intersection_light.object_id != i)
-			continue;
+		{
+			if (intersection_light.material.transparence)
+				shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
+			radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
+			continue ;
+		}
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)

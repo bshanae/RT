@@ -1090,7 +1090,7 @@ static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 p
         shifted_point *= cross_division;
         cross_value = static_cross_sdf(shifted_point) / cross_division;
 
-        value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
+        box_sdf_value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
         cross_period /= (RT_F)3.;
         cross_shift /= (RT_F)3.;
         cross_division *= (RT_F)3.;
@@ -1271,6 +1271,7 @@ static void     				sphere_intersect_t(constant t_object *object, t_intersection
 
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
+	/*
 	int				result;
 
     result = 0;
@@ -1319,6 +1320,14 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 		result += object_intersect(scene->objects + object_i, intersection);
 
     return (result != 0);
+    */
+	int				result;
+
+	result = 0;
+	for (int object_i = 0; object_i < scene->objects_length; object_i++)
+		result += object_intersect(scene->objects + object_i, intersection);
+
+	return (result != 0);
 }
 
 static int			scene_intersect_rm(
@@ -1520,7 +1529,8 @@ static int				static_is_shadowed(
 						constant t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						RT_F4 *light_direction)
+						RT_F4 *light_direction,
+						RT_F *transparence_shadow_ratio)
 {
 	t_intersection   	shadow;
 
@@ -1528,6 +1538,10 @@ static int				static_is_shadowed(
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);
+	if (intersection->material.transparence > 0.1)
+	{
+		*transparence_shadow_ratio = 5.;
+	}
 	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
@@ -1542,10 +1556,12 @@ static RT_F4			light_basic(
 	RT_F4				color_specular;
 	RT_F4				color_cartoon;
 	RT_F4				light_direction;
+	RT_F				transparence_shadow_ratio;
 
 	color_diffuse = 0.;
 	color_specular = 0.;
 	color_cartoon = 0.;
+	*transparence_shadow_ratio = 1.;
 	for (int i = 0; i < scene->lights_length; i++)
 	{
 		object = scene->objects + scene->lights[i];
@@ -1555,8 +1571,11 @@ static RT_F4			light_basic(
 			continue ;
 		}
 		light_direction = static_get_direction(intersection, object);
-		if (static_is_shadowed(scene, intersection, settings, &light_direction))
+		if (static_is_shadowed(scene, intersection, settings, &light_direction, &transparence_shadow_ratio))
+		{
+			color_diffuse *= (RT_F4){transparence_shadow_ratio, transparence_shadow_ratio, transparence_shadow_ratio, 0.};
 			continue;
+		}
 		if (filter_cartoon_mod)
 			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);
 		else
