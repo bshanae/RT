@@ -1,0 +1,10 @@
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "rt_parameters.h"
+
+typedef struct 		s_texture
+{
+	RT_F4			data[TEXTURE_DATA_SIZE];
+	int 			texture_length[MAX_TEXTURES_NUMBER];
+	int 			textures_number;
+}					t_texture;

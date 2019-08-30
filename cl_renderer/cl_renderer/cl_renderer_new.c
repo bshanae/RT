@@ -8,6 +8,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 		camera_new(&renderer->image->width, &renderer->image->height);
 	renderer->data.scene = scene_new();
 	renderer->data.image = renderer->image->color_buffer;
+	renderer->data.texture = texture_new();
 	cl_renderer_settings_init(&renderer->data.settings);
 	i = 0;
 	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
@@ -36,6 +37,9 @@ static void				static_set_args(t_cl_renderer *renderer)
 	// rng
 	cl_arg_list_push(renderer->args, renderer->data.rng_state,
 		sizeof(u_long) * renderer->pixel_number, CL_MEM_READ_WRITE);
+	// texture
+	cl_arg_list_push(renderer->args, renderer->data.texture,
+					 sizeof(t_texture), CL_MEM_READ_WRITE);
 	cl_builder_set_args(renderer->builder, renderer->args);
 }
 

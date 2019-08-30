@@ -3,7 +3,7 @@
 
 # include "libft_ft_printf.h"
 
-# define ASSERT(statement)						\
+# define FT_ASSERT(statement)						\
 	if (!(statement))							\
     {											\
 		ft_printf("{red!}assertion failed\n");	\
@@ -12,6 +12,5 @@
         ft_printf("line : %d\n", __LINE__);		\
         exit(1);								\
     }
-
 
 #endif

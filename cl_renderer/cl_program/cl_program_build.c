@@ -6,7 +6,7 @@ int					cl_program_build
 	program->buffer[program->length] = '\0';
 	program->program = clCreateProgramWithSource(context, 1,
 		(const char **)&program->buffer, &program->length, &program->error);
-	ASSERT(program->error == 0)
+	FT_ASSERT(program->error == 0)
 	program->error =
 		clBuildProgram(program->program, 0, NULL, flags, NULL, NULL);
 	return (program->error != 0);

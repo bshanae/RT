@@ -16,7 +16,7 @@ int					cl_arg_list_push
 	list->array[i].update_need = ptr != NULL;
 	list->array[i].device = clCreateBuffer(list->context,
 		type, size, NULL, &error);
-	ASSERT(error == 0)
+	FT_ASSERT(error == 0)
 	return (i);
 #else
 	return (-1);

@@ -14,6 +14,7 @@
 # include "cl_renderer_flag_x.h"
 # include "cl_renderer_settings.h"
 # include "json_parse.h"
+# include "texture.h"
 
 # include <stdlib.h>
 # include <time.h>
@@ -23,6 +24,7 @@ typedef	struct 				s_cl_renderer_data
 	t_camera				*camera;
 	t_scene					*scene;
 	t_color					*image;
+	t_texture				*texture;
 	t_cl_renderer_settings	settings;
 	u_long					*rng_state;
 }							t_cl_renderer_data;

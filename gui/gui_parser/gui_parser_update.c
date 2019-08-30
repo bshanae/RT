@@ -9,7 +9,7 @@ void 				gui_parser_update(t_gui_parser *parser)
 	struct dirent	*file;
 
 	gtk_list_store_clear(parser->list);
-	ASSERT((directory = opendir(RT_GUI_SCENES)) != NULL);
+	FT_ASSERT((directory = opendir(RT_GUI_SCENES)) != NULL);
 	while ((file = readdir(directory)))
 	{
 		if (ft_strstr(file->d_name, ".json") == NULL)

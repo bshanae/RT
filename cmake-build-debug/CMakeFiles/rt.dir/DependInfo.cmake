@@ -63,6 +63,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
   "/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_data_load.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.o"
+  "/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui/gui_load.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_load.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui/gui_loop.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"
@@ -247,6 +250,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././cl_renderer/cl_builder"
   ".././cl_renderer/cl_renderer"
   ".././cl_renderer/json"
+  ".././cl_renderer/texture"
   )
 
 # Targets to which this target links.

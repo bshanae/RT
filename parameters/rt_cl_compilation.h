@@ -13,6 +13,7 @@
 # define CL_SOURCE_RAY						"cl_ray"
 # define CL_SOURCE_COLOR					"cl_color"
 # define CL_SOURCE_MATERIAL					"cl_material"
+# define CL_SOURCE_TEXTURE					"cl_texture"
 # define CL_SOURCE_INTERSECTION				"cl_intersection"
 # define CL_SOURCE_OBJECT					"cl_object"
 # define CL_SOURCE_OBJECT_SPHERE			"cl_object_sphere"

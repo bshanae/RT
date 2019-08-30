@@ -4,6 +4,7 @@
 # include "rt_parameters.h"
 
 # include "object_interaction.h"
+# include "texture.h"
 
 # include <stdlib.h>
 
@@ -13,6 +14,7 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
+	t_texture		*textures[MAX_TEXTURES_NUMBER];
 }					t_scene;
 
 t_scene				*scene_new(void);

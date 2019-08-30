@@ -1716,6 +1716,87 @@ cl_renderer/scene/scene_update.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.s
 .PHONY : cl_renderer/scene/scene_update.c.s
 
+cl_renderer/texture/texture_data_load.o: cl_renderer/texture/texture_data_load.c.o
+
+.PHONY : cl_renderer/texture/texture_data_load.o
+
+# target to build an object file
+cl_renderer/texture/texture_data_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o
+.PHONY : cl_renderer/texture/texture_data_load.c.o
+
+cl_renderer/texture/texture_data_load.i: cl_renderer/texture/texture_data_load.c.i
+
+.PHONY : cl_renderer/texture/texture_data_load.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_data_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.i
+.PHONY : cl_renderer/texture/texture_data_load.c.i
+
+cl_renderer/texture/texture_data_load.s: cl_renderer/texture/texture_data_load.c.s
+
+.PHONY : cl_renderer/texture/texture_data_load.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_data_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.s
+.PHONY : cl_renderer/texture/texture_data_load.c.s
+
+cl_renderer/texture/texture_delete.o: cl_renderer/texture/texture_delete.c.o
+
+.PHONY : cl_renderer/texture/texture_delete.o
+
+# target to build an object file
+cl_renderer/texture/texture_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.o
+.PHONY : cl_renderer/texture/texture_delete.c.o
+
+cl_renderer/texture/texture_delete.i: cl_renderer/texture/texture_delete.c.i
+
+.PHONY : cl_renderer/texture/texture_delete.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.i
+.PHONY : cl_renderer/texture/texture_delete.c.i
+
+cl_renderer/texture/texture_delete.s: cl_renderer/texture/texture_delete.c.s
+
+.PHONY : cl_renderer/texture/texture_delete.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.s
+.PHONY : cl_renderer/texture/texture_delete.c.s
+
+cl_renderer/texture/texture_new.o: cl_renderer/texture/texture_new.c.o
+
+.PHONY : cl_renderer/texture/texture_new.o
+
+# target to build an object file
+cl_renderer/texture/texture_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.o
+.PHONY : cl_renderer/texture/texture_new.c.o
+
+cl_renderer/texture/texture_new.i: cl_renderer/texture/texture_new.c.i
+
+.PHONY : cl_renderer/texture/texture_new.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.i
+.PHONY : cl_renderer/texture/texture_new.c.i
+
+cl_renderer/texture/texture_new.s: cl_renderer/texture/texture_new.c.s
+
+.PHONY : cl_renderer/texture/texture_new.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.s
+.PHONY : cl_renderer/texture/texture_new.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -5277,6 +5358,15 @@ help:
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"
+	@echo "... cl_renderer/texture/texture_data_load.o"
+	@echo "... cl_renderer/texture/texture_data_load.i"
+	@echo "... cl_renderer/texture/texture_data_load.s"
+	@echo "... cl_renderer/texture/texture_delete.o"
+	@echo "... cl_renderer/texture/texture_delete.i"
+	@echo "... cl_renderer/texture/texture_delete.s"
+	@echo "... cl_renderer/texture/texture_new.o"
+	@echo "... cl_renderer/texture/texture_new.i"
+	@echo "... cl_renderer/texture/texture_new.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

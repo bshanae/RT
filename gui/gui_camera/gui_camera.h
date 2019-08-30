@@ -3,7 +3,7 @@
 
 # include "rt_parameters.h"
 
-# include "assert.h"
+# include "rt_assert.h"
 # include "gui_entry.h"
 # include "camera.h"
 

@@ -77,7 +77,8 @@ include_directories(
 		./cl_renderer/cl_arg_list/
 		./cl_renderer/cl_builder/
 		./cl_renderer/cl_renderer/
-		./cl_renderer/json/)
+		./cl_renderer/json/
+		./cl_renderer/texture/)
 
 set(RT_GTK_LIBRARIES
 		"gtk-3"
@@ -120,7 +121,8 @@ set(SOURCE_GUI_GUI
 		./gui/gui/gui_new.c
 		./gui/gui/gui_delete.c
 		./gui/gui/gui_load.c
-		./gui/gui/gui_loop.c gui/gui/gui_render.c)
+		./gui/gui/gui_loop.c
+        ./gui/gui/gui_render.c)
 
 set(SOURCE_GUI_QUEUE
 		./gui/gui_queue/gui_queue_new.c
@@ -140,7 +142,7 @@ set(SOURCE_GUI_PARSER
 		./gui/gui_parser/gui_parser_update.c
 		./gui/gui_signal_connect_x/gui_signal_connect_parser.c
 		./gui/gui_signal_x/gui_signal_parser_dialog_x.c
-	./gui/gui_queue/gui_finish.c)
+	    ./gui/gui_queue/gui_finish.c)
 
 set(SOURCE_GUI_CAMERA
 		./gui/gui_camera/gui_camera_new.c
@@ -294,6 +296,10 @@ set(SOURCE_JSON
 		./cl_renderer/json/json_objects.c
 		./cl_renderer/json/readfile.c)
 
+set(SOURCE_TEXTURE
+		./cl_renderer/texture/texture_data_load.c
+        ./cl_renderer/texture/texture_new.c cl_renderer/texture/texture_delete.c)
+
 set(SOURCE_F4
 		./cl_renderer/f4/f4_add.c
 		./cl_renderer/f4/f4_sub.c
@@ -317,14 +323,16 @@ set(SOURCE_OBJECT_X
 		./cl_renderer/object_x/object_torus.c
 		./cl_renderer/object_x/object_julia.c
 		./cl_renderer/object_x/object_light_x.c
-		./cl_renderer/object_x/object_mandelbulb.c cl_renderer/object_x/object_perforated_cube.c)
+		./cl_renderer/object_x/object_mandelbulb.c
+		./cl_renderer/object_x/object_perforated_cube.c)
 
 set(SOURCE_SCENE
 		./cl_renderer/scene/scene_new.c
 		./cl_renderer/scene/scene_get_space.c
 		./cl_renderer/scene/scene_delete.c
 		./cl_renderer/scene/scene_remove_object.c
-		./cl_renderer/scene/scene_update.c cl_renderer/scene/scene_clear.c)
+		./cl_renderer/scene/scene_update.c
+		./cl_renderer/scene/scene_clear.c)
 
 set(SOURCE_RAY
 		./cl_renderer/ray/ray)
@@ -370,6 +378,7 @@ set(SOURCE_CL_RENDERER_
 
 set(SOURCE_RENDERER
 		${SOURCE_JSON}
+        ${SOURCE_TEXTURE}
 		${SOURCE_F4}
 		${SOURCE_OBJECT}
 		${SOURCE_OBJECT_X}

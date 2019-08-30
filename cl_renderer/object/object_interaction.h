@@ -1,7 +1,7 @@
 #ifndef OBJECT_INTERACTION_H
 # define OBJECT_INTERACTION_H
 
-# include "assert.h"
+# include "rt_assert.h"
 # include "f4.h"
 # include "object_definition.h"
 # include "object_x.h"

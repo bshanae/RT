@@ -4,7 +4,7 @@ void				cl_builder_create_context(t_cl_builder *builder)
 {
 	builder->context = clCreateContext(NULL, 1,
 		&builder->device_id, 0, 0, &builder->error);
-	ASSERT(builder->error == 0)
+	FT_ASSERT(builder->error == 0)
 }
 
 void				cl_builder_create_program_a(t_cl_builder *builder)
@@ -15,6 +15,7 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_RAY);
 	cl_program_concat(builder->program, CL_SOURCE_COLOR);
 	cl_program_concat(builder->program, CL_SOURCE_MATERIAL);
+	cl_program_concat(builder->program, CL_SOURCE_TEXTURE);
 	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_SPHERE);
@@ -52,13 +53,13 @@ void				cl_builder_create_kernel(t_cl_builder *builder)
 {
 	builder->kernel = clCreateKernel(builder->program->program,
 		CL_MAIN_FUNCTION, &builder->error);
-	ASSERT(builder->error == 0)
+	FT_ASSERT(builder->error == 0)
 }
 
 void				cl_builder_create_queue(t_cl_builder *builder)
 {
 	builder->queue = clCreateCommandQueue(builder->context,
 		 builder->device_id, 0, &builder->error);
-	ASSERT(builder->error == 0)
+	FT_ASSERT(builder->error == 0)
 
 }
