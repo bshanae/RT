@@ -4,6 +4,7 @@
 # include "rt_parameters.h"
 
 # include <gtk/gtk.h>
+# include <sys/time.h>
 
 # define FUNC_MASK	void(*)(void *, void *)
 
@@ -16,7 +17,8 @@ typedef struct 		s_gui_queue
 	int 			block_last_state;
 	int 			kill_timeout;
 	int 			force_execute;
-	int 			wait;
+	int 			force_finished;
+	int 			pass;
 }					t_gui_queue;
 
 t_gui_queue			*gui_queue_new(void *data, void (*function)(void *ptr));
@@ -29,5 +31,7 @@ void				gui_queue_unblock(t_gui_queue *queue);
 gboolean			gui_queue_push(t_gui_queue *queue);
 void				gui_queue_execute(void *ptr, t_gui_queue *queue);
 void				gui_queue_execute_force(t_gui_queue *queue);
+void 				gui_queue_wait(t_gui_queue *queue);
+double				gui_queue_get_time(void);
 
 #endif

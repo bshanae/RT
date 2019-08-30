@@ -3,7 +3,6 @@
 static void			static_run_queue(t_cl_renderer *renderer)
 {
 	int 			error;
-
 	error = clEnqueueNDRangeKernel(renderer->builder->queue,
 		renderer->builder->kernel, 1, NULL,
 		&renderer->pixel_number, NULL, 0, NULL, NULL);
@@ -11,7 +10,6 @@ static void			static_run_queue(t_cl_renderer *renderer)
 	cl_args_list_read(renderer->args, cl_arg_image);
 	if (renderer->data.camera->focus_request)
 		cl_args_list_read(renderer->args, cl_arg_camera);
-	renderer->data.camera->focus_request = 0;
 	renderer->data.settings.sample_count++;
 	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 }

@@ -13,6 +13,7 @@ t_gui_queue			*gui_queue_new(void *data, void (*function)(void *))
 	new->block = 0;
 	new->kill_timeout = 0;
 	new->force_execute = 1;
-	new->wait = 0;
+	new->force_finished = 0;
+	new->pass = 0;
 	return (new);
 }

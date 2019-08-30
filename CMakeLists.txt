@@ -147,7 +147,7 @@ set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_push.c
 	./gui/gui_queue/gui_queue_execute_x.c
 	./gui/gui_queue/gui_queue_start.c
-	"./gui/gui_queue/gui_queue_(un)block.c")
+	"./gui/gui_queue/gui_queue_(un)block.c" gui/gui_queue/gui_queue_wait.c gui/gui_queue/gui_queue_get_time.c)
 
 set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
@@ -355,7 +355,7 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_move.c
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
-	./gui/gui_camera/gui_camera_reset.c)
+	./gui/gui_camera/gui_camera_reset.c cl_renderer/camera/camera_request_x.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -386,7 +386,7 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
 	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
-	./cl_renderer/cl_renderer/cl_renderer_load.c)
+	./cl_renderer/cl_renderer/cl_renderer_load.c cl_renderer/cl_renderer/cl_renderer_camera_request_x.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

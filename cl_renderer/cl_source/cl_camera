@@ -65,13 +65,12 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
     RT_F4			up;
     RT_F4			right;
 
-    intersection.ray.origin = camera->position;
     up = (RT_F4)camera->axis_y * (RT_F)(-1.f * camera->focus_request_value.y + (camera->height - 1.f) / 2.f);
     right = (RT_F4)camera->axis_x * (RT_F)(camera->focus_request_value.x - (camera->width - 1.f) / 2.f);
-    intersection.ray.direction = up + right + camera->forward;
-    intersection.ray.direction = normalize(intersection.ray.direction);
 
-    intersection_reset(&intersection);
+    intersection.ray.origin = camera->position;
+    intersection.ray.direction = normalize(up + right + camera->forward);
+
     if (scene_intersect(scene, &intersection, settings))
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
 

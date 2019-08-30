@@ -56,4 +56,6 @@ void 				camera_rotate
 					RT_F theta);
 void				camera_apply(t_camera *camera);
 
+void				camera_request_focus(t_camera *camera, int x, int y);
+
 #endif

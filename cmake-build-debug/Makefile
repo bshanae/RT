@@ -231,6 +231,33 @@ cl_renderer/camera/camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.s
 .PHONY : cl_renderer/camera/camera_new.c.s
 
+cl_renderer/camera/camera_request_x.o: cl_renderer/camera/camera_request_x.c.o
+
+.PHONY : cl_renderer/camera/camera_request_x.o
+
+# target to build an object file
+cl_renderer/camera/camera_request_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.o
+.PHONY : cl_renderer/camera/camera_request_x.c.o
+
+cl_renderer/camera/camera_request_x.i: cl_renderer/camera/camera_request_x.c.i
+
+.PHONY : cl_renderer/camera/camera_request_x.i
+
+# target to preprocess a source file
+cl_renderer/camera/camera_request_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.i
+.PHONY : cl_renderer/camera/camera_request_x.c.i
+
+cl_renderer/camera/camera_request_x.s: cl_renderer/camera/camera_request_x.c.s
+
+.PHONY : cl_renderer/camera/camera_request_x.s
+
+# target to generate assembly for a file
+cl_renderer/camera/camera_request_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.s
+.PHONY : cl_renderer/camera/camera_request_x.c.s
+
 cl_renderer/camera/camera_rotate.o: cl_renderer/camera/camera_rotate.c.o
 
 .PHONY : cl_renderer/camera/camera_rotate.o
@@ -689,6 +716,33 @@ cl_renderer/cl_program/cl_program_new.s: cl_renderer/cl_program/cl_program_new.c
 cl_renderer/cl_program/cl_program_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.s
 .PHONY : cl_renderer/cl_program/cl_program_new.c.s
+
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.o: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.i: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.s: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
 
 cl_renderer/cl_renderer/cl_renderer_camera_x.o: cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
 
@@ -2796,6 +2850,33 @@ gui/gui_queue/gui_queue_execute_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.s
 .PHONY : gui/gui_queue/gui_queue_execute_x.c.s
 
+gui/gui_queue/gui_queue_get_time.o: gui/gui_queue/gui_queue_get_time.c.o
+
+.PHONY : gui/gui_queue/gui_queue_get_time.o
+
+# target to build an object file
+gui/gui_queue/gui_queue_get_time.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.o
+.PHONY : gui/gui_queue/gui_queue_get_time.c.o
+
+gui/gui_queue/gui_queue_get_time.i: gui/gui_queue/gui_queue_get_time.c.i
+
+.PHONY : gui/gui_queue/gui_queue_get_time.i
+
+# target to preprocess a source file
+gui/gui_queue/gui_queue_get_time.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.i
+.PHONY : gui/gui_queue/gui_queue_get_time.c.i
+
+gui/gui_queue/gui_queue_get_time.s: gui/gui_queue/gui_queue_get_time.c.s
+
+.PHONY : gui/gui_queue/gui_queue_get_time.s
+
+# target to generate assembly for a file
+gui/gui_queue/gui_queue_get_time.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.s
+.PHONY : gui/gui_queue/gui_queue_get_time.c.s
+
 gui/gui_queue/gui_queue_new.o: gui/gui_queue/gui_queue_new.c.o
 
 .PHONY : gui/gui_queue/gui_queue_new.o
@@ -2876,6 +2957,33 @@ gui/gui_queue/gui_queue_start.s: gui/gui_queue/gui_queue_start.c.s
 gui/gui_queue/gui_queue_start.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_start.c.s
 .PHONY : gui/gui_queue/gui_queue_start.c.s
+
+gui/gui_queue/gui_queue_wait.o: gui/gui_queue/gui_queue_wait.c.o
+
+.PHONY : gui/gui_queue/gui_queue_wait.o
+
+# target to build an object file
+gui/gui_queue/gui_queue_wait.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.o
+.PHONY : gui/gui_queue/gui_queue_wait.c.o
+
+gui/gui_queue/gui_queue_wait.i: gui/gui_queue/gui_queue_wait.c.i
+
+.PHONY : gui/gui_queue/gui_queue_wait.i
+
+# target to preprocess a source file
+gui/gui_queue/gui_queue_wait.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.i
+.PHONY : gui/gui_queue/gui_queue_wait.c.i
+
+gui/gui_queue/gui_queue_wait.s: gui/gui_queue/gui_queue_wait.c.s
+
+.PHONY : gui/gui_queue/gui_queue_wait.s
+
+# target to generate assembly for a file
+gui/gui_queue/gui_queue_wait.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.s
+.PHONY : gui/gui_queue/gui_queue_wait.c.s
 
 gui/gui_scene/gui_scene_delete.o: gui/gui_scene/gui_scene_delete.c.o
 
@@ -5166,6 +5274,9 @@ help:
 	@echo "... cl_renderer/camera/camera_new.o"
 	@echo "... cl_renderer/camera/camera_new.i"
 	@echo "... cl_renderer/camera/camera_new.s"
+	@echo "... cl_renderer/camera/camera_request_x.o"
+	@echo "... cl_renderer/camera/camera_request_x.i"
+	@echo "... cl_renderer/camera/camera_request_x.s"
 	@echo "... cl_renderer/camera/camera_rotate.o"
 	@echo "... cl_renderer/camera/camera_rotate.i"
 	@echo "... cl_renderer/camera/camera_rotate.s"
@@ -5217,6 +5328,9 @@ help:
 	@echo "... cl_renderer/cl_program/cl_program_new.o"
 	@echo "... cl_renderer/cl_program/cl_program_new.i"
 	@echo "... cl_renderer/cl_program/cl_program_new.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.s"
@@ -5451,6 +5565,9 @@ help:
 	@echo "... gui/gui_queue/gui_queue_execute_x.o"
 	@echo "... gui/gui_queue/gui_queue_execute_x.i"
 	@echo "... gui/gui_queue/gui_queue_execute_x.s"
+	@echo "... gui/gui_queue/gui_queue_get_time.o"
+	@echo "... gui/gui_queue/gui_queue_get_time.i"
+	@echo "... gui/gui_queue/gui_queue_get_time.s"
 	@echo "... gui/gui_queue/gui_queue_new.o"
 	@echo "... gui/gui_queue/gui_queue_new.i"
 	@echo "... gui/gui_queue/gui_queue_new.s"
@@ -5460,6 +5577,9 @@ help:
 	@echo "... gui/gui_queue/gui_queue_start.o"
 	@echo "... gui/gui_queue/gui_queue_start.i"
 	@echo "... gui/gui_queue/gui_queue_start.s"
+	@echo "... gui/gui_queue/gui_queue_wait.o"
+	@echo "... gui/gui_queue/gui_queue_wait.i"
+	@echo "... gui/gui_queue/gui_queue_wait.s"
 	@echo "... gui/gui_scene/gui_scene_delete.o"
 	@echo "... gui/gui_scene/gui_scene_delete.i"
 	@echo "... gui/gui_scene/gui_scene_delete.s"

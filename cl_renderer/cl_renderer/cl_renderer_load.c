@@ -6,4 +6,5 @@ void				cl_renderer_load
 	scene_clear(renderer->data.scene);
 	load_scene(renderer, path);
 	scene_update(renderer->data.scene);
+	cl_renderer_camera_save(renderer);
 }

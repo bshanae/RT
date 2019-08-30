@@ -1520,6 +1520,7 @@ scrollbar {
 /**********
  * Switch *
  **********/
+
 switch {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   margin: 6px 0;
@@ -1542,9 +1543,9 @@ switch {
     background-color: #FFFFFF;
     color: rgba(0, 0, 0, 0.8);
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), margin 0;
-    min-width: 24px;
-    min-height: 24px;
-    margin: -4px 0 -4px -4px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: -3px -3px -3px -3px;
     border-radius: 100px;
     -gtk-outline-radius: 100px; }
   switch:hover slider {
@@ -1552,7 +1553,7 @@ switch {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   switch:checked slider {
     animation: needs_attention 0.3s cubic-bezier(0, 0, 0.2, 1);
-    margin: -4px -4px -4px 0;
+    margin: -3px -3px -3px -3px;
     background-color: #a3a3a3;
     color: #FFFFFF; }
   switch:disabled slider {

@@ -64,7 +64,6 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 	int				result;
 
     result = 0;
-
     /*
 
     RT_F            dot_value[0];
@@ -166,6 +165,7 @@ static int			scene_intersect(
 {
 	int				result;
 
+	intersection_reset(intersection);
 #ifndef RT_OPEN_CL_LOW
 	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
 #else

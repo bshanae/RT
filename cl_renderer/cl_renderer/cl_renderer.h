@@ -63,6 +63,8 @@ void 						cl_renderer_camera_rotate(
 		 					t_f4_rotation_direction direction);
 void						cl_renderer_camera_reset(t_cl_renderer *renderer);
 void						cl_renderer_camera_save(t_cl_renderer *renderer);
+void 						cl_renderer_camera_request_focus
+							(t_cl_renderer *renderer, int x, int y);
 
 void						cl_renderer_load
 							(t_cl_renderer *renderer, const char *path);

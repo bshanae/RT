@@ -198,6 +198,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_request_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_rotate.c">
 			<Option target="rt"/>
 		</Unit>
@@ -247,6 +250,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c">
@@ -486,6 +492,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_execute_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_get_time.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_new.c">
 			<Option target="rt"/>
 		</Unit>
@@ -493,6 +502,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_start.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_wait.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">
