@@ -28,9 +28,11 @@ typedef struct		s_object
 	char 			name[32];
 	int				id;
 	t_object_type	type;
-	int 			is_csg;
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
+	int 			is_csg;
+	int 			is_limited;
+	int 			is_chosen;
 }					t_object;
 
 const char 			*object_translate(t_object_type type);

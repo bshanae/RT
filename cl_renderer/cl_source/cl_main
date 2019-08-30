@@ -16,6 +16,13 @@ kernel void			cl_main(
 
     global_id = get_global_id(0);
 
+	if (camera->select_request)
+	{
+		if (!global_id)
+			camera_select(camera, scene, settings);
+		return ;
+	}
+
     if (camera->focus_request)
     {
     	if (!global_id)
@@ -29,7 +36,6 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	illumination_effect = 0.;
-
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 

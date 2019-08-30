@@ -60,6 +60,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_sphere.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_torus.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/camera_point_check.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_choose.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_clear.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"

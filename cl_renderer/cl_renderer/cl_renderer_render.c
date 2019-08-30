@@ -8,6 +8,12 @@ static void			static_run_queue(t_cl_renderer *renderer)
 		&renderer->pixel_number, NULL, 0, NULL, NULL);
 	ASSERT(error == 0)
 	cl_args_list_read(renderer->args, cl_arg_image);
+	if (renderer->data.camera->select_request)
+	{
+		cl_args_list_read(renderer->args, cl_arg_camera);
+		scene_choose(renderer->data.scene, renderer->data.camera->select_request_object);
+		cl_renderer_flag_set(renderer, cl_flag_update_scene);
+	}
 	if (renderer->data.camera->focus_request)
 		cl_args_list_read(renderer->args, cl_arg_camera);
 	renderer->data.settings.sample_count++;

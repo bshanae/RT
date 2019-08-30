@@ -158,6 +158,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"

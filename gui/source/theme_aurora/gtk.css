@@ -1520,7 +1520,6 @@ scrollbar {
 /**********
  * Switch *
  **********/
-
 switch {
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   margin: 6px 0;
@@ -1543,8 +1542,8 @@ switch {
     background-color: #FFFFFF;
     color: rgba(0, 0, 0, 0.8);
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), margin 0;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 24px;
+    min-height: 24px;
     margin: -3px -3px -3px -3px;
     border-radius: 100px;
     -gtk-outline-radius: 100px; }

@@ -26,7 +26,8 @@
  		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
- 		intersection_reset(&shadow);
+ 		if (x < sphere->radius)
+ 		     continue;
  		scene_intersect(scene, &shadow, settings);
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;

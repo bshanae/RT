@@ -29,7 +29,9 @@ typedef struct 		s_camera
 	RT_F			aperture_size;
 	RT_F			focal_length;
 	int 			focus_request;
-	RT_F2_API		focus_request_value;
+	int 			select_request;
+	int 			select_request_object;
+	RT_F2_API		request_value;
 }					t_camera;
 
 t_camera			*camera_new(INT_REF width, INT_REF height);
@@ -57,5 +59,6 @@ void 				camera_rotate
 void				camera_apply(t_camera *camera);
 
 void				camera_request_focus(t_camera *camera, int x, int y);
+void				camera_request_select(t_camera *camera, int x, int y);
 
 #endif

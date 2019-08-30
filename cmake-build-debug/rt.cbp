@@ -357,6 +357,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/camera_point_check.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_choose.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_clear.c">
 			<Option target="rt"/>
 		</Unit>

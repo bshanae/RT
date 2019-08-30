@@ -8,6 +8,11 @@ void				object_build(
 {
 	va_list		args;
 
+	space->material = material;
+	space->name[0] = '\0';
+	space->is_chosen = 0;
+	space->is_csg = 0;
+	space->is_limited = 0;
 	va_start(args, material);
 	if (type == object_light_ambient)
 		object_light_ambient_build(space, &args);
@@ -37,7 +42,5 @@ void				object_build(
 		object_julia_build(space, &args);
 	else if (type == object_csg)
 		object_csg_build(space, &args);
-	space->material = material;
-	space->name[0] = '\0';
 	va_end(args);
 }

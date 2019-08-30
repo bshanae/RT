@@ -28,6 +28,12 @@ static void					radiance_add(
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
+		if (scene->objects[intersection->object_id].is_chosen)
+		{
+			*sample = (RT_F4){0.f, 0.f, 0.f, 1.f};
+			return ;
+		}
+
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
 

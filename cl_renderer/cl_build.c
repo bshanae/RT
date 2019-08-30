@@ -212,9 +212,11 @@ typedef struct		s_object
 	char 			name[32];
 	int				id;
 	t_object_type	type;
-	int 			is_csg;
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
+	int 			is_csg;
+	int 			is_limited;
+	int 			is_chosen;
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1295,6 +1297,7 @@ static int			scene_intersect(
 {
 	int				result;
 
+	intersection_reset(intersection);
 #ifndef RT_OPEN_CL_LOW
 	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
 #else
@@ -1449,7 +1452,6 @@ static int				static_is_shadowed(
 {
 	t_intersection   	shadow;
 
-	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
 	scene_intersect(scene, &shadow, settings);
@@ -1528,7 +1530,6 @@ static RT_F4		light_area(
 
 		intersection_light.ray.origin = intersection_object->hit;
 		intersection_light.ray.direction = light_direction;
-		intersection_reset(&intersection_light);
 
 		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
@@ -1565,13 +1566,13 @@ static void			filter_jitter(RT_F *x, global ulong *rng_state)
 
 typedef struct 		s_camera
 {
-	RT_F4   		position;
-	RT_F4   		rotation;
-	RT_F4   		axis_x;
-	RT_F4   		axis_y;
-	RT_F4   		axis_z;
-	RT_F4   		forward;
-	RT_F4   		forward_backup;
+	RT_F4			position;
+	RT_F4			rotation;
+	RT_F4			axis_x;
+	RT_F4			axis_y;
+	RT_F4			axis_z;
+	RT_F4			forward;
+	RT_F4			forward_backup;
 	int				width;
 	int				height;
 	int 			filter_antialiasing;
@@ -1581,7 +1582,9 @@ typedef struct 		s_camera
 	RT_F			aperture_size;
 	RT_F			focal_length;
 	int 			focus_request;
-	RT_F2			focus_request_value;
+	int 			select_request;
+	int 			select_request_object;
+	RT_F2			request_value;
 }					t_camera;
 
 static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rng_state)
@@ -1597,11 +1600,22 @@ static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rn
 	ray->direction = normalize(focal_point - ray->origin);
 }
 
-static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulong *rng_state)
+static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
 {
 	t_ray			result;
 	RT_F4			up;
-	RT_F4			right;
+    RT_F4			right;
+
+	result.origin = camera->position;
+    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
+    right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
+    result.direction = normalize(up + right + camera->forward);
+    return (result);
+}
+
+static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulong *rng_state)
+{
+	t_ray			result;
 	RT_F 			xf;
 	RT_F 			yf;
 
@@ -1612,11 +1626,7 @@ static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulo
 		filter_jitter(&xf, rng_state);
     	filter_jitter(&yf, rng_state);
 	}
-	result.origin = camera->position;
-	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * yf + (camera->height - 1.f) / 2.f);
-	right = (RT_F4)camera->axis_x * (RT_F)(xf - (camera->width - 1.f) / 2.f);
-	result.direction = up + right + camera->forward;
-	result.direction = normalize(result.direction);
+	result = camera_build_ray_raw(camera, xf, yf);
 	if (camera->focus)
 		camera_focus(camera, &result, rng_state);
 	return (result);
@@ -1625,21 +1635,24 @@ static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulo
 static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
-    RT_F4			up;
-    RT_F4			right;
-
-    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * camera->focus_request_value.y + (camera->height - 1.f) / 2.f);
-    right = (RT_F4)camera->axis_x * (RT_F)(camera->focus_request_value.x - (camera->width - 1.f) / 2.f);
-
-    intersection.ray.origin = camera->position;
-    intersection.ray.direction = normalize(up + right + camera->forward);
-
-    if (scene_intersect(scene, &intersection, settings))
-    	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
-	else
-		printf("wtf\n");
 
     camera->focus_request = 0;
+
+    intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
+    if (scene_intersect(scene, &intersection, settings))
+    	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
+}
+
+static void			camera_select(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+{
+    t_intersection	intersection;
+
+	camera->select_request = 0;
+	camera->select_request_object = -1;
+
+    intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
+    if (scene_intersect(scene, &intersection, settings))
+    	camera->select_request_object = intersection.object_id;
 }
 // cl_radiance /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1668,9 +1681,14 @@ static void					radiance_add(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		intersection_reset(intersection);
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
+
+		if (scene->objects[intersection->object_id].is_chosen)
+		{
+			*sample = (RT_F4){0.f, 0.f, 0.f, 1.f};
+			return ;
+		}
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
@@ -1758,7 +1776,8 @@ static RT_F4				radiance_get(
  		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
- 		intersection_reset(&shadow);
+ 		if (x < sphere->radius)
+ 		     continue;
  		scene_intersect(scene, &shadow, settings);
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;
@@ -1785,25 +1804,26 @@ kernel void			cl_main(
 
     global_id = get_global_id(0);
 
+	if (camera->select_request)
+	{
+		if (!global_id)
+			camera_choose(camera, scene, settings);
+		return ;
+	}
+
+    if (camera->focus_request)
+    {
+    	if (!global_id)
+    		camera_auto_focus(camera, scene, settings);
+    	return ;
+    }
+
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	illumination_effect = 0.;
-
-	if (camera->focus_request)
-	{
-		if (!global_id)
-		{
-			camera_auto_focus(camera, scene, settings);
-			for (int i = -10; i < 10; i++)
-				for (int j = -10; j < 10; j++)
-					image[((int)camera->focus_request_value.y + i) * camera->width + (int)camera->focus_request_value.x + j] = (t_color){0,255,0,255);
-		}
-		return ;
-	}
-
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 
