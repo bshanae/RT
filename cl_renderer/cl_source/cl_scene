@@ -82,6 +82,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
+		if (scene->objects[intersection->object_id].texture_id > -1)
+			intersection->material.color = object_texture(scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);

@@ -8,3 +8,8 @@ typedef struct 		s_texture
 	int				height[TEXTURE_MAX_NUMBER];
 	int 			textures_number;
 }					t_texture;
+
+static RT_F4		object_texture(global t_object *object, t_intersection *intersection)
+{
+	return ((RT_F4){0., 1., 0., 1.});
+}

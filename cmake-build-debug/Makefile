@@ -2121,6 +2121,33 @@ cl_renderer/texture/texture_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.s
 .PHONY : cl_renderer/texture/texture_new.c.s
 
+cl_renderer/texture/texture_set.o: cl_renderer/texture/texture_set.c.o
+
+.PHONY : cl_renderer/texture/texture_set.o
+
+# target to build an object file
+cl_renderer/texture/texture_set.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o
+.PHONY : cl_renderer/texture/texture_set.c.o
+
+cl_renderer/texture/texture_set.i: cl_renderer/texture/texture_set.c.i
+
+.PHONY : cl_renderer/texture/texture_set.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_set.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.i
+.PHONY : cl_renderer/texture/texture_set.c.i
+
+cl_renderer/texture/texture_set.s: cl_renderer/texture/texture_set.c.s
+
+.PHONY : cl_renderer/texture/texture_set.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_set.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.s
+.PHONY : cl_renderer/texture/texture_set.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -5781,6 +5808,9 @@ help:
 	@echo "... cl_renderer/texture/texture_new.o"
 	@echo "... cl_renderer/texture/texture_new.i"
 	@echo "... cl_renderer/texture/texture_new.s"
+	@echo "... cl_renderer/texture/texture_set.o"
+	@echo "... cl_renderer/texture/texture_set.i"
+	@echo "... cl_renderer/texture/texture_set.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

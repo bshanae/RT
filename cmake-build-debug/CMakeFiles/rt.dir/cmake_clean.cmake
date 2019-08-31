@@ -136,6 +136,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"

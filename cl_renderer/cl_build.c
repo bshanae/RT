@@ -227,6 +227,7 @@ typedef struct		s_object
 	int				id;
 	t_object_type	type;
 	t_material		material;
+	int 			texture_id;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
 	int 			is_selected;
@@ -1333,15 +1334,19 @@ static RT_F4		object_normal(
 }
 // cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 				s_texture
+typedef struct 		s_texture
 {
-	RT_F4_API				data[TEXTURE_DATA_SIZE];
-	int 					texture_length[TEXTURE_MAX_NUMBER];
-	int						width[TEXTURE_MAX_NUMBER];
-	int						height[TEXTURE_MAX_NUMBER];
-	int 					textures_number;
-}							t_texture;
+	RT_F4			data[TEXTURE_DATA_SIZE];
+	int 			texture_length[TEXTURE_MAX_NUMBER];
+	int				width[TEXTURE_MAX_NUMBER];
+	int				height[TEXTURE_MAX_NUMBER];
+	int 			textures_number;
+}					t_texture;
 
+static RT_F4		object_texture(global t_scene *scene, t_intersection *intersection)
+{
+	return ((RT_F4){0., 1., 0., 1.});
+}
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1426,6 +1431,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
+		if (scene->objects[intersection->object_id].texture_id > -1)
+			intersection->material.color = object_texture(scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);

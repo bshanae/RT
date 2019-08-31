@@ -39,6 +39,16 @@ typedef enum		e_scene_name_flag
 void				scene_give_name
 					(t_scene *scene, CHAR_REF str, t_scene_name_flag flag, ...);
 
+typedef enum		e_scene_texture_flag
+{
+	scene_texture_next,
+	scene_texture_last,
+	scene_texture_id
+}					t_scene_texture_flag;
+
+void				scene_texture_set
+					(t_scene *scene, int texture_id, t_scene_texture_flag flag, ...);
+
 int					scene_is_valid_id(t_scene *scene, int id);
 int					scene_is_valid_content(t_scene *scene);
 

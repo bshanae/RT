@@ -324,7 +324,7 @@ set(SOURCE_TEXTURE
 	./cl_renderer/texture/texture_data_load.c
 	./cl_renderer/texture/texture_disruptions_load.c
 	./cl_renderer/texture/texture_fill_data.c
-	./cl_renderer/texture/texture_iter.c)
+	./cl_renderer/texture/texture_iter.c cl_renderer/texture/texture_set.c)
 
 
 set(SOURCE_F4

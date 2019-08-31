@@ -12,6 +12,7 @@ void				object_build(
 		return ;
 	space->material = material;
 	space->name[0] = '\0';
+	space->texture_id = -1;
 	space->is_visible = 1;
 	space->is_selected = 0;
 	space->is_limited = 0;
