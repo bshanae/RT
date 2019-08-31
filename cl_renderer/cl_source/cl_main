@@ -27,12 +27,12 @@ kernel void			cl_main(
 		return ;
 	}
 
-    if (camera->focus_request)
-    {
-    	if (!global_id)
-    		camera_auto_focus(camera, scene, settings);
-    	return ;
-    }
+	if (camera->focus_request)
+	{
+		if (!global_id)
+			camera_auto_focus(camera, scene, settings);
+		return ;
+	}
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
@@ -45,7 +45,7 @@ kernel void			cl_main(
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 
-    radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
+	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
 	radiance_write(sample_store_mapped, global_id, radiance, settings);
 	image[global_id] = color_unpack(illumination_effect + radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
 }

@@ -9,7 +9,69 @@ typedef struct 		s_texture
 	int 			textures_number;
 }					t_texture;
 
-static RT_F4		object_texture(global t_object *object, t_intersection *intersection)
+static RT_F4		get_color_from_texture(
+					global t_texture *texture,
+					int texture_id,
+					RT_F2 *uv)
 {
+	global RT_F4	*pointer;
+	int				u;
+	int				v;
+
+	pointer = &texture->data[0];
+	for (int i = 1; i < texture_id; i++)
+		pointer += texture->texture_length[i - 1];
+	u = floor((RT_F)uv->x * (RT_F)texture->width[texture_id]);
+	v = floor((RT_F)uv->y * (RT_F)texture->height[texture_id]);
+	return (pointer[v * texture->width[texture_id] + u]);
+}
+
+static RT_F4		sphere_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	t_object_sphere	data;
+	RT_F4			normal;
+	RT_F2			uv;
+
+	data = *(global t_object_sphere *)object->data;
+	normal = intersection->hit - data.position;
+	uv.x = 0.5 + atan2(normal.z, normal.x) / (RT_PI * 2);
+	uv.y =  0.5 - asin(normal.y) / RT_PI;
+	return (get_color_from_texture(texture, object->texture_id, &uv));
+}
+
+static RT_F4		plane_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	t_object_plane	data;
+	RT_F4			vector;
+	RT_F4			u;
+	RT_F4			v;
+	RT_F2			uv;
+
+	data = *(global t_object_plane *)object->data;
+	u = cross(intersection->normal, (RT_F4){0., 1., 0., 0.});
+	if (length(u) == (RT_F)0.)
+		u = cross(intersection->normal, (RT_F4){0., 0., 1., 0.});
+    v = cross(intersection->normal, u);
+	vector = data.position - intersection->hit;
+    uv.x = dot(u, vector);
+    uv.y = dot(v, vector);
+	return (get_color_from_texture(texture, object->texture_id, &uv));
+}
+
+static RT_F4		object_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	if (object->type == object_type_sphere)
+		return (sphere_texture(texture, object, intersection));
+	else if (object->type == object_type_plane)
+		return (plane_texture(texture, object, intersection));
 	return ((RT_F4){0., 1., 0., 1.});
 }

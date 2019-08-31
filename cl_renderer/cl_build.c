@@ -334,6 +334,7 @@ static void     				sphere_intersect_t(global t_object *object, t_intersection *
     	return ;
     }
 }
+
 // cl_object_plane /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1273,6 +1274,98 @@ static RT_F			object_center_shift(global t_object *object)
 		return (sphere_center_shift(object));
 	return (0);
 }
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		s_texture
+{
+	RT_F4			data[TEXTURE_DATA_SIZE];
+	int 			texture_length[TEXTURE_MAX_NUMBER];
+	int				width[TEXTURE_MAX_NUMBER];
+	int				height[TEXTURE_MAX_NUMBER];
+	int 			textures_number;
+}					t_texture;
+
+static RT_F4		get_color_from_texture(
+					global t_texture *texture,
+					int texture_id,
+					RT_F2 *uv)
+{
+	global RT_F4	*pointer;
+	int				u;
+	int				v;
+
+	pointer = &texture->data[0];
+	for (int i = 1; i < texture_id; i++)
+		pointer += texture->texture_length[i - 1];
+	u = floor((RT_F)uv->x * (RT_F)texture->width[texture_id]);
+	v = floor((RT_F)uv->y * (RT_F)texture->height[texture_id]);
+	return (pointer[v * texture->width[texture_id] + u]);
+}
+
+static RT_F4		sphere_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	t_object_sphere	data;
+	RT_F4			normal;
+	RT_F2			uv;
+
+	data = *(global t_object_sphere *)object->data;
+	normal = intersection->normal - data.position;
+	uv.x = 0.5 + atan2(normal.z, normal.x) / (RT_PI * 2);
+	uv.y =  0.5 - asin(normal.y) / RT_PI;
+	return (get_color_from_texture(texture, object->texture_id, &uv));
+}
+
+static RT_F4		plane_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	t_object_sphere	data;
+	RT_F4			normal;
+	RT_F4			u;
+	RT_F4			v;
+	RT_F2			uv;
+
+	u = normalize((RT_F4){intersection->normal.y, -intersection->normal.x, 0.});
+    v = cross(intersection->normal, u);
+
+    uv.x = dot(u, intersection->hit);
+    uv.y = dot(v, intersection->hit);
+	return (get_color_from_texture(texture, object->texture_id, &uv));
+}
+
+/*
+if (normal.x >= normal.y && normal.x >= normal.z)
+        {
+            u = (int)tmp.y % 450;
+            v = (int)tmp.z % 450;
+        }
+        else if (normal.y >= normal.x && normal.y >= normal.z)
+        {
+            u = (int)tmp.x % 450;
+            v = (int)tmp.z % 450;
+        }
+        else if (normal.z >= normal.x && normal.z >= normal.y)
+        {
+            u = (int)tmp.y % 450;
+            v = (int)tmp.x % 450;
+        }
+*/
+
+static RT_F4		object_texture(
+					global t_texture *texture,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	if (object->type == object_type_sphere)
+		return (sphere_texture(texture, object, intersection));
+	else if (object->type == object_type_plane)
+		return (plane_texture(texture, object, intersection));
+	return ((RT_F4){0., 1., 0., 1.});
+}
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1331,21 +1424,6 @@ static RT_F4		object_normal(
 	return (!settings->rm_mod ?
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection->hit));
-}
-// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct 		s_texture
-{
-	RT_F4			data[TEXTURE_DATA_SIZE];
-	int 			texture_length[TEXTURE_MAX_NUMBER];
-	int				width[TEXTURE_MAX_NUMBER];
-	int				height[TEXTURE_MAX_NUMBER];
-	int 			textures_number;
-}					t_texture;
-
-static RT_F4		object_texture(global t_object *object, t_intersection *intersection)
-{
-	return ((RT_F4){0., 1., 0., 1.});
 }
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1432,7 +1510,7 @@ static int			scene_intersect(
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (scene->objects[intersection->object_id].texture_id > -1)
-			intersection->material.color = object_texture(scene->objects + intersection->object_id, intersection);
+			intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
@@ -1575,8 +1653,8 @@ static int				static_is_shadowed(
 						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						RT_F4 *light_direction, RT_F *shadow_ratio,
-						global t_texture *texture)
+						RT_F4 *light_direction,
+						RT_F *shadow_ratio)
 {
 	t_intersection   	shadow;
 	const RT_F			default_transparence_shadow_ratio = 1.3;
@@ -2003,12 +2081,12 @@ kernel void			cl_main(
 		return ;
 	}
 
-    if (camera->focus_request)
-    {
-    	if (!global_id)
-    		camera_auto_focus(camera, scene, settings);
-    	return ;
-    }
+	if (camera->focus_request)
+	{
+		if (!global_id)
+			camera_auto_focus(camera, scene, settings);
+		return ;
+	}
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
@@ -2021,7 +2099,7 @@ kernel void			cl_main(
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 
-    radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
+	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
 	radiance_write(sample_store_mapped, global_id, radiance, settings);
 	image[global_id] = color_unpack(illumination_effect + radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
 }

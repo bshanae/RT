@@ -7,8 +7,8 @@
 # include "disruption_perlin_noise.h"
 # include "f2.h"
 
-# define DISRUPTION_WIDTH	480
-# define DISRUPTION_HEIGHT	480
+# define DISRUPTION_WIDTH	960
+# define DISRUPTION_HEIGHT	960
 
 # define TAU 6.2831853071
 
