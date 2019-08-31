@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+set(RT_GTK_PKG OFF)
+set(RT_LINUX OFF)
 
-set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+if ({RT_GTK_PKG})
+	find_package(PkgConfig REQUIRED)
+	pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+endif()
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-deprecated-declarations")
 
@@ -62,9 +64,9 @@ set(RT_GTK_LIBRARIES
 	"-framework CoreGraphics")
 
 if ({RT_GTK_PKG})
-	include_directories(${RT_GTK_INCLUDES})
-else ()
 	include_directories(${GTK3_INCLUDE_DIRS})
+else ()
+	include_directories(${RT_GTK_INCLUDES})
 endif ()
 
 include_directories(
@@ -104,9 +106,9 @@ include_directories(
 	./cl_renderer/json/)
 
 if ({RT_GTK_PKG})
-	link_directories(${RT_GTK_LIBRARY_DIRS})
-else ()
 	link_directories(${GTK3_LIBRARY_DIRS})
+else ()
+	link_directories(${RT_GTK_LIBRARY_DIRS})
 endif ()
 
 link_directories(../21_libft/)
@@ -125,9 +127,9 @@ else()
 endif()
 
 if ({RT_GTK_PKG})
-	link_libraries(${RT_GTK_LIBRARIES})
-else ()
 	link_libraries(${GTK3_LIBRARIES})
+else ()
+	link_libraries(${RT_GTK_LIBRARIES})
 endif ()
 
 link_libraries("ft")
@@ -147,7 +149,9 @@ set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_push.c
 	./gui/gui_queue/gui_queue_execute_x.c
 	./gui/gui_queue/gui_queue_start.c
-	"./gui/gui_queue/gui_queue_(un)block.c" gui/gui_queue/gui_queue_wait.c gui/gui_queue/gui_queue_get_time.c)
+	"./gui/gui_queue/gui_queue_(un)block.c"
+	./gui/gui_queue/gui_queue_wait.c
+	./gui/gui_queue/gui_queue_get_time.c)
 
 set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
@@ -319,11 +323,13 @@ set(SOURCE_F4
 	./cl_renderer/f4/f4_mul.c
 	./cl_renderer/f4/f4_rotate.c
 	./cl_renderer/f4/f4_length.c
-	./cl_renderer/f4/f4_normalize.c cl_renderer/f4/f4_dot.c)
+	./cl_renderer/f4/f4_normalize.c
+	./cl_renderer/f4/f4_dot.c)
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
-	./cl_renderer/object/object_translate.c cl_renderer/object/object_get_flag.c)
+	./cl_renderer/object/object_translate.c
+	./cl_renderer/object/object_get_flag.c)
 
 set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
@@ -336,7 +342,8 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_torus.c
 	./cl_renderer/object_x/object_julia.c
 	./cl_renderer/object_x/object_light_x.c
-	./cl_renderer/object_x/object_mandelbulb.c cl_renderer/object_x/object_limited.c)
+	./cl_renderer/object_x/object_mandelbulb.c
+	./cl_renderer/object_x/object_limited.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -344,7 +351,11 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c
 	./cl_renderer/scene/scene_update.c
-	./cl_renderer/scene/scene_clear.c cl_renderer/scene/camera_point_check.c cl_renderer/scene/scene_give_name.c cl_renderer/scene/scene_choose.c cl_renderer/scene/scene_is_valid_x.c)
+	./cl_renderer/scene/scene_clear.c
+	./cl_renderer/scene/camera_point_check.c
+	./cl_renderer/scene/scene_give_name.c
+	./cl_renderer/scene/scene_choose.c
+	./cl_renderer/scene/scene_is_valid_x.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -355,7 +366,8 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_move.c
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
-	./gui/gui_camera/gui_camera_reset.c cl_renderer/camera/camera_request_x.c)
+	./gui/gui_camera/gui_camera_reset.c
+	./cl_renderer/camera/camera_request_x.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -386,7 +398,8 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
 	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
-	./cl_renderer/cl_renderer/cl_renderer_load.c cl_renderer/cl_renderer/cl_renderer_camera_request_x.c)
+	./cl_renderer/cl_renderer/cl_renderer_load.c
+	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

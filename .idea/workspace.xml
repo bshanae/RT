@@ -13,11 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists_Lena.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_light_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_light_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_moebius.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_plane.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -37,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/camera/camera_rotate.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_new.c.o" afterDir="false" />
@@ -54,6 +50,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_concat.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o" afterDir="false" />
@@ -62,6 +59,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o" afterDir="false" />
@@ -72,6 +70,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_worker.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" afterDir="false" />
@@ -79,15 +78,20 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_plane.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" afterDir="false" />
@@ -132,9 +136,11 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_(un)block.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_(un)block.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_push.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_push.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_start.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_start.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o" afterDir="false" />
@@ -278,15 +284,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scenes" />
       <recent name="$PROJECT_DIR$/gui/gui_scene_add" />
       <recent name="$PROJECT_DIR$/gui/build" />
       <recent name="$PROJECT_DIR$/gui/gui_object_x" />
       <recent name="$PROJECT_DIR$/gui/gui_names" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
     </key>
   </component>
   <component name="RunDashboard">
