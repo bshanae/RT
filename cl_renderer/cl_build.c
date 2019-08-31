@@ -1748,7 +1748,7 @@ static RT_F4				radiance_trace(
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
-		if (scene->objects[intersection->object_id].is_chosen)
+		if (scene->objects[intersection->object_id].is_selected)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -1838,7 +1838,7 @@ static RT_F4				radiance_trace(
 
 // cl_sample_store /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static void			sample_store_map(RT_F4 *sample_store, RT_F4 *sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
+static void			sample_store_map(global RT_F4 *sample_store, global RT_F4 *sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
 {
 	for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH; i++)
 		sample_store_mapped[i] = sample_store + i * camera->width * camera->height;
@@ -1859,7 +1859,7 @@ kernel void			cl_main(
 	int2			screen;
 	t_intersection	intersection;
 	RT_F4			radiance;
-	RT_F4			*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
+	global RT_F4	*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
 
 	sample_store_map(sample_store, sample_store_mapped, camera);
 
@@ -1875,7 +1875,10 @@ kernel void			cl_main(
     if (camera->focus_request)
     {
     	if (!global_id)
+		{
+			printf("Focusing\n");
     		camera_auto_focus(camera, scene, settings);
+    	}
     	return ;
     }
 

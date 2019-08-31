@@ -4,9 +4,9 @@ void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 {
 	int 			force;
 
-	queue->free = 0;
 	force = queue->force_execute;
-	queue->force_execute = 0;
+	if (force)
+		queue->force_execute = 0;
 	if (!force && queue->block)
 		return ;
 	if (!force && queue->pass)
@@ -16,11 +16,12 @@ void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 	}
 	if (!force && g_thread_pool_unprocessed(queue->pool) > RT_GUI_QUEUE_CEILING)
 		return ;
+	queue->free = 0;
 	queue->master_function(queue->master_data);
-	queue->force_finished = 1;
+	if (force)
+		queue->force_finished = 1;
 	queue->free = 1;
 }
-
 
 void				gui_queue_execute_force(t_gui_queue *queue)
 {

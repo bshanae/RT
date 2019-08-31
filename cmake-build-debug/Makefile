@@ -1689,33 +1689,6 @@ cl_renderer/scene/camera_point_check.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.s
 .PHONY : cl_renderer/scene/camera_point_check.c.s
 
-cl_renderer/scene/scene_choose.o: cl_renderer/scene/scene_choose.c.o
-
-.PHONY : cl_renderer/scene/scene_choose.o
-
-# target to build an object file
-cl_renderer/scene/scene_choose.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o
-.PHONY : cl_renderer/scene/scene_choose.c.o
-
-cl_renderer/scene/scene_choose.i: cl_renderer/scene/scene_choose.c.i
-
-.PHONY : cl_renderer/scene/scene_choose.i
-
-# target to preprocess a source file
-cl_renderer/scene/scene_choose.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.i
-.PHONY : cl_renderer/scene/scene_choose.c.i
-
-cl_renderer/scene/scene_choose.s: cl_renderer/scene/scene_choose.c.s
-
-.PHONY : cl_renderer/scene/scene_choose.s
-
-# target to generate assembly for a file
-cl_renderer/scene/scene_choose.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.s
-.PHONY : cl_renderer/scene/scene_choose.c.s
-
 cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
 
 .PHONY : cl_renderer/scene/scene_clear.o
@@ -1904,6 +1877,33 @@ cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c
 cl_renderer/scene/scene_remove_object.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
 .PHONY : cl_renderer/scene/scene_remove_object.c.s
+
+cl_renderer/scene/scene_select.o: cl_renderer/scene/scene_select.c.o
+
+.PHONY : cl_renderer/scene/scene_select.o
+
+# target to build an object file
+cl_renderer/scene/scene_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o
+.PHONY : cl_renderer/scene/scene_select.c.o
+
+cl_renderer/scene/scene_select.i: cl_renderer/scene/scene_select.c.i
+
+.PHONY : cl_renderer/scene/scene_select.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i
+.PHONY : cl_renderer/scene/scene_select.c.i
+
+cl_renderer/scene/scene_select.s: cl_renderer/scene/scene_select.c.s
+
+.PHONY : cl_renderer/scene/scene_select.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s
+.PHONY : cl_renderer/scene/scene_select.c.s
 
 cl_renderer/scene/scene_update.o: cl_renderer/scene/scene_update.c.o
 
@@ -5544,9 +5544,6 @@ help:
 	@echo "... cl_renderer/scene/camera_point_check.o"
 	@echo "... cl_renderer/scene/camera_point_check.i"
 	@echo "... cl_renderer/scene/camera_point_check.s"
-	@echo "... cl_renderer/scene/scene_choose.o"
-	@echo "... cl_renderer/scene/scene_choose.i"
-	@echo "... cl_renderer/scene/scene_choose.s"
 	@echo "... cl_renderer/scene/scene_clear.o"
 	@echo "... cl_renderer/scene/scene_clear.i"
 	@echo "... cl_renderer/scene/scene_clear.s"
@@ -5568,6 +5565,9 @@ help:
 	@echo "... cl_renderer/scene/scene_remove_object.o"
 	@echo "... cl_renderer/scene/scene_remove_object.i"
 	@echo "... cl_renderer/scene/scene_remove_object.s"
+	@echo "... cl_renderer/scene/scene_select.o"
+	@echo "... cl_renderer/scene/scene_select.i"
+	@echo "... cl_renderer/scene/scene_select.s"
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"

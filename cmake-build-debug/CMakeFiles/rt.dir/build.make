@@ -2150,18 +2150,18 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_give_name.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o: ../cl_renderer/scene/scene_choose.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_choose.c
+CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o: ../cl_renderer/scene/scene_select.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_choose.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.i
+CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_choose.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.s
+CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o: ../cl_renderer/scene/scene_is_valid_x.c
@@ -2742,7 +2742,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o" \
@@ -2940,7 +2940,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_choose.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o

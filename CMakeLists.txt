@@ -354,7 +354,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
 	./cl_renderer/scene/scene_give_name.c
-	./cl_renderer/scene/scene_choose.c
+		cl_renderer/scene/scene_select.c
 	./cl_renderer/scene/scene_is_valid_x.c)
 
 set(SOURCE_RAY

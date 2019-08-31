@@ -14,23 +14,33 @@
 
 # define RT_GUI_QUEUE_CEILING		10
 # define RT_GUI_QUEUE_PASS			5
-# define RT_GUI_QUEUE_FREQUENCY		800
-# define RT_GUI_QUEUE_WAIT_LIMIT	5000.
+# define RT_GUI_QUEUE_FREQUENCY		50
+# define RT_GUI_QUEUE_WAIT_LIMIT	2000.
 
 # define RT_CL_PROGRAM_INIT			128
 # define RT_CL_ARGS_CAPACITY		16
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
+# define RT_CL_ANTIALIASING			1
+# define RT_CL_CARTOON_EFFECT   	0
+# define RT_CL_FILTER_SEPIA        	0
+# define RT_CL_FOCUS				0
+# define RT_CL_APERTURE_SIZE		(RT_F)5.
+# define RT_CL_FOCAL_LENGTH			(RT_F)40.
+
+# define RT_CAMERA_MOVE_VALUE		(RT_F)1.
+# define RT_CAMERA_ROTATE_VALUE		(RT_F)0.025
+
 # define RT_CL_LIGHT_BASIC			0
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 
 # define RT_CL_LIGHT_AREA			1
 # define RT_LIGHT_AREA_MULTIPLIER	(RT_F)5.
-# define RT_LIGHT_AREA_CEILING		(RT_F).9
+# define RT_LIGHT_AREA_CEILING		(RT_F).95
 
 # define RT_CL_ILLUMINATION			1
-# define RT_CL_ILLUMINATION_VALUE	(RT_F)1.2
+# define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
 
 # define RT_CL_DEPTH				1
 # define RT_CL_SAMPLES				250
@@ -46,13 +56,6 @@
 # define RT_CL_RM_STEP_LIMIT		128
 # define RT_CL_STEP_PART			(RT_F)1.
 # define RT_CL_RM_MAX_DISTANCE		200
-
-# define RT_CL_ANTIALIASING			1
-# define RT_CL_CARTOON_EFFECT   	0
-# define RT_CL_FILTER_SEPIA        	0
-# define RT_CL_FOCUS				0
-# define RT_CL_APERTURE_SIZE		(RT_F)5.
-# define RT_CL_FOCAL_LENGTH			(RT_F)40.
 
 #ifdef RT_FLOAT
 #  define RT_EPSILON				0.0001f

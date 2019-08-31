@@ -365,9 +365,6 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/camera_point_check.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_choose.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_clear.c">
 			<Option target="rt"/>
 		</Unit>
@@ -387,6 +384,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c">

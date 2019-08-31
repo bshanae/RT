@@ -39,8 +39,8 @@ typedef struct		s_object
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
+	int 			is_selected;
 	int 			is_limited;
-	int 			is_chosen;
 }					t_object;
 
 const char 			*object_translate(t_object_type type);

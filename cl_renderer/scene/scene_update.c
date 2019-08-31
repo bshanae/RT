@@ -30,7 +30,7 @@ void					static_set_lights(t_scene *scene)
 	scene->lights_length = j;
 }
 
-void					static_set_visibilty(t_scene *scene)
+void					static_set_visibility(t_scene *scene)
 {
 	int 				i;
 	t_object_csg		*csg;
@@ -61,5 +61,5 @@ void 				scene_update(t_scene *scene)
 {
 	static_set_id(scene);
 	static_set_lights(scene);
-	static_set_visibilty(scene);
+	static_set_visibility(scene);
 }

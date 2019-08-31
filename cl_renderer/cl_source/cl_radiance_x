@@ -75,7 +75,7 @@ static RT_F4				radiance_trace(
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
-		if (scene->objects[intersection->object_id].is_chosen)
+		if (scene->objects[intersection->object_id].is_selected)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))

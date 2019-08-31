@@ -5,7 +5,7 @@ int 				cl_renderer_camera_move
 {
 	RT_F4_API		test;
 
-	test = camera_move(renderer->data.camera, movement, 1.f);
+	test = camera_move(renderer->data.camera, movement, RT_CAMERA_MOVE_VALUE);
 	if (scene_point_check(renderer->data.scene, &test) == SCENE_POINT_INSIDE)
 		renderer->data.camera->position = test;
 	else
@@ -13,7 +13,6 @@ int 				cl_renderer_camera_move
 	cl_renderer_flag_set(renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
 	return (1);
-	// todo store step in cl_renderer
 }
 
 void 				cl_renderer_camera_rotate
@@ -21,10 +20,9 @@ void 				cl_renderer_camera_rotate
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction)
 {
-	camera_rotate(renderer->data.camera, axis, direction, 0.025f);
+	camera_rotate(renderer->data.camera, axis, direction, RT_CAMERA_ROTATE_VALUE);
 	cl_renderer_flag_set(renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
-	// todo store theta in cl_renderer
 }
 
 void				cl_renderer_camera_reset(t_cl_renderer *renderer)

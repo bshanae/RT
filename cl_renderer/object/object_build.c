@@ -13,7 +13,7 @@ void				object_build(
 	space->material = material;
 	space->name[0] = '\0';
 	space->is_visible = 1;
-	space->is_chosen = 0;
+	space->is_selected = 0;
 	space->is_limited = 0;
 	va_start(args, material);
 	if (type == object_type_light_ambient)

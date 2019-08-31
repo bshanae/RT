@@ -24,17 +24,13 @@ static int			try_move_camera(t_gui *gui, int key)
 static int			try_rotate_camera(t_gui *gui, int key)
 {
 	if (key == GDK_KEY_Left)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_y, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_positive);
 	else if (key == GDK_KEY_Right)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_y, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_negative);
 	else if (key == GDK_KEY_Up)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_x, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_x, rt_rotation_negative);
 	else if (key == GDK_KEY_Down)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_x, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
