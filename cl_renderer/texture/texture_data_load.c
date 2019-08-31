@@ -20,5 +20,6 @@ void				texture_data_load(t_texture *texture, const char *path)
 	texture->width[texture->textures_number] = texture_width;
 	texture->height[texture->textures_number] = texture_height;
 	texture->texture_length[texture->textures_number] = texture_width * texture_height;
+	texture->data_size += texture->texture_length[texture->textures_number];
 	texture_fill_data(texture, stbi_data);
 }

@@ -19,6 +19,7 @@
 typedef struct 				s_texture
 {
 	RT_F4_API				*data;
+	u_long 					data_size;
 	int 					texture_length[MAX_TEXTURES_NUMBER];
 	int						width[MAX_TEXTURES_NUMBER];
 	int						height[MAX_TEXTURES_NUMBER];

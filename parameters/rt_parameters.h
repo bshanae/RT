@@ -9,8 +9,8 @@
 # define RT_GUI_SCENES				"./scenes"
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
-# define RT_GUI_WIDTH				480
-# define RT_GUI_HEIGHT				480
+# define RT_GUI_WIDTH				1480
+# define RT_GUI_HEIGHT				1480
 
 # define RT_GUI_QUEUE_CEILING		10
 # define RT_GUI_QUEUE_WAIT			5

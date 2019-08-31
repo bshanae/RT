@@ -8,14 +8,10 @@ void				texture_fill_data(
 	RT_F4_API		*pointer;
 
 	i = 0;
-	if (!(texture->data = (RT_F4_API *)malloc(sizeof(RT_F4_API)* texture->texture_length[texture->textures_number])))
-		exit (6);
-	//texture_get_space(texture);
+	texture_get_space(texture);
 	pointer = &texture->data[0];
 	while (i < texture->textures_number)
 		pointer += texture->texture_length[i++];
 	texture_convert(texture, pointer, stbi_data);
-	for (int j = 0; j < texture->texture_length[texture->textures_number] - 1; j++)
-		printf("%f %f %f\n", texture->data[j].x, texture->data[j].y, texture->data[j].z);
 	stbi_image_free(stbi_data);
 }
