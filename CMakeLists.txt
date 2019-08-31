@@ -94,6 +94,7 @@ include_directories(
 	./cl_renderer/object_x/
 	./cl_renderer/scene/
 	./cl_renderer/f4/
+	./cl_renderer/f2/
 	./cl_renderer/camera/
 	./cl_renderer/ray/
 	./cl_renderer/intersection/
@@ -104,7 +105,8 @@ include_directories(
 	./cl_renderer/cl_builder/
 	./cl_renderer/cl_renderer/
 	./cl_renderer/json/
-	./cl_renderer/texture)
+	./cl_renderer/texture
+	./cl_renderer/disruption_x)
 
 if (${RT_GTK_PKG})
 	link_directories(${GTK3_LIBRARY_DIRS})
@@ -319,13 +321,25 @@ set(SOURCE_JSON
 	./cl_renderer/json/readfile.c)
 
 set(SOURCE_TEXTURE
-	./cl_renderer/texture/texture_new.c
+	./cl_renderer/texture/texture_initialization.c
 	./cl_renderer/texture/texture_convert.c
 	./cl_renderer/texture/texture_data_load.c
 	./cl_renderer/texture/texture_disruptions_load.c
 	./cl_renderer/texture/texture_fill_data.c
-	./cl_renderer/texture/texture_iter.c cl_renderer/texture/texture_set.c)
+	./cl_renderer/texture/texture_iter.c
+	./cl_renderer/texture/texture_set.c)
 
+set(SOURCE_DISRUPTION_X
+	./cl_renderer/disruption_x/disruption_checkerboard.c
+	./cl_renderer/disruption_x/disruption_sine_wave.c
+	./cl_renderer/disruption_x/disruption_perlin_noise.c
+	./cl_renderer/disruption_x/disruption_math.c)
+
+set(SOURCE_F2
+	./cl_renderer/f2/f2_add.c
+	./cl_renderer/f2/f2_mul.c
+	./cl_renderer/f2/f2_sub.c
+	./cl_renderer/f2/f2_dot.c)
 
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
@@ -415,6 +429,8 @@ set(SOURCE_CL_RENDERER_
 set(SOURCE_RENDERER
 	${SOURCE_JSON}
 	${SOURCE_TEXTURE}
+	${SOURCE_DISRUPTION_X}
+	${SOURCE_F2}
 	${SOURCE_F4}
 	${SOURCE_OBJECT}
 	${SOURCE_OBJECT_X}
@@ -423,7 +439,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_PROGRAM}
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
-	${SOURCE_CL_RENDERER_} cl_renderer/texture/texture_new.c)
+	${SOURCE_CL_RENDERER_})
 
 add_executable(rt
 	${SOURCE_MAIN}

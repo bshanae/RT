@@ -6,15 +6,7 @@
 void				scene_test_a(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere,
-		MATERIAL_WHITE, (RT_F4_API){0., 0., 0}, 2.);
-	scene_give_name(scene, "Limited - Sphere", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-		MATERIAL_BLUE, (RT_F4_API){0., 0., 0},
-		(RT_F4_API){1., 0., 0.}, plane_limiting_no);
-	scene_give_name(scene, "Limited - Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_limited,
-		MATERIAL_NONE, 0, 1);
-	scene_give_name(scene, "Limited - Limited", scene_name_last);
+				 MATERIAL_WHITE, (RT_F4_API){-10., 10., -40.}, 2.);
 	object_build(scene_get_space(scene), object_type_sphere,
 		MATERIAL_LIGHT, (RT_F4_API){10., 0., -10.}, 3.);
 	scene_give_name(scene, "Light", scene_name_last);
@@ -91,7 +83,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_b(gui->renderer->data.scene);
+	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -1.;
 	gui->renderer->data.camera->position.z = 30.;
 	cl_renderer_camera_save(gui->renderer);

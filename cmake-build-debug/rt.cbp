@@ -88,6 +88,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/scene"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f2"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
@@ -99,6 +100,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/texture"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/disruption_x"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -164,6 +166,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/object_x"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/scene"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f4"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/f2"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
@@ -175,6 +178,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/texture"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/disruption_x"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -281,6 +285,33 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/disruption_x/disruption_checkerboard.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/disruption_x/disruption_math.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/disruption_x/disruption_perlin_noise.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/disruption_x/disruption_perlin_noise.h">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/disruption_x/disruption_sine_wave.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f2/f2_add.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f2/f2_dot.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f2/f2_mul.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f2/f2_sub.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_add.c">
@@ -409,10 +440,10 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_fill_data.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_initialization.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_set.c">
