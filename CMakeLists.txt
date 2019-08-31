@@ -4,7 +4,7 @@ project(rt C)
 set(RT_GTK_PKG OFF)
 set(RT_LINUX OFF)
 
-if ({RT_GTK_PKG})
+if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
 	pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 endif()
@@ -63,7 +63,7 @@ set(RT_GTK_LIBRARIES
 	"-framework Carbon"
 	"-framework CoreGraphics")
 
-if ({RT_GTK_PKG})
+if (${RT_GTK_PKG})
 	include_directories(${GTK3_INCLUDE_DIRS})
 else ()
 	include_directories(${RT_GTK_INCLUDES})
@@ -105,7 +105,7 @@ include_directories(
 	./cl_renderer/cl_renderer/
 	./cl_renderer/json/)
 
-if ({RT_GTK_PKG})
+if (${RT_GTK_PKG})
 	link_directories(${GTK3_LIBRARY_DIRS})
 else ()
 	link_directories(${RT_GTK_LIBRARY_DIRS})
@@ -113,11 +113,11 @@ endif ()
 
 link_directories(../21_libft/)
 
-if ({RT_GTK_PKG})
+if (${RT_GTK_PKG})
 	add_definitions(${GTK3_CFLAGS_OTHER})
 endif ()
 
-if ({RT_LINUX})
+if (${RT_LINUX})
 	link_libraries(
 		"OpenCL"
 		"m"
@@ -126,7 +126,7 @@ else()
 	link_libraries("-framework OpenCL")
 endif()
 
-if ({RT_GTK_PKG})
+if (${RT_GTK_PKG})
 	link_libraries(${GTK3_LIBRARIES})
 else ()
 	link_libraries(${RT_GTK_LIBRARIES})
@@ -343,7 +343,8 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_julia.c
 	./cl_renderer/object_x/object_light_x.c
 	./cl_renderer/object_x/object_mandelbulb.c
-	./cl_renderer/object_x/object_limited.c cl_renderer/object_x/object_perforated_cube.c)
+	./cl_renderer/object_x/object_limited.c
+	./cl_renderer/object_x/object_perforated_cube.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c

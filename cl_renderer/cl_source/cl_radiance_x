@@ -17,7 +17,7 @@ static void					radiance_write(
 	}
 	else
 	{
-		if (settings->sample_count == 1)
+		if (settings->motion_blur_sample_count == 1)
 		{
 			for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
 				sample_store[i][global_id] = 0.;
@@ -34,6 +34,7 @@ static RT_F4				radiance_read(
 							constant t_cl_renderer_settings *settings)
 {
 	RT_F4					sum;
+	RT_F4					alpha;
 	int						i;
 	int						count;
 
@@ -42,10 +43,14 @@ static RT_F4				radiance_read(
 	else
 	{
 		sum = 0.;
+		alpha = 1.;
 		i = 0;
 		count = 0;
 		for (i = RT_CL_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+       	{
        		sum  += sample_store[i][global_id];
+       		alpha *= RT_CL_MOTION_BLUR_ALPHA;
+       	}
        	return (sum / settings->motion_blur_sample_count);
 	}
 }
