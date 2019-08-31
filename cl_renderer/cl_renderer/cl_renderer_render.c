@@ -33,7 +33,12 @@ static void			static_post_queue(t_cl_renderer *renderer)
 		renderer->data.camera->select_request = 0;
 		cl_renderer_flag_set(renderer, cl_flag_update_camera);
 	}
-	renderer->data.settings.sample_count++;
+	if (!renderer->data.settings.motion_blur)
+		renderer->data.settings.sample_count++;
+	else
+		renderer->data.settings.motion_blur_sample_count =
+			ft_min(renderer->data.settings.motion_blur_sample_count + 1, RT_CL_SAMPLE_ARRAY_LENGTH);
+	printf("mb samples = %d\n", renderer->data.settings.motion_blur_sample_count);
 	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 	gtk_image_set_from_pixbuf(renderer->image->image,
 		renderer->image->gdk_buffer);

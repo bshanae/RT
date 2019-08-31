@@ -31,10 +31,12 @@ typedef struct 		s_cl_renderer_settings
 	int 			light_basic;
 	int 			light_area;
 	int 			illumination;
-	RT_F 			illumination_value;
+    RT_F 			illumination_value;
 	int 			sample_count;
-	int 			sample_limit;
-	int 			sample_depth;
+    int 			sample_limit;
+    int 			sample_depth;
+	int				motion_blur;
+	int				motion_blur_sample_count;
 	int 			rm_mod;
 	int 			rm_step_limit;
 	RT_F			rm_step_part;
@@ -585,6 +587,7 @@ static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *int
     else
         return (normalize(((constant t_object_cylinder *)object->data)->axis));
 }
+
 // cl_object_box ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -936,7 +939,7 @@ typedef struct 				s_object_limited
 
 static int					limited_intersect(constant t_object *object, t_intersection *intersection)
 {
-	t_object				*scene_begin;
+	constant t_object		*scene_begin;
 	t_object_limited		limited;
 	constant t_object		*main;
 	t_object_plane			limit;
@@ -1672,15 +1675,62 @@ static void			camera_select(global t_camera *camera, constant t_scene *scene, co
 
 #include "rt_parameters.h"
 
+static void					radiance_write(
+							global RT_F4 *sample_store[RT_CL_SAMPLE_ARRAY_LENGTH],
+							int global_id,
+							RT_F4 radiance,
+							constant t_cl_renderer_settings *settings)
+{
+	if (!settings->motion_blur)
+	{
+		if (settings->sample_count == 1)
+			sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
+		else
+			sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
+	}
+	else
+	{
+		if (settings->sample_count == 1)
+		{
+			for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
+				sample_store[i][global_id] = 0.;
+        }
+        for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
+        	sample_store[i][global_id] = sample_store[i + 1][global_id];
+        sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
+	}
+}
+
+static RT_F4				radiance_read(
+							global RT_F4 *sample_store[RT_CL_SAMPLE_ARRAY_LENGTH],
+							int global_id,
+							constant t_cl_renderer_settings *settings)
+{
+	RT_F4					sum;
+	int						i;
+	int						count;
+
+	if (!settings->motion_blur)
+		return (sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] / settings->sample_count);
+	else
+	{
+		sum = 0.;
+		i = 0;
+		count = 0;
+		for (i = RT_CL_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+       		sum  += sample_store[i][global_id];
+       	return (sum / settings->motion_blur_sample_count);
+	}
+}
+
 # define RT_CHOICE_DIFFUSE	0
 # define RT_CHOICE_REFLECT	1
 # define RT_CHOICE_REFRACT	2
 
-static void					radiance_add(
+static RT_F4				radiance_trace(
 							constant t_scene *scene,
 							global t_camera *camera,
 							t_intersection *intersection,
-							global RT_F4 *sample,
 							constant t_cl_renderer_settings *settings,
 							global ulong *rng_state)
 {
@@ -1699,10 +1749,7 @@ static void					radiance_add(
 			break ;
 
 		if (scene->objects[intersection->object_id].is_chosen)
-		{
-			*sample = (RT_F4){0.f, 0.f, 0.f, 1.f};
-			return ;
-		}
+			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
 			break ;
@@ -1749,18 +1796,7 @@ static void					radiance_add(
             mask *= intersection->material.color * cosine;
 		}
 	}
-
-	if (settings->sample_count == 1)
-		*sample = radiance;
-	else
-		*sample += radiance;
-}
-
-static RT_F4				radiance_get(
-							global RT_F4 *sample,
-							constant t_cl_renderer_settings *settings)
-{
-	return (*sample / settings->sample_count);
+	return (radiance);
 }
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1800,8 +1836,16 @@ static RT_F4				radiance_get(
  	return (illumination);
  }
 
+// cl_sample_store /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+static void			sample_store_map(RT_F4 *sample_store, RT_F4 *sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
+{
+	for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH; i++)
+		sample_store_mapped[i] = sample_store + i * camera->width * camera->height;
+}
 // cl_main /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# include "rt_parameters.h"
 
 kernel void			cl_main(
 					global t_camera *camera,
@@ -1814,7 +1858,10 @@ kernel void			cl_main(
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
-	RT_F4           illumination_effect;
+	RT_F4			radiance;
+	RT_F4			*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
+
+	sample_store_map(sample_store, sample_store_mapped, camera);
 
     global_id = get_global_id(0);
 
@@ -1837,12 +1884,15 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
+	RT_F4           illumination_effect; // move to radiance_trace
+
 	illumination_effect = 0.;
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
 
-    radiance_add(scene, camera, &intersection, sample_store + global_id, settings, rng_state);
-	image[global_id] = color_unpack(illumination_effect + radiance_get(sample_store + global_id, settings), camera->filter_sepia, 255);
+    radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
+	radiance_write(sample_store_mapped, global_id, radiance, settings);
+	image[global_id] = color_unpack(illumination_effect + radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
 }
 
 

@@ -37,6 +37,7 @@
 # define CL_SOURCE_FILTER				"cl_filter"
 # define CL_SOURCE_CAMERA				"cl_camera"
 # define CL_SOURCE_ILLUMINATION			"cl_illumination"
+# define CL_SOURCE_SAMPLE_STORE			"cl_sample_store"
 # define CL_SOURCE_MAIN					"cl_main"
 
 #endif

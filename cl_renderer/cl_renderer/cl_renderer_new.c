@@ -35,7 +35,8 @@ static void				static_set_args(t_cl_renderer *renderer)
 		sizeof(t_color) * renderer->pixel_number, CL_MEM_WRITE_ONLY);
 	//samples
 	cl_arg_list_push(renderer->args, NULL,
-		sizeof(RT_F4_API) * renderer->pixel_number, CL_MEM_READ_WRITE);
+		sizeof(RT_F4_API) * renderer->pixel_number * RT_CL_SAMPLE_ARRAY_LENGTH,
+		CL_MEM_READ_WRITE);
 	// settings
 	cl_arg_list_push(renderer->args, &renderer->data.settings,
 		sizeof(t_cl_renderer_settings), CL_MEM_READ_ONLY);

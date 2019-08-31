@@ -14,6 +14,8 @@ typedef struct 		s_cl_renderer_settings
 	int 			sample_count;
 	int 			sample_limit;
 	int 			sample_depth;
+	int				motion_blur;
+	int				motion_blur_sample_count;
 	int 			rm_mod;
 	int 			rm_step_limit;
 	RT_F			rm_step_part;
