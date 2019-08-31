@@ -1581,6 +1581,33 @@ cl_renderer/object_x/object_paraboloid.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.s
 .PHONY : cl_renderer/object_x/object_paraboloid.c.s
 
+cl_renderer/object_x/object_perforated_cube.o: cl_renderer/object_x/object_perforated_cube.c.o
+
+.PHONY : cl_renderer/object_x/object_perforated_cube.o
+
+# target to build an object file
+cl_renderer/object_x/object_perforated_cube.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.o
+.PHONY : cl_renderer/object_x/object_perforated_cube.c.o
+
+cl_renderer/object_x/object_perforated_cube.i: cl_renderer/object_x/object_perforated_cube.c.i
+
+.PHONY : cl_renderer/object_x/object_perforated_cube.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_perforated_cube.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.i
+.PHONY : cl_renderer/object_x/object_perforated_cube.c.i
+
+cl_renderer/object_x/object_perforated_cube.s: cl_renderer/object_x/object_perforated_cube.c.s
+
+.PHONY : cl_renderer/object_x/object_perforated_cube.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_perforated_cube.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.s
+.PHONY : cl_renderer/object_x/object_perforated_cube.c.s
+
 cl_renderer/object_x/object_plane.o: cl_renderer/object_x/object_plane.c.o
 
 .PHONY : cl_renderer/object_x/object_plane.o
@@ -5532,6 +5559,9 @@ help:
 	@echo "... cl_renderer/object_x/object_paraboloid.o"
 	@echo "... cl_renderer/object_x/object_paraboloid.i"
 	@echo "... cl_renderer/object_x/object_paraboloid.s"
+	@echo "... cl_renderer/object_x/object_perforated_cube.o"
+	@echo "... cl_renderer/object_x/object_perforated_cube.i"
+	@echo "... cl_renderer/object_x/object_perforated_cube.s"
 	@echo "... cl_renderer/object_x/object_plane.o"
 	@echo "... cl_renderer/object_x/object_plane.i"
 	@echo "... cl_renderer/object_x/object_plane.s"

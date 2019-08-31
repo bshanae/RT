@@ -21,6 +21,7 @@ typedef enum		e_object_type
 	object_type_mandelbulb,
 	object_type_julia,
 	object_type_csg,
+	object_type_perforated_cube,
 	object_type_end
 }					t_object_type;
 

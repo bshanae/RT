@@ -32,5 +32,6 @@ void                object_torus_build(t_object *space, va_list *args);
 void                object_mandelbulb_build(t_object *space, va_list *args);
 void                object_julia_build(t_object *space, va_list *args);
 void				object_csg_build(t_object *space, va_list *args);
+void				object_perforated_cube_build(t_object *space, va_list *args);
 
 #endif

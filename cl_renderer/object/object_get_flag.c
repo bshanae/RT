@@ -17,6 +17,7 @@ static void					static_data_init(t_object_flag *data)
 	data[object_type_mandelbulb] = object_flag_rm_only;
 	data[object_type_julia] = object_flag_rm_only;
 	data[object_type_csg] = object_flag_rm_only;
+	data[object_type_perforated_cube] = object_flag_rm_only;
 }
 
 t_object_flag				object_get_flag(t_object_type type)

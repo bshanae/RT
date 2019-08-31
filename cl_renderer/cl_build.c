@@ -207,6 +207,7 @@ typedef enum		e_object_type
 	object_type_mandelbulb,
 	object_type_julia,
 	object_type_csg,
+	object_type_perforated_cube,
 	object_type_end
 }					t_object_type;
 
@@ -218,8 +219,8 @@ typedef struct		s_object
 	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
+	int 			is_selected;
 	int 			is_limited;
-	int 			is_chosen;
 }					t_object;
 
 // cl_object_sphere ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1129,6 +1130,81 @@ static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
 
 // todo: improve csg validation
 
+// cl_object_perforated_cube ///////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		            s_object_perforated_cube
+{
+    RT_F4                       position;
+	int     		            iterations;
+}					            t_object_perforated_cube;
+
+static RT_F                     static_box_sdf(RT_F4 size, RT_F4 point)
+{
+    RT_F4                       d;
+
+    d = RT_ABS(point) - size;
+    return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
+    	+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
+}
+
+static RT_F                     static_cross_sdf(RT_F4 point)
+{
+	RT_F4						tmp_point;
+	RT_F4						size;
+	RT_F						sdf_value[3];
+
+	size = (RT_F4){RT_INFINITY, 1., 1., 0.};
+	tmp_point = (RT_F4){point.x, point.y, point.z, 0.};
+	sdf_value[0] = static_box_sdf(size, tmp_point);
+
+	size = (RT_F4){1., RT_INFINITY, 1., 0.};
+    tmp_point = (RT_F4){point.y, point.z, point.x, 0.};
+    sdf_value[1] = static_box_sdf(size, tmp_point);
+
+    size = (RT_F4){1., 1., RT_INFINITY, 0.};
+    tmp_point = (RT_F4){point.z, point.x, point.y, 0.};
+    sdf_value[2] = static_box_sdf(size, tmp_point);
+    return (RT_MIN(sdf_value[0], RT_MIN(sdf_value[1], sdf_value[2])));
+}
+
+static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 point)
+{
+	//t_object_perforated_cube	data;
+	//RT_F                        box_sdf_value;
+	//RT_F                        cross_value;
+	//RT_F                        cross_period;
+	//RT_F                        cross_division;
+	//RT_F4                       cross_shift;
+	//RT_F4						shifted_point;
+//
+	//data = *(constant t_object_perforated_cube *)object->data;
+	//point = data.position - point;
+//
+	//box_sdf_value = static_box_sdf((RT_F4){1., 1., 1., 0.}, point);
+//
+	//cross_period = (RT_F)2.;
+	//cross_division = (RT_F)3.;
+	//cross_shift = (RT_F4){1., 1., 1., 0.};
+//
+	//for (int iter = 0; iter < data.iterations; iter++)
+	//{
+	//	shifted_point = RT_ABS(point);
+//
+	//	shifted_point += cross_shift;
+    //    shifted_point = f4_mod(&shifted_point, cross_period);
+    //    shifted_point -= cross_shift;
+//
+    //    shifted_point *= cross_division;
+    //    cross_value = static_cross_sdf(shifted_point) / cross_division;
+//
+    //    box_sdf_value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
+    //    cross_period /= (RT_F)3.;
+    //    cross_shift /= (RT_F)3.;
+    //    cross_division *= (RT_F)3.;
+	//}
+	return (box_sdf_value);
+}
+
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_control.h"
@@ -1175,6 +1251,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (box_sdf(object, point));
 	else if (object->type == object_type_csg)
 		return (csg_sdf(object, point));
+	else if (object->type == object_type_perforated_cube)
+		return (perforated_cube_sdf(object, point));
 	return (RT_INFINITY);
 }
 
@@ -1875,10 +1953,7 @@ kernel void			cl_main(
     if (camera->focus_request)
     {
     	if (!global_id)
-		{
-			printf("Focusing\n");
     		camera_auto_focus(camera, scene, settings);
-    	}
     	return ;
     }
 

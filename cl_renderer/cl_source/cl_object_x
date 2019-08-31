@@ -44,6 +44,8 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 		return (box_sdf(object, point));
 	else if (object->type == object_type_csg)
 		return (csg_sdf(object, point));
+	else if (object->type == object_type_perforated_cube)
+		return (perforated_cube_sdf(object, point));
 	return (RT_INFINITY);
 }
 
