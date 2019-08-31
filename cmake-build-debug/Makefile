@@ -933,6 +933,222 @@ cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
 
+cl_renderer/disruption_x/disruption_checkerboard.o: cl_renderer/disruption_x/disruption_checkerboard.c.o
+
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.o
+
+# target to build an object file
+cl_renderer/disruption_x/disruption_checkerboard.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_checkerboard.c.o
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.c.o
+
+cl_renderer/disruption_x/disruption_checkerboard.i: cl_renderer/disruption_x/disruption_checkerboard.c.i
+
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.i
+
+# target to preprocess a source file
+cl_renderer/disruption_x/disruption_checkerboard.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_checkerboard.c.i
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.c.i
+
+cl_renderer/disruption_x/disruption_checkerboard.s: cl_renderer/disruption_x/disruption_checkerboard.c.s
+
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.s
+
+# target to generate assembly for a file
+cl_renderer/disruption_x/disruption_checkerboard.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_checkerboard.c.s
+.PHONY : cl_renderer/disruption_x/disruption_checkerboard.c.s
+
+cl_renderer/disruption_x/disruption_math.o: cl_renderer/disruption_x/disruption_math.c.o
+
+.PHONY : cl_renderer/disruption_x/disruption_math.o
+
+# target to build an object file
+cl_renderer/disruption_x/disruption_math.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_math.c.o
+.PHONY : cl_renderer/disruption_x/disruption_math.c.o
+
+cl_renderer/disruption_x/disruption_math.i: cl_renderer/disruption_x/disruption_math.c.i
+
+.PHONY : cl_renderer/disruption_x/disruption_math.i
+
+# target to preprocess a source file
+cl_renderer/disruption_x/disruption_math.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_math.c.i
+.PHONY : cl_renderer/disruption_x/disruption_math.c.i
+
+cl_renderer/disruption_x/disruption_math.s: cl_renderer/disruption_x/disruption_math.c.s
+
+.PHONY : cl_renderer/disruption_x/disruption_math.s
+
+# target to generate assembly for a file
+cl_renderer/disruption_x/disruption_math.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_math.c.s
+.PHONY : cl_renderer/disruption_x/disruption_math.c.s
+
+cl_renderer/disruption_x/disruption_perlin_noise.o: cl_renderer/disruption_x/disruption_perlin_noise.c.o
+
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.o
+
+# target to build an object file
+cl_renderer/disruption_x/disruption_perlin_noise.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_perlin_noise.c.o
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.c.o
+
+cl_renderer/disruption_x/disruption_perlin_noise.i: cl_renderer/disruption_x/disruption_perlin_noise.c.i
+
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.i
+
+# target to preprocess a source file
+cl_renderer/disruption_x/disruption_perlin_noise.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_perlin_noise.c.i
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.c.i
+
+cl_renderer/disruption_x/disruption_perlin_noise.s: cl_renderer/disruption_x/disruption_perlin_noise.c.s
+
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.s
+
+# target to generate assembly for a file
+cl_renderer/disruption_x/disruption_perlin_noise.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_perlin_noise.c.s
+.PHONY : cl_renderer/disruption_x/disruption_perlin_noise.c.s
+
+cl_renderer/disruption_x/disruption_sine_wave.o: cl_renderer/disruption_x/disruption_sine_wave.c.o
+
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.o
+
+# target to build an object file
+cl_renderer/disruption_x/disruption_sine_wave.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_sine_wave.c.o
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.c.o
+
+cl_renderer/disruption_x/disruption_sine_wave.i: cl_renderer/disruption_x/disruption_sine_wave.c.i
+
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.i
+
+# target to preprocess a source file
+cl_renderer/disruption_x/disruption_sine_wave.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_sine_wave.c.i
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.c.i
+
+cl_renderer/disruption_x/disruption_sine_wave.s: cl_renderer/disruption_x/disruption_sine_wave.c.s
+
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.s
+
+# target to generate assembly for a file
+cl_renderer/disruption_x/disruption_sine_wave.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/disruption_x/disruption_sine_wave.c.s
+.PHONY : cl_renderer/disruption_x/disruption_sine_wave.c.s
+
+cl_renderer/f2/f2_add.o: cl_renderer/f2/f2_add.c.o
+
+.PHONY : cl_renderer/f2/f2_add.o
+
+# target to build an object file
+cl_renderer/f2/f2_add.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_add.c.o
+.PHONY : cl_renderer/f2/f2_add.c.o
+
+cl_renderer/f2/f2_add.i: cl_renderer/f2/f2_add.c.i
+
+.PHONY : cl_renderer/f2/f2_add.i
+
+# target to preprocess a source file
+cl_renderer/f2/f2_add.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_add.c.i
+.PHONY : cl_renderer/f2/f2_add.c.i
+
+cl_renderer/f2/f2_add.s: cl_renderer/f2/f2_add.c.s
+
+.PHONY : cl_renderer/f2/f2_add.s
+
+# target to generate assembly for a file
+cl_renderer/f2/f2_add.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_add.c.s
+.PHONY : cl_renderer/f2/f2_add.c.s
+
+cl_renderer/f2/f2_dot.o: cl_renderer/f2/f2_dot.c.o
+
+.PHONY : cl_renderer/f2/f2_dot.o
+
+# target to build an object file
+cl_renderer/f2/f2_dot.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_dot.c.o
+.PHONY : cl_renderer/f2/f2_dot.c.o
+
+cl_renderer/f2/f2_dot.i: cl_renderer/f2/f2_dot.c.i
+
+.PHONY : cl_renderer/f2/f2_dot.i
+
+# target to preprocess a source file
+cl_renderer/f2/f2_dot.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_dot.c.i
+.PHONY : cl_renderer/f2/f2_dot.c.i
+
+cl_renderer/f2/f2_dot.s: cl_renderer/f2/f2_dot.c.s
+
+.PHONY : cl_renderer/f2/f2_dot.s
+
+# target to generate assembly for a file
+cl_renderer/f2/f2_dot.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_dot.c.s
+.PHONY : cl_renderer/f2/f2_dot.c.s
+
+cl_renderer/f2/f2_mul.o: cl_renderer/f2/f2_mul.c.o
+
+.PHONY : cl_renderer/f2/f2_mul.o
+
+# target to build an object file
+cl_renderer/f2/f2_mul.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_mul.c.o
+.PHONY : cl_renderer/f2/f2_mul.c.o
+
+cl_renderer/f2/f2_mul.i: cl_renderer/f2/f2_mul.c.i
+
+.PHONY : cl_renderer/f2/f2_mul.i
+
+# target to preprocess a source file
+cl_renderer/f2/f2_mul.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_mul.c.i
+.PHONY : cl_renderer/f2/f2_mul.c.i
+
+cl_renderer/f2/f2_mul.s: cl_renderer/f2/f2_mul.c.s
+
+.PHONY : cl_renderer/f2/f2_mul.s
+
+# target to generate assembly for a file
+cl_renderer/f2/f2_mul.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_mul.c.s
+.PHONY : cl_renderer/f2/f2_mul.c.s
+
+cl_renderer/f2/f2_sub.o: cl_renderer/f2/f2_sub.c.o
+
+.PHONY : cl_renderer/f2/f2_sub.o
+
+# target to build an object file
+cl_renderer/f2/f2_sub.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_sub.c.o
+.PHONY : cl_renderer/f2/f2_sub.c.o
+
+cl_renderer/f2/f2_sub.i: cl_renderer/f2/f2_sub.c.i
+
+.PHONY : cl_renderer/f2/f2_sub.i
+
+# target to preprocess a source file
+cl_renderer/f2/f2_sub.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_sub.c.i
+.PHONY : cl_renderer/f2/f2_sub.c.i
+
+cl_renderer/f2/f2_sub.s: cl_renderer/f2/f2_sub.c.s
+
+.PHONY : cl_renderer/f2/f2_sub.s
+
+# target to generate assembly for a file
+cl_renderer/f2/f2_sub.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f2/f2_sub.c.s
+.PHONY : cl_renderer/f2/f2_sub.c.s
+
 cl_renderer/f4/f4_add.o: cl_renderer/f4/f4_add.c.o
 
 .PHONY : cl_renderer/f4/f4_add.o
@@ -2067,6 +2283,33 @@ cl_renderer/texture/texture_fill_data.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.s
 .PHONY : cl_renderer/texture/texture_fill_data.c.s
 
+cl_renderer/texture/texture_initialization.o: cl_renderer/texture/texture_initialization.c.o
+
+.PHONY : cl_renderer/texture/texture_initialization.o
+
+# target to build an object file
+cl_renderer/texture/texture_initialization.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o
+.PHONY : cl_renderer/texture/texture_initialization.c.o
+
+cl_renderer/texture/texture_initialization.i: cl_renderer/texture/texture_initialization.c.i
+
+.PHONY : cl_renderer/texture/texture_initialization.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_initialization.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.i
+.PHONY : cl_renderer/texture/texture_initialization.c.i
+
+cl_renderer/texture/texture_initialization.s: cl_renderer/texture/texture_initialization.c.s
+
+.PHONY : cl_renderer/texture/texture_initialization.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_initialization.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.s
+.PHONY : cl_renderer/texture/texture_initialization.c.s
+
 cl_renderer/texture/texture_iter.o: cl_renderer/texture/texture_iter.c.o
 
 .PHONY : cl_renderer/texture/texture_iter.o
@@ -2093,33 +2336,6 @@ cl_renderer/texture/texture_iter.s: cl_renderer/texture/texture_iter.c.s
 cl_renderer/texture/texture_iter.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
 .PHONY : cl_renderer/texture/texture_iter.c.s
-
-cl_renderer/texture/texture_new.o: cl_renderer/texture/texture_new.c.o
-
-.PHONY : cl_renderer/texture/texture_new.o
-
-# target to build an object file
-cl_renderer/texture/texture_new.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.o
-.PHONY : cl_renderer/texture/texture_new.c.o
-
-cl_renderer/texture/texture_new.i: cl_renderer/texture/texture_new.c.i
-
-.PHONY : cl_renderer/texture/texture_new.i
-
-# target to preprocess a source file
-cl_renderer/texture/texture_new.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.i
-.PHONY : cl_renderer/texture/texture_new.c.i
-
-cl_renderer/texture/texture_new.s: cl_renderer/texture/texture_new.c.s
-
-.PHONY : cl_renderer/texture/texture_new.s
-
-# target to generate assembly for a file
-cl_renderer/texture/texture_new.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.s
-.PHONY : cl_renderer/texture/texture_new.c.s
 
 cl_renderer/texture/texture_set.o: cl_renderer/texture/texture_set.c.o
 
@@ -5676,6 +5892,30 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s"
+	@echo "... cl_renderer/disruption_x/disruption_checkerboard.o"
+	@echo "... cl_renderer/disruption_x/disruption_checkerboard.i"
+	@echo "... cl_renderer/disruption_x/disruption_checkerboard.s"
+	@echo "... cl_renderer/disruption_x/disruption_math.o"
+	@echo "... cl_renderer/disruption_x/disruption_math.i"
+	@echo "... cl_renderer/disruption_x/disruption_math.s"
+	@echo "... cl_renderer/disruption_x/disruption_perlin_noise.o"
+	@echo "... cl_renderer/disruption_x/disruption_perlin_noise.i"
+	@echo "... cl_renderer/disruption_x/disruption_perlin_noise.s"
+	@echo "... cl_renderer/disruption_x/disruption_sine_wave.o"
+	@echo "... cl_renderer/disruption_x/disruption_sine_wave.i"
+	@echo "... cl_renderer/disruption_x/disruption_sine_wave.s"
+	@echo "... cl_renderer/f2/f2_add.o"
+	@echo "... cl_renderer/f2/f2_add.i"
+	@echo "... cl_renderer/f2/f2_add.s"
+	@echo "... cl_renderer/f2/f2_dot.o"
+	@echo "... cl_renderer/f2/f2_dot.i"
+	@echo "... cl_renderer/f2/f2_dot.s"
+	@echo "... cl_renderer/f2/f2_mul.o"
+	@echo "... cl_renderer/f2/f2_mul.i"
+	@echo "... cl_renderer/f2/f2_mul.s"
+	@echo "... cl_renderer/f2/f2_sub.o"
+	@echo "... cl_renderer/f2/f2_sub.i"
+	@echo "... cl_renderer/f2/f2_sub.s"
 	@echo "... cl_renderer/f4/f4_add.o"
 	@echo "... cl_renderer/f4/f4_add.i"
 	@echo "... cl_renderer/f4/f4_add.s"
@@ -5802,12 +6042,12 @@ help:
 	@echo "... cl_renderer/texture/texture_fill_data.o"
 	@echo "... cl_renderer/texture/texture_fill_data.i"
 	@echo "... cl_renderer/texture/texture_fill_data.s"
+	@echo "... cl_renderer/texture/texture_initialization.o"
+	@echo "... cl_renderer/texture/texture_initialization.i"
+	@echo "... cl_renderer/texture/texture_initialization.s"
 	@echo "... cl_renderer/texture/texture_iter.o"
 	@echo "... cl_renderer/texture/texture_iter.i"
 	@echo "... cl_renderer/texture/texture_iter.s"
-	@echo "... cl_renderer/texture/texture_new.o"
-	@echo "... cl_renderer/texture/texture_new.i"
-	@echo "... cl_renderer/texture/texture_new.s"
 	@echo "... cl_renderer/texture/texture_set.o"
 	@echo "... cl_renderer/texture/texture_set.i"
 	@echo "... cl_renderer/texture/texture_set.s"

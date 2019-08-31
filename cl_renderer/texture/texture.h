@@ -32,8 +32,6 @@ void						texture_fill_data(
 							t_texture *texture,
 							unsigned char *stbi_data);
 
-void						texture_get_space(t_texture *texture);
-
 RT_F4_API					*texture_iter(t_texture *texture);
 
 void						texture_convert(
