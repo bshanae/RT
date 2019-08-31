@@ -271,6 +271,10 @@ stb_image.h
 .././cl_renderer/texture/stb_image.h
 rt_float.h
 .././cl_renderer/texture/rt_float.h
+texture_sources.h
+.././cl_renderer/texture/texture_sources.h
+
+.././cl_renderer/texture/texture_sources.h
 
 .././gui/gui/gui.h
 rt_parameters.h
@@ -5499,6 +5503,8 @@ stb_image.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/stb_image.h
 rt_float.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/rt_float.h
+texture_sources.h
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources.h
 
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_convert.c
 texture.h
@@ -5512,6 +5518,10 @@ texture.h
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c
+texture.h
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_fill_data.c
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
@@ -5520,9 +5530,15 @@ texture.h
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c
+texture.h
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources.h
 
 /Users/ashari/21_ray_tracer/gui/gui/gui.h
 rt_parameters.h

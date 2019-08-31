@@ -189,6 +189,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o"
   "rt.pdb"
   "rt"
 )

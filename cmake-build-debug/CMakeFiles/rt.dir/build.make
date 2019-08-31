@@ -2527,6 +2527,32 @@ CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_get_space.c -o CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s
 
+CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o: ../cl_renderer/texture/texture_disruptions_load.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c
+
+CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c > CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.i
+
+CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c -o CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.s
+
+CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o: ../cl_renderer/texture/texture_iter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o   -c /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c
+
+CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c > CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.i
+
+CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c -o CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
+
 # Object files for target rt
 rt_OBJECTS = \
 "CMakeFiles/rt.dir/main.c.o" \
@@ -2718,7 +2744,9 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o"
+"CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -2913,9 +2941,11 @@ rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Linking C executable rt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Linking C executable rt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

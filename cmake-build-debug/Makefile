@@ -1797,6 +1797,33 @@ cl_renderer/texture/texture_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.s
 .PHONY : cl_renderer/texture/texture_delete.c.s
 
+cl_renderer/texture/texture_disruptions_load.o: cl_renderer/texture/texture_disruptions_load.c.o
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.o
+
+# target to build an object file
+cl_renderer/texture/texture_disruptions_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.o
+
+cl_renderer/texture/texture_disruptions_load.i: cl_renderer/texture/texture_disruptions_load.c.i
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_disruptions_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.i
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.i
+
+cl_renderer/texture/texture_disruptions_load.s: cl_renderer/texture/texture_disruptions_load.c.s
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_disruptions_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.s
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.s
+
 cl_renderer/texture/texture_fill_data.o: cl_renderer/texture/texture_fill_data.c.o
 
 .PHONY : cl_renderer/texture/texture_fill_data.o
@@ -1850,6 +1877,33 @@ cl_renderer/texture/texture_get_space.s: cl_renderer/texture/texture_get_space.c
 cl_renderer/texture/texture_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s
 .PHONY : cl_renderer/texture/texture_get_space.c.s
+
+cl_renderer/texture/texture_iter.o: cl_renderer/texture/texture_iter.c.o
+
+.PHONY : cl_renderer/texture/texture_iter.o
+
+# target to build an object file
+cl_renderer/texture/texture_iter.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o
+.PHONY : cl_renderer/texture/texture_iter.c.o
+
+cl_renderer/texture/texture_iter.i: cl_renderer/texture/texture_iter.c.i
+
+.PHONY : cl_renderer/texture/texture_iter.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_iter.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.i
+.PHONY : cl_renderer/texture/texture_iter.c.i
+
+cl_renderer/texture/texture_iter.s: cl_renderer/texture/texture_iter.c.s
+
+.PHONY : cl_renderer/texture/texture_iter.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_iter.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
+.PHONY : cl_renderer/texture/texture_iter.c.s
 
 cl_renderer/texture/texture_new.o: cl_renderer/texture/texture_new.c.o
 
@@ -5448,12 +5502,18 @@ help:
 	@echo "... cl_renderer/texture/texture_delete.o"
 	@echo "... cl_renderer/texture/texture_delete.i"
 	@echo "... cl_renderer/texture/texture_delete.s"
+	@echo "... cl_renderer/texture/texture_disruptions_load.o"
+	@echo "... cl_renderer/texture/texture_disruptions_load.i"
+	@echo "... cl_renderer/texture/texture_disruptions_load.s"
 	@echo "... cl_renderer/texture/texture_fill_data.o"
 	@echo "... cl_renderer/texture/texture_fill_data.i"
 	@echo "... cl_renderer/texture/texture_fill_data.s"
 	@echo "... cl_renderer/texture/texture_get_space.o"
 	@echo "... cl_renderer/texture/texture_get_space.i"
 	@echo "... cl_renderer/texture/texture_get_space.s"
+	@echo "... cl_renderer/texture/texture_iter.o"
+	@echo "... cl_renderer/texture/texture_iter.i"
+	@echo "... cl_renderer/texture/texture_iter.s"
 	@echo "... cl_renderer/texture/texture_new.o"
 	@echo "... cl_renderer/texture/texture_new.i"
 	@echo "... cl_renderer/texture/texture_new.s"

@@ -390,7 +390,7 @@ set(SOURCE_RENDERER
 		${SOURCE_CL_PROGRAM}
 		${SOURCE_CL_ARG_LIST}
 		${SOURCE_CL_BUILDER}
-		${SOURCE_CL_RENDERER_} cl_renderer/texture/texture_get_space.c)
+		${SOURCE_CL_RENDERER_} cl_renderer/texture/texture_get_space.c cl_renderer/texture/texture_disruptions_load.c cl_renderer/texture/texture_sources.h cl_renderer/texture/texture_iter.c)
 
 add_executable(rt
 		${SOURCE_MAIN}

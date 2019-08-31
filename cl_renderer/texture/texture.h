@@ -9,10 +9,7 @@
 # include "rt_parameters.h"
 # include "stb_image.h"
 # include "rt_float.h"
-
-# define TEXTURE_WOOD		"/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources/wood.png"
-# define TEXTURE_CHESS		"/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources/chess.jpg"
-# define TEXTURE_PLANET		"/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources/planet.jpg"
+# include "texture_sources.h"
 
 # define TEXTURE_CHANNELS	4
 
@@ -30,11 +27,15 @@ t_texture					*texture_new(void);
 
 void						texture_data_load(t_texture *texture, const char *path);
 
+void						texture_disruptions_load(t_texture *texture, t_disruption_type type);
+
 void						texture_fill_data(
 							t_texture *texture,
 							unsigned char *stbi_data);
 
 void						texture_get_space(t_texture *texture);
+
+RT_F4_API					*texture_iter(t_texture *texture);
 
 void						texture_convert(
 							const t_texture *texture,
