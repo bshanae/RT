@@ -400,7 +400,7 @@ button
   {
     /*transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0;*/
     /*animation: ripple_effect 0.1s cubic-bezier(0, 0, 0.2, 1) forwards;*/
-    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.16), 0 3px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.16), 0 1px 0px rgba(0, 0, 0, 0.23);
     color: rgba(0, 0, 0, 0.8);
   }
 
@@ -659,6 +659,7 @@ button:only-child, .linked.vertical > combobox:only-child > box > button.combo {
   border-radius: 2px; }
 
 /* menu buttons */
+
 modelbutton.flat,
 .menuitem.button.flat {
   min-height: 28px;
@@ -705,10 +706,10 @@ modelbutton.flat arrow {
   modelbutton.flat arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
-button.color {
-  min-height: 24px;
-  min-width: 24px;
-  padding: 6px; }
+/*button.color {*/
+/*  min-height: 24px;*/
+/*  min-width: 24px;*/
+/*  padding: 6px; }*/
 
 /*********
  * Links *
@@ -1543,7 +1544,7 @@ switch {
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), margin 0;
     min-width: 24px;
     min-height: 24px;
-    margin: -4px 0 -4px -4px;
+    margin: -3px -3px -3px -3px;
     border-radius: 100px;
     -gtk-outline-radius: 100px; }
   switch:hover slider {
@@ -1551,7 +1552,7 @@ switch {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   switch:checked slider {
     animation: needs_attention 0.3s cubic-bezier(0, 0, 0.2, 1);
-    margin: -4px -4px -4px 0;
+    margin: -3px -3px -3px -3px;
     background-color: #a3a3a3;
     color: #FFFFFF; }
   switch:disabled slider {

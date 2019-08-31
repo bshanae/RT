@@ -4,9 +4,9 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 {
 	t_gui_scene_add	*new;
 
-	printf("Initializing object creator\n");
+	printf("GUI : Initializing object creator\n");
 	new = malloc(sizeof(t_gui_scene_add));
-	new->current_type = object_end;
+	new->current_type = object_type_end;
 	new->gen_name_next = 0;
 	new->material_color_silent = 0;
 	gui_scene_add_init_own(new, builder);

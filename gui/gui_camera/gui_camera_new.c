@@ -4,7 +4,7 @@ t_gui_camera		*gui_camera_new(GtkBuilder *builder)
 {
 	t_gui_camera	*new;
 
-	printf("Initializing camera controller\n");
+	printf("GUI : Initializing camera\n");
 	new = malloc(sizeof(t_gui_camera));
 	new->control = RT_GUI_GET(builder, "camera_control");
 	new->control_silent = 0;

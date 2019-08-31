@@ -2,7 +2,7 @@
 
 #include "rt_parameters.h"
 
-static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
+static RT_F4		object_normal_rm(global t_object *object, RT_F4 hit)
 {
 	RT_F4			nudged_hit;
 	RT_F4			normal;
@@ -34,22 +34,22 @@ static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
 }
 
 static RT_F4		object_normal_rt(
-					constant t_object *object,
+					global t_object *object,
                     t_intersection *intersection)
 {
-	if (object->type == object_sphere)
+	if (object->type == object_type_sphere)
 		return (sphere_normal(object, intersection));
-	else if (object->type == object_plane)
+	else if (object->type == object_type_plane)
 		return (plane_normal(object, intersection));
-	else if (object->type == object_cone)
+	else if (object->type == object_type_cone)
 	    return (cone_normal(object, intersection));
-	else if (object->type == object_cylinder)
+	else if (object->type == object_type_cylinder)
 	    return (cylinder_normal(object, intersection));
  	return (0);
 }
 
 static RT_F4		object_normal(
-					constant t_object *object,
+					global t_object *object,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {

@@ -14,17 +14,16 @@
 # include "cl_renderer_flag_x.h"
 # include "cl_renderer_settings.h"
 # include "json_parse.h"
-# include "texture.h"
 
 # include <stdlib.h>
 # include <time.h>
 
 typedef	struct 				s_cl_renderer_data
 {
+	t_camera				*camera_unmodified;
 	t_camera				*camera;
 	t_scene					*scene;
 	t_color					*image;
-	t_texture				*texture;
 	t_cl_renderer_settings	settings;
 	u_long					*rng_state;
 }							t_cl_renderer_data;
@@ -46,8 +45,7 @@ typedef enum				e_cl_renderer_arg
 	cl_arg_image,
 	cl_arg_samples,
 	cl_arg_settings,
-	cl_arg_rng_state,
-	cl_arg_texture
+	cl_arg_rng_state
 }							t_cl_renderer_arg;
 
 t_cl_renderer				*cl_renderer_new(t_gui_image *image);
@@ -57,12 +55,20 @@ void						cl_renderer_flag_set(t_cl_renderer *renderer,
 												 t_cl_renderer_flag flag);
 void						cl_renderer_flag_perform(t_cl_renderer *renderer);
 
-void 						cl_renderer_camera_move
+int 						cl_renderer_camera_move
 							(t_cl_renderer *renderer, t_camera_movement movement);
 void 						cl_renderer_camera_rotate(
 							t_cl_renderer *renderer,
 		 					t_f4_rotation_axis axis,
 		 					t_f4_rotation_direction direction);
+void						cl_renderer_camera_reset(t_cl_renderer *renderer);
+void						cl_renderer_camera_save(t_cl_renderer *renderer);
+
+void 						cl_renderer_camera_request_focus
+							(t_cl_renderer *renderer, int x, int y);
+void 						cl_renderer_camera_request_select
+							(t_cl_renderer *renderer, int x, int y);
+
 void						cl_renderer_load
 							(t_cl_renderer *renderer, const char *path);
 

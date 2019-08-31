@@ -24,7 +24,6 @@ static RT_F4		f4_square(RT_F4 vector)
 		2 * vector.x * vector.w));
 }
 
-
 static RT_F4		f4_mod(const RT_F4 *vector, RT_F value)
 {
 	RT_F4			result;

@@ -12,5 +12,5 @@ void				object_cone_build(t_object *space, va_list *args)
     temp_axis = f4_sub(data->bottom, data->top);
     data->tangent = data->radius / f4_length(temp_axis);
     data->axis = f4_normalize(temp_axis);
-    space->type = object_cone;
+    space->type = object_type_cone;
 }

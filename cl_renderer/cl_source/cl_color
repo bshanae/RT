@@ -24,5 +24,5 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia, int alpha)
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
 	    return(color_filter_sepia(&source));
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, alpha});
 }

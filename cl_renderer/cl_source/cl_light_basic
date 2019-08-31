@@ -18,11 +18,11 @@ typedef struct			s_object_light_direct
 
 static RT_F4			static_get_direction(
 						t_intersection *intersection,
-						constant t_object *object)
+						global t_object *object)
 {
-	if (object->type == object_light_direct)
+	if (object->type == object_type_light_direct)
 		return (((constant t_object_light_direct *)object->data)->direction * (RT_F)-1.);
-	else if (object->type == object_light_point)
+	else if (object->type == object_type_light_point)
 		return (((constant t_object_light_point *)object->data)->position - intersection->hit);
 	return (0.);
 }
@@ -75,11 +75,11 @@ static RT_F4			static_get_cartoon_intensity
 }
 
 static int				static_is_shadowed(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						RT_F4 *light_direction, RT_F *shadow_ratio,
-						global t_texture *texture)
+						RT_F4 *light_direction,
+						RT_F *shadow_ratio)
 {
 	t_intersection   	shadow;
 	const RT_F			default_transparence_shadow_ratio = 1.3;
@@ -87,7 +87,7 @@ static int				static_is_shadowed(
 	intersection_reset(&shadow);
 	shadow.ray.origin = intersection->hit;
 	shadow.ray.direction = normalize(*light_direction);
-	if (!scene_intersect(scene, &shadow, settings, texture))
+	if (!scene_intersect(scene, &shadow, settings))
 		return (0);
 	if (shadow.material.transparence)
 		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
@@ -95,13 +95,12 @@ static int				static_is_shadowed(
 }
 
 static RT_F4			light_basic(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
-						int filter_cartoon_mod,
-						global t_texture *texture)
+						int filter_cartoon_mod)
 {
-	constant t_object	*object;
+	global t_object		*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
 	RT_F4				color_cartoon;
@@ -115,16 +114,16 @@ static RT_F4			light_basic(
 	for (int i = 0; i < scene->lights_length; i++)
 	{
 		object = scene->objects + scene->lights[i];
-		if (object->type == object_light_ambient)
+		if (object->type == object_type_light_ambient)
 		{
 			color_diffuse += object->material.emission;
 			continue ;
 		}
 		light_direction = static_get_direction(intersection, object);
-		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio, texture))
+		if (static_is_shadowed(scene, intersection, settings, &light_direction, &shadow_ratio))
 		{
 			color_diffuse *= (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
-			continue ;
+			continue;
 		}
 		if (filter_cartoon_mod)
 			color_cartoon += object->material.emission * static_get_cartoon_intensity(intersection, &light_direction);

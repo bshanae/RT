@@ -3,12 +3,12 @@
 #include "rt_parameters.h"
 
 static RT_F4		light_area(
-					constant t_scene *scene,
+					global t_scene *scene,
 					t_intersection *intersection_object,
 					constant t_cl_renderer_settings *settings,
-					global ulong *rng_state,
-					global t_texture *texture)
+					global ulong *rng_state)
 {
+	const RT_F		default_transparence_shadow_ratio = 0.15;
 	t_intersection	intersection_light;
 	RT_F4			radiance;
 	RT_F4			light_position;
@@ -17,7 +17,6 @@ static RT_F4		light_area(
 	RT_F			cos_a_max;
 	RT_F			omega;
 	RT_F			sphere_radius;
-	const RT_F		default_transparence_shadow_ratio = 0.15;
 	RT_F			shadow_ratio;
 
 	radiance = 0;
@@ -26,7 +25,7 @@ static RT_F4		light_area(
 	{
  		if (i == intersection_object->object_id)
 			continue ;
-		if (scene->objects[i].type != object_sphere)
+		if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == 0.f)
 			continue ;
@@ -36,17 +35,16 @@ static RT_F4		light_area(
 
 		intersection_light.ray.origin = intersection_object->hit;
 		intersection_light.ray.direction = light_direction;
-		intersection_reset(&intersection_light);
 
-		if (!scene_intersect(scene, &intersection_light, settings, texture))
+		if (!scene_intersect(scene, &intersection_light, settings))
 			continue ;
 		if (intersection_light.object_id != i)
-		{
-			if (intersection_light.material.transparence)
-				shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
-			radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
-			continue ;
-		}
+        {
+        	if (intersection_light.material.transparence)
+        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
+        	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
+        	continue ;
+        }
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
@@ -57,5 +55,5 @@ static RT_F4		light_area(
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return ((RT_F)5. * radiance);
+	return (RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING));
 }

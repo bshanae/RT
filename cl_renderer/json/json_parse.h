@@ -55,6 +55,7 @@ void		parse_sphere(void *data, char *json, jsmntok_t *tokens);
 void		parse_plane(void *data, char *json, jsmntok_t *tokens);
 void		parse_cone(void *data, char *json, jsmntok_t *tokens);
 void		parse_cylinder(void *data, char *json, jsmntok_t *tokens);
+void		parse_box(void *data, char *json, jsmntok_t *tokens);
 void		parse_paraboloid(void *data, char *json, jsmntok_t *tokens);
 void		parse_moebius(void *data, char *json, jsmntok_t *tokens);
 void		parse_torus(void *data, char *json, jsmntok_t *tokens);
@@ -63,6 +64,5 @@ void		parse_julia(void *data, char *json, jsmntok_t *tokens);
 void		parse_ambient(void *data, char *json, jsmntok_t *tokens);
 void		parse_point(void *data, char *json, jsmntok_t *tokens);
 void		parse_direct(void *data, char *json, jsmntok_t *tokens);
-void		parse_box(void *data, char *json, jsmntok_t *tokens);
 
 #endif

@@ -231,6 +231,33 @@ cl_renderer/camera/camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.s
 .PHONY : cl_renderer/camera/camera_new.c.s
 
+cl_renderer/camera/camera_request_x.o: cl_renderer/camera/camera_request_x.c.o
+
+.PHONY : cl_renderer/camera/camera_request_x.o
+
+# target to build an object file
+cl_renderer/camera/camera_request_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.o
+.PHONY : cl_renderer/camera/camera_request_x.c.o
+
+cl_renderer/camera/camera_request_x.i: cl_renderer/camera/camera_request_x.c.i
+
+.PHONY : cl_renderer/camera/camera_request_x.i
+
+# target to preprocess a source file
+cl_renderer/camera/camera_request_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.i
+.PHONY : cl_renderer/camera/camera_request_x.c.i
+
+cl_renderer/camera/camera_request_x.s: cl_renderer/camera/camera_request_x.c.s
+
+.PHONY : cl_renderer/camera/camera_request_x.s
+
+# target to generate assembly for a file
+cl_renderer/camera/camera_request_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_request_x.c.s
+.PHONY : cl_renderer/camera/camera_request_x.c.s
+
 cl_renderer/camera/camera_rotate.o: cl_renderer/camera/camera_rotate.c.o
 
 .PHONY : cl_renderer/camera/camera_rotate.o
@@ -690,6 +717,33 @@ cl_renderer/cl_program/cl_program_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_program/cl_program_new.c.s
 .PHONY : cl_renderer/cl_program/cl_program_new.c.s
 
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.o: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
+
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.i: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.i
+
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.s: cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.s
+
 cl_renderer/cl_renderer/cl_renderer_camera_x.o: cl_renderer/cl_renderer/cl_renderer_camera_x.c.o
 
 .PHONY : cl_renderer/cl_renderer/cl_renderer_camera_x.o
@@ -905,6 +959,33 @@ cl_renderer/f4/f4_add.s: cl_renderer/f4/f4_add.c.s
 cl_renderer/f4/f4_add.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.s
 .PHONY : cl_renderer/f4/f4_add.c.s
+
+cl_renderer/f4/f4_dot.o: cl_renderer/f4/f4_dot.c.o
+
+.PHONY : cl_renderer/f4/f4_dot.o
+
+# target to build an object file
+cl_renderer/f4/f4_dot.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o
+.PHONY : cl_renderer/f4/f4_dot.c.o
+
+cl_renderer/f4/f4_dot.i: cl_renderer/f4/f4_dot.c.i
+
+.PHONY : cl_renderer/f4/f4_dot.i
+
+# target to preprocess a source file
+cl_renderer/f4/f4_dot.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.i
+.PHONY : cl_renderer/f4/f4_dot.c.i
+
+cl_renderer/f4/f4_dot.s: cl_renderer/f4/f4_dot.c.s
+
+.PHONY : cl_renderer/f4/f4_dot.s
+
+# target to generate assembly for a file
+cl_renderer/f4/f4_dot.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.s
+.PHONY : cl_renderer/f4/f4_dot.c.s
 
 cl_renderer/f4/f4_length.o: cl_renderer/f4/f4_length.c.o
 
@@ -1176,6 +1257,33 @@ cl_renderer/object/object_build.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_build.c.s
 .PHONY : cl_renderer/object/object_build.c.s
 
+cl_renderer/object/object_get_flag.o: cl_renderer/object/object_get_flag.c.o
+
+.PHONY : cl_renderer/object/object_get_flag.o
+
+# target to build an object file
+cl_renderer/object/object_get_flag.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o
+.PHONY : cl_renderer/object/object_get_flag.c.o
+
+cl_renderer/object/object_get_flag.i: cl_renderer/object/object_get_flag.c.i
+
+.PHONY : cl_renderer/object/object_get_flag.i
+
+# target to preprocess a source file
+cl_renderer/object/object_get_flag.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.i
+.PHONY : cl_renderer/object/object_get_flag.c.i
+
+cl_renderer/object/object_get_flag.s: cl_renderer/object/object_get_flag.c.s
+
+.PHONY : cl_renderer/object/object_get_flag.s
+
+# target to generate assembly for a file
+cl_renderer/object/object_get_flag.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.s
+.PHONY : cl_renderer/object/object_get_flag.c.s
+
 cl_renderer/object/object_translate.o: cl_renderer/object/object_translate.c.o
 
 .PHONY : cl_renderer/object/object_translate.o
@@ -1364,6 +1472,33 @@ cl_renderer/object_x/object_light_x.s: cl_renderer/object_x/object_light_x.c.s
 cl_renderer/object_x/object_light_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.s
 .PHONY : cl_renderer/object_x/object_light_x.c.s
+
+cl_renderer/object_x/object_limited.o: cl_renderer/object_x/object_limited.c.o
+
+.PHONY : cl_renderer/object_x/object_limited.o
+
+# target to build an object file
+cl_renderer/object_x/object_limited.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o
+.PHONY : cl_renderer/object_x/object_limited.c.o
+
+cl_renderer/object_x/object_limited.i: cl_renderer/object_x/object_limited.c.i
+
+.PHONY : cl_renderer/object_x/object_limited.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_limited.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.i
+.PHONY : cl_renderer/object_x/object_limited.c.i
+
+cl_renderer/object_x/object_limited.s: cl_renderer/object_x/object_limited.c.s
+
+.PHONY : cl_renderer/object_x/object_limited.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_limited.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.s
+.PHONY : cl_renderer/object_x/object_limited.c.s
 
 cl_renderer/object_x/object_mandelbulb.o: cl_renderer/object_x/object_mandelbulb.c.o
 
@@ -1554,6 +1689,33 @@ cl_renderer/object_x/object_torus.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
 .PHONY : cl_renderer/object_x/object_torus.c.s
 
+cl_renderer/scene/camera_point_check.o: cl_renderer/scene/camera_point_check.c.o
+
+.PHONY : cl_renderer/scene/camera_point_check.o
+
+# target to build an object file
+cl_renderer/scene/camera_point_check.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o
+.PHONY : cl_renderer/scene/camera_point_check.c.o
+
+cl_renderer/scene/camera_point_check.i: cl_renderer/scene/camera_point_check.c.i
+
+.PHONY : cl_renderer/scene/camera_point_check.i
+
+# target to preprocess a source file
+cl_renderer/scene/camera_point_check.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.i
+.PHONY : cl_renderer/scene/camera_point_check.c.i
+
+cl_renderer/scene/camera_point_check.s: cl_renderer/scene/camera_point_check.c.s
+
+.PHONY : cl_renderer/scene/camera_point_check.s
+
+# target to generate assembly for a file
+cl_renderer/scene/camera_point_check.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.s
+.PHONY : cl_renderer/scene/camera_point_check.c.s
+
 cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
 
 .PHONY : cl_renderer/scene/scene_clear.o
@@ -1635,6 +1797,60 @@ cl_renderer/scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.s
 .PHONY : cl_renderer/scene/scene_get_space.c.s
 
+cl_renderer/scene/scene_give_name.o: cl_renderer/scene/scene_give_name.c.o
+
+.PHONY : cl_renderer/scene/scene_give_name.o
+
+# target to build an object file
+cl_renderer/scene/scene_give_name.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o
+.PHONY : cl_renderer/scene/scene_give_name.c.o
+
+cl_renderer/scene/scene_give_name.i: cl_renderer/scene/scene_give_name.c.i
+
+.PHONY : cl_renderer/scene/scene_give_name.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_give_name.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.i
+.PHONY : cl_renderer/scene/scene_give_name.c.i
+
+cl_renderer/scene/scene_give_name.s: cl_renderer/scene/scene_give_name.c.s
+
+.PHONY : cl_renderer/scene/scene_give_name.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_give_name.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
+.PHONY : cl_renderer/scene/scene_give_name.c.s
+
+cl_renderer/scene/scene_is_valid_x.o: cl_renderer/scene/scene_is_valid_x.c.o
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.o
+
+# target to build an object file
+cl_renderer/scene/scene_is_valid_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.o
+
+cl_renderer/scene/scene_is_valid_x.i: cl_renderer/scene/scene_is_valid_x.c.i
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_is_valid_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.i
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.i
+
+cl_renderer/scene/scene_is_valid_x.s: cl_renderer/scene/scene_is_valid_x.c.s
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_is_valid_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.s
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.s
+
 cl_renderer/scene/scene_new.o: cl_renderer/scene/scene_new.c.o
 
 .PHONY : cl_renderer/scene/scene_new.o
@@ -1688,6 +1904,33 @@ cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c
 cl_renderer/scene/scene_remove_object.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
 .PHONY : cl_renderer/scene/scene_remove_object.c.s
+
+cl_renderer/scene/scene_select.o: cl_renderer/scene/scene_select.c.o
+
+.PHONY : cl_renderer/scene/scene_select.o
+
+# target to build an object file
+cl_renderer/scene/scene_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o
+.PHONY : cl_renderer/scene/scene_select.c.o
+
+cl_renderer/scene/scene_select.i: cl_renderer/scene/scene_select.c.i
+
+.PHONY : cl_renderer/scene/scene_select.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i
+.PHONY : cl_renderer/scene/scene_select.c.i
+
+cl_renderer/scene/scene_select.s: cl_renderer/scene/scene_select.c.s
+
+.PHONY : cl_renderer/scene/scene_select.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s
+.PHONY : cl_renderer/scene/scene_select.c.s
 
 cl_renderer/scene/scene_update.o: cl_renderer/scene/scene_update.c.o
 
@@ -1770,33 +2013,6 @@ cl_renderer/texture/texture_data_load.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.s
 .PHONY : cl_renderer/texture/texture_data_load.c.s
 
-cl_renderer/texture/texture_delete.o: cl_renderer/texture/texture_delete.c.o
-
-.PHONY : cl_renderer/texture/texture_delete.o
-
-# target to build an object file
-cl_renderer/texture/texture_delete.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.o
-.PHONY : cl_renderer/texture/texture_delete.c.o
-
-cl_renderer/texture/texture_delete.i: cl_renderer/texture/texture_delete.c.i
-
-.PHONY : cl_renderer/texture/texture_delete.i
-
-# target to preprocess a source file
-cl_renderer/texture/texture_delete.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.i
-.PHONY : cl_renderer/texture/texture_delete.c.i
-
-cl_renderer/texture/texture_delete.s: cl_renderer/texture/texture_delete.c.s
-
-.PHONY : cl_renderer/texture/texture_delete.s
-
-# target to generate assembly for a file
-cl_renderer/texture/texture_delete.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_delete.c.s
-.PHONY : cl_renderer/texture/texture_delete.c.s
-
 cl_renderer/texture/texture_disruptions_load.o: cl_renderer/texture/texture_disruptions_load.c.o
 
 .PHONY : cl_renderer/texture/texture_disruptions_load.o
@@ -1851,33 +2067,6 @@ cl_renderer/texture/texture_fill_data.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.s
 .PHONY : cl_renderer/texture/texture_fill_data.c.s
 
-cl_renderer/texture/texture_get_space.o: cl_renderer/texture/texture_get_space.c.o
-
-.PHONY : cl_renderer/texture/texture_get_space.o
-
-# target to build an object file
-cl_renderer/texture/texture_get_space.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.o
-.PHONY : cl_renderer/texture/texture_get_space.c.o
-
-cl_renderer/texture/texture_get_space.i: cl_renderer/texture/texture_get_space.c.i
-
-.PHONY : cl_renderer/texture/texture_get_space.i
-
-# target to preprocess a source file
-cl_renderer/texture/texture_get_space.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.i
-.PHONY : cl_renderer/texture/texture_get_space.c.i
-
-cl_renderer/texture/texture_get_space.s: cl_renderer/texture/texture_get_space.c.s
-
-.PHONY : cl_renderer/texture/texture_get_space.s
-
-# target to generate assembly for a file
-cl_renderer/texture/texture_get_space.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_get_space.c.s
-.PHONY : cl_renderer/texture/texture_get_space.c.s
-
 cl_renderer/texture/texture_iter.o: cl_renderer/texture/texture_iter.c.o
 
 .PHONY : cl_renderer/texture/texture_iter.o
@@ -1931,6 +2120,33 @@ cl_renderer/texture/texture_new.s: cl_renderer/texture/texture_new.c.s
 cl_renderer/texture/texture_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.s
 .PHONY : cl_renderer/texture/texture_new.c.s
+
+cl_renderer/texture/texture_set.o: cl_renderer/texture/texture_set.c.o
+
+.PHONY : cl_renderer/texture/texture_set.o
+
+# target to build an object file
+cl_renderer/texture/texture_set.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o
+.PHONY : cl_renderer/texture/texture_set.c.o
+
+cl_renderer/texture/texture_set.i: cl_renderer/texture/texture_set.c.i
+
+.PHONY : cl_renderer/texture/texture_set.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_set.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.i
+.PHONY : cl_renderer/texture/texture_set.c.i
+
+cl_renderer/texture/texture_set.s: cl_renderer/texture/texture_set.c.s
+
+.PHONY : cl_renderer/texture/texture_set.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_set.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.s
+.PHONY : cl_renderer/texture/texture_set.c.s
 
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
@@ -2958,6 +3174,33 @@ gui/gui_queue/gui_queue_execute_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_execute_x.c.s
 .PHONY : gui/gui_queue/gui_queue_execute_x.c.s
 
+gui/gui_queue/gui_queue_get_time.o: gui/gui_queue/gui_queue_get_time.c.o
+
+.PHONY : gui/gui_queue/gui_queue_get_time.o
+
+# target to build an object file
+gui/gui_queue/gui_queue_get_time.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.o
+.PHONY : gui/gui_queue/gui_queue_get_time.c.o
+
+gui/gui_queue/gui_queue_get_time.i: gui/gui_queue/gui_queue_get_time.c.i
+
+.PHONY : gui/gui_queue/gui_queue_get_time.i
+
+# target to preprocess a source file
+gui/gui_queue/gui_queue_get_time.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.i
+.PHONY : gui/gui_queue/gui_queue_get_time.c.i
+
+gui/gui_queue/gui_queue_get_time.s: gui/gui_queue/gui_queue_get_time.c.s
+
+.PHONY : gui/gui_queue/gui_queue_get_time.s
+
+# target to generate assembly for a file
+gui/gui_queue/gui_queue_get_time.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_get_time.c.s
+.PHONY : gui/gui_queue/gui_queue_get_time.c.s
+
 gui/gui_queue/gui_queue_new.o: gui/gui_queue/gui_queue_new.c.o
 
 .PHONY : gui/gui_queue/gui_queue_new.o
@@ -3038,6 +3281,33 @@ gui/gui_queue/gui_queue_start.s: gui/gui_queue/gui_queue_start.c.s
 gui/gui_queue/gui_queue_start.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_start.c.s
 .PHONY : gui/gui_queue/gui_queue_start.c.s
+
+gui/gui_queue/gui_queue_wait.o: gui/gui_queue/gui_queue_wait.c.o
+
+.PHONY : gui/gui_queue/gui_queue_wait.o
+
+# target to build an object file
+gui/gui_queue/gui_queue_wait.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.o
+.PHONY : gui/gui_queue/gui_queue_wait.c.o
+
+gui/gui_queue/gui_queue_wait.i: gui/gui_queue/gui_queue_wait.c.i
+
+.PHONY : gui/gui_queue/gui_queue_wait.i
+
+# target to preprocess a source file
+gui/gui_queue/gui_queue_wait.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.i
+.PHONY : gui/gui_queue/gui_queue_wait.c.i
+
+gui/gui_queue/gui_queue_wait.s: gui/gui_queue/gui_queue_wait.c.s
+
+.PHONY : gui/gui_queue/gui_queue_wait.s
+
+# target to generate assembly for a file
+gui/gui_queue/gui_queue_wait.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_queue/gui_queue_wait.c.s
+.PHONY : gui/gui_queue/gui_queue_wait.c.s
 
 gui/gui_scene/gui_scene_delete.o: gui/gui_scene/gui_scene_delete.c.o
 
@@ -5328,6 +5598,9 @@ help:
 	@echo "... cl_renderer/camera/camera_new.o"
 	@echo "... cl_renderer/camera/camera_new.i"
 	@echo "... cl_renderer/camera/camera_new.s"
+	@echo "... cl_renderer/camera/camera_request_x.o"
+	@echo "... cl_renderer/camera/camera_request_x.i"
+	@echo "... cl_renderer/camera/camera_request_x.s"
 	@echo "... cl_renderer/camera/camera_rotate.o"
 	@echo "... cl_renderer/camera/camera_rotate.i"
 	@echo "... cl_renderer/camera/camera_rotate.s"
@@ -5379,6 +5652,9 @@ help:
 	@echo "... cl_renderer/cl_program/cl_program_new.o"
 	@echo "... cl_renderer/cl_program/cl_program_new.i"
 	@echo "... cl_renderer/cl_program/cl_program_new.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_request_x.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.s"
@@ -5403,6 +5679,9 @@ help:
 	@echo "... cl_renderer/f4/f4_add.o"
 	@echo "... cl_renderer/f4/f4_add.i"
 	@echo "... cl_renderer/f4/f4_add.s"
+	@echo "... cl_renderer/f4/f4_dot.o"
+	@echo "... cl_renderer/f4/f4_dot.i"
+	@echo "... cl_renderer/f4/f4_dot.s"
 	@echo "... cl_renderer/f4/f4_length.o"
 	@echo "... cl_renderer/f4/f4_length.i"
 	@echo "... cl_renderer/f4/f4_length.s"
@@ -5433,6 +5712,9 @@ help:
 	@echo "... cl_renderer/object/object_build.o"
 	@echo "... cl_renderer/object/object_build.i"
 	@echo "... cl_renderer/object/object_build.s"
+	@echo "... cl_renderer/object/object_get_flag.o"
+	@echo "... cl_renderer/object/object_get_flag.i"
+	@echo "... cl_renderer/object/object_get_flag.s"
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
@@ -5454,6 +5736,9 @@ help:
 	@echo "... cl_renderer/object_x/object_light_x.o"
 	@echo "... cl_renderer/object_x/object_light_x.i"
 	@echo "... cl_renderer/object_x/object_light_x.s"
+	@echo "... cl_renderer/object_x/object_limited.o"
+	@echo "... cl_renderer/object_x/object_limited.i"
+	@echo "... cl_renderer/object_x/object_limited.s"
 	@echo "... cl_renderer/object_x/object_mandelbulb.o"
 	@echo "... cl_renderer/object_x/object_mandelbulb.i"
 	@echo "... cl_renderer/object_x/object_mandelbulb.s"
@@ -5475,6 +5760,9 @@ help:
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"
+	@echo "... cl_renderer/scene/camera_point_check.o"
+	@echo "... cl_renderer/scene/camera_point_check.i"
+	@echo "... cl_renderer/scene/camera_point_check.s"
 	@echo "... cl_renderer/scene/scene_clear.o"
 	@echo "... cl_renderer/scene/scene_clear.i"
 	@echo "... cl_renderer/scene/scene_clear.s"
@@ -5484,12 +5772,21 @@ help:
 	@echo "... cl_renderer/scene/scene_get_space.o"
 	@echo "... cl_renderer/scene/scene_get_space.i"
 	@echo "... cl_renderer/scene/scene_get_space.s"
+	@echo "... cl_renderer/scene/scene_give_name.o"
+	@echo "... cl_renderer/scene/scene_give_name.i"
+	@echo "... cl_renderer/scene/scene_give_name.s"
+	@echo "... cl_renderer/scene/scene_is_valid_x.o"
+	@echo "... cl_renderer/scene/scene_is_valid_x.i"
+	@echo "... cl_renderer/scene/scene_is_valid_x.s"
 	@echo "... cl_renderer/scene/scene_new.o"
 	@echo "... cl_renderer/scene/scene_new.i"
 	@echo "... cl_renderer/scene/scene_new.s"
 	@echo "... cl_renderer/scene/scene_remove_object.o"
 	@echo "... cl_renderer/scene/scene_remove_object.i"
 	@echo "... cl_renderer/scene/scene_remove_object.s"
+	@echo "... cl_renderer/scene/scene_select.o"
+	@echo "... cl_renderer/scene/scene_select.i"
+	@echo "... cl_renderer/scene/scene_select.s"
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"
@@ -5499,24 +5796,21 @@ help:
 	@echo "... cl_renderer/texture/texture_data_load.o"
 	@echo "... cl_renderer/texture/texture_data_load.i"
 	@echo "... cl_renderer/texture/texture_data_load.s"
-	@echo "... cl_renderer/texture/texture_delete.o"
-	@echo "... cl_renderer/texture/texture_delete.i"
-	@echo "... cl_renderer/texture/texture_delete.s"
 	@echo "... cl_renderer/texture/texture_disruptions_load.o"
 	@echo "... cl_renderer/texture/texture_disruptions_load.i"
 	@echo "... cl_renderer/texture/texture_disruptions_load.s"
 	@echo "... cl_renderer/texture/texture_fill_data.o"
 	@echo "... cl_renderer/texture/texture_fill_data.i"
 	@echo "... cl_renderer/texture/texture_fill_data.s"
-	@echo "... cl_renderer/texture/texture_get_space.o"
-	@echo "... cl_renderer/texture/texture_get_space.i"
-	@echo "... cl_renderer/texture/texture_get_space.s"
 	@echo "... cl_renderer/texture/texture_iter.o"
 	@echo "... cl_renderer/texture/texture_iter.i"
 	@echo "... cl_renderer/texture/texture_iter.s"
 	@echo "... cl_renderer/texture/texture_new.o"
 	@echo "... cl_renderer/texture/texture_new.i"
 	@echo "... cl_renderer/texture/texture_new.s"
+	@echo "... cl_renderer/texture/texture_set.o"
+	@echo "... cl_renderer/texture/texture_set.i"
+	@echo "... cl_renderer/texture/texture_set.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
@@ -5631,6 +5925,9 @@ help:
 	@echo "... gui/gui_queue/gui_queue_execute_x.o"
 	@echo "... gui/gui_queue/gui_queue_execute_x.i"
 	@echo "... gui/gui_queue/gui_queue_execute_x.s"
+	@echo "... gui/gui_queue/gui_queue_get_time.o"
+	@echo "... gui/gui_queue/gui_queue_get_time.i"
+	@echo "... gui/gui_queue/gui_queue_get_time.s"
 	@echo "... gui/gui_queue/gui_queue_new.o"
 	@echo "... gui/gui_queue/gui_queue_new.i"
 	@echo "... gui/gui_queue/gui_queue_new.s"
@@ -5640,6 +5937,9 @@ help:
 	@echo "... gui/gui_queue/gui_queue_start.o"
 	@echo "... gui/gui_queue/gui_queue_start.i"
 	@echo "... gui/gui_queue/gui_queue_start.s"
+	@echo "... gui/gui_queue/gui_queue_wait.o"
+	@echo "... gui/gui_queue/gui_queue_wait.i"
+	@echo "... gui/gui_queue/gui_queue_wait.s"
 	@echo "... gui/gui_scene/gui_scene_delete.o"
 	@echo "... gui/gui_scene/gui_scene_delete.i"
 	@echo "... gui/gui_scene/gui_scene_delete.s"

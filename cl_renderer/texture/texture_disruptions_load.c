@@ -14,7 +14,6 @@ void				texture_disruptions_load(t_texture *texture, t_disruption_type type)
 {
 	RT_F4_API		*pointer;
 
-	texture_get_space(texture);
 	pointer = texture_iter(texture);
 	texture_disruption_mod(texture, pointer, type);
 }

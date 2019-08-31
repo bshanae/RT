@@ -91,7 +91,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/rt_assert"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>
@@ -167,7 +167,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/rt_assert"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>
@@ -200,6 +200,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_request_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_rotate.c">
@@ -253,6 +256,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_program/cl_program_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c">
 			<Option target="rt"/>
 		</Unit>
@@ -278,6 +284,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_add.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_dot.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/f4/f4_length.c">
@@ -310,6 +319,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_build.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_get_flag.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object/object_translate.c">
 			<Option target="rt"/>
 		</Unit>
@@ -329,6 +341,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_light_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_limited.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c">
@@ -352,6 +367,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_torus.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/camera_point_check.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_clear.c">
 			<Option target="rt"/>
 		</Unit>
@@ -361,10 +379,19 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_give_name.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_is_valid_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c">
@@ -376,16 +403,10 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_data_load.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_delete.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_fill_data.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_get_space.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c">
@@ -394,7 +415,7 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources.h">
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_set.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c">
@@ -511,6 +532,9 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_execute_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_get_time.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_new.c">
 			<Option target="rt"/>
 		</Unit>
@@ -518,6 +542,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_start.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_wait.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_scene/gui_scene_delete.c">

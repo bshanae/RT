@@ -2,19 +2,26 @@
 
 #include "rt_parameters.h"
 
-typedef struct		s_object_plane
+typedef enum 			e_plane_limiting
 {
-	RT_F4			position;
-	RT_F4			normal;
-}					t_object_plane;
+	plane_limiting_yes,
+	plane_limiting_no
+}						t_plane_limiting;
 
-static int			plane_intersect(constant t_object *object, t_intersection *intersection)
+typedef struct			s_object_plane
 {
-	t_object_plane	data;
-	RT_F4			temp[2];
-	RT_F			value[3];
+	RT_F4				position;
+	RT_F4				normal;
+	t_plane_limiting	is_limiting;
+}						t_object_plane;
 
-	data = *(constant t_object_plane *)object->data;
+static int				plane_intersect(global t_object *object, t_intersection *intersection)
+{
+	t_object_plane		data;
+	RT_F4				temp[2];
+	RT_F				value[3];
+
+	data = *(global t_object_plane *)object->data;
 	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
 		return (0);
 	temp[0] = data.position - intersection->ray.origin;
@@ -26,15 +33,33 @@ static int			plane_intersect(constant t_object *object, t_intersection *intersec
 	return (1);
 }
 
-static RT_F4		plane_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4			plane_normal(global t_object *object, t_intersection *intersection)
 {
-	return (((constant t_object_plane *)object->data)->normal);
+	return (((global t_object_plane *)object->data)->normal);
 }
 
-static RT_F 		plane_sdf(constant t_object *object, RT_F4 point)
+static RT_F 			plane_sdf(global t_object *object, RT_F4 point)
 {
-	t_object_plane	data;
+	t_object_plane		data;
 
-    data = *(constant t_object_plane *)object->data;
+    data = *(global t_object_plane *)object->data;
 	return (dot(data.normal, point - data.position));
+}
+
+static void				plane_intersect_t(t_object_plane *plane, t_intersection *intersection, RT_F *t)
+{
+	RT_F4				temp[2];
+	RT_F				value[3];
+
+	if (!(value[0] = dot(intersection->ray.direction, plane->normal)))
+	{
+		*t = RT_INFINITY;
+		return ;
+	}
+	temp[0] = plane->position - intersection->ray.origin;
+	value[1] = dot(temp[0], plane->normal) / value[0];
+	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
+		*t = RT_INFINITY;
+	else
+		*t = value[1];
 }

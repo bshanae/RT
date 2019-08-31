@@ -16,35 +16,25 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_camera_move(gui->renderer, rt_movement_down);
 	else
 		return (0);
-	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
-	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
 	gui_queue_execute_force(gui->queue);
-
 	return (1);
 }
 
 static int			try_rotate_camera(t_gui *gui, int key)
 {
 	if (key == GDK_KEY_Left)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_y, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_positive);
 	else if (key == GDK_KEY_Right)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_y, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_negative);
 	else if (key == GDK_KEY_Up)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_x, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_x, rt_rotation_negative);
 	else if (key == GDK_KEY_Down)
-		cl_renderer_camera_rotate(gui->renderer,
-			rt_rotation_x, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer,rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
-	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
-	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
 	gui_queue_execute_force(gui->queue);
-
 	return (1);
 }
 
@@ -55,14 +45,24 @@ gboolean			gui_signal_key
 	int 			image_focus;
 	gboolean 		finish_condition;
 
+
+	static int i;
 	gui = (t_gui *)ptr;
 	finish_condition = 1;
 	if (event->keyval == GDK_KEY_Escape)
 		gui_signal_exit(widget, ptr);
 	else if (event->keyval == GDK_KEY_Return)
+#ifdef RT_QUEUE_AUTO
 		gui->queue->block = !gui->queue->block;
+#elif defined RT_QUEUE_MANUAL
+		gui_queue_execute_force(gui->queue);
+#endif
 	else if (event->keyval == GDK_KEY_r)
-		;
+	{
+		cl_renderer_camera_reset(gui->renderer);
+		gui_camera_show(gui->camera, gui->renderer->data.camera);
+		gui_queue_execute_force(gui->queue);
+	}
 	else
 		finish_condition = 0;
 	if (finish_condition)
@@ -71,11 +71,6 @@ gboolean			gui_signal_key
 	if (image_focus && try_move_camera(gui, event->keyval));
 	else if (image_focus && try_rotate_camera(gui, event->keyval));
 	else
-		finish_condition = 1;
-	if (finish_condition)
 		return (FALSE);
-//	gui_queue_block(gui->queue);
-//	cl_renderer_render(gui->renderer);
-//	gui_queue_unblock(gui->queue);
 	return (TRUE);
 }

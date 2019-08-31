@@ -35,7 +35,7 @@ static RT_F                     static_cross_sdf(RT_F4 point)
     return (RT_MIN(sdf_value[0], RT_MIN(sdf_value[1], sdf_value[2])));
 }
 
-static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		            perforated_cube_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_perforated_cube	data;
 	RT_F                        box_sdf_value;
@@ -45,7 +45,7 @@ static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 p
 	RT_F4                       cross_shift;
 	RT_F4						shifted_point;
 
-	data = *(constant t_object_perforated_cube *)object->data;
+	data = *(global t_object_perforated_cube *)object->data;
 	point = data.position - point;
 
 	box_sdf_value = static_box_sdf((RT_F4){1., 1., 1., 0.}, point);

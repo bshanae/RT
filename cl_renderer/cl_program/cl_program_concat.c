@@ -18,7 +18,7 @@ void				cl_program_concat(t_cl_program *program, CHAR_REF file)
 	ft_strcat(file_full, file);
 	fd = open(file_full, O_RDONLY);
 
-	FT_ASSERT(fd != -1)
+	RT_ASSERT(fd != -1)
 	while (1)
 	{
 		if ((program->length + 64.) / program->capacity > 0.5)

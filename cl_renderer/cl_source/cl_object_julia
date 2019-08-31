@@ -9,13 +9,13 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static RT_F			julia_sdf(constant t_object *object, RT_F4 point)
+static RT_F			julia_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
 	RT_F			mz;
 
-	data = *(constant t_object_julia *)object->data;
+	data = *(global t_object_julia *)object->data;
 	md = 1.;
 	point = data.position - point;
 	mz = dot(point, point);

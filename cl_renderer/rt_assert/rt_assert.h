@@ -3,7 +3,7 @@
 
 # include "libft_ft_printf.h"
 
-# define FT_ASSERT(statement)						\
+# define RT_ASSERT(statement)						\
 	if (!(statement))							\
     {											\
 		ft_printf("{red!}assertion failed\n");	\

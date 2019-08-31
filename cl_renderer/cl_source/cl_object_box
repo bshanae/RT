@@ -8,12 +8,12 @@ typedef struct 		s_object_box
 	RT_F4   		size;
 }					t_object_box;
 
-static RT_F 		box_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		box_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_box	data;
 	RT_F4			d;
 
-	data = *(constant t_object_box *)object->data;
+	data = *(global t_object_box *)object->data;
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
 	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)

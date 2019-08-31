@@ -9,6 +9,8 @@
 
 # include <stdarg.h>
 
+t_object_flag		object_get_flag(t_object_type type);
+
 void				object_build(
 					t_object *space,
 					t_object_type type,
@@ -25,6 +27,7 @@ void				object_cylinder_build(t_object *space, va_list *args);
 void                object_box_build(t_object *space, va_list *args);
 void				object_paraboloid_build(t_object *space, va_list *args);
 void                object_moebius_build(t_object *space, va_list *args);
+void				object_limited_build(t_object *space, va_list *args);
 void                object_torus_build(t_object *space, va_list *args);
 void                object_mandelbulb_build(t_object *space, va_list *args);
 void                object_julia_build(t_object *space, va_list *args);

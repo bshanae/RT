@@ -11,12 +11,12 @@ typedef struct 		s_object_cone
 	RT_F          	tangent;
 }					t_object_cone;
 
-static RT_F         cone_cap_intersect(constant t_object *object, t_intersection *intersection)
+static RT_F         cone_cap_intersect(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
     RT_F            t;
 
-    data = *(constant t_object_cone *)object->data;
+    data = *(global t_object_cone *)object->data;
     if (!dot(intersection->ray.direction, data.axis))
         return (INFINITY);
     t = dot((data.bottom - intersection->ray.origin), data.axis)
@@ -30,7 +30,7 @@ static RT_F         cone_cap_intersect(constant t_object *object, t_intersection
     return (t);
 }
 
-static int			cone_intersect(constant t_object *object, t_intersection *intersection)
+static int			cone_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_cone	data;
     RT_F4           temp[3];
@@ -40,7 +40,7 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	RT_F            t[2];
 	RT_F            k[3];
 
-	data = *(constant t_object_cone *)object->data;
+	data = *(global t_object_cone *)object->data;
 	temp[0] = intersection->ray.origin - data.top;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
 			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.)
@@ -73,14 +73,14 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	return (1);
 }
 
-static RT_F4		calculate_cone_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		calculate_cone_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
     RT_F4			temp[2];
     RT_F            tmp_value;
     RT_F4           result;
 
-    data = *(constant t_object_cone *)object->data;
+    data = *(global t_object_cone *)object->data;
     temp[0] = intersection->ray.origin - data.top;
     temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
     tmp_value = dot(intersection->ray.direction, data.axis)
@@ -89,10 +89,10 @@ static RT_F4		calculate_cone_normal(constant t_object *object, t_intersection *i
     return (normalize(result));
 }
 
-static RT_F4		cone_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		cone_normal(global t_object *object, t_intersection *intersection)
 {
     if (!intersection->cups_flag)
         return(calculate_cone_normal(object, intersection));
     else
-        return(normalize(((constant t_object_cone *)object->data)->axis * -1));
+        return(normalize(((global t_object_cone *)object->data)->axis * -1));
 }

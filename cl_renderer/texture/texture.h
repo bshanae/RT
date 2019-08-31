@@ -11,19 +11,18 @@
 # include "rt_float.h"
 # include "texture_sources.h"
 
-# define TEXTURE_CHANNELS	4
+# define TEXTURE_CHANNELS		4
 
 typedef struct 				s_texture
 {
-	RT_F4_API				*data;
-	u_long 					data_size;
-	int 					texture_length[MAX_TEXTURES_NUMBER];
-	int						width[MAX_TEXTURES_NUMBER];
-	int						height[MAX_TEXTURES_NUMBER];
+	RT_F4_API				data[TEXTURE_DATA_SIZE];
+	int 					texture_length[TEXTURE_MAX_NUMBER];
+	int						width[TEXTURE_MAX_NUMBER];
+	int						height[TEXTURE_MAX_NUMBER];
 	int 					textures_number;
 }							t_texture;
 
-t_texture					*texture_new(void);
+void						texture_initialization(t_texture *texture);
 
 void						texture_data_load(t_texture *texture, const char *path);
 
@@ -41,7 +40,5 @@ void						texture_convert(
 							const t_texture *texture,
 							RT_F4_API *pointer,
 							const unsigned char *stbi_data);
-
-void 						texture_delete(t_texture **texture);
 
 #endif

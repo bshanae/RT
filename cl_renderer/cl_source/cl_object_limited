@@ -1,0 +1,58 @@
+// cl_object_limited ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 				s_object_limited
+{
+	int 					id_main;
+	int 					id_limit;
+}							t_object_limited;
+
+static int					limited_intersect(global t_object *object, t_intersection *intersection)
+{
+	global t_object		*scene_begin;
+	t_object_limited		limited;
+	global t_object		*main;
+	t_object_plane			limit;
+
+	RT_F					dot_value[2];
+	RT_F					main_t[2];
+	RT_F					limit_t;
+
+	scene_begin = object - object->id;
+	limited = *(global t_object_limited *)object->data;
+	main = scene_begin + limited.id_main;
+	limit = *(global t_object_plane *)scene_begin[limited.id_limit].data;
+
+	if (main->type == object_type_sphere)
+		sphere_intersect_t(main, intersection, main_t);
+	else
+		return (0);
+
+	plane_intersect_t(&limit, intersection, &limit_t);
+
+    dot_value[0] = dot(limit.position - intersection->ray.origin, limit.normal);
+    dot_value[1] = dot(intersection->ray.direction, limit.normal);
+
+    if (dot_value[0] > 0 && main_t[0] < limit_t)
+    {
+        intersection->ray.t = main_t[0];
+        intersection->object_id = limited.id_main;
+    }
+    else if (dot_value[0] == 0 && dot_value[1] <= 0)
+	{
+		intersection->ray.t = main_t[0];
+		intersection->object_id = limited.id_main;
+    }
+    else if (dot_value[0] <= 0 && limit_t > main_t[0] && limit_t < main_t[1])
+    {
+		intersection->ray.t = limit_t;
+		intersection->object_id = limited.id_limit;
+    }
+    else if (dot_value[0] <= 0 && main_t[0] != RT_INFINITY && limit_t < main_t[0])
+    {
+		intersection->ray.t = main_t[0];
+		intersection->object_id = limited.id_main;
+	}
+	else
+		return (0);
+	return (1);
+}

@@ -7,6 +7,8 @@
 # include "rt_assert.h"
 # include "cl_arg.h"
 
+# include <stdio.h>
+
 typedef struct 			s_cl_arg_list
 {
 	t_cl_arg			array[RT_CL_ARGS_CAPACITY];

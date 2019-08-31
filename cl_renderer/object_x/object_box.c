@@ -7,5 +7,5 @@ void				object_box_build(t_object *space, va_list *args)
 	data = (t_object_box *)space->data;
 	data->position = va_arg(*args, RT_F4_API);
 	data->size = va_arg(*args, RT_F4_API);
-	space->type = object_box;
+	space->type = object_type_box;
 }

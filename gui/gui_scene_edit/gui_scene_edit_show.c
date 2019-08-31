@@ -10,29 +10,29 @@ void 				gui_scene_edit_show
 	gui_entry_set_str(edit->name, object->name);
 	gui_entry_set_str(edit->type, type_str);
 	gtk_stack_set_visible_child_name(edit->stack, type_str);
-	if (object->type == object_light_point)
+	if (object->type == object_type_light_point)
 		gui_object_light_point_get(&edit->light_point, object);
-	else if (object->type == object_light_direct)
+	else if (object->type == object_type_light_direct)
 		gui_object_light_direct_get(&edit->light_direct, object);
-	else if (object->type == object_sphere)
+	else if (object->type == object_type_sphere)
 		gui_object_sphere_get(&edit->sphere, object);
-	else if (object->type == object_plane)
+	else if (object->type == object_type_plane)
 		gui_object_plane_get(&edit->plane, object);
-	else if (object->type == object_cone)
+	else if (object->type == object_type_cone)
 		gui_object_cone_get(&edit->cone, object);
-	else if (object->type == object_cylinder)
+	else if (object->type == object_type_cylinder)
 		gui_object_cylinder_get(&edit->cylinder, object);
-	else if (object->type == object_box)
+	else if (object->type == object_type_box)
 		gui_object_box_get(&edit->box, object);
-	else if (object->type == object_paraboloid)
+	else if (object->type == object_type_paraboloid)
 		gui_object_paraboloid_get(&edit->paraboloid, object);
-	else if (object->type == object_moebius)
+	else if (object->type == object_type_moebius)
 		gui_object_moebius_get(&edit->moebius, object);
-	else if (object->type == object_torus)
+	else if (object->type == object_type_torus)
 		gui_object_torus_get(&edit->torus, object);
-	else if (object->type == object_mandelbulb)
+	else if (object->type == object_type_mandelbulb)
 		gui_object_mandelbulb_get(&edit->mandelbulb, object);
-	else if (object->type == object_julia)
+	else if (object->type == object_type_julia)
 		gui_object_julia_get(&edit->julia, object);
 	else
 		return ;

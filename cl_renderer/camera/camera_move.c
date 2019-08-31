@@ -1,6 +1,6 @@
 #include "camera.h"
 
-void 				camera_move
+RT_F4_API			camera_move
 					(t_camera *camera,
 					 t_camera_movement direction,
 					 RT_F length)
@@ -20,7 +20,7 @@ void 				camera_move
 	else if (direction == rt_movement_backward)
 		step = f4_mul(camera->axis_z, 1.f);
 	else
-		return ;
+		return ((RT_F4_API){RT_INFINITY, RT_INFINITY, RT_INFINITY, 0});
 	step = f4_mul(step, length);
-	camera->position = f4_add(camera->position, step);
+	return (f4_add(camera->position, step));
 }

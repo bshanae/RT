@@ -12,4 +12,5 @@ void 				gui_signal_connect_all(t_gui *gui)
 	gui_signal_connect_settings(gui);
 	gui_signal_connect_image(gui);
 	gtk_builder_connect_signals(gui->builder, (gpointer)gui);
+	printf("GUI Signal: Ready\n\n");
 }

@@ -230,13 +230,13 @@ static RT_F						calculate_moebius_t(t_ray *ray, t_object_moebius *data, t_moebi
     return (choose_equation_root(root, result, ray, moebius));
 }
 
-static int     					moebius_intersect(constant t_object *object, t_intersection *intersection)
+static int     					moebius_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
 
-    data = *(constant t_object_moebius *)object->data;
+    data = *(global t_object_moebius *)object->data;
 	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
@@ -247,14 +247,14 @@ static int     					moebius_intersect(constant t_object *object, t_intersection 
 
 // calculating normal //////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4					moebius_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					moebius_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F4						normal;
 	RT_F4						vector_x;
 
-	data = *(constant t_object_moebius *)object->data;
+	data = *(global t_object_moebius *)object->data;
 	vector_x = intersection->hit;
 	init_moebius_coefficients(&moebius_coefficients, &data, &intersection->ray);
 

@@ -9,12 +9,12 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-static RT_F 		torus_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		torus_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_torus	data;
 	RT_F2			q;
 
-	data = *(constant t_object_torus *)object->data;
+	data = *(global t_object_torus *)object->data;
 	point = data.position - point;
 	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);

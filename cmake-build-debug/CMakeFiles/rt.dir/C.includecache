@@ -30,19 +30,15 @@ unistd.h
 libft_standart.h
 ../../21_libft/includes/libft_standart.h
 
-.././cl_renderer/assert/rt_assert.h
-libft_ft_printf.h
-.././cl_renderer/assert/libft_ft_printf.h
-
 .././cl_renderer/camera/camera.h
 rt_parameters.h
 .././cl_renderer/camera/rt_parameters.h
 rt_float.h
 .././cl_renderer/camera/rt_float.h
-f4.h
-.././cl_renderer/camera/f4.h
 libft_standart.h
 .././cl_renderer/camera/libft_standart.h
+f4.h
+.././cl_renderer/camera/f4.h
 ray.h
 .././cl_renderer/camera/ray.h
 stdlib.h
@@ -63,6 +59,8 @@ rt_assert.h
 .././cl_renderer/cl_arg_list/rt_assert.h
 cl_arg.h
 .././cl_renderer/cl_arg_list/cl_arg.h
+stdio.h
+-
 
 .././cl_renderer/cl_builder/cl_builder.h
 rt_control.h
@@ -117,8 +115,6 @@ cl_renderer_settings.h
 .././cl_renderer/cl_renderer/cl_renderer_settings.h
 json_parse.h
 .././cl_renderer/cl_renderer/json_parse.h
-texture.h
-.././cl_renderer/cl_renderer/texture.h
 stdlib.h
 -
 time.h
@@ -216,15 +212,23 @@ rt_cl_include.h
 rt_float.h
 .././cl_renderer/ray/rt_float.h
 
+.././cl_renderer/rt_assert/rt_assert.h
+libft_ft_printf.h
+.././cl_renderer/rt_assert/libft_ft_printf.h
+
 .././cl_renderer/scene/scene.h
 rt_parameters.h
 .././cl_renderer/scene/rt_parameters.h
+scene_point.h
+.././cl_renderer/scene/scene_point.h
 object_interaction.h
 .././cl_renderer/scene/object_interaction.h
 texture.h
 .././cl_renderer/scene/texture.h
 stdlib.h
 -
+
+.././cl_renderer/scene/scene_point.h
 
 .././cl_renderer/texture/stb_image.h
 stb_image.h
@@ -370,6 +374,8 @@ gtk/gtk.h
 rt_parameters.h
 .././gui/gui_queue/rt_parameters.h
 gtk/gtk.h
+-
+sys/time.h
 -
 
 .././gui/gui_scene/gui_scene.h
@@ -5101,10 +5107,10 @@ rt_parameters.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/rt_parameters.h
 rt_float.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/rt_float.h
-f4.h
-/Users/ashari/21_ray_tracer/cl_renderer/camera/f4.h
 libft_standart.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/libft_standart.h
+f4.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/f4.h
 ray.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/ray.h
 stdlib.h
@@ -5128,6 +5134,10 @@ camera.h
 camera.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera_request_x.c
+camera.h
+/Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/camera/camera_rotate.c
 camera.h
 /Users/ashari/21_ray_tracer/cl_renderer/camera/camera.h
@@ -5145,6 +5155,8 @@ rt_assert.h
 /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/rt_assert.h
 cl_arg.h
 /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg.h
+stdio.h
+-
 
 /Users/ashari/21_ray_tracer/cl_renderer/cl_arg_list/cl_arg_list_delete.c
 cl_arg_list.h
@@ -5263,12 +5275,14 @@ cl_renderer_settings.h
 /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settings.h
 json_parse.h
 /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/json_parse.h
-texture.h
-/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/texture.h
 stdlib.h
 -
 time.h
 -
+
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
+cl_renderer.h
+/Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
 
 /Users/ashari/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c
 cl_renderer.h
@@ -5354,6 +5368,10 @@ rt_parameters.h
 material.h
 /Users/ashari/21_ray_tracer/cl_renderer/object/material.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_get_flag.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object/object_interaction.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/object/object_interaction.h
 rt_assert.h
 /Users/ashari/21_ray_tracer/cl_renderer/object/rt_assert.h
@@ -5396,6 +5414,10 @@ object_interaction.h
 object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_limited.c
+object_interaction.h
+/Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_mandelbulb.c
 object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
@@ -5424,9 +5446,15 @@ object_interaction.h
 object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/object_x/object_interaction.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/scene/camera_point_check.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
 rt_parameters.h
 /Users/ashari/21_ray_tracer/cl_renderer/scene/rt_parameters.h
+scene_point.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_point.h
 object_interaction.h
 /Users/ashari/21_ray_tracer/cl_renderer/scene/object_interaction.h
 texture.h
@@ -5446,11 +5474,25 @@ scene.h
 scene.h
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_give_name.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_is_valid_x.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_new.c
 scene.h
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
 
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_point.h
+
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_select.c
 scene.h
 /Users/ashari/21_ray_tracer/cl_renderer/scene/scene.h
 
@@ -5514,19 +5556,11 @@ texture.h
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
 
-/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_delete.c
-texture.h
-/Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
-
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
 
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_fill_data.c
-texture.h
-/Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
-
-/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_get_space.c
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
 
@@ -5537,6 +5571,12 @@ texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c
 texture.h
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture.h
+
+/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_set.c
+scene.h
+/Users/ashari/21_ray_tracer/cl_renderer/texture/scene.h
+material_list.h
+/Users/ashari/21_ray_tracer/cl_renderer/texture/material_list.h
 
 /Users/ashari/21_ray_tracer/cl_renderer/texture/texture_sources.h
 
@@ -5747,6 +5787,8 @@ rt_parameters.h
 /Users/ashari/21_ray_tracer/gui/gui_queue/rt_parameters.h
 gtk/gtk.h
 -
+sys/time.h
+-
 
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_(un)block.c
 gui_queue.h
@@ -5760,6 +5802,10 @@ gui_queue.h
 gui_queue.h
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
 
+/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_get_time.c
+gui_queue.h
+/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
+
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_new.c
 gui_queue.h
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
@@ -5769,6 +5815,10 @@ gui_queue.h
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
 
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_start.c
+gui_queue.h
+/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
+
+/Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue_wait.c
 gui_queue.h
 /Users/ashari/21_ray_tracer/gui/gui_queue/gui_queue.h
 

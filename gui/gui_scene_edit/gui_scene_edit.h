@@ -81,7 +81,7 @@ void 							gui_scene_edit_init_material
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 
 void							gui_scene_edit_gen_name
-								(t_object *object);
+								(t_object *object, int reset_flag);
 void 							gui_scene_edit_update
 								(t_gui_scene_edit *edit, t_scene *scene);
 void 							gui_scene_edit_show

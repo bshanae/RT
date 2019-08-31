@@ -4,8 +4,8 @@
 # include "rt_parameters.h"
 # include "rt_float.h"
 
-# include "f4.h"
 # include "libft_standart.h"
+# include "f4.h"
 # include "ray.h"
 
 # include <stdlib.h>
@@ -29,7 +29,9 @@ typedef struct 		s_camera
 	RT_F			aperture_size;
 	RT_F			focal_length;
 	int 			focus_request;
-	RT_F2_API		focus_request_value;
+	int 			select_request;
+	int 			select_request_object;
+	RT_F2_API		request_value;
 }					t_camera;
 
 t_camera			*camera_new(INT_REF width, INT_REF height);
@@ -45,7 +47,7 @@ typedef enum		e_camera_movement
 	rt_movement_backward
 }					t_camera_movement;
 
-void 				camera_move
+RT_F4_API			camera_move
 					(t_camera *camera,
 					 t_camera_movement direction,
 					 RT_F length);
@@ -55,5 +57,8 @@ void 				camera_rotate
 					t_f4_rotation_direction direction,
 					RT_F theta);
 void				camera_apply(t_camera *camera);
+
+void				camera_request_focus(t_camera *camera, int x, int y);
+void				camera_request_select(t_camera *camera, int x, int y);
 
 #endif

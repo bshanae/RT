@@ -7,11 +7,12 @@ void 				gui_scene_edit_update
 	GtkTreeIter		iter;
 
 	i = 0;
+	gui_scene_edit_gen_name(scene->objects + i, 1);
 	gtk_list_store_clear(edit->list);
 	while (i < scene->objects_length)
 	{
 		if (!scene->objects[i].name[0])
-			gui_scene_edit_gen_name(scene->objects + i);
+			gui_scene_edit_gen_name(scene->objects + i, 0);
 		gtk_list_store_append(edit->list, &iter);
 		gtk_list_store_set(
 			edit->list, &iter,

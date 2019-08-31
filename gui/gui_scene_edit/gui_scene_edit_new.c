@@ -4,7 +4,7 @@ t_gui_scene_edit		*gui_scene_edit_new(GtkBuilder *builder)
 {
 	t_gui_scene_edit	*new;
 
-	printf("Initializing object editor\n");
+	printf("GUI : Initializing object editor\n");
 	new = malloc(sizeof(t_gui_scene_edit));
 	gui_scene_edit_init_own(new, builder);
 	gui_scene_edit_init_light_point(new, builder);
