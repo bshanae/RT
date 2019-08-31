@@ -1331,6 +1331,17 @@ static RT_F4		object_normal(
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection->hit));
 }
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 				s_texture
+{
+	RT_F4_API				data[TEXTURE_DATA_SIZE];
+	int 					texture_length[TEXTURE_MAX_NUMBER];
+	int						width[TEXTURE_MAX_NUMBER];
+	int						height[TEXTURE_MAX_NUMBER];
+	int 					textures_number;
+}							t_texture;
+
 // cl_scene ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1341,6 +1352,7 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
     int 			lights_length;
+    t_texture		texture;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
@@ -1749,7 +1761,7 @@ static void			camera_auto_focus(global t_camera *camera, global t_scene *scene, 
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
 }
 
-static void			camera_select(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_select(global t_camera *camera, global t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
 

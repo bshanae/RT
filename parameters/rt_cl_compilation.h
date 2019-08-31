@@ -31,6 +31,7 @@
 # define CL_SOURCE_OBJECT_X					"cl_object_x"
 # define CL_SOURCE_OBJECT_NORMAL			"cl_object_normal"
 # define CL_SOURCE_SCENE					"cl_scene"
+# define CL_SOURCE_TEXTURE					"cl_texture"
 # define CL_SOURCE_SAMPLE_X					"cl_sample_x"
 # define CL_SOURCE_LIGHT_BASIC				"cl_light_basic"
 # define CL_SOURCE_LIGHT_AREA				"cl_light_area"

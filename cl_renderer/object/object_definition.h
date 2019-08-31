@@ -38,6 +38,7 @@ typedef struct		s_object
 	int				id;
 	t_object_type	type;
 	t_material		material;
+	int 			texture_id;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
 	int 			is_selected;

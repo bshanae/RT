@@ -103,7 +103,8 @@ include_directories(
 	./cl_renderer/cl_arg_list/
 	./cl_renderer/cl_builder/
 	./cl_renderer/cl_renderer/
-	./cl_renderer/json/)
+	./cl_renderer/json/
+	./cl_renderer/texture)
 
 if (${RT_GTK_PKG})
 	link_directories(${GTK3_LIBRARY_DIRS})
@@ -317,6 +318,15 @@ set(SOURCE_JSON
 	./cl_renderer/json/json_objects.c
 	./cl_renderer/json/readfile.c)
 
+set(SOURCE_TEXTURE
+	./cl_renderer/texture/texture_new.c
+	./cl_renderer/texture/texture_convert.c
+	./cl_renderer/texture/texture_data_load.c
+	./cl_renderer/texture/texture_disruptions_load.c
+	./cl_renderer/texture/texture_fill_data.c
+	./cl_renderer/texture/texture_iter.c)
+
+
 set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
@@ -355,7 +365,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
 	./cl_renderer/scene/scene_give_name.c
-		cl_renderer/scene/scene_select.c
+	./cl_renderer/scene/scene_select.c
 	./cl_renderer/scene/scene_is_valid_x.c)
 
 set(SOURCE_RAY
@@ -404,6 +414,7 @@ set(SOURCE_CL_RENDERER_
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}
+	${SOURCE_TEXTURE}
 	${SOURCE_F4}
 	${SOURCE_OBJECT}
 	${SOURCE_OBJECT_X}
@@ -412,7 +423,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_PROGRAM}
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
-	${SOURCE_CL_RENDERER_})
+	${SOURCE_CL_RENDERER_} cl_renderer/texture/texture_new.c)
 
 add_executable(rt
 	${SOURCE_MAIN}

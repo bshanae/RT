@@ -98,6 +98,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_builder"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/texture"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -173,6 +174,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_builder"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/json"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/texture"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -393,6 +395,24 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/scene/scene_update.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_convert.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_data_load.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_disruptions_load.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_fill_data.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_iter.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/ashari/21_ray_tracer/cl_renderer/texture/texture_new.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui/gui_delete.c">

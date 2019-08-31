@@ -1959,6 +1959,168 @@ cl_renderer/scene/scene_update.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.s
 .PHONY : cl_renderer/scene/scene_update.c.s
 
+cl_renderer/texture/texture_convert.o: cl_renderer/texture/texture_convert.c.o
+
+.PHONY : cl_renderer/texture/texture_convert.o
+
+# target to build an object file
+cl_renderer/texture/texture_convert.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.o
+.PHONY : cl_renderer/texture/texture_convert.c.o
+
+cl_renderer/texture/texture_convert.i: cl_renderer/texture/texture_convert.c.i
+
+.PHONY : cl_renderer/texture/texture_convert.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_convert.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.i
+.PHONY : cl_renderer/texture/texture_convert.c.i
+
+cl_renderer/texture/texture_convert.s: cl_renderer/texture/texture_convert.c.s
+
+.PHONY : cl_renderer/texture/texture_convert.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_convert.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.s
+.PHONY : cl_renderer/texture/texture_convert.c.s
+
+cl_renderer/texture/texture_data_load.o: cl_renderer/texture/texture_data_load.c.o
+
+.PHONY : cl_renderer/texture/texture_data_load.o
+
+# target to build an object file
+cl_renderer/texture/texture_data_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o
+.PHONY : cl_renderer/texture/texture_data_load.c.o
+
+cl_renderer/texture/texture_data_load.i: cl_renderer/texture/texture_data_load.c.i
+
+.PHONY : cl_renderer/texture/texture_data_load.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_data_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.i
+.PHONY : cl_renderer/texture/texture_data_load.c.i
+
+cl_renderer/texture/texture_data_load.s: cl_renderer/texture/texture_data_load.c.s
+
+.PHONY : cl_renderer/texture/texture_data_load.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_data_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.s
+.PHONY : cl_renderer/texture/texture_data_load.c.s
+
+cl_renderer/texture/texture_disruptions_load.o: cl_renderer/texture/texture_disruptions_load.c.o
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.o
+
+# target to build an object file
+cl_renderer/texture/texture_disruptions_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.o
+
+cl_renderer/texture/texture_disruptions_load.i: cl_renderer/texture/texture_disruptions_load.c.i
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_disruptions_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.i
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.i
+
+cl_renderer/texture/texture_disruptions_load.s: cl_renderer/texture/texture_disruptions_load.c.s
+
+.PHONY : cl_renderer/texture/texture_disruptions_load.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_disruptions_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.s
+.PHONY : cl_renderer/texture/texture_disruptions_load.c.s
+
+cl_renderer/texture/texture_fill_data.o: cl_renderer/texture/texture_fill_data.c.o
+
+.PHONY : cl_renderer/texture/texture_fill_data.o
+
+# target to build an object file
+cl_renderer/texture/texture_fill_data.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o
+.PHONY : cl_renderer/texture/texture_fill_data.c.o
+
+cl_renderer/texture/texture_fill_data.i: cl_renderer/texture/texture_fill_data.c.i
+
+.PHONY : cl_renderer/texture/texture_fill_data.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_fill_data.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.i
+.PHONY : cl_renderer/texture/texture_fill_data.c.i
+
+cl_renderer/texture/texture_fill_data.s: cl_renderer/texture/texture_fill_data.c.s
+
+.PHONY : cl_renderer/texture/texture_fill_data.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_fill_data.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.s
+.PHONY : cl_renderer/texture/texture_fill_data.c.s
+
+cl_renderer/texture/texture_iter.o: cl_renderer/texture/texture_iter.c.o
+
+.PHONY : cl_renderer/texture/texture_iter.o
+
+# target to build an object file
+cl_renderer/texture/texture_iter.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o
+.PHONY : cl_renderer/texture/texture_iter.c.o
+
+cl_renderer/texture/texture_iter.i: cl_renderer/texture/texture_iter.c.i
+
+.PHONY : cl_renderer/texture/texture_iter.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_iter.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.i
+.PHONY : cl_renderer/texture/texture_iter.c.i
+
+cl_renderer/texture/texture_iter.s: cl_renderer/texture/texture_iter.c.s
+
+.PHONY : cl_renderer/texture/texture_iter.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_iter.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
+.PHONY : cl_renderer/texture/texture_iter.c.s
+
+cl_renderer/texture/texture_new.o: cl_renderer/texture/texture_new.c.o
+
+.PHONY : cl_renderer/texture/texture_new.o
+
+# target to build an object file
+cl_renderer/texture/texture_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.o
+.PHONY : cl_renderer/texture/texture_new.c.o
+
+cl_renderer/texture/texture_new.i: cl_renderer/texture/texture_new.c.i
+
+.PHONY : cl_renderer/texture/texture_new.i
+
+# target to preprocess a source file
+cl_renderer/texture/texture_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.i
+.PHONY : cl_renderer/texture/texture_new.c.i
+
+cl_renderer/texture/texture_new.s: cl_renderer/texture/texture_new.c.s
+
+.PHONY : cl_renderer/texture/texture_new.s
+
+# target to generate assembly for a file
+cl_renderer/texture/texture_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_new.c.s
+.PHONY : cl_renderer/texture/texture_new.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -5601,6 +5763,24 @@ help:
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"
+	@echo "... cl_renderer/texture/texture_convert.o"
+	@echo "... cl_renderer/texture/texture_convert.i"
+	@echo "... cl_renderer/texture/texture_convert.s"
+	@echo "... cl_renderer/texture/texture_data_load.o"
+	@echo "... cl_renderer/texture/texture_data_load.i"
+	@echo "... cl_renderer/texture/texture_data_load.s"
+	@echo "... cl_renderer/texture/texture_disruptions_load.o"
+	@echo "... cl_renderer/texture/texture_disruptions_load.i"
+	@echo "... cl_renderer/texture/texture_disruptions_load.s"
+	@echo "... cl_renderer/texture/texture_fill_data.o"
+	@echo "... cl_renderer/texture/texture_fill_data.i"
+	@echo "... cl_renderer/texture/texture_fill_data.s"
+	@echo "... cl_renderer/texture/texture_iter.o"
+	@echo "... cl_renderer/texture/texture_iter.i"
+	@echo "... cl_renderer/texture/texture_iter.s"
+	@echo "... cl_renderer/texture/texture_new.o"
+	@echo "... cl_renderer/texture/texture_new.i"
+	@echo "... cl_renderer/texture/texture_new.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
