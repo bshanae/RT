@@ -91,7 +91,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/rt_assert"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>
@@ -166,7 +166,7 @@
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/camera"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/ray"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/intersection"/>
-					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/assert"/>
+					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/rt_assert"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/material"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/ashari/21_ray_tracer/./cl_renderer/cl_arg_list"/>

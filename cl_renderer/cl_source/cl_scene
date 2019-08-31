@@ -10,7 +10,7 @@ typedef struct		s_scene
     int 			lights_length;
 }					t_scene;
 
-static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
+static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
@@ -22,7 +22,7 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 }
 
 static int			scene_intersect_rm(
-					constant t_scene *scene,
+					global t_scene *scene,
                     t_intersection *intersection,
                     constant t_cl_renderer_settings *settings)
 {
@@ -66,7 +66,7 @@ static int			scene_intersect_rm(
 }
 
 static int			scene_intersect(
-					constant t_scene *scene,
+					global t_scene *scene,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {

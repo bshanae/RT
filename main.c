@@ -95,7 +95,7 @@ int					main(int argc, char **argv)
 	gui->renderer->data.camera->position.x = -1.;
 	gui->renderer->data.camera->position.z = 30.;
 	cl_renderer_camera_save(gui->renderer);
-	ASSERT(scene_is_valid_content(gui->renderer->data.scene))
+	RT_ASSERT(scene_is_valid_content(gui->renderer->data.scene))
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

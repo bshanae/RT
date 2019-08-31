@@ -1,7 +1,7 @@
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
  static RT_F4					illumination(
- 								constant t_scene *scene,
+ 								global t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)

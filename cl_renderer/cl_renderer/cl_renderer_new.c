@@ -29,7 +29,7 @@ static void				static_set_args(t_cl_renderer *renderer)
 		sizeof(t_camera), CL_MEM_READ_WRITE);
 	// scene
 	cl_arg_list_push(renderer->args, renderer->data.scene,
-		sizeof(t_scene), CL_MEM_READ_ONLY);
+		sizeof(t_scene), CL_MEM_READ_WRITE);
 	// image
 	cl_arg_list_push(renderer->args, renderer->image->color_buffer,
 		sizeof(t_color) * renderer->pixel_number, CL_MEM_WRITE_ONLY);

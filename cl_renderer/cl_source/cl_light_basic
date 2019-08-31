@@ -18,7 +18,7 @@ typedef struct			s_object_light_direct
 
 static RT_F4			static_get_direction(
 						t_intersection *intersection,
-						constant t_object *object)
+						global t_object *object)
 {
 	if (object->type == object_type_light_direct)
 		return (((constant t_object_light_direct *)object->data)->direction * (RT_F)-1.);
@@ -75,7 +75,7 @@ static RT_F4			static_get_cartoon_intensity
 }
 
 static int				static_is_shadowed(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
 						RT_F4 *light_direction)
@@ -89,12 +89,12 @@ static int				static_is_shadowed(
 }
 
 static RT_F4			light_basic(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
 						int filter_cartoon_mod)
 {
-	constant t_object	*object;
+	global t_object		*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
 	RT_F4				color_cartoon;

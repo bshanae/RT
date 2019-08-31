@@ -8,7 +8,7 @@ typedef struct					s_object_sphere
 	RT_F						radius;
 }								t_object_sphere;
 
-static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
+static int     					sphere_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
@@ -16,7 +16,7 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	RT_F						discriminant;
 	RT_F4						temp;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
 	temp = intersection->ray.origin - data.position;
 	k[1] = 2 * dot(temp, intersection->ray.direction);
@@ -32,19 +32,19 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	return (1);
 }
 
-static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					sphere_normal(global t_object *object, t_intersection *intersection)
 {
-	return (normalize(intersection->hit - ((constant t_object_sphere *)object->data)->position));
+	return (normalize(intersection->hit - ((global t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
+static RT_F4					sphere_random(global t_object *object, global ulong *rng_state)
 {
 	t_object_sphere				data;
 	RT_F 						theta;
 	RT_F 						phi;
 	RT_F4						random;
 
-	data = *(constant t_object_sphere *)object->data;
+	data = *(global t_object_sphere *)object->data;
 	theta = rng(rng_state) * RT_PI;
 	phi = rng(rng_state) * 2 * RT_PI;
 	random.x = 0.9 * data.radius * RT_SIN(theta) * RT_COS(phi);
@@ -54,30 +54,30 @@ static RT_F4					sphere_random(constant t_object *object, global ulong *rng_stat
 	return (random);
 }
 
-static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
+static RT_F 					sphere_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_sphere				data;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	return (length(data.position - point) - data.radius);
 }
 
-static RT_F						sphere_center_shift(constant t_object *object)
+static RT_F						sphere_center_shift(global t_object *object)
 {
 	t_object_sphere				data;
 
-	data = *(constant t_object_sphere *)object->data;
+	data = *(global t_object_sphere *)object->data;
     return (data.radius);
 }
 
-static void     				sphere_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
+static void     				sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
 	RT_F						discriminant;
 	RT_F4						temp;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
 	temp = intersection->ray.origin - data.position;
 	k[1] = 2 * dot(temp, intersection->ray.direction);

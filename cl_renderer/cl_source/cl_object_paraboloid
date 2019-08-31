@@ -9,7 +9,7 @@ typedef struct 					s_object_paraboloid
 	RT_F 						radius;
 }								t_object_paraboloid;
 
-static int     					paraboloid_intersect(constant t_object *object, t_intersection *intersection)
+static int     					paraboloid_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						vector_x;
@@ -19,7 +19,7 @@ static int     					paraboloid_intersect(constant t_object *object, t_intersecti
     RT_F 						x_dot_axis;
     RT_F 						dir_dot_axis;
 
-    data = *(constant t_object_paraboloid *)object->data;
+    data = *(global t_object_paraboloid *)object->data;
     vector_x = intersection->ray.origin - data.extremum_point;
     x_dot_axis = dot(vector_x, data.axis);
     dir_dot_axis = dot(intersection->ray.direction, data.axis);
@@ -37,13 +37,13 @@ static int     					paraboloid_intersect(constant t_object *object, t_intersecti
 	return (1);
 }
 
-static RT_F4					paraboloid_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					paraboloid_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						normal;
 	RT_F						tmp_value;
 
-	data = *(constant t_object_paraboloid *)object->data;
+	data = *(global t_object_paraboloid *)object->data;
 	tmp_value = dot(data.axis, intersection->hit - data.extremum_point);
 	normal = (intersection->hit - data.extremum_point) - (data.axis * tmp_value);
 	return (normalize(normal));

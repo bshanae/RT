@@ -4,7 +4,7 @@
 # include "rt_parameters.h"
 # include "rt_cl_include.h"
 
-# include "assert.h"
+# include "rt_assert.h"
 # include "libft_standart.h"
 
 # include <stdlib.h>

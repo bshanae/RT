@@ -60,7 +60,7 @@ static RT_F4				radiance_read(
 # define RT_CHOICE_REFRACT	2
 
 static RT_F4				radiance_trace(
-							constant t_scene *scene,
+							global t_scene *scene,
 							global t_camera *camera,
 							t_intersection *intersection,
 							constant t_cl_renderer_settings *settings,

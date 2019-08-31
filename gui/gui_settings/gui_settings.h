@@ -5,7 +5,7 @@
 # include "cl_renderer_settings.h"
 
 # include "libft_standart.h"
-# include "assert.h"
+# include "rt_assert.h"
 # include "gui_entry.h"
 
 # include <gtk/gtk.h>

@@ -4,7 +4,7 @@
 
 kernel void			cl_main(
 					global t_camera *camera,
-					constant t_scene *scene,
+					global t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_renderer_settings *settings,

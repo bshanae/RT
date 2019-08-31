@@ -251,7 +251,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   ".././cl_renderer/camera"
   ".././cl_renderer/ray"
   ".././cl_renderer/intersection"
-  ".././cl_renderer/assert"
+  ".././cl_renderer/rt_assert"
   ".././cl_renderer/material"
   ".././cl_renderer/cl_program"
   ".././cl_renderer/cl_arg_list"

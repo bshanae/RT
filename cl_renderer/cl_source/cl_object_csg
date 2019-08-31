@@ -11,7 +11,7 @@ static	RT_F		        csg_sdf_difference(const RT_F distance_a, const RT_F distan
 	return (RT_MAX(distance_a, -distance_b));
 }
 
-static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
+static RT_F			        sdf_csg_compute(global t_object *object, RT_F4 point)
 {
 	if (object->type == object_type_sphere)
 		return (sphere_sdf(object, point));
@@ -20,13 +20,13 @@ static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
     return (RT_INFINITY);
 }
 
-static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		        csg_sdf(global t_object *object, RT_F4 point)
 {
-	constant t_object_csg	*data;
-	constant t_object       *scene_begin;
+	global t_object_csg		*data;
+	global t_object       	*scene_begin;
 	RT_F					sdf[2];
 
-    data = (constant t_object_csg *)object->data;
+    data = (global t_object_csg *)object->data;
     if (object->id < 2)
     		return (RT_INFINITY);
     scene_begin = object - object->id;

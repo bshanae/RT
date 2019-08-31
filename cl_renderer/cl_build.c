@@ -24,6 +24,16 @@ static RT_F4		f4_square(RT_F4 vector)
 		2 * vector.x * vector.w));
 }
 
+static RT_F4		f4_mod(const RT_F4 *vector, RT_F value)
+{
+	RT_F4			result;
+
+	result.x = RT_MOD(vector->x, value);
+	result.y = RT_MOD(vector->y, value);
+	result.z = RT_MOD(vector->z, value);
+	return (result);
+}
+
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_cl_renderer_settings
@@ -233,7 +243,7 @@ typedef struct					s_object_sphere
 	RT_F						radius;
 }								t_object_sphere;
 
-static int     					sphere_intersect(constant t_object *object, t_intersection *intersection)
+static int     					sphere_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
@@ -241,7 +251,7 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	RT_F						discriminant;
 	RT_F4						temp;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
 	temp = intersection->ray.origin - data.position;
 	k[1] = 2 * dot(temp, intersection->ray.direction);
@@ -257,19 +267,19 @@ static int     					sphere_intersect(constant t_object *object, t_intersection *
 	return (1);
 }
 
-static RT_F4					sphere_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					sphere_normal(global t_object *object, t_intersection *intersection)
 {
-	return (normalize(intersection->hit - ((constant t_object_sphere *)object->data)->position));
+	return (normalize(intersection->hit - ((global t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(constant t_object *object, global ulong *rng_state)
+static RT_F4					sphere_random(global t_object *object, global ulong *rng_state)
 {
 	t_object_sphere				data;
 	RT_F 						theta;
 	RT_F 						phi;
 	RT_F4						random;
 
-	data = *(constant t_object_sphere *)object->data;
+	data = *(global t_object_sphere *)object->data;
 	theta = rng(rng_state) * RT_PI;
 	phi = rng(rng_state) * 2 * RT_PI;
 	random.x = 0.9 * data.radius * RT_SIN(theta) * RT_COS(phi);
@@ -279,30 +289,30 @@ static RT_F4					sphere_random(constant t_object *object, global ulong *rng_stat
 	return (random);
 }
 
-static RT_F 					sphere_sdf(constant t_object *object, RT_F4 point)
+static RT_F 					sphere_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_sphere				data;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	return (length(data.position - point) - data.radius);
 }
 
-static RT_F						sphere_center_shift(constant t_object *object)
+static RT_F						sphere_center_shift(global t_object *object)
 {
 	t_object_sphere				data;
 
-	data = *(constant t_object_sphere *)object->data;
+	data = *(global t_object_sphere *)object->data;
     return (data.radius);
 }
 
-static void     				sphere_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
+static void     				sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
 	RT_F						discriminant;
 	RT_F4						temp;
 
-    data = *(constant t_object_sphere *)object->data;
+    data = *(global t_object_sphere *)object->data;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
 	temp = intersection->ray.origin - data.position;
 	k[1] = 2 * dot(temp, intersection->ray.direction);
@@ -340,13 +350,13 @@ typedef struct			s_object_plane
 	t_plane_limiting	is_limiting;
 }						t_object_plane;
 
-static int				plane_intersect(constant t_object *object, t_intersection *intersection)
+static int				plane_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_plane		data;
 	RT_F4				temp[2];
 	RT_F				value[3];
 
-	data = *(constant t_object_plane *)object->data;
+	data = *(global t_object_plane *)object->data;
 	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
 		return (0);
 	temp[0] = data.position - intersection->ray.origin;
@@ -358,16 +368,16 @@ static int				plane_intersect(constant t_object *object, t_intersection *interse
 	return (1);
 }
 
-static RT_F4			plane_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4			plane_normal(global t_object *object, t_intersection *intersection)
 {
-	return (((constant t_object_plane *)object->data)->normal);
+	return (((global t_object_plane *)object->data)->normal);
 }
 
-static RT_F 			plane_sdf(constant t_object *object, RT_F4 point)
+static RT_F 			plane_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_plane		data;
 
-    data = *(constant t_object_plane *)object->data;
+    data = *(global t_object_plane *)object->data;
 	return (dot(data.normal, point - data.position));
 }
 
@@ -401,12 +411,12 @@ typedef struct 		s_object_cone
 	RT_F          	tangent;
 }					t_object_cone;
 
-static RT_F         cone_cap_intersect(constant t_object *object, t_intersection *intersection)
+static RT_F         cone_cap_intersect(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
     RT_F            t;
 
-    data = *(constant t_object_cone *)object->data;
+    data = *(global t_object_cone *)object->data;
     if (!dot(intersection->ray.direction, data.axis))
         return (INFINITY);
     t = dot((data.bottom - intersection->ray.origin), data.axis)
@@ -420,7 +430,7 @@ static RT_F         cone_cap_intersect(constant t_object *object, t_intersection
     return (t);
 }
 
-static int			cone_intersect(constant t_object *object, t_intersection *intersection)
+static int			cone_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_cone	data;
     RT_F4           temp[3];
@@ -430,7 +440,7 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	RT_F            t[2];
 	RT_F            k[3];
 
-	data = *(constant t_object_cone *)object->data;
+	data = *(global t_object_cone *)object->data;
 	temp[0] = intersection->ray.origin - data.top;
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
 			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.)
@@ -463,14 +473,14 @@ static int			cone_intersect(constant t_object *object, t_intersection *intersect
 	return (1);
 }
 
-static RT_F4		calculate_cone_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		calculate_cone_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
     RT_F4			temp[2];
     RT_F            tmp_value;
     RT_F4           result;
 
-    data = *(constant t_object_cone *)object->data;
+    data = *(global t_object_cone *)object->data;
     temp[0] = intersection->ray.origin - data.top;
     temp[1] = intersection->ray.origin + (intersection->ray.direction * intersection->ray.t);
     tmp_value = dot(intersection->ray.direction, data.axis)
@@ -479,12 +489,12 @@ static RT_F4		calculate_cone_normal(constant t_object *object, t_intersection *i
     return (normalize(result));
 }
 
-static RT_F4		cone_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		cone_normal(global t_object *object, t_intersection *intersection)
 {
     if (!intersection->cups_flag)
         return(calculate_cone_normal(object, intersection));
     else
-        return(normalize(((constant t_object_cone *)object->data)->axis * -1));
+        return(normalize(((global t_object_cone *)object->data)->axis * -1));
 }
 
 // cl_object_cylinder /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -499,12 +509,12 @@ typedef struct 		    s_object_cylinder
 	RT_F 			    radius;
 }					    t_object_cylinder;
 
-static RT_F             cylinder_cap_intersect(constant t_object *object, t_intersection *intersection)
+static RT_F             cylinder_cap_intersect(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
     RT_F                t[2];
 
-    data = *(constant t_object_cylinder *)object->data;
+    data = *(global t_object_cylinder *)object->data;
     if (!dot(intersection->ray.direction, data.axis))
         return (INFINITY);
     t[0] = dot((data.top - intersection->ray.origin), data.axis)
@@ -527,7 +537,7 @@ static RT_F             cylinder_cap_intersect(constant t_object *object, t_inte
     return (t[1]);
 }
 
-static int			    cylinder_intersect(constant t_object *object, t_intersection *intersection)
+static int			    cylinder_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_cylinder	data;
 	RT_F4			    temp[2];
@@ -536,7 +546,7 @@ static int			    cylinder_intersect(constant t_object *object, t_intersection *i
 	RT_F                t[2];
 	RT_F                k[3];
 
-	data = *(constant t_object_cylinder *)object->data;
+	data = *(global t_object_cylinder *)object->data;
 	temp[0] = intersection->ray.origin - data.bottom;
 
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
@@ -566,27 +576,27 @@ static int			    cylinder_intersect(constant t_object *object, t_intersection *i
 	return (1);
 }
 
-static RT_F4		    calculate_cylinder_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		    calculate_cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
     RT_F4			    temp[2];
     RT_F4               result;
 
-    data = *(constant t_object_cylinder *)object->data;
+    data = *(global t_object_cylinder *)object->data;
     temp[0] = intersection->ray.origin + intersection->ray.direction * intersection->ray.t;
     temp[1] = temp[0] - data.bottom;
     result = temp[1] - (data.axis * dot(temp[1], data.axis));
     return (normalize(result));
 }
 
-static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		    cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     if (!intersection->cups_flag)
         return (calculate_cylinder_normal(object, intersection));
     else if (intersection->cups_flag == -1)
-        return (normalize(((constant t_object_cylinder *)object->data)->axis * -1));
+        return (normalize(((global t_object_cylinder *)object->data)->axis * -1));
     else
-        return (normalize(((constant t_object_cylinder *)object->data)->axis));
+        return (normalize(((global t_object_cylinder *)object->data)->axis));
 }
 
 // cl_object_box ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -599,12 +609,12 @@ typedef struct 		s_object_box
 	RT_F4   		size;
 }					t_object_box;
 
-static RT_F 		box_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		box_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_box	data;
 	RT_F4			d;
 
-	data = *(constant t_object_box *)object->data;
+	data = *(global t_object_box *)object->data;
 	point = data.position - point;
 	d = RT_ABS(point) - data.size;
 	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
@@ -622,7 +632,7 @@ typedef struct 					s_object_paraboloid
 	RT_F 						radius;
 }								t_object_paraboloid;
 
-static int     					paraboloid_intersect(constant t_object *object, t_intersection *intersection)
+static int     					paraboloid_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						vector_x;
@@ -632,7 +642,7 @@ static int     					paraboloid_intersect(constant t_object *object, t_intersecti
     RT_F 						x_dot_axis;
     RT_F 						dir_dot_axis;
 
-    data = *(constant t_object_paraboloid *)object->data;
+    data = *(global t_object_paraboloid *)object->data;
     vector_x = intersection->ray.origin - data.extremum_point;
     x_dot_axis = dot(vector_x, data.axis);
     dir_dot_axis = dot(intersection->ray.direction, data.axis);
@@ -650,13 +660,13 @@ static int     					paraboloid_intersect(constant t_object *object, t_intersecti
 	return (1);
 }
 
-static RT_F4					paraboloid_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					paraboloid_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						normal;
 	RT_F						tmp_value;
 
-	data = *(constant t_object_paraboloid *)object->data;
+	data = *(global t_object_paraboloid *)object->data;
 	tmp_value = dot(data.axis, intersection->hit - data.extremum_point);
 	normal = (intersection->hit - data.extremum_point) - (data.axis * tmp_value);
 	return (normalize(normal));
@@ -894,13 +904,13 @@ static RT_F						calculate_moebius_t(t_ray *ray, t_object_moebius *data, t_moebi
     return (choose_equation_root(root, result, ray, moebius));
 }
 
-static int     					moebius_intersect(constant t_object *object, t_intersection *intersection)
+static int     					moebius_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
 
-    data = *(constant t_object_moebius *)object->data;
+    data = *(global t_object_moebius *)object->data;
 	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
@@ -911,14 +921,14 @@ static int     					moebius_intersect(constant t_object *object, t_intersection 
 
 // calculating normal //////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4					moebius_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4					moebius_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F4						normal;
 	RT_F4						vector_x;
 
-	data = *(constant t_object_moebius *)object->data;
+	data = *(global t_object_moebius *)object->data;
 	vector_x = intersection->hit;
 	init_moebius_coefficients(&moebius_coefficients, &data, &intersection->ray);
 
@@ -938,11 +948,11 @@ typedef struct 				s_object_limited
 	int 					id_limit;
 }							t_object_limited;
 
-static int					limited_intersect(constant t_object *object, t_intersection *intersection)
+static int					limited_intersect(global t_object *object, t_intersection *intersection)
 {
-	constant t_object		*scene_begin;
+	global t_object		*scene_begin;
 	t_object_limited		limited;
-	constant t_object		*main;
+	global t_object		*main;
 	t_object_plane			limit;
 
 	RT_F					dot_value[2];
@@ -950,9 +960,9 @@ static int					limited_intersect(constant t_object *object, t_intersection *inte
 	RT_F					limit_t;
 
 	scene_begin = object - object->id;
-	limited = *(constant t_object_limited *)object->data;
+	limited = *(global t_object_limited *)object->data;
 	main = scene_begin + limited.id_main;
-	limit = *(constant t_object_plane *)scene_begin[limited.id_limit].data;
+	limit = *(global t_object_plane *)scene_begin[limited.id_limit].data;
 
 	if (main->type == object_type_sphere)
 		sphere_intersect_t(main, intersection, main_t);
@@ -999,12 +1009,12 @@ typedef struct 		s_object_torus
 	RT_F          	t_1;
 }					t_object_torus;
 
-static RT_F 		torus_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		torus_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_torus	data;
 	RT_F2			q;
 
-	data = *(constant t_object_torus *)object->data;
+	data = *(global t_object_torus *)object->data;
 	point = data.position - point;
 	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
@@ -1021,13 +1031,13 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static RT_F			julia_sdf(constant t_object *object, RT_F4 point)
+static RT_F			julia_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_julia	data;
 	RT_F			md;
 	RT_F			mz;
 
-	data = *(constant t_object_julia *)object->data;
+	data = *(global t_object_julia *)object->data;
 	md = 1.;
 	point = data.position - point;
 	mz = dot(point, point);
@@ -1055,7 +1065,7 @@ typedef struct				s_object_mandelbulb
 	RT_F					power;
 }							t_object_mandelbulb;
 
-static RT_F					mandelbulb_sdf(constant t_object *object, RT_F4 point)
+static RT_F					mandelbulb_sdf(global t_object *object, RT_F4 point)
 {
 	t_object_mandelbulb		data;
 	RT_F4					z;
@@ -1065,7 +1075,7 @@ static RT_F					mandelbulb_sdf(constant t_object *object, RT_F4 point)
 	RT_F					phi;
 	RT_F					theta;
 
-	data = *(constant t_object_mandelbulb *)object->data;
+	data = *(global t_object_mandelbulb *)object->data;
 	point = data.position - point;
 	r = 0.;
     dr = 1.;
@@ -1103,7 +1113,7 @@ static	RT_F		        csg_sdf_difference(const RT_F distance_a, const RT_F distan
 	return (RT_MAX(distance_a, -distance_b));
 }
 
-static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
+static RT_F			        sdf_csg_compute(global t_object *object, RT_F4 point)
 {
 	if (object->type == object_type_sphere)
 		return (sphere_sdf(object, point));
@@ -1112,13 +1122,13 @@ static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
     return (RT_INFINITY);
 }
 
-static RT_F 		        csg_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		        csg_sdf(global t_object *object, RT_F4 point)
 {
-	constant t_object_csg	*data;
-	constant t_object       *scene_begin;
+	global t_object_csg		*data;
+	global t_object       	*scene_begin;
 	RT_F					sdf[2];
 
-    data = (constant t_object_csg *)object->data;
+    data = (global t_object_csg *)object->data;
     if (object->id < 2)
     		return (RT_INFINITY);
     scene_begin = object - object->id;
@@ -1167,41 +1177,41 @@ static RT_F                     static_cross_sdf(RT_F4 point)
     return (RT_MIN(sdf_value[0], RT_MIN(sdf_value[1], sdf_value[2])));
 }
 
-static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 point)
+static RT_F 		            perforated_cube_sdf(global t_object *object, RT_F4 point)
 {
-	//t_object_perforated_cube	data;
-	//RT_F                        box_sdf_value;
-	//RT_F                        cross_value;
-	//RT_F                        cross_period;
-	//RT_F                        cross_division;
-	//RT_F4                       cross_shift;
-	//RT_F4						shifted_point;
-//
-	//data = *(constant t_object_perforated_cube *)object->data;
-	//point = data.position - point;
-//
-	//box_sdf_value = static_box_sdf((RT_F4){1., 1., 1., 0.}, point);
-//
-	//cross_period = (RT_F)2.;
-	//cross_division = (RT_F)3.;
-	//cross_shift = (RT_F4){1., 1., 1., 0.};
-//
-	//for (int iter = 0; iter < data.iterations; iter++)
-	//{
-	//	shifted_point = RT_ABS(point);
-//
-	//	shifted_point += cross_shift;
-    //    shifted_point = f4_mod(&shifted_point, cross_period);
-    //    shifted_point -= cross_shift;
-//
-    //    shifted_point *= cross_division;
-    //    cross_value = static_cross_sdf(shifted_point) / cross_division;
-//
-    //    box_sdf_value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
-    //    cross_period /= (RT_F)3.;
-    //    cross_shift /= (RT_F)3.;
-    //    cross_division *= (RT_F)3.;
-	//}
+	t_object_perforated_cube	data;
+	RT_F                        box_sdf_value;
+	RT_F                        cross_value;
+	RT_F                        cross_period;
+	RT_F                        cross_division;
+	RT_F4                       cross_shift;
+	RT_F4						shifted_point;
+
+	data = *(global t_object_perforated_cube *)object->data;
+	point = data.position - point;
+
+	box_sdf_value = static_box_sdf((RT_F4){1., 1., 1., 0.}, point);
+
+	cross_period = (RT_F)2.;
+	cross_division = (RT_F)3.;
+	cross_shift = (RT_F4){1., 1., 1., 0.};
+
+	for (int iter = 0; iter < data.iterations; iter++)
+	{
+		shifted_point = RT_ABS(point);
+
+		shifted_point += cross_shift;
+        shifted_point = f4_mod(&shifted_point, cross_period);
+        shifted_point -= cross_shift;
+
+        shifted_point *= cross_division;
+        cross_value = static_cross_sdf(shifted_point) / cross_division;
+
+        box_sdf_value = RT_MAX(box_sdf_value, (RT_F)-1. * cross_value);
+        cross_period /= (RT_F)3.;
+        cross_shift /= (RT_F)3.;
+        cross_division *= (RT_F)3.;
+	}
 	return (box_sdf_value);
 }
 
@@ -1210,7 +1220,7 @@ static RT_F 		            perforated_cube_sdf(constant t_object *object, RT_F4 p
 #include "rt_control.h"
 #include "rt_parameters.h"
 
-static int			object_intersect(constant t_object *object, t_intersection *intersection)
+static int			object_intersect(global t_object *object, t_intersection *intersection)
 {
 	if (!object->is_visible)
 		return (0);
@@ -1233,7 +1243,7 @@ static int			object_intersect(constant t_object *object, t_intersection *interse
 	return (0);
 }
 
-static RT_F			object_sdf(constant t_object *object, RT_F4 point)
+static RT_F			object_sdf(global t_object *object, RT_F4 point)
 {
 	if (!object->is_visible)
 		return (RT_INFINITY);
@@ -1256,7 +1266,7 @@ static RT_F			object_sdf(constant t_object *object, RT_F4 point)
 	return (RT_INFINITY);
 }
 
-static RT_F			object_center_shift(constant t_object *object)
+static RT_F			object_center_shift(global t_object *object)
 {
 	if (object->type == object_type_sphere)
 		return (sphere_center_shift(object));
@@ -1266,7 +1276,7 @@ static RT_F			object_center_shift(constant t_object *object)
 
 #include "rt_parameters.h"
 
-static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
+static RT_F4		object_normal_rm(global t_object *object, RT_F4 hit)
 {
 	RT_F4			nudged_hit;
 	RT_F4			normal;
@@ -1298,7 +1308,7 @@ static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
 }
 
 static RT_F4		object_normal_rt(
-					constant t_object *object,
+					global t_object *object,
                     t_intersection *intersection)
 {
 	if (object->type == object_type_sphere)
@@ -1313,7 +1323,7 @@ static RT_F4		object_normal_rt(
 }
 
 static RT_F4		object_normal(
-					constant t_object *object,
+					global t_object *object,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {
@@ -1333,7 +1343,7 @@ typedef struct		s_scene
     int 			lights_length;
 }					t_scene;
 
-static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
+static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
@@ -1345,7 +1355,7 @@ static int			scene_intersect_rt(constant t_scene *scene, t_intersection *interse
 }
 
 static int			scene_intersect_rm(
-					constant t_scene *scene,
+					global t_scene *scene,
                     t_intersection *intersection,
                     constant t_cl_renderer_settings *settings)
 {
@@ -1389,7 +1399,7 @@ static int			scene_intersect_rm(
 }
 
 static int			scene_intersect(
-					constant t_scene *scene,
+					global t_scene *scene,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {
@@ -1486,7 +1496,7 @@ typedef struct			s_object_light_direct
 
 static RT_F4			static_get_direction(
 						t_intersection *intersection,
-						constant t_object *object)
+						global t_object *object)
 {
 	if (object->type == object_type_light_direct)
 		return (((constant t_object_light_direct *)object->data)->direction * (RT_F)-1.);
@@ -1543,7 +1553,7 @@ static RT_F4			static_get_cartoon_intensity
 }
 
 static int				static_is_shadowed(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
 						RT_F4 *light_direction)
@@ -1557,12 +1567,12 @@ static int				static_is_shadowed(
 }
 
 static RT_F4			light_basic(
-						constant t_scene *scene,
+						global t_scene *scene,
 						t_intersection *intersection,
 						constant t_cl_renderer_settings *settings,
 						int filter_cartoon_mod)
 {
-	constant t_object	*object;
+	global t_object		*object;
 	RT_F4				color_diffuse;
 	RT_F4				color_specular;
 	RT_F4				color_cartoon;
@@ -1599,7 +1609,7 @@ static RT_F4			light_basic(
 #include "rt_parameters.h"
 
 static RT_F4		light_area(
-					constant t_scene *scene,
+					global t_scene *scene,
 					t_intersection *intersection_object,
 					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)
@@ -1730,7 +1740,7 @@ static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulo
 	return (result);
 }
 
-static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_auto_focus(global t_camera *camera, global t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
 
@@ -1768,7 +1778,7 @@ static void					radiance_write(
 	}
 	else
 	{
-		if (settings->sample_count == 1)
+		if (settings->motion_blur_sample_count == 1)
 		{
 			for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
 				sample_store[i][global_id] = 0.;
@@ -1785,6 +1795,7 @@ static RT_F4				radiance_read(
 							constant t_cl_renderer_settings *settings)
 {
 	RT_F4					sum;
+	RT_F4					alpha;
 	int						i;
 	int						count;
 
@@ -1793,10 +1804,14 @@ static RT_F4				radiance_read(
 	else
 	{
 		sum = 0.;
+		alpha = 1.;
 		i = 0;
 		count = 0;
 		for (i = RT_CL_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+       	{
        		sum  += sample_store[i][global_id];
+       		alpha *= RT_CL_MOTION_BLUR_ALPHA;
+       	}
        	return (sum / settings->motion_blur_sample_count);
 	}
 }
@@ -1806,7 +1821,7 @@ static RT_F4				radiance_read(
 # define RT_CHOICE_REFRACT	2
 
 static RT_F4				radiance_trace(
-							constant t_scene *scene,
+							global t_scene *scene,
 							global t_camera *camera,
 							t_intersection *intersection,
 							constant t_cl_renderer_settings *settings,
@@ -1879,7 +1894,7 @@ static RT_F4				radiance_trace(
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
  static RT_F4					illumination(
- 								constant t_scene *scene,
+ 								global t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
@@ -1927,7 +1942,7 @@ static void			sample_store_map(global RT_F4 *sample_store, global RT_F4 *sample_
 
 kernel void			cl_main(
 					global t_camera *camera,
-					constant t_scene *scene,
+					global t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
 					constant t_cl_renderer_settings *settings,

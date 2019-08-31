@@ -10,12 +10,12 @@ typedef struct 		    s_object_cylinder
 	RT_F 			    radius;
 }					    t_object_cylinder;
 
-static RT_F             cylinder_cap_intersect(constant t_object *object, t_intersection *intersection)
+static RT_F             cylinder_cap_intersect(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
     RT_F                t[2];
 
-    data = *(constant t_object_cylinder *)object->data;
+    data = *(global t_object_cylinder *)object->data;
     if (!dot(intersection->ray.direction, data.axis))
         return (INFINITY);
     t[0] = dot((data.top - intersection->ray.origin), data.axis)
@@ -38,7 +38,7 @@ static RT_F             cylinder_cap_intersect(constant t_object *object, t_inte
     return (t[1]);
 }
 
-static int			    cylinder_intersect(constant t_object *object, t_intersection *intersection)
+static int			    cylinder_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_cylinder	data;
 	RT_F4			    temp[2];
@@ -47,7 +47,7 @@ static int			    cylinder_intersect(constant t_object *object, t_intersection *i
 	RT_F                t[2];
 	RT_F                k[3];
 
-	data = *(constant t_object_cylinder *)object->data;
+	data = *(global t_object_cylinder *)object->data;
 	temp[0] = intersection->ray.origin - data.bottom;
 
 	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
@@ -77,25 +77,25 @@ static int			    cylinder_intersect(constant t_object *object, t_intersection *i
 	return (1);
 }
 
-static RT_F4		    calculate_cylinder_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		    calculate_cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
     RT_F4			    temp[2];
     RT_F4               result;
 
-    data = *(constant t_object_cylinder *)object->data;
+    data = *(global t_object_cylinder *)object->data;
     temp[0] = intersection->ray.origin + intersection->ray.direction * intersection->ray.t;
     temp[1] = temp[0] - data.bottom;
     result = temp[1] - (data.axis * dot(temp[1], data.axis));
     return (normalize(result));
 }
 
-static RT_F4		    cylinder_normal(constant t_object *object, t_intersection *intersection)
+static RT_F4		    cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     if (!intersection->cups_flag)
         return (calculate_cylinder_normal(object, intersection));
     else if (intersection->cups_flag == -1)
-        return (normalize(((constant t_object_cylinder *)object->data)->axis * -1));
+        return (normalize(((global t_object_cylinder *)object->data)->axis * -1));
     else
-        return (normalize(((constant t_object_cylinder *)object->data)->axis));
+        return (normalize(((global t_object_cylinder *)object->data)->axis));
 }

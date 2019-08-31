@@ -5,7 +5,7 @@
 # include "rt_cl_include.h"
 # include "rt_cl_compilation.h"
 
-# include "assert.h"
+# include "rt_assert.h"
 # include "cl_program.h"
 # include "cl_arg_list.h"
 

@@ -3,7 +3,7 @@
 #include "rt_parameters.h"
 
 static RT_F4		light_area(
-					constant t_scene *scene,
+					global t_scene *scene,
 					t_intersection *intersection_object,
 					constant t_cl_renderer_settings *settings,
 					global ulong *rng_state)

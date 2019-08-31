@@ -68,7 +68,7 @@ static t_ray		camera_build_ray(global t_camera *camera, int2 *screen, global ulo
 	return (result);
 }
 
-static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_auto_focus(global t_camera *camera, global t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
 
@@ -77,7 +77,7 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
 }
 
-static void			camera_select(global t_camera *camera, constant t_scene *scene, constant t_cl_renderer_settings *settings)
+static void			camera_select(global t_camera *camera, global t_scene *scene, constant t_cl_renderer_settings *settings)
 {
     t_intersection	intersection;
 

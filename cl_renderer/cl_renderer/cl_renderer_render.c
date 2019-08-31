@@ -11,7 +11,7 @@ static void 		static_queue(t_cl_renderer *renderer)
 	error = clEnqueueNDRangeKernel(renderer->builder->queue,
 		renderer->builder->kernel, 1, NULL,
 		&renderer->pixel_number, NULL, 0, NULL, NULL);
-	ASSERT(error == 0)
+	RT_ASSERT(error == 0)
 }
 
 static void			static_post_queue(t_cl_renderer *renderer)

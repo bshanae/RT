@@ -2,7 +2,7 @@
 
 #include "rt_parameters.h"
 
-static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
+static RT_F4		object_normal_rm(global t_object *object, RT_F4 hit)
 {
 	RT_F4			nudged_hit;
 	RT_F4			normal;
@@ -34,7 +34,7 @@ static RT_F4		object_normal_rm(constant t_object *object, RT_F4 hit)
 }
 
 static RT_F4		object_normal_rt(
-					constant t_object *object,
+					global t_object *object,
                     t_intersection *intersection)
 {
 	if (object->type == object_type_sphere)
@@ -49,7 +49,7 @@ static RT_F4		object_normal_rt(
 }
 
 static RT_F4		object_normal(
-					constant t_object *object,
+					global t_object *object,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {
