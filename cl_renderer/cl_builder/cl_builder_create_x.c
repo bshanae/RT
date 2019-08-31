@@ -26,6 +26,7 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_BOX);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PARABOLOID);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MOEBIUS);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_LIMITED);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MANDELBULB);

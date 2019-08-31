@@ -8,5 +8,5 @@ void				object_julia_build(t_object *space, va_list *args)
 	data->position = va_arg(*args, RT_F4_API);
 	data->iterations = va_arg(*args, int);
 	data->value = va_arg(*args, RT_F4_API);
-	space->type = object_julia;
+	space->type = object_type_julia;
 }

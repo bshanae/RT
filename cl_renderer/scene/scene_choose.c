@@ -7,5 +7,6 @@ void				scene_choose(t_scene *scene, int id)
 	i = 0;
 	while (i < scene->objects_length)
 		scene->objects[i++].is_chosen = 0;
-	scene->objects[id].is_chosen = 1;
+	if (id != -1)
+		scene->objects[id].is_chosen = 1;
 }

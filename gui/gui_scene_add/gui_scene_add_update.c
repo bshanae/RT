@@ -6,7 +6,7 @@ void 				gui_scene_add_update(t_gui_scene_add *add)
 	int 			type_iter;
 
 	type_iter = 0;
-	while (type_iter < object_end)
+	while (type_iter < object_type_end)
 	{
 		gtk_list_store_append(add->type_list, &list_iter);
 		gtk_list_store_set(add->type_list, &list_iter,

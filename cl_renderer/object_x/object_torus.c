@@ -8,5 +8,5 @@ void						object_torus_build(t_object *space, va_list *args)
 	data->position = va_arg(*args, RT_F4_API);
 	data->t_0 = (RT_F)va_arg(*args, double);
 	data->t_1 = (RT_F)va_arg(*args, double);
-	space->type = object_torus;
+	space->type = object_type_torus;
 }

@@ -72,8 +72,6 @@ static void			camera_auto_focus(global t_camera *camera, constant t_scene *scene
 {
     t_intersection	intersection;
 
-    camera->focus_request = 0;
-
     intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
     if (scene_intersect(scene, &intersection, settings))
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
@@ -83,10 +81,9 @@ static void			camera_select(global t_camera *camera, constant t_scene *scene, co
 {
     t_intersection	intersection;
 
-	camera->select_request = 0;
 	camera->select_request_object = -1;
-
     intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
+
     if (scene_intersect(scene, &intersection, settings))
     	camera->select_request_object = intersection.object_id;
 }

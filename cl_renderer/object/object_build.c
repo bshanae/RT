@@ -8,39 +8,43 @@ void				object_build(
 {
 	va_list		args;
 
+	if (!space)
+		return ;
 	space->material = material;
 	space->name[0] = '\0';
+	space->is_visible = 1;
 	space->is_chosen = 0;
-	space->is_csg = 0;
 	space->is_limited = 0;
 	va_start(args, material);
-	if (type == object_light_ambient)
+	if (type == object_type_light_ambient)
 		object_light_ambient_build(space, &args);
-	else if (type == object_light_point)
+	else if (type == object_type_light_point)
 		object_light_point_build(space, &args);
-	else if (type == object_light_direct)
+	else if (type == object_type_light_direct)
 		object_light_direct_build(space, &args);
-	else if (type == object_sphere)
+	else if (type == object_type_sphere)
 		object_sphere_build(space, &args);
-	else if (type == object_plane)
+	else if (type == object_type_plane)
 		object_plane_build(space, &args);
-	else if (type == object_cone)
+	else if (type == object_type_cone)
 		object_cone_build(space, &args);
-	else if (type == object_cylinder)
+	else if (type == object_type_cylinder)
 		object_cylinder_build(space, &args);
-	else if (type == object_box)
+	else if (type == object_type_box)
 		object_box_build(space, &args);
-	else if (type == object_paraboloid)
+	else if (type == object_type_paraboloid)
 		object_paraboloid_build(space, &args);
-	else if (type == object_moebius)
+	else if (type == object_type_moebius)
 		object_moebius_build(space, &args);
-	else if (type == object_torus)
+	else if (type == object_type_limited)
+		object_limited_build(space, &args);
+	else if (type == object_type_torus)
 		object_torus_build(space, &args);
-	else if (type == object_mandelbulb)
+	else if (type == object_type_mandelbulb)
 		object_mandelbulb_build(space, &args);
-	else if (type == object_julia)
+	else if (type == object_type_julia)
 		object_julia_build(space, &args);
-	else if (type == object_csg)
+	else if (type == object_type_csg)
 		object_csg_build(space, &args);
 	va_end(args);
 }

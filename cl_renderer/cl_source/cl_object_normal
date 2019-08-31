@@ -37,13 +37,13 @@ static RT_F4		object_normal_rt(
 					constant t_object *object,
                     t_intersection *intersection)
 {
-	if (object->type == object_sphere)
+	if (object->type == object_type_sphere)
 		return (sphere_normal(object, intersection));
-	else if (object->type == object_plane)
+	else if (object->type == object_type_plane)
 		return (plane_normal(object, intersection));
-	else if (object->type == object_cone)
+	else if (object->type == object_type_cone)
 	    return (cone_normal(object, intersection));
-	else if (object->type == object_cylinder)
+	else if (object->type == object_type_cylinder)
 	    return (cylinder_normal(object, intersection));
  	return (0);
 }

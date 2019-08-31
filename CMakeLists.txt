@@ -323,7 +323,7 @@ set(SOURCE_F4
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
-	./cl_renderer/object/object_translate.c)
+	./cl_renderer/object/object_translate.c cl_renderer/object/object_get_flag.c)
 
 set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
@@ -336,7 +336,7 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_torus.c
 	./cl_renderer/object_x/object_julia.c
 	./cl_renderer/object_x/object_light_x.c
-	./cl_renderer/object_x/object_mandelbulb.c)
+	./cl_renderer/object_x/object_mandelbulb.c cl_renderer/object_x/object_limited.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -344,7 +344,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_delete.c
 	./cl_renderer/scene/scene_remove_object.c
 	./cl_renderer/scene/scene_update.c
-	./cl_renderer/scene/scene_clear.c cl_renderer/scene/camera_point_check.c cl_renderer/scene/scene_give_name.c cl_renderer/scene/scene_choose.c)
+	./cl_renderer/scene/scene_clear.c cl_renderer/scene/camera_point_check.c cl_renderer/scene/scene_give_name.c cl_renderer/scene/scene_choose.c cl_renderer/scene/scene_is_valid_x.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

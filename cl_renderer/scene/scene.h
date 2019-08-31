@@ -37,4 +37,7 @@ typedef enum		e_scene_name_flag
 void				scene_give_name
 					(t_scene *scene, CHAR_REF str, t_scene_name_flag flag, ...);
 
+int					scene_is_valid_id(t_scene *scene, int id);
+int					scene_is_valid_content(t_scene *scene);
+
 #endif

@@ -10,6 +10,7 @@ t_gui_queue			*gui_queue_new(void *data, void (*function)(void *))
 		new, 1, FALSE, NULL);
 	new->master_data = data;
 	new->master_function = function;
+	new->free = 1;
 	new->block = 0;
 	new->kill_timeout = 0;
 	new->force_execute = 1;

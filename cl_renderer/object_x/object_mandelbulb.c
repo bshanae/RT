@@ -8,5 +8,5 @@ void						object_mandelbulb_build(t_object *space, va_list *args)
 	data->position = va_arg(*args, RT_F4_API);
 	data->iterations = va_arg(*args, int);
 	data->power = (RT_F)va_arg(*args, double);
-	space->type = object_mandelbulb;
+	space->type = object_type_mandelbulb;
 }

@@ -45,3 +45,21 @@ static RT_F 			plane_sdf(constant t_object *object, RT_F4 point)
     data = *(constant t_object_plane *)object->data;
 	return (dot(data.normal, point - data.position));
 }
+
+static void				plane_intersect_t(t_object_plane *plane, t_intersection *intersection, RT_F *t)
+{
+	RT_F4				temp[2];
+	RT_F				value[3];
+
+	if (!(value[0] = dot(intersection->ray.direction, plane->normal)))
+	{
+		*t = RT_INFINITY;
+		return ;
+	}
+	temp[0] = plane->position - intersection->ray.origin;
+	value[1] = dot(temp[0], plane->normal) / value[0];
+	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
+		*t = RT_INFINITY;
+	else
+		*t = value[1];
+}

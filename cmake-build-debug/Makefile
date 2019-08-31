@@ -1257,6 +1257,33 @@ cl_renderer/object/object_build.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_build.c.s
 .PHONY : cl_renderer/object/object_build.c.s
 
+cl_renderer/object/object_get_flag.o: cl_renderer/object/object_get_flag.c.o
+
+.PHONY : cl_renderer/object/object_get_flag.o
+
+# target to build an object file
+cl_renderer/object/object_get_flag.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o
+.PHONY : cl_renderer/object/object_get_flag.c.o
+
+cl_renderer/object/object_get_flag.i: cl_renderer/object/object_get_flag.c.i
+
+.PHONY : cl_renderer/object/object_get_flag.i
+
+# target to preprocess a source file
+cl_renderer/object/object_get_flag.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.i
+.PHONY : cl_renderer/object/object_get_flag.c.i
+
+cl_renderer/object/object_get_flag.s: cl_renderer/object/object_get_flag.c.s
+
+.PHONY : cl_renderer/object/object_get_flag.s
+
+# target to generate assembly for a file
+cl_renderer/object/object_get_flag.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.s
+.PHONY : cl_renderer/object/object_get_flag.c.s
+
 cl_renderer/object/object_translate.o: cl_renderer/object/object_translate.c.o
 
 .PHONY : cl_renderer/object/object_translate.o
@@ -1445,6 +1472,33 @@ cl_renderer/object_x/object_light_x.s: cl_renderer/object_x/object_light_x.c.s
 cl_renderer/object_x/object_light_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_light_x.c.s
 .PHONY : cl_renderer/object_x/object_light_x.c.s
+
+cl_renderer/object_x/object_limited.o: cl_renderer/object_x/object_limited.c.o
+
+.PHONY : cl_renderer/object_x/object_limited.o
+
+# target to build an object file
+cl_renderer/object_x/object_limited.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o
+.PHONY : cl_renderer/object_x/object_limited.c.o
+
+cl_renderer/object_x/object_limited.i: cl_renderer/object_x/object_limited.c.i
+
+.PHONY : cl_renderer/object_x/object_limited.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_limited.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.i
+.PHONY : cl_renderer/object_x/object_limited.c.i
+
+cl_renderer/object_x/object_limited.s: cl_renderer/object_x/object_limited.c.s
+
+.PHONY : cl_renderer/object_x/object_limited.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_limited.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.s
+.PHONY : cl_renderer/object_x/object_limited.c.s
 
 cl_renderer/object_x/object_mandelbulb.o: cl_renderer/object_x/object_mandelbulb.c.o
 
@@ -1769,6 +1823,33 @@ cl_renderer/scene/scene_give_name.s: cl_renderer/scene/scene_give_name.c.s
 cl_renderer/scene/scene_give_name.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
 .PHONY : cl_renderer/scene/scene_give_name.c.s
+
+cl_renderer/scene/scene_is_valid_x.o: cl_renderer/scene/scene_is_valid_x.c.o
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.o
+
+# target to build an object file
+cl_renderer/scene/scene_is_valid_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.o
+
+cl_renderer/scene/scene_is_valid_x.i: cl_renderer/scene/scene_is_valid_x.c.i
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_is_valid_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.i
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.i
+
+cl_renderer/scene/scene_is_valid_x.s: cl_renderer/scene/scene_is_valid_x.c.s
+
+.PHONY : cl_renderer/scene/scene_is_valid_x.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_is_valid_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.s
+.PHONY : cl_renderer/scene/scene_is_valid_x.c.s
 
 cl_renderer/scene/scene_new.o: cl_renderer/scene/scene_new.c.o
 
@@ -5415,6 +5496,9 @@ help:
 	@echo "... cl_renderer/object/object_build.o"
 	@echo "... cl_renderer/object/object_build.i"
 	@echo "... cl_renderer/object/object_build.s"
+	@echo "... cl_renderer/object/object_get_flag.o"
+	@echo "... cl_renderer/object/object_get_flag.i"
+	@echo "... cl_renderer/object/object_get_flag.s"
 	@echo "... cl_renderer/object/object_translate.o"
 	@echo "... cl_renderer/object/object_translate.i"
 	@echo "... cl_renderer/object/object_translate.s"
@@ -5436,6 +5520,9 @@ help:
 	@echo "... cl_renderer/object_x/object_light_x.o"
 	@echo "... cl_renderer/object_x/object_light_x.i"
 	@echo "... cl_renderer/object_x/object_light_x.s"
+	@echo "... cl_renderer/object_x/object_limited.o"
+	@echo "... cl_renderer/object_x/object_limited.i"
+	@echo "... cl_renderer/object_x/object_limited.s"
 	@echo "... cl_renderer/object_x/object_mandelbulb.o"
 	@echo "... cl_renderer/object_x/object_mandelbulb.i"
 	@echo "... cl_renderer/object_x/object_mandelbulb.s"
@@ -5472,6 +5559,9 @@ help:
 	@echo "... cl_renderer/scene/scene_give_name.o"
 	@echo "... cl_renderer/scene/scene_give_name.i"
 	@echo "... cl_renderer/scene/scene_give_name.s"
+	@echo "... cl_renderer/scene/scene_is_valid_x.o"
+	@echo "... cl_renderer/scene/scene_is_valid_x.i"
+	@echo "... cl_renderer/scene/scene_is_valid_x.s"
 	@echo "... cl_renderer/scene/scene_new.o"
 	@echo "... cl_renderer/scene/scene_new.i"
 	@echo "... cl_renderer/scene/scene_new.s"

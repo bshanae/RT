@@ -74,6 +74,12 @@ typedef struct			s_object_moebius
 	RT_F				half_width;
 }						t_object_moebius;
 
+typedef struct 			s_object_limited
+{
+	int 				id_main;
+	int 				id_limit;
+}						t_object_limited;
+
 typedef struct 			s_object_torus
 {
 	RT_F4_API  			position;

@@ -3,13 +3,13 @@
 void				gui_scene_edit_gen_name(t_object *object, int reset_flag)
 {
 	int 			i;
-	static int 		id[object_end];
+	static int 		id[object_type_end];
 	char			*temp;
 
 	if (reset_flag)
 	{
 		i = 0;
-		while (i < object_end)
+		while (i < object_type_end)
 			id[i++] = 0;
 		return ;
 	}

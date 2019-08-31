@@ -10,104 +10,11 @@ typedef struct		s_scene
     int 			lights_length;
 }					t_scene;
 
-static void			plane_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
-{
-	t_object_plane	data;
-	RT_F4			temp[2];
-	RT_F			value[3];
-
-	data = *(constant t_object_plane *)object->data;
-	if (!(value[0] = dot(intersection->ray.direction, data.normal)))
-	{
-		*t = RT_INFINITY;
-		return ;
-	}
-	temp[0] = data.position - intersection->ray.origin;
-	value[1] = dot(temp[0], data.normal) / value[0];
-	if (value[1] <= RT_EPSILON || value[1] >= intersection->ray.t)
-		*t = RT_INFINITY;
-	else
-		*t = value[1];
-}
-
-static void     				sphere_intersect_t(constant t_object *object, t_intersection *intersection, RT_F *t)
-{
-	t_object_sphere				data;
-	RT_F						k[3];
-	RT_F						discriminant;
-	RT_F4						temp;
-
-    data = *(constant t_object_sphere *)object->data;
-	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
-	temp = intersection->ray.origin - data.position;
-	k[1] = 2 * dot(temp, intersection->ray.direction);
-	k[2] = dot(temp, temp) - data.radius * data.radius;
-	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
-	if (discriminant < 0.f)
-	{
-	    t[0] = RT_INFINITY;
-	    t[1] = RT_INFINITY;
-	    return ;
-	}
-	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-	{
-    	t[0] = RT_INFINITY;
-    	t[1] = RT_INFINITY;
-    	return ;
-    }
-}
-
 static int			scene_intersect_rt(constant t_scene *scene, t_intersection *intersection)
 {
 	int				result;
 
     result = 0;
-    /*
-
-    RT_F            dot_value[0];
-    t_object_sphere sphere;
-    t_object_plane  plane;
-    RT_F            sphere_t[2];
-    RT_F            plane_t;
-
-    sphere = *(constant t_object_sphere *)scene->objects[0].data;
-    plane = *(constant t_object_plane *)scene->objects[1].data;
-
-	sphere_intersect_t(scene->objects + 0, intersection, sphere_t);
-	plane_intersect_t(scene->objects + 1, intersection, &plane_t);
-
-    dot_value[0] = dot(plane.position - intersection->ray.origin, plane.normal);
-    dot_value[1] = dot(intersection->ray.direction, plane.normal);
-
-    if (dot_value[0] > 0 && sphere_t[0] < plane_t)
-    {
-        result++;
-        intersection->ray.t = sphere_t[0];
-        intersection->object_id = 0;
-    }
-    else if (dot_value[0] == 0 && dot_value[1] <= 0)
-	{
-		result++;
-		intersection->ray.t = sphere_t[0];
-		intersection->object_id = 0;
-    }
-    else if (dot_value[0] <= 0 && plane_t > sphere_t[0] && plane_t < sphere_t[1])
-    {
-		result++;
-		intersection->ray.t = plane_t;
-		intersection->object_id = 1;
-    }
-    else if (dot_value[0] <= 0 && sphere_t[0] != RT_INFINITY && plane_t < sphere_t[0])
-    {
-		result++;
-		intersection->ray.t = sphere_t[0];
-		intersection->object_id = 0;
-	}
-
-	*/
-
     for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
 

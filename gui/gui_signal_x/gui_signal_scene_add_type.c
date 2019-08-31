@@ -13,8 +13,8 @@ void 				gui_signal_scene_add_type
 		scene_add_type_id, &gui->scene->add->current_type, -1);
 	gtk_stack_set_visible_child_name(gui->scene->add->stack,
 		 object_translate(gui->scene->add->current_type));
-	if (gui->scene->add->current_type >= object_light_ambient &&
-		gui->scene->add->current_type <= object_light_direct)
+	if (gui->scene->add->current_type >= object_type_light_ambient &&
+		gui->scene->add->current_type <= object_type_light_direct)
 		gui_scene_add_material_state_light(gui->scene->add);
 	else
 		gui_scene_add_material_state_non_light(gui->scene->add);

@@ -18,7 +18,7 @@ int 				scene_point_check(t_scene *scene, const RT_F4_API *point)
 	i = 0;
 	while (i < scene->objects_length)
 	{
-		proceed = scene->objects[i].type == object_plane;
+		proceed = scene->objects[i].type == object_type_plane;
 		plane = (t_object_plane *)scene->objects[i].data;
 		if (proceed && plane->is_limiting == plane_limiting_no)
 			proceed = 0;

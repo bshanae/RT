@@ -13,9 +13,9 @@ static	RT_F		        csg_sdf_difference(const RT_F distance_a, const RT_F distan
 
 static RT_F			        sdf_csg_compute(constant t_object *object, RT_F4 point)
 {
-	if (object->type == object_sphere)
+	if (object->type == object_type_sphere)
 		return (sphere_sdf(object, point));
-	else if (object->type == object_box)
+	else if (object->type == object_type_box)
         return (box_sdf(object, point));
     return (RT_INFINITY);
 }

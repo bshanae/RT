@@ -56,7 +56,11 @@ gboolean			gui_signal_key
 	if (event->keyval == GDK_KEY_Escape)
 		gui_signal_exit(widget, ptr);
 	else if (event->keyval == GDK_KEY_Return)
+#ifdef RT_QUEUE_AUTO
 		gui->queue->block = !gui->queue->block;
+#elif defined RT_QUEUE_MANUAL
+		gui_queue_execute_force(gui->queue);
+#endif
 	else if (event->keyval == GDK_KEY_r)
 	{
 		cl_renderer_camera_reset(gui->renderer);

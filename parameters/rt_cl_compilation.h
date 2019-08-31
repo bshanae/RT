@@ -22,6 +22,7 @@
 # define CL_SOURCE_OBJECT_BOX			"cl_object_box"
 # define CL_SOURCE_OBJECT_PARABOLOID	"cl_object_paraboloid"
 # define CL_SOURCE_OBJECT_MOEBIUS		"cl_object_moebius"
+# define CL_SOURCE_OBJECT_LIMITED		"cl_object_limited"
 # define CL_SOURCE_OBJECT_TORUS			"cl_object_torus"
 # define CL_SOURCE_OBJECT_JULIA			"cl_object_julia"
 # define CL_SOURCE_OBJECT_MANDELBULB	"cl_object_mandelbulb"

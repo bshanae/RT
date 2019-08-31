@@ -13,6 +13,7 @@ typedef struct 		s_gui_queue
 	GThreadPool		*pool;
 	void 			*master_data;
 	void 			(*master_function)(void *ptr);
+	int				free;
 	int 			block;
 	int 			block_last_state;
 	int 			kill_timeout;
