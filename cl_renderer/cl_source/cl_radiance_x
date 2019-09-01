@@ -88,13 +88,11 @@ static RT_F4				radiance_trace(
 
 		radiance += mask * intersection->material.emission;
 
-#ifndef RT_OPEN_CL_LOW
 		if (settings->light_basic)
 		{
 			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
-#endif
 
 		if (settings->light_area)
 		{

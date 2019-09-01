@@ -1230,7 +1230,6 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_type_plane)
 		return (plane_intersect(object, intersection));
-#ifndef RT_OPEN_CL_LOW
 	else if (object->type == object_type_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_type_cylinder)
@@ -1239,7 +1238,6 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_type_moebius)
 		return (moebius_intersect(object, intersection));
-#endif
 	else if (object->type == object_type_limited)
 		return (limited_intersect(object, intersection));
 	return (0);
@@ -1312,10 +1310,10 @@ static RT_F4		sphere_texture(
 	RT_F2			uv;
 
 	data = *(global t_object_sphere *)object->data;
-	normal = intersection->normal - data.position;
+	normal = intersection->hit - data.position;
 	uv.x = 0.5 + atan2(normal.z, normal.x) / (RT_PI * 2);
 	uv.y =  0.5 - asin(normal.y) / RT_PI;
-	return (get_color_from_texture(texture, object->texture_id, &uv));
+	//return (get_color_from_texture(texture, object->texture_id, &uv));
 }
 
 static RT_F4		plane_texture(
@@ -1323,37 +1321,22 @@ static RT_F4		plane_texture(
 					global t_object *object,
 					t_intersection *intersection)
 {
-	t_object_sphere	data;
-	RT_F4			normal;
+	t_object_plane	data;
+	RT_F4			vector;
 	RT_F4			u;
 	RT_F4			v;
 	RT_F2			uv;
 
-	u = normalize((RT_F4){intersection->normal.y, -intersection->normal.x, 0.});
+	data = *(global t_object_plane *)object->data;
+	u = cross(intersection->normal, (RT_F4){0., 1., 0., 0.});
+	if (length(u) == (RT_F)0.)
+		u = cross(intersection->normal, (RT_F4){0., 0., 1., 0.});
     v = cross(intersection->normal, u);
-
-    uv.x = dot(u, intersection->hit);
-    uv.y = dot(v, intersection->hit);
-	return (get_color_from_texture(texture, object->texture_id, &uv));
+	vector = data.position - intersection->hit;
+    uv.x = dot(u, vector);
+    uv.y = dot(v, vector);
+	//return (get_color_from_texture(texture, object->texture_id, &uv));
 }
-
-/*
-if (normal.x >= normal.y && normal.x >= normal.z)
-        {
-            u = (int)tmp.y % 450;
-            v = (int)tmp.z % 450;
-        }
-        else if (normal.y >= normal.x && normal.y >= normal.z)
-        {
-            u = (int)tmp.x % 450;
-            v = (int)tmp.z % 450;
-        }
-        else if (normal.z >= normal.x && normal.z >= normal.y)
-        {
-            u = (int)tmp.y % 450;
-            v = (int)tmp.x % 450;
-        }
-*/
 
 static RT_F4		object_texture(
 					global t_texture *texture,
@@ -1435,7 +1418,7 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
     int 			lights_length;
-    t_texture		texture;
+    //t_texture		texture;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
@@ -1501,16 +1484,12 @@ static int			scene_intersect(
 	int				result;
 
 	intersection_reset(intersection);
-#ifndef RT_OPEN_CL_LOW
 	result = !settings->rm_mod ? scene_intersect_rt(scene, intersection) : scene_intersect_rm(scene, intersection, settings);
-#else
-	result = scene_intersect_rt(scene, intersection);
-#endif
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		if (scene->objects[intersection->object_id].texture_id > -1)
-			intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
+		//if (scene->objects[intersection->object_id].texture_id > -1)
+		//	intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
@@ -1769,7 +1748,7 @@ static RT_F4		light_area(
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return (RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING));
+	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), RT_LIGHT_AREA_FLOOR));
 }
 
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1965,13 +1944,11 @@ static RT_F4				radiance_trace(
 
 		radiance += mask * intersection->material.emission;
 
-#ifndef RT_OPEN_CL_LOW
 		if (settings->light_basic)
 		{
 			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
-#endif
 
 		if (settings->light_area)
 		{
@@ -2024,6 +2001,7 @@ static RT_F4				radiance_trace(
 
  	illumination = 0.;
  	shadow = *intersection;
+
  	for (int i = 0; i < scene->objects_length; i++)
  	{
         if (scene->objects[i].type != object_type_sphere)
@@ -2031,13 +2009,17 @@ static RT_F4				radiance_trace(
         if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = (constant t_object_sphere	*)scene->objects[i].data;
+		sphere = (t_object_sphere *)scene->objects[i].data;
+
  		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
+
  		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
  		y = length(sphere->position - intersection->ray.origin + k * x);
  		if (x < sphere->radius)
  		     continue;
+
  		scene_intersect(scene, &shadow, settings);
+
          if (shadow.ray.t < y * (RT_F)0.95)
              continue;
  		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
@@ -2098,6 +2080,8 @@ kernel void			cl_main(
 	illumination_effect = 0.;
 	if (settings->illumination)
 		illumination_effect = illumination(scene, camera, &intersection, settings);
+
+	return ;
 
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
 	radiance_write(sample_store_mapped, global_id, radiance, settings);

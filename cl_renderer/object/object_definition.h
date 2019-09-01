@@ -37,8 +37,8 @@ typedef struct		s_object
 	char 			name[32];
 	int				id;
 	t_object_type	type;
-	t_material		material;
 	int 			texture_id;
+	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
 	int 			is_selected;

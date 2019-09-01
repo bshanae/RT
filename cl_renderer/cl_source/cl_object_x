@@ -11,7 +11,6 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 		return (sphere_intersect(object, intersection));
 	else if (object->type == object_type_plane)
 		return (plane_intersect(object, intersection));
-#ifndef RT_OPEN_CL_LOW
 	else if (object->type == object_type_cone)
 		return (cone_intersect(object, intersection));
 	else if (object->type == object_type_cylinder)
@@ -20,7 +19,6 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 		return (paraboloid_intersect(object, intersection));
 	else if (object->type == object_type_moebius)
 		return (moebius_intersect(object, intersection));
-#endif
 	else if (object->type == object_type_limited)
 		return (limited_intersect(object, intersection));
 	return (0);
