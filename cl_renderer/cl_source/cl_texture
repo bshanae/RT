@@ -39,7 +39,7 @@ static RT_F4		sphere_texture(
 	normal = intersection->hit - data.position;
 	uv.x = 0.5 + atan2(normal.z, normal.x) / (RT_PI * 2);
 	uv.y =  0.5 - asin(normal.y) / RT_PI;
-	//return (get_color_from_texture(texture, object->texture_id, &uv));
+	return (get_color_from_texture(texture, object->texture_id, &uv));
 }
 
 static RT_F4		plane_texture(
@@ -61,7 +61,7 @@ static RT_F4		plane_texture(
 	vector = data.position - intersection->hit;
     uv.x = dot(u, vector);
     uv.y = dot(v, vector);
-	//return (get_color_from_texture(texture, object->texture_id, &uv));
+	return (get_color_from_texture(texture, object->texture_id, &uv));
 }
 
 static RT_F4		object_texture(

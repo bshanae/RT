@@ -77,6 +77,8 @@ static RT_F4				radiance_trace(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		radiance += illumination(scene, intersection, settings);
+
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 

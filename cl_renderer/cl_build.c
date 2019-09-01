@@ -226,8 +226,8 @@ typedef struct		s_object
 	char 			name[32];
 	int				id;
 	t_object_type	type;
-	t_material		material;
 	int 			texture_id;
+	t_material		material;
 	char			data[RT_CL_OBJECT_CAPACITY];
 	int 			is_visible;
 	int 			is_selected;
@@ -1313,7 +1313,7 @@ static RT_F4		sphere_texture(
 	normal = intersection->hit - data.position;
 	uv.x = 0.5 + atan2(normal.z, normal.x) / (RT_PI * 2);
 	uv.y =  0.5 - asin(normal.y) / RT_PI;
-	//return (get_color_from_texture(texture, object->texture_id, &uv));
+	return (get_color_from_texture(texture, object->texture_id, &uv));
 }
 
 static RT_F4		plane_texture(
@@ -1335,7 +1335,7 @@ static RT_F4		plane_texture(
 	vector = data.position - intersection->hit;
     uv.x = dot(u, vector);
     uv.y = dot(v, vector);
-	//return (get_color_from_texture(texture, object->texture_id, &uv));
+	return (get_color_from_texture(texture, object->texture_id, &uv));
 }
 
 static RT_F4		object_texture(
@@ -1418,7 +1418,7 @@ typedef struct		s_scene
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
     int 			lights_length;
-    //t_texture		texture;
+    t_texture		texture;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
@@ -1488,8 +1488,8 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		//if (scene->objects[intersection->object_id].texture_id > -1)
-		//	intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
+		if (scene->objects[intersection->object_id].texture_id > -1)
+			intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
@@ -1933,6 +1933,8 @@ static RT_F4				radiance_trace(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
+		radiance += illumination(scene, intersection, settings);
+
 		if (!scene_intersect(scene, intersection, settings))
 			break ;
 
@@ -1986,43 +1988,41 @@ static RT_F4				radiance_trace(
 }
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
- static RT_F4					illumination(
+static RT_F4					illumination(
  								global t_scene *scene,
- 								global t_camera *camera,
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
- {
- 	constant t_object_sphere	*sphere;
- 	RT_F						x;
- 	RT_F						y;
- 	RT_F4						k;
- 	RT_F4						illumination;
- 	t_intersection              shadow;
+{
+	constant t_object_sphere	*sphere;
+	RT_F						x;
+	RT_F						y;
+	RT_F4						k;
+	RT_F4						illumination;
+	t_intersection              shadow;
 
- 	illumination = 0.;
- 	shadow = *intersection;
+	illumination = 0.;
+	shadow = *intersection;
 
- 	for (int i = 0; i < scene->objects_length; i++)
- 	{
-        if (scene->objects[i].type != object_type_sphere)
+	for (int i = 0; i < scene->objects_length; i++)
+	{
+		if (scene->objects[i].type != object_type_sphere)
+			continue ;
+		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
-        if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
-        	continue ;
 
-		sphere = (t_object_sphere *)scene->objects[i].data;
+		sphere = (constant t_object_sphere *)scene->objects[i].data;
 
- 		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
+		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
+		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
+		y = length(sphere->position - intersection->ray.origin + k * x);
+		if (x < sphere->radius)
+			continue;
 
- 		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
- 		y = length(sphere->position - intersection->ray.origin + k * x);
- 		if (x < sphere->radius)
- 		     continue;
+		scene_intersect(scene, &shadow, settings);
 
- 		scene_intersect(scene, &shadow, settings);
-
-         if (shadow.ray.t < y * (RT_F)0.95)
-             continue;
- 		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+		if (shadow.ray.t < y * (RT_F)0.95)
+			continue;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }
@@ -2075,17 +2075,9 @@ kernel void			cl_main(
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
-	RT_F4           illumination_effect; // move to radiance_trace
-
-	illumination_effect = 0.;
-	if (settings->illumination)
-		illumination_effect = illumination(scene, camera, &intersection, settings);
-
-	return ;
-
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
 	radiance_write(sample_store_mapped, global_id, radiance, settings);
-	image[global_id] = color_unpack(illumination_effect + radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
+	image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
 }
 
 
