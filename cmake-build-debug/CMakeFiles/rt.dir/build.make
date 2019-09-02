@@ -1994,18 +1994,18 @@ CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c -o CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.s
 
-CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o: ../cl_renderer/f4/f4_rotate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c
+CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o: ../cl_renderer/f4/f4_rotate_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate_x.c
 
-CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c > CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.i
+CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate_x.c > CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.i
 
-CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c -o CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.s
+CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate_x.c -o CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.s
 
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o: ../cl_renderer/f4/f4_length.c
@@ -2951,7 +2951,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o" \
@@ -3166,7 +3166,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/f2/f2_dot.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o

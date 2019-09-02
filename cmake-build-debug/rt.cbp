@@ -327,7 +327,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c">

@@ -345,7 +345,7 @@ set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
 	./cl_renderer/f4/f4_mul.c
-	./cl_renderer/f4/f4_rotate.c
+	cl_renderer/f4/f4_rotate_x.c
 	./cl_renderer/f4/f4_length.c
 	./cl_renderer/f4/f4_normalize.c
 	./cl_renderer/f4/f4_dot.c)

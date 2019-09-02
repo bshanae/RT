@@ -52,3 +52,23 @@ static RT_F4		f4_lerp(RT_F4 a, RT_F4 b, RT_F t)
     	a.z + (b.z - a.z) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
     	0.});
 }
+
+static RT_F4		f4_rotate_x(RT_F4 v, RT_F theta)
+{
+	RT_F4			copy;
+
+	copy = v;
+	v.y = copy.y * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v.z = -1 * copy.y * RT_SIN(theta) + copy.z * RT_COS(theta);
+	return (v);
+}
+
+static RT_F4		f4_rotate_y(RT_F4 v, RT_F theta)
+{
+	RT_F4			copy;
+
+	copy = v;
+	v.x = copy.x * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v.z = -1 * copy.x * RT_SIN(theta) + copy.z * RT_COS(theta);
+	return (v);
+}

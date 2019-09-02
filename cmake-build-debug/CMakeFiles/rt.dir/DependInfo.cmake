@@ -47,7 +47,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_length.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_mul.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_normalize.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
-  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_rotate_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/f4/f4_sub.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_helper.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_objects.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o"

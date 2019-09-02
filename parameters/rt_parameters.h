@@ -30,10 +30,10 @@
 # define RT_CAMERA_MOVE_VALUE		(RT_F)1.
 # define RT_CAMERA_ROTATE_VALUE		(RT_F)0.025
 
-# define RT_CL_LIGHT_BASIC			1
+# define RT_CL_LIGHT_BASIC			0
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 
-# define RT_CL_LIGHT_AREA			0
+# define RT_CL_LIGHT_AREA			1
 # define RT_LIGHT_AREA_MULTIPLIER	(RT_F)3.
 # define RT_LIGHT_AREA_FLOOR		(RT_F).12
 # define RT_LIGHT_AREA_CEILING		(RT_F).95
@@ -48,7 +48,7 @@
 # define RT_CL_MOTION_BLUR_ALPHA	(RT_F)0.7
 # define RT_CL_SAMPLE_ARRAY_LENGTH	5
 
-# define RT_CL_RM_MOD				1
+# define RT_CL_RM_MOD				0
 # define RT_CL_RM_STEP_LIMIT		128
 # define RT_CL_STEP_PART			(RT_F)1.
 # define RT_CL_RM_MAX_DISTANCE		200

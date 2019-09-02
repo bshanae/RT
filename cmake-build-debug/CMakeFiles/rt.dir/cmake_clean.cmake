@@ -148,7 +148,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_add.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_sub.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_mul.c.o"
-  "CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_length.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.o"
   "CMakeFiles/rt.dir/cl_renderer/f4/f4_dot.c.o"

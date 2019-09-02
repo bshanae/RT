@@ -1284,32 +1284,32 @@ cl_renderer/f4/f4_normalize.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_normalize.c.s
 .PHONY : cl_renderer/f4/f4_normalize.c.s
 
-cl_renderer/f4/f4_rotate.o: cl_renderer/f4/f4_rotate.c.o
+cl_renderer/f4/f4_rotate_x.o: cl_renderer/f4/f4_rotate_x.c.o
 
-.PHONY : cl_renderer/f4/f4_rotate.o
+.PHONY : cl_renderer/f4/f4_rotate_x.o
 
 # target to build an object file
-cl_renderer/f4/f4_rotate.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.o
-.PHONY : cl_renderer/f4/f4_rotate.c.o
+cl_renderer/f4/f4_rotate_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.o
+.PHONY : cl_renderer/f4/f4_rotate_x.c.o
 
-cl_renderer/f4/f4_rotate.i: cl_renderer/f4/f4_rotate.c.i
+cl_renderer/f4/f4_rotate_x.i: cl_renderer/f4/f4_rotate_x.c.i
 
-.PHONY : cl_renderer/f4/f4_rotate.i
+.PHONY : cl_renderer/f4/f4_rotate_x.i
 
 # target to preprocess a source file
-cl_renderer/f4/f4_rotate.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.i
-.PHONY : cl_renderer/f4/f4_rotate.c.i
+cl_renderer/f4/f4_rotate_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.i
+.PHONY : cl_renderer/f4/f4_rotate_x.c.i
 
-cl_renderer/f4/f4_rotate.s: cl_renderer/f4/f4_rotate.c.s
+cl_renderer/f4/f4_rotate_x.s: cl_renderer/f4/f4_rotate_x.c.s
 
-.PHONY : cl_renderer/f4/f4_rotate.s
+.PHONY : cl_renderer/f4/f4_rotate_x.s
 
 # target to generate assembly for a file
-cl_renderer/f4/f4_rotate.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate.c.s
-.PHONY : cl_renderer/f4/f4_rotate.c.s
+cl_renderer/f4/f4_rotate_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/f4/f4_rotate_x.c.s
+.PHONY : cl_renderer/f4/f4_rotate_x.c.s
 
 cl_renderer/f4/f4_sub.o: cl_renderer/f4/f4_sub.c.o
 
@@ -5958,9 +5958,9 @@ help:
 	@echo "... cl_renderer/f4/f4_normalize.o"
 	@echo "... cl_renderer/f4/f4_normalize.i"
 	@echo "... cl_renderer/f4/f4_normalize.s"
-	@echo "... cl_renderer/f4/f4_rotate.o"
-	@echo "... cl_renderer/f4/f4_rotate.i"
-	@echo "... cl_renderer/f4/f4_rotate.s"
+	@echo "... cl_renderer/f4/f4_rotate_x.o"
+	@echo "... cl_renderer/f4/f4_rotate_x.i"
+	@echo "... cl_renderer/f4/f4_rotate_x.s"
 	@echo "... cl_renderer/f4/f4_sub.o"
 	@echo "... cl_renderer/f4/f4_sub.i"
 	@echo "... cl_renderer/f4/f4_sub.s"

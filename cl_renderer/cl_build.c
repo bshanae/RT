@@ -52,6 +52,26 @@ static RT_F4		f4_lerp(RT_F4 a, RT_F4 b, RT_F t)
     	a.z + (b.z - a.z) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
     	0.});
 }
+
+static RT_F4		f4_rotate_x(RT_F4 v, RT_F theta)
+{
+	RT_F4			copy;
+
+	copy = v;
+	v->y = copy.y * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v->z = -1 * copy.y * RT_SIN(theta) + copy.z * RT_COS(theta);
+	return (v);
+}
+
+static RT_F4		f4_rotate_y(RT_F4 v, RT_F theta)
+{
+	RT_F4			copy;
+
+	copy = v;
+	v->x = copy.x * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v->z = -1 * copy.x * RT_SIN(theta) + copy.z * RT_COS(theta);
+	return (v);
+}
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_cl_renderer_settings
@@ -180,6 +200,7 @@ static void			intersection_reset(t_intersection *intersection)
 	intersection->ray.t = RT_INFINITY;
 	intersection->object_id = -1;
 	intersection->displacement = 0;
+	intersection->normal = 0.;
 }
 
 static void			intersection_reflect(t_intersection *destination, const t_intersection *source)
@@ -633,6 +654,63 @@ typedef struct 		s_object_box
 	RT_F4   		size;
 }					t_object_box;
 
+static int			object_box_intersect(global t_object *object, t_intersection *intersection)
+{
+	t_object_box	data;
+	RT_F4			min;
+	RT_F4			max;
+	RT_F			inv_dir;
+	RT_F 			t[2];
+	RT_F 			t_near;
+	RT_F 			t_far;
+	RT_F 			t_temp;
+	int 			i;
+
+#define TEST
+
+	RT_F4			origin_rotated;
+	RT_F4			direction_rotated;
+
+	origin_rotated = f4_rotate_x(intersection->ray.origin, 1.);
+	direction_rotated = f4_rotate_x(intersection->ray.direction, 1.);
+
+	data = *(global t_object_box *)object->data;
+	min = data.position - data.size / (RT_F)2.;
+	max = data.position + data.size / (RT_F)2.;
+	i = 0;
+	t_near = RT_EPSILON;
+	t_far = RT_INFINITY;
+	while (i < 3)
+	{
+#ifdef TEST
+		inv_dir = 1. / direction_rotated[i];
+		t[0] = (min[i] - origin_rotated[i]) * inv_dir;
+		t[1] = (max[i] - origin_rotated[i]) * inv_dir;
+#else
+		inv_dir = 1. / intersection->ray.direction[i];
+        t[0] = (min[i] - intersection->ray.origin[i]) * inv_dir;
+        t[1] = (max[i] - intersection->ray.origin[i]) * inv_dir;
+#endif
+
+		if (inv_dir < 0.)
+		{
+			t_temp = t[0];
+			t[0] = t[1];
+			t[1] = t_temp;
+		}
+		t_near = RT_MAX(t[0], t_near);
+		t_far = RT_MIN(t[1], t_far);
+		if (t_far <= t_near)
+			return (0);
+		i++;
+	}
+	if (t_near == RT_EPSILON || t_near >= intersection->ray.t)
+        	return (0);
+	intersection->ray.t = t_near;
+    intersection->object_id = object->id;
+	return (1);
+}
+
 static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersection)
 {
 	t_object_box	data;
@@ -646,6 +724,39 @@ static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersecti
 		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
 
+static RT_F4		object_box_normal(global t_object *object, t_intersection *intersection)
+{
+	t_object_box	data;
+    RT_F4			normal;
+    RT_F4			point;
+    RT_F			min;
+    RT_F			distance;
+
+
+	data = *(global t_object_box *)object->data;
+	normal = 0;
+	min = RT_INFINITY;
+	point = intersection->hit - data.position;
+	distance = RT_ABS(data.size.x - RT_ABS(point.x));
+    if (distance < min)
+    {
+        min = distance;
+        normal = sign(point.x) * (RT_F4){1., 0., 0., 0.};
+    }
+    distance = RT_ABS(data.size.y - RT_ABS(point.y));
+    if (distance < min)
+    {
+        min = distance;
+        normal = sign(point.y) * (RT_F4){0., 1., 0., 0.};
+    }
+    distance = RT_ABS(data.size.z - RT_ABS(point.z));
+    if (distance < min)
+    {
+        min = distance;
+        normal = sign(point.z) * (RT_F4){0., 0., 1., 0.};
+    }
+	return (normal);
+}
 // cl_object_paraboloid ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1325,13 +1436,13 @@ static RT_F 			object_explosion_sdf(global t_object *object, t_intersection *int
 	return (length(data.position - intersection->hit) - data.radius - displacement);
 }
 
-# define EXPLOSION_COLOR		(RT_F4){.05, .05, .05, 1.}
+# define EXPLOSION_COLOR		(RT_F4){.02, .02, .02, 1.}
 # define EXPLOSION_EMISSION		(RT_F4){1., 0.6, 0., 1.}
 
 static void 			object_explosion_build_material(global t_object *object, t_intersection *intersection)
 {
-	intersection->material.color = (RT_F4_API){.05, .05, .05, 1.};
-	intersection->material.emission = f4_pow((RT_F)1.3 * EXPLOSION_EMISSION * RT_ABS(intersection->displacement), 5.);
+	intersection->material.color = EXPLOSION_COLOR;
+	intersection->material.emission = f4_pow((RT_F)1.3 * EXPLOSION_EMISSION * RT_ABS(intersection->displacement), 8.);
 }
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1350,6 +1461,8 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 		return (object_cone_intersect(object, intersection));
 	else if (object->type == object_type_cylinder)
 		return (object_cylinder_intersect(object, intersection));
+	else if (object->type == object_type_box)
+		return (object_box_intersect(object, intersection));
 	else if (object->type == object_type_paraboloid)
 		return (object_paraboloid_intersect(object, intersection));
 	else if (object->type == object_type_moebius)
@@ -1521,7 +1634,9 @@ static RT_F4		object_normal_rt(
 	    return (object_cone_normal(object, intersection));
 	else if (object->type == object_type_cylinder)
 	    return (object_cylinder_normal(object, intersection));
- 	return (0);
+	else if (object->type == object_type_box)
+		return (object_box_normal(object, intersection));
+ 	return (intersection->normal);
 }
 
 static RT_F4		object_normal(
@@ -1989,7 +2104,7 @@ static RT_F4					illumination(
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
 {
-	constant t_object_sphere	*sphere;
+	t_object_sphere				sphere;
 	RT_F						x;
 	RT_F						y;
 	RT_F4						k;
@@ -1997,7 +2112,6 @@ static RT_F4					illumination(
 	t_intersection              shadow;
 
 	illumination = 0.;
-	shadow = *intersection;
 
 	for (int i = 0; i < scene->objects_length; i++)
 	{
@@ -2006,19 +2120,20 @@ static RT_F4					illumination(
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = (constant t_object_sphere *)scene->objects[i].data;
+		sphere = *(global t_object_sphere *)scene->objects[i].data;
 
-		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
-		y = length(sphere->position - intersection->ray.origin + k * x);
-		if (x < sphere->radius)
+		k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
+		x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
+		y = length(sphere.position - intersection->ray.origin + k * x);
+		if (x < sphere.radius)
 			continue;
 
+		shadow = *intersection;
 		scene_intersect(scene, &shadow, settings);
 
-		if (shadow.ray.t < y * (RT_F)0.95)
+		if (shadow.ray.t < y)
 			continue;
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), (RT_F)5.) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }

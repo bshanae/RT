@@ -5,7 +5,7 @@ static RT_F4					illumination(
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
 {
-	constant t_object_sphere	*sphere;
+	t_object_sphere				sphere;
 	RT_F						x;
 	RT_F						y;
 	RT_F4						k;
@@ -13,7 +13,6 @@ static RT_F4					illumination(
 	t_intersection              shadow;
 
 	illumination = 0.;
-	shadow = *intersection;
 
 	for (int i = 0; i < scene->objects_length; i++)
 	{
@@ -22,19 +21,20 @@ static RT_F4					illumination(
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = (constant t_object_sphere *)scene->objects[i].data;
+		sphere = *(global t_object_sphere *)scene->objects[i].data;
 
-		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
-		y = length(sphere->position - intersection->ray.origin + k * x);
-		if (x < sphere->radius)
+		k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
+		x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
+		y = length(sphere.position - intersection->ray.origin + k * x);
+		if (x < sphere.radius)
 			continue;
 
+		shadow = *intersection;
 		scene_intersect(scene, &shadow, settings);
 
-		if (shadow.ray.t < y * (RT_F)0.95)
+		if (shadow.ray.t < y)
 			continue;
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), (RT_F)5.) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }

@@ -18,6 +18,7 @@ static void			intersection_reset(t_intersection *intersection)
 	intersection->ray.t = RT_INFINITY;
 	intersection->object_id = -1;
 	intersection->displacement = 0;
+	intersection->normal = 0.;
 }
 
 static void			intersection_reflect(t_intersection *destination, const t_intersection *source)
