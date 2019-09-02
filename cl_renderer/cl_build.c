@@ -43,6 +43,15 @@ static RT_F4		f4_pow(RT_F4 vector, RT_F power)
 		0.});
 }
 
+
+static RT_F4		f4_lerp(RT_F4 a, RT_F4 b, RT_F t)
+{
+	return ((RT_F4){
+    	a.x + (b.x - a.x) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	a.y + (b.y - a.y) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	a.z + (b.z - a.z) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	0.});
+}
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 typedef struct 		s_cl_renderer_settings
@@ -628,10 +637,11 @@ static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersecti
 {
 	t_object_box	data;
 	RT_F4			d;
+	RT_F4			point;
 
 	data = *(global t_object_box *)object->data;
-	point = data.position - *point;
-	d = RT_ABS(*point) - data.size;
+	point = data.position - intersection->hit;
+	d = RT_ABS(point) - data.size;
 	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
 		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
@@ -1310,14 +1320,18 @@ static RT_F 			object_explosion_sdf(global t_object *object, t_intersection *int
 	RT_F				displacement;
 
 	data = *(global t_object_explosion *)object->data;
-	displacement = (RT_F)-1. * brownian_motion(intersection->hit * (RT_F)2.) * data.displacement_value;
+	displacement = (RT_F)-1. * brownian_motion(intersection->hit * (RT_F)2.) * 1.7;
 	intersection->displacement = displacement;
 	return (length(data.position - intersection->hit) - data.radius - displacement);
 }
 
-static void 			object_explosion_interpolate_color(t_intersection *intersection)
+# define EXPLOSION_COLOR		(RT_F4){.05, .05, .05, 1.}
+# define EXPLOSION_EMISSION		(RT_F4){1., 0.6, 0., 1.}
+
+static void 			object_explosion_build_material(global t_object *object, t_intersection *intersection)
 {
-	intersection->material.emission = f4_pow(intersection->material.emission * RT_ABS(intersection->displacement), 5.);
+	intersection->material.color = (RT_F4_API){.05, .05, .05, 1.};
+	intersection->material.emission = f4_pow((RT_F)1.3 * EXPLOSION_EMISSION * RT_ABS(intersection->displacement), 5.);
 }
 // cl_object_x /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1591,8 +1605,8 @@ static int			scene_intersect(
 			intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
-		if (scene->objects[intersection->object_id].id == object_type_explosion)
-			object_explosion_interpolate_color(intersection);
+		if (scene->objects[intersection->object_id].type == object_type_explosion)
+			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);

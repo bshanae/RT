@@ -42,3 +42,13 @@ static RT_F4		f4_pow(RT_F4 vector, RT_F power)
 		RT_POW(vector.z, power),
 		0.});
 }
+
+
+static RT_F4		f4_lerp(RT_F4 a, RT_F4 b, RT_F t)
+{
+	return ((RT_F4){
+    	a.x + (b.x - a.x) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	a.y + (b.y - a.y) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	a.z + (b.z - a.z) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)),
+    	0.});
+}

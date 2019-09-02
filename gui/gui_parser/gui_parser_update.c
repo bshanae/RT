@@ -1,7 +1,5 @@
 #include "gui_parser.h"
 
-#include <dirent.h>
-
 void 				gui_parser_update(t_gui_parser *parser)
 {
 	GtkTreeIter		iter;
@@ -9,7 +7,7 @@ void 				gui_parser_update(t_gui_parser *parser)
 	struct dirent	*file;
 
 	gtk_list_store_clear(parser->list);
-	RT_ASSERT((directory = opendir(RT_GUI_SCENES)) != NULL);
+	RT_ASSERT((directory = opendir(RT_SOURCE_GUI_SCENES)) != NULL);
 	while ((file = readdir(directory)))
 	{
 		if (ft_strstr(file->d_name, ".json") == NULL)

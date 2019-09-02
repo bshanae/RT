@@ -4,12 +4,14 @@
 # include <stdlib.h>
 # include <OpenCL/opencl.h>
 
-# include "libft_standart.h"
-
 # include "rt_parameters.h"
-# include "stb_image.h"
 # include "rt_float.h"
-# include "texture_sources.h"
+# include "rt_sources_texture.h"
+
+# include "libft_standart.h"
+# include "disruption.h"
+
+# include <stb_image.h>
 
 # define TEXTURE_CHANNELS		4
 

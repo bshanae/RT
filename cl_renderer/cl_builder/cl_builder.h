@@ -3,7 +3,7 @@
 
 # include "rt_control.h"
 # include "rt_cl_include.h"
-# include "rt_cl_compilation.h"
+# include "rt_sources_cl.h"
 
 # include "rt_assert.h"
 # include "cl_program.h"

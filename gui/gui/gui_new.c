@@ -3,7 +3,7 @@
 void 				static_load_theme(t_gui *gui)
 {
 	gui->css_provider = gtk_css_provider_new();
-	gtk_css_provider_load_from_path(gui->css_provider, RT_GUI_THEME, NULL);
+	gtk_css_provider_load_from_path(gui->css_provider, RT_SOURCE_GUI_THEME, NULL);
 	gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),
 		GTK_STYLE_PROVIDER(gui->css_provider),
 		GTK_STYLE_PROVIDER_PRIORITY_USER);
@@ -17,7 +17,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	gtk_init(ac, av);
 	new = (t_gui *)malloc(sizeof(t_gui));
 	static_load_theme(new);
-	new->builder = gtk_builder_new_from_file(RT_GUI_BUILD);
+	new->builder = gtk_builder_new_from_file(RT_SOURCE_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
 	new->notebook= RT_GUI_GET(new->builder, "notebook");
 	new->notebook_fix[0] = RT_GUI_GET(new->builder, "notebook_fix_0");

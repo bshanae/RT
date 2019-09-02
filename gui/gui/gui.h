@@ -2,6 +2,7 @@
 # define GUI_H
 
 # include "rt_parameters.h"
+# include "rt_sources_gui.h"
 
 # include "gui_queue.h"
 # include "gui_parser.h"

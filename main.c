@@ -83,7 +83,7 @@ void				scene_test_c(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_light_point,
 		MATERIAL_LIGHT_BASIC, (RT_F4_API){10., 10., 0.});
 	object_build(scene_get_space(scene), object_type_explosion,
-		MATERIAL_EXPLOSION, (RT_F4_API){0., 0., 0.}, 2., 1.2);
+		MATERIAL_NONE, (RT_F4_API){0., 0., 0.}, 2., 1.2);
 	scene_give_name(scene, "Explosion", scene_name_last);
 }
 

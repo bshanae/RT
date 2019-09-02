@@ -2,10 +2,12 @@
 # define GUI_PARSER_H
 
 # include "rt_parameters.h"
+# include "rt_sources_gui.h"
 
 # include "rt_assert.h"
 
 # include <gtk/gtk.h>
+# include <dirent.h>
 
 typedef struct 				s_gui_parser
 {

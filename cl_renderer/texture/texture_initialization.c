@@ -6,7 +6,7 @@ void				texture_initialization(t_texture *texture)
 	texture_disruptions_load(texture, sine_wave);
 	texture_disruptions_load(texture, checkerboard);
 //	texture_disruptions_load(texture, perlin_noise);
-	texture_data_load(texture, TEXTURE_CHESS);
-	texture_data_load(texture, TEXTURE_WOOD);
-	texture_data_load(texture, TEXTURE_PLANET);
+	texture_data_load(texture, RT_SOURCE_TEXTURE_CHESS);
+	texture_data_load(texture, RT_SOURCE_TEXTURE_WOOD);
+	texture_data_load(texture, RT_SOURCE_TEXTURE_PLANET);
 }

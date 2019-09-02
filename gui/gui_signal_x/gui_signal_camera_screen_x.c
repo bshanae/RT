@@ -26,7 +26,7 @@ void				gui_signal_camera_screen_save
 
 	gui = (t_gui *)ptr;
 	static_get_time(time);
-	ft_strcpy(path, RT_GUI_SCREENSHOTS);
+	ft_strcpy(path, RT_SOURCE_GUI_SCREENSHOTS);
 	ft_strcat(path, time);
 	ft_strcat(path, ".jpeg");
 	if (gdk_pixbuf_save(gui->image->gdk_buffer, path, "jpeg", NULL, NULL))

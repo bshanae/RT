@@ -76,12 +76,16 @@ static RT_F 			object_explosion_sdf(global t_object *object, t_intersection *int
 	RT_F				displacement;
 
 	data = *(global t_object_explosion *)object->data;
-	displacement = (RT_F)-1. * brownian_motion(intersection->hit * (RT_F)2.) * data.displacement_value;
+	displacement = (RT_F)-1. * brownian_motion(intersection->hit * (RT_F)2.) * 1.7;
 	intersection->displacement = displacement;
 	return (length(data.position - intersection->hit) - data.radius - displacement);
 }
 
-static void 			object_explosion_interpolate_color(t_intersection *intersection)
+# define EXPLOSION_COLOR		(RT_F4){.02, .02, .02, 1.}
+# define EXPLOSION_EMISSION		(RT_F4){1., 0.6, 0., 1.}
+
+static void 			object_explosion_build_material(global t_object *object, t_intersection *intersection)
 {
-	intersection->material.emission = f4_pow(intersection->material.emission * RT_ABS(intersection->displacement), 5.);
+	intersection->material.color = EXPLOSION_COLOR;
+	intersection->material.emission = f4_pow((RT_F)1.3 * EXPLOSION_EMISSION * RT_ABS(intersection->displacement), 5.);
 }

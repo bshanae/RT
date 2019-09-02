@@ -71,7 +71,7 @@ static int			scene_intersect(
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
-			object_explosion_interpolate_color(intersection);
+			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);
