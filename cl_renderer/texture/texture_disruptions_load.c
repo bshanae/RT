@@ -35,8 +35,8 @@ void				texture_disruptions_load(t_texture *texture, t_disruption_type type)
 
 	texture->textures_number++;
 	pointer = texture_iter(texture);
-	texture->width[texture->textures_number] = DISRUPTION_WIDTH;
-	texture->height[texture->textures_number] = DISRUPTION_HEIGHT;
+	texture->width[texture->textures_number] = DISRUPTION_WIDTH - 1;
+	texture->height[texture->textures_number] = DISRUPTION_HEIGHT - 1;
 	texture->texture_length[texture->textures_number] = texture->width[texture->textures_number]
 														* texture->height[texture->textures_number];
 	texture_compute_disruption(texture, pointer, type);

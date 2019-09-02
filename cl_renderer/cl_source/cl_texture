@@ -1,15 +1,89 @@
 // cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		s_texture
+typedef struct			s_texture
 {
-	RT_F4			data[TEXTURE_DATA_SIZE];
-	int 			texture_length[TEXTURE_MAX_NUMBER];
-	int				width[TEXTURE_MAX_NUMBER];
-	int				height[TEXTURE_MAX_NUMBER];
-	int 			textures_number;
-}					t_texture;
+    RT_F4				data[TEXTURE_DATA_SIZE];
+    int					texture_length[TEXTURE_MAX_NUMBER];
+    int					width[TEXTURE_MAX_NUMBER];
+    int					height[TEXTURE_MAX_NUMBER];
+    int					textures_number;
+}						t_texture;
 
-static RT_F4		object_texture(global t_object *object, t_intersection *intersection)
+static RT_F4        get_color_from_texture(
+                    global t_texture *texture,
+                    int texture_id,
+                    RT_F *u, RT_F *v)
 {
-	return ((RT_F4){0., 1., 0., 1.});
+    global RT_F4    *pointer;
+    int             x;
+    int             y;
+
+    pointer = &texture->data[0];
+    for (int i = 0; i < texture_id; i++)
+        pointer += texture->texture_length[i];
+    x = floor(*u * (RT_F)texture->width[texture_id]);
+    y = floor(*v * (RT_F)texture->height[texture_id]);
+    return (pointer[y * texture->width[texture_id] + x]);
+}
+
+static void         sphere_texture(
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    t_object_sphere data;
+    RT_F4           normal;
+    RT_F            phi;
+    RT_F            theta;
+
+    data = *(global t_object_sphere* )object->data;
+    normal = normalize(intersection->hit - data.position);
+
+    phi = acos(dot((RT_F4){0., 0., 1., 0.}, normal));
+    theta = (acos(dot(normal, (RT_F4){0., 1., 0., 0.}) / RT_SIN(phi))) / (2 * RT_PI);
+
+    if (dot((RT_F4){1., 0., 0., 0.}, normal) > (RT_F)0.)
+       *u = theta;
+   else
+       *u = 1 - theta;
+    *v =  phi / RT_PI;
+}
+
+static void         plane_texture(
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    //t_object_plane    data;
+    //RT_F4            vector;
+    //RT_F4            u;
+    //RT_F4            v;
+    //RT_F2            uv;
+//
+    //data = *(global t_object_plane* )object->data;
+    //u = cross(intersection->normal, (RT_F4){0., 1., 0., 0.});
+    //if (length(u) == (RT_F)0.)
+    //    u = cross(intersection->normal, (RT_F4){0., 0., 1., 0.});
+   //v = cross(intersection->normal, u);
+    //vector = data.position - intersection->hit;
+   //uv.x = dot(u, vector);
+   //uv.y = dot(v, vector);
+    //return (get_color_from_texture(texture, object->texture_id, &uv));
+}
+
+static RT_F4        object_texture(
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection)
+{
+    RT_F            u;
+    RT_F            v;
+
+    if (object->type == object_type_sphere)
+        sphere_texture(texture, object, intersection, &u, &v);
+    else if (object->type == object_type_plane)
+        plane_texture(texture, object, intersection, &u, &v);
+    return (get_color_from_texture(texture, object->texture_id, &u, &v));
 }

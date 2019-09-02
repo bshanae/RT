@@ -1,5 +1,17 @@
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+static RT_F4		filter_stereoscopy(RT_F4 *radiance, int *filter_stereo)
+{
+	if (*filter_stereo == 1)
+	{
+		*filter_stereo = 2;
+		return ((RT_F4){0., radiance->y, radiance->z, 0.});
+	}
+	else
+		return ((RT_F4){radiance->x, 0., 0., 0.});
+
+}
+
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
 {
 	RT_F			dx;

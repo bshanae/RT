@@ -19,12 +19,14 @@
 
 # define RT_CL_PROGRAM_INIT			128
 # define RT_CL_ARGS_CAPACITY		16
+
 # define RT_CL_OBJECT_CAPACITY		64
 # define RT_CL_SCENE_CAPACITY		32
 
 # define RT_CL_ANTIALIASING			1
 # define RT_CL_CARTOON_EFFECT   	0
 # define RT_CL_FILTER_SEPIA        	0
+# define RT_CL_FILTER_STEREO       	0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		(RT_F)5.
 # define RT_CL_FOCAL_LENGTH			(RT_F)40.
@@ -32,11 +34,12 @@
 # define RT_CAMERA_MOVE_VALUE		(RT_F)1.
 # define RT_CAMERA_ROTATE_VALUE		(RT_F)0.025
 
-# define RT_CL_LIGHT_BASIC			0
+# define RT_CL_LIGHT_BASIC			1
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
 
-# define RT_CL_LIGHT_AREA			1
-# define RT_LIGHT_AREA_MULTIPLIER	(RT_F)5.
+# define RT_CL_LIGHT_AREA			0
+# define RT_LIGHT_AREA_MULTIPLIER	(RT_F)3.
+# define RT_LIGHT_AREA_FLOOR		(RT_F).12
 # define RT_LIGHT_AREA_CEILING		(RT_F).95
 
 # define RT_CL_ILLUMINATION			1

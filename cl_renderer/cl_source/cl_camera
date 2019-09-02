@@ -14,6 +14,7 @@ typedef struct 		s_camera
 	int 			filter_antialiasing;
 	int             filter_cartoon;
 	int             filter_sepia;
+	int				filter_stereo;
 	int 			focus;
 	RT_F			aperture_size;
 	RT_F			focal_length;

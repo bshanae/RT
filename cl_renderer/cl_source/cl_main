@@ -13,9 +13,11 @@ kernel void			cl_main(
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
+	int				filter_stereo;
 	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
 
+	filter_stereo = camera->filter_stereo;
 	sample_store_map(sample_store, sample_store_mapped, camera);
 
     global_id = get_global_id(0);
@@ -27,25 +29,30 @@ kernel void			cl_main(
 		return ;
 	}
 
-    if (camera->focus_request)
-    {
-    	if (!global_id)
-    		camera_auto_focus(camera, scene, settings);
-    	return ;
-    }
+	if (camera->focus_request)
+	{
+		if (!global_id)
+			camera_auto_focus(camera, scene, settings);
+		return ;
+	}
 
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
-	RT_F4           illumination_effect; // move to radiance_trace
+	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
+	radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
+	if (filter_stereo)
+	{
+		t_intersection	intersection_stereo;
 
-	illumination_effect = 0.;
-	if (settings->illumination)
-		illumination_effect = illumination(scene, camera, &intersection, settings);
-
-    radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
-	radiance_write(sample_store_mapped, global_id, radiance, settings);
-	image[global_id] = color_unpack(illumination_effect + radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
+		intersection_stereo.ray = camera_build_ray(camera, &screen, rng_state);
+		intersection_stereo.ray.origin.x += 1;
+        radiance = radiance_trace(scene, camera, &intersection_stereo, settings, rng_state);
+        radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
+        image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), 0);
+	}
+	else
+		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia);
 }

@@ -19,6 +19,8 @@ void				texture_data_load(t_texture *texture, const char *path)
 	stbi_data = stbi_load(path, &texture->width[texture->textures_number],
 			&texture->height[texture->textures_number],
 			&number_of_channels, TEXTURE_CHANNELS);
+	(texture->width[texture->textures_number])--;
+	(texture->height[texture->textures_number])--;
 	texture->texture_length[texture->textures_number] = texture->width[texture->textures_number]
 		* texture->height[texture->textures_number];
 	texture_fill_data(texture, stbi_data);

@@ -3,7 +3,6 @@
 
 //# define RT_OPEN_CL_DISABLED
 # define RT_OPEN_CL_GPU
-//# define RT_OPEN_CL_LOW
 
 # define RT_QUEUE_AUTO
 
