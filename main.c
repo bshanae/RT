@@ -96,7 +96,7 @@ int					main(int argc, char **argv)
 	gui->renderer = cl_renderer_new(gui->image);
 	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -1.;
-	gui->renderer->data.camera->position.z = 30.;
+	gui->renderer->data.camera->position.z = 76.;
 	cl_renderer_camera_save(gui->renderer);
 	RT_ASSERT(scene_is_valid_content(gui->renderer->data.scene))
     scene_update(gui->renderer->data.scene);

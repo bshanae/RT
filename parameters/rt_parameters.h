@@ -26,6 +26,7 @@
 # define RT_CL_ANTIALIASING			1
 # define RT_CL_CARTOON_EFFECT   	0
 # define RT_CL_FILTER_SEPIA        	0
+# define RT_CL_FILTER_STEREO       	0
 # define RT_CL_FOCUS				0
 # define RT_CL_APERTURE_SIZE		(RT_F)5.
 # define RT_CL_FOCAL_LENGTH			(RT_F)40.

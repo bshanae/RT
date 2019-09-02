@@ -1,7 +1,12 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Vladimir/workspace/21_ray_tracer
--- Found PkgConfig: /usr/local/bin/pkg-config (found version "0.29.2") 
+/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ashari/21_ray_tracer
 -- Checking for module 'gtk+-3.0'
---   Found gtk+-3.0, version 3.24.10
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+--   Package 'libffi', required by 'gobject-2.0', not found
+CMake Error at /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.14/Modules/FindPkgConfig.cmake:457 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.14/Modules/FindPkgConfig.cmake:642 (_pkg_check_modules_internal)
+  CMakeLists.txt:9 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/CMakeOutput.log".

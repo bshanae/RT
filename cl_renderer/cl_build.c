@@ -120,7 +120,7 @@ static t_color		color_filter_sepia(RT_F4 *source)
 	return((t_color){sepia_color, sepia_color, sepia_color, 255});
 }
 
-static t_color		color_unpack(RT_F4 source, int filter_sepia, int alpha)
+static t_color		color_unpack(RT_F4 source, int filter_sepia, int filter_stereoscopy)
 {
 	source = RT_POW(source, (RT_F).4);
 	source.x = RT_MIN(source.x, (RT_F)1.);
@@ -128,7 +128,11 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia, int alpha)
 	source.z = RT_MIN(source.z, (RT_F)1.);
 	if (filter_sepia)
 	    return(color_filter_sepia(&source));
-	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, alpha});
+	if (filter_stereoscopy == 1)
+		return ((t_color){255 * source.x, 0 * source.y, 0 * source.z, 255});
+	else if (filter_stereoscopy == 2)
+		return ((t_color){0 * source.x, 255 * source.y, 255 * source.z, 255});
+	return ((t_color){255 * source.x, 255 * source.y, 255 * source.z, 255});
 }
 
 // cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1854,6 +1858,47 @@ static void			camera_select(global t_camera *camera, global t_scene *scene, cons
     if (scene_intersect(scene, &intersection, settings))
     	camera->select_request_object = intersection.object_id;
 }
+ // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
+
+static RT_F4					illumination(
+ 								global t_scene *scene,
+ 								t_intersection *intersection,
+ 								constant t_cl_renderer_settings *settings)
+{
+	constant t_object_sphere	*sphere;
+	RT_F						x;
+	RT_F						y;
+	RT_F4						k;
+	RT_F4						illumination;
+	t_intersection              shadow;
+
+	illumination = 0.;
+	shadow = *intersection;
+
+	for (int i = 0; i < scene->objects_length; i++)
+	{
+		if (scene->objects[i].type != object_type_sphere)
+			continue ;
+		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
+        	continue ;
+
+		sphere = (constant t_object_sphere *)scene->objects[i].data;
+
+		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
+		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
+		y = length(sphere->position - intersection->ray.origin + k * x);
+		if (x < sphere->radius)
+			continue;
+
+		scene_intersect(scene, &shadow, settings);
+
+		if (shadow.ray.t < y * (RT_F)0.95)
+			continue;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+ 	}
+ 	return (illumination);
+ }
+
 // cl_radiance /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -1867,9 +1912,28 @@ static void					radiance_write(
 	if (!settings->motion_blur)
 	{
 		if (settings->sample_count == 1)
+		{
 			sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
+			if (mod == 1){
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].x = radiance.x * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].y = radiance.y * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].z = radiance.z * 0.;}
+                    else if (mod == 2){
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].x = radiance.x * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].y = radiance.y * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].z = radiance.z * 0.;}
+			}
 		else
+		{
 			sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
+			if (mod == 1){
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].x = radiance.x * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].y = radiance.y * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].z = radiance.z * 0.;}
+                    else if (mod == 2){
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].x = radiance.x * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].y = radiance.y * 0.;
+                    sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id].z = radiance.z * 0.;}}
 	}
 	else
 	{
@@ -1986,47 +2050,6 @@ static RT_F4				radiance_trace(
 	}
 	return (radiance);
 }
- // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
-
-static RT_F4					illumination(
- 								global t_scene *scene,
- 								t_intersection *intersection,
- 								constant t_cl_renderer_settings *settings)
-{
-	constant t_object_sphere	*sphere;
-	RT_F						x;
-	RT_F						y;
-	RT_F4						k;
-	RT_F4						illumination;
-	t_intersection              shadow;
-
-	illumination = 0.;
-	shadow = *intersection;
-
-	for (int i = 0; i < scene->objects_length; i++)
-	{
-		if (scene->objects[i].type != object_type_sphere)
-			continue ;
-		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
-        	continue ;
-
-		sphere = (constant t_object_sphere *)scene->objects[i].data;
-
-		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
-		y = length(sphere->position - intersection->ray.origin + k * x);
-		if (x < sphere->radius)
-			continue;
-
-		scene_intersect(scene, &shadow, settings);
-
-		if (shadow.ray.t < y * (RT_F)0.95)
-			continue;
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
- 	}
- 	return (illumination);
- }
-
 // cl_sample_store /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static void			sample_store_map(global RT_F4 *sample_store, global RT_F4 *sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
@@ -2049,6 +2072,7 @@ kernel void			cl_main(
 	int				global_id;
 	int2			screen;
 	t_intersection	intersection;
+	t_intersection	intersection_stereo;
 	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
 
@@ -2076,8 +2100,14 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
-	radiance_write(sample_store_mapped, global_id, radiance, settings);
-	image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 255);
+	radiance_write(sample_store_mapped, global_id, radiance, settings, 1);
+	image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 0);
+
+	intersection_stereo.ray = camera_build_ray(camera, &screen, rng_state);
+	intersection_stereo.ray.origin.x += 1;
+	radiance = radiance_trace(scene, camera, &intersection_stereo, settings, rng_state);
+	//radiance_write(sample_store_mapped, global_id, radiance, settings, 2);
+	//image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia, 0);
 }
 
 
