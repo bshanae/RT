@@ -6,11 +6,11 @@ typedef struct 				s_object_limited
 	int 					id_limit;
 }							t_object_limited;
 
-static int					limited_intersect(global t_object *object, t_intersection *intersection)
+static int					object_limited_intersect(global t_object *object, t_intersection *intersection)
 {
-	global t_object		*scene_begin;
+	global t_object			*scene_begin;
 	t_object_limited		limited;
-	global t_object		*main;
+	global t_object			*main;
 	t_object_plane			limit;
 
 	RT_F					dot_value[2];
@@ -23,11 +23,11 @@ static int					limited_intersect(global t_object *object, t_intersection *inters
 	limit = *(global t_object_plane *)scene_begin[limited.id_limit].data;
 
 	if (main->type == object_type_sphere)
-		sphere_intersect_t(main, intersection, main_t);
+		object_sphere_intersect_t(main, intersection, main_t);
 	else
 		return (0);
 
-	plane_intersect_t(&limit, intersection, &limit_t);
+	object_plane_intersect_t(&limit, intersection, &limit_t);
 
     dot_value[0] = dot(limit.position - intersection->ray.origin, limit.normal);
     dot_value[1] = dot(intersection->ray.direction, limit.normal);

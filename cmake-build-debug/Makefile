@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1634,6 +1634,33 @@ cl_renderer/object_x/object_cylinder.s: cl_renderer/object_x/object_cylinder.c.s
 cl_renderer/object_x/object_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.s
 .PHONY : cl_renderer/object_x/object_cylinder.c.s
+
+cl_renderer/object_x/object_explosion.o: cl_renderer/object_x/object_explosion.c.o
+
+.PHONY : cl_renderer/object_x/object_explosion.o
+
+# target to build an object file
+cl_renderer/object_x/object_explosion.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.o
+.PHONY : cl_renderer/object_x/object_explosion.c.o
+
+cl_renderer/object_x/object_explosion.i: cl_renderer/object_x/object_explosion.c.i
+
+.PHONY : cl_renderer/object_x/object_explosion.i
+
+# target to preprocess a source file
+cl_renderer/object_x/object_explosion.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.i
+.PHONY : cl_renderer/object_x/object_explosion.c.i
+
+cl_renderer/object_x/object_explosion.s: cl_renderer/object_x/object_explosion.c.s
+
+.PHONY : cl_renderer/object_x/object_explosion.s
+
+# target to generate assembly for a file
+cl_renderer/object_x/object_explosion.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.s
+.PHONY : cl_renderer/object_x/object_explosion.c.s
 
 cl_renderer/object_x/object_julia.o: cl_renderer/object_x/object_julia.c.o
 
@@ -5970,6 +5997,9 @@ help:
 	@echo "... cl_renderer/object_x/object_cylinder.o"
 	@echo "... cl_renderer/object_x/object_cylinder.i"
 	@echo "... cl_renderer/object_x/object_cylinder.s"
+	@echo "... cl_renderer/object_x/object_explosion.o"
+	@echo "... cl_renderer/object_x/object_explosion.i"
+	@echo "... cl_renderer/object_x/object_explosion.s"
 	@echo "... cl_renderer/object_x/object_julia.o"
 	@echo "... cl_renderer/object_x/object_julia.i"
 	@echo "... cl_renderer/object_x/object_julia.s"

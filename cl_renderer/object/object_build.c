@@ -45,9 +45,11 @@ void				object_build(
 		object_mandelbulb_build(space, &args);
 	else if (type == object_type_julia)
 		object_julia_build(space, &args);
-	else if (type == object_type_csg)
-		object_csg_build(space, &args);
+	else if (type == object_type_explosion)
+		object_explosion_build(space, &args);
 	else if (type == object_type_perforated_cube)
 		object_perforated_cube_build(space, &args);
+	else if (type == object_type_csg)
+		object_csg_build(space, &args);
 	va_end(args);
 }

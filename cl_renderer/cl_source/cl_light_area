@@ -30,7 +30,7 @@ static RT_F4		light_area(
 		if (f4_max_component(scene->objects[i].material.emission) == 0.f)
 			continue ;
 
-		light_position = sphere_random(scene->objects + i, rng_state);
+		light_position = object_sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
 		intersection_light.ray.origin = intersection_object->hit;

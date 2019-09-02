@@ -12,16 +12,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/vladimir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/vladimir.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera_new.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_camera" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_camera" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_color" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_color" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_filter" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_filter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_create_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_f4" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_f4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_intersection" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_intersection_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_box" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_box" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_julia" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_julia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_limited" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_limited" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_mandelbulb" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_mandelbulb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_moebius" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_moebius" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_normal" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_normal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_paraboloid" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_paraboloid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_perforated_cube" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_perforated_cube" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_plane" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_plane" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_sphere" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_torus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/color/color_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/color/color_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/material/material_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/material/material_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_definition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -120,6 +141,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" afterDir="false" />
@@ -251,12 +273,13 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters/rt_control.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_control.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_cl_compilation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -11,7 +11,7 @@ typedef struct 		s_object_cone
 	RT_F          	tangent;
 }					t_object_cone;
 
-static RT_F         cone_cap_intersect(global t_object *object, t_intersection *intersection)
+static RT_F         object_cone_cap_intersect(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
     RT_F            t;
@@ -30,7 +30,7 @@ static RT_F         cone_cap_intersect(global t_object *object, t_intersection *
     return (t);
 }
 
-static int			cone_intersect(global t_object *object, t_intersection *intersection)
+static int			object_cone_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_cone	data;
     RT_F4           temp[3];
@@ -61,7 +61,7 @@ static int			cone_intersect(global t_object *object, t_intersection *intersectio
     angle[1] = dot((temp[1] - data.bottom), data.axis);
     is_infinity = (length(temp[2]) > length(data.top - data.bottom))
                  || (dot(temp[2], data.axis) > 0.);
-    t[1] = cone_cap_intersect(object, intersection);
+    t[1] = object_cone_cap_intersect(object, intersection);
     if (t[1] != INFINITY && is_infinity)
 	    t[0] = t[1];
     else if (!is_infinity)
@@ -89,7 +89,7 @@ static RT_F4		calculate_cone_normal(global t_object *object, t_intersection *int
     return (normalize(result));
 }
 
-static RT_F4		cone_normal(global t_object *object, t_intersection *intersection)
+static RT_F4		object_cone_normal(global t_object *object, t_intersection *intersection)
 {
     if (!intersection->cups_flag)
         return(calculate_cone_normal(object, intersection));

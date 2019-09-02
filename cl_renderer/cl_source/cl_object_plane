@@ -15,7 +15,7 @@ typedef struct			s_object_plane
 	t_plane_limiting	is_limiting;
 }						t_object_plane;
 
-static int				plane_intersect(global t_object *object, t_intersection *intersection)
+static int				object_plane_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_plane		data;
 	RT_F4				temp[2];
@@ -33,20 +33,12 @@ static int				plane_intersect(global t_object *object, t_intersection *intersect
 	return (1);
 }
 
-static RT_F4			plane_normal(global t_object *object, t_intersection *intersection)
+static RT_F4			object_plane_normal(global t_object *object, t_intersection *intersection)
 {
 	return (((global t_object_plane *)object->data)->normal);
 }
 
-static RT_F 			plane_sdf(global t_object *object, RT_F4 point)
-{
-	t_object_plane		data;
-
-    data = *(global t_object_plane *)object->data;
-	return (dot(data.normal, point - data.position));
-}
-
-static void				plane_intersect_t(t_object_plane *plane, t_intersection *intersection, RT_F *t)
+static void				object_plane_intersect_t(t_object_plane *plane, t_intersection *intersection, RT_F *t)
 {
 	RT_F4				temp[2];
 	RT_F				value[3];
@@ -62,4 +54,12 @@ static void				plane_intersect_t(t_object_plane *plane, t_intersection *intersec
 		*t = RT_INFINITY;
 	else
 		*t = value[1];
+}
+
+static RT_F 			object_plane_sdf(global t_object *object, t_intersection *intersection)
+{
+	t_object_plane		data;
+
+    data = *(global t_object_plane *)object->data;
+	return (dot(data.normal, intersection->hit - data.position));
 }

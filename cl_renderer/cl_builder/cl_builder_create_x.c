@@ -17,7 +17,7 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_RAY);
 	cl_program_concat(builder->program, CL_SOURCE_COLOR);
 	cl_program_concat(builder->program, CL_SOURCE_MATERIAL);
-	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION);
+	cl_program_concat(builder->program, CL_SOURCE_INTERSECTION_X);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_SPHERE);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PLANE);
@@ -30,12 +30,13 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_TORUS);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_JULIA);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_MANDELBULB);
-	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CSG);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_PERFORATED_CUBE);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_CSG);
+	cl_program_concat(builder->program, CL_SOURCE_OBJECT_EXPLOSION);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_X);
 	cl_program_concat(builder->program, CL_SOURCE_TEXTURE);
 	cl_program_concat(builder->program, CL_SOURCE_OBJECT_NORMAL);
-	cl_program_concat(builder->program, CL_SOURCE_SCENE);
+	cl_program_concat(builder->program, CL_SOURCE_SCENE_X);
 	cl_program_concat(builder->program, CL_SOURCE_SAMPLE_X);
 	cl_program_concat(builder->program, CL_SOURCE_LIGHT_BASIC);
 	cl_program_concat(builder->program, CL_SOURCE_LIGHT_AREA);

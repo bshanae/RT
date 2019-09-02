@@ -168,6 +168,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o"
   "CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"

@@ -8,7 +8,7 @@ typedef struct					s_object_sphere
 	RT_F						radius;
 }								t_object_sphere;
 
-static int     					sphere_intersect(global t_object *object, t_intersection *intersection)
+static int     					object_sphere_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
@@ -32,12 +32,12 @@ static int     					sphere_intersect(global t_object *object, t_intersection *in
 	return (1);
 }
 
-static RT_F4					sphere_normal(global t_object *object, t_intersection *intersection)
+static RT_F4					object_sphere_normal(global t_object *object, t_intersection *intersection)
 {
 	return (normalize(intersection->hit - ((global t_object_sphere *)object->data)->position));
 }
 
-static RT_F4					sphere_random(global t_object *object, global ulong *rng_state)
+static RT_F4					object_sphere_random(global t_object *object, global ulong *rng_state)
 {
 	t_object_sphere				data;
 	RT_F 						theta;
@@ -54,15 +54,8 @@ static RT_F4					sphere_random(global t_object *object, global ulong *rng_state)
 	return (random);
 }
 
-static RT_F 					sphere_sdf(global t_object *object, RT_F4 point)
-{
-	t_object_sphere				data;
 
-    data = *(global t_object_sphere *)object->data;
-	return (length(data.position - point) - data.radius);
-}
-
-static RT_F						sphere_center_shift(global t_object *object)
+static RT_F						object_sphere_center_shift(global t_object *object)
 {
 	t_object_sphere				data;
 
@@ -70,7 +63,7 @@ static RT_F						sphere_center_shift(global t_object *object)
     return (data.radius);
 }
 
-static void     				sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+static void     				object_sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
 {
 	t_object_sphere				data;
 	RT_F						k[3];
@@ -97,4 +90,12 @@ static void     				sphere_intersect_t(global t_object *object, t_intersection *
     	t[1] = RT_INFINITY;
     	return ;
     }
+}
+
+static RT_F 					object_sphere_sdf(global t_object *object, t_intersection *intersection)
+{
+	t_object_sphere				data;
+
+    data = *(global t_object_sphere *)object->data;
+	return (length(data.position - intersection->hit) - data.radius);
 }

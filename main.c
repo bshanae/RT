@@ -78,13 +78,13 @@ void				scene_test_b(t_scene *scene)
 
 void				scene_test_c(t_scene *scene)
 {
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_LIGHT, (RT_F4_API){10., 0., -10.}, 3.);
-	scene_give_name(scene, "Light", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., -70.},
-				 (RT_F4_API){0., 0., 1.}, plane_limiting_yes);
-	scene_give_name(scene, "Front Plane", scene_name_last);
+	object_build(scene_get_space(scene), object_type_light_ambient,
+		MATERIAL_LIGHT_AMBIENT);
+	object_build(scene_get_space(scene), object_type_light_point,
+		MATERIAL_LIGHT_BASIC, (RT_F4_API){10., 10., 0.});
+	object_build(scene_get_space(scene), object_type_explosion,
+		MATERIAL_EXPLOSION, (RT_F4_API){0., 0., 0.}, 2., 1.2);
+	scene_give_name(scene, "Explosion", scene_name_last);
 }
 
 int					main(int argc, char **argv)
@@ -94,9 +94,8 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_a(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.x = -1.;
-	gui->renderer->data.camera->position.z = 76.;
+	scene_test_c(gui->renderer->data.scene);
+	gui->renderer->data.camera->position.z = 10;
 	cl_renderer_camera_save(gui->renderer);
 	RT_ASSERT(scene_is_valid_content(gui->renderer->data.scene))
     scene_update(gui->renderer->data.scene);

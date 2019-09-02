@@ -9,15 +9,16 @@ typedef struct		s_object_julia
 	RT_F4			value;
 }					t_object_julia;
 
-static RT_F			julia_sdf(global t_object *object, RT_F4 point)
+static RT_F			object_julia_sdf(global t_object *object, t_intersection *intersection)
 {
 	t_object_julia	data;
 	RT_F			md;
 	RT_F			mz;
+	RT_F4			point;
 
 	data = *(global t_object_julia *)object->data;
 	md = 1.;
-	point = data.position - point;
+	point = data.position - intersection->hit;
 	mz = dot(point, point);
 
 	for (int iter = 0; iter < data.iterations; iter++)

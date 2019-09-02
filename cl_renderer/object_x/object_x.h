@@ -101,16 +101,24 @@ typedef struct			s_object_julia
 	RT_F4_API			value;
 }						t_object_julia;
 
+typedef struct			s_object_perforated_cube
+{
+	RT_F4_API			position;
+	int					iterations;
+}						t_object_perforated_cube;
+
+
+typedef struct			s_object_explosion
+{
+	RT_F4_API			position;
+	RT_F				radius;
+	RT_F				displacement_value;
+}						t_object_explosion;
+
 typedef struct 			s_object_csg
 {
 	int     			id_positive;
 	int     			id_negative;
 }						t_object_csg;
-
-typedef struct		s_object_perforated_cube
-{
-	RT_F4_API		position;
-	int				iterations;
-}					t_object_perforated_cube;
 
 #endif

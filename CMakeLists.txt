@@ -368,7 +368,7 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_light_x.c
 	./cl_renderer/object_x/object_mandelbulb.c
 	./cl_renderer/object_x/object_limited.c
-	./cl_renderer/object_x/object_perforated_cube.c)
+	./cl_renderer/object_x/object_perforated_cube.c cl_renderer/object_x/object_explosion.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c

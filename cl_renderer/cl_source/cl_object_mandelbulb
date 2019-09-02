@@ -9,7 +9,7 @@ typedef struct				s_object_mandelbulb
 	RT_F					power;
 }							t_object_mandelbulb;
 
-static RT_F					mandelbulb_sdf(global t_object *object, RT_F4 point)
+static RT_F					object_mandelbulb_sdf(global t_object *object, t_intersection *intersection)
 {
 	t_object_mandelbulb		data;
 	RT_F4					z;
@@ -18,9 +18,10 @@ static RT_F					mandelbulb_sdf(global t_object *object, RT_F4 point)
 	RT_F					r;
 	RT_F					phi;
 	RT_F					theta;
+	RT_F4					point;
 
 	data = *(global t_object_mandelbulb *)object->data;
-	point = data.position - point;
+	point = data.position - intersection->hit;
 	r = 0.;
     dr = 1.;
 	z = point;
