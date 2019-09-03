@@ -19,6 +19,8 @@ typedef struct 		s_camera
 	RT_F4_API		axis_y;
 	RT_F4_API		axis_z;
 	RT_F4_API		forward;
+	RT_F4_API		up;
+	RT_F4_API		right;
 	RT_F4_API		forward_backup;
 	int				width;
 	int				height;

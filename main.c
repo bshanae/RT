@@ -84,7 +84,7 @@ void                scene_test_texture(t_scene *scene)
 				 MATERIAL_LIGHT_BASIC, (RT_F4_API){0., 15., 10.});
 	object_build(scene_get_space(scene), object_type_sphere,
 				 MATERIAL_RED, (RT_F4_API){0., 0., 0.}, 4.);
-	scene_texture_set(scene, 0, scene_texture_last);
+	scene_texture_set(scene, 1, scene_texture_last);
 }
 
 int                    main(int argc, char **argv)

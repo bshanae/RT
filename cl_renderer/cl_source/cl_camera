@@ -1,28 +1,28 @@
 // cl_camera ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		s_camera
-{
-	RT_F4			position;
-	RT_F4			rotation;
-	RT_F4			axis_x;
-	RT_F4			axis_y;
-	RT_F4			axis_z;
-	RT_F4			forward;
-	RT_F4			forward_backup;
-	int				width;
-	int				height;
-	int 			filter_antialiasing;
-	int             filter_cartoon;
-	int             filter_sepia;
-	int				filter_stereo;
-	int 			focus;
-	RT_F			aperture_size;
-	RT_F			focal_length;
-	int 			focus_request;
-	int 			select_request;
-	int 			select_request_object;
-	RT_F2			request_value;
-}					t_camera;
+//typedef struct 		s_camera
+//{
+//	RT_F4			position;
+//	RT_F4			rotation;
+//	RT_F4			axis_x;
+//	RT_F4			axis_y;
+//	RT_F4			axis_z;
+//	RT_F4			forward;
+//	RT_F4			forward_backup;
+//	int				width;
+//	int				height;
+//	int 			filter_antialiasing;
+//	int             filter_cartoon;
+//	int             filter_sepia;
+//	int				filter_stereo;
+//	int 			focus;
+//	RT_F			aperture_size;
+//	RT_F			focal_length;
+//	int 			focus_request;
+//	int 			select_request;
+//	int 			select_request_object;
+//	RT_F2			request_value;
+//}					t_camera;
 
 static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rng_state)
 {
@@ -44,9 +44,9 @@ static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
     RT_F4			right;
 
 	result.origin = camera->position;
-    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
-    right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
-    result.direction = normalize(up + right + camera->forward);
+    camera->up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
+    camera->right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
+    result.direction = normalize(camera->up + camera->right + camera->forward);
     return (result);
 }
 
@@ -74,7 +74,7 @@ static void			camera_auto_focus(global t_camera *camera, global t_scene *scene, 
     t_intersection	intersection;
 
     intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
-    if (scene_intersect(scene, &intersection, settings))
+    if (scene_intersect(scene, camera, &intersection, settings))
     	camera->focal_length = intersection.ray.t + object_center_shift(scene->objects + intersection.object_id);
 }
 
@@ -85,6 +85,6 @@ static void			camera_select(global t_camera *camera, global t_scene *scene, cons
 	camera->select_request_object = -1;
     intersection.ray = camera_build_ray_raw(camera, camera->request_value.x, camera->request_value.y);
 
-    if (scene_intersect(scene, &intersection, settings))
+    if (scene_intersect(scene, camera, &intersection, settings))
     	camera->select_request_object = intersection.object_id;
 }

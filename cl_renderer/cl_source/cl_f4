@@ -2,6 +2,19 @@
 
 #include "rt_float.h"
 
+typedef enum 		e_f4_rotation_axis
+{
+	rt_rotation_x,
+	rt_rotation_y,
+	rt_rotation_z
+}					t_f4_rotation_axis;
+
+typedef enum 		e_f4_rotation_direction
+{
+	rt_rotation_positive,
+	rt_rotation_negative
+}					t_f4_rotation_direction;
+
 static RT_F			f4_min_component(RT_F4 vector)
 {
 	return (fmin(vector.x, fmin(vector.y, vector.z)));
@@ -32,4 +45,37 @@ static RT_F4		f4_mod(const RT_F4 *vector, RT_F value)
 	result.y = RT_MOD(vector->y, value);
 	result.z = RT_MOD(vector->z, value);
 	return (result);
+}
+
+static void			f4_rotate_x(RT_F4 *v, float theta)
+{
+	RT_F4			copy;
+
+	copy = *v;
+	v->y = copy.y * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v->z = -1 * copy.y * RT_SIN(theta) + copy.z * RT_COS(theta);
+}
+
+static void			f4_rotate_y(RT_F4 *v, float theta)
+{
+	RT_F4			copy;
+
+	copy = *v;
+	v->x = copy.x * RT_COS(theta) + copy.z * RT_SIN(theta);
+	v->z = -1 * copy.x * RT_SIN(theta) + copy.z * RT_COS(theta);
+}
+
+RT_F4 			f4_rotate(
+					RT_F4 v,
+					t_f4_rotation_axis axis,
+					t_f4_rotation_direction direction,
+					RT_F theta)
+{
+	if (direction == rt_rotation_negative)
+		theta *= -1;
+	if (axis == rt_rotation_x)
+		f4_rotate_x(&v, theta);
+	else if (axis == rt_rotation_y)
+		f4_rotate_y(&v, theta);
+	return (v);
 }
