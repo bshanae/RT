@@ -28,6 +28,7 @@ static RT_F4		get_color_from_texture(
 
 static RT_F4		sphere_texture(
 					global t_texture *texture,
+					global t_camera *camera,
 					global t_object *object,
 					t_intersection *intersection)
 {
@@ -66,11 +67,12 @@ static RT_F4		plane_texture(
 
 static RT_F4		object_texture(
 					global t_texture *texture,
+					global t_camera *camera,
 					global t_object *object,
 					t_intersection *intersection)
 {
 	if (object->type == object_type_sphere)
-		return (sphere_texture(texture, object, intersection));
+		return (sphere_texture(texture, camera, object, intersection));
 	else if (object->type == object_type_plane)
 		return (plane_texture(texture, object, intersection));
 	return ((RT_F4){0., 1., 0., 1.});

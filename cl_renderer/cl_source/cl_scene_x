@@ -56,6 +56,7 @@ static int			scene_intersect_rm(
 
 static int			scene_intersect(
 					global t_scene *scene,
+					global t_camera *camera,
 					t_intersection *intersection,
 					constant t_cl_renderer_settings *settings)
 {
@@ -67,7 +68,7 @@ static int			scene_intersect(
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (scene->objects[intersection->object_id].texture_id > -1)
-			intersection->material.color = object_texture(&scene->texture, scene->objects + intersection->object_id, intersection);
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].type == object_type_explosion)

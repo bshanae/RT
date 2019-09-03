@@ -87,9 +87,9 @@ static RT_F4				radiance_trace(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		radiance += illumination(scene, intersection, settings);
+		radiance += illumination(scene, camera, intersection, settings);
 
-		if (!scene_intersect(scene, intersection, settings))
+		if (!scene_intersect(scene, camera, intersection, settings))
 			break ;
 
 		if (scene->objects[intersection->object_id].is_selected)
@@ -102,13 +102,13 @@ static RT_F4				radiance_trace(
 
 		if (settings->light_basic)
 		{
-			light = light_basic(scene, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, camera, intersection, settings, camera->filter_cartoon);
             radiance += light * mask;
 		}
 
 		if (settings->light_area)
 		{
-			light = light_area(scene, intersection, settings, rng_state);
+			light = light_area(scene, camera, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
 		}
 

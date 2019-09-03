@@ -37,6 +37,7 @@
 # define RT_SOURCE_CL_RADIANCE_X				"cl_radiance_x"
 # define RT_SOURCE_CL_FILTER					"cl_filter"
 # define RT_SOURCE_CL_CAMERA					"cl_camera"
+# define RT_SOURCE_CL_CAMERA_DEFINITION			"cl_camera_definition"
 # define RT_SOURCE_CL_ILLUMINATION				"cl_illumination"
 # define RT_SOURCE_CL_SAMPLE_STORE				"cl_sample_store"
 # define RT_SOURCE_CL_MAIN						"cl_main"
