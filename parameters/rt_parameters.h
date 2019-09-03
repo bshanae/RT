@@ -46,7 +46,7 @@
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
 
 # define RT_CL_DEPTH				1
-# define RT_CL_SAMPLES				25
+# define RT_CL_SAMPLES				1
 
 # define RT_CL_MOTION_BLUR			0
 # define RT_CL_MOTION_BLUR_ALPHA	(RT_F)0.7

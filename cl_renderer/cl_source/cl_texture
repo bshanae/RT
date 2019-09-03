@@ -75,15 +75,10 @@ static void         sphere_texture(
     RT_F            theta;
 
     data = *(global t_object_sphere* )object->data;
-    // RT_F4	hit = intersection->hit;
-    // const RT_F4 sphere_rotation = (float4)(M_PI / 2, 0.f, 0.f, 0.f);
-    // hit = hit - camera->forward;
     normal = normalize(intersection->hit - data.position);
 
 	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
     normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
-    // normal = normalize(normal - sphere_normal);
-    // normal = normalize(sphere_normal - normalize(camera->forward) - normal);
 
     phi = acos(dot(camera->axis_z, normal));
     theta = (acos(dot(normal, camera->axis_y) / RT_SIN(phi))) / (2 * RT_PI);

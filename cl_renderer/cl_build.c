@@ -47,7 +47,7 @@ static RT_F4		f4_mod(const RT_F4 *vector, RT_F value)
 	return (result);
 }
 
-static void			f4_rotate_x(RT_F4_API *v, float theta)
+static void			f4_rotate_x(RT_F4 *v, float theta)
 {
 	RT_F4			copy;
 
@@ -56,7 +56,7 @@ static void			f4_rotate_x(RT_F4_API *v, float theta)
 	v->z = -1 * copy.y * RT_SIN(theta) + copy.z * RT_COS(theta);
 }
 
-static void			f4_rotate_y(RT_F4_API *v, float theta)
+static void			f4_rotate_y(RT_F4 *v, float theta)
 {
 	RT_F4			copy;
 
@@ -65,7 +65,7 @@ static void			f4_rotate_y(RT_F4_API *v, float theta)
 	v->z = -1 * copy.x * RT_SIN(theta) + copy.z * RT_COS(theta);
 }
 
-RT_F4_API 			f4_rotate(
+RT_F4 			f4_rotate(
 					RT_F4 v,
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction,
@@ -1395,10 +1395,14 @@ static void         sphere_texture(
 
     data = *(global t_object_sphere* )object->data;
     // RT_F4	hit = intersection->hit;
-    const RT_F4 sphere_normal = (float4)(0.f, 1.f, 0.f, 0.f);
+    // const RT_F4 sphere_rotation = (float4)(M_PI / 2, 0.f, 0.f, 0.f);
     // hit = hit - camera->forward;
     normal = normalize(intersection->hit - data.position);
-    normal = normalize(sphere_normal - normalize(camera->forward) - normal);
+
+	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
+    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
+    // normal = normalize(normal - sphere_normal);
+    // normal = normalize(sphere_normal - normalize(camera->forward) - normal);
 
     phi = acos(dot(camera->axis_z, normal));
     theta = (acos(dot(normal, camera->axis_y) / RT_SIN(phi))) / (2 * RT_PI);
@@ -1525,6 +1529,7 @@ static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersect
 	int				result;
 
     result = 0;
+    intersection.ray.origin += intersection->ray.direction * 10 * RT_EPSILON;
     for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
 

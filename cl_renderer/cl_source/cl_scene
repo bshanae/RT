@@ -16,6 +16,7 @@ static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersect
 	int				result;
 
     result = 0;
+    intersection->ray.origin += intersection->ray.direction * 10 * RT_EPSILON;
     for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
 
