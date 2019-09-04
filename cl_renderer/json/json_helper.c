@@ -96,6 +96,27 @@ char	*get_string_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
+int		*get_bool_in_object(char *json, jsmntok_t *object, char *target)
+{
+	jsmntok_t	*pos;
+	int			*res;
+
+	pos = find_by_string(json, object, target);
+	if (!pos)
+		return (NULL);
+	if (pos->type == JSMN_PRIMITIVE && pos->size == 0)
+	{
+		if (json[pos.start] != 't' || json[pos.start] != 'f')
+			return (NULL);
+		res = malloc(sizeof(int));
+		if (!res)
+			return (NULL);
+		*res = (json[pos.start] == 't' ? 1 : 0);
+		return (res);
+	}
+	return (NULL);
+}
+
 float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
@@ -116,6 +137,20 @@ float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 		return (out_f);
 	}
 	return (NULL);
+}
+
+int		*get_int_in_onject(char *json, jsmntok_t *object, char *target)
+{
+	int		*res;
+	float	*val;
+
+	val = get_float_in_object(json, object, target);
+	res = malloc(sizeof(int));
+	if (!val || !res)
+		return (NULL);
+	*res = (int)*val;
+	free(val);
+	return (res);
 }
 
 t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)

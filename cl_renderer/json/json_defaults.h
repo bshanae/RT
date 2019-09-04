@@ -6,8 +6,15 @@
 # define GLOBAL_MATERIAL MATERIAL_WHITE
 # define GLOBAL_POSITION (t_vector3){0., 0., 0.}
 
+# define CAMERA_AXIS_X (RT_F4_API){1., 0., 0.}
+# define CAMERA_AXIS_Y (RT_F4_API){0., 1., 0.}
+# define CAMERA_AXIS_Z (RT_F4_API){0., 0., 1.}
+# define CAMERA_AXIS_FORWARD (RT_F4_API){1., 0., 0.}
+# define CAMERA_AXIS_FORWARDBACKUP (RT_F4_API){1., 0., 0.}
 # define CAMERA_POS (RT_F4_API){0., 0., -30.}
 # define CAMERA_ROT (RT_F4_API){0., 0., 0.}
+# define CAMERA_APERTURESIZE 5.f
+# define CAMERA_FOCALLENGTH 40.f
 
 # define AMBIENT_NAME "Ambient light"
 # define AMBIENT_MATERIAL GLOBAL_MATERIAL
@@ -29,6 +36,7 @@
 # define PLANE_MATERIAL GLOBAL_MATERIAL
 # define PLANE_POSITION GLOBAL_POSITION
 # define PLANE_NORMAL (t_vector3){0., 1., 0.}
+# define PLANE_LIMITING 0
 
 # define CONE_NAME "Cone"
 # define CONE_MATERIAL GLOBAL_MATERIAL
