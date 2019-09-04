@@ -327,7 +327,7 @@ set(SOURCE_TEXTURE
 	./cl_renderer/texture/texture_disruptions_load.c
 	./cl_renderer/texture/texture_fill_data.c
 	./cl_renderer/texture/texture_iter.c
-	./cl_renderer/texture/texture_set.c)
+	)
 
 set(SOURCE_DISRUPTION_X
 	./cl_renderer/disruption_x/disruption_checkerboard.c
@@ -378,9 +378,8 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
-	./cl_renderer/scene/scene_give_name.c
 	./cl_renderer/scene/scene_select.c
-	./cl_renderer/scene/scene_is_valid_x.c)
+	./cl_renderer/scene/scene_is_valid_x.c cl_renderer/scene/scene_edit_param.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

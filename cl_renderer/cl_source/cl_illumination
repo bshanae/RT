@@ -2,6 +2,7 @@
 
 static RT_F4					illumination(
  								global t_scene *scene,
+ 								global t_camera *camera,
  								t_intersection *intersection,
  								constant t_cl_renderer_settings *settings)
 {
@@ -30,7 +31,7 @@ static RT_F4					illumination(
 			continue;
 
 		shadow = *intersection;
-		scene_intersect(scene, &shadow, settings);
+		scene_intersect(scene, camera, &shadow, settings);
 
 		if (shadow.ray.t < y)
 			continue;

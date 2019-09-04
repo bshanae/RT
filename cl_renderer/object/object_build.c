@@ -3,20 +3,19 @@
 void				object_build(
 					t_object *space,
 					t_object_type type,
-					t_material material,
 					...)
 {
 	va_list		args;
 
 	if (!space)
 		return ;
-	space->material = material;
+	space->material = MATERIAL_WHITE;
 	space->name[0] = '\0';
 	space->texture_id = -1;
 	space->is_visible = 1;
 	space->is_selected = 0;
 	space->is_limited = 0;
-	va_start(args, material);
+	va_start(args, type);
 	if (type == object_type_light_ambient)
 		object_light_ambient_build(space, &args);
 	else if (type == object_type_light_point)

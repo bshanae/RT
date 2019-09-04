@@ -408,10 +408,10 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_edit_param.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_give_name.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_is_valid_x.c">
@@ -445,9 +445,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/texture/texture_iter.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/texture/texture_set.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">

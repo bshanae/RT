@@ -34,6 +34,7 @@ void				cl_builder_create_program_a(t_cl_builder *builder)
 	cl_program_concat(builder->program, RT_SOURCE_CL_OBJECT_CSG);
 	cl_program_concat(builder->program, RT_SOURCE_CL_OBJECT_EXPLOSION);
 	cl_program_concat(builder->program, RT_SOURCE_CL_OBJECT_X);
+	cl_program_concat(builder->program, RT_SOURCE_CL_CAMERA_DEFINITION);
 	cl_program_concat(builder->program, RT_SOURCE_CL_TEXTURE);
 	cl_program_concat(builder->program, RT_SOURCE_CL_OBJECT_NORMAL);
 	cl_program_concat(builder->program, RT_SOURCE_CL_SCENE_X);

@@ -2013,6 +2013,33 @@ cl_renderer/scene/scene_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s
 .PHONY : cl_renderer/scene/scene_delete.c.s
 
+cl_renderer/scene/scene_edit_param.o: cl_renderer/scene/scene_edit_param.c.o
+
+.PHONY : cl_renderer/scene/scene_edit_param.o
+
+# target to build an object file
+cl_renderer/scene/scene_edit_param.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o
+.PHONY : cl_renderer/scene/scene_edit_param.c.o
+
+cl_renderer/scene/scene_edit_param.i: cl_renderer/scene/scene_edit_param.c.i
+
+.PHONY : cl_renderer/scene/scene_edit_param.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_edit_param.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.i
+.PHONY : cl_renderer/scene/scene_edit_param.c.i
+
+cl_renderer/scene/scene_edit_param.s: cl_renderer/scene/scene_edit_param.c.s
+
+.PHONY : cl_renderer/scene/scene_edit_param.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_edit_param.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.s
+.PHONY : cl_renderer/scene/scene_edit_param.c.s
+
 cl_renderer/scene/scene_get_space.o: cl_renderer/scene/scene_get_space.c.o
 
 .PHONY : cl_renderer/scene/scene_get_space.o
@@ -2039,33 +2066,6 @@ cl_renderer/scene/scene_get_space.s: cl_renderer/scene/scene_get_space.c.s
 cl_renderer/scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.s
 .PHONY : cl_renderer/scene/scene_get_space.c.s
-
-cl_renderer/scene/scene_give_name.o: cl_renderer/scene/scene_give_name.c.o
-
-.PHONY : cl_renderer/scene/scene_give_name.o
-
-# target to build an object file
-cl_renderer/scene/scene_give_name.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o
-.PHONY : cl_renderer/scene/scene_give_name.c.o
-
-cl_renderer/scene/scene_give_name.i: cl_renderer/scene/scene_give_name.c.i
-
-.PHONY : cl_renderer/scene/scene_give_name.i
-
-# target to preprocess a source file
-cl_renderer/scene/scene_give_name.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.i
-.PHONY : cl_renderer/scene/scene_give_name.c.i
-
-cl_renderer/scene/scene_give_name.s: cl_renderer/scene/scene_give_name.c.s
-
-.PHONY : cl_renderer/scene/scene_give_name.s
-
-# target to generate assembly for a file
-cl_renderer/scene/scene_give_name.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
-.PHONY : cl_renderer/scene/scene_give_name.c.s
 
 cl_renderer/scene/scene_is_valid_x.o: cl_renderer/scene/scene_is_valid_x.c.o
 
@@ -2363,33 +2363,6 @@ cl_renderer/texture/texture_iter.s: cl_renderer/texture/texture_iter.c.s
 cl_renderer/texture/texture_iter.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
 .PHONY : cl_renderer/texture/texture_iter.c.s
-
-cl_renderer/texture/texture_set.o: cl_renderer/texture/texture_set.c.o
-
-.PHONY : cl_renderer/texture/texture_set.o
-
-# target to build an object file
-cl_renderer/texture/texture_set.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o
-.PHONY : cl_renderer/texture/texture_set.c.o
-
-cl_renderer/texture/texture_set.i: cl_renderer/texture/texture_set.c.i
-
-.PHONY : cl_renderer/texture/texture_set.i
-
-# target to preprocess a source file
-cl_renderer/texture/texture_set.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.i
-.PHONY : cl_renderer/texture/texture_set.c.i
-
-cl_renderer/texture/texture_set.s: cl_renderer/texture/texture_set.c.s
-
-.PHONY : cl_renderer/texture/texture_set.s
-
-# target to generate assembly for a file
-cl_renderer/texture/texture_set.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.s
-.PHONY : cl_renderer/texture/texture_set.c.s
 
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
@@ -6039,12 +6012,12 @@ help:
 	@echo "... cl_renderer/scene/scene_delete.o"
 	@echo "... cl_renderer/scene/scene_delete.i"
 	@echo "... cl_renderer/scene/scene_delete.s"
+	@echo "... cl_renderer/scene/scene_edit_param.o"
+	@echo "... cl_renderer/scene/scene_edit_param.i"
+	@echo "... cl_renderer/scene/scene_edit_param.s"
 	@echo "... cl_renderer/scene/scene_get_space.o"
 	@echo "... cl_renderer/scene/scene_get_space.i"
 	@echo "... cl_renderer/scene/scene_get_space.s"
-	@echo "... cl_renderer/scene/scene_give_name.o"
-	@echo "... cl_renderer/scene/scene_give_name.i"
-	@echo "... cl_renderer/scene/scene_give_name.s"
 	@echo "... cl_renderer/scene/scene_is_valid_x.o"
 	@echo "... cl_renderer/scene/scene_is_valid_x.i"
 	@echo "... cl_renderer/scene/scene_is_valid_x.s"
@@ -6078,9 +6051,6 @@ help:
 	@echo "... cl_renderer/texture/texture_iter.o"
 	@echo "... cl_renderer/texture/texture_iter.i"
 	@echo "... cl_renderer/texture/texture_iter.s"
-	@echo "... cl_renderer/texture/texture_set.o"
-	@echo "... cl_renderer/texture/texture_set.i"
-	@echo "... cl_renderer/texture/texture_set.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
