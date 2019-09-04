@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2013,6 +2013,33 @@ cl_renderer/scene/scene_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s
 .PHONY : cl_renderer/scene/scene_delete.c.s
 
+cl_renderer/scene/scene_edit_param.o: cl_renderer/scene/scene_edit_param.c.o
+
+.PHONY : cl_renderer/scene/scene_edit_param.o
+
+# target to build an object file
+cl_renderer/scene/scene_edit_param.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o
+.PHONY : cl_renderer/scene/scene_edit_param.c.o
+
+cl_renderer/scene/scene_edit_param.i: cl_renderer/scene/scene_edit_param.c.i
+
+.PHONY : cl_renderer/scene/scene_edit_param.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_edit_param.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.i
+.PHONY : cl_renderer/scene/scene_edit_param.c.i
+
+cl_renderer/scene/scene_edit_param.s: cl_renderer/scene/scene_edit_param.c.s
+
+.PHONY : cl_renderer/scene/scene_edit_param.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_edit_param.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.s
+.PHONY : cl_renderer/scene/scene_edit_param.c.s
+
 cl_renderer/scene/scene_get_space.o: cl_renderer/scene/scene_get_space.c.o
 
 .PHONY : cl_renderer/scene/scene_get_space.o
@@ -2039,33 +2066,6 @@ cl_renderer/scene/scene_get_space.s: cl_renderer/scene/scene_get_space.c.s
 cl_renderer/scene/scene_get_space.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.s
 .PHONY : cl_renderer/scene/scene_get_space.c.s
-
-cl_renderer/scene/scene_give_name.o: cl_renderer/scene/scene_give_name.c.o
-
-.PHONY : cl_renderer/scene/scene_give_name.o
-
-# target to build an object file
-cl_renderer/scene/scene_give_name.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.o
-.PHONY : cl_renderer/scene/scene_give_name.c.o
-
-cl_renderer/scene/scene_give_name.i: cl_renderer/scene/scene_give_name.c.i
-
-.PHONY : cl_renderer/scene/scene_give_name.i
-
-# target to preprocess a source file
-cl_renderer/scene/scene_give_name.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.i
-.PHONY : cl_renderer/scene/scene_give_name.c.i
-
-cl_renderer/scene/scene_give_name.s: cl_renderer/scene/scene_give_name.c.s
-
-.PHONY : cl_renderer/scene/scene_give_name.s
-
-# target to generate assembly for a file
-cl_renderer/scene/scene_give_name.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_give_name.c.s
-.PHONY : cl_renderer/scene/scene_give_name.c.s
 
 cl_renderer/scene/scene_is_valid_x.o: cl_renderer/scene/scene_is_valid_x.c.o
 
@@ -2363,33 +2363,6 @@ cl_renderer/texture/texture_iter.s: cl_renderer/texture/texture_iter.c.s
 cl_renderer/texture/texture_iter.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
 .PHONY : cl_renderer/texture/texture_iter.c.s
-
-cl_renderer/texture/texture_set.o: cl_renderer/texture/texture_set.c.o
-
-.PHONY : cl_renderer/texture/texture_set.o
-
-# target to build an object file
-cl_renderer/texture/texture_set.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.o
-.PHONY : cl_renderer/texture/texture_set.c.o
-
-cl_renderer/texture/texture_set.i: cl_renderer/texture/texture_set.c.i
-
-.PHONY : cl_renderer/texture/texture_set.i
-
-# target to preprocess a source file
-cl_renderer/texture/texture_set.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.i
-.PHONY : cl_renderer/texture/texture_set.c.i
-
-cl_renderer/texture/texture_set.s: cl_renderer/texture/texture_set.c.s
-
-.PHONY : cl_renderer/texture/texture_set.s
-
-# target to generate assembly for a file
-cl_renderer/texture/texture_set.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_set.c.s
-.PHONY : cl_renderer/texture/texture_set.c.s
 
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
@@ -6039,12 +6012,12 @@ help:
 	@echo "... cl_renderer/scene/scene_delete.o"
 	@echo "... cl_renderer/scene/scene_delete.i"
 	@echo "... cl_renderer/scene/scene_delete.s"
+	@echo "... cl_renderer/scene/scene_edit_param.o"
+	@echo "... cl_renderer/scene/scene_edit_param.i"
+	@echo "... cl_renderer/scene/scene_edit_param.s"
 	@echo "... cl_renderer/scene/scene_get_space.o"
 	@echo "... cl_renderer/scene/scene_get_space.i"
 	@echo "... cl_renderer/scene/scene_get_space.s"
-	@echo "... cl_renderer/scene/scene_give_name.o"
-	@echo "... cl_renderer/scene/scene_give_name.i"
-	@echo "... cl_renderer/scene/scene_give_name.s"
 	@echo "... cl_renderer/scene/scene_is_valid_x.o"
 	@echo "... cl_renderer/scene/scene_is_valid_x.i"
 	@echo "... cl_renderer/scene/scene_is_valid_x.s"
@@ -6078,9 +6051,6 @@ help:
 	@echo "... cl_renderer/texture/texture_iter.o"
 	@echo "... cl_renderer/texture/texture_iter.i"
 	@echo "... cl_renderer/texture/texture_iter.s"
-	@echo "... cl_renderer/texture/texture_set.o"
-	@echo "... cl_renderer/texture/texture_set.i"
-	@echo "... cl_renderer/texture/texture_set.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"

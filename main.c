@@ -5,120 +5,29 @@
 
 void				scene_test_a(t_scene *scene)
 {
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_WHITE, (RT_F4_API){-10., 10., -40.}, 2.);
-	object_build(scene_get_space(scene), object_type_sphere,
-		MATERIAL_LIGHT, (RT_F4_API){10., 0., -10.}, 3.);
-	scene_give_name(scene, "Light", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., -70.},
-				 (RT_F4_API){0., 0., 1.}, plane_limiting_yes);
-	scene_give_name(scene, "Front Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., 100.},
-				 (RT_F4_API){0., 0., -1.}, plane_limiting_yes);
-	scene_give_name(scene, "Back Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_RED, (RT_F4_API){30., 0., 0.},
-				 (RT_F4_API){-1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Right Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_GREEN, (RT_F4_API){-30., 0., 0.},
-				 (RT_F4_API){1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Left Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 50., 0.},
-				 (RT_F4_API){0., -1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Upper Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., -50., 0.},
-				 (RT_F4_API){0., 1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Lower Plane", scene_name_last);
-}
-
-void				scene_test_b(t_scene *scene)
-{
-	object_build(scene_get_space(scene), object_type_light_ambient,
-				 MATERIAL_LIGHT_AMBIENT);
-	object_build(scene_get_space(scene), object_type_light_point,
-				 MATERIAL_LIGHT_BASIC, (RT_F4_API){10., -10., 10.});
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_WHITE, (RT_F4_API){-10., 10., -40.}, 2.);
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_WHITE, (RT_F4_API){10., 10., -40.}, 2.);
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_GLASS, (RT_F4_API){-10., 0., 10}, 2.);
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_MIRROR, (RT_F4_API){-10., 0., -10.}, 3.1);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., -70.},
-				 (RT_F4_API){0., 0., 1.}, plane_limiting_yes);
-	scene_give_name(scene, "Front Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., 100.},
-				 (RT_F4_API){0., 0., -1.}, plane_limiting_yes);
-	scene_give_name(scene, "Back Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_RED, (RT_F4_API){30., 0., 0.},
-				 (RT_F4_API){-1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Right Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_GREEN, (RT_F4_API){-30., 0., 0.},
-				 (RT_F4_API){1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Left Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 50., 0.},
-				 (RT_F4_API){0., -1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Upper Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., -50., 0.},
-				 (RT_F4_API){0., 1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Lower Plane", scene_name_last);
-}
-
-void				scene_test_c(t_scene *scene)
-{
-	object_build(scene_get_space(scene), object_type_light_ambient,
-		MATERIAL_LIGHT_AMBIENT);
-	object_build(scene_get_space(scene), object_type_light_point,
-		MATERIAL_LIGHT_BASIC, (RT_F4_API){10., 10., 0.});
-	object_build(scene_get_space(scene), object_type_explosion,
-		MATERIAL_NONE, (RT_F4_API){0., 0., 0.}, 2., 1.2);
-	scene_give_name(scene, "Explosion", scene_name_last);
-}
-
-void				scene_test_d(t_scene *scene)
-{
-	object_build(scene_get_space(scene), object_type_box,
-				 MATERIAL_MIRROR, (RT_F4_API){0., 2., 0.}, (RT_F4_API){15., 15., 15.});
-	scene_give_name(scene, "Box", scene_name_last);
-	object_build(scene_get_space(scene), object_type_sphere,
-				 MATERIAL_LIGHT, (RT_F4_API){10., 0., -10.}, 3.);
-	scene_give_name(scene, "Light", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., -70.},
-				 (RT_F4_API){0., 0., 1.}, plane_limiting_yes);
-	scene_give_name(scene, "Front Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 0., 100.},
-				 (RT_F4_API){0., 0., -1.}, plane_limiting_yes);
-	scene_give_name(scene, "Back Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_RED, (RT_F4_API){100., 0., 0.},
-				 (RT_F4_API){-1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Right Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_GREEN, (RT_F4_API){-100., 0., 0.},
-				 (RT_F4_API){1., 0., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Left Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., 50., 0.},
-				 (RT_F4_API){0., -1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Upper Plane", scene_name_last);
-	object_build(scene_get_space(scene), object_type_plane,
-				 MATERIAL_WHITE, (RT_F4_API){0., -50., 0.},
-				 (RT_F4_API){0., 1., 0.}, plane_limiting_yes);
-	scene_give_name(scene, "Lower Plane", scene_name_last);
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){-10., 10., -40.}, 2.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){10., 0., -10.}, 3.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -70.}, (RT_F4_API){0., 0., 1.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_WHITE, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Front Plane", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 100.}, (RT_F4_API){0., 0., -1.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_WHITE, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Back Plane", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){30., 0., 0.}, (RT_F4_API){-1., 0., 0.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_RED, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Right Plane", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-30., 0., 0.}, (RT_F4_API){1., 0., 0.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_GREEN, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Left Plane", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 50., 0.}, (RT_F4_API){0., -1., 0.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_WHITE, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Upper Plane", scene_param_end);
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.}, plane_limiting_yes);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_WHITE, scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Lower Plane", scene_param_end);
 }
 
 int					main(int argc, char **argv)
@@ -128,9 +37,10 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_d(gui->renderer->data.scene);
+	scene_test_a(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -20;
 	gui->renderer->data.camera->rotation.y = -1.6;
+	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);
 	RT_ASSERT(scene_is_valid_content(gui->renderer->data.scene))
     scene_update(gui->renderer->data.scene);
