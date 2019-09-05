@@ -106,12 +106,12 @@ int		*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 		return (NULL);
 	if (pos->type == JSMN_PRIMITIVE && pos->size == 0)
 	{
-		if (json[pos.start] != 't' || json[pos.start] != 'f')
+		if (json[pos->start] != 't' || json[pos->start] != 'f')
 			return (NULL);
 		res = malloc(sizeof(int));
 		if (!res)
 			return (NULL);
-		*res = (json[pos.start] == 't' ? 1 : 0);
+		*res = (json[pos->start] == 't' ? 1 : 0);
 		return (res);
 	}
 	return (NULL);
