@@ -23,7 +23,7 @@ void				gui_signal_scene_edit_entry_insert
 	g_signal_handlers_unblock_by_func(G_OBJECT(entry),
 		G_CALLBACK(gui_signal_scene_edit_entry_insert), ptr);
 	if (old[0] && strtod(old, NULL) != strtod(gtk_entry_get_text(entry), NULL))
-		gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+		gui_control_show(&gui->scene->edit->control);
 }
 
 void 				gui_signal_scene_edit_entry_delete
@@ -41,7 +41,7 @@ void 				gui_signal_scene_edit_entry_delete
 	g_signal_handlers_unblock_by_func(G_OBJECT(entry),
 		G_CALLBACK(gui_signal_scene_edit_entry_delete), ptr);
 	if (old[0] && strtod(old, NULL) != strtod(gtk_entry_get_text(entry), NULL))
-		gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+		gui_control_show(&gui->scene->edit->control);
 }
 
 void 				gui_signal_scene_edit_entry_changed
@@ -50,5 +50,5 @@ void 				gui_signal_scene_edit_entry_changed
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+	gui_control_show(&gui->scene->edit->control);
 }

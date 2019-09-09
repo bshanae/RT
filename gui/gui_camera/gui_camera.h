@@ -5,13 +5,14 @@
 
 # include "rt_assert.h"
 # include "gui_entry.h"
+# include "gui_control.h"
 # include "camera.h"
 
 # include <gtk/gtk.h>
 
 typedef struct				s_gui_camera
 {
-	GtkBox					*control;
+	t_gui_control			control;
 	int						control_silent;
 	GtkEntry				*position_x;
 	GtkEntry				*position_y;

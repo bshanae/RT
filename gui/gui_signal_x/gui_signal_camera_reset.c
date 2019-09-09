@@ -7,5 +7,5 @@ void				gui_signal_camera_reset
 
 	gui = (t_gui *)ptr;
 	gui_camera_reset(gui->camera, gui->renderer->data.camera);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->camera->control), 0.);
+	gui_control_hide(&gui->camera->control);
 }

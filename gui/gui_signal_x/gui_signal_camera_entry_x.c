@@ -25,7 +25,7 @@ void				gui_signal_camera_entry_insert
 	g_signal_handlers_unblock_by_func(G_OBJECT(entry),
 		G_CALLBACK(gui_signal_camera_entry_insert), ptr);
 	if (old[0] && strtod(old, NULL) != strtod(gtk_entry_get_text(entry), NULL))
-		gtk_widget_set_opacity(GTK_WIDGET(gui->camera->control), 1.);
+		gui_control_show(&gui->camera->control);
 }
 
 void 				gui_signal_camera_entry_delete
@@ -45,5 +45,5 @@ void 				gui_signal_camera_entry_delete
 	g_signal_handlers_unblock_by_func(G_OBJECT(entry),
 		G_CALLBACK(gui_signal_camera_entry_delete), ptr);
 	if (old[0] && strtod(old, NULL) != strtod(gtk_entry_get_text(entry), NULL))
-		gtk_widget_set_opacity(GTK_WIDGET(gui->camera->control), 1.);
+		gui_control_show(&gui->camera->control);
 }

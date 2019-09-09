@@ -5,6 +5,7 @@
 
 # include "gui_object_x.h"
 # include "gui_material.h"
+# include "gui_control.h"
 # include "scene.h"
 
 # include <gtk/gtk.h>
@@ -19,6 +20,7 @@ typedef enum 					s_gui_scene_edit_list
 
 typedef struct 					s_gui_scene_edit
 {
+	t_gui_control				control;
 	GtkEntry					*name;
 	GtkEntry					*type;
 	t_gui_object_light_point	light_point;
@@ -37,7 +39,6 @@ typedef struct 					s_gui_scene_edit
 	int 						material_color_silent;
 	t_gui_material				material;
 	GtkStack					*stack;
-	GtkBox						*control;
 	GtkBox						*info;
 	GtkListStore				*list;
 	GtkTreeSelection			*selection;

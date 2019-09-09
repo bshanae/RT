@@ -9,5 +9,5 @@ void				gui_signal_scene_edit_reset
 	gui = (t_gui *)ptr;
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 0.);
+	gui_control_hide(&gui->scene->edit->control);
 }

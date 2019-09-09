@@ -15,7 +15,7 @@ void 				gui_signal_scene_edit_select
 		scene_edit_object_id, &gui->scene->edit->current_id ,-1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 0.);
+	gui_control_hide(&gui->scene->edit->control);
 	if (object->type >= object_type_light_ambient &&
 		object->type <= object_type_light_direct)
 		gui_scene_edit_material_color_disable(gui->scene->edit);

@@ -337,6 +337,8 @@ rt_assert.h
 .././gui/gui_camera/rt_assert.h
 gui_entry.h
 .././gui/gui_camera/gui_entry.h
+gui_control.h
+.././gui/gui_camera/gui_control.h
 camera.h
 .././gui/gui_camera/camera.h
 gtk/gtk.h
@@ -449,6 +451,8 @@ gui_object_x.h
 .././gui/gui_scene_edit/gui_object_x.h
 gui_material.h
 .././gui/gui_scene_edit/gui_material.h
+gui_control.h
+.././gui/gui_scene_edit/gui_control.h
 scene.h
 .././gui/gui_scene_edit/scene.h
 gtk/gtk.h
@@ -468,16 +472,6 @@ gui_entry.h
 gui_control.h
 .././gui/gui_settings/gui_control.h
 gtk/gtk.h
--
-
-.././gui/gui_signal_x/gui_signal_x.h
-gui_entry.h
-.././gui/gui_signal_x/gui_entry.h
-gui_control.h
-.././gui/gui_signal_x/gui_control.h
-gui.h
-.././gui/gui_signal_x/gui.h
-time.h
 -
 
 .././parameters/rt_cl_include.h
@@ -502,19 +496,19 @@ rt_control.h
 
 .././parameters/rt_sources_texture.h
 
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c
-gui_signal_connect_x.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
-
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_macro.h
-
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_x.h
-gui_signal_connect_macro.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_macro.h
-gui.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui.h
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c
 gui_signal_x.h
-/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_x.h
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_x.h
+gui_entry.h
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_entry.h
+gui_control.h
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_control.h
+gui.h
+/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui.h
+time.h
+-
 
 /usr/local/Cellar/atk/2.32.0_1/include/atk-1.0/atk/atk-enum-types.h
 atk/atkversion.h
