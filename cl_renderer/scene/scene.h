@@ -26,7 +26,9 @@ void 				scene_update(t_scene *scene);
 t_object			*scene_get_space(t_scene *scene);
 void 				scene_remove_object(t_scene *scene, int object_id);
 int 				scene_point_check(t_scene *scene, const RT_F4_API *point);
+
 void				scene_select(t_scene *scene, int id);
+void				scene_unselect(t_scene *scene);
 
 typedef enum 		e_scene_param
 {

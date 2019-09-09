@@ -38,19 +38,10 @@ typedef struct 		s_camera
 t_camera			*camera_new(INT_REF width, INT_REF height);
 void 				camera_delete(t_camera **camera);
 
-typedef enum		e_camera_movement
-{
-	rt_movement_left,
-	rt_movement_right,
-	rt_movement_up,
-	rt_movement_down,
-	rt_movement_forward,
-	rt_movement_backward
-}					t_camera_movement;
-
+RT_F4_API			camera_get_step(t_camera *camera, t_movement movement);
 RT_F4_API			camera_move
 					(t_camera *camera,
-					 t_camera_movement direction,
+					 t_movement direction,
 					 RT_F length);
 void 				camera_rotate
 					(t_camera *camera,

@@ -1,12 +1,12 @@
 #include "cl_renderer.h"
 
 int 				cl_renderer_camera_move
-					(t_cl_renderer *renderer, t_camera_movement movement)
+					(t_cl_renderer *renderer, t_movement movement)
 {
 	RT_F4_API		test;
 
 	test = camera_move(renderer->data.camera, movement, RT_CAMERA_MOVE_VALUE);
-	if (scene_point_check(renderer->data.scene, &test) == SCENE_POINT_INSIDE)
+	if (!RT_ROOM || scene_point_check(renderer->data.scene, &test) == SCENE_POINT_INSIDE)
 		renderer->data.camera->position = test;
 	else
 		return (0);

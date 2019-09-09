@@ -188,7 +188,7 @@ set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_torus_x.c
 	./gui/gui_object_x/gui_object_mandelbulb_x.c
 	./gui/gui_object_x/gui_object_julia_x.c
-	./cl_renderer/object_x/object_csg.c)
+	./cl_renderer/object_x/object_csg.c cl_renderer/object/object_flag_get.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
@@ -378,7 +378,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
-	./cl_renderer/scene/scene_select.c
+	"cl_renderer/scene/scene_(un)select.c"
 	./cl_renderer/scene/scene_is_valid_x.c cl_renderer/scene/scene_edit_param.c)
 
 set(SOURCE_RAY
@@ -391,7 +391,7 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
 	./gui/gui_camera/gui_camera_reset.c
-	./cl_renderer/camera/camera_request_x.c)
+	./cl_renderer/camera/camera_request_x.c cl_renderer/camera/camera_get_step.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -423,7 +423,7 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
 	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
 	./cl_renderer/cl_renderer/cl_renderer_load.c
-	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c)
+	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c cl_renderer/cl_renderer/cl_renderer_object_move.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

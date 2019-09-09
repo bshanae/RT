@@ -27,8 +27,12 @@
 # define RT_CL_APERTURE_SIZE		(RT_F)5.
 # define RT_CL_FOCAL_LENGTH			(RT_F)40.
 
+# define RT_OBJECT_MOVE_VALUE		(RT_F)1.
+
 # define RT_CAMERA_MOVE_VALUE		(RT_F)1.
 # define RT_CAMERA_ROTATE_VALUE		(RT_F)0.025
+
+# define RT_ROOM					0
 
 # define RT_CL_LIGHT_BASIC			0
 # define RT_CL_LIGHT_BASIC_BLINN	(RT_F)20.
@@ -72,5 +76,15 @@
 #endif
 
 # define RT_INFINITY				INFINITY
+
+typedef enum						e_movement
+{
+	rt_movement_left,
+	rt_movement_right,
+	rt_movement_up,
+	rt_movement_down,
+	rt_movement_forward,
+	rt_movement_backward
+}									t_movement;
 
 #endif

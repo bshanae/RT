@@ -1,16 +1,19 @@
 #ifndef OBJECT_INTERACTION_H
 # define OBJECT_INTERACTION_H
 
+# include "rt_float.h"
+
 # include "rt_assert.h"
 # include "f4.h"
 # include "object_definition.h"
 # include "object_x.h"
 # include "material_list.h"
-# include "rt_float.h"
+# include "object_flag.h"
 
 # include <stdarg.h>
 
 t_object_flag		object_get_flag(t_object_type type);
+u_int				object_flag_get(t_object *object);
 
 void				object_build(t_object *space, t_object_type type, ...);
 

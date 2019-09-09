@@ -2,20 +2,26 @@
 
 static int			try_move_camera(t_gui *gui, int key)
 {
+	t_movement		movement;
+
 	if (key == GDK_KEY_a || key == GDK_KEY_Cyrillic_ef)
-		cl_renderer_camera_move(gui->renderer, rt_movement_left);
+		movement = rt_movement_left;
 	else if (key == GDK_KEY_d || key == GDK_KEY_Cyrillic_ve)
-		cl_renderer_camera_move(gui->renderer, rt_movement_right);
+		movement = rt_movement_right;
 	else if (key == GDK_KEY_w || key == GDK_KEY_Cyrillic_tse)
-		cl_renderer_camera_move(gui->renderer, rt_movement_forward);
+		movement = rt_movement_forward;
 	else if (key == GDK_KEY_s || key == GDK_KEY_Cyrillic_yeru)
-		cl_renderer_camera_move(gui->renderer, rt_movement_backward);
+		movement = rt_movement_backward;
 	else if (key == GDK_KEY_q || key == GDK_KEY_Cyrillic_shorti)
-		cl_renderer_camera_move(gui->renderer, rt_movement_up);
+		movement = rt_movement_up;
 	else if (key == GDK_KEY_e || key == GDK_KEY_Cyrillic_u)
-		cl_renderer_camera_move(gui->renderer, rt_movement_down);
+		movement = rt_movement_down;
 	else
 		return (0);
+	if (gui->renderer->data.camera->select_request_object != -1)
+		cl_renderer_object_move(gui->renderer, movement);
+	else
+		cl_renderer_camera_move(gui->renderer, movement);
 	gui_camera_show(gui->camera, gui->renderer->data.camera);
 	gui_queue_execute_force(gui->queue);
 	return (1);

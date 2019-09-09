@@ -56,18 +56,19 @@ void						cl_renderer_flag_set(t_cl_renderer *renderer,
 void						cl_renderer_flag_perform(t_cl_renderer *renderer);
 
 int 						cl_renderer_camera_move
-							(t_cl_renderer *renderer, t_camera_movement movement);
+							(t_cl_renderer *renderer, t_movement movement);
 void 						cl_renderer_camera_rotate(
 							t_cl_renderer *renderer,
 		 					t_f4_rotation_axis axis,
 		 					t_f4_rotation_direction direction);
 void						cl_renderer_camera_reset(t_cl_renderer *renderer);
 void						cl_renderer_camera_save(t_cl_renderer *renderer);
-
 void 						cl_renderer_camera_request_focus
 							(t_cl_renderer *renderer, int x, int y);
 void 						cl_renderer_camera_request_select
 							(t_cl_renderer *renderer, int x, int y);
+void						cl_renderer_object_move
+							(t_cl_renderer *renderer, t_movement movement);
 
 void						cl_renderer_load
 							(t_cl_renderer *renderer, const char *path);

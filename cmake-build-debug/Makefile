@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,33 @@ cl_renderer/camera/camera_delete.s: cl_renderer/camera/camera_delete.c.s
 cl_renderer/camera/camera_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.s
 .PHONY : cl_renderer/camera/camera_delete.c.s
+
+cl_renderer/camera/camera_get_step.o: cl_renderer/camera/camera_get_step.c.o
+
+.PHONY : cl_renderer/camera/camera_get_step.o
+
+# target to build an object file
+cl_renderer/camera/camera_get_step.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_get_step.c.o
+.PHONY : cl_renderer/camera/camera_get_step.c.o
+
+cl_renderer/camera/camera_get_step.i: cl_renderer/camera/camera_get_step.c.i
+
+.PHONY : cl_renderer/camera/camera_get_step.i
+
+# target to preprocess a source file
+cl_renderer/camera/camera_get_step.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_get_step.c.i
+.PHONY : cl_renderer/camera/camera_get_step.c.i
+
+cl_renderer/camera/camera_get_step.s: cl_renderer/camera/camera_get_step.c.s
+
+.PHONY : cl_renderer/camera/camera_get_step.s
+
+# target to generate assembly for a file
+cl_renderer/camera/camera_get_step.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/camera/camera_get_step.c.s
+.PHONY : cl_renderer/camera/camera_get_step.c.s
 
 cl_renderer/camera/camera_move.o: cl_renderer/camera/camera_move.c.o
 
@@ -879,6 +906,33 @@ cl_renderer/cl_renderer/cl_renderer_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_new.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_new.c.s
 
+cl_renderer/cl_renderer/cl_renderer_object_move.o: cl_renderer/cl_renderer/cl_renderer_object_move.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_object_move.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.c.o
+
+cl_renderer/cl_renderer/cl_renderer_object_move.i: cl_renderer/cl_renderer/cl_renderer_object_move.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_object_move.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.c.i
+
+cl_renderer/cl_renderer/cl_renderer_object_move.s: cl_renderer/cl_renderer/cl_renderer_object_move.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_object_move.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_object_move.c.s
+
 cl_renderer/cl_renderer/cl_renderer_render.o: cl_renderer/cl_renderer/cl_renderer_render.c.o
 
 .PHONY : cl_renderer/cl_renderer/cl_renderer_render.o
@@ -1473,6 +1527,33 @@ cl_renderer/object/object_build.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_build.c.s
 .PHONY : cl_renderer/object/object_build.c.s
 
+cl_renderer/object/object_flag_get.o: cl_renderer/object/object_flag_get.c.o
+
+.PHONY : cl_renderer/object/object_flag_get.o
+
+# target to build an object file
+cl_renderer/object/object_flag_get.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_flag_get.c.o
+.PHONY : cl_renderer/object/object_flag_get.c.o
+
+cl_renderer/object/object_flag_get.i: cl_renderer/object/object_flag_get.c.i
+
+.PHONY : cl_renderer/object/object_flag_get.i
+
+# target to preprocess a source file
+cl_renderer/object/object_flag_get.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_flag_get.c.i
+.PHONY : cl_renderer/object/object_flag_get.c.i
+
+cl_renderer/object/object_flag_get.s: cl_renderer/object/object_flag_get.c.s
+
+.PHONY : cl_renderer/object/object_flag_get.s
+
+# target to generate assembly for a file
+cl_renderer/object/object_flag_get.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object/object_flag_get.c.s
+.PHONY : cl_renderer/object/object_flag_get.c.s
+
 cl_renderer/object/object_get_flag.o: cl_renderer/object/object_get_flag.c.o
 
 .PHONY : cl_renderer/object/object_get_flag.o
@@ -1959,6 +2040,33 @@ cl_renderer/scene/camera_point_check.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.s
 .PHONY : cl_renderer/scene/camera_point_check.c.s
 
+cl_renderer/scene/scene_(un)select.o: cl_renderer/scene/scene_(un)select.c.o
+
+.PHONY : cl_renderer/scene/scene_(un)select.o
+
+# target to build an object file
+cl_renderer/scene/scene_(un)select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.o"
+.PHONY : cl_renderer/scene/scene_(un)select.c.o
+
+cl_renderer/scene/scene_(un)select.i: cl_renderer/scene/scene_(un)select.c.i
+
+.PHONY : cl_renderer/scene/scene_(un)select.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_(un)select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.i"
+.PHONY : cl_renderer/scene/scene_(un)select.c.i
+
+cl_renderer/scene/scene_(un)select.s: cl_renderer/scene/scene_(un)select.c.s
+
+.PHONY : cl_renderer/scene/scene_(un)select.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_(un)select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.s"
+.PHONY : cl_renderer/scene/scene_(un)select.c.s
+
 cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
 
 .PHONY : cl_renderer/scene/scene_clear.o
@@ -2147,33 +2255,6 @@ cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c
 cl_renderer/scene/scene_remove_object.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
 .PHONY : cl_renderer/scene/scene_remove_object.c.s
-
-cl_renderer/scene/scene_select.o: cl_renderer/scene/scene_select.c.o
-
-.PHONY : cl_renderer/scene/scene_select.o
-
-# target to build an object file
-cl_renderer/scene/scene_select.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o
-.PHONY : cl_renderer/scene/scene_select.c.o
-
-cl_renderer/scene/scene_select.i: cl_renderer/scene/scene_select.c.i
-
-.PHONY : cl_renderer/scene/scene_select.i
-
-# target to preprocess a source file
-cl_renderer/scene/scene_select.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.i
-.PHONY : cl_renderer/scene/scene_select.c.i
-
-cl_renderer/scene/scene_select.s: cl_renderer/scene/scene_select.c.s
-
-.PHONY : cl_renderer/scene/scene_select.s
-
-# target to generate assembly for a file
-cl_renderer/scene/scene_select.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.s
-.PHONY : cl_renderer/scene/scene_select.c.s
 
 cl_renderer/scene/scene_update.o: cl_renderer/scene/scene_update.c.o
 
@@ -5808,6 +5889,9 @@ help:
 	@echo "... cl_renderer/camera/camera_delete.o"
 	@echo "... cl_renderer/camera/camera_delete.i"
 	@echo "... cl_renderer/camera/camera_delete.s"
+	@echo "... cl_renderer/camera/camera_get_step.o"
+	@echo "... cl_renderer/camera/camera_get_step.i"
+	@echo "... cl_renderer/camera/camera_get_step.s"
 	@echo "... cl_renderer/camera/camera_move.o"
 	@echo "... cl_renderer/camera/camera_move.i"
 	@echo "... cl_renderer/camera/camera_move.s"
@@ -5886,6 +5970,9 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_new.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_object_move.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_object_move.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_object_move.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.s"
@@ -5952,6 +6039,9 @@ help:
 	@echo "... cl_renderer/object/object_build.o"
 	@echo "... cl_renderer/object/object_build.i"
 	@echo "... cl_renderer/object/object_build.s"
+	@echo "... cl_renderer/object/object_flag_get.o"
+	@echo "... cl_renderer/object/object_flag_get.i"
+	@echo "... cl_renderer/object/object_flag_get.s"
 	@echo "... cl_renderer/object/object_get_flag.o"
 	@echo "... cl_renderer/object/object_get_flag.i"
 	@echo "... cl_renderer/object/object_get_flag.s"
@@ -6006,6 +6096,9 @@ help:
 	@echo "... cl_renderer/scene/camera_point_check.o"
 	@echo "... cl_renderer/scene/camera_point_check.i"
 	@echo "... cl_renderer/scene/camera_point_check.s"
+	@echo "... cl_renderer/scene/scene_(un)select.o"
+	@echo "... cl_renderer/scene/scene_(un)select.i"
+	@echo "... cl_renderer/scene/scene_(un)select.s"
 	@echo "... cl_renderer/scene/scene_clear.o"
 	@echo "... cl_renderer/scene/scene_clear.i"
 	@echo "... cl_renderer/scene/scene_clear.s"
@@ -6027,9 +6120,6 @@ help:
 	@echo "... cl_renderer/scene/scene_remove_object.o"
 	@echo "... cl_renderer/scene/scene_remove_object.i"
 	@echo "... cl_renderer/scene/scene_remove_object.s"
-	@echo "... cl_renderer/scene/scene_select.o"
-	@echo "... cl_renderer/scene/scene_select.i"
-	@echo "... cl_renderer/scene/scene_select.s"
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"

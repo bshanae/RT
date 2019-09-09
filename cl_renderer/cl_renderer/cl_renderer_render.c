@@ -22,7 +22,6 @@ static void			static_post_queue(t_cl_renderer *renderer)
 		cl_args_list_read(renderer->args, cl_arg_camera);
 		scene_select(renderer->data.scene, renderer->data.camera->select_request_object);
 		renderer->data.camera->select_request = 0;
-		renderer->data.camera->select_request_object = -1;
 		cl_renderer_flag_set(renderer, cl_flag_update_camera);
 		cl_renderer_flag_set(renderer, cl_flag_update_scene);
 		cl_renderer_flag_set(renderer, cl_flag_reset_samples);
