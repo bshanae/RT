@@ -67,10 +67,10 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		if (scene->objects[intersection->object_id].texture_id > -1)
-			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 		if (!settings->rm_mod)
 			intersection->hit = ray_intersect(&intersection->ray);
+		if (scene->objects[intersection->object_id].texture_id > -1)
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
 			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
