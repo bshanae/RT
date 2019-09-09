@@ -17,9 +17,12 @@ typedef struct 		s_gui_image
 	t_color			*color_buffer;
 	int				width;
 	int				height;
+	t_rt_bool		resize_request;
 }					t_gui_image;
 
 t_gui_image			*gui_image_new(GtkBuilder *builder);
 void				gui_image_delete(t_gui_image **image);
+
+void 				gui_image_allocate(t_gui_image *image);
 
 #endif

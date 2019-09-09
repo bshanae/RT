@@ -77,7 +77,7 @@
 
 # define RT_INFINITY				INFINITY
 
-typedef enum						e_movement
+typedef enum						e_rt_movement
 {
 	rt_movement_left,
 	rt_movement_right,
@@ -85,6 +85,12 @@ typedef enum						e_movement
 	rt_movement_down,
 	rt_movement_forward,
 	rt_movement_backward
-}									t_movement;
+}									t_rt_movement;
+
+typedef enum						e_rt_bool
+{
+	rt_false,
+	rt_true
+}									t_rt_bool;
 
 #endif

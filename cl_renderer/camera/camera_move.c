@@ -2,7 +2,7 @@
 
 RT_F4_API			camera_move
 					(t_camera *camera,
-					 t_movement movement,
+					 t_rt_movement movement,
 					 RT_F length)
 {
 	RT_F4_API		step;

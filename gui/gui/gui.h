@@ -27,11 +27,15 @@ typedef struct		s_gui
 	t_gui_scene		*scene;
 	t_gui_settings	*settings;
 	t_gui_image		*image;
+	t_rt_bool		resize_in_process;
 	t_cl_renderer	*renderer;
 }					t_gui;
 
 t_gui				*gui_new(int *ac, char ***av);
 void				gui_delete(t_gui **gui);
+
+void				gui_resize_start(t_gui *gui);
+void				gui_resize_finish(t_gui *gui);
 
 void				gui_loop(t_gui *gui);
 void 				gui_update(t_gui *gui);

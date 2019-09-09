@@ -38,10 +38,10 @@ typedef struct 		s_camera
 t_camera			*camera_new(INT_REF width, INT_REF height);
 void 				camera_delete(t_camera **camera);
 
-RT_F4_API			camera_get_step(t_camera *camera, t_movement movement);
+RT_F4_API			camera_get_step(t_camera *camera, t_rt_movement movement);
 RT_F4_API			camera_move
 					(t_camera *camera,
-					 t_movement direction,
+					 t_rt_movement direction,
 					 RT_F length);
 void 				camera_rotate
 					(t_camera *camera,

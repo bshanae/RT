@@ -13,5 +13,5 @@ void 				gui_settings_show
 	gtk_toggle_button_set_active(gui->light_area, settings->light_area);
 	gui_entry_set_i(gui->pt_samples, settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, settings->sample_depth);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->control), 0.);
+	gui_control_hide(&gui->control);
 }

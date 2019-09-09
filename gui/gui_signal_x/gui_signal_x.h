@@ -2,6 +2,7 @@
 # define GUI_SIGNAL_H
 
 # include "gui_entry.h"
+# include "gui_control.h"
 # include "gui.h"
 
 # include <time.h>
@@ -107,6 +108,8 @@ void 				gui_signal_settings_reset
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_apply
 					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_settings_resize
+					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_light
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_tracing_rt
@@ -116,8 +119,7 @@ void 				gui_signal_settings_tracing_rm
 
 gboolean 			gui_signal_image_click
 					(GtkWidget *widget, GdkEventButton *event, gpointer ptr);
-
-gboolean			gui_signal_task_add(gpointer ptr);
-void				gui_signal_task_execute(gpointer ptr, gpointer user_ptr);
+gboolean			gui_signal_image_draw
+					(GtkWidget *widget, void *cairo, gpointer ptr);
 
 #endif

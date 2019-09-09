@@ -2,7 +2,7 @@
 
 #include "rt_assert.h"
 
-RT_F4_API			camera_get_step(t_camera *camera, t_movement movement)
+RT_F4_API			camera_get_step(t_camera *camera, t_rt_movement movement)
 {
 	if (movement == rt_movement_left)
 		return (f4_mul(camera->axis_x, -1.f));

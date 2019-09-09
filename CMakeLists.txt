@@ -75,6 +75,7 @@ include_directories(
 	./gui/gui/
 	./gui/gui_queue/
 	./gui/gui_entry/
+	./gui/gui_control/
 	./gui/gui_parser/
 	./gui/gui_camera/
 	./gui/gui_object_x/
@@ -144,7 +145,9 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_new.c
 	./gui/gui/gui_delete.c
 	./gui/gui/gui_load.c
-	./gui/gui/gui_loop.c gui/gui/gui_render.c)
+	./gui/gui/gui_loop.c
+	./gui/gui/gui_render.c
+	./gui/gui/gui_resize_x.c)
 
 set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_new.c
@@ -159,6 +162,8 @@ set(SOURCE_GUI_QUEUE
 set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
 	./gui/gui_entry/gui_entry_get_x.c)
+
+set(SOURCE_GUI_CONTROL gui/gui_control/gui_control_x.c)
 
 set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_new.c
@@ -255,7 +260,8 @@ set(SOURCE_GUI_SETTINGS
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c
-	./gui/gui_image/gui_image_delete.c)
+	./gui/gui_image/gui_image_delete.c
+	./gui/gui_image/gui_image_allocate.c)
 
 set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_exit.c
@@ -266,7 +272,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_edit_remove.c
 	./gui/gui_signal_x/gui_signal_scene_add_type.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
-	./gui/gui_signal_x/gui_signal_image_click.c
+	./gui/gui_signal_x/gui_signal_image_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_reset.c
 	./gui/gui_signal_x/gui_signal_scene_edit_apply.c
 	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c
@@ -275,6 +281,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_camera_apply.c
 	./gui/gui_signal_x/gui_signal_camera_reset.c
 	./gui/gui_signal_x/gui_signal_camera_filter_x.c
+	./gui/gui_signal_x/gui_signal_settings_resize.c
 	./gui/gui_signal_x/gui_signal_settings_light.c
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
@@ -300,6 +307,7 @@ set(SOURCE_GUI_SIGNAL_CONNECT_X
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
 	${SOURCE_GUI_QUEUE}
+	${SOURCE_GUI_CONTROL}
 	${SOURCE_GUI_ENTRY}
 	${SOURCE_GUI_PARSER}
 	${SOURCE_GUI_CAMERA}
@@ -368,7 +376,8 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_light_x.c
 	./cl_renderer/object_x/object_mandelbulb.c
 	./cl_renderer/object_x/object_limited.c
-	./cl_renderer/object_x/object_perforated_cube.c cl_renderer/object_x/object_explosion.c)
+	./cl_renderer/object_x/object_perforated_cube.c
+	./cl_renderer/object_x/object_explosion.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -379,7 +388,8 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
 	"cl_renderer/scene/scene_(un)select.c"
-	./cl_renderer/scene/scene_is_valid_x.c cl_renderer/scene/scene_edit_param.c)
+	./cl_renderer/scene/scene_is_valid_x.c
+	./cl_renderer/scene/scene_edit_param.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -391,7 +401,8 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
 	./gui/gui_camera/gui_camera_reset.c
-	./cl_renderer/camera/camera_request_x.c cl_renderer/camera/camera_get_step.c)
+	./cl_renderer/camera/camera_request_x.c
+	./cl_renderer/camera/camera_get_step.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -423,7 +434,8 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
 	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
 	./cl_renderer/cl_renderer/cl_renderer_load.c
-	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c cl_renderer/cl_renderer/cl_renderer_object_move.c)
+	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
+	./cl_renderer/cl_renderer/cl_renderer_object_move.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

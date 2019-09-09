@@ -1,7 +1,7 @@
 #include "cl_renderer.h"
 
 int 				cl_renderer_camera_move
-					(t_cl_renderer *renderer, t_movement movement)
+					(t_cl_renderer *renderer, t_rt_movement movement)
 {
 	RT_F4_API		test;
 

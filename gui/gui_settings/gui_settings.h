@@ -7,13 +7,13 @@
 # include "libft_standart.h"
 # include "rt_assert.h"
 # include "gui_entry.h"
+# include "gui_control.h"
 
 # include <gtk/gtk.h>
 
 typedef struct 		s_gui_setting
 {
-	GtkBox			*control;
-
+	t_gui_control	control;
 	GtkToggleButton	*tracing_rt;
 	GtkToggleButton	*tracing_rm;
 	GtkStack		*stack;

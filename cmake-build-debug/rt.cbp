@@ -69,6 +69,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_control"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
@@ -146,6 +147,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_control"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
@@ -471,6 +473,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_render.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_resize_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
@@ -492,10 +497,16 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_color/gui_color_to_f4.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_control/gui_control_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_entry/gui_entry_get_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_entry/gui_entry_set_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_allocate.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c">
@@ -768,7 +779,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_image_click.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_image_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
@@ -829,6 +840,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_resize.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_tracing_x.c">

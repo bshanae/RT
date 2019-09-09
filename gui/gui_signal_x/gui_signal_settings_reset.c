@@ -6,6 +6,12 @@ void 				gui_signal_settings_reset
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui_settings_reset(gui->settings, &gui->renderer->data.settings);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->settings->control), 0.);
+	if (gui->resize_in_process == rt_true)
+	{
+		gtk_image_set_from_pixbuf(gui->image->image, gui->image->gdk_buffer);
+		gui_resize_finish(gui);
+	}
+	else
+		gui_settings_reset(gui->settings, &gui->renderer->data.settings);
+	gui_control_hide(&gui->settings->control);
 }

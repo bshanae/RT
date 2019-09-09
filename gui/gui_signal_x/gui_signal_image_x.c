@@ -51,3 +51,22 @@ gboolean 			gui_signal_image_click
 	}
 	return (TRUE);
 }
+
+gboolean			gui_signal_image_draw
+					(GtkWidget *widget, void *cairo, gpointer ptr)
+{
+	t_gui			*gui;
+	GtkAllocation	allocation;
+
+	gui = (t_gui *)ptr;
+
+	if (gui->image->resize_request == rt_false)
+		return (FALSE);
+	gtk_widget_get_allocation(widget, &allocation);
+	gui->image->width = allocation.width;
+	gui->image->height = allocation.height;
+	gui_image_allocate(gui->image);
+	gui->image->resize_request = rt_false;
+	gui_resize_finish(gui);
+	return (FALSE);
+}

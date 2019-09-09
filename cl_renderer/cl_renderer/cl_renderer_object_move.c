@@ -1,7 +1,7 @@
 #include "cl_renderer.h"
 
 void				cl_renderer_object_move
-					(t_cl_renderer *renderer, t_movement movement)
+					(t_cl_renderer *renderer, t_rt_movement movement)
 {
 	t_object		*object;
 	u_int			flag;

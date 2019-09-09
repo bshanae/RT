@@ -1,12 +1,14 @@
 #include "gui_settings.h"
 
-t_gui_settings		*gui_settings_new(GtkBuilder *builder)
+t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 {
-	t_gui_settings	*new;
+	t_gui_settings		*new;
+	t_gui_init_control	init;
 
 	printf("GUI : Initializing settings\n");
 	new = malloc(sizeof(t_gui_settings));
-	new->control = RT_GUI_GET(builder, "settings_control");
+	ft_strcpy(init.stack, "settings_control");
+	new->control = gui_control_init(&init, builder);
 	new->tracing_rt = RT_GUI_GET(builder, "settings_tracing_rt");
 	new->tracing_rm = RT_GUI_GET(builder, "settings_tracing_rm");
 	new->stack = RT_GUI_GET(builder, "settings_stack");

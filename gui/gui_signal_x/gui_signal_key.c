@@ -2,7 +2,7 @@
 
 static int			try_move_camera(t_gui *gui, int key)
 {
-	t_movement		movement;
+	t_rt_movement		movement;
 
 	if (key == GDK_KEY_a || key == GDK_KEY_Cyrillic_ef)
 		movement = rt_movement_left;
