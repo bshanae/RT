@@ -8,7 +8,8 @@ void 				gui_settings_show
 	gui_entry_set_i(gui->rm_steps, settings->rm_step_limit);
 	gui_entry_set_f(gui->rm_part, settings->rm_step_part);
 	gui_entry_set_i(gui->rm_distance, settings->rm_max_distance);
-	RT_ASSERT((settings->light_basic && settings->light_area) != 1);
+	rt_assert_critical(!(settings->light_basic && settings->light_area),
+		"GUI Settings : Invalid settings");
 	gtk_toggle_button_set_active(gui->light_basic, settings->light_basic);
 	gtk_toggle_button_set_active(gui->light_area, settings->light_area);
 	gui_entry_set_i(gui->pt_samples, settings->sample_limit);

@@ -10,5 +10,5 @@ void				cl_args_list_write(t_cl_arg_list *list, int i)
 		return ;
 	error = clEnqueueWriteBuffer(list->queue, arg->device,
 		CL_TRUE, 0, arg->size, arg->host, 0, NULL, NULL);
-	RT_ASSERT(error == 0)
+	rt_assert(error == 0, "Arg List : Writing error");
 }

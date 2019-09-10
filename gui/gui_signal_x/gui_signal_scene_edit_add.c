@@ -5,8 +5,6 @@ void				gui_signal_scene_edit_add
 {
 	t_gui			*gui;
 	int				response;
-	GtkTreeIter		iter;
-	t_object		*new_object;
 
 	gui = (t_gui *)ptr;
 	gtk_entry_set_placeholder_text(gui->scene->add->name,
@@ -16,16 +14,8 @@ void				gui_signal_scene_edit_add
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
 	{
-		new_object = gui->renderer->data.scene->objects +
-			gui->renderer->data.scene->objects_length - 1;
-		gtk_list_store_append(gui->scene->edit->list, &iter);
-		gtk_list_store_set(
-			gui->scene->edit->list, &iter,
-			scene_edit_object_id, new_object->id,
-			scene_edit_object_name, new_object->name,
-			// todo add icon
-			scene_edit_type_id, new_object->type,
-			-1);
+		gui_scene_common_update_all(gui->scene->common,
+			gui->renderer->data.scene, gui->renderer->data.settings.rm_mod);
 		cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 		cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 		gui_queue_push(gui->queue);

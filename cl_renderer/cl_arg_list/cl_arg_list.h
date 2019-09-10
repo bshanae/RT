@@ -4,7 +4,7 @@
 # include "rt_control.h"
 # include "rt_parameters.h"
 
-# include "rt_assert.h"
+# include "error_framework.h"
 # include "cl_arg.h"
 
 # include <stdio.h>

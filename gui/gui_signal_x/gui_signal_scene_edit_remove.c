@@ -13,10 +13,10 @@ void					gui_signal_scene_edit_remove
 	gtk_widget_hide(GTK_WIDGET(gui->scene->edit->remove_dialog));
 	if (response != GTK_RESPONSE_YES)
 		return ;
-	if (gtk_list_store_iter_is_valid(edit->list, &edit->iter))
+	if (gtk_list_store_iter_is_valid(edit->common->full, &edit->iter))
 	{
 		scene_remove_object(gui->renderer->data.scene, edit->current_id);
-		gtk_list_store_remove(edit->list, &edit->iter);
+		gtk_list_store_remove(edit->common->full, &edit->iter);
 	}
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);

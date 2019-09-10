@@ -71,6 +71,7 @@ endif ()
 
 include_directories(
 	../21_libft/includes/
+	./error_framework/
 	./parameters/
 	./gui/gui/
 	./gui/gui_queue/
@@ -81,6 +82,7 @@ include_directories(
 	./gui/gui_object_x/
 	./gui/gui_color/
 	./gui/gui_material/
+	./gui/gui_scene_common/
 	./gui/gui_scene_edit/
 	./gui/gui_scene_add/
 	./gui/object_add/
@@ -99,7 +101,6 @@ include_directories(
 	./cl_renderer/camera/
 	./cl_renderer/ray/
 	./cl_renderer/intersection/
-	./cl_renderer/rt_assert
 	./cl_renderer/material
 	./cl_renderer/cl_program/
 	./cl_renderer/cl_arg_list/
@@ -138,13 +139,17 @@ endif ()
 
 link_libraries("ft")
 
+set(SOURCE_ERROR_FRAMEWORK
+	./error_framework/rt_raise_x.c
+	./error_framework/rt_assert_x.c)
+
 set(SOURCE_MAIN
 	./main.c)
 
 set(SOURCE_GUI_GUI
 	./gui/gui/gui_new.c
 	./gui/gui/gui_delete.c
-	./gui/gui/gui_load.c
+	./gui/gui/gui_update.c
 	./gui/gui/gui_loop.c
 	./gui/gui/gui_render.c
 	./gui/gui/gui_resize_x.c)
@@ -193,7 +198,8 @@ set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_torus_x.c
 	./gui/gui_object_x/gui_object_mandelbulb_x.c
 	./gui/gui_object_x/gui_object_julia_x.c
-	./cl_renderer/object_x/object_csg.c cl_renderer/object/object_flag_get.c)
+	./cl_renderer/object_x/object_csg.c
+	./cl_renderer/object/object_flag_get.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
@@ -204,10 +210,15 @@ set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_get.c
 	./gui/gui_material/gui_material_set.c)
 
+set(SOURCE_GUI_SCENE_COMMON
+	./gui/gui_scene_common/gui_scene_common_new.c
+	./gui/gui_scene_common/gui_scene_common_delete.c
+	./gui/gui_scene_common/gui_scene_common_gen_name.c
+	./gui/gui_scene_common/gui_scene_common_update_x.c)
+
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
 	./gui/gui_scene_edit/gui_scene_edit_delete.c
-	./gui/gui_scene_edit/gui_scene_edit_update.c
 	./gui/gui_scene_edit/gui_scene_edit_gen_name.c
 	./gui/gui_scene_edit/gui_scene_edit_show.c
 	./gui/gui_scene_edit/gui_scene_edit_init_sphere.c
@@ -314,6 +325,7 @@ set(SOURCE_GUI
 	${SOURCE_GUI_OBJECT_X}
 	${SOURCE_GUI_COLOR}
 	${SOURCE_GUI_MATERIAL}
+	${SOURCE_GUI_SCENE_COMMON}
 	${SOURCE_GUI_SCENE_EDIT}
 	${SOURCE_GUI_SCENE_ADD}
 	${SOURCE_GUI_SCENE}
@@ -453,6 +465,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_RENDERER_})
 
 add_executable(rt
+	${SOURCE_ERROR_FRAMEWORK}
 	${SOURCE_MAIN}
 	${SOURCE_GUI}
 	${SOURCE_RENDERER})

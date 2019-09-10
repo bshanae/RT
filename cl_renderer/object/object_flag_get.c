@@ -1,6 +1,6 @@
 #include "object_interaction.h"
 
-static void 		static_init(u_int *data)
+static void 		static_init_a(u_int *data)
 {
 	data[object_type_light_ambient] = RT_OBJECT_RT | RT_OBJECT_MOVE_A;
 	data[object_type_light_point] = RT_OBJECT_RT | RT_OBJECT_MOVE_A;
@@ -21,6 +21,17 @@ static void 		static_init(u_int *data)
 	data[object_type_csg] = RT_OBJECT_RM | RT_OBJECT_MOVE_NONE;
 }
 
+static void 		static_init_b(u_int *data)
+{
+	data[object_type_sphere] |= RT_OBJECT_LIMITABLE;
+	data[object_type_plane] |= RT_OBJECT_LIMITING;
+	data[object_type_sphere] |= RT_OBJECT_CSG;
+	data[object_type_plane] |= RT_OBJECT_CSG;
+	data[object_type_torus] |= RT_OBJECT_CSG;
+	data[object_type_explosion] |= RT_OBJECT_CSG;
+}
+
+
 u_int 				object_flag_get(t_object *object)
 {
 	static u_int 	data[object_type_end];
@@ -28,7 +39,8 @@ u_int 				object_flag_get(t_object *object)
 
 	if (!is_initialized)
 	{
-		static_init(data);
+		static_init_a(data);
+		static_init_b(data);
 		is_initialized = 1;
 	}
 	return (data[object->type]);

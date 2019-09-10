@@ -12,7 +12,7 @@ void 				gui_signal_scene_edit_select
 		&model, &gui->scene->edit->iter))
 		return ;
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
-		scene_edit_object_id, &gui->scene->edit->current_id ,-1);
+		gui_scene_column_id, &gui->scene->edit->current_id ,-1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
 	gui_control_hide(&gui->scene->edit->control);

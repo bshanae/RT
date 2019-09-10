@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Users/ashari/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2445,6 +2445,60 @@ cl_renderer/texture/texture_iter.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.s
 .PHONY : cl_renderer/texture/texture_iter.c.s
 
+error_framework/rt_assert_x.o: error_framework/rt_assert_x.c.o
+
+.PHONY : error_framework/rt_assert_x.o
+
+# target to build an object file
+error_framework/rt_assert_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o
+.PHONY : error_framework/rt_assert_x.c.o
+
+error_framework/rt_assert_x.i: error_framework/rt_assert_x.c.i
+
+.PHONY : error_framework/rt_assert_x.i
+
+# target to preprocess a source file
+error_framework/rt_assert_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_assert_x.c.i
+.PHONY : error_framework/rt_assert_x.c.i
+
+error_framework/rt_assert_x.s: error_framework/rt_assert_x.c.s
+
+.PHONY : error_framework/rt_assert_x.s
+
+# target to generate assembly for a file
+error_framework/rt_assert_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_assert_x.c.s
+.PHONY : error_framework/rt_assert_x.c.s
+
+error_framework/rt_raise_x.o: error_framework/rt_raise_x.c.o
+
+.PHONY : error_framework/rt_raise_x.o
+
+# target to build an object file
+error_framework/rt_raise_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o
+.PHONY : error_framework/rt_raise_x.c.o
+
+error_framework/rt_raise_x.i: error_framework/rt_raise_x.c.i
+
+.PHONY : error_framework/rt_raise_x.i
+
+# target to preprocess a source file
+error_framework/rt_raise_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_raise_x.c.i
+.PHONY : error_framework/rt_raise_x.c.i
+
+error_framework/rt_raise_x.s: error_framework/rt_raise_x.c.s
+
+.PHONY : error_framework/rt_raise_x.s
+
+# target to generate assembly for a file
+error_framework/rt_raise_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_raise_x.c.s
+.PHONY : error_framework/rt_raise_x.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -2471,33 +2525,6 @@ gui/gui/gui_delete.s: gui/gui/gui_delete.c.s
 gui/gui/gui_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_delete.c.s
 .PHONY : gui/gui/gui_delete.c.s
-
-gui/gui/gui_load.o: gui/gui/gui_load.c.o
-
-.PHONY : gui/gui/gui_load.o
-
-# target to build an object file
-gui/gui/gui_load.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.o
-.PHONY : gui/gui/gui_load.c.o
-
-gui/gui/gui_load.i: gui/gui/gui_load.c.i
-
-.PHONY : gui/gui/gui_load.i
-
-# target to preprocess a source file
-gui/gui/gui_load.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.i
-.PHONY : gui/gui/gui_load.c.i
-
-gui/gui/gui_load.s: gui/gui/gui_load.c.s
-
-.PHONY : gui/gui/gui_load.s
-
-# target to generate assembly for a file
-gui/gui/gui_load.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_load.c.s
-.PHONY : gui/gui/gui_load.c.s
 
 gui/gui/gui_loop.o: gui/gui/gui_loop.c.o
 
@@ -2606,6 +2633,33 @@ gui/gui/gui_resize_x.s: gui/gui/gui_resize_x.c.s
 gui/gui/gui_resize_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.s
 .PHONY : gui/gui/gui_resize_x.c.s
+
+gui/gui/gui_update.o: gui/gui/gui_update.c.o
+
+.PHONY : gui/gui/gui_update.o
+
+# target to build an object file
+gui/gui/gui_update.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_update.c.o
+.PHONY : gui/gui/gui_update.c.o
+
+gui/gui/gui_update.i: gui/gui/gui_update.c.i
+
+.PHONY : gui/gui/gui_update.i
+
+# target to preprocess a source file
+gui/gui/gui_update.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_update.c.i
+.PHONY : gui/gui/gui_update.c.i
+
+gui/gui/gui_update.s: gui/gui/gui_update.c.s
+
+.PHONY : gui/gui/gui_update.s
+
+# target to generate assembly for a file
+gui/gui/gui_update.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_update.c.s
+.PHONY : gui/gui/gui_update.c.s
 
 gui/gui_camera/gui_camera_apply.o: gui/gui_camera/gui_camera_apply.c.o
 
@@ -4254,6 +4308,114 @@ gui/gui_scene_add/gui_scene_add_update.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_update.c.s
 
+gui/gui_scene_common/gui_scene_common_delete.o: gui/gui_scene_common/gui_scene_common_delete.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_delete.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.c.o
+
+gui/gui_scene_common/gui_scene_common_delete.i: gui/gui_scene_common/gui_scene_common_delete.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_delete.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.c.i
+
+gui/gui_scene_common/gui_scene_common_delete.s: gui/gui_scene_common/gui_scene_common_delete.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_delete.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_delete.c.s
+
+gui/gui_scene_common/gui_scene_common_gen_name.o: gui/gui_scene_common/gui_scene_common_gen_name.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_gen_name.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.c.o
+
+gui/gui_scene_common/gui_scene_common_gen_name.i: gui/gui_scene_common/gui_scene_common_gen_name.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_gen_name.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.c.i
+
+gui/gui_scene_common/gui_scene_common_gen_name.s: gui/gui_scene_common/gui_scene_common_gen_name.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_gen_name.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_gen_name.c.s
+
+gui/gui_scene_common/gui_scene_common_new.o: gui/gui_scene_common/gui_scene_common_new.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_new.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_new.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_new.c.o
+
+gui/gui_scene_common/gui_scene_common_new.i: gui/gui_scene_common/gui_scene_common_new.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_new.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_new.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_new.c.i
+
+gui/gui_scene_common/gui_scene_common_new.s: gui/gui_scene_common/gui_scene_common_new.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_new.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_new.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_new.c.s
+
+gui/gui_scene_common/gui_scene_common_update_x.o: gui/gui_scene_common/gui_scene_common_update_x.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_update_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.c.o
+
+gui/gui_scene_common/gui_scene_common_update_x.i: gui/gui_scene_common/gui_scene_common_update_x.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_update_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.c.i
+
+gui/gui_scene_common/gui_scene_common_update_x.s: gui/gui_scene_common/gui_scene_common_update_x.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_update_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x.c.s
+
 gui/gui_scene_edit/gui_scene_edit_apply.o: gui/gui_scene_edit/gui_scene_edit_apply.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_apply.o
@@ -4766,33 +4928,6 @@ gui/gui_scene_edit/gui_scene_edit_show.s: gui/gui_scene_edit/gui_scene_edit_show
 gui/gui_scene_edit/gui_scene_edit_show.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_show.c.s
-
-gui/gui_scene_edit/gui_scene_edit_update.o: gui/gui_scene_edit/gui_scene_edit_update.c.o
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.o
-
-# target to build an object file
-gui/gui_scene_edit/gui_scene_edit_update.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.o
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.c.o
-
-gui/gui_scene_edit/gui_scene_edit_update.i: gui/gui_scene_edit/gui_scene_edit_update.c.i
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.i
-
-# target to preprocess a source file
-gui/gui_scene_edit/gui_scene_edit_update.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.i
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.c.i
-
-gui/gui_scene_edit/gui_scene_edit_update.s: gui/gui_scene_edit/gui_scene_edit_update.c.s
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.s
-
-# target to generate assembly for a file
-gui/gui_scene_edit/gui_scene_edit_update.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_update.c.s
-.PHONY : gui/gui_scene_edit/gui_scene_edit_update.c.s
 
 gui/gui_settings/gui_settings_apply.o: gui/gui_settings/gui_settings_apply.c.o
 
@@ -6249,12 +6384,15 @@ help:
 	@echo "... cl_renderer/texture/texture_iter.o"
 	@echo "... cl_renderer/texture/texture_iter.i"
 	@echo "... cl_renderer/texture/texture_iter.s"
+	@echo "... error_framework/rt_assert_x.o"
+	@echo "... error_framework/rt_assert_x.i"
+	@echo "... error_framework/rt_assert_x.s"
+	@echo "... error_framework/rt_raise_x.o"
+	@echo "... error_framework/rt_raise_x.i"
+	@echo "... error_framework/rt_raise_x.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
-	@echo "... gui/gui/gui_load.o"
-	@echo "... gui/gui/gui_load.i"
-	@echo "... gui/gui/gui_load.s"
 	@echo "... gui/gui/gui_loop.o"
 	@echo "... gui/gui/gui_loop.i"
 	@echo "... gui/gui/gui_loop.s"
@@ -6267,6 +6405,9 @@ help:
 	@echo "... gui/gui/gui_resize_x.o"
 	@echo "... gui/gui/gui_resize_x.i"
 	@echo "... gui/gui/gui_resize_x.s"
+	@echo "... gui/gui/gui_update.o"
+	@echo "... gui/gui/gui_update.i"
+	@echo "... gui/gui/gui_update.s"
 	@echo "... gui/gui_camera/gui_camera_apply.o"
 	@echo "... gui/gui_camera/gui_camera_apply.i"
 	@echo "... gui/gui_camera/gui_camera_apply.s"
@@ -6450,6 +6591,18 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_update.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_update.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_update.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_delete.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_delete.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_delete.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_new.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_new.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_new.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.s"
@@ -6507,9 +6660,6 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.s"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_update.o"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_update.i"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_update.s"
 	@echo "... gui/gui_settings/gui_settings_apply.o"
 	@echo "... gui/gui_settings/gui_settings_apply.i"
 	@echo "... gui/gui_settings/gui_settings_apply.s"

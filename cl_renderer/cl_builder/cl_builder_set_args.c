@@ -10,7 +10,7 @@ void				cl_builder_set_args
 	{
 		builder->error = clSetKernelArg(builder->kernel,
 			(u_long)i, sizeof(cl_mem), &list->array[i].device);
-		RT_ASSERT(builder->error == 0)
+		rt_assert_critical(builder->error == 0, "Arg List : Arg error");
 		i++;
 	}
 }

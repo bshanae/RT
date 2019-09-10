@@ -18,7 +18,7 @@ void				cl_program_concat(t_cl_program *program, CHAR_REF file)
 	ft_strcat(file_full, file);
 	fd = open(file_full, O_RDONLY);
 
-	RT_ASSERT(fd != -1)
+	rt_assert_critical(fd != -1, "Builder : Invalid file");
 	while (1)
 	{
 		if ((program->length + 64.) / program->capacity > 0.5)

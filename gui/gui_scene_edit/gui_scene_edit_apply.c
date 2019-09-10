@@ -3,9 +3,11 @@
 void 				gui_scene_edit_apply
 					(t_gui_scene_edit *edit, t_object* object)
 {
+	rt_assert_critical(edit->common != NULL,
+		"scene_add doesn't has object list");
 	ft_strcpy(object->name, gui_entry_get_str(edit->name));
-	gtk_list_store_set(edit->list, &edit->iter,
-		scene_edit_object_name, object->name, -1);
+	gtk_list_store_set(edit->common->full, &edit->iter,
+		gui_scene_column_name, object->name, -1);
 	if (object->type == object_type_light_point)
 		gui_object_light_point_set(&edit->light_point, object);
 	else if (object->type == object_type_light_direct)

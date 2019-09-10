@@ -5,6 +5,7 @@
 # include "rt_float.h"
 
 # include "libft_standart.h"
+# include "error_framework.h"
 # include "f4.h"
 # include "ray.h"
 

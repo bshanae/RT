@@ -44,7 +44,8 @@ int					main(int argc, char **argv)
 	gui->renderer->data.camera->rotation.y = -1.6;
 	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);
-	RT_ASSERT(scene_is_valid_content(gui->renderer->data.scene))
+	rt_assert_critical(scene_is_valid_content(gui->renderer->data.scene),
+		"Main : Scene is not valid");
     scene_update(gui->renderer->data.scene);
 	gui_update(gui);
 	gui_loop(gui);

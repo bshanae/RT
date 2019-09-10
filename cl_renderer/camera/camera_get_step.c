@@ -1,7 +1,5 @@
 #include "camera.h"
 
-#include "rt_assert.h"
-
 RT_F4_API			camera_get_step(t_camera *camera, t_rt_movement movement)
 {
 	if (movement == rt_movement_left)
@@ -16,5 +14,6 @@ RT_F4_API			camera_get_step(t_camera *camera, t_rt_movement movement)
 		return (f4_mul(camera->axis_z, -1.f));
 	else if (movement == rt_movement_backward)
 		return (f4_mul(camera->axis_z, 1.f));
-	RT_ASSERT(0)
+	rt_assert(0, "Camera : Unknown movement type");
+	return ((RT_F4_API){0., 0., 0., 0.});
 }

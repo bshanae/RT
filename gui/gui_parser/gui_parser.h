@@ -4,7 +4,7 @@
 # include "rt_parameters.h"
 # include "rt_sources_gui.h"
 
-# include "rt_assert.h"
+# include "error_framework.h"
 
 # include <gtk/gtk.h>
 # include <dirent.h>
@@ -12,7 +12,6 @@
 typedef struct 				s_gui_parser
 {
 	GtkListStore			*list;
-	GtkTreeView				*tree;
 	GtkTreeSelection		*selection;
 	GtkButton				*load;
 	GtkFileChooserDialog	*dialog;

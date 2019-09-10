@@ -10,7 +10,8 @@ void 				gui_camera_show(t_gui_camera *gui, const t_camera *camera)
 	gui_entry_set_f(gui->rotation_y, camera->rotation.y);
 	gui_entry_set_f(gui->rotation_z, camera->rotation.z);
 	gtk_switch_set_state(gui->antialiasing, camera->filter_antialiasing);
-	RT_ASSERT((camera->filter_cartoon && camera->filter_sepia) != 1);
+	rt_assert_critical(!(camera->filter_cartoon && camera->filter_sepia),
+		"GUI Camera : Invalid filters");
 	gtk_toggle_button_set_active(gui->filter_none,
 		!(camera->filter_cartoon && camera->filter_sepia));
 	gtk_toggle_button_set_active(gui->filter_sepia, camera->filter_sepia);

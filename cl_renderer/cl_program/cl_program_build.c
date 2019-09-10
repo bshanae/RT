@@ -6,7 +6,7 @@ int					cl_program_build
 	program->buffer[program->length] = '\0';
 	program->program = clCreateProgramWithSource(context, 1,
 		(const char **)&program->buffer, &program->length, &program->error);
-	RT_ASSERT(program->error == 0)
+	rt_assert_critical(program->error == 0, "Builder : Program error");
 	program->error =
 		clBuildProgram(program->program, 0, NULL, flags, NULL, NULL);
 	return (program->error != 0);

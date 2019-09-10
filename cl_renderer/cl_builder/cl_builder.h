@@ -5,7 +5,7 @@
 # include "rt_cl_include.h"
 # include "rt_sources_cl.h"
 
-# include "rt_assert.h"
+# include "error_framework.h"
 # include "cl_program.h"
 # include "cl_arg_list.h"
 
