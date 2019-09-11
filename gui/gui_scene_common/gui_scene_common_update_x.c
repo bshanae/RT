@@ -2,9 +2,11 @@
 
 static t_rt_bool	static_is_current_mod(int rm_mod, t_object *object)
 {
-	if (!rm_mod)
-		return (object_flag_get(object) & RT_OBJECT_RT);
-	return (object_flag_get(object) & RT_OBJECT_RM);
+	if (!rm_mod && (object_flag_get(object) & RT_OBJECT_RT))
+		return (rt_true);
+	if (rm_mod && (object_flag_get(object) & RT_OBJECT_RM))
+		return (rt_true);
+	return (rt_false);
 }
 
 void 				gui_scene_common_update_full
@@ -51,7 +53,7 @@ void				gui_scene_common_update_limited
 		}
 		else if (object_flag_get(scene->objects + i) & RT_OBJECT_LIMITING)
 		{
-			gtk_list_store_append(gui->limited_main, &iter);
+			gtk_list_store_append(gui->limited_limit, &iter);
 			gtk_list_store_set(gui->limited_limit, &iter,
 				gui_scene_column_id, scene->objects[i].id,
 				gui_scene_column_name, scene->objects[i].name, -1);
@@ -88,6 +90,6 @@ void 				gui_scene_common_update_all
 					(t_gui_scene_common *gui, t_scene *scene, int rm_mod)
 {
 	gui_scene_common_update_full(gui, scene, rm_mod);
-//	gui_scene_common_update_limited(gui, scene);
-//	gui_scene_common_update_csg(gui, scene);
+	gui_scene_common_update_limited(gui, scene);
+	gui_scene_common_update_csg(gui, scene);
 }

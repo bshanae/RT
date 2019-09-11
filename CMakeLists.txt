@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX OFF)
+set(RT_LINUX ON)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -10,6 +10,10 @@ if (${RT_GTK_PKG})
 endif()
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-deprecated-declarations")
+
+if (${RT_LINUX})
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D RT_OPEN_CL_DISABLED")
+endif ()
 
 set(BREW ~/.brew)
 
@@ -77,6 +81,7 @@ include_directories(
 	./gui/gui_queue/
 	./gui/gui_entry/
 	./gui/gui_control/
+	gui/gui_icon/
 	./gui/gui_parser/
 	./gui/gui_camera/
 	./gui/gui_object_x/
@@ -168,7 +173,10 @@ set(SOURCE_GUI_ENTRY
 	./gui/gui_entry/gui_entry_set_x.c
 	./gui/gui_entry/gui_entry_get_x.c)
 
-set(SOURCE_GUI_CONTROL gui/gui_control/gui_control_x.c)
+set(SOURCE_GUI_CONTROL
+	gui/gui_control/gui_control_x.c)
+
+set(SOURCE_GUI_ICON gui/gui_icon/gui_icon_load.c gui/gui_icon/gui_icon_load_all.c)
 
 set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_new.c
@@ -320,6 +328,7 @@ set(SOURCE_GUI
 	${SOURCE_GUI_QUEUE}
 	${SOURCE_GUI_CONTROL}
 	${SOURCE_GUI_ENTRY}
+	${SOURCE_GUI_ICON}
 	${SOURCE_GUI_PARSER}
 	${SOURCE_GUI_CAMERA}
 	${SOURCE_GUI_OBJECT_X}

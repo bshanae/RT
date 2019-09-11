@@ -13,17 +13,36 @@
       </row>
     </data>
   </object>
-  <object class="GtkListStore" id="scene_csg_list"/>
-  <object class="GtkListStore" id="scene_limited_limit_list"/>
-  <object class="GtkListStore" id="scene_limited_main_list"/>
+  <object class="GtkListStore" id="scene_csg_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="scene_limited_limit_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="scene_limited_main_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkListStore" id="scene_list">
     <columns>
       <!-- column-name object_id -->
       <column type="gint"/>
       <!-- column-name object_name -->
       <column type="gchararray"/>
-      <!-- column-name type_id -->
-      <column type="gint"/>
     </columns>
   </object>
   <object class="GtkWindow" id="window">
@@ -132,10 +151,9 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkImage">
+              <object class="GtkImage" id="icon_parser">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="pixbuf">icons/parcer20x20.png</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
@@ -792,10 +810,9 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkImage">
+              <object class="GtkImage" id="icon_camera">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="pixbuf">icons/icon_camera_20x20.png</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -890,10 +907,10 @@
                                     <property name="margin_right">1</property>
                                     <signal name="clicked" handler="gui_signal_scene_edit_remove" swapped="no"/>
                                     <child>
-                                      <object class="GtkImage">
+                                      <object class="GtkImage" id="icon_minus">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="stock">gtk-remove</property>
+                                        <property name="stock">gtk-missing-image</property>
                                       </object>
                                     </child>
                                   </object>
@@ -910,10 +927,10 @@
                                     <property name="receives_default">True</property>
                                     <signal name="clicked" handler="gui_signal_scene_edit_add" swapped="no"/>
                                     <child>
-                                      <object class="GtkImage">
+                                      <object class="GtkImage" id="icon_plus">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="stock">gtk-add</property>
+                                        <property name="stock">gtk-missing-image</property>
                                       </object>
                                     </child>
                                   </object>
@@ -3740,7 +3757,7 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkImage">
+              <object class="GtkImage" id="icon_scene">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="stock">gtk-missing-image</property>
@@ -4345,10 +4362,10 @@
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkImage">
+              <object class="GtkImage" id="icon_settings">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="pixbuf">icons/icon_setting_20x20.png</property>
+                <property name="stock">gtk-missing-image</property>
               </object>
               <packing>
                 <property name="position">3</property>

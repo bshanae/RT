@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_control/gui_control_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_entry/gui_entry_set_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_entry/gui_entry_get_x.c.o"
+  "CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load.c.o"
+  "CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load_all.c.o"
   "CMakeFiles/rt.dir/gui/gui_parser/gui_parser_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_parser/gui_parser_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_parser/gui_parser_update.c.o"

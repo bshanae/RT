@@ -1,8 +1,7 @@
 #ifndef F2_H
 # define F2_H
 
-# include <OpenCL/opencl.h>
-
+# include "rt_cl_include.h"
 # include "rt_float.h"
 
 double 				f2_dot(RT_F2_API a, RT_F2_API b);

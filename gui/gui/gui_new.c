@@ -19,13 +19,14 @@ t_gui				*gui_new(int *ac, char ***av)
 	static_load_theme(new);
 	new->builder = gtk_builder_new_from_file(RT_SOURCE_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
-//	gtk_window_set_resizable(new->window, FALSE);
+	gtk_window_set_resizable(new->window, FALSE);
 	new->notebook= RT_GUI_GET(new->builder, "notebook");
 	new->notebook_fix[0] = RT_GUI_GET(new->builder, "notebook_fix_0");
 	new->notebook_fix[1] = RT_GUI_GET(new->builder, "notebook_fix_1");
 	new->notebook_fix[2] = RT_GUI_GET(new->builder, "notebook_fix_2");
 	new->notebook_fix[3] = RT_GUI_GET(new->builder, "notebook_fix_3");
 	new->queue = gui_queue_new(new, (void (*)(void *))gui_render);
+	gui_icon_load_all(new->builder);
 	new->parser = gui_parser_new(new->builder);
 	new->camera = gui_camera_new(new->builder);
 	new->scene = gui_scene_new(new->builder);
@@ -35,5 +36,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	gtk_widget_show(GTK_WIDGET(new->window));
 	gtk_widget_grab_focus(GTK_WIDGET(new->image->event_box));
 	printf("GUI : Ready\n\n");
+
+
 	return (new);
 }

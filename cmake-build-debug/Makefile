@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2930,6 +2930,60 @@ gui/gui_entry/gui_entry_set_x.s: gui/gui_entry/gui_entry_set_x.c.s
 gui/gui_entry/gui_entry_set_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_entry/gui_entry_set_x.c.s
 .PHONY : gui/gui_entry/gui_entry_set_x.c.s
+
+gui/gui_icon/gui_icon_load.o: gui/gui_icon/gui_icon_load.c.o
+
+.PHONY : gui/gui_icon/gui_icon_load.o
+
+# target to build an object file
+gui/gui_icon/gui_icon_load.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load.c.o
+.PHONY : gui/gui_icon/gui_icon_load.c.o
+
+gui/gui_icon/gui_icon_load.i: gui/gui_icon/gui_icon_load.c.i
+
+.PHONY : gui/gui_icon/gui_icon_load.i
+
+# target to preprocess a source file
+gui/gui_icon/gui_icon_load.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load.c.i
+.PHONY : gui/gui_icon/gui_icon_load.c.i
+
+gui/gui_icon/gui_icon_load.s: gui/gui_icon/gui_icon_load.c.s
+
+.PHONY : gui/gui_icon/gui_icon_load.s
+
+# target to generate assembly for a file
+gui/gui_icon/gui_icon_load.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load.c.s
+.PHONY : gui/gui_icon/gui_icon_load.c.s
+
+gui/gui_icon/gui_icon_load_all.o: gui/gui_icon/gui_icon_load_all.c.o
+
+.PHONY : gui/gui_icon/gui_icon_load_all.o
+
+# target to build an object file
+gui/gui_icon/gui_icon_load_all.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load_all.c.o
+.PHONY : gui/gui_icon/gui_icon_load_all.c.o
+
+gui/gui_icon/gui_icon_load_all.i: gui/gui_icon/gui_icon_load_all.c.i
+
+.PHONY : gui/gui_icon/gui_icon_load_all.i
+
+# target to preprocess a source file
+gui/gui_icon/gui_icon_load_all.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load_all.c.i
+.PHONY : gui/gui_icon/gui_icon_load_all.c.i
+
+gui/gui_icon/gui_icon_load_all.s: gui/gui_icon/gui_icon_load_all.c.s
+
+.PHONY : gui/gui_icon/gui_icon_load_all.s
+
+# target to generate assembly for a file
+gui/gui_icon/gui_icon_load_all.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_icon/gui_icon_load_all.c.s
+.PHONY : gui/gui_icon/gui_icon_load_all.c.s
 
 gui/gui_image/gui_image_allocate.o: gui/gui_image/gui_image_allocate.c.o
 
@@ -6124,8 +6178,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... rt"
+	@echo "... edit_cache"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -6438,6 +6492,12 @@ help:
 	@echo "... gui/gui_entry/gui_entry_set_x.o"
 	@echo "... gui/gui_entry/gui_entry_set_x.i"
 	@echo "... gui/gui_entry/gui_entry_set_x.s"
+	@echo "... gui/gui_icon/gui_icon_load.o"
+	@echo "... gui/gui_icon/gui_icon_load.i"
+	@echo "... gui/gui_icon/gui_icon_load.s"
+	@echo "... gui/gui_icon/gui_icon_load_all.o"
+	@echo "... gui/gui_icon/gui_icon_load_all.i"
+	@echo "... gui/gui_icon/gui_icon_load_all.s"
 	@echo "... gui/gui_image/gui_image_allocate.o"
 	@echo "... gui/gui_image/gui_image_allocate.i"
 	@echo "... gui/gui_image/gui_image_allocate.s"

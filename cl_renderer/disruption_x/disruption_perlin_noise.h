@@ -1,8 +1,7 @@
 #ifndef DISRUPTION_PERLIN_NOISE_H
 # define DISRUPTION_PERLIN_NOISE_H
 
-#include <OpenCL/opencl.h>
-
+#include "rt_cl_include.h"
 #include "rt_float.h"
 
 # define FRACT(x) x - floor(x)

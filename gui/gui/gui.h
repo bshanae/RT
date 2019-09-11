@@ -5,6 +5,7 @@
 # include "rt_sources_gui.h"
 
 # include "gui_queue.h"
+# include "gui_icon.h"
 # include "gui_parser.h"
 # include "gui_camera.h"
 # include "gui_scene.h"

@@ -1,16 +1,15 @@
 #ifndef TEXTURE_H
 # define TEXTURE_H
 
-# include <stdlib.h>
-# include <OpenCL/opencl.h>
-
 # include "rt_parameters.h"
+# include "rt_cl_include.h"
 # include "rt_float.h"
 # include "rt_sources_texture.h"
 
 # include "libft_standart.h"
 # include "disruption.h"
 
+# include <stdlib.h>
 # include <stb_image.h>
 
 # define TEXTURE_CHANNELS		4
