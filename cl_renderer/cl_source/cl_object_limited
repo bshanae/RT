@@ -1,10 +1,12 @@
 // cl_object_limited ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 				s_object_limited
+typedef struct 			    s_object_limited
 {
-	int 					id_main;
-	int 					id_limit;
-}							t_object_limited;
+	int     			    main_id;
+	int     			    limit_id;
+	char 				    main_name[64];
+	char    			    limit_name[64];
+}						    t_object_limited;
 
 static int					object_limited_intersect(global t_object *object, t_intersection *intersection)
 {
@@ -19,8 +21,12 @@ static int					object_limited_intersect(global t_object *object, t_intersection 
 
 	scene_begin = object - object->id;
 	limited = *(global t_object_limited *)object->data;
-	main = scene_begin + limited.id_main;
-	limit = *(global t_object_plane *)scene_begin[limited.id_limit].data;
+
+	if (limited.main_id == -1 || limited.limit_id == -1)
+	    return (0);
+
+	main = scene_begin + limited.main_id;
+	limit = *(global t_object_plane *)scene_begin[limited.limit_id].data;
 
 	if (main->type == object_type_sphere)
 		object_sphere_intersect_t(main, intersection, main_t);
@@ -35,22 +41,22 @@ static int					object_limited_intersect(global t_object *object, t_intersection 
     if (dot_value[0] > 0 && main_t[0] < limit_t)
     {
         intersection->ray.t = main_t[0];
-        intersection->object_id = limited.id_main;
+        intersection->object_id = limited.main_id;
     }
     else if (dot_value[0] == 0 && dot_value[1] <= 0)
 	{
 		intersection->ray.t = main_t[0];
-		intersection->object_id = limited.id_main;
+		intersection->object_id = limited.main_id;
     }
     else if (dot_value[0] <= 0 && limit_t > main_t[0] && limit_t < main_t[1])
     {
 		intersection->ray.t = limit_t;
-		intersection->object_id = limited.id_limit;
+		intersection->object_id = limited.limit_id;
     }
     else if (dot_value[0] <= 0 && main_t[0] != RT_INFINITY && limit_t < main_t[0])
     {
 		intersection->ray.t = main_t[0];
-		intersection->object_id = limited.id_main;
+		intersection->object_id = limited.main_id;
 	}
 	else
 		return (0);

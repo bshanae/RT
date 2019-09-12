@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(RT_GTK_PKG OFF)
-set(RT_LINUX OFF)
+set(RT_GTK_PKG ON)
+set(RT_LINUX ON)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -146,7 +146,8 @@ link_libraries("ft")
 
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
-	./error_framework/rt_assert_x.c error_framework/rt_malloc.c)
+	./error_framework/rt_assert_x.c
+	./error_framework/rt_malloc.c)
 
 set(SOURCE_MAIN
 	./main.c)
@@ -176,7 +177,9 @@ set(SOURCE_GUI_ENTRY
 set(SOURCE_GUI_CONTROL
 	gui/gui_control/gui_control_x.c)
 
-set(SOURCE_GUI_ICON gui/gui_icon/gui_icon_load.c gui/gui_icon/gui_icon_load_all.c)
+set(SOURCE_GUI_ICON
+	./gui/gui_icon/gui_icon_load.c
+	./gui/gui_icon/gui_icon_load_all.c)
 
 set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_new.c
@@ -194,20 +197,21 @@ set(SOURCE_GUI_CAMERA
 	)
 
 set(SOURCE_GUI_OBJECT_X
+	./gui/gui_object_x/gui_object_light_point_x.c
+	./gui/gui_object_x/gui_object_light_direct_x.c
 	./gui/gui_object_x/gui_object_sphere_x.c
 	./gui/gui_object_x/gui_object_plane_x.c
 	./gui/gui_object_x/gui_object_cone_x.c
 	./gui/gui_object_x/gui_object_cylinder_x.c
-	./gui/gui_object_x/gui_object_light_point_x.c
-	./gui/gui_object_x/gui_object_light_direct_x.c
 	./gui/gui_object_x/gui_object_box_x.c
 	./gui/gui_object_x/gui_object_paraboloid_x.c
 	./gui/gui_object_x/gui_object_moebius_x.c
 	./gui/gui_object_x/gui_object_torus_x.c
 	./gui/gui_object_x/gui_object_mandelbulb_x.c
 	./gui/gui_object_x/gui_object_julia_x.c
-	./cl_renderer/object_x/object_csg.c
-	./cl_renderer/object/object_flag_get.c)
+	./gui/gui_object_x/gui_object_p_cube_x.c
+	./gui/gui_object_x/gui_object_explosion_x.c
+	./gui/gui_object_x/gui_object_pair_x.c)
 
 set(SOURCE_GUI_COLOR
 	./gui/gui_color/gui_color_to_f4.c
@@ -243,7 +247,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
 	./gui/gui_scene_edit/gui_scene_edit_init_julia.c
 	./gui/gui_scene_edit/gui_scene_edit_init_own.c
-	./gui/gui_scene_edit/gui_scene_edit_material_color_x.c)
+	./gui/gui_scene_edit/gui_scene_edit_material_color_x.c gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -382,7 +386,7 @@ set(SOURCE_F4
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
 	./cl_renderer/object/object_translate.c
-	./cl_renderer/object/object_get_flag.c)
+	./cl_renderer/object/object_flag_get.c)
 
 set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_sphere.c
@@ -398,7 +402,8 @@ set(SOURCE_OBJECT_X
 	./cl_renderer/object_x/object_mandelbulb.c
 	./cl_renderer/object_x/object_limited.c
 	./cl_renderer/object_x/object_perforated_cube.c
-	./cl_renderer/object_x/object_explosion.c)
+	./cl_renderer/object_x/object_explosion.c
+	./cl_renderer/object_x/object_csg.c)
 
 set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
@@ -409,8 +414,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
 	"cl_renderer/scene/scene_(un)select.c"
-	./cl_renderer/scene/scene_is_valid_x.c
-	./cl_renderer/scene/scene_edit_param.c)
+	./cl_renderer/scene/scene_edit_param.c cl_renderer/scene/scene_set_x.c cl_renderer/scene/scene_find_by_x.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

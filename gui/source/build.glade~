@@ -13,17 +13,36 @@
       </row>
     </data>
   </object>
-  <object class="GtkListStore" id="scene_csg_list"/>
-  <object class="GtkListStore" id="scene_limited_limit_list"/>
-  <object class="GtkListStore" id="scene_limited_main_list"/>
+  <object class="GtkListStore" id="scene_csg_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="scene_limited_limit_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="scene_limited_main_list">
+    <columns>
+      <!-- column-name object_id -->
+      <column type="gint"/>
+      <!-- column-name object_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkListStore" id="scene_list">
     <columns>
       <!-- column-name object_id -->
       <column type="gint"/>
       <!-- column-name object_name -->
       <column type="gchararray"/>
-      <!-- column-name type_id -->
-      <column type="gint"/>
     </columns>
   </object>
   <object class="GtkWindow" id="window">
@@ -2484,13 +2503,13 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_limited_main">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="model">scene_list</property>
                                                 <property name="has_entry">True</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_limited_main">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
                                                     <property name="width_chars">10</property>
                                                   </object>
@@ -2531,13 +2550,13 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_limited_limit">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="model">scene_list</property>
                                                 <property name="has_entry">True</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_limited_limit">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
                                                     <property name="width_chars">10</property>
                                                   </object>

@@ -12,7 +12,6 @@
 
 # include <stdarg.h>
 
-t_object_flag		object_get_flag(t_object_type type);
 u_int				object_flag_get(t_object *object);
 
 void				object_build(t_object *space, t_object_type type, ...);

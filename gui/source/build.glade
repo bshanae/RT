@@ -2503,13 +2503,13 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_limited_main">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="model">scene_list</property>
                                                 <property name="has_entry">True</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_limited_main">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
                                                     <property name="width_chars">10</property>
                                                   </object>
@@ -2550,13 +2550,13 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_limited_limit">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="model">scene_list</property>
                                                 <property name="has_entry">True</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_limited_limit">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
                                                     <property name="width_chars">10</property>
                                                   </object>
@@ -2577,7 +2577,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page0</property>
+                                        <property name="name">Limited</property>
                                         <property name="title" translatable="yes">page0</property>
                                         <property name="position">10</property>
                                       </packing>
@@ -3189,7 +3189,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page1</property>
+                                        <property name="name">Perforated Cube</property>
                                         <property name="title" translatable="yes">page1</property>
                                         <property name="position">15</property>
                                       </packing>
@@ -3349,7 +3349,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page2</property>
+                                        <property name="name">Explosion</property>
                                         <property name="title" translatable="yes">page2</property>
                                         <property name="position">16</property>
                                       </packing>
@@ -3455,7 +3455,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page3</property>
+                                        <property name="name">CSG</property>
                                         <property name="title" translatable="yes">page3</property>
                                         <property name="position">17</property>
                                       </packing>

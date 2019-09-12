@@ -450,16 +450,18 @@ void 						gui_object_explosion_set
 
 typedef struct 				s_gui_init_pair
 {
-	char 					first[64];
-	char 					second[64];
-	char 					list[64];
+	char					first_combo[64];
+	char					first_list[64];
+	char					second_combo[64];
+	char					second_list[64];
 }							t_gui_init_pair;
 
 typedef struct 				s_gui_object_pair
 {
-	GtkComboBox				*first;
-	GtkComboBox				*second;
-	GtkListStore			*list;
+	GtkComboBox				*first_combo;
+	GtkListStore			*first_list;
+	GtkComboBox				*second_combo;
+	GtkListStore			*second_list;
 }							t_gui_object_pair;
 
 t_gui_object_pair			gui_object_pair_init

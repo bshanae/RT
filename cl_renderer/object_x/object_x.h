@@ -76,8 +76,10 @@ typedef struct			s_object_moebius
 
 typedef struct 			s_object_limited
 {
-	int 				id_main;
-	int 				id_limit;
+	int     			main_id;
+	int     			limit_id;
+	char 				main_name[64];
+	char    			limit_name[64];
 }						t_object_limited;
 
 typedef struct 			s_object_torus
@@ -117,8 +119,18 @@ typedef struct			s_object_explosion
 
 typedef struct 			s_object_csg
 {
-	int     			id_positive;
-	int     			id_negative;
+	int     			positive_id;
+	int     			negative_id;
+	char 				positive_name[64];
+	char    			negative_name[64];
 }						t_object_csg;
+
+typedef struct 			s_object_pair
+{
+	int 				first_id;
+	int 				second_id;
+	char 				first_name[64];
+	char 				second_name[64];
+}						t_object_pair;
 
 #endif

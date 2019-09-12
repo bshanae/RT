@@ -23,12 +23,17 @@ static void 		static_init_a(u_int *data)
 
 static void 		static_init_b(u_int *data)
 {
+	data[object_type_light_ambient] |= RT_OBJECT_LIGHT;
+	data[object_type_light_point] |= RT_OBJECT_LIGHT;
+	data[object_type_light_direct] |= RT_OBJECT_LIGHT;
 	data[object_type_sphere] |= RT_OBJECT_LIMITABLE;
 	data[object_type_plane] |= RT_OBJECT_LIMITING;
 	data[object_type_sphere] |= RT_OBJECT_CSG;
 	data[object_type_plane] |= RT_OBJECT_CSG;
+	data[object_type_limited] |= RT_OBJECT_PAIR;
 	data[object_type_torus] |= RT_OBJECT_CSG;
 	data[object_type_explosion] |= RT_OBJECT_CSG;
+	data[object_type_csg] = RT_OBJECT_PAIR;
 }
 
 

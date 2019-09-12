@@ -7,6 +7,7 @@ void				object_build(
 {
 	va_list		args;
 
+	rt_assert(space != NULL, "Renderer : No memory for object");
 	if (!space)
 		return ;
 	space->material = MATERIAL_WHITE;

@@ -21,8 +21,17 @@ typedef struct		s_scene
 t_scene				*scene_new(void);
 void				scene_delete(t_scene **scene);
 
+t_object			*scene_find_by_id(t_scene *scene, int id);
+t_object			*scene_find_by_name(t_scene *scene, CHAR_REF name);
+
+void				scene_set_id(t_scene *scene);
+void				scene_set_pair(t_scene *scene);
+void				scene_set_light(t_scene *scene);
+void				scene_set_visibility(t_scene *scene);
+
 void 				scene_clear(t_scene *scene);
 void 				scene_update(t_scene *scene);
+
 t_object			*scene_get_space(t_scene *scene);
 void 				scene_remove_object(t_scene *scene, int object_id);
 int 				scene_point_check(t_scene *scene, const RT_F4_API *point);
@@ -38,8 +47,5 @@ typedef enum 		e_scene_param
 }					t_scene_param;
 
 void				scene_edit_param(t_scene *scene, int id, ...);
-
-int					scene_is_valid_id(t_scene *scene, int id);
-int					scene_is_valid_content(t_scene *scene);
 
 #endif

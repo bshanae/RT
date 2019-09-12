@@ -26,9 +26,13 @@ typedef struct 					s_gui_scene_edit
 	t_gui_object_box			box;
 	t_gui_object_paraboloid		paraboloid;
 	t_gui_object_moebius		moebius;
+	t_gui_object_pair			limited;
 	t_gui_object_torus			torus;
 	t_gui_object_mandelbulb		mandelbulb;
 	t_gui_object_julia			julia;
+	t_gui_object_p_cube			p_cube;
+	t_gui_object_explosion		explosion;
+	t_gui_object_pair			csg;
 	GtkWidget					*material_color_box;
 	int 						material_color_silent;
 	t_gui_material				material;
@@ -65,11 +69,19 @@ void 							gui_scene_edit_init_paraboloid
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_moebius
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_init_limited
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_torus
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_mandelbulb
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_julia
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_init_p_cube
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_init_explosion
+								(t_gui_scene_edit *edit, GtkBuilder *builder);
+void 							gui_scene_edit_init_csg
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_material
 								(t_gui_scene_edit *edit, GtkBuilder *builder);

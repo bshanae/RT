@@ -23,7 +23,7 @@ void						gui_object_explosion_get
 	gui_entry_set_f(gui->position_y, data->position.y);
 	gui_entry_set_f(gui->position_z, data->position.z);
 	gui_entry_set_f(gui->radius, data->radius);
-	gui_entry_set_f(gui->noise, data->displacement_value);
+	gui_entry_set_f(gui->noise, data->noise_amplitude);
 
 }
 
@@ -37,5 +37,5 @@ void 						gui_object_explosion_set
 	data->position.y = gui_entry_get_f(gui->position_y);
 	data->position.z = gui_entry_get_f(gui->position_z);
 	data->radius = gui_entry_get_f(gui->radius);
-	data->displacement_value = gui_entry_get_f(gui->noise);
+	data->noise_amplitude = gui_entry_get_f(gui->noise);
 }

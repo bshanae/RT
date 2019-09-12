@@ -14,21 +14,21 @@
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_program/cl_program_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_program/cl_program_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_explosion" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_explosion" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_helper.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_helper.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_parse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_worker.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_worker.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/readfile.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/readfile.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_explosion.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_explosion.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_load.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_load.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_csg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_limited" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_limited" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_flag.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_flag.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_flag_get.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_flag_get.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_get_flag.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_interaction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object/object_translate.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object/object_translate.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_csg.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_csg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_limited.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_limited.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/scene/scene_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/scene/scene_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/texture/texture_disruptions_load.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/texture/texture_disruptions_load.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/scene/scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/scene/scene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/scene/scene_is_valid_x.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/scene/scene_update.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/scene/scene_update.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -98,7 +98,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_build.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_flag_get.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_flag_get.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_get_flag.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object/object_translate.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" afterDir="false" />
@@ -121,7 +121,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_is_valid_x.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" afterDir="false" />
@@ -135,6 +135,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_malloc.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_malloc.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" afterDir="false" />
@@ -279,28 +280,12 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_framework/error_framework.h" beforeDir="false" afterPath="$PROJECT_DIR$/error_framework/error_framework.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_framework/rt_assert_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/error_framework/rt_assert_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_camera/gui_camera_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_camera/gui_camera_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_icon/gui_icon_load_all.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_icon/gui_icon_load_all.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_image/gui_image_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_object_x/gui_object_torus_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_x/gui_object_torus_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_x/gui_object_explosion_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_x/gui_object_explosion_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_object_x/gui_object_pair_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_x/gui_object_pair_x.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui_object_x/gui_object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_object_x/gui_object_x.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_parser/gui_parser_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_parser/gui_parser_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_queue/gui_queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_queue/gui_queue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_queue/gui_queue_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_queue/gui_queue_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene/gui_scene_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene/gui_scene_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_gen_name.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_gen_name.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_settings/gui_settings_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_settings/gui_settings_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/source/icons/minus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/icons/minus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/source/icons/parser.svg" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/icons/parser.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/source/icons/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/icons/plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/source/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/build.glade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -484,6 +469,7 @@
       <workItem from="1568034841650" duration="1535000" />
       <workItem from="1568195051493" duration="3749000" />
       <workItem from="1568271917900" duration="1522000" />
+      <workItem from="1568280833833" duration="3290000" />
     </task>
     <servers />
   </component>
