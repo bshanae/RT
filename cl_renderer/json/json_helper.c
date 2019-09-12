@@ -27,7 +27,7 @@ char	*get_raw(char *json, jsmntok_t token)
 	char		*res;
 	const int	len = token.end - token.start + 1;
 
-	res = malloc(sizeof(char) * (len + 1));
+	res = rt_malloc(sizeof(char) * (len + 1));
 	strlcpy(res, json + token.start, len);
 	res[len] = 0;
 	return (res);
@@ -108,7 +108,7 @@ int		*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 	{
 		if (json[pos->start] != 't' || json[pos->start] != 'f')
 			return (NULL);
-		res = malloc(sizeof(int));
+		res = rt_malloc(sizeof(int));
 		if (!res)
 			return (NULL);
 		*res = (json[pos->start] == 't' ? 1 : 0);
@@ -130,7 +130,7 @@ float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 	if (token_is_number(json, pos))
 	{
 		res = atof(json + pos->start);
-		out_f = malloc(sizeof(float));
+		out_f = rt_malloc(sizeof(float));
 		if (!out_f)
 			return (NULL);
 		*out_f = res;
@@ -145,7 +145,7 @@ int		*get_int_in_onject(char *json, jsmntok_t *object, char *target)
 	float	*val;
 
 	val = get_float_in_object(json, object, target);
-	res = malloc(sizeof(int));
+	res = rt_malloc(sizeof(int));
 	if (!val || !res)
 		return (NULL);
 	*res = (int)*val;
@@ -170,7 +170,7 @@ t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 			res.x = atof(json + pos[1].start);
 			res.y = atof(json + pos[2].start);
 			res.z = atof(json + pos[3].start);
-			out_v = malloc(sizeof(t_vector3));
+			out_v = rt_malloc(sizeof(t_vector3));
 			if (!out_v)
 				return (NULL);
 			*out_v = res;

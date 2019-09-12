@@ -4,6 +4,7 @@
 # include "rt_parameters.h"
 
 # include "libft_standart.h"
+# include "error_framework.h"
 # include "gui_material.h"
 # include "gui_object_x.h"
 # include "object_definition.h"

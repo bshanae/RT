@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+set(RT_GTK_PKG OFF)
+set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -15,15 +15,15 @@ if (${RT_LINUX})
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D RT_OPEN_CL_DISABLED")
 endif ()
 
-set(BREW ~/.brew)
+set(BREW /usr/local)
 
 set(RT_GTK_INCLUDES
 	${BREW}/Cellar/libffi/3.2.1/lib/libffi-3.2.1/include
-	${BREW}/Cellar/gtk+3/3.24.10/include/gtk-3.0
+	${BREW}/Cellar/gtk+3/3.24.11/include/gtk-3.0
 	${BREW}/Cellar/glib/2.60.6/include/gio-unix-2.0
 	${BREW}/Cellar/cairo/1.16.0_2/include/cairo
 	${BREW}/Cellar/libepoxy/1.5.3/include
-	${BREW}/Cellar/pango/1.44.5/include/pango-1.0
+	${BREW}/Cellar/pango/1.44.6/include/pango-1.0
 	${BREW}/Cellar/fribidi/1.0.5/include/fribidi
 	${BREW}/Cellar/harfbuzz/2.6.1/include/harfbuzz
 	${BREW}/Cellar/graphite2/1.3.13/include
@@ -41,8 +41,8 @@ set(RT_GTK_INCLUDES
 	${BREW}/Cellar/pcre/8.43/include)
 
 set(RT_GTK_LIBRARY_DIRS
-	${BREW}/Cellar/gtk+3/3.24.10/lib
-	${BREW}/Cellar/pango/1.44.5/lib
+	${BREW}/Cellar/gtk+3/3.24.11/lib
+	${BREW}/Cellar/pango/1.44.6/lib
 	${BREW}/Cellar/harfbuzz/2.5.3/lib
 	${BREW}/Cellar/atk/2.32.0_1/lib
 	${BREW}/Cellar/cairo/1.16.0_2/lib
@@ -146,7 +146,7 @@ link_libraries("ft")
 
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
-	./error_framework/rt_assert_x.c)
+	./error_framework/rt_assert_x.c error_framework/rt_malloc.c)
 
 set(SOURCE_MAIN
 	./main.c)

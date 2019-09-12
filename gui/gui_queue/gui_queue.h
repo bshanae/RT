@@ -3,6 +3,8 @@
 
 # include "rt_parameters.h"
 
+# include "error_framework.h"
+
 # include <gtk/gtk.h>
 # include <sys/time.h>
 

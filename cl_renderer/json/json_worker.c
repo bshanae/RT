@@ -75,7 +75,7 @@ void				load_scene(void *data, const char *path)
 	res = jsmn_parse(&parser, json, strlen(json), NULL, 1);
 	if (res <= 0)
 		return (static_load_error());
-	tokens = malloc(sizeof(jsmntok_t) * res);
+	tokens = rt_malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
 	jsmn_parse(&parser, json, strlen(json), tokens, res);
 	work_tokens(data, json, tokens);

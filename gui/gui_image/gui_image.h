@@ -1,9 +1,10 @@
 #ifndef GUI_IMAGE_H
 # define GUI_IMAGE_H
 
-# include "libft_standart.h"
 # include "rt_parameters.h"
 
+# include "libft_standart.h"
+# include "error_framework.h"
 # include "color.h"
 
 # include <gtk/gtk.h>

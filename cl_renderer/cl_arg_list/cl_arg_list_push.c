@@ -16,7 +16,7 @@ int					cl_arg_list_push
 	list->array[i].update_need = ptr != NULL;
 	list->array[i].device = clCreateBuffer(list->context,
 		type, size, NULL, &error);
-	RT_ASSERT(error == 0)
+	rt_assert_critical(error == 0, "Arg List : Buffer error");
 	return (i);
 #else
 	return (-1);

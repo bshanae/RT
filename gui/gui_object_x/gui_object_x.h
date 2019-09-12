@@ -303,10 +303,20 @@ void 						gui_object_moebius_set
 
 typedef struct 				s_gui_init_torus
 {
+	char 					position_x[64];
+	char 					position_y[64];
+	char 					position_z[64];
+	char 					width[64];
+	char 					radius[64];
 }							t_gui_init_torus;
 
 typedef struct 				s_gui_object_torus
 {
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*width;
+	GtkEntry				*radius;
 }							t_gui_object_torus;
 
 t_gui_object_torus			gui_object_torus_init
@@ -371,5 +381,92 @@ void						gui_object_julia_get
 							(t_gui_object_julia *gui, t_object *object);
 void 						gui_object_julia_set
 							(t_gui_object_julia *gui, t_object *object);
+
+/*
+********************************************************************************
+**							P_CUBE
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_p_cube
+{
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					iterations[64];
+}							t_gui_init_p_cube;
+
+typedef struct 				s_gui_object_p_cube
+{
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*iterations;
+}							t_gui_object_p_cube;
+
+t_gui_object_p_cube			gui_object_p_cube_init
+							(t_gui_init_p_cube *init, GtkBuilder *builder);
+void						gui_object_p_cube_get
+							(t_gui_object_p_cube *gui, t_object *object);
+void 						gui_object_p_cube_set
+							(t_gui_object_p_cube *gui, t_object *object);
+
+/*
+********************************************************************************
+**							EXPLOSION
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_explosion
+{
+	char					position_x[64];
+	char					position_y[64];
+	char					position_z[64];
+	char					radius[64];
+	char					noise[64];
+}							t_gui_init_explosion;
+
+typedef struct 				s_gui_object_explosion
+{
+	GtkEntry				*position_x;
+	GtkEntry				*position_y;
+	GtkEntry				*position_z;
+	GtkEntry				*radius;
+	GtkEntry				*noise;
+}							t_gui_object_explosion;
+
+t_gui_object_explosion		gui_object_explosion_init
+							(t_gui_init_explosion *init, GtkBuilder *builder);
+void						gui_object_explosion_get
+							(t_gui_object_explosion *gui, t_object *object);
+void 						gui_object_explosion_set
+							(t_gui_object_explosion *gui, t_object *object);
+
+/*
+********************************************************************************
+**							PAIR
+********************************************************************************
+*/
+
+typedef struct 				s_gui_init_pair
+{
+	char 					first[64];
+	char 					second[64];
+	char 					list[64];
+}							t_gui_init_pair;
+
+typedef struct 				s_gui_object_pair
+{
+	GtkComboBox				*first;
+	GtkComboBox				*second;
+	GtkListStore			*list;
+}							t_gui_object_pair;
+
+t_gui_object_pair			gui_object_pair_init
+							(t_gui_init_pair *init, GtkBuilder *builder);
+void						gui_object_pair_get
+							(t_gui_object_pair*gui, t_object *object);
+void 						gui_object_pair_set
+							(t_gui_object_pair *gui, t_object *object);
 
 #endif

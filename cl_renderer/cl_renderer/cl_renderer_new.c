@@ -15,7 +15,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 	cl_renderer_settings_init(&renderer->data.settings);
 	printf("Renderer : Initializing rng seeds\n");
 	i = 0;
-	renderer->data.rng_state = malloc(sizeof(u_long) * renderer->pixel_number);
+	renderer->data.rng_state = rt_malloc(sizeof(u_long) * renderer->pixel_number);
 	srand(21);
 	while (i < renderer->pixel_number)
 		renderer->data.rng_state[i++] = rand();
@@ -50,7 +50,7 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 {
 	t_cl_renderer		*new;
 
-	new = malloc(sizeof(t_cl_renderer));
+	new = rt_malloc(sizeof(t_cl_renderer));
 	new->image = image;
 	new->pixel_number = image->width * image->height;
 #ifndef RT_OPEN_CL_DISABLED

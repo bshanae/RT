@@ -4,7 +4,7 @@ typedef struct			s_object_explosion
 {
 	RT_F4				position;
 	RT_F				radius;
-	RT_F				displacement_value;
+	RT_F				noise_amplitude;
 }						t_object_explosion;
 
 static RT_F				lerp(RT_F f0, RT_F f1, RT_F t)
@@ -76,7 +76,7 @@ static RT_F 			object_explosion_sdf(global t_object *object, t_intersection *int
 	RT_F				displacement;
 
 	data = *(global t_object_explosion *)object->data;
-	displacement = (RT_F)-1. * brownian_motion(intersection->hit * (RT_F)2.) * 1.7;
+	displacement = (RT_F)-1. * brownian_motion(intersection->hit * data.noise_amplitude) * 1.7;
 	intersection->displacement = displacement;
 	return (length(data.position - intersection->hit) - data.radius - displacement);
 }

@@ -112,7 +112,7 @@ typedef struct			s_object_explosion
 {
 	RT_F4_API			position;
 	RT_F				radius;
-	RT_F				displacement_value;
+	RT_F				noise_amplitude;
 }						t_object_explosion;
 
 typedef struct 			s_object_csg

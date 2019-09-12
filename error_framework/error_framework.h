@@ -11,4 +11,6 @@ void 				rt_raise_warning(CHAR_REF message);
 void 				rt_assert(int statement, CHAR_REF message);
 void 				rt_assert_critical(int statement, CHAR_REF message);
 
+void				*rt_malloc(u_long size);
+
 #endif

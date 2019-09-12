@@ -4,7 +4,7 @@ t_camera			*camera_new(INT_REF width, INT_REF height)
 {
 	t_camera		*new;
 
-	new = (t_camera *)malloc(sizeof(t_camera));
+	new = (t_camera *)rt_malloc(sizeof(t_camera));
 	new->position = (RT_F4_API){0., 0., 0.};
 	new->rotation = (RT_F4_API){0., 0., 0.};
 	new->forward =

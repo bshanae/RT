@@ -31,7 +31,7 @@ char				*read_file(const char *path)
 	long	fsize = lseek(fd, 0, SEEK_CUR);
 	lseek(fd, 0, SEEK_SET);
 	
-	char *string = malloc(fsize + 1);
+	char *string = rt_malloc(fsize + 1);
 	if (!string)
 		return (NULL);
 	read(fd, string, fsize);

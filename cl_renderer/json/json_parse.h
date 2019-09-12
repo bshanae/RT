@@ -4,6 +4,7 @@
 # define JSMN_HEADER
 
 # include "libft_ft_printf.h"
+# include "error_framework.h"
 # include "jsmn.h"
 
 # include <stdio.h>

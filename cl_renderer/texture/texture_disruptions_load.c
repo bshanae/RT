@@ -8,6 +8,7 @@ static RT_F4_API	disruption_mod(t_disruption_type type, double x, double y)
 		return (disruption_sine_wave(x, y));
 	else if (type == perlin_noise)
 		return (disruption_perlin_noise(x, y));
+	return ((RT_F4_API){0., 0., 0., 0.});
 }
 
 void				texture_compute_disruption(t_texture *texture, RT_F4_API *pointer, t_disruption_type type)

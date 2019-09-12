@@ -15,7 +15,7 @@ t_gui				*gui_new(int *ac, char ***av)
 
 	gtk_disable_setlocale();
 	gtk_init(ac, av);
-	new = (t_gui *)malloc(sizeof(t_gui));
+	new = (t_gui *)rt_malloc(sizeof(t_gui));
 	static_load_theme(new);
 	new->builder = gtk_builder_new_from_file(RT_SOURCE_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
