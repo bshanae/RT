@@ -16,7 +16,6 @@ void 				gui_scene_common_update_full
 	GtkTreeIter		iter;
 
 	i = 0;
-	gui_scene_common_gen_name(gui, scene->objects + i);
 	gtk_list_store_clear(gui->full);
 	while (i < scene->objects_length)
 	{
@@ -73,8 +72,6 @@ void 				gui_scene_common_update_csg
 	gtk_list_store_clear(gui->csg);
 	while (i < scene->objects_length)
 	{
-		if (!scene->objects[i].name[0])
-			gui_scene_common_gen_name(gui, scene->objects + i);
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_CSG)
 		{
 			gtk_list_store_append(gui->csg, &iter);

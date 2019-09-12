@@ -12,17 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_apply.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_apply.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_framework/rt_raise_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/error_framework/rt_raise_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene/gui_scene_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene/gui_scene_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_apply.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_apply.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/source/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/build.glade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/source/theme_aurora/gtk.css" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/theme_aurora/gtk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_update_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_update_x.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +199,7 @@
       <workItem from="1568034841650" duration="1535000" />
       <workItem from="1568195051493" duration="3749000" />
       <workItem from="1568271917900" duration="1522000" />
-      <workItem from="1568280833833" duration="4063000" />
+      <workItem from="1568280833833" duration="4309000" />
     </task>
     <servers />
   </component>
