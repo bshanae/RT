@@ -4161,8 +4161,6 @@ these are pretty self explicative */
   font-weight: lighter;
 }
 
-
-
 entry
 {
   min-height: 21px;
@@ -4191,8 +4189,9 @@ button
   margin-bottom: 3px;
 }
 
-/*treeview.view*/
-/*{*/
-/*  border-style: dashed;*/
-/*  border-width: 1px;*/
-/*}*/
+grid
+{
+  border-style: dashed;
+  border-width: 1px;
+}
+

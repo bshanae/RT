@@ -862,30 +862,42 @@
                             <property name="margin_bottom">2</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkTreeView" id="scene_edit_view">
-                                <property name="height_request">20</property>
+                              <object class="GtkGrid">
                                 <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="margin_bottom">2</property>
-                                <property name="model">scene_list</property>
-                                <property name="headers_visible">False</property>
-                                <property name="search_column">1</property>
-                                <property name="rubber_banding">True</property>
-                                <child internal-child="selection">
-                                  <object class="GtkTreeSelection" id="scene_edit_selection">
-                                    <signal name="changed" handler="gui_signal_scene_edit_select" swapped="no"/>
-                                  </object>
-                                </child>
+                                <property name="can_focus">False</property>
+                                <property name="row_homogeneous">True</property>
+                                <property name="column_homogeneous">True</property>
                                 <child>
-                                  <object class="GtkTreeViewColumn">
-                                    <property name="title" translatable="yes">column</property>
+                                  <object class="GtkTreeView" id="scene_edit_view">
+                                    <property name="height_request">20</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="margin_bottom">2</property>
+                                    <property name="model">scene_list</property>
+                                    <property name="headers_visible">False</property>
+                                    <property name="search_column">1</property>
+                                    <property name="rubber_banding">True</property>
+                                    <child internal-child="selection">
+                                      <object class="GtkTreeSelection" id="scene_edit_selection">
+                                        <signal name="changed" handler="gui_signal_scene_edit_select" swapped="no"/>
+                                      </object>
+                                    </child>
                                     <child>
-                                      <object class="GtkCellRendererText"/>
-                                      <attributes>
-                                        <attribute name="text">1</attribute>
-                                      </attributes>
+                                      <object class="GtkTreeViewColumn">
+                                        <property name="title" translatable="yes">column</property>
+                                        <child>
+                                          <object class="GtkCellRendererText"/>
+                                          <attributes>
+                                            <attribute name="text">1</attribute>
+                                          </attributes>
+                                        </child>
+                                      </object>
                                     </child>
                                   </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
                                 </child>
                               </object>
                               <packing>
@@ -898,7 +910,7 @@
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_bottom">2</property>
+                                <property name="margin_bottom">4</property>
                                 <child>
                                   <object class="GtkButton">
                                     <property name="visible">True</property>
@@ -2577,7 +2589,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page0</property>
+                                        <property name="name">Limited</property>
                                         <property name="title" translatable="yes">page0</property>
                                         <property name="position">10</property>
                                       </packing>
@@ -3189,7 +3201,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page1</property>
+                                        <property name="name">Perforated Cube</property>
                                         <property name="title" translatable="yes">page1</property>
                                         <property name="position">15</property>
                                       </packing>
@@ -3349,7 +3361,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page2</property>
+                                        <property name="name">Explosion</property>
                                         <property name="title" translatable="yes">page2</property>
                                         <property name="position">16</property>
                                       </packing>
@@ -3455,7 +3467,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">page3</property>
+                                        <property name="name">CSG</property>
                                         <property name="title" translatable="yes">page3</property>
                                         <property name="position">17</property>
                                       </packing>
