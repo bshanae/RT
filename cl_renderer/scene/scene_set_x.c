@@ -12,6 +12,28 @@ void					scene_set_id(t_scene *scene)
 	}
 }
 
+void					scene_set_name(t_scene *scene)
+{
+	int 				i[2];
+
+	i[0] = 0;
+	while (i[0] < scene->objects_length)
+	{
+		i[1] = 0;
+		while (i[1] < scene->objects_length)
+		{
+			if (i[0] != i[1] && !ft_strcmp(scene->objects[i[0]].name,
+				scene->objects[i[1]].name))
+			{
+				rt_assert(0, "Renderer : Identical names");
+				ft_bzero(scene->objects[i[1]].name, RT_CL_OBJECT_NAME_SIZE);
+			}
+			i[1]++;
+		}
+		i[0]++;
+	}
+}
+
 void					scene_set_pair(t_scene *scene)
 {
 	int 				i;

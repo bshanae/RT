@@ -25,6 +25,7 @@ t_object			*scene_find_by_id(t_scene *scene, int id);
 t_object			*scene_find_by_name(t_scene *scene, CHAR_REF name);
 
 void				scene_set_id(t_scene *scene);
+void				scene_set_name(t_scene *scene);
 void				scene_set_pair(t_scene *scene);
 void				scene_set_light(t_scene *scene);
 void				scene_set_visibility(t_scene *scene);

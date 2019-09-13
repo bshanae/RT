@@ -865,6 +865,7 @@
                               <object class="GtkGrid">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
                                 <property name="row_homogeneous">True</property>
                                 <property name="column_homogeneous">True</property>
                                 <child>
@@ -872,7 +873,6 @@
                                     <property name="height_request">20</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="margin_bottom">2</property>
                                     <property name="model">scene_list</property>
                                     <property name="headers_visible">False</property>
                                     <property name="search_column">1</property>
@@ -910,7 +910,7 @@
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_bottom">4</property>
+                                <property name="margin_bottom">2</property>
                                 <child>
                                   <object class="GtkButton">
                                     <property name="visible">True</property>
@@ -2518,8 +2518,9 @@
                                               <object class="GtkComboBox" id="object_edit_limited_main">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_limited_main_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
                                                 <child internal-child="entry">
                                                   <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
@@ -2565,8 +2566,9 @@
                                               <object class="GtkComboBox" id="object_edit_limited_limit">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_limited_limit_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
                                                 <child internal-child="entry">
                                                   <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
@@ -3381,7 +3383,7 @@
                                                 <property name="width_request">77</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">Main</property>
+                                                <property name="label" translatable="yes">Positive</property>
                                                 <attributes>
                                                   <attribute name="style" value="italic"/>
                                                 </attributes>
@@ -3393,13 +3395,14 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_csg_positive">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_csg_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_csg_main">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">True</property>
                                                     <property name="width_chars">10</property>
                                                   </object>
@@ -3440,13 +3443,14 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_csg_negative">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_csg_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_csg_negative">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">True</property>
                                                     <property name="width_chars">10</property>
                                                   </object>

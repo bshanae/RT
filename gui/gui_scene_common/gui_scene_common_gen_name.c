@@ -15,6 +15,11 @@ void				gui_scene_common_gen_name
 		scene->reset_generator = rt_false;
 		return ;
 	}
+	if (!object)
+	{
+		rt_assert(0, "GUI Scene (Name Generator) : Object ptr is NULL");
+		return ;
+	}
 	ft_strcpy(object->name, object_translate(object->type));
 	temp = ft_itoa(id[object->type]++);
 	ft_strcat(object->name, " no. ");

@@ -28,12 +28,20 @@ void 				gui_scene_edit_show
 		gui_object_paraboloid_get(&edit->paraboloid, object);
 	else if (object->type == object_type_moebius)
 		gui_object_moebius_get(&edit->moebius, object);
+	else if (object->type == object_type_limited)
+		gui_object_pair_get(&edit->limited, object);
 	else if (object->type == object_type_torus)
 		gui_object_torus_get(&edit->torus, object);
 	else if (object->type == object_type_mandelbulb)
 		gui_object_mandelbulb_get(&edit->mandelbulb, object);
 	else if (object->type == object_type_julia)
 		gui_object_julia_get(&edit->julia, object);
+	else if (object->type == object_type_perforated_cube)
+		gui_object_p_cube_get(&edit->p_cube, object);
+	else if (object->type == object_type_explosion)
+		gui_object_explosion_get(&edit->explosion, object);
+	else if (object->type == object_type_csg)
+		gui_object_pair_get(&edit->csg, object);
 	else
 		return ;
 	gui_material_get(&edit->material, &object->material);

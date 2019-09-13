@@ -786,8 +786,8 @@ treeview spinbutton:not(.vertical) {
  **************/
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-  min-height: 16px;
-  min-width: 16px; }
+  min-height: 18px;
+  min-width: 22px; }
 combobox button.combo:checked {
   transition: none; }
 combobox button.combo cellview:dir(ltr) {

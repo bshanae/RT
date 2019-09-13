@@ -18,5 +18,4 @@ void 				gui_signal_parser_select
 	ft_strcat(gui->parser->final_path, "/");
 	ft_strcat(gui->parser->final_path, name);
 	gtk_widget_set_opacity(GTK_WIDGET(gui->parser->load), 1.);
-	gtk_button_set_label(gui->parser->dialog_run, "Choose scene file manually");
 }

@@ -2,10 +2,12 @@
 # define GUI_OBJECT_X_H
 
 # include "libft_standart.h"
+# include "error_framework.h"
 # include "gui_entry.h"
 # include "f4.h"
 # include "object_definition.h"
 # include "object_x.h"
+# include "gui_scene_common.h"
 
 # include <gtk/gtk.h>
 

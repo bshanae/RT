@@ -2518,8 +2518,10 @@
                                               <object class="GtkComboBox" id="object_edit_limited_main">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_limited_main_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
+                                                <signal name="changed" handler="gui_signal_scene_edit_combo_changed" swapped="no"/>
                                                 <child internal-child="entry">
                                                   <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
@@ -2565,8 +2567,10 @@
                                               <object class="GtkComboBox" id="object_edit_limited_limit">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_limited_limit_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
+                                                <signal name="changed" handler="gui_signal_scene_edit_combo_changed" swapped="no"/>
                                                 <child internal-child="entry">
                                                   <object class="GtkEntry">
                                                     <property name="can_focus">False</property>
@@ -3381,7 +3385,7 @@
                                                 <property name="width_request">77</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">Main</property>
+                                                <property name="label" translatable="yes">Positive</property>
                                                 <attributes>
                                                   <attribute name="style" value="italic"/>
                                                 </attributes>
@@ -3393,13 +3397,15 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_csg_positive">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_csg_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
+                                                <signal name="changed" handler="gui_signal_scene_edit_combo_changed" swapped="no"/>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_csg_main">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">True</property>
                                                     <property name="width_chars">10</property>
                                                   </object>
@@ -3440,13 +3446,15 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkComboBox">
+                                              <object class="GtkComboBox" id="object_edit_csg_negative">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="model">scene_list</property>
+                                                <property name="model">scene_csg_list</property>
                                                 <property name="has_entry">True</property>
+                                                <property name="entry_text_column">1</property>
+                                                <signal name="changed" handler="gui_signal_scene_edit_combo_changed" swapped="no"/>
                                                 <child internal-child="entry">
-                                                  <object class="GtkEntry" id="object_edit_csg_negative">
+                                                  <object class="GtkEntry">
                                                     <property name="can_focus">True</property>
                                                     <property name="width_chars">10</property>
                                                   </object>

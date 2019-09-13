@@ -14,11 +14,6 @@ typedef struct 				s_gui_parser
 	GtkListStore			*list;
 	GtkTreeSelection		*selection;
 	GtkButton				*load;
-	GtkFileChooserDialog	*dialog;
-	GtkButton				*dialog_run;
-	GtkEntry				*dialog_entry;
-	const char 				*dialog_str_full;
-	const char				*dialog_str_name;
 	char 					final_path[128];
 }							t_gui_parser;
 

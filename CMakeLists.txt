@@ -186,7 +186,6 @@ set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_delete.c
 	./gui/gui_parser/gui_parser_update.c
 	./gui/gui_signal_connect_x/gui_signal_connect_parser.c
-	./gui/gui_signal_x/gui_signal_parser_dialog_x.c
 	./gui/gui_queue/gui_finish.c)
 
 set(SOURCE_GUI_CAMERA
@@ -231,7 +230,6 @@ set(SOURCE_GUI_SCENE_COMMON
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
 	./gui/gui_scene_edit/gui_scene_edit_delete.c
-	./gui/gui_scene_edit/gui_scene_edit_gen_name.c
 	./gui/gui_scene_edit/gui_scene_edit_show.c
 	./gui/gui_scene_edit/gui_scene_edit_init_sphere.c
 	./gui/gui_scene_edit/gui_scene_edit_init_plane.c
@@ -316,7 +314,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

@@ -4632,33 +4632,6 @@ gui/gui_scene_edit/gui_scene_edit_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_delete.c.s
 
-gui/gui_scene_edit/gui_scene_edit_gen_name.o: gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.o
-
-# target to build an object file
-gui/gui_scene_edit/gui_scene_edit_gen_name.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.o
-
-gui/gui_scene_edit/gui_scene_edit_gen_name.i: gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.i
-
-# target to preprocess a source file
-gui/gui_scene_edit/gui_scene_edit_gen_name.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.i
-
-gui/gui_scene_edit/gui_scene_edit_gen_name.s: gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.s
-
-# target to generate assembly for a file
-gui/gui_scene_edit/gui_scene_edit_gen_name.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
-.PHONY : gui/gui_scene_edit/gui_scene_edit_gen_name.c.s
-
 gui/gui_scene_edit/gui_scene_edit_init_box.o: gui/gui_scene_edit/gui_scene_edit_init_box.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_init_box.o
@@ -5820,33 +5793,6 @@ gui/gui_signal_x/gui_signal_notebook_fix.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s
 .PHONY : gui/gui_signal_x/gui_signal_notebook_fix.c.s
 
-gui/gui_signal_x/gui_signal_parser_dialog_x.o: gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_parser_dialog_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.o
-
-gui/gui_signal_x/gui_signal_parser_dialog_x.i: gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_parser_dialog_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.i
-
-gui/gui_signal_x/gui_signal_parser_dialog_x.s: gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_parser_dialog_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
-.PHONY : gui/gui_signal_x/gui_signal_parser_dialog_x.c.s
-
 gui/gui_signal_x/gui_signal_parser_load.o: gui/gui_signal_x/gui_signal_parser_load.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_parser_load.o
@@ -6035,6 +5981,33 @@ gui/gui_signal_x/gui_signal_scene_edit_apply.s: gui/gui_signal_x/gui_signal_scen
 gui/gui_signal_x/gui_signal_scene_edit_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_apply.c.s
 .PHONY : gui/gui_signal_x/gui_signal_scene_edit_apply.c.s
+
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.o: gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.o
+
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.i: gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.i
+
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.s: gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s
 
 gui/gui_signal_x/gui_signal_scene_edit_entry_x.o: gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.o
 
@@ -6897,9 +6870,6 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.s"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.o"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.i"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_gen_name.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_init_box.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_init_box.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_init_box.s"
@@ -7029,9 +6999,6 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.o"
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.i"
 	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.s"
-	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.o"
-	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.i"
-	@echo "... gui/gui_signal_x/gui_signal_parser_dialog_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.o"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.i"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.s"
@@ -7053,6 +7020,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_apply.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_apply.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_apply.s"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.o"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.i"
+	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.s"

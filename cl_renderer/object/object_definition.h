@@ -35,12 +35,12 @@ typedef enum		e_object_flag
 
 typedef struct		s_object
 {
-	char 			name[32];
+	char 			name[RT_CL_OBJECT_NAME_SIZE];
 	int				id;
 	t_object_type	type;
 	int 			texture_id;
 	t_material		material;
-	char			data[RT_CL_OBJECT_CAPACITY];
+	char			data[RT_CL_OBJECT_DATA_SIZE];
 	int 			is_visible;
 	int 			is_selected;
 	int 			is_limited;
