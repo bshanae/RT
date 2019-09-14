@@ -9,7 +9,6 @@ t_gui_camera			*gui_camera_new(GtkBuilder *builder)
 	new = rt_malloc(sizeof(t_gui_camera));
 	ft_strcpy(init.stack, "camera_control");
 	new->control = gui_control_init(&init, builder);
-	new->control_silent = 0;
 	new->position_x = RT_GUI_GET(builder, "camera_position_x");
 	new->position_y = RT_GUI_GET(builder, "camera_position_y");
 	new->position_z = RT_GUI_GET(builder, "camera_position_z");

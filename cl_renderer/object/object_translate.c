@@ -21,7 +21,7 @@ const char 			*object_translate(t_object_type type)
 	else if (type == object_type_paraboloid)
 		return ("Paraboloid");
 	else if (type == object_type_moebius)
-		return ("Moebius Strip");
+		return ("Moebius strip");
 	else if (type == object_type_limited)
 		return ("Limited");
 	else if (type == object_type_torus)

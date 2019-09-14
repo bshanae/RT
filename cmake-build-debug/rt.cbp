@@ -460,6 +460,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/error_framework/rt_malloc.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/error_framework/rt_raise_x.c">
 			<Option target="rt"/>
 		</Unit>
@@ -778,6 +781,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_entry.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_image.c">
 			<Option target="rt"/>
 		</Unit>
@@ -799,9 +805,6 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_entry_x.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c">
 			<Option target="rt"/>
 		</Unit>
@@ -814,6 +817,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_entry_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_exit.c">
 			<Option target="rt"/>
 		</Unit>
@@ -821,9 +827,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_key.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_notebook_fix.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_load.c">
@@ -850,9 +853,6 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_material_x.c">
 			<Option target="rt"/>
 		</Unit>
@@ -869,9 +869,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_entry_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c">

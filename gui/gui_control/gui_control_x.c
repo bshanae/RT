@@ -6,12 +6,15 @@ t_gui_control		gui_control_init
 	t_gui_control	control;
 
 	control.stack = RT_GUI_GET(builder, init->stack);
+	control.silent = rt_false;
 	gui_control_hide(&control);
 	return (control);
 }
 
 void				gui_control_show(t_gui_control *control)
 {
+	if (control->silent == rt_true)
+		return ;
 	gtk_stack_set_visible_child_name(control->stack, "page_show");
 }
 

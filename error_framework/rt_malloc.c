@@ -5,6 +5,6 @@ void				*rt_malloc(u_long size)
 	void			*ptr;
 
 	ptr = malloc(size);
-	rt_assert_critical(ptr != NULL, "Allocation failed");
+	rt_assert_critical(ptr != NULL, "Allocation failed (size = %lu)", size);
 	return (ptr);
 }

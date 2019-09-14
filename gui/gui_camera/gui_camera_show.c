@@ -2,7 +2,7 @@
 
 void 				gui_camera_show(t_gui_camera *gui, const t_camera *camera)
 {
-	gui->control_silent = 1;
+	gui->control.silent = rt_true;
 	gui_entry_set_f(gui->position_x, camera->position.x);
 	gui_entry_set_f(gui->position_y, camera->position.y);
 	gui_entry_set_f(gui->position_z, camera->position.z);
@@ -20,5 +20,5 @@ void 				gui_camera_show(t_gui_camera *gui, const t_camera *camera)
 	gtk_widget_set_sensitive(GTK_WIDGET(gui->focus_box), camera->focus);
 	gui_entry_set_f(gui->focus_focal_length, camera->focal_length);
 	gui_entry_set_f(gui->focus_aperture_size, camera->aperture_size);
-	gui->control_silent = 0;
+	gui->control.silent = rt_false;
 }

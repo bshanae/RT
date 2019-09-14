@@ -15,13 +15,23 @@
 
 # include <gtk/gtk.h>
 
+typedef enum		e_gui_notebook_page
+{
+	gui_notebook_parser,
+	gui_notebook_camera,
+	gui_notebook_scene,
+	gui_notebook_settings,
+	gui_notebook_end
+}					t_gui_notebook_page;
+
 typedef struct		s_gui
 {
 	GtkCssProvider	*css_provider;
 	GtkBuilder		*builder;
 	GtkWindow		*window;
 	GtkNotebook		*notebook;
-	GtkEntry		*notebook_fix[4];
+	GtkWidget		*notebook_page[4];
+	t_gui_control	*notebook_control[4];
 	t_gui_queue		*queue;
 	t_gui_parser	*parser;
 	t_gui_camera	*camera;

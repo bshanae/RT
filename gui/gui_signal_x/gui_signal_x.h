@@ -13,20 +13,24 @@ void 				gui_signal_exit
 					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_key
 					(GtkWidget *widget, GdkEventKey *event, gpointer ptr);
-void				gui_signal_notebook_fix
-					(GtkNotebook *notebook, GtkWidget *page,
-					guint page_num, gpointer ptr);
+
+void				gui_signal_entry_launch_control_on_insert
+					(GtkEntry *entry, const char *new,
+					int length, int *position, gpointer ptr);
+void 				gui_signal_entry_launch_control_on_delete
+					(GtkEntry *entry, int start, int end, gpointer ptr);
+void				gui_signal_entry_block_i
+					(GtkEntry *entry, const char *new,
+	 				int length, int *position, gpointer ptr);
+void				gui_signal_entry_block_f
+					(GtkEntry *entry, const char *new,
+	 				int length, int *position, gpointer ptr);
 
 void 				gui_signal_parser_select
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_parser_load
 					(GTK_SIGNAL_SIGNATURE);
 
-void				gui_signal_camera_entry_insert
-					(GtkEntry *entry, const char *new,
-					int length, int *position, gpointer ptr);
-void 				gui_signal_camera_entry_delete
-					(GtkEntry *entry, int start, int end, gpointer ptr);
 gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_filter
@@ -46,13 +50,6 @@ void				gui_signal_camera_reset
 void				gui_signal_camera_apply
 					(GTK_SIGNAL_SIGNATURE);
 
-void				gui_signal_scene_edit_entry_insert
-					(GtkEntry *entry, const char *new,
-					int length, int *position, gpointer ptr);
-void 				gui_signal_scene_edit_entry_delete
-					(GtkEntry *entry, int start, int end, gpointer ptr);
-void 				gui_signal_scene_edit_entry_changed
-					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_combo_changed
 					(GtkWidget *widget, gpointer ptr);
 void 				gui_signal_scene_edit_select
@@ -89,13 +86,6 @@ void				gui_signal_scene_add_material_color
 void				gui_signal_scene_add_material_emission
 					(GTK_SIGNAL_SIGNATURE);
 
-void				gui_signal_settings_entry_changed
-					(GtkWidget *widget, gpointer ptr);
-void				gui_signal_settings_entry_insert
-					(GtkEntry *entry, const char *new,
-					int length, int *position, gpointer ptr);
-void 				gui_signal_settings_entry_delete
-					(GtkEntry *entry, int start, int end, gpointer ptr);
 void 				gui_signal_settings_reset
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_apply

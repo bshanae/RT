@@ -20,7 +20,7 @@ static t_rt_bool			static_find_in_list
 
 	if (id < 0)
 	{
-		rt_assert(0, "GUI Pair : Invalid ID");
+		rt_assert(0, "GUI Pair : Invalid id (id = %i)", id);
 		return (rt_false);
 	}
 	if (!gtk_tree_model_get_iter_first(model, iter))
@@ -35,7 +35,7 @@ static t_rt_bool			static_find_in_list
 			return (rt_true);
 		if (!gtk_tree_model_iter_next(model, iter))
 		{
-			rt_assert(0, "GUI Pair : ID not found");
+			rt_assert(0, "GUI Pair : id not found");
 			return (rt_false);
 		}
 	}

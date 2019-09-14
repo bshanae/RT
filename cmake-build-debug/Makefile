@@ -2499,6 +2499,33 @@ error_framework/rt_malloc.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_malloc.c.s
 .PHONY : error_framework/rt_malloc.c.s
 
+error_framework/rt_print_error.o: error_framework/rt_print_error.c.o
+
+.PHONY : error_framework/rt_print_error.o
+
+# target to build an object file
+error_framework/rt_print_error.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_print_error.c.o
+.PHONY : error_framework/rt_print_error.c.o
+
+error_framework/rt_print_error.i: error_framework/rt_print_error.c.i
+
+.PHONY : error_framework/rt_print_error.i
+
+# target to preprocess a source file
+error_framework/rt_print_error.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_print_error.c.i
+.PHONY : error_framework/rt_print_error.c.i
+
+error_framework/rt_print_error.s: error_framework/rt_print_error.c.s
+
+.PHONY : error_framework/rt_print_error.s
+
+# target to generate assembly for a file
+error_framework/rt_print_error.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_print_error.c.s
+.PHONY : error_framework/rt_print_error.c.s
+
 error_framework/rt_raise_x.o: error_framework/rt_raise_x.c.o
 
 .PHONY : error_framework/rt_raise_x.o
@@ -5361,6 +5388,33 @@ gui/gui_signal_connect_x/gui_signal_connect_camera.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.s
 .PHONY : gui/gui_signal_connect_x/gui_signal_connect_camera.c.s
 
+gui/gui_signal_connect_x/gui_signal_connect_entry.o: gui/gui_signal_connect_x/gui_signal_connect_entry.c.o
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.o
+
+# target to build an object file
+gui/gui_signal_connect_x/gui_signal_connect_entry.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_entry.c.o
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.c.o
+
+gui/gui_signal_connect_x/gui_signal_connect_entry.i: gui/gui_signal_connect_x/gui_signal_connect_entry.c.i
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.i
+
+# target to preprocess a source file
+gui/gui_signal_connect_x/gui_signal_connect_entry.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_entry.c.i
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.c.i
+
+gui/gui_signal_connect_x/gui_signal_connect_entry.s: gui/gui_signal_connect_x/gui_signal_connect_entry.c.s
+
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.s
+
+# target to generate assembly for a file
+gui/gui_signal_connect_x/gui_signal_connect_entry.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_entry.c.s
+.PHONY : gui/gui_signal_connect_x/gui_signal_connect_entry.c.s
+
 gui/gui_signal_connect_x/gui_signal_connect_image.o: gui/gui_signal_connect_x/gui_signal_connect_image.c.o
 
 .PHONY : gui/gui_signal_connect_x/gui_signal_connect_image.o
@@ -5550,33 +5604,6 @@ gui/gui_signal_x/gui_signal_camera_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_apply.c.s
 .PHONY : gui/gui_signal_x/gui_signal_camera_apply.c.s
 
-gui/gui_signal_x/gui_signal_camera_entry_x.o: gui/gui_signal_x/gui_signal_camera_entry_x.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_camera_entry_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_entry_x.c.o
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.c.o
-
-gui/gui_signal_x/gui_signal_camera_entry_x.i: gui/gui_signal_x/gui_signal_camera_entry_x.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_camera_entry_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_entry_x.c.i
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.c.i
-
-gui/gui_signal_x/gui_signal_camera_entry_x.s: gui/gui_signal_x/gui_signal_camera_entry_x.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_camera_entry_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_entry_x.c.s
-.PHONY : gui/gui_signal_x/gui_signal_camera_entry_x.c.s
-
 gui/gui_signal_x/gui_signal_camera_filter_x.o: gui/gui_signal_x/gui_signal_camera_filter_x.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_camera_filter_x.o
@@ -5685,6 +5712,33 @@ gui/gui_signal_x/gui_signal_camera_screen_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_camera_screen_x.c.s
 
+gui/gui_signal_x/gui_signal_entry_x.o: gui/gui_signal_x/gui_signal_entry_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_entry_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_entry_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.c.o
+
+gui/gui_signal_x/gui_signal_entry_x.i: gui/gui_signal_x/gui_signal_entry_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_entry_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_entry_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.c.i
+
+gui/gui_signal_x/gui_signal_entry_x.s: gui/gui_signal_x/gui_signal_entry_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_entry_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_entry_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_entry_x.c.s
+
 gui/gui_signal_x/gui_signal_exit.o: gui/gui_signal_x/gui_signal_exit.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_exit.o
@@ -5765,33 +5819,6 @@ gui/gui_signal_x/gui_signal_key.s: gui/gui_signal_x/gui_signal_key.c.s
 gui/gui_signal_x/gui_signal_key.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_key.c.s
 .PHONY : gui/gui_signal_x/gui_signal_key.c.s
-
-gui/gui_signal_x/gui_signal_notebook_fix.o: gui/gui_signal_x/gui_signal_notebook_fix.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_notebook_fix.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.o
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.c.o
-
-gui/gui_signal_x/gui_signal_notebook_fix.i: gui/gui_signal_x/gui_signal_notebook_fix.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_notebook_fix.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.i
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.c.i
-
-gui/gui_signal_x/gui_signal_notebook_fix.s: gui/gui_signal_x/gui_signal_notebook_fix.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_notebook_fix.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_notebook_fix.c.s
-.PHONY : gui/gui_signal_x/gui_signal_notebook_fix.c.s
 
 gui/gui_signal_x/gui_signal_parser_load.o: gui/gui_signal_x/gui_signal_parser_load.c.o
 
@@ -6009,33 +6036,6 @@ gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s
 .PHONY : gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c.s
 
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.o: gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.o
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.o
-
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.i: gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.i
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.i
-
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.s: gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.s
-.PHONY : gui/gui_signal_x/gui_signal_scene_edit_entry_x.c.s
-
 gui/gui_signal_x/gui_signal_scene_edit_material_x.o: gui/gui_signal_x/gui_signal_scene_edit_material_x.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_scene_edit_material_x.o
@@ -6197,33 +6197,6 @@ gui/gui_signal_x/gui_signal_settings_apply.s: gui/gui_signal_x/gui_signal_settin
 gui/gui_signal_x/gui_signal_settings_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_apply.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_apply.c.s
-
-gui/gui_signal_x/gui_signal_settings_entry_x.o: gui/gui_signal_x/gui_signal_settings_entry_x.c.o
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.o
-
-# target to build an object file
-gui/gui_signal_x/gui_signal_settings_entry_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.o
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.c.o
-
-gui/gui_signal_x/gui_signal_settings_entry_x.i: gui/gui_signal_x/gui_signal_settings_entry_x.c.i
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.i
-
-# target to preprocess a source file
-gui/gui_signal_x/gui_signal_settings_entry_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.i
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.c.i
-
-gui/gui_signal_x/gui_signal_settings_entry_x.s: gui/gui_signal_x/gui_signal_settings_entry_x.c.s
-
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.s
-
-# target to generate assembly for a file
-gui/gui_signal_x/gui_signal_settings_entry_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_entry_x.c.s
-.PHONY : gui/gui_signal_x/gui_signal_settings_entry_x.c.s
 
 gui/gui_signal_x/gui_signal_settings_light.o: gui/gui_signal_x/gui_signal_settings_light.c.o
 
@@ -6633,6 +6606,9 @@ help:
 	@echo "... error_framework/rt_malloc.o"
 	@echo "... error_framework/rt_malloc.i"
 	@echo "... error_framework/rt_malloc.s"
+	@echo "... error_framework/rt_print_error.o"
+	@echo "... error_framework/rt_print_error.i"
+	@echo "... error_framework/rt_print_error.s"
 	@echo "... error_framework/rt_raise_x.o"
 	@echo "... error_framework/rt_raise_x.i"
 	@echo "... error_framework/rt_raise_x.s"
@@ -6951,6 +6927,9 @@ help:
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_camera.o"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_camera.i"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_camera.s"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_entry.o"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_entry.i"
+	@echo "... gui/gui_signal_connect_x/gui_signal_connect_entry.s"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.o"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.i"
 	@echo "... gui/gui_signal_connect_x/gui_signal_connect_image.s"
@@ -6972,9 +6951,6 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_apply.s"
-	@echo "... gui/gui_signal_x/gui_signal_camera_entry_x.o"
-	@echo "... gui/gui_signal_x/gui_signal_camera_entry_x.i"
-	@echo "... gui/gui_signal_x/gui_signal_camera_entry_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_filter_x.s"
@@ -6987,6 +6963,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_camera_screen_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_screen_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_screen_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_entry_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_entry_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_entry_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_exit.o"
 	@echo "... gui/gui_signal_x/gui_signal_exit.i"
 	@echo "... gui/gui_signal_x/gui_signal_exit.s"
@@ -6996,9 +6975,6 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_key.o"
 	@echo "... gui/gui_signal_x/gui_signal_key.i"
 	@echo "... gui/gui_signal_x/gui_signal_key.s"
-	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.o"
-	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.i"
-	@echo "... gui/gui_signal_x/gui_signal_notebook_fix.s"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.o"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.i"
 	@echo "... gui/gui_signal_x/gui_signal_parser_load.s"
@@ -7023,9 +6999,6 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_combo_changed.s"
-	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.o"
-	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.i"
-	@echo "... gui/gui_signal_x/gui_signal_scene_edit_entry_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_material_x.s"
@@ -7044,9 +7017,6 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.s"
-	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.o"
-	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.i"
-	@echo "... gui/gui_signal_x/gui_signal_settings_entry_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.s"

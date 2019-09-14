@@ -3,8 +3,7 @@
 void 				gui_scene_edit_apply
 					(t_gui_scene_edit *edit, t_object* object)
 {
-	rt_assert_critical(edit->common != NULL,
-		"GUI : Editor doesn't has object list");
+	rt_assert_critical(edit->common != NULL, "GUI : Editor list ptr is NULL");
 	ft_strcpy(object->name, gui_entry_get_str(edit->name));
 	gtk_list_store_set(edit->common->full, &edit->iter,
 		gui_scene_column_name, object->name, -1);

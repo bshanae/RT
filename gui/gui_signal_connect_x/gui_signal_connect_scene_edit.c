@@ -4,9 +4,6 @@ void				gui_signal_connect_scene_edit(t_gui *gui)
 {
 	printf("GUI Signal: Connecting object editor callbacks\n");
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_select);
-	RT_GUI_CONNECT(gui, gui_signal_scene_edit_entry_changed);
-	RT_GUI_CONNECT(gui, gui_signal_scene_edit_entry_insert);
-	RT_GUI_CONNECT(gui, gui_signal_scene_edit_entry_delete);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_combo_changed);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_reset);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_apply);

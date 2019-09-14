@@ -1,16 +1,21 @@
 #include "error_framework.h"
 
-void 				rt_raise_error(CHAR_REF message)
+
+void 				rt_raise_error(CHAR_REF message, ...)
 {
-	printf("\033[0;31m");
-	printf("RT_ERROR : %s\n", message);
-	printf("\033[0m");
+	va_list 		args;
+
+	va_start(args, message);
+	rt_print_error(message, args);
+	va_end(args);
 	exit(1);
 }
 
-void 				rt_raise_warning(CHAR_REF message)
+void 				rt_raise_warning(CHAR_REF message, ...)
 {
-	printf("\033[0;31m");
-	printf("RT_WARNING : %s\n", message);
-	printf("\033[0m");
+	va_list 		args;
+
+	va_start(args, message);
+	rt_print_error(message, args);
+	va_end(args);
 }

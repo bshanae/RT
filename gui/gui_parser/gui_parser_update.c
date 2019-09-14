@@ -8,7 +8,9 @@ void 				gui_parser_update(t_gui_parser *parser)
 
 	gtk_list_store_clear(parser->list);
 	directory = opendir(RT_SOURCE_GUI_SCENES);
-	rt_assert(directory != NULL, "GUI Parser : Directory error");
+	rt_assert(directory != NULL,
+		"GUI Parser : Directory error (directory = %s)",
+		RT_SOURCE_GUI_SCENES);
 	if (!directory)
 		return ;
 	while ((file = readdir(directory)))

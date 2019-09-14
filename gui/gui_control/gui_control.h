@@ -13,6 +13,7 @@ typedef struct 		s_gui_init_control
 typedef struct 		s_gui_control
 {
 	GtkStack		*stack;
+	t_rt_bool 		silent;
 }					t_gui_control;
 
 t_gui_control		gui_control_init

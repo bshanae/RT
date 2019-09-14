@@ -13,7 +13,6 @@
 typedef struct				s_gui_camera
 {
 	t_gui_control			control;
-	int						control_silent;
 	GtkEntry				*position_x;
 	GtkEntry				*position_y;
 	GtkEntry				*position_z;

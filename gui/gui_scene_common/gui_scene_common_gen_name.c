@@ -17,7 +17,7 @@ void				gui_scene_common_gen_name
 	}
 	if (!object)
 	{
-		rt_assert(0, "GUI Scene (Name Generator) : Object ptr is NULL");
+		rt_assert(0, "GUI name generator: Object is NULL");
 		return ;
 	}
 	ft_strcpy(object->name, object_translate(object->type));

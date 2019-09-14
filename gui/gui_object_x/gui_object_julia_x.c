@@ -32,9 +32,9 @@ void 						gui_object_julia_set
 	t_object_julia			*data;
 
 	data = (t_object_julia *)object->data;
-	gui_entry_set_i(gui->iterations, data->iterations);
-	gui_entry_set_f(gui->value_x, data->value.x);
-	gui_entry_set_f(gui->value_y, data->value.y);
-	gui_entry_set_f(gui->value_z, data->value.z);
-	gui_entry_set_f(gui->value_w, data->value.w);
+	data->iterations = gui_entry_get_i(gui->iterations);
+	data->value.x = gui_entry_get_f(gui->value_x);
+	data->value.y = gui_entry_get_f(gui->value_y);
+	data->value.z = gui_entry_get_f(gui->value_z);
+	data->value.w = gui_entry_get_f(gui->value_w);
 }

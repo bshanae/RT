@@ -147,7 +147,7 @@ link_libraries("ft")
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
 	./error_framework/rt_assert_x.c
-	./error_framework/rt_malloc.c)
+	./error_framework/rt_malloc.c error_framework/rt_print_error.c)
 
 set(SOURCE_MAIN
 	./main.c)
@@ -297,8 +297,6 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_edit_reset.c
 	./gui/gui_signal_x/gui_signal_scene_edit_apply.c
 	./gui/gui_signal_x/gui_signal_scene_edit_material_x.c
-	./gui/gui_signal_x/gui_signal_scene_edit_entry_x.c
-	./gui/gui_signal_x/gui_signal_camera_entry_x.c
 	./gui/gui_signal_x/gui_signal_camera_apply.c
 	./gui/gui_signal_x/gui_signal_camera_reset.c
 	./gui/gui_signal_x/gui_signal_camera_filter_x.c
@@ -307,14 +305,12 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_settings_tracing_x.c
 	./gui/gui_signal_x/gui_signal_settings_reset.c
 	./gui/gui_signal_x/gui_signal_settings_apply.c
-	./gui/gui_signal_x/gui_signal_settings_entry_x.c
 	./gui/gui_signal_x/gui_signal_scene_add_material_x.c
-	./gui/gui_signal_x/gui_signal_notebook_fix.c
 	./gui/gui_signal_x/gui_signal_camera_screen_x.c
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c
@@ -323,7 +319,7 @@ set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_camera.c
 	./gui/gui_signal_connect_x/gui_signal_connect_image.c
 	./gui/gui_signal_connect_x/gui_signal_connect_settings.c
-	)
+	gui/gui_signal_connect_x/gui_signal_connect_entry.c)
 
 set(SOURCE_GUI
 	${SOURCE_GUI_GUI}
