@@ -9,6 +9,6 @@ t_gui_scene		*gui_scene_new(GtkBuilder *builder)
 	new->edit = gui_scene_edit_new(builder);
 	new->edit->common = new->common;
 	new->add = gui_scene_add_new(builder);
-	//new->add->common = new->common;
+	new->add->common = new->common;
 	return (new);
 }

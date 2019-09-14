@@ -20,6 +20,8 @@ void 				gui_signal_scene_add_response_yes
 	space = scene_get_space(gui->renderer->data.scene);
 	if (space)
 		gui_scene_add_build_object(gui->scene->add, space);
+	else
+		rt_raise_warning("GUI Creator : No memory for new object");
 }
 
 void 				gui_signal_scene_add_response_no

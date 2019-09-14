@@ -7,6 +7,7 @@ void				gui_signal_scene_edit_add
 	int				response;
 
 	gui = (t_gui *)ptr;
+	gui->scene->edit->control.silent = 1;
 	gtk_entry_set_placeholder_text(gui->scene->add->name,
 		gui_scene_add_gen_name(gui->scene->add));
 	gtk_widget_grab_focus(GTK_WIDGET(gui->scene->add->type_combo));
@@ -16,6 +17,7 @@ void				gui_signal_scene_edit_add
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
 	{
+		scene_update(gui->renderer->data.scene);
 		gui_scene_common_update_all(gui->scene->common,
 			gui->renderer->data.scene, gui->renderer->data.settings.rm_mod);
 		cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
@@ -23,4 +25,5 @@ void				gui_signal_scene_edit_add
 		gui_queue_push(gui->queue);
 	}
 	gtk_widget_hide(GTK_WIDGET(gui->scene->add->dialog));
+	gui->scene->edit->control.silent = 0;
 }

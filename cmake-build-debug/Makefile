@@ -4119,6 +4119,33 @@ gui/gui_scene_add/gui_scene_add_init_cone.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_cone.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_init_cone.c.s
 
+gui/gui_scene_add/gui_scene_add_init_csg.o: gui/gui_scene_add/gui_scene_add_init_csg.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_init_csg.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_csg.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.c.o
+
+gui/gui_scene_add/gui_scene_add_init_csg.i: gui/gui_scene_add/gui_scene_add_init_csg.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_init_csg.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_csg.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.c.i
+
+gui/gui_scene_add/gui_scene_add_init_csg.s: gui/gui_scene_add/gui_scene_add_init_csg.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_init_csg.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_csg.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_init_csg.c.s
+
 gui/gui_scene_add/gui_scene_add_init_cylinder.o: gui/gui_scene_add/gui_scene_add_init_cylinder.c.o
 
 .PHONY : gui/gui_scene_add/gui_scene_add_init_cylinder.o
@@ -4145,6 +4172,33 @@ gui/gui_scene_add/gui_scene_add_init_cylinder.s: gui/gui_scene_add/gui_scene_add
 gui/gui_scene_add/gui_scene_add_init_cylinder.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_cylinder.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_init_cylinder.c.s
+
+gui/gui_scene_add/gui_scene_add_init_explosion.o: gui/gui_scene_add/gui_scene_add_init_explosion.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_init_explosion.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_explosion.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.c.o
+
+gui/gui_scene_add/gui_scene_add_init_explosion.i: gui/gui_scene_add/gui_scene_add_init_explosion.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_init_explosion.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_explosion.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.c.i
+
+gui/gui_scene_add/gui_scene_add_init_explosion.s: gui/gui_scene_add/gui_scene_add_init_explosion.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_init_explosion.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_explosion.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_init_explosion.c.s
 
 gui/gui_scene_add/gui_scene_add_init_julia.o: gui/gui_scene_add/gui_scene_add_init_julia.c.o
 
@@ -4199,6 +4253,33 @@ gui/gui_scene_add/gui_scene_add_init_light_x.s: gui/gui_scene_add/gui_scene_add_
 gui/gui_scene_add/gui_scene_add_init_light_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_light_x.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_init_light_x.c.s
+
+gui/gui_scene_add/gui_scene_add_init_limited.o: gui/gui_scene_add/gui_scene_add_init_limited.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_init_limited.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_limited.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.c.o
+
+gui/gui_scene_add/gui_scene_add_init_limited.i: gui/gui_scene_add/gui_scene_add_init_limited.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_init_limited.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_limited.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.c.i
+
+gui/gui_scene_add/gui_scene_add_init_limited.s: gui/gui_scene_add/gui_scene_add_init_limited.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_init_limited.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_limited.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_init_limited.c.s
 
 gui/gui_scene_add/gui_scene_add_init_mandelbulb.o: gui/gui_scene_add/gui_scene_add_init_mandelbulb.c.o
 
@@ -4307,6 +4388,33 @@ gui/gui_scene_add/gui_scene_add_init_own.s: gui/gui_scene_add/gui_scene_add_init
 gui/gui_scene_add/gui_scene_add_init_own.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_own.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_init_own.c.s
+
+gui/gui_scene_add/gui_scene_add_init_p_cube.o: gui/gui_scene_add/gui_scene_add_init_p_cube.c.o
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.o
+
+# target to build an object file
+gui/gui_scene_add/gui_scene_add_init_p_cube.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_p_cube.c.o
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.c.o
+
+gui/gui_scene_add/gui_scene_add_init_p_cube.i: gui/gui_scene_add/gui_scene_add_init_p_cube.c.i
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.i
+
+# target to preprocess a source file
+gui/gui_scene_add/gui_scene_add_init_p_cube.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_p_cube.c.i
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.c.i
+
+gui/gui_scene_add/gui_scene_add_init_p_cube.s: gui/gui_scene_add/gui_scene_add_init_p_cube.c.s
+
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.s
+
+# target to generate assembly for a file
+gui/gui_scene_add/gui_scene_add_init_p_cube.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_p_cube.c.s
+.PHONY : gui/gui_scene_add/gui_scene_add_init_p_cube.c.s
 
 gui/gui_scene_add/gui_scene_add_init_paraboloid.o: gui/gui_scene_add/gui_scene_add_init_paraboloid.c.o
 
@@ -4469,33 +4577,6 @@ gui/gui_scene_add/gui_scene_add_new.s: gui/gui_scene_add/gui_scene_add_new.c.s
 gui/gui_scene_add/gui_scene_add_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_new.c.s
-
-gui/gui_scene_add/gui_scene_add_update.o: gui/gui_scene_add/gui_scene_add_update.c.o
-
-.PHONY : gui/gui_scene_add/gui_scene_add_update.o
-
-# target to build an object file
-gui/gui_scene_add/gui_scene_add_update.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.o
-.PHONY : gui/gui_scene_add/gui_scene_add_update.c.o
-
-gui/gui_scene_add/gui_scene_add_update.i: gui/gui_scene_add/gui_scene_add_update.c.i
-
-.PHONY : gui/gui_scene_add/gui_scene_add_update.i
-
-# target to preprocess a source file
-gui/gui_scene_add/gui_scene_add_update.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.i
-.PHONY : gui/gui_scene_add/gui_scene_add_update.c.i
-
-gui/gui_scene_add/gui_scene_add_update.s: gui/gui_scene_add/gui_scene_add_update.c.s
-
-.PHONY : gui/gui_scene_add/gui_scene_add_update.s
-
-# target to generate assembly for a file
-gui/gui_scene_add/gui_scene_add_update.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_update.c.s
-.PHONY : gui/gui_scene_add/gui_scene_add_update.c.s
 
 gui/gui_scene_common/gui_scene_common_delete.o: gui/gui_scene_common/gui_scene_common_delete.c.o
 
@@ -5982,32 +6063,32 @@ gui/gui_signal_x/gui_signal_scene_add_response_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_response_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_scene_add_response_x.c.s
 
-gui/gui_signal_x/gui_signal_scene_add_type.o: gui/gui_signal_x/gui_signal_scene_add_type.c.o
+gui/gui_signal_x/gui_signal_scene_add_type_select.o: gui/gui_signal_x/gui_signal_scene_add_type_select.c.o
 
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.o
 
 # target to build an object file
-gui/gui_signal_x/gui_signal_scene_add_type.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type.c.o
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.c.o
+gui/gui_signal_x/gui_signal_scene_add_type_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_select.c.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.c.o
 
-gui/gui_signal_x/gui_signal_scene_add_type.i: gui/gui_signal_x/gui_signal_scene_add_type.c.i
+gui/gui_signal_x/gui_signal_scene_add_type_select.i: gui/gui_signal_x/gui_signal_scene_add_type_select.c.i
 
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.i
 
 # target to preprocess a source file
-gui/gui_signal_x/gui_signal_scene_add_type.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type.c.i
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.c.i
+gui/gui_signal_x/gui_signal_scene_add_type_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_select.c.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.c.i
 
-gui/gui_signal_x/gui_signal_scene_add_type.s: gui/gui_signal_x/gui_signal_scene_add_type.c.s
+gui/gui_signal_x/gui_signal_scene_add_type_select.s: gui/gui_signal_x/gui_signal_scene_add_type_select.c.s
 
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.s
 
 # target to generate assembly for a file
-gui/gui_signal_x/gui_signal_scene_add_type.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type.c.s
-.PHONY : gui/gui_signal_x/gui_signal_scene_add_type.c.s
+gui/gui_signal_x/gui_signal_scene_add_type_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_type_select.c.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_type_select.c.s
 
 gui/gui_signal_x/gui_signal_scene_edit_add.o: gui/gui_signal_x/gui_signal_scene_edit_add.c.o
 
@@ -6840,15 +6921,24 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cone.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cone.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cone.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_csg.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_csg.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_csg.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cylinder.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cylinder.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_cylinder.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_explosion.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_explosion.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_explosion.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_julia.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_julia.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_julia.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_light_x.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_light_x.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_light_x.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_limited.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_limited.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_limited.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_mandelbulb.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_mandelbulb.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_mandelbulb.s"
@@ -6861,6 +6951,9 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_init_own.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_own.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_own.s"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_p_cube.o"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_p_cube.i"
+	@echo "... gui/gui_scene_add/gui_scene_add_init_p_cube.s"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_paraboloid.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_paraboloid.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_init_paraboloid.s"
@@ -6879,9 +6972,6 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_new.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.s"
-	@echo "... gui/gui_scene_add/gui_scene_add_update.o"
-	@echo "... gui/gui_scene_add/gui_scene_add_update.i"
-	@echo "... gui/gui_scene_add/gui_scene_add_update.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.s"
@@ -7047,9 +7137,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_response_x.s"
-	@echo "... gui/gui_signal_x/gui_signal_scene_add_type.o"
-	@echo "... gui/gui_signal_x/gui_signal_scene_add_type.i"
-	@echo "... gui/gui_signal_x/gui_signal_scene_add_type.s"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_type_select.o"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_type_select.i"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_type_select.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_edit_add.s"

@@ -3,6 +3,8 @@
 
 # include "rt_float.h"
 
+# include "error_framework.h"
+
 # include <gtk/gtk.h>
 
 const char			*gui_entry_get_str(GtkEntry *entry);

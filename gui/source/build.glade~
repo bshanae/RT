@@ -4585,7 +4585,7 @@
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">Oh no, that's so sad</property>
+                <property name="label" translatable="yes">Ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -4609,7 +4609,7 @@
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Error occured</property>
+            <property name="label" translatable="yes">Error occured :(</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -4776,12 +4776,15 @@
     <property name="focus_on_map">False</property>
     <property name="transient_for">window</property>
     <signal name="close" handler="gui_signal_scene_add_response_cancel" swapped="no"/>
+    <signal name="delete-event" handler="gui_signal_scene_add_block_destroy" swapped="no"/>
     <child>
       <placeholder/>
     </child>
     <child internal-child="vbox">
       <object class="GtkBox">
         <property name="can_focus">False</property>
+        <property name="margin_left">5</property>
+        <property name="margin_right">5</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
@@ -4854,8 +4857,6 @@
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_left">5</property>
-                        <property name="margin_right">5</property>
                         <property name="margin_top">2</property>
                         <property name="margin_bottom">2</property>
                         <child>
@@ -4863,7 +4864,10 @@
                             <property name="width_request">77</property>
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">name</property>
+                            <property name="label" translatable="yes">Name</property>
+                            <attributes>
+                              <attribute name="style" value="italic"/>
+                            </attributes>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -4894,8 +4898,6 @@
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_left">5</property>
-                        <property name="margin_right">5</property>
                         <property name="margin_top">2</property>
                         <property name="margin_bottom">2</property>
                         <child>
@@ -4903,7 +4905,10 @@
                             <property name="width_request">77</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="label" translatable="yes">type</property>
+                            <property name="label" translatable="yes">Type</property>
+                            <attributes>
+                              <attribute name="style" value="italic"/>
+                            </attributes>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -4918,7 +4923,7 @@
                             <property name="model">scene_type_list</property>
                             <property name="has_entry">True</property>
                             <property name="entry_text_column">0</property>
-                            <signal name="changed" handler="gui_signal_scene_add_type" swapped="no"/>
+                            <signal name="changed" handler="gui_signal_scene_add_type_select" swapped="no"/>
                             <child internal-child="entry">
                               <object class="GtkEntry" id="scene_add_type_entry">
                                 <property name="can_focus">True</property>
@@ -4944,8 +4949,6 @@
                       <object class="GtkStack" id="scene_add_stack">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="margin_left">5</property>
-                        <property name="margin_right">5</property>
                         <property name="margin_top">2</property>
                         <property name="margin_bottom">2</property>
                         <property name="vhomogeneous">False</property>
@@ -4959,7 +4962,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">Ambient Light</property>
+                            <property name="name">Ambient light</property>
                             <property name="title" translatable="yes">page0</property>
                           </packing>
                         </child>
@@ -5040,7 +5043,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">Point Light</property>
+                            <property name="name">Point light</property>
                             <property name="title" translatable="yes">page0</property>
                             <property name="position">1</property>
                           </packing>
@@ -5122,7 +5125,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">Direct Light</property>
+                            <property name="name">Direct light</property>
                             <property name="title" translatable="yes">page0</property>
                             <property name="position">2</property>
                           </packing>
@@ -6109,7 +6112,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">Moebius Strip</property>
+                            <property name="name">Moebius strip</property>
                             <property name="title" translatable="yes">page0</property>
                             <property name="position">8</property>
                           </packing>
@@ -6309,24 +6312,278 @@
                           </packing>
                         </child>
                         <child>
+                          <object class="GtkBox" id="object_add_limited">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Main</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBox" id="object_add_limited_main">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="model">scene_limited_main_list</property>
+                                    <property name="active">0</property>
+                                    <property name="has_entry">True</property>
+                                    <property name="entry_text_column">1</property>
+                                    <child internal-child="entry">
+                                      <object class="GtkEntry">
+                                        <property name="can_focus">True</property>
+                                        <property name="width_chars">10</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Limit</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBox" id="object_add_limited_limit">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="model">scene_limited_limit_list</property>
+                                    <property name="active">0</property>
+                                    <property name="has_entry">True</property>
+                                    <property name="entry_text_column">1</property>
+                                    <child internal-child="entry">
+                                      <object class="GtkEntry">
+                                        <property name="can_focus">True</property>
+                                        <property name="width_chars">10</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="name">Limited</property>
+                            <property name="title" translatable="yes">page0</property>
+                            <property name="position">10</property>
+                          </packing>
+                        </child>
+                        <child>
                           <object class="GtkBox" id="object_add_torus">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <placeholder/>
+                              <object class="GtkLabel">
+                                <property name="width_request">70</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">Position</property>
+                                <attributes>
+                                  <attribute name="style" value="italic"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
                             </child>
                             <child>
-                              <placeholder/>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_torus_position_x">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_torus_position_y">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_torus_position_z">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="truncate_multiline">True</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
                             </child>
                             <child>
-                              <placeholder/>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Width</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_torus_width">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">6</property>
+                                    <property name="placeholder_text" translatable="yes">1.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Radius</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_torus_radius">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">6</property>
+                                    <property name="placeholder_text" translatable="yes">2.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                              </packing>
                             </child>
                           </object>
                           <packing>
                             <property name="name">Torus</property>
                             <property name="title" translatable="yes">page0</property>
-                            <property name="position">10</property>
+                            <property name="position">11</property>
                           </packing>
                         </child>
                         <child>
@@ -6422,7 +6679,7 @@
                           <packing>
                             <property name="name">tetrahedron</property>
                             <property name="title" translatable="yes">page1</property>
-                            <property name="position">11</property>
+                            <property name="position">12</property>
                           </packing>
                         </child>
                         <child>
@@ -6518,7 +6775,7 @@
                           <packing>
                             <property name="name">Mandelbulb</property>
                             <property name="title" translatable="yes">page2</property>
-                            <property name="position">12</property>
+                            <property name="position">13</property>
                           </packing>
                         </child>
                         <child>
@@ -6654,7 +6911,404 @@
                           <packing>
                             <property name="name">Julia</property>
                             <property name="title" translatable="yes">page4</property>
-                            <property name="position">13</property>
+                            <property name="position">14</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="object_add_pefrorated_cube">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">Position</property>
+                                <attributes>
+                                  <attribute name="style" value="italic"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_perforated_cube_position_x">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_perforated_cube_position_y">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_perforated_cube_position_z">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="truncate_multiline">True</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Iterations</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_perforated_cube_iterations">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">6</property>
+                                    <property name="placeholder_text" translatable="yes">5</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="name">Perforated cube</property>
+                            <property name="title" translatable="yes">page0</property>
+                            <property name="position">15</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="object_add_explosion">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="width_request">70</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">Position</property>
+                                <attributes>
+                                  <attribute name="style" value="italic"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_explosion_position_x">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_explosion_position_y">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_explosion_position_z">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">4</property>
+                                    <property name="truncate_multiline">True</property>
+                                    <property name="placeholder_text" translatable="yes">0.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Radius</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_explosion_radius">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">6</property>
+                                    <property name="placeholder_text" translatable="yes">1.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">2</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Noise</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="object_add_explosion_noise">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="width_chars">6</property>
+                                    <property name="placeholder_text" translatable="yes">3.0</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="name">page0</property>
+                            <property name="title" translatable="yes">page0</property>
+                            <property name="position">16</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="object_add_csg">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Positive</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBox" id="object_add_csg_positive">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="model">scene_csg_list</property>
+                                    <property name="active">0</property>
+                                    <property name="has_entry">True</property>
+                                    <property name="entry_text_column">1</property>
+                                    <child internal-child="entry">
+                                      <object class="GtkEntry">
+                                        <property name="can_focus">True</property>
+                                        <property name="width_chars">10</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="width_request">77</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Negative</property>
+                                    <attributes>
+                                      <attribute name="style" value="italic"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBox" id="object_add_csg_negative">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="model">scene_csg_list</property>
+                                    <property name="active">0</property>
+                                    <property name="has_entry">True</property>
+                                    <property name="entry_text_column">1</property>
+                                    <child internal-child="entry">
+                                      <object class="GtkEntry">
+                                        <property name="can_focus">True</property>
+                                        <property name="width_chars">10</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="name">page1</property>
+                            <property name="title" translatable="yes">page1</property>
+                            <property name="position">17</property>
                           </packing>
                         </child>
                       </object>
@@ -6673,7 +7327,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">color</property>
+                            <property name="label" translatable="yes">Color</property>
                             <attributes>
                               <attribute name="style" value="italic"/>
                             </attributes>
@@ -6768,7 +7422,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">emission</property>
+                            <property name="label" translatable="yes">Emission</property>
                             <attributes>
                               <attribute name="style" value="italic"/>
                             </attributes>

@@ -6,6 +6,7 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 
 	printf("GUI : Initializing object creator\n");
 	new = rt_malloc(sizeof(t_gui_scene_add));
+	new->common = NULL;
 	new->current_type = object_type_end;
 	new->gen_name_next = 0;
 	new->material_color_silent = 0;
@@ -19,10 +20,13 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 	gui_scene_add_init_box(new, builder);
 	gui_scene_add_init_paraboloid(new, builder);
 	gui_scene_add_init_moebius(new, builder);
+	gui_scene_add_init_limited(new, builder);
 	gui_scene_add_init_torus(new, builder);
 	gui_scene_add_init_mandelbulb(new, builder);
 	gui_scene_add_init_julia(new, builder);
+	gui_scene_add_init_p_cube(new, builder);
+	gui_scene_add_init_explosion(new, builder);
+	gui_scene_add_init_csg(new, builder);
 	gui_scene_add_init_material(new, builder);
-	gui_scene_add_load_types(new);
 	return (new);
 }

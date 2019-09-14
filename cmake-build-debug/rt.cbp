@@ -640,13 +640,22 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cone.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_csg.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_cylinder.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_explosion.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_julia.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_light_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_limited.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_mandelbulb.c">
@@ -659,6 +668,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_own.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_p_cube.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_paraboloid.c">
@@ -677,9 +689,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_update.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_delete.c">
@@ -847,7 +856,7 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_add.c">

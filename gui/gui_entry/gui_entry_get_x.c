@@ -14,7 +14,11 @@ RT_F				gui_entry_get_f(GtkEntry *entry)
 {
 	const char		*str;
 
-	str = gui_entry_get_str(entry);
+	if (!(str = gui_entry_get_str(entry)))
+	{
+		rt_raise_warning("GUI Entry : Content is NULL");
+		return ((RT_F)0.);
+	}
 	return ((RT_F)strtod(str, NULL));
 }
 

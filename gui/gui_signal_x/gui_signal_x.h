@@ -81,7 +81,7 @@ void 				gui_signal_scene_add_response_no
 					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_scene_add_block_destroy
 					(GtkWidget *widget, GdkEvent  *event, gpointer ptr);
-void 				gui_signal_scene_add_type
+void 				gui_signal_scene_add_type_select
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_add_material_color
 					(GTK_SIGNAL_SIGNATURE);

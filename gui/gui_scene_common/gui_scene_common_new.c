@@ -9,6 +9,7 @@ t_gui_scene_common		*gui_scene_common_new(GtkBuilder *builder)
 	new->limited_main = RT_GUI_GET(builder, "scene_limited_main_list");
 	new->limited_limit = RT_GUI_GET(builder, "scene_limited_limit_list");
 	new->csg = RT_GUI_GET(builder, "scene_csg_list");
+	new->types = RT_GUI_GET(builder, "scene_type_list");
 	new->reset_generator = rt_false;
 	return (new);
 }

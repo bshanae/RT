@@ -9,7 +9,7 @@ static void 		static_init_a(u_int *data)
 	data[object_type_plane] = RT_OBJECT_RT | RT_OBJECT_RM;
 	data[object_type_cone] = RT_OBJECT_RT;
 	data[object_type_cylinder] = RT_OBJECT_RT;
-	data[object_type_box] = RT_OBJECT_RT;
+	data[object_type_box] = RT_OBJECT_RT | RT_OBJECT_RM;
 	data[object_type_paraboloid] = RT_OBJECT_RT;
 	data[object_type_moebius] = RT_OBJECT_RT;
 	data[object_type_limited] = RT_OBJECT_RT;

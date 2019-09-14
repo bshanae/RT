@@ -251,7 +251,6 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
 	./gui/gui_scene_add/gui_scene_add_delete.c
 	./gui/gui_scene_add/gui_scene_add_init_sphere.c
-	./gui/gui_scene_add/gui_scene_add_update.c
 	./gui/gui_scene_add/gui_scene_add_init_plane.c
 	./gui/gui_scene_add/gui_scene_add_gen_name.c
 	./gui/gui_scene_add/gui_scene_add_build_object.c
@@ -266,7 +265,7 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
 	./gui/gui_scene_add/gui_scene_add_init_julia.c
 	./gui/gui_scene_add/gui_scene_add_init_own.c
-	./gui/gui_scene_add/gui_scene_add_material_state_x.c)
+	./gui/gui_scene_add/gui_scene_add_material_state_x.c gui/gui_scene_add/gui_scene_add_init_limited.c gui/gui_scene_add/gui_scene_add_init_p_cube.c gui/gui_scene_add/gui_scene_add_init_explosion.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -291,7 +290,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_add_response_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_add.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove.c
-	./gui/gui_signal_x/gui_signal_scene_add_type.c
+	gui/gui_signal_x/gui_signal_scene_add_type_select.c
 	./gui/gui_signal_x/gui_signal_scene_edit_remove_response_x.c
 	./gui/gui_signal_x/gui_signal_image_x.c
 	./gui/gui_signal_x/gui_signal_scene_edit_reset.c
@@ -310,7 +309,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c
