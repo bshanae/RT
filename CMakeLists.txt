@@ -225,7 +225,7 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
-	./gui/gui_scene_common/gui_scene_common_update_x.c)
+	./gui/gui_scene_common/gui_scene_common_update_x.c gui/gui_scene_common/gui_scene_common_func_x.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -310,7 +310,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

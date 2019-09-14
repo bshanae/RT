@@ -23,7 +23,6 @@ typedef struct 					s_gui_scene_add
 	GtkDialog					*dialog;
 	GtkEntry					*name;
 	GtkComboBox					*type_combo;
-	GtkEntry					*type_entry;
 	GtkListStore				*type_list;
 	t_gui_object_light_point	light_point;
 	t_gui_object_light_direct	light_direct;
@@ -47,6 +46,8 @@ typedef struct 					s_gui_scene_add
 
 t_gui_scene_add					*gui_scene_add_new(GtkBuilder *builder);
 void 							gui_scene_add_delete(t_gui_scene_add **object);
+
+void 							gui_scene_add_load_types(t_gui_scene_add *add);
 
 void 							gui_scene_add_init_own
 								(t_gui_scene_add *add, GtkBuilder *builder);
@@ -77,8 +78,6 @@ void 							gui_scene_add_init_julia
 void 							gui_scene_add_init_material
 								(t_gui_scene_add *add, GtkBuilder *builder);
 
-void 							gui_scene_add_update
-								(t_gui_scene_add *add);
 void 							gui_scene_add_material_state_light
 								(t_gui_scene_add *add);
 void 							gui_scene_add_material_state_non_light

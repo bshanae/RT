@@ -11,6 +11,8 @@ void				gui_signal_scene_edit_add
 		gui_scene_add_gen_name(gui->scene->add));
 	gtk_widget_grab_focus(GTK_WIDGET(gui->scene->add->type_combo));
 	gui_scene_add_material_state_non_light(gui->scene->add);
+	gtk_combo_box_set_active(gui->scene->add->type_combo, object_type_sphere);
+	g_signal_emit_by_name(GTK_COMBO_BOX(gui->scene->add->type_combo), "changed");
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
 	{

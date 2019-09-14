@@ -13,6 +13,7 @@ typedef struct 		s_gui_scene_common
 	GtkListStore	*limited_main;
 	GtkListStore	*limited_limit;
 	GtkListStore	*csg;
+	GtkListStore	*types;
 	t_rt_bool		reset_generator;
 }					t_gui_scene_common;
 
@@ -27,6 +28,11 @@ typedef enum 		s_gui_scene_list_column
 
 void				gui_scene_common_gen_name
 					(t_gui_scene_common *scene, t_object *object);
+
+t_rt_bool			gui_scene_common_func_a
+					(int rm_mod, t_object *object);
+void				gui_scene_common_func_b
+					(GtkListStore *list, t_object *object);
 
 void 				gui_scene_common_update_full
 					(t_gui_scene_common *gui, t_scene *scene, int rm_mod);

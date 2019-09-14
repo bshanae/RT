@@ -1,24 +1,5 @@
 #include "gui_scene_common.h"
 
-static t_rt_bool	static_is_current_mod(int rm_mod, t_object *object)
-{
-	if (!rm_mod && (object_flag_get(object) & RT_OBJECT_RT))
-		return (rt_true);
-	if (rm_mod && (object_flag_get(object) & RT_OBJECT_RM))
-		return (rt_true);
-	return (rt_false);
-}
-
-static void			static_add_to_list(GtkListStore *list, t_object *object)
-{
-	GtkTreeIter		iter;
-
-	gtk_list_store_append(list, &iter);
-	gtk_list_store_set(list, &iter,
-		gui_scene_column_id, object->id,
-		gui_scene_column_name, object->name, -1);
-}
-
 void 				gui_scene_common_update_full
 					(t_gui_scene_common *gui, t_scene *scene, int rm_mod)
 {
@@ -30,8 +11,8 @@ void 				gui_scene_common_update_full
 	{
 		if (!scene->objects[i].name[0])
 			gui_scene_common_gen_name(gui, scene->objects + i);
-		if (static_is_current_mod(rm_mod, scene->objects + i) == rt_true)
-			static_add_to_list(gui->full, scene->objects + i);
+		if (gui_scene_common_func_a(rm_mod, scene->objects + i) == rt_true)
+			gui_scene_common_func_b(gui->full, scene->objects + i);
 		i++;
 	}
 }
@@ -52,9 +33,9 @@ void				gui_scene_common_update_limited
 	{
 		gtk_tree_model_get(model, &iter_full, gui_scene_column_id, &i, -1);
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_LIMITABLE)
-			static_add_to_list(gui->limited_main, scene->objects + i);
+			gui_scene_common_func_b(gui->limited_main, scene->objects + i);
 		else if (object_flag_get(scene->objects + i) & RT_OBJECT_LIMITING)
-			static_add_to_list(gui->limited_limit, scene->objects + i);
+			gui_scene_common_func_b(gui->limited_limit, scene->objects + i);
 		if (!gtk_tree_model_iter_next(model, &iter_full))
 			break ;
 	}
@@ -75,7 +56,7 @@ void 				gui_scene_common_update_csg
 	{
 		gtk_tree_model_get(model, &iter_full, gui_scene_column_id, &i, -1);
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_CSG)
-			static_add_to_list(gui->csg, scene->objects + i);
+			gui_scene_common_func_b(gui->csg, scene->objects + i);
 		i++;
 		if (!gtk_tree_model_iter_next(model, &iter_full))
 			break ;

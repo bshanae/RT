@@ -23,5 +23,6 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 	gui_scene_add_init_mandelbulb(new, builder);
 	gui_scene_add_init_julia(new, builder);
 	gui_scene_add_init_material(new, builder);
+	gui_scene_add_load_types(new);
 	return (new);
 }

@@ -40,7 +40,5 @@ t_gui				*gui_new(int *ac, char ***av)
 	gtk_widget_show(GTK_WIDGET(new->window));
 	gtk_widget_grab_focus(GTK_WIDGET(new->image->event_box));
 	printf("GUI : Ready\n\n");
-
-
 	return (new);
 }

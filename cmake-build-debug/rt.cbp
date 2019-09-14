@@ -685,6 +685,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_delete.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_func_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_gen_name.c">
 			<Option target="rt"/>
 		</Unit>
@@ -833,6 +836,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_parser_select.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_block_destroy.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_material_x.c">

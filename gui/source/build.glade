@@ -4642,7 +4642,7 @@
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">Nice.</property>
+                <property name="label" translatable="yes">Ok</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -4701,7 +4701,7 @@
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">Nope</property>
+                <property name="label" translatable="yes">No</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -4715,7 +4715,7 @@
             </child>
             <child>
               <object class="GtkButton">
-                <property name="label" translatable="yes">Yep</property>
+                <property name="label" translatable="yes">Yes</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -4776,7 +4776,7 @@
     <property name="focus_on_map">False</property>
     <property name="transient_for">window</property>
     <signal name="close" handler="gui_signal_scene_add_response_cancel" swapped="no"/>
-    <signal name="destroy" handler="gui_signal_scene_add_response_cancel" swapped="no"/>
+    <signal name="delete-event" handler="gui_signal_scene_add_block_destroy" swapped="no"/>
     <child>
       <placeholder/>
     </child>

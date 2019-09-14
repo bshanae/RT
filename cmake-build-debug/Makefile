@@ -4524,6 +4524,33 @@ gui/gui_scene_common/gui_scene_common_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_delete.c.s
 
+gui/gui_scene_common/gui_scene_common_func_x.o: gui/gui_scene_common/gui_scene_common_func_x.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_func_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.o
+
+gui/gui_scene_common/gui_scene_common_func_x.i: gui/gui_scene_common/gui_scene_common_func_x.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_func_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.i
+
+gui/gui_scene_common/gui_scene_common_func_x.s: gui/gui_scene_common/gui_scene_common_func_x.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_func_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.s
+
 gui/gui_scene_common/gui_scene_common_gen_name.o: gui/gui_scene_common/gui_scene_common_gen_name.c.o
 
 .PHONY : gui/gui_scene_common/gui_scene_common_gen_name.o
@@ -5874,6 +5901,33 @@ gui/gui_signal_x/gui_signal_parser_select.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_parser_select.c.s
 .PHONY : gui/gui_signal_x/gui_signal_parser_select.c.s
 
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.o: gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.o
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.o
+
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.i: gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.i
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.i
+
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.s: gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.s
+.PHONY : gui/gui_signal_x/gui_signal_scene_add_block_destroy.c.s
+
 gui/gui_signal_x/gui_signal_scene_add_material_x.o: gui/gui_signal_x/gui_signal_scene_add_material_x.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_scene_add_material_x.o
@@ -6831,6 +6885,9 @@ help:
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_func_x.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_func_x.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_func_x.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.s"
@@ -6981,6 +7038,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_parser_select.o"
 	@echo "... gui/gui_signal_x/gui_signal_parser_select.i"
 	@echo "... gui/gui_signal_x/gui_signal_parser_select.s"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_block_destroy.o"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_block_destroy.i"
+	@echo "... gui/gui_signal_x/gui_signal_scene_add_block_destroy.s"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_scene_add_material_x.s"
