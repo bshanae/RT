@@ -193,7 +193,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
-  "CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o"

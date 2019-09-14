@@ -7196,7 +7196,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">page0</property>
+                            <property name="name">Explosion</property>
                             <property name="title" translatable="yes">page0</property>
                             <property name="position">16</property>
                           </packing>
@@ -7306,7 +7306,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">page1</property>
+                            <property name="name">CSG</property>
                             <property name="title" translatable="yes">page1</property>
                             <property name="position">17</property>
                           </packing>

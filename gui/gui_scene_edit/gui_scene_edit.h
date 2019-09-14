@@ -89,7 +89,7 @@ void 							gui_scene_edit_init_material
 void 							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);
 void							gui_scene_edit_apply
-								(t_gui_scene_edit *edit, t_object* object);
+								(t_gui_scene_edit *edit, t_scene *scene);
 void 							gui_scene_edit_material_color_enable
 								(t_gui_scene_edit *edit);
 void 							gui_scene_edit_material_color_disable

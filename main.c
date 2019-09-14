@@ -111,6 +111,21 @@ void				scene_test_rm(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_csg, "Sphere", "Plane A");
 }
 
+void				scene_test_rm_1(t_scene *scene)
+{
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 0.}, 3.);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere", scene_param_end);
+
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
+	scene_edit_param(scene, -1, scene_param_name, "Plane A", scene_param_end);
+
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 10.}, (RT_F4_API){0., 1., 0.});
+	scene_edit_param(scene, -1, scene_param_name, "Plane B", scene_param_end);
+
+	object_build(scene_get_space(scene), object_type_csg, "Sphere", "Plane A");
+}
+
+
 int					main(int argc, char **argv)
 {
 	t_gui			*gui;
@@ -118,7 +133,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	//scene_test_rm(gui->renderer->data.scene);
+	//scene_test_rm_1(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.x = -20;
 	gui->renderer->data.camera->rotation.y = -1.6;
 	gui->renderer->data.settings.rm_mod = 1;

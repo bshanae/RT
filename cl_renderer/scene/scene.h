@@ -34,7 +34,12 @@ void 				scene_clear(t_scene *scene);
 void 				scene_update(t_scene *scene);
 
 t_object			*scene_get_space(t_scene *scene);
-void 				scene_remove_object(t_scene *scene, int object_id);
+
+void 				scene_object_remove
+					(t_scene *scene, int object_id);
+void				scene_object_rename
+					(t_scene *scene, int object_id, CHAR_REF name);
+
 int 				scene_point_check(t_scene *scene, const RT_F4_API *point);
 
 void				scene_select(t_scene *scene, int id);

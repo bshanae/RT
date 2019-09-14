@@ -402,7 +402,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_new.c
 	./cl_renderer/scene/scene_get_space.c
 	./cl_renderer/scene/scene_delete.c
-	./cl_renderer/scene/scene_remove_object.c
+	cl_renderer/scene/scene_object_x.c
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c

@@ -427,7 +427,7 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c">
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_set_x.c">

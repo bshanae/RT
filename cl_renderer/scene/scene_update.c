@@ -2,7 +2,6 @@
 
 void 				scene_update(t_scene *scene)
 {
-
 	scene_set_id(scene);
 	scene_set_name(scene);
 	scene_set_light(scene);

@@ -2579,18 +2579,18 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.s
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o: ../cl_renderer/scene/scene_remove_object.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c
+CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o: ../cl_renderer/scene/scene_object_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i
+CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.i
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_remove_object.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
+CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.s
 
 CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o: ../cl_renderer/scene/scene_update.c
@@ -3308,7 +3308,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o" \
@@ -3547,7 +3547,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o

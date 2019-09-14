@@ -121,16 +121,16 @@ typedef struct 			s_object_csg
 {
 	int     			positive_id;
 	int     			negative_id;
-	char 				positive_name[64];
-	char    			negative_name[64];
+	char 				positive_name[RT_CL_OBJECT_NAME_SIZE];
+	char    			negative_name[RT_CL_OBJECT_NAME_SIZE];
 }						t_object_csg;
 
 typedef struct 			s_object_pair
 {
 	int 				first_id;
 	int 				second_id;
-	char 				first_name[64];
-	char 				second_name[64];
+	char 				first_name[RT_CL_OBJECT_NAME_SIZE];
+	char 				second_name[RT_CL_OBJECT_NAME_SIZE];
 }						t_object_pair;
 
 #endif

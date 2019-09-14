@@ -2202,32 +2202,32 @@ cl_renderer/scene/scene_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.s
 .PHONY : cl_renderer/scene/scene_new.c.s
 
-cl_renderer/scene/scene_remove_object.o: cl_renderer/scene/scene_remove_object.c.o
+cl_renderer/scene/scene_object_x.o: cl_renderer/scene/scene_object_x.c.o
 
-.PHONY : cl_renderer/scene/scene_remove_object.o
+.PHONY : cl_renderer/scene/scene_object_x.o
 
 # target to build an object file
-cl_renderer/scene/scene_remove_object.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.o
-.PHONY : cl_renderer/scene/scene_remove_object.c.o
+cl_renderer/scene/scene_object_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o
+.PHONY : cl_renderer/scene/scene_object_x.c.o
 
-cl_renderer/scene/scene_remove_object.i: cl_renderer/scene/scene_remove_object.c.i
+cl_renderer/scene/scene_object_x.i: cl_renderer/scene/scene_object_x.c.i
 
-.PHONY : cl_renderer/scene/scene_remove_object.i
+.PHONY : cl_renderer/scene/scene_object_x.i
 
 # target to preprocess a source file
-cl_renderer/scene/scene_remove_object.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.i
-.PHONY : cl_renderer/scene/scene_remove_object.c.i
+cl_renderer/scene/scene_object_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.i
+.PHONY : cl_renderer/scene/scene_object_x.c.i
 
-cl_renderer/scene/scene_remove_object.s: cl_renderer/scene/scene_remove_object.c.s
+cl_renderer/scene/scene_object_x.s: cl_renderer/scene/scene_object_x.c.s
 
-.PHONY : cl_renderer/scene/scene_remove_object.s
+.PHONY : cl_renderer/scene/scene_object_x.s
 
 # target to generate assembly for a file
-cl_renderer/scene/scene_remove_object.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_remove_object.c.s
-.PHONY : cl_renderer/scene/scene_remove_object.c.s
+cl_renderer/scene/scene_object_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.s
+.PHONY : cl_renderer/scene/scene_object_x.c.s
 
 cl_renderer/scene/scene_set_x.o: cl_renderer/scene/scene_set_x.c.o
 
@@ -6708,9 +6708,9 @@ help:
 	@echo "... cl_renderer/scene/scene_new.o"
 	@echo "... cl_renderer/scene/scene_new.i"
 	@echo "... cl_renderer/scene/scene_new.s"
-	@echo "... cl_renderer/scene/scene_remove_object.o"
-	@echo "... cl_renderer/scene/scene_remove_object.i"
-	@echo "... cl_renderer/scene/scene_remove_object.s"
+	@echo "... cl_renderer/scene/scene_object_x.o"
+	@echo "... cl_renderer/scene/scene_object_x.i"
+	@echo "... cl_renderer/scene/scene_object_x.s"
 	@echo "... cl_renderer/scene/scene_set_x.o"
 	@echo "... cl_renderer/scene/scene_set_x.i"
 	@echo "... cl_renderer/scene/scene_set_x.s"
