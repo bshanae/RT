@@ -3,6 +3,29 @@
 
 # include "rt_control.h"
 
+
+typedef enum						e_rt_movement
+{
+	rt_movement_left,
+	rt_movement_right,
+	rt_movement_up,
+	rt_movement_down,
+	rt_movement_forward,
+	rt_movement_backward
+}									t_rt_movement;
+
+typedef enum						e_rt_bool
+{
+	rt_false,
+	rt_true
+}									t_rt_bool;
+
+typedef enum						e_rt_tracing_mod
+{
+	rt_tracing_mod_rt,
+	rt_tracing_mod_rm
+}									t_rt_tracing_mod;
+
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
 # define RT_GUI_WIDTH				480
@@ -45,6 +68,7 @@
 
 # define RT_CL_ILLUMINATION			1
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
+# define RT_CL_ILLUMINATION_POWER	(RT_F)2.
 
 # define RT_CL_DEPTH				1
 # define RT_CL_SAMPLES				25
@@ -53,7 +77,8 @@
 # define RT_CL_MOTION_BLUR_ALPHA	(RT_F)0.7
 # define RT_CL_SAMPLE_ARRAY_LENGTH	5
 
-# define RT_CL_RM_MOD				0
+# define RT_CL_TRACING_MOD			rt_tracing_mod_rt
+
 # define RT_CL_RM_STEP_LIMIT		128
 # define RT_CL_STEP_PART			(RT_F)1.
 # define RT_CL_RM_MAX_DISTANCE		200
@@ -77,21 +102,5 @@
 #endif
 
 # define RT_INFINITY				INFINITY
-
-typedef enum						e_rt_movement
-{
-	rt_movement_left,
-	rt_movement_right,
-	rt_movement_up,
-	rt_movement_down,
-	rt_movement_forward,
-	rt_movement_backward
-}									t_rt_movement;
-
-typedef enum						e_rt_bool
-{
-	rt_false,
-	rt_true
-}									t_rt_bool;
 
 #endif

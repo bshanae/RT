@@ -21,7 +21,7 @@ void				gui_signal_scene_edit_add
 	{
 		scene_update(gui->renderer->data.scene);
 		gui_scene_common_update_all(gui->scene->common,
-			gui->renderer->data.scene, gui->renderer->data.settings.rm_mod);
+			gui->renderer->data.scene);
 		cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 		cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 		gui_queue_push(gui->queue);

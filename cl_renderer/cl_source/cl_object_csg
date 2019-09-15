@@ -29,8 +29,8 @@ static RT_F 		       object_csg_sdf(global t_object *object, t_intersection *int
 	RT_F					sdf[2];
 
     data = (global t_object_csg *)object->data;
-    if (data->positive_id == -1 || data->negative_id == -1)
-        return (RT_INFINITY);
+	if (data->positive_id == -1 || data->negative_id == -1)
+     	return (RT_INFINITY);
     scene_begin = object - object->id;
     sdf[0] = sdf_csg_compute(scene_begin + data->positive_id, intersection);
     sdf[1] = sdf_csg_compute(scene_begin + data->negative_id, intersection);

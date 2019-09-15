@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
 	pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 endif()
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-deprecated-declarations")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wenum-compare -Wno-deprecated-declarations")
 
 if (${RT_LINUX})
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D RT_OPEN_CL_DISABLED")
@@ -225,7 +225,7 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
-	./gui/gui_scene_common/gui_scene_common_update_x.c gui/gui_scene_common/gui_scene_common_func_x.c)
+	./gui/gui_scene_common/gui_scene_common_update_x.c gui/gui_scene_common/gui_scene_common_add_to_list.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -453,7 +453,7 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
 	./cl_renderer/cl_renderer/cl_renderer_load.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
-	./cl_renderer/cl_renderer/cl_renderer_object_move.c)
+	./cl_renderer/cl_renderer/cl_renderer_object_move.c cl_renderer/cl_renderer/cl_renderer_switch_mod.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_JSON}

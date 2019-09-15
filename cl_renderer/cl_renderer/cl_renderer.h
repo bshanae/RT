@@ -55,6 +55,9 @@ void						cl_renderer_flag_set(t_cl_renderer *renderer,
 												 t_cl_renderer_flag flag);
 void						cl_renderer_flag_perform(t_cl_renderer *renderer);
 
+void 						cl_renderer_change_tracing_mod
+							(t_cl_renderer *renderer, t_rt_tracing_mod mod);
+
 int 						cl_renderer_camera_move
 							(t_cl_renderer *renderer, t_rt_movement movement);
 void 						cl_renderer_camera_rotate(

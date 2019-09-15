@@ -5,7 +5,7 @@
 
 static int			object_intersect(global t_object *object, t_intersection *intersection)
 {
-	if (!object->is_visible)
+	if (object->is_visible == rt_false)
 		return (0);
 	if (object->type == object_type_sphere)
 		return (object_sphere_intersect(object, intersection));
@@ -28,7 +28,7 @@ static int			object_intersect(global t_object *object, t_intersection *intersect
 
 static RT_F			object_sdf(global t_object *object, t_intersection *intersection)
 {
-	if (!object->is_visible)
+	if (object->is_visible == rt_false)
 		return (RT_INFINITY);
 	if (object->type == object_type_sphere)
 		return (object_sphere_sdf(object, intersection));

@@ -17,6 +17,8 @@ static RT_F4					illumination(
 
 	for (int i = 0; i < scene->objects_length; i++)
 	{
+		if (scene->objects[i].is_visible == rt_false)
+        	continue ;
 		if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
@@ -37,7 +39,7 @@ static RT_F4					illumination(
 		if (shadow.ray.t < y)
 			continue;
 
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_CL_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }

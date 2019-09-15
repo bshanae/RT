@@ -1,6 +1,6 @@
 #include "scene.h"
 
-t_scene				*scene_new(void)
+t_scene				*scene_new(UINT_REF mod_ptr)
 {
 	t_scene			*new;
 
@@ -8,5 +8,6 @@ t_scene				*scene_new(void)
 	texture_initialization(&new->texture);
 	new->objects_length = 0;
 	new->lights_length = 0;
+	new->current_mod = mod_ptr;
 	return (new);
 }

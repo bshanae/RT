@@ -13,9 +13,8 @@ void				object_build(
 	space->material = MATERIAL_WHITE;
 	space->name[0] = '\0';
 	space->texture_id = -1;
-	space->is_visible = 1;
-	space->is_selected = 0;
-	space->is_limited = 0;
+	space->is_visible = rt_true;
+	space->is_selected = rt_false;
 	va_start(args, type);
 	if (type == object_type_light_ambient)
 		object_light_ambient_build(space, &args);

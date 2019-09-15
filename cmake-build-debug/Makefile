@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vladimir/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/vladimir/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/vladimir/workspace/21_ray_tracer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vladimir/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -986,6 +986,33 @@ cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s: cl_renderer/cl_renderer/cl
 cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
+
+cl_renderer/cl_renderer/cl_renderer_switch_mod.o: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
+
+cl_renderer/cl_renderer/cl_renderer_switch_mod.i: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
+
+cl_renderer/cl_renderer/cl_renderer_switch_mod.s: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
 
 cl_renderer/disruption_x/disruption_checkerboard.o: cl_renderer/disruption_x/disruption_checkerboard.c.o
 
@@ -4578,6 +4605,33 @@ gui/gui_scene_add/gui_scene_add_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.s
 .PHONY : gui/gui_scene_add/gui_scene_add_new.c.s
 
+gui/gui_scene_common/gui_scene_common_add_to_list.o: gui/gui_scene_common/gui_scene_common_add_to_list.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_add_to_list.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.c.o
+
+gui/gui_scene_common/gui_scene_common_add_to_list.i: gui/gui_scene_common/gui_scene_common_add_to_list.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_add_to_list.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.c.i
+
+gui/gui_scene_common/gui_scene_common_add_to_list.s: gui/gui_scene_common/gui_scene_common_add_to_list.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_add_to_list.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.c.s
+
 gui/gui_scene_common/gui_scene_common_delete.o: gui/gui_scene_common/gui_scene_common_delete.c.o
 
 .PHONY : gui/gui_scene_common/gui_scene_common_delete.o
@@ -4604,33 +4658,6 @@ gui/gui_scene_common/gui_scene_common_delete.s: gui/gui_scene_common/gui_scene_c
 gui/gui_scene_common/gui_scene_common_delete.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_delete.c.s
-
-gui/gui_scene_common/gui_scene_common_func_x.o: gui/gui_scene_common/gui_scene_common_func_x.c.o
-
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.o
-
-# target to build an object file
-gui/gui_scene_common/gui_scene_common_func_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.o
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.o
-
-gui/gui_scene_common/gui_scene_common_func_x.i: gui/gui_scene_common/gui_scene_common_func_x.c.i
-
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.i
-
-# target to preprocess a source file
-gui/gui_scene_common/gui_scene_common_func_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.i
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.i
-
-gui/gui_scene_common/gui_scene_common_func_x.s: gui/gui_scene_common/gui_scene_common_func_x.c.s
-
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.s
-
-# target to generate assembly for a file
-gui/gui_scene_common/gui_scene_common_func_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_func_x.c.s
-.PHONY : gui/gui_scene_common/gui_scene_common_func_x.c.s
 
 gui/gui_scene_common/gui_scene_common_gen_name.o: gui/gui_scene_common/gui_scene_common_gen_name.c.o
 
@@ -6475,8 +6502,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... rt"
 	@echo "... edit_cache"
+	@echo "... rt"
 	@echo "... cl_renderer/camera/camera_apply.o"
 	@echo "... cl_renderer/camera/camera_apply.i"
 	@echo "... cl_renderer/camera/camera_apply.s"
@@ -6573,6 +6600,9 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.s"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.o"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.i"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.s"
@@ -6972,12 +7002,12 @@ help:
 	@echo "... gui/gui_scene_add/gui_scene_add_new.o"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.i"
 	@echo "... gui/gui_scene_add/gui_scene_add_new.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.s"
-	@echo "... gui/gui_scene_common/gui_scene_common_func_x.o"
-	@echo "... gui/gui_scene_common/gui_scene_common_func_x.i"
-	@echo "... gui/gui_scene_common/gui_scene_common_func_x.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_gen_name.s"

@@ -43,9 +43,6 @@ void					scene_set_pair(t_scene *scene)
 
 	i = 0;
 	while (i < scene->objects_length)
-		scene->objects[i++].is_visible = 1;
-	i = 0;
-	while (i < scene->objects_length)
 	{
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
 		{
@@ -92,18 +89,19 @@ void					scene_set_visibility(t_scene *scene)
 
 	i = 0;
 	while (i < scene->objects_length)
-		scene->objects[i++].is_visible = 1;
+		scene->objects[i++].is_visible = rt_true;
 	i = 0;
 	while (i < scene->objects_length)
 	{
-		if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
+		if (!(object_flag_get(scene->objects + i) & *scene->current_mod))
+			;
+		else if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
 		{
 			pair = (t_object_pair *)scene->objects[i].data;
 			if ((temp = scene_find_by_id(scene, pair->first_id)))
-				temp->is_visible = 0;
+				temp->is_visible = rt_false;
 			if ((temp = scene_find_by_id(scene, pair->second_id)))
-				temp->is_visible = 0;
-			scene->objects[i].is_visible = 0;
+				temp->is_visible = rt_false;
 		}
 		i++;
 	}

@@ -43,7 +43,6 @@ typedef struct		s_object
 	char			data[RT_CL_OBJECT_DATA_SIZE];
 	int 			is_visible;
 	int 			is_selected;
-	int 			is_limited;
 }					t_object;
 
 const char 			*object_translate(t_object_type type);

@@ -20,12 +20,6 @@ static int			object_box_intersect(global t_object *object, t_intersection *inter
 	RT_F 			t_temp;
 	int 			i;
 
-	RT_F4			origin_rotated;
-	RT_F4			direction_rotated;
-
-	origin_rotated = f4_rotate_x(intersection->ray.origin, 1.);
-	direction_rotated = f4_rotate_x(intersection->ray.direction, 1.);
-
 	data = *(global t_object_box *)object->data;
 	min = data.position - data.size / (RT_F)2.;
 	max = data.position + data.size / (RT_F)2.;
@@ -34,15 +28,9 @@ static int			object_box_intersect(global t_object *object, t_intersection *inter
 	t_far = RT_INFINITY;
 	while (i < 3)
 	{
-#ifdef TEST
-		inv_dir = 1. / direction_rotated[i];
-		t[0] = (min[i] - origin_rotated[i]) * inv_dir;
-		t[1] = (max[i] - origin_rotated[i]) * inv_dir;
-#else
 		inv_dir = 1. / intersection->ray.direction[i];
         t[0] = (min[i] - intersection->ray.origin[i]) * inv_dir;
         t[1] = (max[i] - intersection->ray.origin[i]) * inv_dir;
-#endif
 
 		if (inv_dir < 0.)
 		{

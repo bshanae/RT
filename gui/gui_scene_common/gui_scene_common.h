@@ -35,22 +35,18 @@ typedef enum 		s_gui_scene_types_column
 void				gui_scene_common_gen_name
 					(t_gui_scene_common *scene, t_object *object);
 
-t_rt_bool			gui_scene_common_func_a
-					(int rm_mod, t_object *object);
-t_rt_bool			gui_scene_common_func_b
-					(int rm_mod, t_object_type type);
-void				gui_scene_common_func_c
+void				gui_scene_common_add_to_list
 					(GtkListStore *list, t_object *object);
 
 void 				gui_scene_common_update_full
-					(t_gui_scene_common *gui, t_scene *scene, int rm_mod);
+					(t_gui_scene_common *gui, t_scene *scene);
 void				gui_scene_common_update_limited
 					(t_gui_scene_common *gui, t_scene *scene);
 void				gui_scene_common_update_csg
 					(t_gui_scene_common *gui, t_scene *scene);
 void 				gui_scene_common_update_types
-					(t_gui_scene_common *gui, int rm_mod);
+					(t_gui_scene_common *gui, t_scene *scene);
 void 				gui_scene_common_update_all
-					(t_gui_scene_common *gui, t_scene *scene, int rm_mod);
+					(t_gui_scene_common *gui, t_scene *scene);
 
 #endif

@@ -10,7 +10,7 @@ static void				static_data_init(t_cl_renderer *renderer)
 	renderer->data.camera_unmodified =
 		camera_new(&renderer->image->width, &renderer->image->height);
 	printf("Renderer : Initializing scene\n");
-	renderer->data.scene = scene_new();
+	renderer->data.scene = scene_new(&renderer->data.settings.tracing_mod_mask);
 	renderer->data.image = renderer->image->color_buffer;
 	cl_renderer_settings_init(&renderer->data.settings);
 	printf("Renderer : Initializing rng seeds\n");

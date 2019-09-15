@@ -16,9 +16,10 @@ typedef struct		s_scene
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
+	UINT_REF 		current_mod;
 }					t_scene;
 
-t_scene				*scene_new(void);
+t_scene				*scene_new(UINT_REF mod_ptr);
 void				scene_delete(t_scene **scene);
 
 t_object			*scene_find_by_id(t_scene *scene, int id);
