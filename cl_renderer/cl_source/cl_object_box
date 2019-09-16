@@ -51,6 +51,50 @@ static int			object_box_intersect(global t_object *object, t_intersection *inter
 	return (1);
 }
 
+static void			object_box_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t_ptr)
+{
+	t_object_box	data;
+	RT_F4			min;
+	RT_F4			max;
+	RT_F			inv_dir;
+	RT_F 			t[2];
+	RT_F 			t_near;
+	RT_F 			t_far;
+	RT_F 			t_temp;
+	int 			i;
+
+	t_ptr[0] = RT_INFINITY;
+  	t_ptr[1] = RT_INFINITY;
+	data = *(global t_object_box *)object->data;
+	min = data.position - data.size / (RT_F)2.;
+	max = data.position + data.size / (RT_F)2.;
+	i = 0;
+	t_near = RT_EPSILON;
+	t_far = RT_INFINITY;
+	while (i < 3)
+	{
+		inv_dir = 1. / intersection->ray.direction[i];
+        t[0] = (min[i] - intersection->ray.origin[i]) * inv_dir;
+        t[1] = (max[i] - intersection->ray.origin[i]) * inv_dir;
+
+		if (inv_dir < 0.)
+		{
+			t_temp = t[0];
+			t[0] = t[1];
+			t[1] = t_temp;
+		}
+		t_near = RT_MAX(t[0], t_near);
+		t_far = RT_MIN(t[1], t_far);
+		if (t_far <= t_near)
+			return ;
+		i++;
+	}
+	if (t_near == RT_EPSILON || t_near >= intersection->ray.t)
+    	return ;
+	t_ptr[0] = t_near;
+	t_ptr[1] = t_far;
+}
+
 static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersection)
 {
 	t_object_box	data;
@@ -63,6 +107,7 @@ static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersecti
 	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
 		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
+
 
 static RT_F4		object_box_normal(global t_object *object, t_intersection *intersection)
 {

@@ -30,6 +30,12 @@ static int					object_limited_intersect(global t_object *object, t_intersection 
 
 	if (main->type == object_type_sphere)
 		object_sphere_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_cone)
+    	object_cone_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_cylinder)
+    	object_cylinder_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_box)
+		object_box_intersect_t(main, intersection, main_t);
 	else
 		return (0);
 

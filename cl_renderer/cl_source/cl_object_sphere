@@ -32,6 +32,35 @@ static int     					object_sphere_intersect(global t_object *object, t_intersect
 	return (1);
 }
 
+static void     				object_sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_sphere				data;
+	RT_F						k[3];
+	RT_F						discriminant;
+	RT_F4						temp;
+
+    data = *(global t_object_sphere *)object->data;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
+	temp = intersection->ray.origin - data.position;
+	k[1] = 2 * dot(temp, intersection->ray.direction);
+	k[2] = dot(temp, temp) - data.radius * data.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+	{
+	    t[0] = RT_INFINITY;
+	    t[1] = RT_INFINITY;
+	    return ;
+	}
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+    	t[0] = RT_INFINITY;
+    	t[1] = RT_INFINITY;
+    	return ;
+    }
+}
+
 static RT_F4					object_sphere_normal(global t_object *object, t_intersection *intersection)
 {
 	return (normalize(intersection->hit - ((global t_object_sphere *)object->data)->position));
@@ -61,35 +90,6 @@ static RT_F						object_sphere_center_shift(global t_object *object)
 
 	data = *(global t_object_sphere *)object->data;
     return (data.radius);
-}
-
-static void     				object_sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
-{
-	t_object_sphere				data;
-	RT_F						k[3];
-	RT_F						discriminant;
-	RT_F4						temp;
-
-    data = *(global t_object_sphere *)object->data;
-	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
-	temp = intersection->ray.origin - data.position;
-	k[1] = 2 * dot(temp, intersection->ray.direction);
-	k[2] = dot(temp, temp) - data.radius * data.radius;
-	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
-	if (discriminant < 0.f)
-	{
-	    t[0] = RT_INFINITY;
-	    t[1] = RT_INFINITY;
-	    return ;
-	}
-	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-	{
-    	t[0] = RT_INFINITY;
-    	t[1] = RT_INFINITY;
-    	return ;
-    }
 }
 
 static RT_F 					object_sphere_sdf(global t_object *object, t_intersection *intersection)

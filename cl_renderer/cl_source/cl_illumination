@@ -19,8 +19,7 @@ static RT_F4					illumination(
 	{
 		if (scene->objects[i].is_visible == rt_false)
         	continue ;
-        if (scene->objects[i].is_selected == rt_true)
-        	continue ;
+
 		if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
@@ -37,6 +36,9 @@ static RT_F4					illumination(
 
 		shadow = *intersection;
 		scene_intersect(scene, camera, &shadow, settings);
+
+		if (scene->objects[shadow.object_id].is_selected == rt_true)
+			continue ;
 
 		if (shadow.ray.t < y)
 			continue;

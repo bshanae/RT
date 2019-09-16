@@ -342,6 +342,35 @@ static int     					object_sphere_intersect(global t_object *object, t_intersect
 	return (1);
 }
 
+static void     				object_sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_sphere				data;
+	RT_F						k[3];
+	RT_F						discriminant;
+	RT_F4						temp;
+
+    data = *(global t_object_sphere *)object->data;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
+	temp = intersection->ray.origin - data.position;
+	k[1] = 2 * dot(temp, intersection->ray.direction);
+	k[2] = dot(temp, temp) - data.radius * data.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0.f)
+	{
+	    t[0] = RT_INFINITY;
+	    t[1] = RT_INFINITY;
+	    return ;
+	}
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+    	t[0] = RT_INFINITY;
+    	t[1] = RT_INFINITY;
+    	return ;
+    }
+}
+
 static RT_F4					object_sphere_normal(global t_object *object, t_intersection *intersection)
 {
 	return (normalize(intersection->hit - ((global t_object_sphere *)object->data)->position));
@@ -371,35 +400,6 @@ static RT_F						object_sphere_center_shift(global t_object *object)
 
 	data = *(global t_object_sphere *)object->data;
     return (data.radius);
-}
-
-static void     				object_sphere_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
-{
-	t_object_sphere				data;
-	RT_F						k[3];
-	RT_F						discriminant;
-	RT_F4						temp;
-
-    data = *(global t_object_sphere *)object->data;
-	k[0] = dot(intersection->ray.direction, intersection->ray.direction);
-	temp = intersection->ray.origin - data.position;
-	k[1] = 2 * dot(temp, intersection->ray.direction);
-	k[2] = dot(temp, temp) - data.radius * data.radius;
-	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
-	if (discriminant < 0.f)
-	{
-	    t[0] = RT_INFINITY;
-	    t[1] = RT_INFINITY;
-	    return ;
-	}
-	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-	{
-    	t[0] = RT_INFINITY;
-    	t[1] = RT_INFINITY;
-    	return ;
-    }
 }
 
 static RT_F 					object_sphere_sdf(global t_object *object, t_intersection *intersection)
@@ -550,6 +550,67 @@ static int			object_cone_intersect(global t_object *object, t_intersection *inte
 	return (1);
 }
 
+static void			object_cone_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_cone	data;
+    RT_F4           temp[3];
+	RT_F            discriminant;
+    int             is_infinity_part[2];
+    RT_F            angle[2];
+    RT_F			t_cup;
+	RT_F            k[3];
+
+	t[0] = RT_INFINITY;
+    t[1] = RT_INFINITY;
+	data = *(global t_object_cone *)object->data;
+	temp[0] = intersection->ray.origin - data.top;
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.)
+			* (1 + data.tangent * data.tangent);
+	k[1] = 2 * (dot(temp[0], intersection->ray.direction) - (1 + data.tangent * data.tangent)
+			* dot(intersection->ray.direction, data.axis) * dot(temp[0], data.axis));
+	k[2] = dot(temp[0], temp[0]) - (1 + data.tangent * data.tangent)
+			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+        return ;
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+		if (t[1] <= RT_EPSILON || t[1] >= intersection->ray.t)
+		{
+	 		t[0] = RT_INFINITY;
+    		t[1] = RT_INFINITY;
+			return ;
+		}
+		t[0] = t[1];
+	}
+
+	 for (int i = 0; i < 2; i++)
+     {
+     	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[i]);
+        temp[2] = temp[1] - data.bottom;
+        angle[0] = dot((temp[1] - data.top), data.axis);
+        angle[1] = dot((temp[1] - data.bottom), data.axis);
+        is_infinity_part[i] = (length(temp[2]) > length(data.top - data.bottom))
+                     || (dot(temp[2], data.axis) > 0.);
+     }
+
+    t_cup = cone_cap_intersect(object, intersection);
+    if (is_infinity_part[0] && t_cup != INFINITY)
+    	t[0] = t_cup;
+    else if (is_infinity_part[1] && t_cup != INFINITY)
+    	t[1] = t_cup;
+   	else if (!is_infinity_part[0])
+   		intersection->cups_flag = 0;
+   	else
+    {
+    	t[0] = RT_INFINITY;
+        t[1] = RT_INFINITY;
+        return ;
+    }
+}
+
 static RT_F4		calculate_cone_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cone	data;
@@ -653,6 +714,67 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	return (1);
 }
 
+static void			    object_cylinder_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_cylinder	data;
+	RT_F4			    temp;
+    RT_F			    angle[2];
+	RT_F                discriminant;
+	int             	is_infinity_part[2];
+	RT_F                t_cups;
+	RT_F                k[3];
+
+	t[0] = RT_INFINITY;
+    t[1] = RT_INFINITY;
+	data = *(global t_object_cylinder *)object->data;
+	temp = intersection->ray.origin - data.bottom;
+
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.);
+	k[1] = 2 * (dot(intersection->ray.direction, temp)
+			- dot(intersection->ray.direction, data.axis)
+			* dot(temp, data.axis));
+	k[2] =  dot(temp, temp) - pow((RT_F)dot(temp, data.axis), (RT_F)2.)
+			- pow((RT_F)data.radius, (RT_F)2.);
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+        return ;
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+    	if (t[1] <= RT_EPSILON || t[1] >= intersection->ray.t)
+    	{
+    		t[0] = RT_INFINITY;
+        	t[1] = RT_INFINITY;
+    		return ;
+    	}
+    	t[0] = t[1];
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+    	temp = intersection->ray.origin + intersection->ray.direction * t[i];
+    	angle[0] = dot((temp - data.top), data.axis);
+        angle[1] = dot(temp - data.bottom, data.axis);
+        is_infinity_part[i] = (angle[0] > 0. || angle[1] < 0.);
+    }
+
+    t_cups = cylinder_cap_intersect(object, intersection);
+    if (is_infinity_part[0] && t_cups != INFINITY)
+    	t[0] = t_cups;
+    else if (is_infinity_part[1] && t_cups != INFINITY)
+    	t[1] = t_cups;
+    else if (!is_infinity_part[0])
+        intersection->cups_flag = 0;
+    else
+    {
+    	t[0] = RT_INFINITY;
+        t[1] = RT_INFINITY;
+        return ;
+    }
+}
+
+
 static RT_F4		    calculate_cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
@@ -729,6 +851,50 @@ static int			object_box_intersect(global t_object *object, t_intersection *inter
 	return (1);
 }
 
+static void			object_box_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t_ptr)
+{
+	t_object_box	data;
+	RT_F4			min;
+	RT_F4			max;
+	RT_F			inv_dir;
+	RT_F 			t[2];
+	RT_F 			t_near;
+	RT_F 			t_far;
+	RT_F 			t_temp;
+	int 			i;
+
+	t_ptr[0] = RT_INFINITY;
+  	t_ptr[1] = RT_INFINITY;
+	data = *(global t_object_box *)object->data;
+	min = data.position - data.size / (RT_F)2.;
+	max = data.position + data.size / (RT_F)2.;
+	i = 0;
+	t_near = RT_EPSILON;
+	t_far = RT_INFINITY;
+	while (i < 3)
+	{
+		inv_dir = 1. / intersection->ray.direction[i];
+        t[0] = (min[i] - intersection->ray.origin[i]) * inv_dir;
+        t[1] = (max[i] - intersection->ray.origin[i]) * inv_dir;
+
+		if (inv_dir < 0.)
+		{
+			t_temp = t[0];
+			t[0] = t[1];
+			t[1] = t_temp;
+		}
+		t_near = RT_MAX(t[0], t_near);
+		t_far = RT_MIN(t[1], t_far);
+		if (t_far <= t_near)
+			return ;
+		i++;
+	}
+	if (t_near == RT_EPSILON || t_near >= intersection->ray.t)
+    	return ;
+	t_ptr[0] = t_near;
+	t_ptr[1] = t_far;
+}
+
 static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersection)
 {
 	t_object_box	data;
@@ -741,6 +907,7 @@ static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersecti
 	return (RT_MIN((RT_F)RT_MAX((RT_F)d.x, RT_MAX(d.y, d.z)), (RT_F)0.0)
 		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
+
 
 static RT_F4		object_box_normal(global t_object *object, t_intersection *intersection)
 {
@@ -1126,6 +1293,12 @@ static int					object_limited_intersect(global t_object *object, t_intersection 
 
 	if (main->type == object_type_sphere)
 		object_sphere_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_cone)
+    	object_cone_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_cylinder)
+    	object_cylinder_intersect_t(main, intersection, main_t);
+	else if (main->type == object_type_box)
+		object_box_intersect_t(main, intersection, main_t);
 	else
 		return (0);
 
@@ -1474,6 +1647,11 @@ static void 			object_explosion_build_material(global t_object *object, t_inters
 #include "rt_control.h"
 #include "rt_parameters.h"
 
+static int			object_is_pair(global t_object *object)
+{
+	return (object->type == object_type_limited || object->type == object_type_csg);
+}
+
 static int			object_intersect(global t_object *object, t_intersection *intersection)
 {
 	if (object->is_visible == rt_false)
@@ -1772,7 +1950,10 @@ static int			scene_intersect(
     	return (0);
 	if (result)
 	{
-		intersection->material = scene->objects[intersection->object_id].material;
+		if (object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected)
+			intersection->material = (t_material){0, 0};
+		else
+			intersection->material = scene->objects[intersection->object_id].material;
 		if (settings->tracing_mod == rt_tracing_mod_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].texture_id > -1)
@@ -2132,10 +2313,6 @@ static void			camera_select(global t_camera *camera, global t_scene *scene, cons
 
     if (scene_intersect(scene, camera, &intersection, settings))
     	camera->select_request_object = intersection.object_id;
-    if (scene->objects[camera->select_request_object].type == rt_object_type_limited)
-    	camera->select_request_object = *(global int *)scene->objects[camera->select_request_object].data;
-    else if (scene->objects[camera->select_request_object].type == rt_object_type_csg)
-    	camera->select_request_object = *(global int *)scene->objects[camera->select_request_object].data;
 }
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2158,6 +2335,7 @@ static RT_F4					illumination(
 	{
 		if (scene->objects[i].is_visible == rt_false)
         	continue ;
+
 		if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
@@ -2174,6 +2352,9 @@ static RT_F4					illumination(
 
 		shadow = *intersection;
 		scene_intersect(scene, camera, &shadow, settings);
+
+		if (scene->objects[shadow.object_id].is_selected == rt_true)
+			continue ;
 
 		if (shadow.ray.t < y)
 			continue;
@@ -2272,12 +2453,13 @@ static RT_F4				radiance_trace(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		radiance += illumination(scene, camera, intersection, settings);
+		if (settings->illumination)
+			radiance += illumination(scene, camera, intersection, settings);
 
 		if (!scene_intersect(scene, camera, intersection, settings))
 			break ;
 
-		if (scene->objects[intersection->object_id].is_selected == rt_true)
+		if (!object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected == rt_true)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))

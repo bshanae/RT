@@ -77,6 +77,67 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	return (1);
 }
 
+static void			    object_cylinder_intersect_t(global t_object *object, t_intersection *intersection, RT_F *t)
+{
+	t_object_cylinder	data;
+	RT_F4			    temp;
+    RT_F			    angle[2];
+	RT_F                discriminant;
+	int             	is_infinity_part[2];
+	RT_F                t_cups;
+	RT_F                k[3];
+
+	t[0] = RT_INFINITY;
+    t[1] = RT_INFINITY;
+	data = *(global t_object_cylinder *)object->data;
+	temp = intersection->ray.origin - data.bottom;
+
+	k[0] = dot(intersection->ray.direction, intersection->ray.direction)
+			- pow((RT_F)dot(intersection->ray.direction, data.axis), (RT_F)2.);
+	k[1] = 2 * (dot(intersection->ray.direction, temp)
+			- dot(intersection->ray.direction, data.axis)
+			* dot(temp, data.axis));
+	k[2] =  dot(temp, temp) - pow((RT_F)dot(temp, data.axis), (RT_F)2.)
+			- pow((RT_F)data.radius, (RT_F)2.);
+	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
+        return ;
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+	{
+    	if (t[1] <= RT_EPSILON || t[1] >= intersection->ray.t)
+    	{
+    		t[0] = RT_INFINITY;
+        	t[1] = RT_INFINITY;
+    		return ;
+    	}
+    	t[0] = t[1];
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+    	temp = intersection->ray.origin + intersection->ray.direction * t[i];
+    	angle[0] = dot((temp - data.top), data.axis);
+        angle[1] = dot(temp - data.bottom, data.axis);
+        is_infinity_part[i] = (angle[0] > 0. || angle[1] < 0.);
+    }
+
+    t_cups = object_cylinder_cap_intersect(object, intersection);
+    if (is_infinity_part[0] && t_cups != INFINITY)
+    	t[0] = t_cups;
+    else if (is_infinity_part[1] && t_cups != INFINITY)
+    	t[1] = t_cups;
+    else if (!is_infinity_part[0])
+        intersection->cups_flag = 0;
+    else
+    {
+    	t[0] = RT_INFINITY;
+        t[1] = RT_INFINITY;
+        return ;
+    }
+}
+
+
 static RT_F4		    calculate_cylinder_normal(global t_object *object, t_intersection *intersection)
 {
     t_object_cylinder   data;
