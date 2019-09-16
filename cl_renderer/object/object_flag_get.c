@@ -54,7 +54,7 @@ static void 		static_init_c(u_int *data)
 	data[object_type_plane] |= RT_OBJECT_CSG;
 	data[object_type_cone] |= RT_OBJECT_LIMITABLE;
 	data[object_type_cylinder] |= RT_OBJECT_LIMITABLE;
-	data[object_type_box] |= RT_OBJECT_LIMITABLE;
+	data[object_type_box] |= RT_OBJECT_LIMITABLE | RT_OBJECT_CSG;
 	data[object_type_limited] |= RT_OBJECT_PAIR;
 	data[object_type_torus] |= RT_OBJECT_CSG;
 	data[object_type_csg] |= RT_OBJECT_PAIR;

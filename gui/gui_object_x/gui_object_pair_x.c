@@ -66,7 +66,6 @@ void 						gui_object_pair_set
 {
 	GtkTreeIter				iter[2];
 	t_rt_bool				result[2];
-	int 					i[2];
 	CHAR_REF				str[2];
 	t_object_pair			*pair;
 
@@ -79,11 +78,11 @@ void 						gui_object_pair_set
 	}
 	pair = (t_object_pair *)object->data;
 	gtk_tree_model_get(GTK_TREE_MODEL(gui->first_list), iter + 0,
-		gui_objects_column_id, i + 0, gui_objects_column_name, str + 0, -1);
+		gui_objects_column_name, str + 0, -1);
 	gtk_tree_model_get(GTK_TREE_MODEL(gui->second_list), iter + 1,
-		gui_objects_column_id, i + 1, gui_objects_column_name, str + 1, -1);
-	pair->first_id = i[0];
+		gui_objects_column_name, str + 1, -1);
+	pair->first_id = -1;
+	pair->second_id = -1;
 	ft_strcpy(pair->first_name, str[0]);
-	pair->second_id = i[1];
 	ft_strcpy(pair->second_name, str[1]);
 }
