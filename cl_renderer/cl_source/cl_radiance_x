@@ -87,12 +87,13 @@ static RT_F4				radiance_trace(
 	mask = 1;
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		radiance += illumination(scene, camera, intersection, settings);
+		if (settings->illumination)
+			radiance += illumination(scene, camera, intersection, settings);
 
 		if (!scene_intersect(scene, camera, intersection, settings))
 			break ;
 
-		if (scene->objects[intersection->object_id].is_selected == rt_true)
+		if (!object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected == rt_true)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))

@@ -18,7 +18,7 @@ static int			try_move_camera(t_gui *gui, int key)
 		movement = rt_movement_down;
 	else
 		return (0);
-	if (gui->renderer->data.camera->select_request_object != -1)
+	if (gui->renderer->data.scene->selected_id != -1)
 		cl_renderer_object_move(gui->renderer, movement);
 	else
 		cl_renderer_camera_move(gui->renderer, movement);

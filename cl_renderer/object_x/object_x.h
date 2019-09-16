@@ -78,8 +78,8 @@ typedef struct 			s_object_limited
 {
 	int     			main_id;
 	int     			limit_id;
-	char 				main_name[64];
-	char    			limit_name[64];
+	char 				main_name[RT_CL_OBJECT_NAME_SIZE];
+	char    			limit_name[RT_CL_OBJECT_NAME_SIZE];
 }						t_object_limited;
 
 typedef struct 			s_object_torus

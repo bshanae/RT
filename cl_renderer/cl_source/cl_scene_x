@@ -71,7 +71,10 @@ static int			scene_intersect(
     	return (0);
 	if (result)
 	{
-		intersection->material = scene->objects[intersection->object_id].material;
+		if (object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected)
+			intersection->material = (t_material){0, 0};
+		else
+			intersection->material = scene->objects[intersection->object_id].material;
 		if (settings->tracing_mod == rt_tracing_mod_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].texture_id > -1)

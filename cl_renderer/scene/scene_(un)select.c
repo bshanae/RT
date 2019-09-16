@@ -2,13 +2,10 @@
 
 void				scene_select(t_scene *scene, int id)
 {
-	int 			i;
-
-	i = 0;
-	while (i < scene->objects_length)
-		scene->objects[i++].is_selected = rt_false;
+	scene_unselect(scene);
 	if (id != -1)
 		scene->objects[id].is_selected = rt_true;
+	scene->selected_id = id;
 }
 
 void				scene_unselect(t_scene *scene)
@@ -18,4 +15,5 @@ void				scene_unselect(t_scene *scene)
 	i = 0;
 	while (i < scene->objects_length)
 		scene->objects[i++].is_selected = rt_false;
+	scene->selected_id = -1;
 }

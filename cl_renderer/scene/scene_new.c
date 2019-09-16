@@ -9,5 +9,6 @@ t_scene				*scene_new(UINT_REF mod_ptr)
 	new->objects_length = 0;
 	new->lights_length = 0;
 	new->current_mod = mod_ptr;
+	new->selected_id = -1;
 	return (new);
 }

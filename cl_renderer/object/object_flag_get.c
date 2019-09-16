@@ -33,13 +33,13 @@ static void 		static_init_b(u_int *data)
 	data[object_type_box] |= RT_OBJECT_MOVE_A;
 	data[object_type_paraboloid] |= RT_OBJECT_MOVE_A;
 	data[object_type_moebius] |= RT_OBJECT_MOVE_A;
-	data[object_type_limited] |= RT_OBJECT_MOVE_NONE;
+	data[object_type_limited] |= RT_OBJECT_MOVE_C;
 	data[object_type_torus] |= RT_OBJECT_MOVE_A;
 	data[object_type_mandelbulb] |= RT_OBJECT_MOVE_A;
 	data[object_type_julia] |= RT_OBJECT_MOVE_A;
 	data[object_type_explosion] |= RT_OBJECT_MOVE_A;
 	data[object_type_perforated_cube] |= RT_OBJECT_MOVE_A;
-	data[object_type_csg] |= RT_OBJECT_MOVE_NONE;
+	data[object_type_csg] |= RT_OBJECT_MOVE_C;
 }
 
 

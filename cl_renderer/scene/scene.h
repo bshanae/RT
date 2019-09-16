@@ -17,6 +17,7 @@ typedef struct		s_scene
 	int 			lights_length;
 	t_texture		texture;
 	UINT_REF 		current_mod;
+	int				selected_id;
 }					t_scene;
 
 t_scene				*scene_new(UINT_REF mod_ptr);

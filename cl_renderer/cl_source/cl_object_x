@@ -3,6 +3,11 @@
 #include "rt_control.h"
 #include "rt_parameters.h"
 
+static int			object_is_pair(global t_object *object)
+{
+	return (object->type == object_type_limited || object->type == object_type_csg);
+}
+
 static int			object_intersect(global t_object *object, t_intersection *intersection)
 {
 	if (object->is_visible == rt_false)

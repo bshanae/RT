@@ -66,7 +66,7 @@ typedef enum						e_rt_tracing_mod
 # define RT_LIGHT_AREA_FLOOR		(RT_F).12
 # define RT_LIGHT_AREA_CEILING		(RT_F).95
 
-# define RT_CL_ILLUMINATION			1
+# define RT_CL_ILLUMINATION			0
 # define RT_CL_ILLUMINATION_VALUE	(RT_F)1.5
 # define RT_CL_ILLUMINATION_POWER	(RT_F)2.
 

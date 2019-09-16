@@ -103,23 +103,25 @@ static RT_F4 		f4_rotate(
 
 // cl_settings /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		s_cl_renderer_settings
+# include "rt_parameters.h"
+
+typedef struct 			s_cl_renderer_settings
 {
-	int 			light_basic;
-	int 			light_area;
-	int 			illumination;
-	RT_F 			illumination_value;
-	int 			sample_count;
-	int 			sample_limit;
-	int 			sample_depth;
-	int				motion_blur;
-	int				motion_blur_sample_count;
-	int 			tracing_mod;
-	u_int 			tracing_mod_mask;
-	int 			rm_step_limit;
-	RT_F			rm_step_part;
-	int 			rm_max_distance;
-}					t_cl_renderer_settings;
+	int 				light_basic;
+	int 				light_area;
+	int 				illumination;
+	RT_F 				illumination_value;
+	int 				sample_count;
+	int 				sample_limit;
+	int 				sample_depth;
+	int					motion_blur;
+	int					motion_blur_sample_count;
+	t_rt_tracing_mod	tracing_mod;
+	uint 				tracing_mod_mask;
+	int 				rm_step_limit;
+	RT_F				rm_step_part;
+	int 				rm_max_distance;
+}						t_cl_renderer_settings;
 
 // cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2130,6 +2132,10 @@ static void			camera_select(global t_camera *camera, global t_scene *scene, cons
 
     if (scene_intersect(scene, camera, &intersection, settings))
     	camera->select_request_object = intersection.object_id;
+    if (scene->objects[camera->select_request_object].type == rt_object_type_limited)
+    	camera->select_request_object = *(global int *)scene->objects[camera->select_request_object].data;
+    else if (scene->objects[camera->select_request_object].type == rt_object_type_csg)
+    	camera->select_request_object = *(global int *)scene->objects[camera->select_request_object].data;
 }
  // cl_illumination_get ////////////////////////////////////////////////////////////////////////////////////////////////
 
