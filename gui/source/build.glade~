@@ -4548,6 +4548,9 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="width_chars">7</property>
+                            <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                            <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                            <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -5161,6 +5164,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5175,6 +5179,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5189,6 +5194,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5243,6 +5249,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5257,6 +5264,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5271,6 +5279,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5327,6 +5336,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5341,6 +5351,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5355,6 +5366,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5397,6 +5409,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5455,6 +5468,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5469,6 +5483,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5482,6 +5497,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5525,6 +5541,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5539,6 +5556,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5552,6 +5570,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5607,6 +5626,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5621,6 +5641,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5634,6 +5655,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5677,6 +5699,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5691,6 +5714,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5704,6 +5728,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5746,6 +5771,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5801,6 +5827,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5815,6 +5842,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5828,6 +5856,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5871,6 +5900,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5885,6 +5915,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5898,6 +5929,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5940,6 +5972,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -5994,6 +6027,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6008,6 +6042,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6022,6 +6057,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6064,6 +6100,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6078,6 +6115,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6092,6 +6130,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6146,6 +6185,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6160,6 +6200,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6174,6 +6215,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6216,6 +6258,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6258,6 +6301,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6312,6 +6356,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6326,6 +6371,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6340,6 +6386,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6382,6 +6429,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6396,6 +6444,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6410,6 +6459,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6452,6 +6502,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6616,6 +6667,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6629,6 +6681,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6643,6 +6696,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6685,6 +6739,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6727,6 +6782,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">2.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6781,6 +6837,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">6</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6823,6 +6880,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">5</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6877,6 +6935,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">5</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6919,6 +6978,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">8</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -6973,6 +7033,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">5</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7012,6 +7073,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.1</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7026,6 +7088,7 @@
                                     <property name="margin_right">1</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.1</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7041,6 +7104,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.1</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7055,6 +7119,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.1</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7108,6 +7173,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7121,6 +7187,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7135,6 +7202,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7177,6 +7245,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">5</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_i" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7231,6 +7300,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7244,6 +7314,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">4</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7258,6 +7329,7 @@
                                     <property name="width_chars">4</property>
                                     <property name="truncate_multiline">True</property>
                                     <property name="placeholder_text" translatable="yes">0.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7300,6 +7372,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">1.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
@@ -7342,6 +7415,7 @@
                                     <property name="can_focus">True</property>
                                     <property name="width_chars">6</property>
                                     <property name="placeholder_text" translatable="yes">3.0</property>
+                                    <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">True</property>
