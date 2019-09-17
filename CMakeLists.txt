@@ -309,7 +309,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c gui/gui_signal_x/gui_signal_settings_illumination_state.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

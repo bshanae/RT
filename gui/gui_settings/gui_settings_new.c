@@ -15,6 +15,10 @@ t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 	new->rm_steps = RT_GUI_GET(builder, "settings_rm_steps");
 	new->rm_part = RT_GUI_GET(builder, "settings_rm_part");
 	new->rm_distance = RT_GUI_GET(builder, "settings_rm_distance");
+	new->illumination_state =
+		RT_GUI_GET(builder, "settings_illumination_state");
+	new->illumination_value =
+		RT_GUI_GET(builder, "settings_illumination_value");
 	new->light_basic = RT_GUI_GET(builder, "settings_light_basic");
 	new->light_area = RT_GUI_GET(builder, "settings_light_area");
 	new->pt_samples = RT_GUI_GET(builder, "settings_pt_samples");

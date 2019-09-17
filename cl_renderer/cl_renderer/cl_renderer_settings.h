@@ -24,7 +24,7 @@ typedef struct 			s_cl_renderer_settings
 	UINT 				tracing_mod_mask;
 	int 				rm_step_limit;
 	RT_F				rm_step_part;
-	int 				rm_max_distance;
+	RT_F				rm_max_distance;
 }						t_cl_renderer_settings;
 
 void 				cl_renderer_settings_init(t_cl_renderer_settings *settings);

@@ -238,6 +238,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_select.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_switch_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_switch_x.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_apply.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_apply.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_illumination_state.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_illumination_state.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_resize.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_resize.c.o"

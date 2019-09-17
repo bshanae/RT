@@ -9,4 +9,5 @@ void				gui_signal_connect_settings(t_gui *gui)
 	RT_GUI_CONNECT(gui, gui_signal_settings_tracing_rt);
 	RT_GUI_CONNECT(gui, gui_signal_settings_tracing_rm);
 	RT_GUI_CONNECT(gui, gui_signal_settings_light);
+	RT_GUI_CONNECT(gui, gui_signal_settings_illumination_state);
 }

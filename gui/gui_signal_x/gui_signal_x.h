@@ -35,7 +35,7 @@ gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_filter
 					(GtkWidget *widget, gpointer ptr);
-gboolean			gui_signal_camera_focus_enable
+gboolean			gui_signal_camera_focus_state
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_focus_auto
 					(GtkWidget *widget, gpointer ptr);
@@ -100,6 +100,8 @@ void 				gui_signal_settings_resize
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_light
 					(GTK_SIGNAL_SIGNATURE);
+gboolean			gui_signal_settings_illumination_state
+					(GtkSwitch *widget, gboolean state, gpointer ptr);
 void 				gui_signal_settings_tracing_rt
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_tracing_rm

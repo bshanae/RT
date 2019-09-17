@@ -22,6 +22,8 @@ typedef struct 		s_gui_setting
 	GtkEntry		*rm_distance;
 	GtkToggleButton	*light_basic;
 	GtkToggleButton	*light_area;
+	GtkSwitch		*illumination_state;
+	GtkEntry		*illumination_value;
 	GtkEntry		*pt_samples;
 	GtkEntry		*pt_depth;
 }					t_gui_settings;

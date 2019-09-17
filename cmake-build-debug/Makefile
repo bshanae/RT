@@ -6441,6 +6441,33 @@ gui/gui_signal_x/gui_signal_settings_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_apply.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_apply.c.s
 
+gui/gui_signal_x/gui_signal_settings_illumination_state.o: gui/gui_signal_x/gui_signal_settings_illumination_state.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_settings_illumination_state.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_illumination_state.c.o
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.c.o
+
+gui/gui_signal_x/gui_signal_settings_illumination_state.i: gui/gui_signal_x/gui_signal_settings_illumination_state.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_settings_illumination_state.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_illumination_state.c.i
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.c.i
+
+gui/gui_signal_x/gui_signal_settings_illumination_state.s: gui/gui_signal_x/gui_signal_settings_illumination_state.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_settings_illumination_state.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_illumination_state.c.s
+.PHONY : gui/gui_signal_x/gui_signal_settings_illumination_state.c.s
+
 gui/gui_signal_x/gui_signal_settings_light.o: gui/gui_signal_x/gui_signal_settings_light.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_settings_light.o
@@ -7287,6 +7314,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_apply.s"
+	@echo "... gui/gui_signal_x/gui_signal_settings_illumination_state.o"
+	@echo "... gui/gui_signal_x/gui_signal_settings_illumination_state.i"
+	@echo "... gui/gui_signal_x/gui_signal_settings_illumination_state.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.s"
