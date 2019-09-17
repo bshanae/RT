@@ -120,7 +120,7 @@ typedef struct 			s_cl_renderer_settings
 	uint 				tracing_mod_mask;
 	int 				rm_step_limit;
 	RT_F				rm_step_part;
-	int 				rm_max_distance;
+	RT_F				rm_max_distance;
 }						t_cl_renderer_settings;
 
 // cl_random ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -205,7 +205,6 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia)
 
 typedef struct 		s_material
 {
-	int				texture_id;
 	RT_F4			color;
 	RT_F4			emission;
 	RT_F			specular;
@@ -298,7 +297,7 @@ typedef enum		e_object_type
 
 typedef struct		s_object
 {
-	char 			name[RT_CL_OBJECT_NAME_SIZE];
+	char 			name[RT_NAME_SIZE];
 	int				id;
 	t_object_type	type;
 	int 			texture_id;
@@ -596,7 +595,7 @@ static void			object_cone_intersect_t(global t_object *object, t_intersection *i
                      || (dot(temp[2], data.axis) > 0.);
      }
 
-    t_cup = cone_cap_intersect(object, intersection);
+    t_cup = object_cone_cap_intersect(object, intersection);
     if (is_infinity_part[0] && t_cup != INFINITY)
     	t[0] = t_cup;
     else if (is_infinity_part[1] && t_cup != INFINITY)
@@ -759,7 +758,7 @@ static void			    object_cylinder_intersect_t(global t_object *object, t_interse
         is_infinity_part[i] = (angle[0] > 0. || angle[1] < 0.);
     }
 
-    t_cups = cylinder_cap_intersect(object, intersection);
+    t_cups = object_cylinder_cap_intersect(object, intersection);
     if (is_infinity_part[0] && t_cups != INFINITY)
     	t[0] = t_cups;
     else if (is_infinity_part[1] && t_cups != INFINITY)

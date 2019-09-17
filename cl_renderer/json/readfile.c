@@ -12,8 +12,9 @@
 
 #include <string.h>
 #include <fcntl.h>
-#include <stdlib.h>
 #include <unistd.h>
+
+#include "error_framework.h"
 
 int					ft_strequ(char const *s1, char const *s2)
 {
