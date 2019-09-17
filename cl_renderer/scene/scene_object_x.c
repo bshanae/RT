@@ -12,9 +12,9 @@ void 				scene_object_remove(t_scene *scene, int object_id)
 		{
 			pair = (t_object_pair *)scene->objects[i].data;
 			if (!ft_strcmp(scene->objects[object_id].name, pair->first_name))
-				ft_bzero(pair->first_name, RT_CL_OBJECT_NAME_SIZE);
+				ft_bzero(pair->first_name, RT_NAME_SIZE);
 			if (!ft_strcmp(scene->objects[object_id].name, pair->second_name))
-				ft_bzero(pair->second_name, RT_CL_OBJECT_NAME_SIZE);
+				ft_bzero(pair->second_name, RT_NAME_SIZE);
 		}
 		i++;
 	}

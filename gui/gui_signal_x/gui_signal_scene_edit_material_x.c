@@ -7,7 +7,7 @@ void				gui_signal_scene_edit_material_color
 	t_gui_color		color;
 
 	gui = (t_gui *)ptr;
-	if (gui->scene->edit->material_color_silent)
+	if (gui->scene->edit->material.color_silent)
 		return ;
 	gtk_color_button_get_rgba(gui->scene->edit->material.color_button, &color);
 	gui_entry_set_f(gui->scene->edit->material.color_r, color.red);

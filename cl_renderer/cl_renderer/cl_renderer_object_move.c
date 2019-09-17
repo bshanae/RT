@@ -10,8 +10,6 @@ static void			static_move_one
 	t_object_pair	*pair;
 
 	flag = object_flag_get(object);
-	if (flag & RT_OBJECT_MOVE_NONE)
-		return ;
 	ptr = (RT_F4_API *)object->data;
 	if ((flag & RT_OBJECT_MOVE_A) || (flag & RT_OBJECT_MOVE_B))
 		ptr[0] = f4_add(ptr[0], step);
@@ -31,13 +29,9 @@ void				cl_renderer_object_move
 					(t_cl_renderer *renderer, t_rt_movement movement)
 {
 	t_object		*object;
-	u_int			flag;
 	RT_F4_API		step;
 
 	object = renderer->data.scene->objects + renderer->data.scene->selected_id;
-	flag = object_flag_get(object);
-	if (flag & RT_OBJECT_MOVE_NONE)
-		return ;
 	step = camera_get_step(renderer->data.camera, movement);
 	step = f4_mul(step, RT_OBJECT_MOVE_VALUE);
 	static_move_one(renderer->data.scene, object, step);

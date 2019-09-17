@@ -27,7 +27,7 @@ void					scene_set_name(t_scene *scene)
 			{
 				rt_raise_warning("Scene : Identical name (name = '%s')",
 					scene->objects[i[1]].name);
-				ft_bzero(scene->objects[i[1]].name, RT_CL_OBJECT_NAME_SIZE);
+				ft_bzero(scene->objects[i[1]].name, RT_NAME_SIZE);
 			}
 			i[1]++;
 		}

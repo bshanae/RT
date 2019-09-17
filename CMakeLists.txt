@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX OFF)
+set(RT_LINUX ON)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -219,7 +219,7 @@ set(SOURCE_GUI_COLOR
 set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_init.c
 	./gui/gui_material/gui_material_get.c
-	./gui/gui_material/gui_material_set.c)
+	./gui/gui_material/gui_material_set.c gui/gui_material/gui_material_color_x.c gui/gui_material/gui_material_switch_mod.c gui/gui_material/gui_material_texture_x.c)
 
 set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
@@ -245,7 +245,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
 	./gui/gui_scene_edit/gui_scene_edit_init_julia.c
 	./gui/gui_scene_edit/gui_scene_edit_init_own.c
-	./gui/gui_scene_edit/gui_scene_edit_material_color_x.c gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c)
+	gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -309,7 +309,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

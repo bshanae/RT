@@ -3,10 +3,10 @@
 
 # include "rt_cl_include.h"
 # include "rt_float.h"
+# include "rt_parameters.h"
 
 typedef struct 		s_material
 {
-	int				texture_id;
 	RT_F4_API		color;
 	RT_F4_API		emission;
 	RT_F			specular;

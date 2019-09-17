@@ -14,7 +14,13 @@
 typedef struct 					s_gui_scene_edit
 {
 	t_gui_scene_common			*common;
-	t_gui_control				control;
+	GtkStack					*stack;
+	GtkBox						*info;
+	GtkTreeView					*tree;
+	GtkTreeSelection			*selection;
+	int 						current_id;
+	GtkTreeIter					iter;
+	GtkDialog					*remove_dialog;
 	GtkEntry					*name;
 	GtkEntry					*type;
 	t_gui_object_light_point	light_point;
@@ -33,15 +39,8 @@ typedef struct 					s_gui_scene_edit
 	t_gui_object_p_cube			p_cube;
 	t_gui_object_explosion		explosion;
 	t_gui_object_pair			csg;
-	GtkWidget					*material_color_box;
-	int 						material_color_silent;
 	t_gui_material				material;
-	GtkStack					*stack;
-	GtkBox						*info;
-	GtkTreeSelection			*selection;
-	int 						current_id;
-	GtkTreeIter					iter;
-	GtkDialog					*remove_dialog;
+	t_gui_control				control;
 }								t_gui_scene_edit;
 
 t_gui_scene_edit				*gui_scene_edit_new
@@ -90,9 +89,5 @@ void 							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);
 void							gui_scene_edit_apply
 								(t_gui_scene_edit *edit, t_scene *scene);
-void 							gui_scene_edit_material_color_enable
-								(t_gui_scene_edit *edit);
-void 							gui_scene_edit_material_color_disable
-								(t_gui_scene_edit *edit);
 
 #endif

@@ -6,6 +6,8 @@ void 				gui_material_get
 	t_gui_color		color;
 	t_gui_color		emission;
 
+	if (gui->current_mod == gui_material_texture)
+		return ;
 	color = gui_color_from_f4(&material->color);
 	emission = gui_color_from_f4(&material->emission);
 	gtk_color_button_set_rgba(gui->color_button, &color);

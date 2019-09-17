@@ -7,6 +7,7 @@
 # include "rt_sources_texture.h"
 
 # include "libft_standart.h"
+# include "error_framework.h"
 # include "disruption.h"
 
 # include <stdlib.h>
@@ -16,6 +17,7 @@
 
 typedef struct 				s_texture
 {
+	char 					name[TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
 	RT_F4_API				data[TEXTURE_DATA_SIZE];
 	int 					texture_length[TEXTURE_MAX_NUMBER];
 	int						width[TEXTURE_MAX_NUMBER];
@@ -25,9 +27,12 @@ typedef struct 				s_texture
 
 void						texture_initialization(t_texture *texture);
 
-void						texture_data_load(t_texture *texture, const char *path);
-
-void						texture_disruptions_load(t_texture *texture, t_disruption_type type);
+void						texture_data_load
+							(t_texture *texture,
+							const char *path, CHAR_REF name);
+void						texture_disruptions_load
+							(t_texture *texture,
+							t_disruption_type type, CHAR_REF name);
 
 void						texture_fill_data(
 							t_texture *texture,

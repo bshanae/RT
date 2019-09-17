@@ -78,8 +78,8 @@ typedef struct 			s_object_limited
 {
 	int     			main_id;
 	int     			limit_id;
-	char 				main_name[RT_CL_OBJECT_NAME_SIZE];
-	char    			limit_name[RT_CL_OBJECT_NAME_SIZE];
+	char 				main_name[RT_NAME_SIZE];
+	char    			limit_name[RT_NAME_SIZE];
 }						t_object_limited;
 
 typedef struct 			s_object_torus
@@ -121,16 +121,16 @@ typedef struct 			s_object_csg
 {
 	int     			positive_id;
 	int     			negative_id;
-	char 				positive_name[RT_CL_OBJECT_NAME_SIZE];
-	char    			negative_name[RT_CL_OBJECT_NAME_SIZE];
+	char 				positive_name[RT_NAME_SIZE];
+	char    			negative_name[RT_NAME_SIZE];
 }						t_object_csg;
 
 typedef struct 			s_object_pair
 {
 	int 				first_id;
 	int 				second_id;
-	char 				first_name[RT_CL_OBJECT_NAME_SIZE];
-	char 				second_name[RT_CL_OBJECT_NAME_SIZE];
+	char 				first_name[RT_NAME_SIZE];
+	char 				second_name[RT_NAME_SIZE];
 }						t_object_pair;
 
 #endif

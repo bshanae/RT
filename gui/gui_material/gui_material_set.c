@@ -12,6 +12,7 @@ static RT_F			static_bound(RT_F value)
 void 				gui_material_set
 					(t_gui_material *gui, t_material *material)
 {
+
 	material->color.x = static_bound(gui_entry_get_f(gui->color_r));
 	material->color.y = static_bound(gui_entry_get_f(gui->color_g));
 	material->color.z = static_bound(gui_entry_get_f(gui->color_b));

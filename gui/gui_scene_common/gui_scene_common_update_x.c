@@ -91,6 +91,25 @@ void 				gui_scene_common_update_types
 	}
 }
 
+void 				gui_scene_common_update_textures
+					(t_gui_scene_common *gui, t_scene *scene)
+{
+	GtkTreeIter		iter_list;
+	int 			i;
+
+	gtk_list_store_clear(gui->textures);
+	i = 0;
+	while (i <= scene->texture.textures_number)
+	{
+		gtk_list_store_append(gui->textures, &iter_list);
+		gtk_list_store_set(gui->textures, &iter_list,
+			gui_textures_column_id, i,
+			gui_textures_column_name, scene->texture.name[i], -1);
+		i++;
+	}
+}
+
+
 void 				gui_scene_common_update_all
 					(t_gui_scene_common *gui, t_scene *scene)
 {
@@ -99,5 +118,6 @@ void 				gui_scene_common_update_all
 	gui_scene_common_update_full(gui, scene);
 	gui_scene_common_update_limited(gui, scene);
 	gui_scene_common_update_csg(gui, scene);
+	gui_scene_common_update_textures(gui, scene);
 	gui_scene_common_update_types(gui, scene);
 }

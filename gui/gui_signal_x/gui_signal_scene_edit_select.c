@@ -12,13 +12,13 @@ void 				gui_signal_scene_edit_select
 		&model, &gui->scene->edit->iter))
 		return ;
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
-					   gui_objects_column_id, &gui->scene->edit->current_id , -1);
+		gui_objects_column_id, &gui->scene->edit->current_id , -1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
 	gui_control_hide(&gui->scene->edit->control);
 	if (object->type >= object_type_light_ambient &&
 		object->type <= object_type_light_direct)
-		gui_scene_edit_material_color_disable(gui->scene->edit);
+		gui_material_color_disable(&gui->scene->edit->material);
 	else
-		gui_scene_edit_material_color_enable(gui->scene->edit);
+		gui_material_color_enable(&gui->scene->edit->material);
 }

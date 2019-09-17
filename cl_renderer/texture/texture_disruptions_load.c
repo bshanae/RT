@@ -30,15 +30,18 @@ void				texture_compute_disruption(t_texture *texture, RT_F4_API *pointer, t_dis
 	}
 }
 
-void				texture_disruptions_load(t_texture *texture, t_disruption_type type)
+void				texture_disruptions_load
+					(t_texture *texture, t_disruption_type type, CHAR_REF name)
 {
 	RT_F4_API		*pointer;
 
 	texture->textures_number++;
 	pointer = texture_iter(texture);
+	ft_strcpy(texture->name[texture->textures_number], name);
 	texture->width[texture->textures_number] = DISRUPTION_WIDTH;
 	texture->height[texture->textures_number] = DISRUPTION_HEIGHT;
-	texture->texture_length[texture->textures_number] = texture->width[texture->textures_number]
-														* texture->height[texture->textures_number];
+	texture->texture_length[texture->textures_number] =
+		texture->width[texture->textures_number]*
+		texture->height[texture->textures_number];
 	texture_compute_disruption(texture, pointer, type);
 }

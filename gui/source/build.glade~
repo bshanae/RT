@@ -45,6 +45,29 @@
       <column type="gchararray"/>
     </columns>
   </object>
+  <object class="GtkListStore" id="scene_texture_list">
+    <columns>
+      <!-- column-name texture_name -->
+      <column type="gchararray"/>
+      <!-- column-name texture_id -->
+      <column type="gint"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="scene_type_list">
+    <columns>
+      <!-- column-name type_name -->
+      <column type="gchararray"/>
+      <!-- column-name type_id -->
+      <column type="gint"/>
+    </columns>
+  </object>
+  <object class="GtkEntryCompletion" id="scene_add_type_completion">
+    <property name="model">scene_type_list</property>
+    <property name="text_column">0</property>
+    <property name="inline_completion">True</property>
+    <property name="popup_completion">False</property>
+    <property name="inline_selection">True</property>
+  </object>
   <object class="GtkWindow" id="window">
     <property name="can_focus">False</property>
     <signal name="destroy" handler="gui_signal_exit" swapped="no"/>
@@ -877,7 +900,7 @@
                                 <property name="row_homogeneous">True</property>
                                 <property name="column_homogeneous">True</property>
                                 <child>
-                                  <object class="GtkTreeView" id="scene_edit_view">
+                                  <object class="GtkTreeView" id="scene_edit_tree">
                                     <property name="height_request">20</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
@@ -3609,72 +3632,39 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkBox" id="scene_edit_material_color_box">
+                              <object class="GtkStack" id="scene_edit_material_switcher_stack">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="orientation">vertical</property>
+                                <property name="vhomogeneous">False</property>
                                 <child>
-                                  <object class="GtkLabel">
+                                  <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="margin_bottom">2</property>
-                                    <property name="label" translatable="yes">Color</property>
-                                    <attributes>
-                                      <attribute name="style" value="italic"/>
-                                    </attributes>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
                                   </object>
                                   <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">1</property>
+                                    <property name="name">hide</property>
+                                    <property name="title" translatable="yes">page0</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="margin_bottom">2</property>
                                     <child>
-                                      <object class="GtkEntry" id="scene_edit_material_color_r">
+                                      <object class="GtkToggleButton" id="scene_edit_material_switcher_material">
+                                        <property name="label" translatable="yes">Material</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="scene_edit_material_color_g">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="scene_edit_material_color_b">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                        <property name="receives_default">True</property>
+                                        <property name="active">True</property>
+                                        <signal name="toggled" handler="gui_signal_scene_edit_switch_material" swapped="no"/>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -3683,12 +3673,12 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkColorButton" id="scene_edit_material_color_button">
+                                      <object class="GtkToggleButton" id="scene_edit_material_switcher_texture">
+                                        <property name="label" translatable="yes">Texture</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
-                                        <property name="color">#ffffffffffff</property>
-                                        <signal name="color-set" handler="gui_signal_scene_edit_material_color" swapped="no"/>
+                                        <signal name="toggled" handler="gui_signal_scene_edit_switch_texture" swapped="no"/>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -3698,9 +3688,9 @@
                                     </child>
                                   </object>
                                   <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">2</property>
+                                    <property name="name">show</property>
+                                    <property name="title" translatable="yes">page0</property>
+                                    <property name="position">1</property>
                                   </packing>
                                 </child>
                               </object>
@@ -3711,97 +3701,249 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkBox">
+                              <object class="GtkStack" id="scene_edit_material_stack">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="orientation">vertical</property>
+                                <property name="vhomogeneous">False</property>
                                 <child>
-                                  <object class="GtkLabel">
+                                  <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="margin_bottom">2</property>
-                                    <property name="label" translatable="yes">Emission</property>
-                                    <attributes>
-                                      <attribute name="style" value="italic"/>
-                                    </attributes>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkBox" id="scene_edit_material_color_box">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="orientation">vertical</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="margin_bottom">2</property>
+                                            <property name="label" translatable="yes">Color</property>
+                                            <attributes>
+                                              <attribute name="style" value="italic"/>
+                                            </attributes>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkBox">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="margin_bottom">2</property>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_color_r">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">0</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_color_g">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">1</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_color_b">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">2</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkColorButton" id="scene_edit_material_color_button">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="receives_default">True</property>
+                                                <property name="color">#ffffffffffff</property>
+                                                <signal name="color-set" handler="gui_signal_scene_edit_material_color" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">3</property>
+                                              </packing>
+                                            </child>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">2</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="orientation">vertical</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="margin_bottom">2</property>
+                                            <property name="label" translatable="yes">Emission</property>
+                                            <attributes>
+                                              <attribute name="style" value="italic"/>
+                                            </attributes>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">0</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkBox">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="margin_bottom">2</property>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_emission_r">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">0</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_emission_g">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">1</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkEntry" id="scene_edit_material_emission_b">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="width_chars">3</property>
+                                                <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
+                                                <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">2</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkColorButton" id="scene_edit_material_emission_button">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">True</property>
+                                                <property name="receives_default">True</property>
+                                                <property name="color">#000000000000</property>
+                                                <signal name="color-set" handler="gui_signal_scene_edit_material_emission" swapped="no"/>
+                                              </object>
+                                              <packing>
+                                                <property name="expand">True</property>
+                                                <property name="fill">True</property>
+                                                <property name="position">3</property>
+                                              </packing>
+                                            </child>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
                                   </object>
                                   <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">0</property>
+                                    <property name="name">material</property>
+                                    <property name="title" translatable="yes">page0</property>
                                   </packing>
                                 </child>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="margin_bottom">2</property>
+                                    <property name="orientation">vertical</property>
                                     <child>
-                                      <object class="GtkEntry" id="scene_edit_material_emission_r">
+                                      <object class="GtkComboBox" id="scene_edit_texture">
                                         <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
+                                        <property name="can_focus">False</property>
+                                        <property name="model">scene_texture_list</property>
+                                        <property name="has_entry">True</property>
+                                        <property name="entry_text_column">1</property>
+                                        <child internal-child="entry">
+                                          <object class="GtkEntry">
+                                            <property name="can_focus">True</property>
+                                            <property name="width_chars">6</property>
+                                            <property name="completion">scene_add_type_completion</property>
+                                          </object>
+                                        </child>
                                       </object>
                                       <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
+                                        <property name="expand">False</property>
+                                        <property name="fill">False</property>
                                         <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="scene_edit_material_emission_g">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="scene_edit_material_emission_b">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="margin_right">1</property>
-                                        <property name="width_chars">3</property>
-                                        <signal name="delete-text" handler="gui_signal_entry_launch_control_on_delete" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_block_f" swapped="no"/>
-                                        <signal name="insert-text" handler="gui_signal_entry_launch_control_on_insert" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">2</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkColorButton" id="scene_edit_material_emission_button">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">True</property>
-                                        <property name="color">#000000000000</property>
-                                        <signal name="color-set" handler="gui_signal_scene_edit_material_emission" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">3</property>
                                       </packing>
                                     </child>
                                   </object>
                                   <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
+                                    <property name="name">texture</property>
+                                    <property name="title" translatable="yes">page0</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
@@ -3876,7 +4018,7 @@
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">4</property>
+                                <property name="position">6</property>
                               </packing>
                             </child>
                           </object>
@@ -4676,95 +4818,6 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkDialog" id="scene_edit_remove_dialog">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">warning</property>
-    <property name="default_width">360</property>
-    <property name="default_height">100</property>
-    <property name="type_hint">dialog</property>
-    <property name="transient_for">window</property>
-    <signal name="close" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
-    <signal name="destroy" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
-    <child>
-      <placeholder/>
-    </child>
-    <child internal-child="vbox">
-      <object class="GtkBox">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">10</property>
-            <property name="layout_style">center</property>
-            <child>
-              <object class="GtkButton">
-                <property name="label" translatable="yes">No</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_no" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton">
-                <property name="label" translatable="yes">Yes</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_yes" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel">
-            <property name="width_request">320</property>
-            <property name="height_request">40</property>
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Are you sure you want to remove object?</property>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-  </object>
-  <object class="GtkListStore" id="scene_type_list">
-    <columns>
-      <!-- column-name type_name -->
-      <column type="gchararray"/>
-      <!-- column-name type_id -->
-      <column type="gint"/>
-    </columns>
-  </object>
-  <object class="GtkEntryCompletion" id="scene_add_type_completion">
-    <property name="model">scene_type_list</property>
-    <property name="text_column">0</property>
-    <property name="inline_completion">True</property>
-    <property name="popup_completion">False</property>
-    <property name="inline_selection">True</property>
   </object>
   <object class="GtkDialog" id="dialog">
     <property name="width_request">240</property>
@@ -7512,6 +7565,80 @@
                 </child>
               </object>
             </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="scene_edit_remove_dialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">warning</property>
+    <property name="default_width">360</property>
+    <property name="default_height">100</property>
+    <property name="type_hint">dialog</property>
+    <property name="transient_for">window</property>
+    <signal name="close" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
+    <signal name="destroy" handler="gui_signal_scene_edit_remove_response_cancel" swapped="no"/>
+    <child>
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">10</property>
+            <property name="layout_style">center</property>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">No</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_no" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">Yes</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="gui_signal_scene_edit_remove_response_yes" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">320</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Are you sure you want to remove object?</property>
           </object>
           <packing>
             <property name="expand">True</property>

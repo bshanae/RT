@@ -2,7 +2,6 @@
 
 typedef struct 		s_material
 {
-	int				texture_id;
 	RT_F4			color;
 	RT_F4			emission;
 	RT_F			specular;

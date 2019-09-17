@@ -20,6 +20,12 @@ typedef enum						e_rt_bool
 	rt_true
 }									t_rt_bool;
 
+typedef enum						e_rt_state
+{
+	rt_off,
+	rt_on
+}									t_rt_state;
+
 typedef enum						e_rt_tracing_mod
 {
 	rt_tracing_mod_rt,
@@ -40,8 +46,9 @@ typedef enum						e_rt_tracing_mod
 # define RT_CL_ARGS_CAPACITY		16
 
 # define RT_CL_OBJECT_DATA_SIZE		64
-# define RT_CL_OBJECT_NAME_SIZE		32
 # define RT_CL_SCENE_CAPACITY		32
+
+# define RT_NAME_SIZE				32
 
 # define RT_CL_ANTIALIASING			1
 # define RT_CL_CARTOON_EFFECT   	0

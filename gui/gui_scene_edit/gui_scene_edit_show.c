@@ -1,9 +1,9 @@
 #include "gui_scene_edit.h"
 
-void 				gui_scene_edit_show
-					(t_gui_scene_edit *edit, t_object *object)
+void 					gui_scene_edit_show
+						(t_gui_scene_edit *edit, t_object *object)
 {
-	const char		*type_str;
+	const char			*type_str;
 
 	gtk_widget_show(GTK_WIDGET(edit->info));
 	type_str = object_translate(object->type);
@@ -43,6 +43,12 @@ void 				gui_scene_edit_show
 	else if (object->type == object_type_csg)
 		gui_object_pair_get(&edit->csg, object);
 	else
-		return ;
+		rt_raise_warning("GUI Editor : Unknown type");
+	if (object_flag_get(object) & RT_OBJECT_HAS_TEXTURE)
+		gui_material_texture_enable(&edit->material);
+	else
+		gui_material_texture_disable(&edit->material);
+	gui_material_switch_mod(&edit->material, object->texture_id == -1 ?
+		gui_material_material : gui_material_texture);
 	gui_material_get(&edit->material, &object->material);
 }

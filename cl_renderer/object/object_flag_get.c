@@ -60,6 +60,11 @@ static void 		static_init_c(u_int *data)
 	data[object_type_csg] |= RT_OBJECT_PAIR;
 }
 
+static void 		static_init_d(u_int *data)
+{
+	data[object_type_sphere] |= RT_OBJECT_HAS_TEXTURE;
+	data[object_type_plane] |= RT_OBJECT_HAS_TEXTURE;
+}
 
 u_int 				object_flag_get(t_object *object)
 {
@@ -71,6 +76,7 @@ u_int 				object_flag_get(t_object *object)
 		static_init_a(data);
 		static_init_b(data);
 		static_init_c(data);
+		static_init_d(data);
 		is_initialized = 1;
 	}
 	return (data[object->type]);

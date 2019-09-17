@@ -35,7 +35,7 @@ typedef enum		e_object_flag
 
 typedef struct		s_object
 {
-	char 			name[RT_CL_OBJECT_NAME_SIZE];
+	char 			name[RT_NAME_SIZE];
 	int				id;
 	t_object_type	type;
 	int 			texture_id;

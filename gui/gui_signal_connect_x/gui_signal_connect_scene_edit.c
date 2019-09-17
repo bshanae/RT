@@ -7,6 +7,8 @@ void				gui_signal_connect_scene_edit(t_gui *gui)
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_combo_changed);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_reset);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_apply);
+	RT_GUI_CONNECT(gui, gui_signal_scene_edit_switch_material);
+	RT_GUI_CONNECT(gui, gui_signal_scene_edit_switch_texture);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_material_color);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_material_emission);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_add);
