@@ -32,98 +32,99 @@ int					main(int argc, char **argv)
 void				scene_test_rt(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
-	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane A", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Plane A");
 
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){-10., -10., 0.}, (RT_F4_API){-10., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cone", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Cone");
 
 	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
 
 	object_build(scene_get_space(scene), object_type_box, (RT_F4_API){10., 0., 0.}, (RT_F4_API){5., 10., 5.});
-	scene_edit_param(scene, -1, scene_param_name, "Box", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Box");
 
 	object_build(scene_get_space(scene), object_type_paraboloid, (RT_F4_API){20., 0., 0.}, (RT_F4_API){0., 1., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Paraboloid", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Paraboloid");
 
 	object_build(scene_get_space(scene), object_type_moebius, (RT_F4_API){30., 0., 0.}, 2., 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Moebius", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Moebius");
 
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 10.}, 3.);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 10.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane B", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Plane B");
 
 	object_build(scene_get_space(scene), object_type_limited, "Light", "Plane A");
-	scene_edit_param(scene, -1, scene_param_name, "Limited", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Limited");
 }
 
 void				scene_test_limited(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
-	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
 
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 10.}, 3.);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere");
+	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane A", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Plane A");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane B", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Plane B");
 
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){-10., -10., 0.}, (RT_F4_API){-10., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cone", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Cone");
 
 	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
 
 	object_build(scene_get_space(scene), object_type_box, (RT_F4_API) {10., 0., 0.}, (RT_F4_API) {5., 5., 5.});
-	scene_edit_param(scene, -1, scene_param_name, "Box", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Box");
 
 	object_build(scene_get_space(scene), object_type_limited, "Cylinder", "Plane A");
-	scene_edit_param(scene, -1, scene_param_name, "Limited", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Limited");
 }
 
 void				scene_test_illumination(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
-	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane A", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Plane A");
 }
 
 void				scene_test_rm(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API) {-5., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
-	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
 
 //	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 0.}, (RT_F4_API){1., 0., 0.});
-//	scene_edit_param(scene, -1, scene_param_name, "Plane A", scene_param_end);
+//	scene_edit_param(scene, -1, scene_param_name, "Plane A");
 //
 //	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 10.}, (RT_F4_API){0., 1., 0.});
-//	scene_edit_param(scene, -1, scene_param_name, "Plane B", scene_param_end);
+//	scene_edit_param(scene, -1, scene_param_name, "Plane B");
 //
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API) {4., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere");
 //
 //	object_build(scene_get_space(scene), object_type_limited, "Light", "Plane A");
-//	scene_edit_param(scene, -1, scene_param_name, "Limited", scene_param_end);
+//	scene_edit_param(scene, -1, scene_param_name, "Limited");
 //
 	object_build(scene_get_space(scene), object_type_box, (RT_F4_API) {10., 0., 0.}, (RT_F4_API) {5., 5., 5.});
-	scene_edit_param(scene, -1, scene_param_name, "Box", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Box");
 //
 //	object_build(scene_get_space(scene), object_type_torus, (RT_F4_API){10., 0., 0.}, 1., 1.);
-//	scene_edit_param(scene, -1, scene_param_name, "Torus", scene_param_end);
+//	scene_edit_param(scene, -1, scene_param_name, "Torus");
 //
 //	object_build(scene_get_space(scene), object_type_mandelbulb, (RT_F4_API){10., 0., 0.}, 8, 8.);
 //
@@ -139,14 +140,14 @@ void				scene_test_rm(t_scene *scene)
 void				scene_test_csg(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API) {-5., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT, scene_param_end);
-	scene_edit_param(scene, -1, scene_param_name, "Light", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
 
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API) {4., 0., 0.}, 3.);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere");
 
 	object_build(scene_get_space(scene), object_type_box, (RT_F4_API) {10., 0., 0.}, (RT_F4_API) {5., 5., 5.});
-	scene_edit_param(scene, -1, scene_param_name, "Box", scene_param_end);
+	scene_edit_param(scene, -1, scene_param_name, "Box");
 
 	object_build(scene_get_space(scene), object_type_csg, "Sphere", "Box");
 }

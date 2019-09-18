@@ -206,7 +206,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o"
-  "CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o"

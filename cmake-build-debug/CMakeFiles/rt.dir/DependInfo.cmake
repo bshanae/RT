@@ -79,7 +79,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_clear.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_delete.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_edit_param.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o"
-  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_by_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_x_by_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_get_space.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_new.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o"

@@ -2748,18 +2748,18 @@ CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_set_x.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.s
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o: ../cl_renderer/scene/scene_find_by_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_by_x.c
+CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o: ../cl_renderer/scene/scene_find_x_by_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_x_by_x.c
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_by_x.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.i
+CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_x_by_x.c > CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.i
 
-CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_by_x.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.s
+CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_find_x_by_x.c -o CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.s
 
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o: ../cl_renderer/camera/camera_new.c
@@ -3412,7 +3412,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o" \
+"CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o" \
@@ -3658,7 +3658,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_find_by_x.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/camera/camera_new.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/camera/camera_move.c.o

@@ -49,8 +49,8 @@ void					scene_set_pair(t_scene *scene)
 			pair = (t_object_pair *)scene->objects[i].data;
 			pair->first_id = -1;
 			pair->second_id = -1;
-			temp_object[0] = scene_find_by_name(scene, pair->first_name);
-			temp_object[1] = scene_find_by_name(scene, pair->second_name);
+			temp_object[0] = scene_find_object_by_name(scene, pair->first_name);
+			temp_object[1] = scene_find_object_by_name(scene, pair->second_name);
 			if (!temp_object[0] || !temp_object[1])
 				rt_raise_warning("Scene : Object(s) not found for pair");
 			else if (temp_object[0]->id == temp_object[1]->id)
@@ -98,9 +98,9 @@ void					scene_set_visibility(t_scene *scene)
 		else if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
 		{
 			pair = (t_object_pair *)scene->objects[i].data;
-			if ((temp = scene_find_by_id(scene, pair->first_id)))
+			if ((temp = scene_find_object_by_id(scene, pair->first_id)))
 				temp->is_visible = rt_false;
-			if ((temp = scene_find_by_id(scene, pair->second_id)))
+			if ((temp = scene_find_object_by_id(scene, pair->second_id)))
 				temp->is_visible = rt_false;
 		}
 		i++;

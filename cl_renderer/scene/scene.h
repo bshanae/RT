@@ -23,8 +23,9 @@ typedef struct		s_scene
 t_scene				*scene_new(UINT_REF mod_ptr);
 void				scene_delete(t_scene **scene);
 
-t_object			*scene_find_by_id(t_scene *scene, int id);
-t_object			*scene_find_by_name(t_scene *scene, CHAR_REF name);
+t_object			*scene_find_object_by_id(t_scene *scene, int id);
+t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name);
+int 				scene_find_texture_by_name(t_scene *scene, CHAR_REF name);
 
 void				scene_set_id(t_scene *scene);
 void				scene_set_name(t_scene *scene);
@@ -51,6 +52,7 @@ typedef enum 		e_scene_param
 {
 	scene_param_name,
 	scene_param_material,
+	scene_param_texture,
 	scene_param_end
 }					t_scene_param;
 
