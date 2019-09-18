@@ -2580,6 +2580,33 @@ error_framework/rt_raise_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_raise_x.c.s
 .PHONY : error_framework/rt_raise_x.c.s
 
+gui/gui/gui_commnad_x.o: gui/gui/gui_commnad_x.c.o
+
+.PHONY : gui/gui/gui_commnad_x.o
+
+# target to build an object file
+gui/gui/gui_commnad_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o
+.PHONY : gui/gui/gui_commnad_x.c.o
+
+gui/gui/gui_commnad_x.i: gui/gui/gui_commnad_x.c.i
+
+.PHONY : gui/gui/gui_commnad_x.i
+
+# target to preprocess a source file
+gui/gui/gui_commnad_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.i
+.PHONY : gui/gui/gui_commnad_x.c.i
+
+gui/gui/gui_commnad_x.s: gui/gui/gui_commnad_x.c.s
+
+.PHONY : gui/gui/gui_commnad_x.s
+
+# target to generate assembly for a file
+gui/gui/gui_commnad_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s
+.PHONY : gui/gui/gui_commnad_x.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -5361,6 +5388,33 @@ gui/gui_scene_edit/gui_scene_edit_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_new.c.s
 
+gui/gui_scene_edit/gui_scene_edit_select.o: gui/gui_scene_edit/gui_scene_edit_select.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.o
+
+gui/gui_scene_edit/gui_scene_edit_select.i: gui/gui_scene_edit/gui_scene_edit_select.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.i
+
+gui/gui_scene_edit/gui_scene_edit_select.s: gui/gui_scene_edit/gui_scene_edit_select.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.s
+
 gui/gui_scene_edit/gui_scene_edit_show.o: gui/gui_scene_edit/gui_scene_edit_show.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_show.o
@@ -6885,6 +6939,9 @@ help:
 	@echo "... error_framework/rt_raise_x.o"
 	@echo "... error_framework/rt_raise_x.i"
 	@echo "... error_framework/rt_raise_x.s"
+	@echo "... gui/gui/gui_commnad_x.o"
+	@echo "... gui/gui/gui_commnad_x.i"
+	@echo "... gui/gui/gui_commnad_x.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
@@ -7194,6 +7251,9 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_select.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_select.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_select.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.s"

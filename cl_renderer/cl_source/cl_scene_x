@@ -7,8 +7,10 @@ typedef struct		s_scene
 	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
-    int 			lights_length;
-    t_texture		texture;
+	int 			lights_length;
+	t_texture		texture;
+	const uint		*not_used_in_kernel;
+	int				selected_id;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
@@ -69,15 +71,13 @@ static int			scene_intersect(
     	result = scene_intersect_rm(scene, intersection, settings);
     else
     	return (0);
+
 	if (result)
 	{
-		if (object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected)
-			intersection->material = (t_material){0, 0};
-		else
-			intersection->material = scene->objects[intersection->object_id].material;
+		intersection->material = scene->objects[intersection->object_id].material;
 		if (settings->tracing_mod == rt_tracing_mod_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
-		if (scene->objects[intersection->object_id].texture_id > -1)
+		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
 			object_explosion_build_material(scene->objects + intersection->object_id, intersection);

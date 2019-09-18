@@ -89,5 +89,9 @@ void 							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);
 void							gui_scene_edit_apply
 								(t_gui_scene_edit *edit, t_scene *scene);
+void							gui_scene_edit_select
+								(t_gui_scene_edit *edit, t_scene *scene);
+void							gui_scene_edit_unselect(t_gui_scene_edit *edit);
+
 
 #endif

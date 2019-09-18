@@ -21,4 +21,11 @@ void 				gui_signal_scene_edit_select
 		gui_material_color_disable(&gui->scene->edit->material);
 	else
 		gui_material_color_enable(&gui->scene->edit->material);
+	gui_queue_block(gui->queue);
+	scene_select(gui->renderer->data.scene, gui->scene->edit->current_id);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
+	gui_queue_execute_force(gui->queue);
+	gui_queue_unblock(gui->queue);
+	gtk_widget_set_sensitive(GTK_WIDGET(gui->notebook), 1);
 }

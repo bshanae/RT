@@ -6,7 +6,6 @@ void 				gui_queue_wait(t_gui_queue *queue)
 	double 			current;
 
 	start = gui_queue_get_time();
-
 	while (!queue->force_finished)
 	{
 		current = gui_queue_get_time();

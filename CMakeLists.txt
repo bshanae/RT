@@ -158,7 +158,7 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_update.c
 	./gui/gui/gui_loop.c
 	./gui/gui/gui_render.c
-	./gui/gui/gui_resize_x.c)
+	./gui/gui/gui_resize_x.c "gui/gui/gui_commnad_x.c")
 
 set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_new.c
@@ -245,7 +245,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
 	./gui/gui_scene_edit/gui_scene_edit_init_julia.c
 	./gui/gui_scene_edit/gui_scene_edit_init_own.c
-	gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c)
+	gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c gui/gui_scene_edit/gui_scene_edit_select.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c

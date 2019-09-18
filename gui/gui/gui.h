@@ -52,4 +52,8 @@ void				gui_loop(t_gui *gui);
 void 				gui_update(t_gui *gui);
 void 				gui_render(t_gui *gui);
 
+void 				gui_command_focus(t_gui *gui, GdkEventButton *event);
+void 				gui_command_select(t_gui *gui, GdkEventButton *event);
+void 				gui_command_unselect(t_gui *gui);
+
 #endif

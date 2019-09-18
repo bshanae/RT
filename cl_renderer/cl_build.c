@@ -1885,8 +1885,10 @@ typedef struct		s_scene
 	t_object		objects[RT_CL_SCENE_CAPACITY];
 	int				objects_length;
 	int				lights[RT_CL_SCENE_CAPACITY];
-    int 			lights_length;
-    t_texture		texture;
+	int 			lights_length;
+	t_texture		texture;
+	const u_int		*not_used_in_kernel;
+	int				selected_id;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
@@ -1955,7 +1957,7 @@ static int			scene_intersect(
 			intersection->material = scene->objects[intersection->object_id].material;
 		if (settings->tracing_mod == rt_tracing_mod_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
-		if (scene->objects[intersection->object_id].texture_id > -1)
+		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
 			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
@@ -2450,6 +2452,10 @@ static RT_F4				radiance_trace(
 
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
+
+	if (!get_global_id(0))
+		printf("selected = %d\n", scene->selected_id);
+
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		if (settings->illumination)

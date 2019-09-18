@@ -2,6 +2,7 @@
 
 typedef struct 		s_texture
 {
+	char 			name[TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
 	RT_F4			data[TEXTURE_DATA_SIZE];
 	int 			texture_length[TEXTURE_MAX_NUMBER];
 	int				width[TEXTURE_MAX_NUMBER];
