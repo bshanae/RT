@@ -6,13 +6,22 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/09/20 19:59:43 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/09/20 20:38:58 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "json_parse.h"
 #include "json_defaults.h"
 #include "cl_renderer.h"
+
+void	parse_settings(void *data, char *json, jsmntok_t *tokens)
+{
+	t_obj	box;
+	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
+	box.val_i2 = get_bool_in_object(json, tokens, "use double");
+	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
+	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_USE_DOUBLE);
+}
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 {

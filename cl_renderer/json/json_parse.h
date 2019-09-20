@@ -74,5 +74,8 @@ void		parse_julia(void *data, char *json, jsmntok_t *tokens);
 void		parse_ambient(void *data, char *json, jsmntok_t *tokens);
 void		parse_point(void *data, char *json, jsmntok_t *tokens);
 void		parse_direct(void *data, char *json, jsmntok_t *tokens);
+void		parse_explosion(void *data, char *json, jsmntok_t *tokens);
+void		parse_perfcube(void *data, char *json, jsmntok_t *tokens);
+void		parse_settings(void *data, char *json, jsmntok_t *tokens);
 
 #endif

@@ -7,6 +7,9 @@
 # define GLOBAL_POSITION (t_vector3){0., 0., 0.}
 # define GLOBAL_TEXTURE "chess.jpg"
 
+# define SETTINGS_USE_RM 0
+# define SETTINGS_USE_DOUBLE 0
+
 # define CAMERA_AXIS_X (RT_F4_API){1., 0., 0.}
 # define CAMERA_AXIS_Y (RT_F4_API){0., 1., 0.}
 # define CAMERA_AXIS_Z (RT_F4_API){0., 0., 1.}
