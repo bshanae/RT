@@ -30,6 +30,7 @@ typedef struct	s_parse_object
 	t_vector3	*val_v2;
 	char		*val_s1;
 	char		*val_s2;
+	char		*val_s3
 	float		*val_f1;
 	float		*val_f2;
 	int			*val_i1;
@@ -43,6 +44,7 @@ typedef struct	s_parse_object
 	int			i3;
 	char		*name;
 	t_material	material;
+	char		*texture;
 }				t_obj;
 
 void		load_scene(void *data, const char *path);
