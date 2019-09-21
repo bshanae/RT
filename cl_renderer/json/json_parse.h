@@ -30,7 +30,7 @@ typedef struct	s_parse_object
 	t_vector3	*val_v2;
 	char		*val_s1;
 	char		*val_s2;
-	char		*val_s3
+	char		*val_s3;
 	float		*val_f1;
 	float		*val_f2;
 	int			*val_i1;
@@ -56,6 +56,7 @@ jsmntok_t	*next_item(jsmntok_t *tokens);
 char		*get_string_in_object(char *json, jsmntok_t *object, char *target);
 t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target);
 float		*get_float_in_object(char *json, jsmntok_t *object, char *target);
+int			*get_int_in_object(char *json, jsmntok_t *object, char *target);
 int			*get_bool_in_object(char *json, jsmntok_t *object, char *target);
 int			*get_int_in_onject(char *json, jsmntok_t *object, char *target);
 t_material	decide_material(char *mat_name);

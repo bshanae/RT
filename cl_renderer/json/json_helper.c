@@ -139,7 +139,7 @@ float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-int		*get_int_in_onject(char *json, jsmntok_t *object, char *target)
+int		*get_int_in_object(char *json, jsmntok_t *object, char *target)
 {
 	int		*res;
 	float	*val;
