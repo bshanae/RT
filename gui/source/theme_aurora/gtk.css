@@ -2149,7 +2149,7 @@ treeview.view radio:checked {
 scale {
   min-height: 12px;
   min-width: 12px;
-  padding: 2px; }
+  padding: 10px; }
   scale * {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1); }
   scale slider {
