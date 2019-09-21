@@ -18,6 +18,14 @@ void 					gui_scene_edit_init_material
 	ft_strcpy(init.emission_r, "scene_edit_material_emission_r");
 	ft_strcpy(init.emission_g, "scene_edit_material_emission_g");
 	ft_strcpy(init.emission_b, "scene_edit_material_emission_b");
-	ft_strcpy(init.texture, "scene_edit_material_texture");
+	ft_strcpy(init.texture_combo, "scene_edit_material_texture_combo");
+	ft_strcpy(init.texture_list, "scene_texture_list");
+	ft_strcpy(init.reflectance_adjustment,
+		"scene_edit_material_reflectance_adjustment");
+	ft_strcpy(init.reflectance_scale, "scene_edit_material_reflectance_scale");
+	ft_strcpy(init.transparency_adjustment,
+		"scene_edit_material_transparency_adjustment");
+	ft_strcpy(init.transparency_scale,
+		"scene_edit_material_transparency_scale");
 	edit->material = gui_material_init(&init, builder);
 }

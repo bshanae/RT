@@ -20,7 +20,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	new->builder = gtk_builder_new_from_file(RT_SOURCE_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
 	gtk_window_set_resizable(new->window, FALSE);
-	new->notebook= RT_GUI_GET(new->builder, "notebook");
+	new->notebook = RT_GUI_GET(new->builder, "notebook");
 	new->notebook_page[0] = RT_GUI_GET(new->builder, "notebook_page_parser");
 	new->notebook_page[1] = RT_GUI_GET(new->builder, "notebook_page_camera");
 	new->notebook_page[2] = RT_GUI_GET(new->builder, "notebook_page_scene");

@@ -118,7 +118,7 @@ static RT_F4				radiance_trace(
 		choice_result = RT_CHOICE_DIFFUSE;
 		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
-		else if (intersection->material.transparence == (RT_F)1. || (intersection->material.transparence > 0. && choice_value < intersection->material.transparence))
+		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency > 0. && choice_value < intersection->material.transparency))
 			choice_result = RT_CHOICE_REFRACT;
 
 		if (choice_result == RT_CHOICE_REFLECT)
@@ -130,7 +130,7 @@ static RT_F4				radiance_trace(
 		else if (choice_result == RT_CHOICE_REFRACT)
 		{
 			intersection_refract(intersection, intersection);
-			mask /= intersection->material.transparence;
+			mask /= intersection->material.transparency;
 			depth--;
 		}
 		else if (choice_result == RT_CHOICE_DIFFUSE)

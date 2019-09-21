@@ -34,8 +34,8 @@ typedef enum						e_rt_tracing_mod
 
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
-# define RT_GUI_WIDTH				480
-# define RT_GUI_HEIGHT				480
+# define RT_GUI_WIDTH				838
+# define RT_GUI_HEIGHT				720
 
 # define RT_GUI_QUEUE_CEILING		10
 # define RT_GUI_QUEUE_PASS			5

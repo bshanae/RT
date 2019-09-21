@@ -11,7 +11,7 @@ typedef struct 		s_material
 	RT_F4_API		emission;
 	RT_F			specular;
 	RT_F			reflectance;
-	RT_F			transparence;
+	RT_F			transparency;
 }					t_material;
 
 #endif

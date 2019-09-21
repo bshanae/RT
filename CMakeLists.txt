@@ -12,7 +12,7 @@ endif()
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wenum-compare -Wno-deprecated-declarations")
 
 if (${RT_LINUX})
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D RT_OPEN_CL_DISABLED")
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D RT_OPEN_CL_DISABLED -D RT_QUEUE_MANUAL")
 endif ()
 
 set(BREW /usr/local)
@@ -219,7 +219,7 @@ set(SOURCE_GUI_COLOR
 set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_init.c
 	./gui/gui_material/gui_material_get.c
-	./gui/gui_material/gui_material_set.c gui/gui_material/gui_material_color_x.c gui/gui_material/gui_material_switch_mod.c gui/gui_material/gui_material_texture_x.c)
+	./gui/gui_material/gui_material_set.c gui/gui_material/gui_material_color_x.c gui/gui_material/gui_material_switch_mod.c gui/gui_material/gui_material_texture_x.c gui/gui_material/gui_material_special_x.c gui/gui_material/gui_material_prepare.c)
 
 set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
@@ -265,7 +265,7 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
 	./gui/gui_scene_add/gui_scene_add_init_julia.c
 	./gui/gui_scene_add/gui_scene_add_init_own.c
-	./gui/gui_scene_add/gui_scene_add_material_state_x.c gui/gui_scene_add/gui_scene_add_init_limited.c gui/gui_scene_add/gui_scene_add_init_p_cube.c gui/gui_scene_add/gui_scene_add_init_explosion.c)
+	gui/gui_scene_add/gui_scene_add_init_limited.c gui/gui_scene_add/gui_scene_add_init_p_cube.c gui/gui_scene_add/gui_scene_add_init_explosion.c gui/gui_scene_add/gui_scene_add_prepare.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -309,7 +309,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c gui/gui_signal_x/gui_signal_settings_illumination_state.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c gui/gui_signal_x/gui_signal_settings_illumination_state.c gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c gui/gui_signal_x/gui_signal_scene_add_switch_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

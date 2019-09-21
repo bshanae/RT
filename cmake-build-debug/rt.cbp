@@ -552,7 +552,13 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_init.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_prepare.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_set.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_special_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_switch_mod.c">
@@ -708,10 +714,10 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_init_torus.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_material_state_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_prepare.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_add_to_list.c">
@@ -879,6 +885,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_response_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_switch_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_add_type_select.c">
 			<Option target="rt"/>
 		</Unit>
@@ -901,6 +910,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_reset.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_scene_edit_select.c">

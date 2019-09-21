@@ -8,8 +8,7 @@ t_gui_scene_add		*gui_scene_add_new(GtkBuilder *builder)
 	new = rt_malloc(sizeof(t_gui_scene_add));
 	new->common = NULL;
 	new->current_type = object_type_end;
-	new->gen_name_next = 0;
-	new->material_color_silent = 0;
+	new->generator_next_id = 0;
 	gui_scene_add_init_own(new, builder);
 	gui_scene_add_init_light_point(new, builder);
 	gui_scene_add_init_light_direct(new, builder);

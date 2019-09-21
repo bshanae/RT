@@ -2149,12 +2149,12 @@ treeview.view radio:checked {
 scale {
   min-height: 12px;
   min-width: 12px;
-  padding: 12px; }
+  padding: 2px; }
   scale * {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1); }
   scale slider {
-    min-height: 24px;
-    min-width: 24px;
+    min-height: 12px;
+    min-width: 12px;
     margin: -10px; }
   scale trough {
     outline-offset: 2px;

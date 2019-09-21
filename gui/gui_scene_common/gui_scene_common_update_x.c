@@ -98,6 +98,10 @@ void 				gui_scene_common_update_textures
 	int 			i;
 
 	gtk_list_store_clear(gui->textures);
+	gtk_list_store_append(gui->textures, &iter_list);
+	gtk_list_store_set(gui->textures, &iter_list,
+		gui_textures_column_id, -1,
+		gui_textures_column_name, "None", -1);
 	i = 0;
 	while (i <= scene->texture.textures_number)
 	{

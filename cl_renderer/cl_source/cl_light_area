@@ -41,8 +41,8 @@ static RT_F4		light_area(
 			continue ;
 		if (intersection_light.object_id != i)
         {
-        	if (intersection_light.material.transparence)
-        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
+        	if (intersection_light.material.transparency)
+        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparency;
         	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
         	continue ;
         }

@@ -42,6 +42,6 @@ void 				gui_scene_edit_apply
 		gui_object_explosion_set(&edit->explosion, object);
 	else if (object->type == object_type_csg)
 		gui_object_pair_set(&edit->csg, object);
-	gui_material_set(&edit->material, &object->material);
-	gui_material_get(&edit->material, &object->material);
+	gui_material_set(&edit->material, &object->material, &object->texture_id);
+	gui_material_get(&edit->material, &object->material, &object->texture_id);
 }

@@ -12,3 +12,40 @@ void 					gui_material_texture_disable(t_gui_material *material)
 	gtk_stack_set_visible_child_name(material->switcher_stack, "hide");
 	gui_material_switch_mod(material, gui_material_material);
 }
+
+void 					gui_material_texture_get
+						(t_gui_material *material, int id)
+{
+	GtkTreeModel	*model;
+	int 			i;
+	GtkTreeIter		iter;
+
+	model = GTK_TREE_MODEL(material->texture_list);
+	if (!gtk_tree_model_get_iter_first(model, &iter))
+	{
+		printf("hi\n");
+		return ;
+	}
+	while (1)
+	{
+		gtk_tree_model_get(model, &iter, gui_textures_column_id, &i, -1);
+		if (i == id)
+		{
+			gtk_combo_box_set_active_iter(material->texture_combo, &iter);
+			return ;
+		}
+		if (!gtk_tree_model_iter_next(model, &iter))
+			break ;
+	}
+	rt_raise_warning("GUI Material : Texture not found (id = %d)", id);
+}
+
+void 					gui_material_texture_set
+						(t_gui_material *material, int *id)
+{
+	GtkTreeIter			iter;
+
+	gtk_combo_box_get_active_iter(material->texture_combo, &iter);
+	gtk_tree_model_get(GTK_TREE_MODEL(material->texture_list),
+		&iter, gui_textures_column_id, id, -1);
+}

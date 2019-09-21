@@ -6,22 +6,26 @@ void				gui_signal_scene_edit_switch_material
 	t_gui			*gui;
 	t_gui_material	*material;
 	gboolean 		state;
+	t_object		*object;
 
 	gui = (t_gui *)ptr;
 	material = &gui->scene->edit->material;
+	if (material->switcher_block == rt_true)
+		return ;
 	if (gui->scene->edit->material.texture_state == rt_off)
 	{
 		rt_raise_warning("GUI Editor : Unexpected material stack state");
 		return ;
 	}
 	state = gtk_toggle_button_get_active(material->switcher_material);
-	g_signal_handlers_block_by_func(G_OBJECT(material->switcher_texture),
-		gui_signal_scene_edit_switch_texture, ptr);
+	material->switcher_block = rt_true;
 	gtk_toggle_button_set_active(material->switcher_texture, !state);
-	g_signal_handlers_unblock_by_func(G_OBJECT(material->switcher_texture),
-		gui_signal_scene_edit_switch_texture, ptr);
+	material->switcher_block = rt_false;
 	gui_material_switch_mod(&gui->scene->edit->material, state ?
 		gui_material_material : gui_material_texture);
+	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
+	gui_material_get(material, &object->material, &object->texture_id);
+	gui_control_show(&gui->scene->edit->control);
 }
 
 void 				gui_signal_scene_edit_switch_texture
@@ -30,20 +34,24 @@ void 				gui_signal_scene_edit_switch_texture
 	t_gui			*gui;
 	t_gui_material	*material;
 	gboolean 		state;
+	t_object		*object;
 
 	gui = (t_gui *)ptr;
 	material = &gui->scene->edit->material;
+	if (material->switcher_block == rt_true)
+		return ;
 	if (gui->scene->edit->material.texture_state == rt_off)
 	{
 		rt_raise_warning("GUI Editor : Unexpected material stack state");
 		return ;
 	}
 	state = gtk_toggle_button_get_active(material->switcher_texture);
-	g_signal_handlers_block_by_func(G_OBJECT(material->switcher_material),
-		gui_signal_scene_edit_switch_material, ptr);
+	material->switcher_block = rt_true;
 	gtk_toggle_button_set_active(material->switcher_material, !state);
-	g_signal_handlers_unblock_by_func(G_OBJECT(material->switcher_material),
-		gui_signal_scene_edit_switch_material, ptr);
+	material->switcher_block = rt_false;
 	gui_material_switch_mod(&gui->scene->edit->material, state ?
 		gui_material_texture : gui_material_material);
+	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
+	gui_material_get(material, &object->material, &object->texture_id);
+	gui_control_show(&gui->scene->edit->control);
 }

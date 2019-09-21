@@ -62,9 +62,15 @@ void				gui_signal_scene_edit_switch_material
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_scene_edit_switch_texture
 					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_add_switch_material
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_add_switch_texture
+					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_material_color
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_material_emission
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_scene_edit_scale_changed
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_scene_edit_add
 					(GTK_SIGNAL_SIGNATURE);

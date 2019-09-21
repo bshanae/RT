@@ -7,6 +7,4 @@ void 				gui_scene_add_init_own
 	add->name = RT_GUI_GET(builder, "scene_add_name");
 	add->type_combo = RT_GUI_GET(builder, "scene_add_type_combo");
 	add->stack = RT_GUI_GET(builder, "scene_add_stack");
-	add->material_color_box =
-		RT_GUI_GET(builder, "scene_add_material_color_box");
 }

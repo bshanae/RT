@@ -7,6 +7,7 @@
 # include "gui_color.h"
 # include "material.h"
 # include "material_list.h"
+# include "gui_scene_common.h"
 
 # include <gtk/gtk.h>
 
@@ -31,7 +32,12 @@ typedef struct 			s_gui_init_material
 	char				emission_g[64];
 	char				emission_b[64];
 	char				emission_button[64];
-	char				texture[64];
+	char				reflectance_adjustment[64];
+	char				reflectance_scale[64];
+	char				transparency_adjustment[64];
+	char				transparency_scale[64];
+	char				texture_combo[64];
+	char				texture_list[64];
 }						t_gui_init_material;
 
 typedef struct 			s_gui_material
@@ -39,6 +45,7 @@ typedef struct 			s_gui_material
 	GtkStack			*switcher_stack;
 	GtkToggleButton 	*switcher_material;
 	GtkToggleButton 	*switcher_texture;
+	t_rt_bool			switcher_block;
 	t_rt_state			texture_state;
 	t_gui_material_mod	current_mod;
 	GtkStack			*stack;
@@ -52,22 +59,40 @@ typedef struct 			s_gui_material
 	GtkEntry			*emission_g;
 	GtkEntry			*emission_b;
 	GtkColorButton		*emission_button;
-	GtkComboBox			*texture;
+	GtkAdjustment		*reflectance_adjustment;
+	GtkScale			*reflectance_scale;
+	GtkAdjustment		*transparency_adjustment;
+	GtkScale			*transparency_scale;
+	GtkComboBox			*texture_combo;
+	GtkListStore		*texture_list;
 }						t_gui_material;
 
 t_gui_material			gui_material_init
 						(const t_gui_init_material *init, GtkBuilder *builder);
 
 void 					gui_material_get
-						(t_gui_material *gui, t_material *material);
+						(t_gui_material *gui,
+						t_material *material, int *texture);
 void 					gui_material_set
-						(t_gui_material *gui, t_material *material);
+						(t_gui_material *gui,
+						t_material *material, int *texture);
+
+void 					gui_material_texture_get
+						(t_gui_material *material, int id);
+void 					gui_material_texture_set
+						(t_gui_material *material, int *id);
+
+void 					gui_material_prepare
+						(t_gui_material *material, t_object *object);
 
 void 					gui_material_color_enable(t_gui_material *material);
 void 					gui_material_color_disable(t_gui_material *material);
 
 void 					gui_material_texture_enable(t_gui_material *material);
 void 					gui_material_texture_disable(t_gui_material *material);
+
+void 					gui_material_special_disable(t_gui_material *material);
+void 					gui_material_special_enable(t_gui_material *material);
 
 void 					gui_material_switch_mod
 						(t_gui_material *material, t_gui_material_mod mod);

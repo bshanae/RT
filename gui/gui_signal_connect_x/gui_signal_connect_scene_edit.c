@@ -11,6 +11,7 @@ void				gui_signal_connect_scene_edit(t_gui *gui)
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_switch_texture);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_material_color);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_material_emission);
+	RT_GUI_CONNECT(gui, gui_signal_scene_edit_scale_changed);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_add);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_remove);
 	RT_GUI_CONNECT(gui, gui_signal_scene_edit_remove_response_cancel);

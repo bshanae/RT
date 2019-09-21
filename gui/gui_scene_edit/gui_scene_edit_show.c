@@ -44,11 +44,6 @@ void 					gui_scene_edit_show
 		gui_object_pair_get(&edit->csg, object);
 	else
 		rt_raise_warning("GUI Editor : Unknown type");
-	if (object_flag_get(object) & RT_OBJECT_HAS_TEXTURE)
-		gui_material_texture_enable(&edit->material);
-	else
-		gui_material_texture_disable(&edit->material);
-	gui_material_switch_mod(&edit->material, object->texture_id == -1 ?
-		gui_material_material : gui_material_texture);
-	gui_material_get(&edit->material, &object->material);
+	gui_material_prepare(&edit->material, object);
+	gui_material_get(&edit->material, &object->material, &object->texture_id);
 }

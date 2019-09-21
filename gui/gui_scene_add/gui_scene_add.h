@@ -35,12 +35,11 @@ typedef struct 					s_gui_scene_add
 	t_gui_object_p_cube			p_cube;
 	t_gui_object_explosion		explosion;
 	t_gui_object_pair			csg;
-	GtkWidget					*material_color_box;
-	int 						material_color_silent;
 	t_gui_material				material;
+	t_object					temp_object;
 	GtkStack					*stack;
 	t_object_type				current_type;
-	int 						gen_name_next;
+	int 						generator_next_id;
 }								t_gui_scene_add;
 
 t_gui_scene_add					*gui_scene_add_new(GtkBuilder *builder);
@@ -83,13 +82,11 @@ void 							gui_scene_add_init_csg
 void 							gui_scene_add_init_material
 								(t_gui_scene_add *add, GtkBuilder *builder);
 
-void 							gui_scene_add_material_state_light
-								(t_gui_scene_add *add);
-void 							gui_scene_add_material_state_non_light
-								(t_gui_scene_add *add);
 char							*gui_scene_add_gen_name
 								(t_gui_scene_add *add);
+void 							gui_scene_add_prepare(t_gui_scene_add *add);
 void							gui_scene_add_build_object
 								(t_gui_scene_add *add, t_object *space);
+
 
 #endif

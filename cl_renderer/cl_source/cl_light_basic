@@ -90,8 +90,8 @@ static int				static_is_shadowed(
 	shadow.ray.direction = normalize(*light_direction);
 	if (!scene_intersect(scene, camera, &shadow, settings))
 		return (0);
-	if (shadow.material.transparence)
-		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
+	if (shadow.material.transparency)
+		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparency;
 	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
