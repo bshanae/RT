@@ -13,6 +13,16 @@ static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rn
 	ray->direction = normalize(focal_point - ray->origin);
 }
 
+static RT_F4		camera_build_vp_point(global t_camera *camera, RT_F x, RT_F y)
+{
+	RT_F4			up;
+	RT_F4			right;
+
+	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
+	right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
+	return (up + right + camera->forward);
+}
+
 static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
 {
 	t_ray			result;
@@ -20,9 +30,7 @@ static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
     RT_F4			right;
 
 	result.origin = camera->position;
-    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
-    right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
-    result.direction = normalize(up + right + camera->forward);
+    result.direction = normalize(camera_build_vp_point(camera, x, y));
     return (result);
 }
 

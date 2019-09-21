@@ -209,7 +209,7 @@ typedef struct 		s_material
 	RT_F4			emission;
 	RT_F			specular;
 	RT_F			reflectance;
-	RT_F			transparence;
+	RT_F			transparency;
 }					t_material;
 
 // cl_intersection_x ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1735,6 +1735,7 @@ typedef struct 		s_camera
 
 typedef struct 		s_texture
 {
+	char 			name[TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
 	RT_F4			data[TEXTURE_DATA_SIZE];
 	int 			texture_length[TEXTURE_MAX_NUMBER];
 	int				width[TEXTURE_MAX_NUMBER];
@@ -1887,7 +1888,7 @@ typedef struct		s_scene
 	int				lights[RT_CL_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
-	const u_int		*not_used_in_kernel;
+	const uint		*not_used_in_kernel;
 	int				selected_id;
 }					t_scene;
 
@@ -1949,12 +1950,10 @@ static int			scene_intersect(
     	result = scene_intersect_rm(scene, intersection, settings);
     else
     	return (0);
+
 	if (result)
 	{
-		if (object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected)
-			intersection->material = (t_material){0, 0};
-		else
-			intersection->material = scene->objects[intersection->object_id].material;
+		intersection->material = scene->objects[intersection->object_id].material;
 		if (settings->tracing_mod == rt_tracing_mod_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].texture_id != -1)
@@ -2113,8 +2112,8 @@ static int				static_is_shadowed(
 	shadow.ray.direction = normalize(*light_direction);
 	if (!scene_intersect(scene, camera, &shadow, settings))
 		return (0);
-	if (shadow.material.transparence)
-		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
+	if (shadow.material.transparency)
+		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparency;
 	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
@@ -2205,8 +2204,8 @@ static RT_F4		light_area(
 			continue ;
 		if (intersection_light.object_id != i)
         {
-        	if (intersection_light.material.transparence)
-        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
+        	if (intersection_light.material.transparency)
+        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparency;
         	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
         	continue ;
         }
@@ -2264,6 +2263,16 @@ static void			camera_focus(global t_camera *camera, t_ray *ray, global ulong *rn
 	ray->direction = normalize(focal_point - ray->origin);
 }
 
+static RT_F4		camera_build_vp_point(global t_camera *camera, RT_F x, RT_F y)
+{
+	RT_F4			up;
+	RT_F4			right;
+
+	up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
+	right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
+	return (up + right + camera->forward);
+}
+
 static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
 {
 	t_ray			result;
@@ -2271,9 +2280,7 @@ static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
     RT_F4			right;
 
 	result.origin = camera->position;
-    up = (RT_F4)camera->axis_y * (RT_F)(-1.f * y + (camera->height - 1.f) / 2.f);
-    right = (RT_F4)camera->axis_x * (RT_F)(x - (camera->width - 1.f) / 2.f);
-    result.direction = normalize(up + right + camera->forward);
+    result.direction = normalize(camera_build_vp_point(camera, x, y));
     return (result);
 }
 
@@ -2328,6 +2335,7 @@ static RT_F4					illumination(
 	RT_F						y;
 	RT_F4						k;
 	RT_F4						illumination;
+	t_intersection				light;
 	t_intersection              shadow;
 
 	illumination = 0.;
@@ -2351,14 +2359,32 @@ static RT_F4					illumination(
 		if (x < sphere.radius)
 			continue;
 
-		shadow = *intersection;
-		scene_intersect(scene, camera, &shadow, settings);
+		light = *intersection;
 
-		if (scene->objects[shadow.object_id].is_selected == rt_true)
-			continue ;
+		intersection_reset(&light);
+        if (scene_intersect(scene, camera, &light, settings))
+        {
+			shadow.ray.origin = light.hit
+			shadow.ray.direction = normalize(camera->position - light.hit);
 
-		if (shadow.ray.t < y)
-			continue;
+			intersection_reset(&shadow);
+			int i = scene_intersect(scene, camera, &shadow, settings);
+			if (shadow.ray.t < length(camera->position - light.hit))
+				continue;
+
+			if (settings->light_area)
+				printf("isect = %d\n", i);
+
+        }
+        else
+        {
+			shadow.ray.origin = sphere.position;
+			shadow.ray.direction = normalize(camera->position - sphere.position);
+
+			intersection_reset(&shadow);
+			if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
+				continue;
+        }
 
 		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_CL_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
@@ -2453,9 +2479,6 @@ static RT_F4				radiance_trace(
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
 
-	if (!get_global_id(0))
-		printf("selected = %d\n", scene->selected_id);
-
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
 		if (settings->illumination)
@@ -2464,7 +2487,7 @@ static RT_F4				radiance_trace(
 		if (!scene_intersect(scene, camera, intersection, settings))
 			break ;
 
-		if (!object_is_pair(scene->objects + intersection->object_id) && scene->objects[intersection->object_id].is_selected == rt_true)
+		if (scene->objects[intersection->object_id].is_selected == rt_true)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -2488,7 +2511,7 @@ static RT_F4				radiance_trace(
 		choice_result = RT_CHOICE_DIFFUSE;
 		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
-		else if (intersection->material.transparence == (RT_F)1. || (intersection->material.transparence > 0. && choice_value < intersection->material.transparence))
+		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency > 0. && choice_value < intersection->material.transparency))
 			choice_result = RT_CHOICE_REFRACT;
 
 		if (choice_result == RT_CHOICE_REFLECT)
@@ -2500,7 +2523,7 @@ static RT_F4				radiance_trace(
 		else if (choice_result == RT_CHOICE_REFRACT)
 		{
 			intersection_refract(intersection, intersection);
-			mask /= intersection->material.transparence;
+			mask /= intersection->material.transparency;
 			depth--;
 		}
 		else if (choice_result == RT_CHOICE_DIFFUSE)

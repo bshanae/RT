@@ -73,8 +73,8 @@ void				scene_test_limited(t_scene *scene)
 	scene_edit_param(scene, -1, scene_param_name, "Sphere");
 	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane A");
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 0.}, (RT_F4_API){0., 1., 0.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane A");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
 	scene_edit_param(scene, -1, scene_param_name, "Plane B");
@@ -88,8 +88,8 @@ void				scene_test_limited(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_box, (RT_F4_API) {10., 0., 0.}, (RT_F4_API) {5., 5., 5.});
 	scene_edit_param(scene, -1, scene_param_name, "Box");
 
-	object_build(scene_get_space(scene), object_type_limited, "Cylinder", "Plane A");
-	scene_edit_param(scene, -1, scene_param_name, "Limited");
+//	object_build(scene_get_space(scene), object_type_limited, "Cylinder", "Plane A");
+//	scene_edit_param(scene, -1, scene_param_name, "Limited");
 }
 
 void				scene_test_illumination(t_scene *scene)

@@ -11,6 +11,7 @@ static RT_F4					illumination(
 	RT_F						y;
 	RT_F4						k;
 	RT_F4						illumination;
+	t_intersection				light;
 	t_intersection              shadow;
 
 	illumination = 0.;
@@ -34,14 +35,32 @@ static RT_F4					illumination(
 		if (x < sphere.radius)
 			continue;
 
-		shadow = *intersection;
-		scene_intersect(scene, camera, &shadow, settings);
+		light = *intersection;
 
-		if (scene->objects[shadow.object_id].is_selected == rt_true)
-			continue ;
+		intersection_reset(&light);
+        if (scene_intersect(scene, camera, &light, settings))
+        {
+			shadow.ray.origin = light.hit;
+			shadow.ray.direction = normalize(camera->position - light.hit);
 
-		if (shadow.ray.t < y)
-			continue;
+			intersection_reset(&shadow);
+			int i = scene_intersect(scene, camera, &shadow, settings);
+			if (shadow.ray.t < length(camera->position - light.hit))
+				continue;
+
+			//if (settings->light_area)
+			//	printf("isect = %d\n", i);
+
+        }
+        else
+        {
+			shadow.ray.origin = sphere.position;
+			shadow.ray.direction = normalize(camera->position - sphere.position);
+
+			intersection_reset(&shadow);
+			if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
+				continue;
+        }
 
 		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_CL_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
