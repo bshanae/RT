@@ -48,9 +48,6 @@ static void         cylinder_texture(
     data = *(global t_object_cylinder* )object->data;
     normal = normalize(intersection->hit - data.top);
 
-	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
-    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
-
     *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
 
     if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
@@ -77,9 +74,6 @@ static void         cone_texture(
 
     data = *(global t_object_cone* )object->data;
     normal = normalize(intersection->hit - (data.bottom + (data.bottom - data.top) / 2));
-
-	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
-    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
 
 	*u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
 
