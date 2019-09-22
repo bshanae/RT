@@ -38,7 +38,7 @@ static RT_F4					illumination(
 		light = *intersection;
 
 		intersection_reset(&light);
-        if (scene_intersect(scene, camera, &light, settings))
+        if (0 && scene_intersect(scene, camera, &light, settings))
         {
 			shadow.ray.origin = light.hit;
 			shadow.ray.direction = normalize(camera->position - light.hit);
