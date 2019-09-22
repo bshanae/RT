@@ -13,44 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cone" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_texture" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_texture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_cone.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_cone.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_cylinder.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_cylinder.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/object_x/object_x.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_objects.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_objects.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_box.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cone.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_csg.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_cylinder.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_explosion.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_julia.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_limited.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_mandelbulb.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_moebius.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_paraboloid.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_perforated_cube.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_disruptions_load.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_box_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_box_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cone_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_cylinder_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_explosion_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_explosion_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_julia_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_julia_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_mandelbulb_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_mandelbulb_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_moebius_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_moebius_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_p_cube_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_p_cube_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_pair_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_pair_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_paraboloid_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_paraboloid_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_torus_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_torus_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +207,7 @@
       <workItem from="1568736186021" duration="682000" />
       <workItem from="1568803514510" duration="5738000" />
       <workItem from="1569074713408" duration="1241000" />
-      <workItem from="1569145781028" duration="5516000" />
+      <workItem from="1569145781028" duration="6443000" />
     </task>
     <servers />
   </component>

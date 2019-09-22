@@ -28,8 +28,8 @@ void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 	t_obj			box;
 	t_cl_renderer	*r;
 
-	ft_bzero(r->data.camera, sizeof(t_camera));
 	r = (t_cl_renderer*)data;
+	ft_bzero(r->data.camera, sizeof(t_camera));
 	box.val_v1 = get_vector_in_object(json, tokens, "position");
 	box.val_v2 = get_vector_in_object(json, tokens, "rotation");
 	r->data.camera->position = (box.val_v1 ? *(RT_F4_API*)box.val_v1 : CAMERA_POS);
