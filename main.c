@@ -20,7 +20,7 @@ int					main(int argc, char **argv)
 	scene_test_csg(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 180;
 	gui->renderer->data.camera->position.y = 15;
-	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_mod_rm);
+	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_mod_rt);
 	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);
     scene_update(gui->renderer->data.scene);
