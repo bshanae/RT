@@ -15,8 +15,10 @@ t_gui_camera			*gui_camera_new(GtkBuilder *builder)
 	new->rotation_x = RT_GUI_GET(builder, "camera_rotation_x");
 	new->rotation_y = RT_GUI_GET(builder, "camera_rotation_y");
 	new->rotation_z = RT_GUI_GET(builder, "camera_rotation_z");
-	new->screen_success = RT_GUI_GET(builder, "camera_screen_dialog_success");
-	new->screen_fail = RT_GUI_GET(builder, "camera_screen_dialog_fail");
+	new->state_dialog = RT_GUI_GET(builder, "camera_state_dialog");
+	new->state_label = RT_GUI_GET(builder, "camera_state_label");
+	new->screen_dialog = RT_GUI_GET(builder, "camera_screen_dialog");
+	new->screen_label = RT_GUI_GET(builder, "camera_screen_label");
 	new->antialiasing = RT_GUI_GET(builder, "camera_antialiasing");
 	new->filter_none = RT_GUI_GET(builder, "camera_filter_none");
 	new->filter_cartoon = RT_GUI_GET(builder, "camera_filter_cartoon");

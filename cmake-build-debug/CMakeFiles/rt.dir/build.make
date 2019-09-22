@@ -499,18 +499,18 @@ CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_apply.c -o CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.s
 
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o: ../gui/gui_signal_x/gui_signal_camera_main_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_main_x.c
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o: ../gui/gui_signal_x/gui_signal_camera_state_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o   -c /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_state_x.c
 
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_main_x.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.i
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_state_x.c > CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.i
 
-CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_main_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.s
+CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_state_x.c -o CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.s
 
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_point_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_point_x.c.o: ../gui/gui_object_x/gui_object_light_point_x.c
@@ -3330,7 +3330,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o" \
 "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o" \
 "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.o" \
-"CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o" \
+"CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_point_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_direct_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o" \
@@ -3583,7 +3583,7 @@ rt: CMakeFiles/rt.dir/gui/gui_camera/gui_camera_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o
 rt: CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o
 rt: CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.o
-rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o
+rt: CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_state_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_point_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_direct_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o

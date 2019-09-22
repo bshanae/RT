@@ -19,8 +19,10 @@ typedef struct				s_gui_camera
 	GtkEntry				*rotation_x;
 	GtkEntry				*rotation_y;
 	GtkEntry				*rotation_z;
-	GtkDialog				*screen_success;
-	GtkDialog				*screen_fail;
+	GtkDialog				*state_dialog;
+	GtkLabel				*state_label;
+	GtkDialog				*screen_dialog;
+	GtkLabel				*screen_label;
 	GtkSwitch				*antialiasing;
 	GtkToggleButton			*filter_none;
 	GtkToggleButton			*filter_cartoon;

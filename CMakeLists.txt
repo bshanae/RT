@@ -193,7 +193,7 @@ set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
 	./gui/gui_camera/gui_camera_apply.c
-	gui/gui_signal_x/gui_signal_camera_main_x.c)
+	gui/gui_signal_x/gui_signal_camera_state_x.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_light_point_x.c

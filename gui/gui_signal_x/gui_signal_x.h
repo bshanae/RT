@@ -31,9 +31,11 @@ void 				gui_signal_parser_select
 void 				gui_signal_parser_load
 					(GTK_SIGNAL_SIGNATURE);
 
-void 				gui_signal_camera_main_reset
+void 				gui_signal_camera_state_reset
 					(GTK_SIGNAL_SIGNATURE);
-void 				gui_signal_camera_main_save
+void 				gui_signal_camera_state_save
+					(GTK_SIGNAL_SIGNATURE);
+void				gui_signal_camera_state_dialog_response
 					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
@@ -45,9 +47,7 @@ void				gui_signal_camera_focus_auto
 					(GtkWidget *widget, gpointer ptr);
 void				gui_signal_camera_screen_save
 					(GtkWidget *widget, gpointer ptr);
-void				gui_signal_camera_screen_success_close
-					(GTK_SIGNAL_SIGNATURE);
-void				gui_signal_camera_screen_fail_close
+void				gui_signal_camera_screen_dialog_response
 					(GTK_SIGNAL_SIGNATURE);
 void				gui_signal_camera_reset
 					(GTK_SIGNAL_SIGNATURE);

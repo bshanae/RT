@@ -849,13 +849,13 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_focus_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_main_x.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_state_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_entry_x.c">
