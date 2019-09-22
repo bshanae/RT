@@ -17,6 +17,7 @@ void				texture_data_load
 		&texture->height[texture->textures_number],
 		&number_of_channels, TEXTURE_CHANNELS);
 	ft_strcpy(texture->name[texture->textures_number], name);
+	texture->height[texture->textures_number]--;
 	texture->texture_length[texture->textures_number] =
 		texture->width[texture->textures_number]
 		* texture->height[texture->textures_number];

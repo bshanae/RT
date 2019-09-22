@@ -39,7 +39,7 @@ void				texture_disruptions_load
 	pointer = texture_iter(texture);
 	ft_strcpy(texture->name[texture->textures_number], name);
 	texture->width[texture->textures_number] = DISRUPTION_WIDTH;
-	texture->height[texture->textures_number] = DISRUPTION_HEIGHT;
+	texture->height[texture->textures_number] = DISRUPTION_HEIGHT - 1;
 	texture->texture_length[texture->textures_number] =
 		texture->width[texture->textures_number]*
 		texture->height[texture->textures_number];
