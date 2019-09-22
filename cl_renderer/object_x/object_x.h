@@ -44,6 +44,8 @@ typedef struct 			s_object_cone
 	RT_F4_API			axis;
 	RT_F 				radius;
 	RT_F          		tangent;
+	RT_F                length;
+	RT_F                length_line;
 }						t_object_cone;
 
 typedef struct 			s_object_cylinder
@@ -52,6 +54,8 @@ typedef struct 			s_object_cylinder
 	RT_F4_API			bottom;
 	RT_F4_API			axis;
 	RT_F 				radius;
+	RT_F                length;
+	RT_F                length_line;
 }						t_object_cylinder;
 
 typedef struct 			s_object_box

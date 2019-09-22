@@ -36,8 +36,9 @@ void				scene_test_box(t_scene *scene)
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
 	scene_edit_param(scene, -1, scene_param_name, "Light");
 
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 10.}, 3.);
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., -15., 0.}, 3.);
 	scene_edit_param(scene, -1, scene_param_name, "Sphere");
+	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
 	scene_edit_param(scene, -1, scene_param_name, "Plane Lower");
@@ -59,9 +60,11 @@ void				scene_test_box(t_scene *scene)
 
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){-10., -10., 0.}, (RT_F4_API){-10., 10., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cone");
+	scene_edit_param(scene, -1, scene_param_texture, "Checkerboard");
 
 	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
+	scene_edit_param(scene, -1, scene_param_texture, "Wood");
 }
 
 void				scene_test_rt(t_scene *scene)

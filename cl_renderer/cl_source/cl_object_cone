@@ -9,6 +9,8 @@ typedef struct 		s_object_cone
 	RT_F4   		axis;
 	RT_F 			radius;
 	RT_F          	tangent;
+	RT_F            length;
+    RT_F            length_line;
 }					t_object_cone;
 
 static RT_F         object_cone_cap_intersect(global t_object *object, t_intersection *intersection)

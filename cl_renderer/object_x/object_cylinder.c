@@ -10,4 +10,6 @@ void				    object_cylinder_build(t_object *space, va_list *args)
     data->radius = (RT_F)va_arg(*args, double);
 	data->axis = f4_normalize(f4_sub(data->top, data->bottom));
 	space->type = object_type_cylinder;
+	data->length_line = f4_length(f4_sub(data->top, data->bottom));
+	data->length = data->length_line + data->radius * 2;
 }

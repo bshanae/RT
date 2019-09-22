@@ -8,6 +8,8 @@ typedef struct 		    s_object_cylinder
 	RT_F4   		    bottom;
 	RT_F4   		    axis;
 	RT_F 			    radius;
+	RT_F                length;
+    RT_F                length_line;
 }					    t_object_cylinder;
 
 static RT_F             object_cylinder_cap_intersect(global t_object *object, t_intersection *intersection)

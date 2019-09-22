@@ -2,7 +2,7 @@
 # define RT_CONTROL_H
 
 //# define RT_OPEN_CL_DISABLED
-# define RT_OPEN_CL_GPU
+# define RT_OPEN_CL_CPU
 
 # define RT_QUEUE_AUTO
 
