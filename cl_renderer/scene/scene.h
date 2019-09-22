@@ -11,9 +11,9 @@
 
 typedef struct		s_scene
 {
-	t_object		objects[RT_CL_SCENE_CAPACITY];
+	t_object		objects[RT_SCENE_CAPACITY];
 	int				objects_length;
-	int				lights[RT_CL_SCENE_CAPACITY];
+	int				lights[RT_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
 	UINT_REF 		current_mod;

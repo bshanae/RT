@@ -10,7 +10,7 @@ static RT_F4		object_normal_rm(global t_object *object, t_intersection *intersec
 	RT_F4			normal_negative;
 	RT_F4			nudge;
 
-	nudge = (RT_F4){RT_CL_RM_NORMAL_EPSILON, 0., 0., 0.};
+	nudge = (RT_F4){RT_RM_NORMAL_EPSILON, 0., 0., 0.};
 	nudged_hit = intersection->hit + nudge;
 	normal_intersection.hit = nudged_hit;
 	normal.x = object_sdf(object, &normal_intersection);
@@ -19,7 +19,7 @@ static RT_F4		object_normal_rm(global t_object *object, t_intersection *intersec
 	normal_negative.x = object_sdf(object, &normal_intersection);
 	normal.x -= normal_negative.x;
 
-	nudge = (RT_F4){0., RT_CL_RM_NORMAL_EPSILON, 0., 0.};
+	nudge = (RT_F4){0., RT_RM_NORMAL_EPSILON, 0., 0.};
 	nudged_hit = intersection->hit + nudge;
 	normal_intersection.hit = nudged_hit;
 	normal.y = object_sdf(object, &normal_intersection);
@@ -28,7 +28,7 @@ static RT_F4		object_normal_rm(global t_object *object, t_intersection *intersec
 	normal_negative.y = object_sdf(object, &normal_intersection);
 	normal.y -= normal_negative.y;
 
-	nudge = (RT_F4){0., 0., RT_CL_RM_NORMAL_EPSILON, 0.};
+	nudge = (RT_F4){0., 0., RT_RM_NORMAL_EPSILON, 0.};
 	nudged_hit = intersection->hit + nudge;
 	normal_intersection.hit = nudged_hit;
 	normal.z = object_sdf(object, &normal_intersection);
@@ -60,7 +60,7 @@ static RT_F4		object_normal_rt(
 static RT_F4		object_normal(
 					global t_object *object,
 					t_intersection *intersection,
-					constant t_cl_renderer_settings *settings)
+					constant t_rt_settings *settings)
 {
 	return (settings->tracing_mod == rt_tracing_mod_rt ?
 		object_normal_rt(object, intersection) :

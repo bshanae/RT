@@ -1,7 +1,7 @@
 // cl_sample_store /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static void			sample_store_map(global RT_F4 *sample_store, global RT_F4 *sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
+static void			sample_store_map(global RT_F4 *sample_store, global RT_F4 *sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH], global t_camera *camera)
 {
-	for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH; i++)
+	for (int i = 0; i < RT_SAMPLE_ARRAY_LENGTH; i++)
 		sample_store_mapped[i] = sample_store + i * camera->width * camera->height;
 }

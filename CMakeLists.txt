@@ -80,7 +80,7 @@ include_directories(
 	./gui/gui_queue/
 	./gui/gui_entry/
 	./gui/gui_control/
-	gui/gui_icon/
+	./gui/gui_icon/
 	./gui/gui_parser/
 	./gui/gui_camera/
 	./gui/gui_object_x/
@@ -109,6 +109,7 @@ include_directories(
 	./cl_renderer/cl_program/
 	./cl_renderer/cl_arg_list/
 	./cl_renderer/cl_builder/
+	./cl_renderer/rt_settings/
 	./cl_renderer/cl_renderer/
 	./cl_renderer/json/
 	./cl_renderer/texture
@@ -218,13 +219,19 @@ set(SOURCE_GUI_COLOR
 set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_init.c
 	./gui/gui_material/gui_material_get.c
-	./gui/gui_material/gui_material_set.c gui/gui_material/gui_material_color_x.c gui/gui_material/gui_material_switch_mod.c gui/gui_material/gui_material_texture_x.c gui/gui_material/gui_material_special_x.c gui/gui_material/gui_material_prepare.c)
+	./gui/gui_material/gui_material_set.c
+	./gui/gui_material/gui_material_color_x.c
+	./gui/gui_material/gui_material_switch_mod.c
+	./gui/gui_material/gui_material_texture_x.c
+	./gui/gui_material/gui_material_special_x.c
+	./gui/gui_material/gui_material_prepare.c)
 
 set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
-	./gui/gui_scene_common/gui_scene_common_update_x.c gui/gui_scene_common/gui_scene_common_add_to_list.c)
+	./gui/gui_scene_common/gui_scene_common_update_x.c
+	./gui/gui_scene_common/gui_scene_common_add_to_list.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -244,7 +251,11 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_mandelbulb.c
 	./gui/gui_scene_edit/gui_scene_edit_init_julia.c
 	./gui/gui_scene_edit/gui_scene_edit_init_own.c
-	gui/gui_scene_edit/gui_scene_edit_init_p_cube.c gui/gui_scene_edit/gui_scene_edit_init_limited.c gui/gui_scene_edit/gui_scene_edit_init_explosion.c gui/gui_scene_edit/gui_scene_edit_init_csg.c gui/gui_scene_edit/gui_scene_edit_select.c)
+	./gui/gui_scene_edit/gui_scene_edit_init_p_cube.c
+	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
+	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
+	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
+	./gui/gui_scene_edit/gui_scene_edit_select.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -264,7 +275,10 @@ set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_init_mandelbulb.c
 	./gui/gui_scene_add/gui_scene_add_init_julia.c
 	./gui/gui_scene_add/gui_scene_add_init_own.c
-	gui/gui_scene_add/gui_scene_add_init_limited.c gui/gui_scene_add/gui_scene_add_init_p_cube.c gui/gui_scene_add/gui_scene_add_init_explosion.c gui/gui_scene_add/gui_scene_add_prepare.c)
+	./gui/gui_scene_add/gui_scene_add_init_limited.c
+	./gui/gui_scene_add/gui_scene_add_init_p_cube.c
+	./gui/gui_scene_add/gui_scene_add_init_explosion.c
+	./gui/gui_scene_add/gui_scene_add_prepare.c)
 
 set(SOURCE_GUI_SCENE
 	./gui/gui_scene/gui_scene_new.c
@@ -308,7 +322,15 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_parser_select.c
 	./gui/gui_signal_x/gui_signal_parser_load.c
 	./gui/gui_signal_x/gui_signal_camera_antialiasing.c
-	./gui/gui_signal_x/gui_signal_camera_focus_x.c gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c gui/gui_signal_x/gui_signal_entry_x.c gui/gui_signal_x/gui_signal_scene_add_block_destroy.c gui/gui_scene_add/gui_scene_add_init_csg.c gui/gui_signal_x/gui_signal_scene_edit_switch_x.c gui/gui_signal_x/gui_signal_settings_illumination_state.c gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c gui/gui_signal_x/gui_signal_scene_add_switch_x.c)
+	./gui/gui_signal_x/gui_signal_camera_focus_x.c
+	./gui/gui_signal_x/gui_signal_scene_edit_combo_changed.c
+	./gui/gui_signal_x/gui_signal_entry_x.c
+	./gui/gui_signal_x/gui_signal_scene_add_block_destroy.c
+	./gui/gui_scene_add/gui_scene_add_init_csg.c
+	./gui/gui_signal_x/gui_signal_scene_edit_switch_x.c
+	./gui/gui_signal_x/gui_signal_settings_illumination_state.c
+	./gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c
+	./gui/gui_signal_x/gui_signal_scene_add_switch_x.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c
@@ -406,7 +428,10 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
 	"cl_renderer/scene/scene_(un)select.c"
-	./cl_renderer/scene/scene_edit_param.c cl_renderer/scene/scene_set_x.c cl_renderer/scene/scene_find_x_by_x.c cl_renderer/scene/scene_func_x.c)
+	./cl_renderer/scene/scene_edit_param.c
+	./cl_renderer/scene/scene_set_x.c
+	./cl_renderer/scene/scene_find_x_by_x.c
+	./cl_renderer/scene/scene_func_x.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -443,23 +468,27 @@ set(SOURCE_CL_BUILDER
 	./cl_renderer/cl_builder/cl_builder_log.c
 	./cl_renderer/cl_builder/cl_builder_set_args.c)
 
+set(SOURCE_CL_RT_SETTINGS
+	cl_renderer/rt_settings/rt_settings_init.c)
+
 set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_new.c
 	./cl_renderer/cl_renderer/cl_renderer_delete.c
 	./cl_renderer/cl_renderer/cl_renderer_render.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_x.c
 	./cl_renderer/cl_renderer/cl_renderer_flag_x.c
-	./cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c
+	cl_renderer/rt_settings/rt_settings_init.c
 	./cl_renderer/cl_renderer/cl_renderer_load.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
-	./cl_renderer/cl_renderer/cl_renderer_object_move.c cl_renderer/cl_renderer/cl_renderer_switch_mod.c)
+	./cl_renderer/cl_renderer/cl_renderer_object_move.c
+	./cl_renderer/cl_renderer/cl_renderer_switch_mod.c)
 
 set(SOURCE_RENDERER
+	${SOURCE_F2}
+	${SOURCE_F4}
 	${SOURCE_JSON}
 	${SOURCE_TEXTURE}
 	${SOURCE_DISRUPTION_X}
-	${SOURCE_F2}
-	${SOURCE_F4}
 	${SOURCE_OBJECT}
 	${SOURCE_OBJECT_X}
 	${SOURCE_SCENE}
@@ -467,6 +496,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_PROGRAM}
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
+	${SOURCE_CL_RT_SETTINGS}
 	${SOURCE_CL_RENDERER_})
 
 add_executable(rt

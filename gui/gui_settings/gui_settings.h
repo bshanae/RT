@@ -2,7 +2,7 @@
 # define GUI_SETTINGS_H
 
 # include "rt_parameters.h"
-# include "cl_renderer_settings.h"
+# include "../../cl_renderer/rt_settings/rt_settings.h"
 
 # include "libft_standart.h"
 # include "error_framework.h"
@@ -33,10 +33,10 @@ t_gui_settings		*gui_settings_new(GtkBuilder *builder);
 void 				gui_settings_delete(t_gui_settings **settings);
 
 void 				gui_settings_show
-					(t_gui_settings *gui, t_cl_renderer_settings *settings);
+					(t_gui_settings *gui, t_rt_settings *settings);
 void 				gui_settings_reset
-					(t_gui_settings *gui, t_cl_renderer_settings *settings);
+					(t_gui_settings *gui, t_rt_settings *settings);
 void 				gui_settings_apply
-					(t_gui_settings *gui, t_cl_renderer_settings *settings);
+					(t_gui_settings *gui, t_rt_settings *settings);
 
 #endif

@@ -5,7 +5,7 @@ void					scene_set_id(t_scene *scene)
 	int 				i;
 
 	i = 0;
-	while (i < RT_CL_SCENE_CAPACITY)
+	while (i < RT_SCENE_CAPACITY)
 	{
 		scene->objects[i].id = i;
 		i++;

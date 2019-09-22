@@ -4,9 +4,9 @@
 
 typedef struct		s_scene
 {
-	t_object		objects[RT_CL_SCENE_CAPACITY];
+	t_object		objects[RT_SCENE_CAPACITY];
 	int				objects_length;
-	int				lights[RT_CL_SCENE_CAPACITY];
+	int				lights[RT_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
 	const uint		*not_used_in_kernel;
@@ -27,7 +27,7 @@ static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersect
 static int			scene_intersect_rm(
 					global t_scene *scene,
                     t_intersection *intersection,
-                    constant t_cl_renderer_settings *settings)
+                    constant t_rt_settings *settings)
 {
 	RT_F			temp_distance;
 	RT_F			current_distance;
@@ -60,7 +60,7 @@ static int			scene_intersect(
 					global t_scene *scene,
 					global t_camera *camera,
 					t_intersection *intersection,
-					constant t_cl_renderer_settings *settings)
+					constant t_rt_settings *settings)
 {
 	int				result;
 

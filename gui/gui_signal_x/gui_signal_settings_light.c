@@ -4,7 +4,7 @@ void						gui_signal_settings_light
 							(GtkWidget *widget, gpointer ptr)
 {
 	t_gui 					*gui;
-	t_cl_renderer_settings *settings;
+	t_rt_settings *settings;
 	int						state[2];
 
 	gui = (t_gui *) ptr;

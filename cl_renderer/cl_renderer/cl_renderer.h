@@ -12,7 +12,7 @@
 # include "cl_arg_list.h"
 # include "cl_builder.h"
 # include "cl_renderer_flag_x.h"
-# include "cl_renderer_settings.h"
+# include "../rt_settings/rt_settings.h"
 # include "json_parse.h"
 
 # include <stdlib.h>
@@ -24,7 +24,7 @@ typedef	struct 				s_cl_renderer_data
 	t_camera				*camera;
 	t_scene					*scene;
 	t_color					*image;
-	t_cl_renderer_settings	settings;
+	t_rt_settings	settings;
 	u_long					*rng_state;
 }							t_cl_renderer_data;
 

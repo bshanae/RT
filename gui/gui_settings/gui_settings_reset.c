@@ -1,7 +1,7 @@
 #include "gui_settings.h"
 
 void 				gui_settings_reset
-					(t_gui_settings *gui, t_cl_renderer_settings *settings)
+					(t_gui_settings *gui, t_rt_settings *settings)
 {
 	gui_entry_set_i(gui->pt_samples, settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, settings->sample_depth);

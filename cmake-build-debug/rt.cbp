@@ -71,7 +71,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_control"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_icon"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_icon"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
@@ -100,6 +100,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_arg_list"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_builder"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/rt_settings"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/texture"/>
@@ -151,7 +152,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_queue"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_entry"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_control"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_icon"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_icon"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_parser"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_camera"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui_object_x"/>
@@ -180,6 +181,7 @@
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_program"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_arg_list"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_builder"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/rt_settings"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/cl_renderer"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/json"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./cl_renderer/texture"/>
@@ -292,9 +294,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_switch_mod.c">
@@ -412,6 +411,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/object_x/object_torus.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/rt_settings/rt_settings_init.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/camera_point_check.c">

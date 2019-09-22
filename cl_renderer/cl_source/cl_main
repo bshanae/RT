@@ -7,7 +7,7 @@ kernel void			cl_main(
 					global t_scene *scene,
 					global t_color *image,
 					global RT_F4 *sample_store,
-					constant t_cl_renderer_settings *settings,
+					constant t_rt_settings *settings,
 					global ulong *rng_state)
 {
 	int				global_id;
@@ -15,7 +15,7 @@ kernel void			cl_main(
 	t_intersection	intersection;
 	int				filter_stereo;
 	RT_F4			radiance;
-	global RT_F4	*sample_store_mapped[RT_CL_SAMPLE_ARRAY_LENGTH];
+	global RT_F4	*sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH];
 
 	filter_stereo = camera->filter_stereo;
 	sample_store_map(sample_store, sample_store_mapped, camera);

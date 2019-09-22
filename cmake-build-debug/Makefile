@@ -960,33 +960,6 @@ cl_renderer/cl_renderer/cl_renderer_render.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_render.c.s
 
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.o: cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.o
-
-# target to build an object file
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o
-
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.i: cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.i
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.i
-
-# target to preprocess a source file
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.i
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.i
-
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s: cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s
-
-# target to generate assembly for a file
-cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
-.PHONY : cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.s
-
 cl_renderer/cl_renderer/cl_renderer_switch_mod.o: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
 
 .PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.o
@@ -2012,6 +1985,33 @@ cl_renderer/object_x/object_torus.s: cl_renderer/object_x/object_torus.c.s
 cl_renderer/object_x/object_torus.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.s
 .PHONY : cl_renderer/object_x/object_torus.c.s
+
+cl_renderer/rt_settings/rt_settings_init.o: cl_renderer/rt_settings/rt_settings_init.c.o
+
+.PHONY : cl_renderer/rt_settings/rt_settings_init.o
+
+# target to build an object file
+cl_renderer/rt_settings/rt_settings_init.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/rt_settings/rt_settings_init.c.o
+.PHONY : cl_renderer/rt_settings/rt_settings_init.c.o
+
+cl_renderer/rt_settings/rt_settings_init.i: cl_renderer/rt_settings/rt_settings_init.c.i
+
+.PHONY : cl_renderer/rt_settings/rt_settings_init.i
+
+# target to preprocess a source file
+cl_renderer/rt_settings/rt_settings_init.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/rt_settings/rt_settings_init.c.i
+.PHONY : cl_renderer/rt_settings/rt_settings_init.c.i
+
+cl_renderer/rt_settings/rt_settings_init.s: cl_renderer/rt_settings/rt_settings_init.c.s
+
+.PHONY : cl_renderer/rt_settings/rt_settings_init.s
+
+# target to generate assembly for a file
+cl_renderer/rt_settings/rt_settings_init.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/rt_settings/rt_settings_init.c.s
+.PHONY : cl_renderer/rt_settings/rt_settings_init.c.s
 
 cl_renderer/scene/camera_point_check.o: cl_renderer/scene/camera_point_check.c.o
 
@@ -6894,9 +6894,6 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.s"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.o"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.i"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_settinsgs_init.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.s"
@@ -7011,6 +7008,9 @@ help:
 	@echo "... cl_renderer/object_x/object_torus.o"
 	@echo "... cl_renderer/object_x/object_torus.i"
 	@echo "... cl_renderer/object_x/object_torus.s"
+	@echo "... cl_renderer/rt_settings/rt_settings_init.o"
+	@echo "... cl_renderer/rt_settings/rt_settings_init.i"
+	@echo "... cl_renderer/rt_settings/rt_settings_init.s"
 	@echo "... cl_renderer/scene/camera_point_check.o"
 	@echo "... cl_renderer/scene/camera_point_check.i"
 	@echo "... cl_renderer/scene/camera_point_check.s"

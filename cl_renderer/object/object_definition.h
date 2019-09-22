@@ -40,7 +40,7 @@ typedef struct		s_object
 	t_object_type	type;
 	int 			texture_id;
 	t_material		material;
-	char			data[RT_CL_OBJECT_DATA_SIZE];
+	char			data[RT_OBJECT_CAPACITY];
 	int 			is_visible;
 	int 			is_selected;
 }					t_object;

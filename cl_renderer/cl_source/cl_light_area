@@ -6,7 +6,7 @@ static RT_F4		light_area(
 					global t_scene *scene,
 					global t_camera *camera,
 					t_intersection *intersection_object,
-					constant t_cl_renderer_settings *settings,
+					constant t_rt_settings *settings,
 					global ulong *rng_state)
 {
 	const RT_F		default_transparence_shadow_ratio = 0.15;

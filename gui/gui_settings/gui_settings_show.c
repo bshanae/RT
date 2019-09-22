@@ -1,7 +1,7 @@
 #include "gui_settings.h"
 
 void 				gui_settings_show
-					(t_gui_settings *gui, t_cl_renderer_settings *settings)
+					(t_gui_settings *gui, t_rt_settings *settings)
 {
 	gui->tracing_block = rt_true;
 	gtk_toggle_button_set_active(gui->tracing_rt,

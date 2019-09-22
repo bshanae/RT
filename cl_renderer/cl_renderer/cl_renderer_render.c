@@ -37,7 +37,7 @@ static void			static_post_queue(t_cl_renderer *renderer)
 		renderer->data.settings.sample_count++;
 	else
 		renderer->data.settings.motion_blur_sample_count =
-			ft_min(renderer->data.settings.motion_blur_sample_count + 1, RT_CL_SAMPLE_ARRAY_LENGTH);
+			ft_min(renderer->data.settings.motion_blur_sample_count + 1, RT_SAMPLE_ARRAY_LENGTH);
 	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 	gtk_image_set_from_pixbuf(renderer->image->image,
 		renderer->image->gdk_buffer);
@@ -45,8 +45,13 @@ static void			static_post_queue(t_cl_renderer *renderer)
 
 void				cl_renderer_render(t_cl_renderer *renderer)
 {
+	t_rt_settings	*settings;
+
+	settings = &renderer->data.settings;
 #ifndef RT_OPEN_CL_DISABLED
 	static_pre_queue(renderer);
+	if (settings->sample_count >= settings->sample_limit)
+		return ;
 	static_queue(renderer);
 	static_post_queue(renderer);
 #endif

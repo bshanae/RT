@@ -4,7 +4,7 @@ static RT_F4					illumination(
  								global t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
- 								constant t_cl_renderer_settings *settings)
+ 								constant t_rt_settings *settings)
 {
 	t_object_sphere				sphere;
 	RT_F						x;
@@ -61,7 +61,7 @@ static RT_F4					illumination(
 				continue;
         }
 
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_CL_ILLUMINATION_POWER) * scene->objects[i].material.emission;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }
