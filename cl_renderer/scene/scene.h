@@ -23,6 +23,8 @@ typedef struct		s_scene
 t_scene				*scene_new(UINT_REF mod_ptr);
 void				scene_delete(t_scene **scene);
 
+void				scene_func_a(t_scene *scene, int i);
+
 t_object			*scene_find_object_by_id(t_scene *scene, int id);
 t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name);
 int 				scene_find_texture_by_name(t_scene *scene, CHAR_REF name);

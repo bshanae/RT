@@ -42,11 +42,12 @@ typedef enum						e_rt_tracing_mod
 # define RT_GUI_QUEUE_FREQUENCY		50
 # define RT_GUI_QUEUE_WAIT_LIMIT	2000.
 
-# define RT_CL_PROGRAM_INIT			128
-# define RT_CL_ARGS_CAPACITY		16
+# define RT_PROGRAM_INIT			128
+# define RT_ARGS_CAPACITY			16
 
 # define RT_CL_OBJECT_DATA_SIZE		64
 # define RT_CL_SCENE_CAPACITY		32
+# define RT_OBJECT_EMPTY			"None"
 
 # define RT_NAME_SIZE				32
 

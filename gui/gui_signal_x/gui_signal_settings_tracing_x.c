@@ -7,12 +7,12 @@ void 				gui_signal_settings_tracing_rt
 	gboolean		state;
 
 	gui = (t_gui *)ptr;
+	if (gui->settings->tracing_block == rt_true)
+		return ;
+	gui->settings->tracing_block = rt_true;
 	state = gtk_toggle_button_get_active(gui->settings->tracing_rt);
-	g_signal_handlers_block_by_func(G_OBJECT(gui->settings->tracing_rm),
-		gui_signal_settings_tracing_rm, ptr);
 	gtk_toggle_button_set_active(gui->settings->tracing_rm, !state);
-	g_signal_handlers_unblock_by_func(G_OBJECT(gui->settings->tracing_rm),
-		gui_signal_settings_tracing_rm, ptr);
+	gui->settings->tracing_block = rt_false;
 	gtk_stack_set_visible_child_name(gui->settings->stack, state ? "rt" : "rm");
 	cl_renderer_change_tracing_mod(gui->renderer, state ?
 		rt_tracing_mod_rt : rt_tracing_mod_rm);
@@ -27,12 +27,12 @@ void 				gui_signal_settings_tracing_rm
 	gboolean		state;
 
 	gui = (t_gui *)ptr;
+	if (gui->settings->tracing_block == rt_true)
+		return ;
+	gui->settings->tracing_block = rt_true;
 	state = gtk_toggle_button_get_active(gui->settings->tracing_rt);
-	g_signal_handlers_block_by_func(G_OBJECT(gui->settings->tracing_rt),
-		gui_signal_settings_tracing_rt, ptr);
 	gtk_toggle_button_set_active(gui->settings->tracing_rt, !state);
-	g_signal_handlers_unblock_by_func(G_OBJECT(gui->settings->tracing_rt),
-		gui_signal_settings_tracing_rt, ptr);
+	gui->settings->tracing_block = rt_false;
 	gtk_stack_set_visible_child_name(gui->settings->stack, state ? "rm" : "rt");
 	cl_renderer_change_tracing_mod(gui->renderer, state ?
 		rt_tracing_mod_rm : rt_tracing_mod_rt);

@@ -54,6 +54,8 @@ static RT_F4					illumination(
 			shadow.ray.origin = sphere.position;
 			shadow.ray.direction = normalize(camera->position - sphere.position);
 
+			shadow.ray.origin += shadow.ray.direction;
+
 			intersection_reset(&shadow);
 			if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
 				continue;

@@ -8,7 +8,7 @@ int					cl_arg_list_push
 	int 			error;
 
 #ifndef RT_OPEN_CL_DISABLED
-	if (list->length == RT_CL_ARGS_CAPACITY)
+	if (list->length == RT_ARGS_CAPACITY)
 		return (-1);
 	i = list->length++;
 	list->array[i].host = ptr;

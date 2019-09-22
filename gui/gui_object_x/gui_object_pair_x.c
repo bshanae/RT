@@ -18,11 +18,6 @@ static t_rt_bool			static_find_in_list
 {
 	int 					temp;
 
-	if (id < 0)
-	{
-		rt_assert(0, "GUI Pair : Invalid id (id = %i)", id);
-		return (rt_false);
-	}
 	if (!gtk_tree_model_get_iter_first(model, iter))
 	{
 		rt_assert(0, "GUI Pair : List is empty");

@@ -9,6 +9,7 @@ t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 	new = rt_malloc(sizeof(t_gui_settings));
 	ft_strcpy(init.stack, "settings_control");
 	new->control = gui_control_init(&init, builder);
+	new->tracing_block = rt_false;
 	new->tracing_rt = RT_GUI_GET(builder, "settings_tracing_rt");
 	new->tracing_rm = RT_GUI_GET(builder, "settings_tracing_rm");
 	new->stack = RT_GUI_GET(builder, "settings_stack");

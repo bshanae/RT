@@ -11,7 +11,7 @@
 
 typedef struct 			s_cl_arg_list
 {
-	t_cl_arg			array[RT_CL_ARGS_CAPACITY];
+	t_cl_arg			array[RT_ARGS_CAPACITY];
 	int 				length;
 	cl_context 			context;
 	cl_command_queue 	queue;

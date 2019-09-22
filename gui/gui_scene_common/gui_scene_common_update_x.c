@@ -24,6 +24,7 @@ void				gui_scene_common_update_limited
 	GtkTreeModel	*model;
 	int 			i;
 	GtkTreeIter		iter_full;
+	t_object		temp;
 
 	model = GTK_TREE_MODEL(gui->full);
 	if (*scene->current_mod == RT_OBJECT_RM)
@@ -32,6 +33,10 @@ void				gui_scene_common_update_limited
 		return ;
 	gtk_list_store_clear(gui->limited_main);
 	gtk_list_store_clear(gui->limited_limit);
+	ft_strcpy(temp.name, "None");
+	temp.id = -1;
+	gui_scene_common_add_to_list(gui->limited_main, &temp);
+	gui_scene_common_add_to_list(gui->limited_limit, &temp);
 	while (1)
 	{
 		gtk_tree_model_get(model, &iter_full, gui_objects_column_id, &i, -1);
@@ -50,6 +55,7 @@ void 				gui_scene_common_update_csg
 	GtkTreeModel	*model;
 	int 			i;
 	GtkTreeIter		iter_full;
+	t_object		temp;
 
 	model = GTK_TREE_MODEL(gui->full);
 	if (*scene->current_mod == RT_OBJECT_RT)
@@ -57,6 +63,9 @@ void 				gui_scene_common_update_csg
 	if (!gtk_tree_model_get_iter_first(model, &iter_full))
 		return ;
 	gtk_list_store_clear(gui->csg);
+	ft_strcpy(temp.name, "None");
+	temp.id = -1;
+	gui_scene_common_add_to_list(gui->csg, &temp);
 	while (1)
 	{
 		gtk_tree_model_get(model, &iter_full, gui_objects_column_id, &i, -1);

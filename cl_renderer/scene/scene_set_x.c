@@ -38,31 +38,10 @@ void					scene_set_name(t_scene *scene)
 void					scene_set_pair(t_scene *scene)
 {
 	int 				i;
-	t_object_pair		*pair;
-	t_object			*temp_object[2];
 
 	i = 0;
 	while (i < scene->objects_length)
-	{
-		if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
-		{
-			pair = (t_object_pair *)scene->objects[i].data;
-			pair->first_id = -1;
-			pair->second_id = -1;
-			temp_object[0] = scene_find_object_by_name(scene, pair->first_name);
-			temp_object[1] = scene_find_object_by_name(scene, pair->second_name);
-			if (!temp_object[0] || !temp_object[1])
-				rt_raise_warning("Scene : Object(s) not found for pair");
-			else if (temp_object[0]->id == temp_object[1]->id)
-				rt_raise_warning("Scene : Pair has invalid content");
-			else
-			{
-				pair->first_id = temp_object[0]->id;
-				pair->second_id = temp_object[1]->id;
-			}
-		}
-		i++;
-	}
+		scene_func_a(scene, i++);
 }
 
 void					scene_set_light(t_scene *scene)

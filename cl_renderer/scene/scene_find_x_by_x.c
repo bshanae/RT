@@ -14,6 +14,8 @@ t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name)
 {
 	int 			i;
 
+	if (!ft_strcmp(name, RT_OBJECT_EMPTY))
+		return (NULL);
 	i = 0;
 	while (i < scene->objects_length)
 	{

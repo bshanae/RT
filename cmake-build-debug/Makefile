@@ -2175,6 +2175,33 @@ cl_renderer/scene/scene_find_x_by_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_find_x_by_x.c.s
 .PHONY : cl_renderer/scene/scene_find_x_by_x.c.s
 
+cl_renderer/scene/scene_func_x.o: cl_renderer/scene/scene_func_x.c.o
+
+.PHONY : cl_renderer/scene/scene_func_x.o
+
+# target to build an object file
+cl_renderer/scene/scene_func_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_func_x.c.o
+.PHONY : cl_renderer/scene/scene_func_x.c.o
+
+cl_renderer/scene/scene_func_x.i: cl_renderer/scene/scene_func_x.c.i
+
+.PHONY : cl_renderer/scene/scene_func_x.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_func_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_func_x.c.i
+.PHONY : cl_renderer/scene/scene_func_x.c.i
+
+cl_renderer/scene/scene_func_x.s: cl_renderer/scene/scene_func_x.c.s
+
+.PHONY : cl_renderer/scene/scene_func_x.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_func_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_func_x.c.s
+.PHONY : cl_renderer/scene/scene_func_x.c.s
+
 cl_renderer/scene/scene_get_space.o: cl_renderer/scene/scene_get_space.c.o
 
 .PHONY : cl_renderer/scene/scene_get_space.o
@@ -7002,6 +7029,9 @@ help:
 	@echo "... cl_renderer/scene/scene_find_x_by_x.o"
 	@echo "... cl_renderer/scene/scene_find_x_by_x.i"
 	@echo "... cl_renderer/scene/scene_find_x_by_x.s"
+	@echo "... cl_renderer/scene/scene_func_x.o"
+	@echo "... cl_renderer/scene/scene_func_x.i"
+	@echo "... cl_renderer/scene/scene_func_x.s"
 	@echo "... cl_renderer/scene/scene_get_space.o"
 	@echo "... cl_renderer/scene/scene_get_space.i"
 	@echo "... cl_renderer/scene/scene_get_space.s"

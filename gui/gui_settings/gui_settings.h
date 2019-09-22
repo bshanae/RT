@@ -14,6 +14,7 @@
 typedef struct 		s_gui_setting
 {
 	t_gui_control	control;
+	t_rt_bool		tracing_block;
 	GtkToggleButton	*tracing_rt;
 	GtkToggleButton	*tracing_rm;
 	GtkStack		*stack;
