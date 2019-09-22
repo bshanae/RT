@@ -64,6 +64,8 @@ static void 		static_init_d(u_int *data)
 {
 	data[object_type_sphere] |= RT_OBJECT_HAS_TEXTURE;
 	data[object_type_plane] |= RT_OBJECT_HAS_TEXTURE;
+	data[object_type_cone] |= RT_OBJECT_HAS_TEXTURE;
+	data[object_type_cylinder] |= RT_OBJECT_HAS_TEXTURE;
 }
 
 u_int 				object_flag_get(t_object *object)

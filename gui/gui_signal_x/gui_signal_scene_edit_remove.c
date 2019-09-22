@@ -14,10 +14,10 @@ void					gui_signal_scene_edit_remove
 	if (response != GTK_RESPONSE_YES)
 		return ;
 	if (gtk_list_store_iter_is_valid(edit->common->full, &edit->iter))
-	{
 		scene_object_remove(gui->renderer->data.scene, edit->current_id);
-		gtk_list_store_remove(edit->common->full, &edit->iter);
-	}
+	else
+		return ;
+	gui_scene_common_update_all(gui->scene->common, gui->renderer->data.scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_push(gui->queue);
