@@ -6711,6 +6711,33 @@ gui/gui_signal_x/gui_signal_settings_light.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_light.c.s
 .PHONY : gui/gui_signal_x/gui_signal_settings_light.c.s
 
+gui/gui_signal_x/gui_signal_settings_motion_blur.o: gui/gui_signal_x/gui_signal_settings_motion_blur.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_settings_motion_blur.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.o
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.c.o
+
+gui/gui_signal_x/gui_signal_settings_motion_blur.i: gui/gui_signal_x/gui_signal_settings_motion_blur.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_settings_motion_blur.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.i
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.c.i
+
+gui/gui_signal_x/gui_signal_settings_motion_blur.s: gui/gui_signal_x/gui_signal_settings_motion_blur.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_settings_motion_blur.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.s
+.PHONY : gui/gui_signal_x/gui_signal_settings_motion_blur.c.s
+
 gui/gui_signal_x/gui_signal_settings_reset.o: gui/gui_signal_x/gui_signal_settings_reset.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_settings_reset.o
@@ -7560,6 +7587,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_light.s"
+	@echo "... gui/gui_signal_x/gui_signal_settings_motion_blur.o"
+	@echo "... gui/gui_signal_x/gui_signal_settings_motion_blur.i"
+	@echo "... gui/gui_signal_x/gui_signal_settings_motion_blur.s"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.o"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.i"
 	@echo "... gui/gui_signal_x/gui_signal_settings_reset.s"

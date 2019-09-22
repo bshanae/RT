@@ -116,6 +116,8 @@ void 				gui_signal_settings_tracing_rt
 					(GTK_SIGNAL_SIGNATURE);
 void 				gui_signal_settings_tracing_rm
 					(GTK_SIGNAL_SIGNATURE);
+gboolean			gui_signal_settings_motion_blur
+					(GtkWidget *widget, gboolean state, gpointer ptr);
 
 gboolean 			gui_signal_image_click
 					(GtkWidget *widget, GdkEventButton *event, gpointer ptr);

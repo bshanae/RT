@@ -330,7 +330,7 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_edit_switch_x.c
 	./gui/gui_signal_x/gui_signal_settings_illumination_state.c
 	./gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c
-	./gui/gui_signal_x/gui_signal_scene_add_switch_x.c)
+	./gui/gui_signal_x/gui_signal_scene_add_switch_x.c gui/gui_signal_x/gui_signal_settings_motion_blur.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c

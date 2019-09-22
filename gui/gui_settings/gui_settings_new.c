@@ -25,5 +25,6 @@ t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 	new->pt_samples_number = RT_GUI_GET(builder, "settings_pt_samples_number");
 	new->pt_samples_limit = RT_GUI_GET(builder, "settings_pt_samples_limit");
 	new->pt_depth = RT_GUI_GET(builder, "settings_pt_depth");
+	new->motion_blur = RT_GUI_GET(builder, "settings_motion_blur");
 	return (new);
 }

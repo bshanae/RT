@@ -21,5 +21,6 @@ void 				gui_settings_show
 	gui_entry_set_i(gui->pt_samples_number, settings->sample_count);
 	gui_entry_set_i(gui->pt_samples_limit, settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, settings->sample_depth);
+	gtk_switch_set_active(gui->motion_blur, settings->motion_blur);
 	gui_control_hide(&gui->control);
 }

@@ -930,6 +930,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_light.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_motion_blur.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_settings_reset.c">
 			<Option target="rt"/>
 		</Unit>

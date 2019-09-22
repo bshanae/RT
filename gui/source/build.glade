@@ -648,6 +648,49 @@
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="width_request">153</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <property name="label" translatable="yes">Motion blur</property>
+                                <attributes>
+                                  <attribute name="style" value="italic"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkSwitch" id="settings_motion_blur">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="halign">center</property>
+                                <signal name="state-set" handler="gui_signal_settings_motion_blur" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">False</property>
+                                <property name="pack_type">end</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">11</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_bottom">2</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkBox">
@@ -785,7 +828,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">11</property>
+                            <property name="position">12</property>
                           </packing>
                         </child>
                         <child>
@@ -800,7 +843,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">13</property>
+                            <property name="position">14</property>
                           </packing>
                         </child>
                         <child>
@@ -816,7 +859,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">14</property>
+                            <property name="position">15</property>
                           </packing>
                         </child>
                         <child>
@@ -882,7 +925,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">20</property>
+                            <property name="position">21</property>
                           </packing>
                         </child>
                       </object>

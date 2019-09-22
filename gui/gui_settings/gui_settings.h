@@ -2,12 +2,12 @@
 # define GUI_SETTINGS_H
 
 # include "rt_parameters.h"
-# include "../../cl_renderer/rt_settings/rt_settings.h"
 
 # include "libft_standart.h"
 # include "error_framework.h"
 # include "gui_entry.h"
 # include "gui_control.h"
+# include "rt_settings.h"
 
 # include <gtk/gtk.h>
 
@@ -28,6 +28,7 @@ typedef struct 		s_gui_setting
 	GtkEntry		*pt_samples_number;
 	GtkEntry		*pt_samples_limit;
 	GtkEntry		*pt_depth;
+	GtkSwitch		*motion_blur;
 }					t_gui_settings;
 
 t_gui_settings		*gui_settings_new(GtkBuilder *builder);

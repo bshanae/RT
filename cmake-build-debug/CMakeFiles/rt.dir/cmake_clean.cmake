@@ -151,6 +151,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_illumination_state.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_scene_add_switch_x.c.o"
+  "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_edit.c.o"
   "CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_scene_add.c.o"
