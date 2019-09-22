@@ -80,6 +80,14 @@
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>
+  <object class="GtkListStore" id="scene_background_list">
+    <columns>
+      <!-- column-name background_id -->
+      <column type="gint"/>
+      <!-- column-name background_name -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
   <object class="GtkListStore" id="scene_csg_list">
     <columns>
       <!-- column-name object_id -->
@@ -124,10 +132,10 @@
   </object>
   <object class="GtkListStore" id="scene_texture_list">
     <columns>
-      <!-- column-name texture_name -->
-      <column type="gchararray"/>
       <!-- column-name texture_id -->
       <column type="gint"/>
+      <!-- column-name texture_name -->
+      <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkWindow" id="window">
@@ -1020,6 +1028,45 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_bottom">2</property>
+                            <property name="label" translatable="yes">Background</property>
+                            <attributes>
+                              <attribute name="weight" value="heavy"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBox" id="scene_edit_background_combo">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="model">scene_background_list</property>
+                            <property name="has_entry">True</property>
+                            <property name="entry_text_column">1</property>
+                            <signal name="changed" handler="gui_signal_scene_edit_combo_changed" swapped="no"/>
+                            <child internal-child="entry">
+                              <object class="GtkEntry">
+                                <property name="can_focus">False</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_bottom">2</property>
                             <property name="label" translatable="yes">Scene</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -1028,7 +1075,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">0</property>
+                            <property name="position">3</property>
                           </packing>
                         </child>
                         <child>
@@ -1140,7 +1187,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">False</property>
-                            <property name="position">1</property>
+                            <property name="position">4</property>
                           </packing>
                         </child>
                         <child>
@@ -4167,78 +4214,77 @@
                                 <property name="position">3</property>
                               </packing>
                             </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkStack" id="scene_edit_control">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="vhomogeneous">False</property>
                             <child>
-                              <object class="GtkStack" id="scene_edit_control">
+                              <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="vhomogeneous">False</property>
+                                <property name="margin_bottom">2</property>
                                 <child>
-                                  <object class="GtkBox">
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">Reset</property>
                                     <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_bottom">2</property>
-                                    <child>
-                                      <object class="GtkButton">
-                                        <property name="label" translatable="yes">Reset</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">True</property>
-                                        <property name="margin_right">1</property>
-                                        <signal name="clicked" handler="gui_signal_scene_edit_reset" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkButton">
-                                        <property name="label" translatable="yes">Apply</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">True</property>
-                                        <signal name="clicked" handler="gui_signal_scene_edit_apply" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <signal name="clicked" handler="gui_signal_scene_edit_reset" swapped="no"/>
                                   </object>
                                   <packing>
-                                    <property name="name">page_show</property>
-                                    <property name="title" translatable="yes">page0</property>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkBox">
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">Apply</property>
                                     <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="orientation">vertical</property>
-                                    <child>
-                                      <placeholder/>
-                                    </child>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <signal name="clicked" handler="gui_signal_scene_edit_apply" swapped="no"/>
                                   </object>
                                   <packing>
-                                    <property name="name">page_hide</property>
-                                    <property name="title" translatable="yes">page1</property>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
                               </object>
                               <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">6</property>
+                                <property name="name">page_show</property>
+                                <property name="title" translatable="yes">page0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <child>
+                                  <placeholder/>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="name">page_hide</property>
+                                <property name="title" translatable="yes">page1</property>
+                                <property name="position">1</property>
                               </packing>
                             </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">2</property>
+                            <property name="position">6</property>
                           </packing>
                         </child>
                       </object>
@@ -5056,7 +5102,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="gui_signal_camera_screen_success_close" swapped="no"/>
+                <signal name="clicked" handler="gui_signal_camera_screen_dialog_response" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -5162,10 +5208,10 @@
   </object>
   <object class="GtkListStore" id="scene_type_list">
     <columns>
-      <!-- column-name type_name -->
-      <column type="gchararray"/>
       <!-- column-name type_id -->
       <column type="gint"/>
+      <!-- column-name type_name -->
+      <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkEntryCompletion" id="scene_add_type_completion">

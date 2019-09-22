@@ -98,7 +98,7 @@ static RT_F4				radiance_trace(
 		{
 			if (scene->background == rt_background_none)
 				;
-			else if (scene->background == rt_background_color)
+			else if (scene->background == rt_background_one)
 				radiance += scene->background_color * mask;
 			else if (scene->background == rt_background_interpolation)
 			{

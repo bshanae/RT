@@ -87,6 +87,7 @@ include_directories(
 	./gui/gui_color/
 	./gui/gui_material/
 	./gui/gui_scene_common/
+	./gui/gui_scene_background/
 	./gui/gui_scene_edit/
 	./gui/gui_scene_add/
 	./gui/object_add/
@@ -255,7 +256,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
 	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
 	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
-	./gui/gui_scene_edit/gui_scene_edit_select.c)
+	./gui/gui_scene_edit/gui_scene_edit_select.c gui/gui_scene_edit/gui_scene_edit_background_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -330,7 +331,8 @@ set(SOURCE_GUI_SIGNAL_X
 	./gui/gui_signal_x/gui_signal_scene_edit_switch_x.c
 	./gui/gui_signal_x/gui_signal_settings_illumination_state.c
 	./gui/gui_signal_x/gui_signal_scene_edit_scale_changed.c
-	./gui/gui_signal_x/gui_signal_scene_add_switch_x.c gui/gui_signal_x/gui_signal_settings_motion_blur.c)
+	./gui/gui_signal_x/gui_signal_scene_add_switch_x.c
+	./gui/gui_signal_x/gui_signal_settings_motion_blur.c)
 
 set(SOURCE_GUI_SIGNAL_CONNECT_X
 	./gui/gui_signal_connect_x/gui_signal_connect_all.c
@@ -431,7 +433,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_edit_param.c
 	./cl_renderer/scene/scene_set_x.c
 	./cl_renderer/scene/scene_find_x_by_x.c
-	./cl_renderer/scene/scene_func_x.c)
+	./cl_renderer/scene/scene_func_x.c cl_renderer/scene/rt_background_translate.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)

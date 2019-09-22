@@ -14,9 +14,9 @@
 typedef struct 					s_gui_scene_edit
 {
 	t_gui_scene_common			*common;
+	GtkComboBox					*background_combo;
 	GtkStack					*stack;
 	GtkBox						*info;
-	GtkTreeView					*tree;
 	GtkTreeSelection			*selection;
 	int 						current_id;
 	GtkTreeIter					iter;
@@ -84,6 +84,11 @@ void 							gui_scene_edit_init_csg
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
 void 							gui_scene_edit_init_material
 								(t_gui_scene_edit *edit, GtkBuilder *builder);
+
+void 							gui_scene_edit_background_get
+								(t_gui_scene_edit *edit, t_scene *scene);
+void 							gui_scene_edit_background_set
+								(t_gui_scene_edit *edit, t_scene *scene);
 
 void 							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);

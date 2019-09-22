@@ -64,6 +64,7 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_material"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_common"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_background"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/object_add"/>
@@ -141,6 +142,7 @@
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_color"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_material"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_common"/>
+					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_background"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_edit"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/gui_scene_add"/>
 					<Add directory="/home/vladimir/workspace/21_ray_tracer/./gui/object_add"/>
@@ -409,6 +411,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/camera_point_check.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/rt_background_translate.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_(un)select.c">
@@ -733,6 +738,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_background_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_delete.c">

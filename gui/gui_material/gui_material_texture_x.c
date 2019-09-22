@@ -22,13 +22,10 @@ void 					gui_material_texture_get
 
 	model = GTK_TREE_MODEL(material->texture_list);
 	if (!gtk_tree_model_get_iter_first(model, &iter))
-	{
-		printf("hi\n");
 		return ;
-	}
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter, gui_textures_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter, gui_list_column_id, &i, -1);
 		if (i == id)
 		{
 			gtk_combo_box_set_active_iter(material->texture_combo, &iter);
@@ -47,5 +44,5 @@ void 					gui_material_texture_set
 
 	gtk_combo_box_get_active_iter(material->texture_combo, &iter);
 	gtk_tree_model_get(GTK_TREE_MODEL(material->texture_list),
-		&iter, gui_textures_column_id, id, -1);
+		&iter, gui_list_column_id, id, -1);
 }

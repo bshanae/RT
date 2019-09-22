@@ -39,7 +39,7 @@ void				gui_scene_common_update_limited
 	gui_scene_common_add_to_list(gui->limited_limit, &temp);
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_objects_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_LIMITABLE)
 			gui_scene_common_add_to_list(gui->limited_main, scene->objects + i);
 		else if (object_flag_get(scene->objects + i) & RT_OBJECT_LIMITING)
@@ -68,7 +68,7 @@ void 				gui_scene_common_update_csg
 	gui_scene_common_add_to_list(gui->csg, &temp);
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_objects_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
 		if (object_flag_get(scene->objects + i) & RT_OBJECT_CSG)
 			gui_scene_common_add_to_list(gui->csg, scene->objects + i);
 		i++;
@@ -93,8 +93,8 @@ void 				gui_scene_common_update_types
 		{
 			gtk_list_store_append(gui->types, &iter_list);
 			gtk_list_store_set(gui->types, &iter_list,
-				gui_types_column_id, iter_type,
-				gui_types_column_name, object_translate(iter_type), -1);
+				gui_list_column_id, iter_type,
+				gui_list_column_name, object_translate(iter_type), -1);
 		}
 		iter_type++;
 	}
@@ -109,19 +109,37 @@ void 				gui_scene_common_update_textures
 	gtk_list_store_clear(gui->textures);
 	gtk_list_store_append(gui->textures, &iter_list);
 	gtk_list_store_set(gui->textures, &iter_list,
-		gui_textures_column_id, -1,
-		gui_textures_column_name, "None", -1);
+		gui_list_column_id, -1,
+		gui_list_column_name, "None", -1);
 	i = 0;
 	while (i <= scene->texture.textures_number)
 	{
 		gtk_list_store_append(gui->textures, &iter_list);
 		gtk_list_store_set(gui->textures, &iter_list,
-			gui_textures_column_id, i,
-			gui_textures_column_name, scene->texture.name[i], -1);
+			gui_list_column_id, i,
+			gui_list_column_name, scene->texture.name[i], -1);
 		i++;
 	}
 }
 
+void 				gui_scene_common_update_background
+					(t_gui_scene_common *gui)
+{
+	t_rt_background	i;
+	GtkTreeIter		iter;
+
+	i = 0;
+	gtk_list_store_clear(gui->full);
+	while (i < rt_background_end)
+	{
+		gtk_list_store_append(gui->background, &iter);
+		gtk_list_store_set(gui->background, &iter,
+			gui_list_column_id, i,
+			gui_list_column_name, rt_background_translate(i), -1);
+		i++;
+
+	}
+}
 
 void 				gui_scene_common_update_all
 					(t_gui_scene_common *gui, t_scene *scene)

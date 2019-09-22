@@ -9,7 +9,7 @@ void 				gui_scene_edit_apply
 	rt_assert_critical(edit->common != NULL, "GUI : Editor list ptr is NULL");
 	scene_object_rename(scene, object->id, gui_entry_get_str(edit->name));
 	gtk_list_store_set(edit->common->full, &edit->iter,
-		gui_objects_column_name, object->name, -1);
+		gui_list_column_name, object->name, -1);
 	if (object->type == object_type_light_point)
 		gui_object_light_point_set(&edit->light_point, object);
 	else if (object->type == object_type_light_direct)

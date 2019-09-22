@@ -12,9 +12,12 @@
 typedef enum 		e_rt_background
 {
 	rt_background_none,
-	rt_background_color,
-	rt_background_interpolation
+	rt_background_one,
+	rt_background_interpolation,
+	rt_background_end
 }					t_rt_background;
+
+CHAR_REF			rt_background_translate(t_rt_background i);
 
 typedef struct		s_scene
 {

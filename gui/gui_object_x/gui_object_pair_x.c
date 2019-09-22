@@ -25,7 +25,7 @@ static t_rt_bool			static_find_in_list
 	}
 	while (1)
 	{
-		gtk_tree_model_get(model, iter, gui_objects_column_id, &temp, -1);
+		gtk_tree_model_get(model, iter, gui_list_column_id, &temp, -1);
 		if (temp == id)
 			return (rt_true);
 		if (!gtk_tree_model_iter_next(model, iter))
@@ -73,9 +73,9 @@ void 						gui_object_pair_set
 	}
 	pair = (t_object_pair *)object->data;
 	gtk_tree_model_get(GTK_TREE_MODEL(gui->first_list), iter + 0,
-		gui_objects_column_name, str + 0, -1);
+		gui_list_column_name, str + 0, -1);
 	gtk_tree_model_get(GTK_TREE_MODEL(gui->second_list), iter + 1,
-		gui_objects_column_name, str + 1, -1);
+		gui_list_column_name, str + 1, -1);
 	pair->first_id = -1;
 	pair->second_id = -1;
 	ft_strcpy(pair->first_name, str[0]);

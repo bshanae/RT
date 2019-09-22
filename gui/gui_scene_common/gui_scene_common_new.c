@@ -11,6 +11,8 @@ t_gui_scene_common		*gui_scene_common_new(GtkBuilder *builder)
 	new->csg = RT_GUI_GET(builder, "scene_csg_list");
 	new->types = RT_GUI_GET(builder, "scene_type_list");
 	new->textures = RT_GUI_GET(builder, "scene_texture_list");
+	new->background = RT_GUI_GET(builder, "scene_background_list");
 	new->reset_generator = rt_false;
+	gui_scene_common_update_background(new);
 	return (new);
 }

@@ -2040,6 +2040,33 @@ cl_renderer/scene/camera_point_check.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.s
 .PHONY : cl_renderer/scene/camera_point_check.c.s
 
+cl_renderer/scene/rt_background_translate.o: cl_renderer/scene/rt_background_translate.c.o
+
+.PHONY : cl_renderer/scene/rt_background_translate.o
+
+# target to build an object file
+cl_renderer/scene/rt_background_translate.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.o
+.PHONY : cl_renderer/scene/rt_background_translate.c.o
+
+cl_renderer/scene/rt_background_translate.i: cl_renderer/scene/rt_background_translate.c.i
+
+.PHONY : cl_renderer/scene/rt_background_translate.i
+
+# target to preprocess a source file
+cl_renderer/scene/rt_background_translate.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.i
+.PHONY : cl_renderer/scene/rt_background_translate.c.i
+
+cl_renderer/scene/rt_background_translate.s: cl_renderer/scene/rt_background_translate.c.s
+
+.PHONY : cl_renderer/scene/rt_background_translate.s
+
+# target to generate assembly for a file
+cl_renderer/scene/rt_background_translate.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.s
+.PHONY : cl_renderer/scene/rt_background_translate.c.s
+
 cl_renderer/scene/scene_(un)select.o: cl_renderer/scene/scene_(un)select.c.o
 
 .PHONY : cl_renderer/scene/scene_(un)select.o
@@ -4956,6 +4983,33 @@ gui/gui_scene_edit/gui_scene_edit_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_apply.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_apply.c.s
 
+gui/gui_scene_edit/gui_scene_edit_background_x.o: gui/gui_scene_edit/gui_scene_edit_background_x.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_background_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.c.o
+
+gui/gui_scene_edit/gui_scene_edit_background_x.i: gui/gui_scene_edit/gui_scene_edit_background_x.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_background_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.i
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.c.i
+
+gui/gui_scene_edit/gui_scene_edit_background_x.s: gui/gui_scene_edit/gui_scene_edit_background_x.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_background_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.s
+.PHONY : gui/gui_scene_edit/gui_scene_edit_background_x.c.s
+
 gui/gui_scene_edit/gui_scene_edit_delete.o: gui/gui_scene_edit/gui_scene_edit_delete.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_delete.o
@@ -7068,6 +7122,9 @@ help:
 	@echo "... cl_renderer/scene/camera_point_check.o"
 	@echo "... cl_renderer/scene/camera_point_check.i"
 	@echo "... cl_renderer/scene/camera_point_check.s"
+	@echo "... cl_renderer/scene/rt_background_translate.o"
+	@echo "... cl_renderer/scene/rt_background_translate.i"
+	@echo "... cl_renderer/scene/rt_background_translate.s"
 	@echo "... cl_renderer/scene/scene_(un)select.o"
 	@echo "... cl_renderer/scene/scene_(un)select.i"
 	@echo "... cl_renderer/scene/scene_(un)select.s"
@@ -7392,6 +7449,9 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_background_x.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_background_x.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_background_x.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_delete.s"

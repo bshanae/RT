@@ -17,7 +17,7 @@ void 				gui_signal_scene_add_type_select
 		return ;
 	}
 	gtk_tree_model_get(GTK_TREE_MODEL(add->common->types), &iter,
-		gui_types_column_id, &add->current_type, -1);
+		gui_list_column_id, &add->current_type, -1);
 	gtk_stack_set_visible_child_name(add->stack,
 		object_translate(add->current_type));
 	add->temp_object.type = add->current_type;
