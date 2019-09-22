@@ -18,7 +18,8 @@ void 				gui_settings_show
 	gtk_toggle_button_set_active(gui->light_area, settings->light_area);
 	gtk_switch_set_active(gui->illumination_state, settings->illumination);
 	gui_entry_set_f(gui->illumination_value, settings->illumination_value);
-	gui_entry_set_i(gui->pt_samples, settings->sample_limit);
+	gui_entry_set_i(gui->pt_samples_number, settings->sample_count);
+	gui_entry_set_i(gui->pt_samples_limit, settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, settings->sample_depth);
 	gui_control_hide(&gui->control);
 }

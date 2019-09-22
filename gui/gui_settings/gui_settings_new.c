@@ -22,7 +22,8 @@ t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 		RT_GUI_GET(builder, "settings_illumination_value");
 	new->light_basic = RT_GUI_GET(builder, "settings_light_basic");
 	new->light_area = RT_GUI_GET(builder, "settings_light_area");
-	new->pt_samples = RT_GUI_GET(builder, "settings_pt_samples");
+	new->pt_samples_number = RT_GUI_GET(builder, "settings_pt_samples_number");
+	new->pt_samples_limit = RT_GUI_GET(builder, "settings_pt_samples_limit");
 	new->pt_depth = RT_GUI_GET(builder, "settings_pt_depth");
 	return (new);
 }
