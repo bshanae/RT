@@ -9,6 +9,13 @@
 
 # include <stdlib.h>
 
+typedef enum 		e_rt_background
+{
+	rt_background_none,
+	rt_background_color,
+	rt_background_interpolation
+}					t_rt_background;
+
 typedef struct		s_scene
 {
 	t_object		objects[RT_SCENE_CAPACITY];
@@ -18,6 +25,8 @@ typedef struct		s_scene
 	t_texture		texture;
 	UINT_REF 		current_mod;
 	int				selected_id;
+	t_rt_background	background;
+	RT_F4_API		background_color;
 }					t_scene;
 
 t_scene				*scene_new(UINT_REF mod_ptr);

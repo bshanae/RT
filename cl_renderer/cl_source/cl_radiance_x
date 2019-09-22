@@ -83,6 +83,9 @@ static RT_F4				radiance_trace(
 	RT_F					choice_value;
 	RT_F					choice_result;
 
+	RT_F4					background_f4;
+	RT_F					background_f;
+
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
 
@@ -92,7 +95,19 @@ static RT_F4				radiance_trace(
 			radiance += illumination(scene, camera, intersection, settings);
 
 		if (!scene_intersect(scene, camera, intersection, settings))
+		{
+			if (scene->background == rt_background_none)
+				;
+			else if (scene->background == rt_background_color)
+				radiance += scene->background_color * mask;
+			else if (scene->background == rt_background_interpolation)
+			{
+				background_f4 = normalize(intersection->ray.direction);
+				background_f = (RT_F)0.5 * (background_f4.y + (RT_F)1.0);
+				radiance += mix(RT_BACKGROUND_INTER_A, RT_BACKGROUND_INTER_B, background_f) * mask;
+			}
 			break ;
+		}
 
 		if (scene->objects[intersection->object_id].is_selected == rt_true)
 			break ;

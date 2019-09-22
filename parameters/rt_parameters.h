@@ -47,6 +47,9 @@ typedef enum						e_rt_tracing_mod
 # define RT_OBJECT_CAPACITY			64
 # define RT_SCENE_CAPACITY			32
 # define RT_OBJECT_EMPTY			"None"
+# define RT_BACKGROUND_COLOR		(RT_F4_API){0.8, 0.8, 0.8, 1.}
+# define RT_BACKGROUND_INTER_A		(RT_F4){.5, .7, 1., 1.}
+# define RT_BACKGROUND_INTER_B		(RT_F4){1., 1., 1., 1.}
 
 # define RT_NAME_SIZE				32
 

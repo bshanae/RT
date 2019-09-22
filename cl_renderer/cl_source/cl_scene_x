@@ -2,6 +2,13 @@
 
 #include "rt_parameters.h"
 
+typedef enum 		e_rt_background
+{
+	rt_background_none,
+	rt_background_color,
+	rt_background_interpolation
+}					t_rt_background;
+
 typedef struct		s_scene
 {
 	t_object		objects[RT_SCENE_CAPACITY];
@@ -11,6 +18,8 @@ typedef struct		s_scene
 	t_texture		texture;
 	const uint		*not_used_in_kernel;
 	int				selected_id;
+	t_rt_background	background;
+	RT_F4			background_color;
 }					t_scene;
 
 static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersection)
