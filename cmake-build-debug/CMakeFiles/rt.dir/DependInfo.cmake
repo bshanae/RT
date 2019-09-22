@@ -221,6 +221,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_apply.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_apply.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_filter_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_filter_x.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_focus_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus_x.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_main_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_reset.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_reset.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_camera_screen_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_screen_x.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_signal_x/gui_signal_entry_x.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_entry_x.c.o"

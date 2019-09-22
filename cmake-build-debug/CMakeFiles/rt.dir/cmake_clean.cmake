@@ -33,6 +33,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_show.c.o"
   "CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.o"
+  "CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_point_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_light_direct_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_object_x/gui_object_sphere_x.c.o"

@@ -5982,6 +5982,33 @@ gui/gui_signal_x/gui_signal_camera_focus_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_focus_x.c.s
 .PHONY : gui/gui_signal_x/gui_signal_camera_focus_x.c.s
 
+gui/gui_signal_x/gui_signal_camera_main_x.o: gui/gui_signal_x/gui_signal_camera_main_x.c.o
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.o
+
+# target to build an object file
+gui/gui_signal_x/gui_signal_camera_main_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.o
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.c.o
+
+gui/gui_signal_x/gui_signal_camera_main_x.i: gui/gui_signal_x/gui_signal_camera_main_x.c.i
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.i
+
+# target to preprocess a source file
+gui/gui_signal_x/gui_signal_camera_main_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.i
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.c.i
+
+gui/gui_signal_x/gui_signal_camera_main_x.s: gui/gui_signal_x/gui_signal_camera_main_x.c.s
+
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.s
+
+# target to generate assembly for a file
+gui/gui_signal_x/gui_signal_camera_main_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_camera_main_x.c.s
+.PHONY : gui/gui_signal_x/gui_signal_camera_main_x.c.s
+
 gui/gui_signal_x/gui_signal_camera_reset.o: gui/gui_signal_x/gui_signal_camera_reset.c.o
 
 .PHONY : gui/gui_signal_x/gui_signal_camera_reset.o
@@ -7452,6 +7479,9 @@ help:
 	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_focus_x.s"
+	@echo "... gui/gui_signal_x/gui_signal_camera_main_x.o"
+	@echo "... gui/gui_signal_x/gui_signal_camera_main_x.i"
+	@echo "... gui/gui_signal_x/gui_signal_camera_main_x.s"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.o"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.i"
 	@echo "... gui/gui_signal_x/gui_signal_camera_reset.s"

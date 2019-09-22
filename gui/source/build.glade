@@ -379,34 +379,32 @@
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="margin_bottom">2</property>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="width_request">153</property>
+                              <object class="GtkButton">
+                                <property name="label" translatable="yes">Reset</property>
                                 <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="margin_bottom">2</property>
-                                <property name="label" translatable="yes">Antialiasing</property>
-                                <attributes>
-                                  <attribute name="style" value="italic"/>
-                                </attributes>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">True</property>
+                                <signal name="clicked" handler="gui_signal_camera_main_reset" swapped="no"/>
                               </object>
                               <packing>
-                                <property name="expand">False</property>
+                                <property name="expand">True</property>
                                 <property name="fill">True</property>
                                 <property name="position">0</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch" id="camera_antialiasing">
+                              <object class="GtkButton">
+                                <property name="label" translatable="yes">Save</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="halign">center</property>
-                                <signal name="state-set" handler="gui_signal_camera_antialiasing" swapped="no"/>
+                                <property name="receives_default">True</property>
+                                <signal name="clicked" handler="gui_signal_camera_main_save" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
-                                <property name="fill">False</property>
-                                <property name="pack_type">end</property>
+                                <property name="fill">True</property>
                                 <property name="position">1</property>
                               </packing>
                             </child>
@@ -568,7 +566,7 @@
                             </child>
                             <child>
                               <object class="GtkButton">
-                                <property name="label" translatable="yes">Auto Set</property>
+                                <property name="label" translatable="yes">Auto set</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -585,7 +583,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">9</property>
+                            <property name="position">8</property>
                           </packing>
                         </child>
                         <child>
@@ -597,6 +595,48 @@
                             <attributes>
                               <attribute name="weight" value="heavy"/>
                             </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">9</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="width_request">153</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_bottom">2</property>
+                                <property name="label" translatable="yes">Antialiasing</property>
+                                <attributes>
+                                  <attribute name="style" value="italic"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkSwitch" id="camera_antialiasing">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="halign">center</property>
+                                <signal name="state-set" handler="gui_signal_camera_antialiasing" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">False</property>
+                                <property name="pack_type">end</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -760,7 +800,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">12</property>
+                            <property name="position">13</property>
                           </packing>
                         </child>
                         <child>
@@ -776,7 +816,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">13</property>
+                            <property name="position">14</property>
                           </packing>
                         </child>
                         <child>
@@ -842,7 +882,7 @@
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">19</property>
+                            <property name="position">20</property>
                           </packing>
                         </child>
                       </object>

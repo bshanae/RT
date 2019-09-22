@@ -31,6 +31,10 @@ void 				gui_signal_parser_select
 void 				gui_signal_parser_load
 					(GTK_SIGNAL_SIGNATURE);
 
+void 				gui_signal_camera_main_reset
+					(GTK_SIGNAL_SIGNATURE);
+void 				gui_signal_camera_main_save
+					(GTK_SIGNAL_SIGNATURE);
 gboolean			gui_signal_camera_antialiasing
 					(GtkWidget *widget, gboolean state, gpointer ptr);
 void				gui_signal_camera_filter
