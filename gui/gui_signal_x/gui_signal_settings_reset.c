@@ -12,6 +12,6 @@ void 				gui_signal_settings_reset
 		gui_resize_finish(gui);
 	}
 	else
-		gui_settings_reset(gui->settings, &gui->renderer->data.settings);
+		gui_settings_reset(gui->settings);
 	gui_control_hide(&gui->settings->control);
 }

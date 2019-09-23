@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -290,7 +290,7 @@ set(SOURCE_GUI_SETTINGS
 	./gui/gui_settings/gui_settings_delete.c
 	./gui/gui_settings/gui_settings_reset.c
 	./gui/gui_settings/gui_settings_apply.c
-	./gui/gui_settings/gui_settings_show.c)
+	./gui/gui_settings/gui_settings_show.c gui/gui_settings/gui_settings_connect.c)
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c

@@ -13,6 +13,8 @@
 
 typedef struct 		s_gui_setting
 {
+	t_rt_bool		connected;
+	t_rt_settings	*ptr_settings;
 	t_gui_control	control;
 	t_rt_bool		tracing_block;
 	GtkToggleButton	*tracing_rt;
@@ -32,13 +34,12 @@ typedef struct 		s_gui_setting
 }					t_gui_settings;
 
 t_gui_settings		*gui_settings_new(GtkBuilder *builder);
+void 				gui_settings_connect(t_gui_settings *settings, ...);
 void 				gui_settings_delete(t_gui_settings **settings);
 
-void 				gui_settings_show
-					(t_gui_settings *gui, t_rt_settings *settings);
-void 				gui_settings_reset
-					(t_gui_settings *gui, t_rt_settings *settings);
-void 				gui_settings_apply
-					(t_gui_settings *gui, t_rt_settings *settings);
+void				gui_settings_show_samples(t_gui_settings *gui);
+void 				gui_settings_show(t_gui_settings *gui);
+void 				gui_settings_reset(t_gui_settings *gui);
+void 				gui_settings_apply(t_gui_settings *gui);
 
 #endif

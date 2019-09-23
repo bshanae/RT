@@ -7,6 +7,7 @@ t_gui_settings			*gui_settings_new(GtkBuilder *builder)
 
 	printf("GUI : Initializing settings\n");
 	new = rt_malloc(sizeof(t_gui_settings));
+	new->connected = rt_false;
 	ft_strcpy(init.stack, "settings_control");
 	new->control = gui_control_init(&init, builder);
 	new->tracing_block = rt_false;

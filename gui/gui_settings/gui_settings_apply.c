@@ -9,14 +9,13 @@ static RT_F			static_bound(RT_F value)
 	return (value);
 }
 
-void 				gui_settings_apply
-					(t_gui_settings *gui, t_rt_settings *settings)
+void 				gui_settings_apply(t_gui_settings *gui)
 {
-	settings->sample_limit = gui_entry_get_i(gui->pt_samples_limit);
-	settings->sample_depth = gui_entry_get_i(gui->pt_depth);
-	settings->rm_step_limit = gui_entry_get_i(gui->rm_steps);
-	settings->rm_step_part = static_bound(gui_entry_get_f(gui->rm_part));
-	settings->rm_max_distance = gui_entry_get_f(gui->rm_distance);
-	settings->illumination_value = gui_entry_get_f(gui->illumination_value);
-	gui_settings_show(gui, settings);
+	rt_assert_critical(gui->connected, "GUI Settings : Not connected");
+	gui->ptr_settings->sample_limit = gui_entry_get_i(gui->pt_samples_limit);
+	gui->ptr_settings->sample_depth = gui_entry_get_i(gui->pt_depth);
+	gui->ptr_settings->rm_step_limit = gui_entry_get_i(gui->rm_steps);
+	gui->ptr_settings->rm_step_part = static_bound(gui_entry_get_f(gui->rm_part));
+	gui->ptr_settings->rm_max_distance = gui_entry_get_f(gui->rm_distance);
+	gui->ptr_settings->illumination_value = gui_entry_get_f(gui->illumination_value);
 }
