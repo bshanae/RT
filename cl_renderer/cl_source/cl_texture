@@ -93,8 +93,6 @@ static void         sphere_texture(
 {
     t_object_sphere data;
     RT_F4           normal;
-    RT_F            phi;
-    RT_F            theta;
 
     data = *(global t_object_sphere* )object->data;
     normal = normalize(intersection->hit - data.position);
@@ -114,7 +112,6 @@ static void         plane_texture(
 {
     t_object_plane   data;
     RT_F4            vector;
-    double              tmp;
 
     data = *(global t_object_plane* )object->data;
     vector = intersection->hit - data.position;

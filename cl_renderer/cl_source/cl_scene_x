@@ -75,9 +75,9 @@ static int			scene_intersect(
 	int				result;
 
 	intersection_reset(intersection);
-	if (settings->tracing_mod == rt_tracing_mod_rt)
+	if (settings->tracing_mod == rt_tracing_rt)
 		result = scene_intersect_rt(scene, intersection);
-	else if (settings->tracing_mod == rt_tracing_mod_rm)
+	else if (settings->tracing_mod == rt_tracing_rm)
     	result = scene_intersect_rm(scene, intersection, settings);
     else
     	return (0);
@@ -85,7 +85,7 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		if (settings->tracing_mod == rt_tracing_mod_rt)
+		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);

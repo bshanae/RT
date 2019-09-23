@@ -26,8 +26,6 @@ static RT_F4		camera_build_vp_point(global t_camera *camera, RT_F x, RT_F y)
 static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
 {
 	t_ray			result;
-	RT_F4			up;
-    RT_F4			right;
 
 	result.origin = camera->position;
     result.direction = normalize(camera_build_vp_point(camera, x, y));

@@ -107,8 +107,7 @@ static RT_F4 		f4_rotate(
 
 typedef struct 			s_cl_renderer_settings
 {
-	int 				light_basic;
-	int 				light_area;
+	t_rt_light_mod		light_mod;
 	int 				illumination;
 	RT_F 				illumination_value;
 	int 				sample_count;
@@ -1711,6 +1710,8 @@ static RT_F			object_center_shift(global t_object *object)
 }
 // cl_camera_definition ////////////////////////////////////////////////////////////////////////////////////////////////
 
+# include "rt_parameters.h"
+
 typedef struct 		s_camera
 {
 	RT_F4			position;
@@ -1723,9 +1724,7 @@ typedef struct 		s_camera
 	int				width;
 	int				height;
 	int 			filter_antialiasing;
-	int             filter_cartoon;
-	int             filter_sepia;
-	int				filter_stereo;
+	t_rt_filter_mod	filter_mod;
 	int 			focus;
 	RT_F			aperture_size;
 	RT_F			focal_length;
@@ -1830,8 +1829,6 @@ static void         sphere_texture(
 {
     t_object_sphere data;
     RT_F4           normal;
-    RT_F            phi;
-    RT_F            theta;
 
     data = *(global t_object_sphere* )object->data;
     normal = normalize(intersection->hit - data.position);
@@ -1851,7 +1848,6 @@ static void         plane_texture(
 {
     t_object_plane   data;
     RT_F4            vector;
-    double              tmp;
 
     data = *(global t_object_plane* )object->data;
     vector = intersection->hit - data.position;
@@ -1946,7 +1942,7 @@ static RT_F4		object_normal(
 					t_intersection *intersection,
 					constant t_rt_settings *settings)
 {
-	return (settings->tracing_mod == rt_tracing_mod_rt ?
+	return (settings->tracing_mod == rt_tracing_rt ?
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection));
 }
@@ -1957,8 +1953,9 @@ static RT_F4		object_normal(
 typedef enum 		e_rt_background
 {
 	rt_background_none,
-	rt_background_color,
-	rt_background_interpolation
+	rt_background_one,
+	rt_background_interpolation,
+	rt_background_end
 }					t_rt_background;
 
 typedef struct		s_scene
@@ -2026,9 +2023,9 @@ static int			scene_intersect(
 	int				result;
 
 	intersection_reset(intersection);
-	if (settings->tracing_mod == rt_tracing_mod_rt)
+	if (settings->tracing_mod == rt_tracing_rt)
 		result = scene_intersect_rt(scene, intersection);
-	else if (settings->tracing_mod == rt_tracing_mod_rm)
+	else if (settings->tracing_mod == rt_tracing_rm)
     	result = scene_intersect_rm(scene, intersection, settings);
     else
     	return (0);
@@ -2036,7 +2033,7 @@ static int			scene_intersect(
 	if (result)
 	{
 		intersection->material = scene->objects[intersection->object_id].material;
-		if (settings->tracing_mod == rt_tracing_mod_rt)
+		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
@@ -2358,8 +2355,6 @@ static RT_F4		camera_build_vp_point(global t_camera *camera, RT_F x, RT_F y)
 static t_ray		camera_build_ray_raw(global t_camera *camera, RT_F x, RT_F y)
 {
 	t_ray			result;
-	RT_F4			up;
-    RT_F4			right;
 
 	result.origin = camera->position;
     result.direction = normalize(camera_build_vp_point(camera, x, y));
@@ -2572,11 +2567,11 @@ static RT_F4				radiance_trace(
 		{
 			if (scene->background == rt_background_none)
 				;
-			else if (scene->background == rt_background_color)
+			else if (scene->background == rt_background_one)
 				radiance += scene->background_color * mask;
 			else if (scene->background == rt_background_interpolation)
 			{
-				background_f4 = normalize(intersection.ray.direction);
+				background_f4 = normalize(intersection->ray.direction);
 				background_f = (RT_F)0.5 * (background_f4.y + (RT_F)1.0);
 				radiance += mix(RT_BACKGROUND_INTER_A, RT_BACKGROUND_INTER_B, background_f) * mask;
 			}
@@ -2591,13 +2586,12 @@ static RT_F4				radiance_trace(
 
 		radiance += mask * intersection->material.emission;
 
-		if (settings->light_basic)
+		if (settings->light_mod == rt_light_basic)
 		{
-			light = light_basic(scene, camera, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, camera, intersection, settings, camera->filter_mod == rt_filter_cartoon);
             radiance += light * mask;
 		}
-
-		if (settings->light_area)
+		else if (settings->light_mod == rt_light_area)
 		{
 			light = light_area(scene, camera, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
@@ -2657,7 +2651,7 @@ kernel void			cl_main(
 	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH];
 
-	filter_stereo = camera->filter_stereo;
+	filter_stereo = camera->filter_mod == rt_filter_stereo;
 	sample_store_map(sample_store, sample_store_mapped, camera);
 
     global_id = get_global_id(0);

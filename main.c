@@ -17,7 +17,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_rt(gui->renderer->data.scene);
+	scene_test_box(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 180;
 	gui->renderer->data.camera->position.y = 15;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);

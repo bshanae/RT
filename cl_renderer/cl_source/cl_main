@@ -17,7 +17,7 @@ kernel void			cl_main(
 	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH];
 
-	filter_stereo = camera->filter_stereo;
+	filter_stereo = camera->filter_mod == rt_filter_stereo;
 	sample_store_map(sample_store, sample_store_mapped, camera);
 
     global_id = get_global_id(0);
@@ -54,5 +54,5 @@ kernel void			cl_main(
         image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), 0);
 	}
 	else
-		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia);
+		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
 }

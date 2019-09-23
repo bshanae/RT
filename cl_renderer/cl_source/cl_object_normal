@@ -62,7 +62,7 @@ static RT_F4		object_normal(
 					t_intersection *intersection,
 					constant t_rt_settings *settings)
 {
-	return (settings->tracing_mod == rt_tracing_mod_rt ?
+	return (settings->tracing_mod == rt_tracing_rt ?
 		object_normal_rt(object, intersection) :
 		object_normal_rm(object, intersection));
 }

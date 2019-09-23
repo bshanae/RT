@@ -117,13 +117,12 @@ static RT_F4				radiance_trace(
 
 		radiance += mask * intersection->material.emission;
 
-		if (settings->light_basic)
+		if (settings->light_mod == rt_light_basic)
 		{
-			light = light_basic(scene, camera, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, camera, intersection, settings, camera->filter_mod == rt_filter_cartoon);
             radiance += light * mask;
 		}
-
-		if (settings->light_area)
+		else if (settings->light_mod == rt_light_area)
 		{
 			light = light_area(scene, camera, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
