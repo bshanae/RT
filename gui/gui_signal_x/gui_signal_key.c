@@ -19,16 +19,24 @@ static int			try_move_camera(t_gui *gui, int key)
 	else
 		return (0);
 	if (gui->renderer->data.scene->selected_id != -1)
+	{
+		gui_scene_edit_show(gui->scene->edit,
+			gui->renderer->data.scene->objects + gui->scene->edit->current_id);
 		cl_renderer_object_move(gui->renderer, movement);
+	}
 	else
+	{
+		gui_camera_show(gui->camera);
 		cl_renderer_camera_move(gui->renderer, movement);
-	gui_camera_show(gui->camera);
+	}
 	gui_queue_execute_force(gui->queue);
 	return (1);
 }
 
 static int			try_rotate_camera(t_gui *gui, int key)
 {
+	if (gui->renderer->data.scene->selected_id != -1)
+		return (0);
 	if (key == GDK_KEY_Left)
 		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_positive);
 	else if (key == GDK_KEY_Right)
