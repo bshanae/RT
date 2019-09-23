@@ -6,6 +6,6 @@ void				gui_signal_camera_reset
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui_camera_reset(gui->camera, gui->renderer->data.camera);
+	gui_camera_show(gui->camera);
 	gui_control_hide(&gui->camera->control);
 }

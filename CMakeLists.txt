@@ -159,7 +159,7 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_update.c
 	./gui/gui/gui_loop.c
 	./gui/gui/gui_render.c
-	./gui/gui/gui_resize_x.c "gui/gui/gui_commnad_x.c")
+	./gui/gui/gui_resize_x.c "gui/gui/gui_commnad_x.c" gui/gui/gui_connect.c)
 
 set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_new.c
@@ -194,7 +194,7 @@ set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
 	./gui/gui_camera/gui_camera_apply.c
-	gui/gui_signal_x/gui_signal_camera_state_x.c)
+	gui/gui_signal_x/gui_signal_camera_state_x.c gui/gui_camera/gui_camera_connect.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_light_point_x.c
@@ -444,7 +444,6 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_move.c
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
-	./gui/gui_camera/gui_camera_reset.c
 	./cl_renderer/camera/camera_request_x.c
 	./cl_renderer/camera/camera_get_step.c)
 

@@ -3,18 +3,18 @@
 
 # define JSMN_HEADER
 
-# include "libft_ft_printf.h"
-# include "error_framework.h"
 # include "jsmn.h"
+
+# include "error_framework.h"
+# include "libft_ft_printf.h"
+# include "material.h"
+# include "material_list.h"
 
 # include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include <string.h>
 # include <stdlib.h>
-
-# include "material.h"
-# include "material_list.h"
 
 typedef struct	s_vector3
 {

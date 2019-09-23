@@ -11,8 +11,7 @@
 
 typedef struct 			s_cl_renderer_settings
 {
-	int 				light_basic;
-	int 				light_area;
+	t_rt_light_mod		light_mod;
 	int 				illumination;
 	RT_F 				illumination_value;
 	int 				sample_count;
@@ -27,6 +26,6 @@ typedef struct 			s_cl_renderer_settings
 	RT_F				rm_max_distance;
 }						t_rt_settings;
 
-void 				cl_renderer_settings_init(t_rt_settings *settings);
+void 					cl_renderer_settings_init(t_rt_settings *settings);
 
 #endif

@@ -22,7 +22,7 @@ static int			try_move_camera(t_gui *gui, int key)
 		cl_renderer_object_move(gui->renderer, movement);
 	else
 		cl_renderer_camera_move(gui->renderer, movement);
-	gui_camera_show(gui->camera, gui->renderer->data.camera);
+	gui_camera_show(gui->camera);
 	gui_queue_execute_force(gui->queue);
 	return (1);
 }
@@ -39,7 +39,7 @@ static int			try_rotate_camera(t_gui *gui, int key)
 		cl_renderer_camera_rotate(gui->renderer,rt_rotation_x, rt_rotation_positive);
 	else
 		return (0);
-	gui_camera_show(gui->camera, gui->renderer->data.camera);
+	gui_camera_show(gui->camera);
 	gui_queue_execute_force(gui->queue);
 	return (1);
 }
@@ -66,7 +66,7 @@ gboolean			gui_signal_key
 	else if (event->keyval == GDK_KEY_r)
 	{
 		cl_renderer_camera_reset(gui->renderer);
-		gui_camera_show(gui->camera, gui->renderer->data.camera);
+		gui_camera_show(gui->camera);
 		gui_queue_execute_force(gui->queue);
 	}
 	else

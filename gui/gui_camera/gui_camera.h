@@ -12,6 +12,9 @@
 
 typedef struct				s_gui_camera
 {
+	t_rt_bool				connected;
+	t_camera 				*ptr_camera;
+	t_rt_light_mod const	*ptr_light;
 	t_gui_control			control;
 	GtkEntry				*position_x;
 	GtkEntry				*position_y;
@@ -25,8 +28,10 @@ typedef struct				s_gui_camera
 	GtkLabel				*screen_label;
 	GtkSwitch				*antialiasing;
 	GtkToggleButton			*filter_none;
+	GtkWidget				*filter_cartoon_box;
 	GtkToggleButton			*filter_cartoon;
 	GtkToggleButton			*filter_sepia;
+	GtkToggleButton			*filter_stereo;
 	GtkSwitch				*focus;
 	int						focus_request;
 	GtkBox					*focus_box;
@@ -35,12 +40,9 @@ typedef struct				s_gui_camera
 }							t_gui_camera;
 
 t_gui_camera				*gui_camera_new(GtkBuilder *builder);
+void 						gui_camera_connect(t_gui_camera *gui, ...);
 void 						gui_camera_delete(t_gui_camera **camera);
 
-void 						gui_camera_show
-							(t_gui_camera *gui, const t_camera *camera);
-void 						gui_camera_reset
-							(t_gui_camera *gui, const t_camera *camera);
-void 						gui_camera_apply
-							(t_gui_camera *gui, t_camera *camera);
+void 						gui_camera_show(t_gui_camera *gui);
+void 						gui_camera_apply(t_gui_camera *gui);
 #endif

@@ -25,11 +25,26 @@ typedef enum						e_rt_state
 	rt_on
 }									t_rt_state;
 
+typedef enum						e_rt_light_mod
+{
+	rt_light_basic,
+	rt_light_area
+}									t_rt_light_mod;
+
 typedef enum						e_rt_tracing_mod
 {
-	rt_tracing_mod_rt,
-	rt_tracing_mod_rm
+	rt_tracing_rt,
+	rt_tracing_rm
 }									t_rt_tracing_mod;
+
+typedef enum						s_rt_filter_mod
+{
+	rt_filter_none,
+	rt_filter_cartoon,
+	rt_filter_sepia,
+	rt_filter_stereo,
+	rt_filter_end
+}									t_rt_filter_mod;
 
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
@@ -54,9 +69,7 @@ typedef enum						e_rt_tracing_mod
 # define RT_NAME_SIZE				32
 
 # define RT_ANTIALIASING			1
-# define RT_CARTOON_EFFECT   		0
-# define RT_FILTER_SEPIA        	0
-# define RT_FILTER_STEREO       	0
+# define RT_FILTER					rt_filter_none
 # define RT_FOCUS					0
 # define RT_APERTURE_SIZE			(RT_F)5.
 # define RT_FOCAL_LENGTH			(RT_F)40.
@@ -67,10 +80,10 @@ typedef enum						e_rt_tracing_mod
 
 # define RT_ROOM					0
 
-# define RT_LIGHT_BASIC				0
+# define RT_LIGHT_MOD				rt_light_area
+
 # define RT_LIGHT_BASIC_BLINN		(RT_F)20.
 
-# define RT_LIGHT_AREA				1
 # define RT_LIGHT_AREA_MULTIPLIER	(RT_F)3.
 # define RT_LIGHT_AREA_FLOOR		(RT_F).12
 # define RT_LIGHT_AREA_CEILING		(RT_F).95
@@ -86,7 +99,7 @@ typedef enum						e_rt_tracing_mod
 # define RT_MOTION_BLUR_ALPHA		(RT_F)0.7
 # define RT_SAMPLE_ARRAY_LENGTH		5
 
-# define RT_TRACING_MOD				rt_tracing_mod_rt
+# define RT_TRACING_MOD				rt_tracing_rt
 
 # define RT_RM_STEP_LIMIT			128
 # define RT_RM_STEP_PART			(RT_F)1.

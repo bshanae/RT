@@ -8,7 +8,7 @@ void 				gui_command_focus(t_gui *gui, GdkEventButton *event)
 	gui_queue_execute_force(gui->queue);
 	gui_queue_unblock(gui->queue);
 	gui_queue_wait(gui->queue);
-	gui_camera_show(gui->camera, gui->renderer->data.camera);
+	gui_camera_show(gui->camera);
 	gtk_widget_set_sensitive(GTK_WIDGET(gui->notebook), 1);
 }
 

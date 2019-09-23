@@ -2661,6 +2661,33 @@ gui/gui/gui_commnad_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s
 .PHONY : gui/gui/gui_commnad_x.c.s
 
+gui/gui/gui_connect.o: gui/gui/gui_connect.c.o
+
+.PHONY : gui/gui/gui_connect.o
+
+# target to build an object file
+gui/gui/gui_connect.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_connect.c.o
+.PHONY : gui/gui/gui_connect.c.o
+
+gui/gui/gui_connect.i: gui/gui/gui_connect.c.i
+
+.PHONY : gui/gui/gui_connect.i
+
+# target to preprocess a source file
+gui/gui/gui_connect.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_connect.c.i
+.PHONY : gui/gui/gui_connect.c.i
+
+gui/gui/gui_connect.s: gui/gui/gui_connect.c.s
+
+.PHONY : gui/gui/gui_connect.s
+
+# target to generate assembly for a file
+gui/gui/gui_connect.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_connect.c.s
+.PHONY : gui/gui/gui_connect.c.s
+
 gui/gui/gui_delete.o: gui/gui/gui_delete.c.o
 
 .PHONY : gui/gui/gui_delete.o
@@ -2850,6 +2877,33 @@ gui/gui_camera/gui_camera_apply.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_apply.c.s
 .PHONY : gui/gui_camera/gui_camera_apply.c.s
 
+gui/gui_camera/gui_camera_connect.o: gui/gui_camera/gui_camera_connect.c.o
+
+.PHONY : gui/gui_camera/gui_camera_connect.o
+
+# target to build an object file
+gui/gui_camera/gui_camera_connect.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_connect.c.o
+.PHONY : gui/gui_camera/gui_camera_connect.c.o
+
+gui/gui_camera/gui_camera_connect.i: gui/gui_camera/gui_camera_connect.c.i
+
+.PHONY : gui/gui_camera/gui_camera_connect.i
+
+# target to preprocess a source file
+gui/gui_camera/gui_camera_connect.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_connect.c.i
+.PHONY : gui/gui_camera/gui_camera_connect.c.i
+
+gui/gui_camera/gui_camera_connect.s: gui/gui_camera/gui_camera_connect.c.s
+
+.PHONY : gui/gui_camera/gui_camera_connect.s
+
+# target to generate assembly for a file
+gui/gui_camera/gui_camera_connect.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_connect.c.s
+.PHONY : gui/gui_camera/gui_camera_connect.c.s
+
 gui/gui_camera/gui_camera_delete.o: gui/gui_camera/gui_camera_delete.c.o
 
 .PHONY : gui/gui_camera/gui_camera_delete.o
@@ -2903,33 +2957,6 @@ gui/gui_camera/gui_camera_new.s: gui/gui_camera/gui_camera_new.c.s
 gui/gui_camera/gui_camera_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_new.c.s
 .PHONY : gui/gui_camera/gui_camera_new.c.s
-
-gui/gui_camera/gui_camera_reset.o: gui/gui_camera/gui_camera_reset.c.o
-
-.PHONY : gui/gui_camera/gui_camera_reset.o
-
-# target to build an object file
-gui/gui_camera/gui_camera_reset.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.o
-.PHONY : gui/gui_camera/gui_camera_reset.c.o
-
-gui/gui_camera/gui_camera_reset.i: gui/gui_camera/gui_camera_reset.c.i
-
-.PHONY : gui/gui_camera/gui_camera_reset.i
-
-# target to preprocess a source file
-gui/gui_camera/gui_camera_reset.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.i
-.PHONY : gui/gui_camera/gui_camera_reset.c.i
-
-gui/gui_camera/gui_camera_reset.s: gui/gui_camera/gui_camera_reset.c.s
-
-.PHONY : gui/gui_camera/gui_camera_reset.s
-
-# target to generate assembly for a file
-gui/gui_camera/gui_camera_reset.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_camera/gui_camera_reset.c.s
-.PHONY : gui/gui_camera/gui_camera_reset.c.s
 
 gui/gui_camera/gui_camera_show.o: gui/gui_camera/gui_camera_show.c.o
 
@@ -7191,6 +7218,9 @@ help:
 	@echo "... gui/gui/gui_commnad_x.o"
 	@echo "... gui/gui/gui_commnad_x.i"
 	@echo "... gui/gui/gui_commnad_x.s"
+	@echo "... gui/gui/gui_connect.o"
+	@echo "... gui/gui/gui_connect.i"
+	@echo "... gui/gui/gui_connect.s"
 	@echo "... gui/gui/gui_delete.o"
 	@echo "... gui/gui/gui_delete.i"
 	@echo "... gui/gui/gui_delete.s"
@@ -7212,15 +7242,15 @@ help:
 	@echo "... gui/gui_camera/gui_camera_apply.o"
 	@echo "... gui/gui_camera/gui_camera_apply.i"
 	@echo "... gui/gui_camera/gui_camera_apply.s"
+	@echo "... gui/gui_camera/gui_camera_connect.o"
+	@echo "... gui/gui_camera/gui_camera_connect.i"
+	@echo "... gui/gui_camera/gui_camera_connect.s"
 	@echo "... gui/gui_camera/gui_camera_delete.o"
 	@echo "... gui/gui_camera/gui_camera_delete.i"
 	@echo "... gui/gui_camera/gui_camera_delete.s"
 	@echo "... gui/gui_camera/gui_camera_new.o"
 	@echo "... gui/gui_camera/gui_camera_new.i"
 	@echo "... gui/gui_camera/gui_camera_new.s"
-	@echo "... gui/gui_camera/gui_camera_reset.o"
-	@echo "... gui/gui_camera/gui_camera_reset.i"
-	@echo "... gui/gui_camera/gui_camera_reset.s"
 	@echo "... gui/gui_camera/gui_camera_show.o"
 	@echo "... gui/gui_camera/gui_camera_show.i"
 	@echo "... gui/gui_camera/gui_camera_show.s"

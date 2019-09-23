@@ -7,6 +7,9 @@ t_gui_camera			*gui_camera_new(GtkBuilder *builder)
 
 	printf("GUI : Initializing camera\n");
 	new = rt_malloc(sizeof(t_gui_camera));
+	new->connected = rt_false;
+	new->ptr_camera = NULL;
+	new->ptr_light = NULL;
 	ft_strcpy(init.stack, "camera_control");
 	new->control = gui_control_init(&init, builder);
 	new->position_x = RT_GUI_GET(builder, "camera_position_x");
@@ -21,8 +24,10 @@ t_gui_camera			*gui_camera_new(GtkBuilder *builder)
 	new->screen_label = RT_GUI_GET(builder, "camera_screen_label");
 	new->antialiasing = RT_GUI_GET(builder, "camera_antialiasing");
 	new->filter_none = RT_GUI_GET(builder, "camera_filter_none");
+	new->filter_cartoon_box = RT_GUI_GET(builder, "camera_filter_cartoon_box");
 	new->filter_cartoon = RT_GUI_GET(builder, "camera_filter_cartoon");
 	new->filter_sepia = RT_GUI_GET(builder, "camera_filter_sepia");
+	new->filter_stereo = RT_GUI_GET(builder, "camera_filter_stereo");
 	new->focus = RT_GUI_GET(builder, "camera_focus");
 	new->focus_request = 0;
 	new->focus_box = RT_GUI_GET(builder, "camera_focus_box");

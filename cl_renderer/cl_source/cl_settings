@@ -4,8 +4,7 @@
 
 typedef struct 			s_cl_renderer_settings
 {
-	int 				light_basic;
-	int 				light_area;
+	t_rt_light_mod		light_mod;
 	int 				illumination;
 	RT_F 				illumination_value;
 	int 				sample_count;

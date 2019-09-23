@@ -16,9 +16,7 @@ t_camera			*camera_new(INT_REF width, INT_REF height)
 	new->width = *width;
 	new->height = *height;
 	new->filter_antialiasing = RT_ANTIALIASING;
-    new->filter_cartoon = RT_CARTOON_EFFECT;
-    new->filter_sepia = RT_FILTER_SEPIA;
-	new->filter_stereo = RT_FILTER_STEREO;
+    new->filter_mod = RT_FILTER;
 	new->focus = RT_FOCUS;
 	new->aperture_size = RT_APERTURE_SIZE;
 	new->focal_length = RT_FOCAL_LENGTH;

@@ -482,6 +482,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_connect.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui/gui_delete.c">
 			<Option target="rt"/>
 		</Unit>
@@ -503,13 +506,13 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_apply.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_connect.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_delete.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_reset.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_camera/gui_camera_show.c">

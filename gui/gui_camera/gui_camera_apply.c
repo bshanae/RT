@@ -1,7 +1,11 @@
 #include "gui_camera.h"
 
-void 				gui_camera_apply(t_gui_camera *gui,t_camera *camera)
+void 				gui_camera_apply(t_gui_camera *gui)
 {
+	t_camera		*camera;
+
+	rt_assert_critical(gui->connected, "GUI Camera : Not connected");
+	camera = gui->ptr_camera;
 	camera->position.x = gui_entry_get_f(gui->position_x);
 	camera->position.y = gui_entry_get_f(gui->position_y);
 	camera->position.z = gui_entry_get_f(gui->position_z);
