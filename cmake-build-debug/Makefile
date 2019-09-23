@@ -5010,6 +5010,33 @@ gui/gui_scene_common/gui_scene_common_update_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_update_x.c.s
 
+gui/gui_scene_edit/gui_scene_edit_(un)select.o: gui/gui_scene_edit/gui_scene_edit_(un)select.c.o
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.o
+
+# target to build an object file
+gui/gui_scene_edit/gui_scene_edit_(un)select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o"
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.c.o
+
+gui/gui_scene_edit/gui_scene_edit_(un)select.i: gui/gui_scene_edit/gui_scene_edit_(un)select.c.i
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.i
+
+# target to preprocess a source file
+gui/gui_scene_edit/gui_scene_edit_(un)select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.i"
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.c.i
+
+gui/gui_scene_edit/gui_scene_edit_(un)select.s: gui/gui_scene_edit/gui_scene_edit_(un)select.c.s
+
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.s
+
+# target to generate assembly for a file
+gui/gui_scene_edit/gui_scene_edit_(un)select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.s"
+.PHONY : gui/gui_scene_edit/gui_scene_edit_(un)select.c.s
+
 gui/gui_scene_edit/gui_scene_edit_apply.o: gui/gui_scene_edit/gui_scene_edit_apply.c.o
 
 .PHONY : gui/gui_scene_edit/gui_scene_edit_apply.o
@@ -5576,33 +5603,6 @@ gui/gui_scene_edit/gui_scene_edit_new.s: gui/gui_scene_edit/gui_scene_edit_new.c
 gui/gui_scene_edit/gui_scene_edit_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.s
 .PHONY : gui/gui_scene_edit/gui_scene_edit_new.c.s
-
-gui/gui_scene_edit/gui_scene_edit_select.o: gui/gui_scene_edit/gui_scene_edit_select.c.o
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.o
-
-# target to build an object file
-gui/gui_scene_edit/gui_scene_edit_select.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.o
-
-gui/gui_scene_edit/gui_scene_edit_select.i: gui/gui_scene_edit/gui_scene_edit_select.c.i
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.i
-
-# target to preprocess a source file
-gui/gui_scene_edit/gui_scene_edit_select.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.i
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.i
-
-gui/gui_scene_edit/gui_scene_edit_select.s: gui/gui_scene_edit/gui_scene_edit_select.c.s
-
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.s
-
-# target to generate assembly for a file
-gui/gui_scene_edit/gui_scene_edit_select.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.s
-.PHONY : gui/gui_scene_edit/gui_scene_edit_select.c.s
 
 gui/gui_scene_edit/gui_scene_edit_show.o: gui/gui_scene_edit/gui_scene_edit_show.c.o
 
@@ -7533,6 +7533,9 @@ help:
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x.s"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_(un)select.o"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_(un)select.i"
+	@echo "... gui/gui_scene_edit/gui_scene_edit_(un)select.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.s"
@@ -7596,9 +7599,6 @@ help:
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_new.s"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_select.o"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_select.i"
-	@echo "... gui/gui_scene_edit/gui_scene_edit_select.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_show.s"

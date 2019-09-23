@@ -14,4 +14,5 @@ void 				gui_camera_apply(t_gui_camera *gui)
 	camera->rotation.z = gui_entry_get_f(gui->rotation_z);
 	camera->focal_length = gui_entry_get_f(gui->focus_focal_length);
 	camera->aperture_size = gui_entry_get_f(gui->focus_aperture_size);
+	camera_apply(camera);
 }

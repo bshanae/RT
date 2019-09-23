@@ -256,7 +256,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
 	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
 	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
-	./gui/gui_scene_edit/gui_scene_edit_select.c gui/gui_scene_edit/gui_scene_edit_background_x.c)
+	"gui/gui_scene_edit/gui_scene_edit_(un)select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c

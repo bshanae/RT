@@ -1214,18 +1214,18 @@ CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_init_csg.c -o CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.s
 
-CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o: ../gui/gui_scene_edit/gui_scene_edit_select.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_select.c
+CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o: ../gui/gui_scene_edit/gui_scene_edit_(un)select.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o"   -c "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_(un)select.c"
 
-CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_select.c > CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.i
+CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_(un)select.c" > "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.i"
 
-CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_select.c -o CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.s
+CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_(un)select.c" -o "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.s"
 
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o: ../gui/gui_scene_edit/gui_scene_edit_background_x.c
@@ -3450,7 +3450,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_limited.c.o" \
 "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_explosion.c.o" \
 "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.o" \
-"CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o" \
+"CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o" \
 "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o" \
 "CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o" \
@@ -3708,7 +3708,7 @@ rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_p_cube.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_limited.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_explosion.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.o
-rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o
+rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o

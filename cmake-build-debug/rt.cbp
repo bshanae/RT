@@ -751,6 +751,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_(un)select.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
 			<Option target="rt"/>
 		</Unit>
@@ -812,9 +815,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c">

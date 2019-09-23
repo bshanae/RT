@@ -88,7 +88,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_limited.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_explosion.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_init_csg.c.o"
-  "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_select.c.o"
+  "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_(un)select.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_delete.c.o"

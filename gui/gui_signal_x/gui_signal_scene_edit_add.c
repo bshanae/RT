@@ -18,6 +18,7 @@ void				gui_signal_scene_edit_add
 		cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 		gui_queue_push(gui->queue);
 	}
+	gui_scene_edit_unselect(gui->scene->edit);
 	gtk_widget_hide(GTK_WIDGET(gui->scene->add->dialog));
 	gui->scene->edit->control.silent = 0;
 }

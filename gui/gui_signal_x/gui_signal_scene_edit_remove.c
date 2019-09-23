@@ -18,8 +18,8 @@ void					gui_signal_scene_edit_remove
 	else
 		return ;
 	gui_scene_common_update_all(gui->scene->common);
+	gui_scene_edit_unselect(gui->scene->edit);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_push(gui->queue);
-
 }
