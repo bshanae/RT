@@ -4091,7 +4091,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkLabel">
+                                      <object class="GtkLabel" id="scene_edit_material_reflectance_label">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="label" translatable="yes">Reflectance</property>
@@ -4122,7 +4122,7 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkLabel">
+                                      <object class="GtkLabel" id="scene_edit_material_transparency_label">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <property name="label" translatable="yes">Transparency</property>
@@ -5256,7 +5256,7 @@
   </object>
   <object class="GtkEntryCompletion" id="scene_add_type_completion">
     <property name="model">scene_type_list</property>
-    <property name="text_column">0</property>
+    <property name="text_column">1</property>
     <property name="inline_completion">True</property>
     <property name="popup_completion">False</property>
     <property name="inline_selection">True</property>
@@ -5417,7 +5417,7 @@
                             <property name="can_focus">False</property>
                             <property name="model">scene_type_list</property>
                             <property name="has_entry">True</property>
-                            <property name="entry_text_column">0</property>
+                            <property name="entry_text_column">1</property>
                             <signal name="changed" handler="gui_signal_scene_add_type_select" swapped="no"/>
                             <child internal-child="entry">
                               <object class="GtkEntry" id="scene_add_type_entry">
@@ -7964,7 +7964,7 @@
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkBox" id="scene_edit_material_color_box1">
+                              <object class="GtkBox" id="scene_add_material_color_box">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="orientation">vertical</property>
@@ -8150,7 +8150,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkLabel" id="scene_add_material_reflectance_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">Reflectance</property>
@@ -8180,7 +8180,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkLabel" id="scene_add_material_transparency_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label" translatable="yes">Transparency</property>

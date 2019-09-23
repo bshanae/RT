@@ -13,13 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" afterDir="false" />
@@ -28,8 +22,14 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_render.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_render.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_update.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_color_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_color_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_get.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_get.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_init.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_prepare.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_prepare.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_set.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_special_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_special_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_switch_mod.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_switch_mod.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_texture_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_texture_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_pair_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_object_x/gui_object_pair_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_delete.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene/gui_scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_build_object.c.o" afterDir="false" />
@@ -54,11 +54,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_torus.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_init_torus.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_prepare.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_prepare.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_apply.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_apply.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_background_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o" afterDir="false" />
@@ -124,25 +119,17 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_reset.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_resize.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_resize.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_tracing_x.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_connect.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_connect.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui/gui_update.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui/gui_update.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_new.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_update_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_common/gui_scene_common_update_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_show.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_show.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_add.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_add.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_apply.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_apply.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_remove.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_scene_edit_remove.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_light.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_light.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_tracing_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_tracing_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_material/gui_material.h" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_material/gui_material.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_material/gui_material_color_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_material/gui_material_color_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_material/gui_material_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_material/gui_material_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_material/gui_material_prepare.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_material/gui_material_prepare.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_material/gui_material_special_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_material/gui_material_special_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_init_material.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_init_material.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_prepare.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_add/gui_scene_add_prepare.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_init_material.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_scene_edit/gui_scene_edit_init_material.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/source/build.glade" beforeDir="false" afterPath="$PROJECT_DIR$/gui/source/build.glade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -336,7 +323,7 @@
       <workItem from="1569145781028" duration="6443000" />
       <workItem from="1569170640903" duration="10429000" />
       <workItem from="1569223839487" duration="3957000" />
-      <workItem from="1569234743638" duration="2501000" />
+      <workItem from="1569234743638" duration="3917000" />
     </task>
     <servers />
   </component>

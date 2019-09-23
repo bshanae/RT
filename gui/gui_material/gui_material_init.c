@@ -25,9 +25,11 @@ t_gui_material		gui_material_init
 	material.reflectance_adjustment =
 		RT_GUI_GET(builder, init->reflectance_adjustment);
 	material.reflectance_scale = RT_GUI_GET(builder, init->reflectance_scale);
+	material.reflectance_label = RT_GUI_GET(builder, init->reflectance_label);
 	material.transparency_adjustment =
 		RT_GUI_GET(builder, init->transparency_adjustment);
 	material.transparency_scale = RT_GUI_GET(builder, init->transparency_scale);
+	material.transparency_label = RT_GUI_GET(builder, init->transparency_label);
 	material.texture_state = rt_off;
 	gui_material_switch_mod(&material, gui_material_material);
 	return (material);

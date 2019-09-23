@@ -23,9 +23,12 @@ void 					gui_scene_edit_init_material
 	ft_strcpy(init.reflectance_adjustment,
 		"scene_edit_material_reflectance_adjustment");
 	ft_strcpy(init.reflectance_scale, "scene_edit_material_reflectance_scale");
+	ft_strcpy(init.reflectance_label, "scene_edit_material_reflectance_label");
 	ft_strcpy(init.transparency_adjustment,
 		"scene_edit_material_transparency_adjustment");
 	ft_strcpy(init.transparency_scale,
 		"scene_edit_material_transparency_scale");
+	ft_strcpy(init.transparency_label,
+		"scene_edit_material_transparency_label");
 	edit->material = gui_material_init(&init, builder);
 }

@@ -9,9 +9,15 @@ void 				gui_material_prepare
 	gtk_widget_set_sensitive(GTK_WIDGET(material->switcher_stack), flag);
 	gtk_widget_set_sensitive(GTK_WIDGET(material->stack), flag);
 	if (object_flag_get(object) & RT_OBJECT_LIGHT)
+	{
 		gui_material_special_disable(material);
+		gui_material_color_disable(material);
+	}
 	else
+	{
 		gui_material_special_enable(material);
+		gui_material_color_enable(material);
+	}
 	if (object_flag_get(object) & RT_OBJECT_HAS_TEXTURE)
 		gui_material_texture_enable(material);
 	else

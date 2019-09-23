@@ -34,8 +34,10 @@ typedef struct 			s_gui_init_material
 	char				emission_button[64];
 	char				reflectance_adjustment[64];
 	char				reflectance_scale[64];
+	char				reflectance_label[64];
 	char				transparency_adjustment[64];
 	char				transparency_scale[64];
+	char				transparency_label[64];
 	char				texture_combo[64];
 	char				texture_list[64];
 }						t_gui_init_material;
@@ -61,8 +63,10 @@ typedef struct 			s_gui_material
 	GtkColorButton		*emission_button;
 	GtkAdjustment		*reflectance_adjustment;
 	GtkScale			*reflectance_scale;
+	GtkLabel			*reflectance_label;
 	GtkAdjustment		*transparency_adjustment;
 	GtkScale			*transparency_scale;
+	GtkLabel			*transparency_label;
 	GtkComboBox			*texture_combo;
 	GtkListStore		*texture_list;
 }						t_gui_material;
