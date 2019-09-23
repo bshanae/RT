@@ -1299,7 +1299,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">Ambient Light</property>
+                                        <property name="name">Ambient light</property>
                                         <property name="title" translatable="yes">page0</property>
                                       </packing>
                                     </child>
@@ -1386,7 +1386,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">Point Light</property>
+                                        <property name="name">Point light</property>
                                         <property name="title" translatable="yes">page0</property>
                                         <property name="position">1</property>
                                       </packing>
@@ -1474,7 +1474,7 @@
                                         </child>
                                       </object>
                                       <packing>
-                                        <property name="name">Direct Light</property>
+                                        <property name="name">Direct light</property>
                                         <property name="title" translatable="yes">page0</property>
                                         <property name="position">2</property>
                                       </packing>

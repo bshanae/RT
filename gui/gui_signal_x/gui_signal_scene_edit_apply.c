@@ -10,10 +10,8 @@ void				gui_signal_scene_edit_apply
 		gui->renderer->data.scene);
 	gui_scene_edit_apply(gui->scene->edit, gui->renderer->data.scene);
 	scene_update(gui->renderer->data.scene);
-	gui_scene_common_update_limited(gui->scene->common,
-		gui->renderer->data.scene);
-	gui_scene_common_update_csg(gui->scene->common,
-		gui->renderer->data.scene);
+	gui_scene_common_update_limited(gui->scene->common);
+	gui_scene_common_update_csg(gui->scene->common);
 	gui_control_hide(&gui->scene->edit->control);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);

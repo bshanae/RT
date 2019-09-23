@@ -13,8 +13,7 @@ void				gui_signal_scene_edit_add
 	if (response == GTK_RESPONSE_YES)
 	{
 		scene_update(gui->renderer->data.scene);
-		gui_scene_common_update_all(gui->scene->common,
-			gui->renderer->data.scene);
+		gui_scene_common_update_all(gui->scene->common);
 		cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 		cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 		gui_queue_push(gui->queue);

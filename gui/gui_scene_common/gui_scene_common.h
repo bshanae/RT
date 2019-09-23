@@ -9,6 +9,9 @@
 
 typedef struct 		s_gui_scene_common
 {
+	t_rt_bool		connected;
+	t_scene			*ptr_scene;
+	t_rt_light_mod	*ptr_light;
 	GtkListStore	*full;
 	GtkListStore	*limited_main;
 	GtkListStore	*limited_limit;
@@ -20,6 +23,7 @@ typedef struct 		s_gui_scene_common
 }					t_gui_scene_common;
 
 t_gui_scene_common	*gui_scene_common_new(GtkBuilder *builder);
+void				gui_scene_common_connect(t_gui_scene_common *common, ...);
 void				gui_scene_common_delete(t_gui_scene_common **common);
 
 typedef enum 		s_gui_scene_list_column
@@ -35,18 +39,18 @@ void				gui_scene_common_add_to_list
 					(GtkListStore *list, t_object *object);
 
 void 				gui_scene_common_update_full
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 void				gui_scene_common_update_limited
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 void				gui_scene_common_update_csg
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 void 				gui_scene_common_update_types
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 void 				gui_scene_common_update_textures
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 void 				gui_scene_common_update_background
 					(t_gui_scene_common *gui);
 void 				gui_scene_common_update_all
-					(t_gui_scene_common *gui, t_scene *scene);
+					(t_gui_scene_common *gui);
 
 #endif

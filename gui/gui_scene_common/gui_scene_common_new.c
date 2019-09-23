@@ -5,6 +5,9 @@ t_gui_scene_common		*gui_scene_common_new(GtkBuilder *builder)
 	t_gui_scene_common	*new;
 
 	new = rt_malloc(sizeof(t_gui_scene_common));
+	new->connected = rt_false;
+	new->ptr_scene = NULL;
+	new->ptr_light = NULL;
 	new->full = RT_GUI_GET(builder, "scene_list");
 	new->limited_main = RT_GUI_GET(builder, "scene_limited_main_list");
 	new->limited_limit = RT_GUI_GET(builder, "scene_limited_limit_list");

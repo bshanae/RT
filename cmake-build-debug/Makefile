@@ -4875,6 +4875,33 @@ gui/gui_scene_common/gui_scene_common_add_to_list.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_add_to_list.c.s
 
+gui/gui_scene_common/gui_scene_common_connect.o: gui/gui_scene_common/gui_scene_common_connect.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_connect.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_connect.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.c.o
+
+gui/gui_scene_common/gui_scene_common_connect.i: gui/gui_scene_common/gui_scene_common_connect.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_connect.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_connect.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.c.i
+
+gui/gui_scene_common/gui_scene_common_connect.s: gui/gui_scene_common/gui_scene_common_connect.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_connect.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_connect.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_connect.c.s
+
 gui/gui_scene_common/gui_scene_common_delete.o: gui/gui_scene_common/gui_scene_common_delete.c.o
 
 .PHONY : gui/gui_scene_common/gui_scene_common_delete.o
@@ -7464,6 +7491,9 @@ help:
 	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_add_to_list.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_connect.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_connect.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_connect.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_delete.s"

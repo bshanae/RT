@@ -10,7 +10,9 @@ void 					gui_scene_edit_show
 	gui_entry_set_str(edit->name, object->name);
 	gui_entry_set_str(edit->type, type_str);
 	gtk_stack_set_visible_child_name(edit->stack, type_str);
-	if (object->type == object_type_light_point)
+	if (object->type == object_type_light_ambient)
+		;
+	else if (object->type == object_type_light_point)
 		gui_object_light_point_get(&edit->light_point, object);
 	else if (object->type == object_type_light_direct)
 		gui_object_light_direct_get(&edit->light_direct, object);

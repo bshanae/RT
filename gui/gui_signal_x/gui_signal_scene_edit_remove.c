@@ -17,7 +17,7 @@ void					gui_signal_scene_edit_remove
 		scene_object_remove(gui->renderer->data.scene, edit->current_id);
 	else
 		return ;
-	gui_scene_common_update_all(gui->scene->common, gui->renderer->data.scene);
+	gui_scene_common_update_all(gui->scene->common);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_push(gui->queue);

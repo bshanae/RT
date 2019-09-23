@@ -12,6 +12,8 @@ void						gui_signal_settings_light
 	state[0] = gtk_toggle_button_get_active(gui->settings->light_basic);
 	state[1] = gtk_toggle_button_get_active(gui->settings->light_area);
 	settings->light_mod = state[0] ? rt_light_basic : rt_light_area;
+	gui_scene_common_update_all(gui->scene->common);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_settings);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_push(gui->queue);

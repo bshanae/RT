@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.o"
+  "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_connect.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o"

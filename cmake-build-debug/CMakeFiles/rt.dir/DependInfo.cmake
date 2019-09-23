@@ -180,6 +180,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_new.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_add/gui_scene_add_prepare.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_add/gui_scene_add_prepare.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_add_to_list.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_add_to_list.c.o"
+  "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_connect.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_connect.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_delete.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_gen_name.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o"
   "/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_new.c" "/home/vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.o"

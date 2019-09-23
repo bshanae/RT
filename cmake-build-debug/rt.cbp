@@ -728,6 +728,9 @@
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_add_to_list.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_connect.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/home/vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_delete.c">
 			<Option target="rt"/>
 		</Unit>

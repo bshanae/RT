@@ -17,7 +17,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_csg(gui->renderer->data.scene);
+	scene_test_rt(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 180;
 	gui->renderer->data.camera->position.y = 15;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
@@ -73,6 +73,15 @@ void				scene_test_rt(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 0.}, 3.);
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
 	scene_edit_param(scene, -1, scene_param_name, "Light");
+
+	object_build(scene_get_space(scene), object_type_light_ambient);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT_AMBIENT);
+	scene_edit_param(scene, -1, scene_param_name, "Light Ambient");
+
+	object_build(scene_get_space(scene), object_type_light_point, (RT_F4_API){10., 0., 0.});
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light Point");
+
 
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
 	scene_edit_param(scene, -1, scene_param_name, "Plane A");
