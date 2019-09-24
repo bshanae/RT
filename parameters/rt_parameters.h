@@ -71,25 +71,25 @@ typedef enum						s_rt_filter_mod
 # define RT_ANTIALIASING			1
 # define RT_FILTER					rt_filter_none
 # define RT_FOCUS					0
-# define RT_APERTURE_SIZE			(RT_F)5.
+# define RT_APERTURE_SIZE			(RT_F)2.
 # define RT_FOCAL_LENGTH			(RT_F)40.
 
 # define RT_OBJECT_MOVE_VALUE		(RT_F)1.
 # define RT_CAMERA_MOVE_VALUE		(RT_F)1.
 # define RT_CAMERA_ROTATE_VALUE		(RT_F)0.025
 
-# define RT_ROOM					0
+# define RT_ROOM					1
 
 # define RT_LIGHT_MOD				rt_light_area
 
 # define RT_LIGHT_BASIC_BLINN		(RT_F)20.
 
 # define RT_LIGHT_AREA_MULTIPLIER	(RT_F)3.
-# define RT_LIGHT_AREA_FLOOR		(RT_F).12
+# define RT_LIGHT_AREA_FLOOR		(RT_F).05
 # define RT_LIGHT_AREA_CEILING		(RT_F).95
 
 # define RT_ILLUMINATION			1
-# define RT_ILLUMINATION_VALUE		(RT_F)1.5
+# define RT_ILLUMINATION_VALUE		(RT_F)1.
 # define RT_ILLUMINATION_POWER		(RT_F)2.
 
 # define RT_PT_DEPTH				1

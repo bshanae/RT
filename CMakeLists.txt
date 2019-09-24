@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)

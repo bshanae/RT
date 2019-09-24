@@ -9,4 +9,5 @@ CHAR_REF			rt_background_translate(t_rt_background i)
 	else if (i == rt_background_interpolation)
 		return ("Interpolated color");
 	rt_raise_warning("rt_background : unknown value");
+	return (NULL);
 }

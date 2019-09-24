@@ -16,14 +16,14 @@ gboolean 			gui_signal_image_click
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
+	if (gui->camera->focus_request)
+		gui_command_focus(gui, event);
 	if (!gtk_widget_is_focus(GTK_WIDGET(gui->image->event_box)))
 	{
 		gtk_widget_grab_focus(GTK_WIDGET(gui->image->event_box));
 		return (TRUE);
 	}
-	if (static_is_left_click(event) && gui->camera->focus_request)
-		gui_command_focus(gui, event);
-	else if (static_is_left_click(event))
+	if (static_is_left_click(event))
 		gui_command_select(gui, event);
 	else if (static_is_right_click(event))
 		gui_command_unselect(gui);

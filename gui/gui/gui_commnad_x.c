@@ -20,7 +20,6 @@ void 				gui_command_select(t_gui *gui, GdkEventButton *event)
 	gui_queue_unblock(gui->queue);
 	gui_queue_wait(gui->queue);
 	gui_scene_edit_select(gui->scene->edit, gui->renderer->data.scene);
-	gtk_widget_set_sensitive(GTK_WIDGET(gui->notebook), 1);
 }
 
 void 				gui_command_unselect(t_gui *gui)

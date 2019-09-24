@@ -30,8 +30,9 @@ static void			static_post_queue(t_cl_renderer *renderer)
 	if (renderer->data.camera->focus_request)
 	{
 		cl_args_list_read(renderer->args, cl_arg_camera);
-		renderer->data.camera->select_request = 0;
+		renderer->data.camera->focus_request = 0;
 		cl_renderer_flag_set(renderer, cl_flag_update_camera);
+		cl_renderer_flag_set(renderer, cl_flag_reset_samples);
 	}
 	if (!renderer->data.settings.motion_blur)
 		renderer->data.settings.sample_count++;
