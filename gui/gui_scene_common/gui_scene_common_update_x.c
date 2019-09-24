@@ -1,8 +1,8 @@
 #include "gui_scene_common.h"
 
-static int 			static_check_mod(t_gui_scene_common *gui, int i)
+static int 			static_check_mod(t_gui_scene_common *gui, t_object *object)
 {
-	const UINT		flag = object_flag_get(gui->ptr_scene->objects + i);
+	const UINT		flag = object_flag_get(object);
 
 	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
 		return (0);
@@ -20,7 +20,7 @@ void 				gui_scene_common_update_full(t_gui_scene_common *gui)
 	{
 		if (!gui->ptr_scene->objects[i].name[0])
 			gui_scene_common_gen_name(gui, gui->ptr_scene->objects + i);
-		if (static_check_mod(gui, i))
+		if (static_check_mod(gui, gui->ptr_scene->objects + i))
 			gui_scene_common_add_to_list(gui->full, gui->ptr_scene->objects + i);
 		i++;
 
@@ -98,7 +98,7 @@ void 				gui_scene_common_update_types(t_gui_scene_common *gui)
 	while (iter_type < object_type_end)
 	{
 		temp.type = iter_type;
-		if (object_flag_get(&temp) & *gui->ptr_scene->current_mod)
+		if (static_check_mod(gui, &temp))
 		{
 			gtk_list_store_append(gui->types, &iter_list);
 			gtk_list_store_set(gui->types, &iter_list,

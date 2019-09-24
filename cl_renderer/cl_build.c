@@ -2298,7 +2298,7 @@ static RT_F4		light_area(
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), RT_LIGHT_AREA_FLOOR));
+	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), 0));
 }
 
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2408,7 +2408,6 @@ static RT_F4					illumination(
  								constant t_rt_settings *settings)
 {
 	t_object_sphere				sphere;
-	t_object_light_point		point;
 	RT_F						x;
 	RT_F4						k;
 	RT_F4						illumination;
@@ -2423,7 +2422,7 @@ static RT_F4					illumination(
         	continue ;
 		if (scene->objects[i].is_selected == rt_true)
         	continue ;
-        if (scene->objects[i].type != object_type_sphere && scene->objects[i].type != object_type_light_point)
+        if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
@@ -2437,13 +2436,6 @@ static RT_F4					illumination(
 
 			if (x < sphere.radius)
 				continue;
-		}
-		else if (scene->objects[i].type == object_type_light_point)
-		{
-			point = *(global t_object_light_point *)scene->objects[i].data;
-
-			k = normalize(intersection->ray.direction - normalize(point.position - intersection->ray.origin));
-			x = dot(intersection->ray.origin - point.position, k) + point.radius;
 		}
 
 		light = *intersection;
