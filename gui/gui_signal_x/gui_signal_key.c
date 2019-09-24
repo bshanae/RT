@@ -20,9 +20,11 @@ static int			try_move_camera(t_gui *gui, int key)
 		return (0);
 	if (gui->renderer->data.scene->selected_id != -1)
 	{
+		gui->scene->edit->control.silent = rt_true;
 		gui_scene_edit_show(gui->scene->edit,
 			gui->renderer->data.scene->objects + gui->scene->edit->current_id);
 		cl_renderer_object_move(gui->renderer, movement);
+		gui->scene->edit->control.silent = rt_false;
 	}
 	else
 	{

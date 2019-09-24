@@ -277,6 +277,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_camera_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_change_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_delete.c">
 			<Option target="rt"/>
 		</Unit>
@@ -296,9 +299,6 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_render.c">
-			<Option target="rt"/>
-		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_switch_mod.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/disruption_x/disruption_checkerboard.c">

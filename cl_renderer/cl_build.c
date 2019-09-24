@@ -2408,8 +2408,8 @@ static RT_F4					illumination(
  								constant t_rt_settings *settings)
 {
 	t_object_sphere				sphere;
+	t_object_light_point		point;
 	RT_F						x;
-	RT_F						y;
 	RT_F4						k;
 	RT_F4						illumination;
 	t_intersection				light;
@@ -2423,19 +2423,28 @@ static RT_F4					illumination(
         	continue ;
 		if (scene->objects[i].is_selected == rt_true)
         	continue ;
-        if (scene->objects[i].type != object_type_sphere)
+        if (scene->objects[i].type != object_type_sphere && scene->objects[i].type != object_type_light_point)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = *(global t_object_sphere *)scene->objects[i].data;
+		if (scene->objects[i].type == object_type_sphere)
+		{
+			sphere = *(global t_object_sphere *)scene->objects[i].data;
 
-		k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
-		y = length(sphere.position - intersection->ray.origin + k * x);
+			k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
+			x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
 
-		if (x < sphere.radius)
-			continue;
+			if (x < sphere.radius)
+				continue;
+		}
+		else if (scene->objects[i].type == object_type_light_point)
+		{
+			point = *(global t_object_light_point *)scene->objects[i].data;
+
+			k = normalize(intersection->ray.direction - normalize(point.position - intersection->ray.origin));
+			x = dot(intersection->ray.origin - point.position, k) + point.radius;
+		}
 
 		light = *intersection;
 
@@ -2688,7 +2697,7 @@ kernel void			cl_main(
         image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), 0);
 	}
 	else
-		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_sepia);
+		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
 }
 
 

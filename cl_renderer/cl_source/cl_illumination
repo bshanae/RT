@@ -8,7 +8,6 @@ static RT_F4					illumination(
 {
 	t_object_sphere				sphere;
 	RT_F						x;
-	RT_F						y;
 	RT_F4						k;
 	RT_F4						illumination;
 	t_intersection				light;
@@ -27,14 +26,16 @@ static RT_F4					illumination(
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = *(global t_object_sphere *)scene->objects[i].data;
+		if (scene->objects[i].type == object_type_sphere)
+		{
+			sphere = *(global t_object_sphere *)scene->objects[i].data;
 
-		k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
-		y = length(sphere.position - intersection->ray.origin + k * x);
+			k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
+			x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
 
-		if (x < sphere.radius)
-			continue;
+			if (x < sphere.radius)
+				continue;
+		}
 
 		light = *intersection;
 

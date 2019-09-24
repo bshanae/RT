@@ -14,11 +14,9 @@ void 				gui_queue_block(t_gui_queue *queue)
 		if (current - start > RT_GUI_QUEUE_WAIT_LIMIT)
 			break ;
 	}
-	printf("Queue blocked\n");
 }
 
 void 				gui_queue_unblock(t_gui_queue *queue)
 {
 	queue->block = queue->block_last_state;
-	printf("Queue unblocked\n\n");
 }

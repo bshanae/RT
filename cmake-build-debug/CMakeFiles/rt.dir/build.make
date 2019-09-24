@@ -3346,18 +3346,18 @@ CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_object_move.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.s
 
-CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o: ../cl_renderer/cl_renderer/cl_renderer_switch_mod.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_switch_mod.c
+CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o: ../cl_renderer/cl_renderer/cl_renderer_change_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building C object CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_change_x.c
 
-CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_switch_mod.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
+CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_change_x.c > CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.i
 
-CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_switch_mod.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
+CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer_change_x.c -o CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.s
 
 # Object files for target rt
 rt_OBJECTS = \
@@ -3614,7 +3614,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o" \
 "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o" \
-"CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o"
+"CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o"
 
 # External object files for target rt
 rt_EXTERNAL_OBJECTS =
@@ -3872,7 +3872,7 @@ rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o
 rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o
-rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
+rt: CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o
 rt: CMakeFiles/rt.dir/build.make
 rt: CMakeFiles/rt.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Linking C executable rt"

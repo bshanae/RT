@@ -482,7 +482,7 @@ set(SOURCE_CL_RENDERER_
 	./cl_renderer/cl_renderer/cl_renderer_load.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
 	./cl_renderer/cl_renderer/cl_renderer_object_move.c
-	./cl_renderer/cl_renderer/cl_renderer_switch_mod.c)
+	cl_renderer/cl_renderer/cl_renderer_change_x.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_F2}

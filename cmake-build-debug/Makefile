@@ -798,6 +798,33 @@ cl_renderer/cl_renderer/cl_renderer_camera_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_x.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_camera_x.c.s
 
+cl_renderer/cl_renderer/cl_renderer_change_x.o: cl_renderer/cl_renderer/cl_renderer_change_x.c.o
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.o
+
+# target to build an object file
+cl_renderer/cl_renderer/cl_renderer_change_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.c.o
+
+cl_renderer/cl_renderer/cl_renderer_change_x.i: cl_renderer/cl_renderer/cl_renderer_change_x.c.i
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.i
+
+# target to preprocess a source file
+cl_renderer/cl_renderer/cl_renderer_change_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.i
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.c.i
+
+cl_renderer/cl_renderer/cl_renderer_change_x.s: cl_renderer/cl_renderer/cl_renderer_change_x.c.s
+
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.s
+
+# target to generate assembly for a file
+cl_renderer/cl_renderer/cl_renderer_change_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.s
+.PHONY : cl_renderer/cl_renderer/cl_renderer_change_x.c.s
+
 cl_renderer/cl_renderer/cl_renderer_delete.o: cl_renderer/cl_renderer/cl_renderer_delete.c.o
 
 .PHONY : cl_renderer/cl_renderer/cl_renderer_delete.o
@@ -959,33 +986,6 @@ cl_renderer/cl_renderer/cl_renderer_render.s: cl_renderer/cl_renderer/cl_rendere
 cl_renderer/cl_renderer/cl_renderer_render.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_render.c.s
 .PHONY : cl_renderer/cl_renderer/cl_renderer_render.c.s
-
-cl_renderer/cl_renderer/cl_renderer_switch_mod.o: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.o
-
-# target to build an object file
-cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.o
-
-cl_renderer/cl_renderer/cl_renderer_switch_mod.i: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.i
-
-# target to preprocess a source file
-cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.i
-
-cl_renderer/cl_renderer/cl_renderer_switch_mod.s: cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
-
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.s
-
-# target to generate assembly for a file
-cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
-.PHONY : cl_renderer/cl_renderer/cl_renderer_switch_mod.c.s
 
 cl_renderer/disruption_x/disruption_checkerboard.o: cl_renderer/disruption_x/disruption_checkerboard.c.o
 
@@ -7065,6 +7065,9 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_camera_x.s"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_change_x.o"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_change_x.i"
+	@echo "... cl_renderer/cl_renderer/cl_renderer_change_x.s"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_delete.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_delete.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_delete.s"
@@ -7083,9 +7086,6 @@ help:
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.o"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.i"
 	@echo "... cl_renderer/cl_renderer/cl_renderer_render.s"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.o"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.i"
-	@echo "... cl_renderer/cl_renderer/cl_renderer_switch_mod.s"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.o"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.i"
 	@echo "... cl_renderer/disruption_x/disruption_checkerboard.s"
