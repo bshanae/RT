@@ -20,6 +20,7 @@ typedef struct 					s_gui_scene_edit
 	GtkTreeSelection			*selection;
 	int 						current_id;
 	GtkTreeIter					iter;
+	GtkWidget					*remove_button;
 	GtkDialog					*remove_dialog;
 	GtkEntry					*name;
 	GtkEntry					*type;

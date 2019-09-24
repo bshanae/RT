@@ -12,6 +12,7 @@ void 							gui_scene_edit_init_own
 	edit->control = gui_control_init(&init, builder);
 	edit->info = RT_GUI_GET(builder, "scene_edit_info");
 	edit->selection = RT_GUI_GET(builder, "scene_edit_selection");
+	edit->remove_button = RT_GUI_GET(builder, "scene_edit_remove_button");
 	edit->remove_dialog = RT_GUI_GET(builder, "scene_edit_remove_dialog");
 	edit->name = RT_GUI_GET(builder, "scene_edit_name");
 	edit->type = RT_GUI_GET(builder, "scene_edit_type");

@@ -11,6 +11,7 @@ void 				gui_signal_scene_edit_select
 	if (!gtk_tree_selection_get_selected(gui->scene->edit->selection,
 		&model, &gui->scene->edit->iter))
 		return ;
+	gtk_widget_set_sensitive(gui->scene->edit->remove_button, TRUE);
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
 		gui_list_column_id, &gui->scene->edit->current_id , -1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;

@@ -1119,7 +1119,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="margin_bottom">2</property>
                                 <child>
-                                  <object class="GtkButton">
+                                  <object class="GtkButton" id="scene_edit_remove_button">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">True</property>
@@ -1292,26 +1292,6 @@
                                     <property name="margin_bottom">2</property>
                                     <property name="vhomogeneous">False</property>
                                     <child>
-                                      <object class="GtkBox">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="orientation">vertical</property>
-                                        <child>
-                                          <placeholder/>
-                                        </child>
-                                        <child>
-                                          <placeholder/>
-                                        </child>
-                                        <child>
-                                          <placeholder/>
-                                        </child>
-                                      </object>
-                                      <packing>
-                                        <property name="name">hide</property>
-                                        <property name="title" translatable="yes">page0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
                                       <object class="GtkBox" id="object_edit_light_ambient">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
@@ -1324,7 +1304,6 @@
                                       <packing>
                                         <property name="name">Ambient light</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">1</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -1412,7 +1391,7 @@
                                       <packing>
                                         <property name="name">Point light</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">2</property>
+                                        <property name="position">1</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -1500,7 +1479,7 @@
                                       <packing>
                                         <property name="name">Direct light</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">3</property>
+                                        <property name="position">2</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -1637,7 +1616,7 @@
                                       <packing>
                                         <property name="name">Sphere</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">4</property>
+                                        <property name="position">3</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -1801,7 +1780,7 @@
                                       <packing>
                                         <property name="name">Plane</property>
                                         <property name="title" translatable="yes">page1</property>
-                                        <property name="position">5</property>
+                                        <property name="position">4</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2009,7 +1988,7 @@
                                       <packing>
                                         <property name="name">Cone</property>
                                         <property name="title" translatable="yes">page3</property>
-                                        <property name="position">6</property>
+                                        <property name="position">5</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2217,7 +2196,7 @@
                                       <packing>
                                         <property name="name">Cylinder</property>
                                         <property name="title" translatable="yes">page2</property>
-                                        <property name="position">7</property>
+                                        <property name="position">6</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2381,7 +2360,7 @@
                                       <packing>
                                         <property name="name">Box</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">8</property>
+                                        <property name="position">7</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2589,7 +2568,7 @@
                                       <packing>
                                         <property name="name">Paraboloid</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">9</property>
+                                        <property name="position">8</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2765,7 +2744,7 @@
                                       <packing>
                                         <property name="name">Moebius strip</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">10</property>
+                                        <property name="position">9</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -2875,7 +2854,7 @@
                                       <packing>
                                         <property name="name">Limited</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">11</property>
+                                        <property name="position">10</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3050,7 +3029,7 @@
                                       <packing>
                                         <property name="name">Torus</property>
                                         <property name="title" translatable="yes">page0</property>
-                                        <property name="position">12</property>
+                                        <property name="position">11</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3150,7 +3129,7 @@
                                       <packing>
                                         <property name="name">tetrahedron</property>
                                         <property name="title" translatable="yes">page1</property>
-                                        <property name="position">13</property>
+                                        <property name="position">12</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3250,7 +3229,7 @@
                                       <packing>
                                         <property name="name">Mandelbulb</property>
                                         <property name="title" translatable="yes">page2</property>
-                                        <property name="position">14</property>
+                                        <property name="position">13</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3399,7 +3378,7 @@
                                       <packing>
                                         <property name="name">Julia</property>
                                         <property name="title" translatable="yes">page4</property>
-                                        <property name="position">15</property>
+                                        <property name="position">14</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3529,7 +3508,7 @@
                                       <packing>
                                         <property name="name">Perforated cube</property>
                                         <property name="title" translatable="yes">page1</property>
-                                        <property name="position">16</property>
+                                        <property name="position">15</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3704,7 +3683,7 @@
                                       <packing>
                                         <property name="name">Explosion</property>
                                         <property name="title" translatable="yes">page2</property>
-                                        <property name="position">17</property>
+                                        <property name="position">16</property>
                                       </packing>
                                     </child>
                                     <child>
@@ -3814,7 +3793,7 @@
                                       <packing>
                                         <property name="name">CSG</property>
                                         <property name="title" translatable="yes">page3</property>
-                                        <property name="position">18</property>
+                                        <property name="position">17</property>
                                       </packing>
                                     </child>
                                   </object>
