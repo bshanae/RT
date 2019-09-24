@@ -56,7 +56,7 @@ static RT_F4				radiance_read(
 		alpha = 1.;
 		i = 0;
 		count = 0;
-		for (i = RT_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+		for (i = RT_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count < settings->motion_blur_sample_count; i--, count++)
        	{
        		sum  += sample_store[i][global_id];
        		alpha *= RT_MOTION_BLUR_ALPHA;
