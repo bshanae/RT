@@ -86,6 +86,7 @@ void 					gui_material_texture_get
 void 					gui_material_texture_set
 						(t_gui_material *material, int *id);
 
+void 					gui_material_hide(t_gui_material *material);
 void 					gui_material_prepare
 						(t_gui_material *material, t_object *object);
 

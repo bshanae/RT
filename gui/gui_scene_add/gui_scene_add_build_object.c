@@ -7,7 +7,9 @@ void				gui_scene_add_build_object
 		add->generator_next_id++;
 	ft_strcpy(object->name, gui_entry_get_str(add->name));
 	object->type = add->current_type;
-	if (object->type == object_type_light_point)
+	if (object->type == object_type_light_ambient)
+		;
+	else if (object->type == object_type_light_point)
 		gui_object_light_point_set(&add->light_point, object);
 	else if (object->type == object_type_light_direct)
 		gui_object_light_direct_set(&add->light_direct, object);

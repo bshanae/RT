@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
 set(RT_GTK_PKG ON)
-set(RT_LINUX OFF)
+set(RT_LINUX ON)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -225,7 +225,7 @@ set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_switch_mod.c
 	./gui/gui_material/gui_material_texture_x.c
 	./gui/gui_material/gui_material_special_x.c
-	./gui/gui_material/gui_material_prepare.c)
+	./gui/gui_material/gui_material_prepare.c gui/gui_material/gui_material_hide.c)
 
 set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c

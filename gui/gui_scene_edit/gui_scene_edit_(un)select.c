@@ -33,5 +33,8 @@ void				gui_scene_edit_select
 
 void				gui_scene_edit_unselect(t_gui_scene_edit *edit)
 {
+	gui_material_hide(&edit->material);
+	gtk_widget_hide(GTK_WIDGET(edit->info));
 	gtk_tree_selection_unselect_all(edit->selection);
+	gui_control_hide(&edit->control);
 }

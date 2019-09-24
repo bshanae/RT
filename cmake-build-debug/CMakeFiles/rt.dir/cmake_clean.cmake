@@ -61,6 +61,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_material/gui_material_texture_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_material/gui_material_special_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_material/gui_material_prepare.c.o"
+  "CMakeFiles/rt.dir/gui/gui_material/gui_material_hide.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_gen_name.c.o"
