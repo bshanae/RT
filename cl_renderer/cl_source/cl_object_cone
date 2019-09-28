@@ -99,6 +99,7 @@ static void			object_cone_intersect_t(global t_object *object, t_intersection *i
 			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
         return ;
+
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
 	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)

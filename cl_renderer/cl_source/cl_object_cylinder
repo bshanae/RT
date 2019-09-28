@@ -46,6 +46,7 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	RT_F4			    temp[2];
     RT_F			    angle[2];
 	RT_F                discriminant;
+	int             	is_infinity_part;
 	RT_F                t[2];
 	RT_F                k[3];
 
@@ -65,13 +66,17 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 		return (0);
+
     temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
+
     angle[0] = dot((temp[0] - data.top), data.axis);
     angle[1] = dot(temp[0] - data.bottom, data.axis);
+    is_infinity_part = angle[0] > 0. || angle[1] < 0.;
     t[1] = object_cylinder_cap_intersect(object, intersection);
-    if ((angle[0] > 0. || angle[1] < 0.) && t[1] != INFINITY)
+
+    if (is_infinity_part && t[1] != INFINITY)
         t[0] = t[1];
-    else if (!(angle[0] > 0. || angle[1] < 0.))
+    else if (!is_infinity_part)
         intersection->cups_flag = 0;
     else
         return (0);
@@ -104,24 +109,21 @@ static void			    object_cylinder_intersect_t(global t_object *object, t_interse
 			- pow((RT_F)data.radius, (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
         return ;
+
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
 	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 	{
-    	if (t[1] <= RT_EPSILON || t[1] >= intersection->ray.t)
-    	{
-    		t[0] = RT_INFINITY;
-        	t[1] = RT_INFINITY;
-    		return ;
-    	}
-    	t[0] = t[1];
+    	t[0] = RT_INFINITY;
+        t[1] = RT_INFINITY;
+    	return ;
     }
 
     for (int i = 0; i < 2; i++)
     {
     	temp = intersection->ray.origin + intersection->ray.direction * t[i];
-    	angle[0] = dot((temp - data.top), data.axis);
-        angle[1] = dot(temp - data.bottom, data.axis);
+    	angle[0] = dot(normalize(temp - data.top), data.axis);
+        angle[1] = dot(normalize(temp - data.bottom), data.axis);
         is_infinity_part[i] = (angle[0] > 0. || angle[1] < 0.);
     }
 
@@ -130,9 +132,11 @@ static void			    object_cylinder_intersect_t(global t_object *object, t_interse
     	t[0] = t_cups;
     else if (is_infinity_part[1] && t_cups != INFINITY)
     	t[1] = t_cups;
-    else if (!is_infinity_part[0])
+
+    if ((!is_infinity_part[0] && t[0] < t[1]) || (!is_infinity_part[1] && t[1] < t[0]))
         intersection->cups_flag = 0;
-    else
+
+    if (is_infinity_part[0] && is_infinity_part[1])
     {
     	t[0] = RT_INFINITY;
         t[1] = RT_INFINITY;
