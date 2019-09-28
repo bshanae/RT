@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(RT_GTK_PKG ON)
-set(RT_LINUX ON)
+set(RT_GTK_PKG OFF)
+set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
 	find_package(PkgConfig REQUIRED)
@@ -397,7 +397,7 @@ set(SOURCE_F4
 	cl_renderer/f4/f4_rotate_x.c
 	./cl_renderer/f4/f4_length.c
 	./cl_renderer/f4/f4_normalize.c
-	./cl_renderer/f4/f4_dot.c)
+	./cl_renderer/f4/f4_dot.c cl_renderer/f4/f4_cross.c)
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c

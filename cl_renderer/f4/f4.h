@@ -34,4 +34,6 @@ RT_F4_API			f4_normalize(RT_F4_API source);
 
 RT_F				f4_dot(RT_F4_API a, RT_F4_API b);
 
+RT_F4_API			f4_cross(RT_F4_API a, RT_F4_API b);
+
 #endif

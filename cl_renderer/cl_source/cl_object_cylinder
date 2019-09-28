@@ -62,6 +62,8 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 		return (0);
     temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p

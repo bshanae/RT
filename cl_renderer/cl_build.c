@@ -699,8 +699,29 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-		return (0);
+	{
+		t[0] = t[1];
+		if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+			return (0);
+		else
+		{
+			 //temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
+             //angle[0] = dot((temp[0] - data.top), data.axis);
+             //angle[1] = dot(temp[0] - data.bottom, data.axis);
+             t[0] = object_cylinder_cap_intersect(object, intersection);
+             temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];
+             if ((dot(temp[0] - data.bottom, axis) / length(temp[0] - data.bottom)) >= 0 && (dot(temp[0] - data.top, axis) / length(temp[0] - data.top)) <= 0)
+             {
+             	intersection->ray.t = object_cylinder_cap_intersect(object, intersection);
+             	intersection->object_id = object->id;
+             	return (1);
+             }
+             else
+             	return (0);
+		}
+	}
     temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
     angle[0] = dot((temp[0] - data.top), data.axis);
     angle[1] = dot(temp[0] - data.bottom, data.axis);
@@ -1799,25 +1820,38 @@ static void         cylinder_texture(
 }
 
 static void         cone_texture(
-					global t_camera *camera,
+                    global t_camera *camera,
                     global t_texture *texture,
                     global t_object *object,
                     t_intersection *intersection,
                     RT_F *u, RT_F *v)
 {
-    t_object_cone	data;
+    t_object_cone   data;
     RT_F4           normal;
+    RT_F4           cosine;
+    RT_F4           cathet_a;
+    RT_F4           cathet_b;
+    RT_F4           hit_bottom;
+    RT_F4           top_bottom;
 
     data = *(global t_object_cone* )object->data;
-    normal = normalize(intersection->hit - (data.bottom + (data.bottom - data.top) / 2));
+    hit_bottom = intersection->hit - data.bottom;
+    top_bottom = data.top - data.bottom;
+    cosine = 1 - dot(normalize(top_bottom), normalize(hit_bottom));
+    cathet_a = cosine * length(hit_bottom);
+    cathet_b = sqrt(pow(length(hit_bottom), 2) - pow(cathet_a, 2));
+    normal = normalize(intersection->hit - (normalize(top_bottom) * cathet_b));
 
-	*u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
+    if ((data.top - data.bottom).y == 0)
+        *u = 0.5 + atan2(normal.y, normal.z) / (2 * _RT_PI);
+    else
+        *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
 
-	if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
-		&& dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
-		*v = 1 - length(intersection->hit - data.top) / data.length;
-	else
-		*v = length(intersection->hit - data.bottom) / data.length;
+    if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
+        *v = 1 - length(intersection->hit - data.top) / data.length;
+    else
+        *v = length(intersection->hit - data.bottom) / data.length;
 }
 
 static void         sphere_texture(
@@ -2298,7 +2332,7 @@ static RT_F4		light_area(
 		omega = 2 * RT_PI * (1.f - cos_a_max);
 		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
-	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), 0));
+	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), RT_LIGHT_AREA_FLOOR));
 }
 
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2526,7 +2560,7 @@ static RT_F4				radiance_read(
 		alpha = 1.;
 		i = 0;
 		count = 0;
-		for (i = RT_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+		for (i = RT_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count < settings->motion_blur_sample_count; i--, count++)
        	{
        		sum  += sample_store[i][global_id];
        		alpha *= RT_MOTION_BLUR_ALPHA;

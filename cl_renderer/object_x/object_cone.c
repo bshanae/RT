@@ -5,6 +5,7 @@ void				object_cone_build(t_object *space, va_list *args)
     t_object_cone	*data;
     RT_F4_API		temp_axis;
 	RT_F4_API		temp_bottom;
+	RT_F4_API       temp_cross;
 
     data = (t_object_cone *)space->data;
     data->top = va_arg(*args, RT_F4_API);
@@ -14,6 +15,7 @@ void				object_cone_build(t_object *space, va_list *args)
     data->tangent = data->radius / f4_length(temp_axis);
     data->axis = f4_normalize(temp_axis);
     space->type = object_type_cone;
+
 	temp_bottom = (RT_F4_API){data->bottom.x + data->radius, data->bottom.y, data->bottom.z};
 	data->length_line = f4_length(f4_sub(data->top, temp_bottom));
 	data->length = data->length_line + data->radius;

@@ -53,10 +53,11 @@ static int			object_cone_intersect(global t_object *object, t_intersection *inte
 			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-		return (0);
 
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+    	return (0);
 	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[0]);
     temp[2] = temp[1] - data.bottom;
     angle[0] = dot((temp[1] - data.top), data.axis);
