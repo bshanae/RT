@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cl_renderer_object_move.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 14:03:06 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 14:03:07 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cl_renderer.h"
 
 # define MESSAGE	"Render : Can't move pair, because it's recursive"
 
-static void			static_move_one
-					(t_scene *scene, t_object *object, RT_F4_API step)
+static void			static_move_one(
+					t_scene *scene, t_object *object, RT_F4_API step)
 {
-	u_int 			flag;
+	u_int			flag;
 	RT_F4_API		*ptr;
 	t_object_pair	*pair;
 
@@ -25,8 +37,8 @@ static void			static_move_one
 	}
 }
 
-void				cl_renderer_object_move
-					(t_cl_renderer *renderer, t_rt_movement movement)
+void				cl_renderer_object_move(
+					t_cl_renderer *renderer, t_rt_movement movement)
 {
 	t_object		*object;
 	RT_F4_API		step;
