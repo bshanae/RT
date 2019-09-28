@@ -1,11 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cl_arg_list_push.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:42:03 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 13:42:05 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cl_arg_list.h"
 
-int					cl_arg_list_push
-					(t_cl_arg_list *list, void *ptr,
-					u_long size, cl_mem_flags type)
+int					cl_arg_list_push(
+					t_cl_arg_list *list,
+					void *ptr,
+					u_long size,
+					cl_mem_flags type)
 {
-	int 			i;
-	int 			error;
+	int				i;
+	int				error;
 
 #ifndef RT_OPEN_CL_DISABLED
 	if (list->length == RT_ARGS_CAPACITY)

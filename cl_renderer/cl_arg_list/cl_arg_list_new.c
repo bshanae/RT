@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cl_arg_list_new.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:41:56 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 13:41:57 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cl_arg_list.h"
 
-t_cl_arg_list			*cl_arg_list_new
-						(cl_context context, cl_command_queue queue)
+t_cl_arg_list			*cl_arg_list_new(
+						cl_context context, cl_command_queue queue)
 {
 	t_cl_arg_list	*new;
 

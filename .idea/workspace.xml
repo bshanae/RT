@@ -12,10 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera_get_step.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera_get_step.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/camera/camera_move.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/camera/camera_move.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_delete.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_new.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_new.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_read.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_read.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_update.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_update.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_write.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_write.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +219,7 @@
       <workItem from="1569338132509" duration="1904000" />
       <workItem from="1569340455758" duration="1834000" />
       <workItem from="1569342588281" duration="275000" />
-      <workItem from="1569659838475" duration="6080000" />
+      <workItem from="1569659838475" duration="6875000" />
     </task>
     <servers />
   </component>
