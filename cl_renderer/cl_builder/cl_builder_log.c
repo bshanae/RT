@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cl_builder_log.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:49:49 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 13:49:50 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cl_builder.h"
 
-void 				cl_builder_log(t_cl_builder *builder)
+void				cl_builder_log(t_cl_builder *builder)
 {
 	char			*log;
 	u_long			log_length;

@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_read.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_update.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_arg_list/cl_arg_list_write.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_program_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_create_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_delete.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o"
