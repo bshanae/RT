@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   camera_rotate.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:34:14 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 13:34:16 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "camera.h"
 
-void 				camera_rotate
-					(t_camera *camera,
+void				camera_rotate(
+					t_camera *camera,
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction,
 					RT_F theta)
