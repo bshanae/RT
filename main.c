@@ -109,28 +109,6 @@ void				scene_test_rm(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_csg, "Sphere", "Box");
 }
 
-void				scene_test_limited(t_scene *scene)
-{
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 10., 10.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
-	scene_edit_param(scene, -1, scene_param_name, "Light");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 15., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane A");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane B");
-
-	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-10., -10., 0.}, (RT_F4_API){-10., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
-
-	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
-
-	object_build(scene_get_space(scene), object_type_limited, "Cylinder", "Plane A");
-	scene_edit_param(scene, -1, scene_param_name, "Limited");
-}
-
 void				scene_test_box(t_scene *scene)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., 20.}, 3.);

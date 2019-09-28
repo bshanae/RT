@@ -12,8 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_cylinder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/color/color.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/color/color.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/color/color_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/color/color_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_checkerboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_checkerboard.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_perlin_noise.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_perlin_noise.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_perlin_noise.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_perlin_noise.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_sine_wave.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/disruption_x/disruption_sine_wave.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +218,7 @@
       <workItem from="1569338132509" duration="1904000" />
       <workItem from="1569340455758" duration="1834000" />
       <workItem from="1569342588281" duration="275000" />
-      <workItem from="1569659838475" duration="12094000" />
+      <workItem from="1569659838475" duration="12434000" />
     </task>
     <servers />
   </component>
