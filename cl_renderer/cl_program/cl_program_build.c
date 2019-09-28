@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cl_program_build.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:58:56 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/28 13:58:57 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cl_program.h"
 
-int					cl_program_build
-					(t_cl_program *program, cl_context context, CHAR_REF flags)
+int					cl_program_build(
+					t_cl_program *program,
+					cl_context context, CHAR_REF flags)
 {
 	program->buffer[program->length] = '\0';
 	program->program = clCreateProgramWithSource(context, 1,
