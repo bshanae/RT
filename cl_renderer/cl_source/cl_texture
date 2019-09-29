@@ -73,19 +73,23 @@ static void         cone_texture(
 {
     t_object_cone   data;
     RT_F4           normal;
-    RT_F4           cosine;
-    RT_F4           cathet_a;
-    RT_F4           cathet_b;
-    RT_F4           hit_bottom;
-    RT_F4           top_bottom;
+    RT_F4			shift;
+    RT_F4			hit_top;
+    RT_F			cosine;
+    RT_F			hypotenuse;
+    RT_F			cathet_b;
 
     data = *(global t_object_cone* )object->data;
-    hit_bottom = intersection->hit - data.bottom;
-    top_bottom = data.top - data.bottom;
-    cosine = 1 - dot(normalize(top_bottom), normalize(hit_bottom));
-    cathet_a = cosine * length(hit_bottom);
-    cathet_b = sqrt(pow(length(hit_bottom), 2) - pow(cathet_a, 2));
-    normal = normalize(intersection->hit - (normalize(top_bottom) * cathet_b));
+	shift = data.bottom - 0;
+	data.bottom += -1 * shift;
+	data.top += -1 * shift;
+	intersection->hit += -1 * shift;
+
+	hit_top = intersection->hit - data.top;
+    hypotenuse = length(hit_top);
+    cosine = dot(data.axis, normalize(hit_top));
+    cathet_b = cosine * hypotenuse;
+	normal = normalize(intersection->hit - (data.axis * cathet_b));
 
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
@@ -111,9 +115,6 @@ static void         sphere_texture(
 
     data = *(global t_object_sphere* )object->data;
     normal = normalize(intersection->hit - data.position);
-
-	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
-    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
 
     *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
     *v = 0.5 + asin(normal.y) / _RT_PI;

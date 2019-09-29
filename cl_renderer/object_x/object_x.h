@@ -58,7 +58,6 @@ typedef struct			s_object_cone
 	RT_F				radius;
 	RT_F				tangent;
 	RT_F				length;
-	RT_F				length_line;
 }						t_object_cone;
 
 typedef struct			s_object_cylinder

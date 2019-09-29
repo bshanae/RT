@@ -485,7 +485,6 @@ typedef struct 		s_object_cone
 	RT_F 			radius;
 	RT_F          	tangent;
 	RT_F            length;
-    RT_F            length_line;
 }					t_object_cone;
 
 static RT_F         object_cone_cap_intersect(global t_object *object, t_intersection *intersection)
@@ -528,10 +527,11 @@ static int			object_cone_intersect(global t_object *object, t_intersection *inte
 			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
-	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-		return (0);
 
+	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
+	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
+    	return (0);
 	temp[1] = intersection->ray.origin + (intersection->ray.direction * t[0]);
     temp[2] = temp[1] - data.bottom;
     angle[0] = dot((temp[1] - data.top), data.axis);
@@ -573,6 +573,7 @@ static void			object_cone_intersect_t(global t_object *object, t_intersection *i
 			* pow((RT_F)dot(temp[0], data.axis), (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
         return ;
+
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
 	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
@@ -646,7 +647,7 @@ typedef struct 		    s_object_cylinder
 	RT_F4   		    axis;
 	RT_F 			    radius;
 	RT_F                length;
-    RT_F                length_line;
+    RT_F                hypotenuse;
 }					    t_object_cylinder;
 
 static RT_F             object_cylinder_cap_intersect(global t_object *object, t_intersection *intersection)
@@ -683,6 +684,7 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	RT_F4			    temp[2];
     RT_F			    angle[2];
 	RT_F                discriminant;
+	int             	is_infinity_part;
 	RT_F                t[2];
 	RT_F                k[3];
 
@@ -699,36 +701,20 @@ static int			    object_cylinder_intersect(global t_object *object, t_intersecti
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
 		return (0);
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
-	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
+
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-	{
-		t[0] = t[1];
-		if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
-			return (0);
-		else
-		{
-			 //temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
-             //angle[0] = dot((temp[0] - data.top), data.axis);
-             //angle[1] = dot(temp[0] - data.bottom, data.axis);
-             t[0] = object_cylinder_cap_intersect(object, intersection);
-             temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];
-             if ((dot(temp[0] - data.bottom, axis) / length(temp[0] - data.bottom)) >= 0 && (dot(temp[0] - data.top, axis) / length(temp[0] - data.top)) <= 0)
-             {
-             	intersection->ray.t = object_cylinder_cap_intersect(object, intersection);
-             	intersection->object_id = object->id;
-             	return (1);
-             }
-             else
-             	return (0);
-		}
-	}
+		return (0);
+
     temp[0] = intersection->ray.origin + intersection->ray.direction * t[0];	// p
+
     angle[0] = dot((temp[0] - data.top), data.axis);
     angle[1] = dot(temp[0] - data.bottom, data.axis);
+    is_infinity_part = angle[0] > 0. || angle[1] < 0.;
     t[1] = object_cylinder_cap_intersect(object, intersection);
-    if ((angle[0] > 0. || angle[1] < 0.) && t[1] != INFINITY)
+
+    if (is_infinity_part && t[1] != INFINITY)
         t[0] = t[1];
-    else if (!(angle[0] > 0. || angle[1] < 0.))
+    else if (!is_infinity_part)
         intersection->cups_flag = 0;
     else
         return (0);
@@ -761,24 +747,21 @@ static void			    object_cylinder_intersect_t(global t_object *object, t_interse
 			- pow((RT_F)data.radius, (RT_F)2.);
 	if ((discriminant = k[1] * k[1] - 4 * k[0] * k[2]) < 0.)
         return ;
+
 	t[0] = (-k[1] - RT_SQRT(discriminant)) / (2 * k[0]);
 	t[1] = (-k[1] + RT_SQRT(discriminant)) / (2 * k[0]);
 	if (t[0] <= RT_EPSILON || t[0] >= intersection->ray.t)
 	{
-    	if (t[1] <= RT_EPSILON || t[1] >= intersection->ray.t)
-    	{
-    		t[0] = RT_INFINITY;
-        	t[1] = RT_INFINITY;
-    		return ;
-    	}
-    	t[0] = t[1];
+    	t[0] = RT_INFINITY;
+        t[1] = RT_INFINITY;
+    	return ;
     }
 
     for (int i = 0; i < 2; i++)
     {
     	temp = intersection->ray.origin + intersection->ray.direction * t[i];
-    	angle[0] = dot((temp - data.top), data.axis);
-        angle[1] = dot(temp - data.bottom, data.axis);
+    	angle[0] = dot(normalize(temp - data.top), data.axis);
+        angle[1] = dot(normalize(temp - data.bottom), data.axis);
         is_infinity_part[i] = (angle[0] > 0. || angle[1] < 0.);
     }
 
@@ -787,9 +770,10 @@ static void			    object_cylinder_intersect_t(global t_object *object, t_interse
     	t[0] = t_cups;
     else if (is_infinity_part[1] && t_cups != INFINITY)
     	t[1] = t_cups;
-    else if (!is_infinity_part[0])
+
+    if ((!is_infinity_part[0] && t[0] < t[1]) || (!is_infinity_part[1] && t[1] < t[0]))
         intersection->cups_flag = 0;
-    else
+    else if (is_infinity_part[0] && is_infinity_part[1] && t_cups == INFINITY)
     {
     	t[0] = RT_INFINITY;
         t[1] = RT_INFINITY;
@@ -1807,9 +1791,11 @@ static void         cylinder_texture(
 
     *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
 
-    if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
+    if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
+    	&& dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
         *v = length(intersection->hit - data.bottom) / data.length;
-    else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON && dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
+    else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON
+    	&& dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
         *v = 1 - length(intersection->hit - data.top) / data.length;
     else
     {
@@ -1828,24 +1814,33 @@ static void         cone_texture(
 {
     t_object_cone   data;
     RT_F4           normal;
-    RT_F4           cosine;
-    RT_F4           cathet_a;
-    RT_F4           cathet_b;
-    RT_F4           hit_bottom;
-    RT_F4           top_bottom;
+    RT_F4			hit_top;
+    RT_F			cosine;
+    RT_F			hypotenuse;
+    RT_F			cathet_b;
 
     data = *(global t_object_cone* )object->data;
-    hit_bottom = intersection->hit - data.bottom;
-    top_bottom = data.top - data.bottom;
-    cosine = 1 - dot(normalize(top_bottom), normalize(hit_bottom));
-    cathet_a = cosine * length(hit_bottom);
-    cathet_b = sqrt(pow(length(hit_bottom), 2) - pow(cathet_a, 2));
-    normal = normalize(intersection->hit - (normalize(top_bottom) * cathet_b));
+
+    //if (get_global_id(0) < 400) {
+    //printf("top: x - %f y - %f z - %f\n", data.top.x, data.top.y, data.top.z);
+    //printf("bottom: x - %f y - %f z - %f\n", data.bottom.x, data.bottom.y, data.bottom.z); }
+
+	RT_F4	shift;
+
+	shift = data->bottom - (RT_F4){0., 0., 0., 0.};
+	data->bottom += -1 * shift;
+	data->top += -1 * shift;
+	intersection->hit += -1 * shift;
+	hit_top = intersection->hit - data.top;
+    hypotenuse = length(hit_top);
+    cosine = dot(data.axis, normalize(hit_top));
+    cathet_b = cosine * hypotenuse;
+	normal = normalize(intersection->hit - (data.axis * cathet_b));
 
     if ((data.top - data.bottom).y == 0)
-        *u = 0.5 + atan2(normal.y, normal.z) / (2 * _RT_PI);
+        *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
-        *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
+        *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
 
     if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
@@ -1866,9 +1861,6 @@ static void         sphere_texture(
 
     data = *(global t_object_sphere* )object->data;
     normal = normalize(intersection->hit - data.position);
-
-	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
-    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
 
     *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
     *v = 0.5 + asin(normal.y) / _RT_PI;

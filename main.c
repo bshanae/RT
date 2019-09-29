@@ -15,7 +15,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_rm(gui->renderer->data.scene);
+	scene_test_box(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 100;
 	gui->renderer->data.camera->position.y = 5;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
@@ -136,7 +136,7 @@ void				scene_test_box(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.});
 	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
 
-	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){-10., 10., 0.}, (RT_F4_API){-10., -10., 0.}, 2.);
+	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){0., 20., 0.}, (RT_F4_API){0., 0., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cone");
 	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 
