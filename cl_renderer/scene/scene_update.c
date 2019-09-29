@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_update.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:23:24 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:23:25 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
-void 				scene_update(t_scene *scene)
+void				scene_update(t_scene *scene)
 {
 	scene_set_id(scene);
 	scene_set_name(scene);

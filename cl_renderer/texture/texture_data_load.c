@@ -1,12 +1,24 @@
-# define STB_IMAGE_IMPLEMENTATION
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   texture_data_load.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:23:57 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:23:58 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#define STB_IMAGE_IMPLEMENTATION
 
 #include "texture.h"
 
-void				texture_data_load
-					(t_texture *texture, const char *path, CHAR_REF name)
+void				texture_data_load(
+					t_texture *texture, const char *path, CHAR_REF name)
 {
 	unsigned char	*stbi_data;
-	int 			number_of_channels;
+	int				number_of_channels;
 
 	stbi_set_flip_vertically_on_load(0);
 	texture->textures_number++;

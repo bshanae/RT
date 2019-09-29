@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_object_x.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:22:54 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:22:56 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
-void 				scene_object_remove(t_scene *scene, int object_id)
+void				scene_object_remove(t_scene *scene, int object_id)
 {
-	int 			i;
+	int				i;
 	t_object_pair	*pair;
 
 	i = 0;
@@ -28,10 +40,10 @@ void 				scene_object_remove(t_scene *scene, int object_id)
 	scene_update(scene);
 }
 
-void				scene_object_rename
-					(t_scene *scene, int object_id, CHAR_REF name)
+void				scene_object_rename(
+					t_scene *scene, int object_id, CHAR_REF name)
 {
-	int 			i;
+	int				i;
 	t_object_pair	*pair;
 
 	i = 0;

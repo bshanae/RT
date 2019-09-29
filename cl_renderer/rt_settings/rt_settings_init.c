@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rt_settings_init.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:21:28 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:21:29 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt_settings.h"
 
-void 				cl_renderer_settings_init(t_rt_settings *settings)
+void				cl_renderer_settings_init(t_rt_settings *settings)
 {
 	settings->light_mod = RT_LIGHT_MOD;
 	settings->illumination = RT_ILLUMINATION;

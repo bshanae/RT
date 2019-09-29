@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_edit_param.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:22:17 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:22:18 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
 void				scene_edit_param(t_scene *scene, int id, ...)
 {
 	t_scene_param	param;
-	va_list 		args;
+	va_list			args;
 	CHAR_REF		str;
 	t_material		material;
 

@@ -429,7 +429,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
-	"cl_renderer/scene/scene_(un)select.c"
+	"cl_renderer/scene/scene_un_select.c"
 	./cl_renderer/scene/scene_edit_param.c
 	./cl_renderer/scene/scene_set_x.c
 	./cl_renderer/scene/scene_find_x_by_x.c

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   texture.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:23:37 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:23:39 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TEXTURE_H
 # define TEXTURE_H
 
@@ -15,14 +27,14 @@
 
 # define TEXTURE_CHANNELS		4
 
-typedef struct 				s_texture
+typedef struct				s_texture
 {
-	char 					name[RT_TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
+	char					name[RT_TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
 	RT_F4_API				data[RT_TEXTURE_DATA_SIZE];
-	int 					texture_length[RT_TEXTURE_MAX_NUMBER];
+	int						texture_length[RT_TEXTURE_MAX_NUMBER];
 	int						width[RT_TEXTURE_MAX_NUMBER];
 	int						height[RT_TEXTURE_MAX_NUMBER];
-	int 					textures_number;
+	int						textures_number;
 }							t_texture;
 
 void						texture_initialization(t_texture *texture);

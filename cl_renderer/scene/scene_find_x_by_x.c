@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_find_x_by_x.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:22:25 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:22:26 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
 t_object			*scene_find_object_by_id(t_scene *scene, int id)
@@ -12,7 +24,7 @@ t_object			*scene_find_object_by_id(t_scene *scene, int id)
 
 t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name)
 {
-	int 			i;
+	int				i;
 
 	if (!ft_strcmp(name, RT_OBJECT_EMPTY))
 		return (NULL);
@@ -27,9 +39,9 @@ t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name)
 	return (NULL);
 }
 
-int 				scene_find_texture_by_name(t_scene *scene, CHAR_REF name)
+int					scene_find_texture_by_name(t_scene *scene, CHAR_REF name)
 {
-	int 			i;
+	int				i;
 
 	i = 0;
 	while (i <= scene->texture.textures_number)

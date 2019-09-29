@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_func_x.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:22:31 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:22:32 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
 void				scene_func_a(t_scene *scene, int i)
@@ -6,8 +18,8 @@ void				scene_func_a(t_scene *scene, int i)
 	t_object			*temp[2];
 
 	if (!(object_flag_get(scene->objects + i) & RT_OBJECT_PAIR))
-		return;
-	pair = (t_object_pair *) scene->objects[i].data;
+		return ;
+	pair = (t_object_pair *)scene->objects[i].data;
 	pair->first_id = -1;
 	pair->second_id = -1;
 	temp[0] = scene_find_object_by_name(scene, pair->first_name);

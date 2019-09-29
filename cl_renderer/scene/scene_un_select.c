@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scene_new.c                                        :+:      :+:    :+:   */
+/*   scene_un_select.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/29 15:22:43 by ashari            #+#    #+#             */
-/*   Updated: 2019/09/29 15:22:45 by ashari           ###   ########.fr       */
+/*   Created: 2019/09/29 15:23:15 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:23:16 by ashari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "scene.h"
 
-t_scene				*scene_new(UINT_REF mod_ptr)
+void				scene_select(t_scene *scene, int id)
 {
-	t_scene			*new;
+	scene_unselect(scene);
+	if (id != -1)
+		scene->objects[id].is_selected = rt_true;
+	scene->selected_id = id;
+}
 
-	new = rt_malloc(sizeof(t_scene));
-	texture_initialization(&new->texture);
-	new->objects_length = 0;
-	new->lights_length = 0;
-	new->current_mod = mod_ptr;
-	new->selected_id = -1;
-	new->background = rt_background_interpolation;
-	new->background_color = RT_BACKGROUND_COLOR;
-	return (new);
+void				scene_unselect(t_scene *scene)
+{
+	int				i;
+
+	i = 0;
+	while (i < scene->objects_length)
+		scene->objects[i++].is_selected = rt_false;
+	scene->selected_id = -1;
 }

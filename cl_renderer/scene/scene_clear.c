@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_clear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:22:07 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:22:08 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
-void 				scene_clear(t_scene *scene)
+void				scene_clear(t_scene *scene)
 {
 	scene->objects_length = 0;
 	scene->lights_length = 0;

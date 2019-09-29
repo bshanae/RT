@@ -2121,33 +2121,6 @@ cl_renderer/scene/rt_background_translate.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.s
 .PHONY : cl_renderer/scene/rt_background_translate.c.s
 
-cl_renderer/scene/scene_(un)select.o: cl_renderer/scene/scene_(un)select.c.o
-
-.PHONY : cl_renderer/scene/scene_(un)select.o
-
-# target to build an object file
-cl_renderer/scene/scene_(un)select.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.o"
-.PHONY : cl_renderer/scene/scene_(un)select.c.o
-
-cl_renderer/scene/scene_(un)select.i: cl_renderer/scene/scene_(un)select.c.i
-
-.PHONY : cl_renderer/scene/scene_(un)select.i
-
-# target to preprocess a source file
-cl_renderer/scene/scene_(un)select.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.i"
-.PHONY : cl_renderer/scene/scene_(un)select.c.i
-
-cl_renderer/scene/scene_(un)select.s: cl_renderer/scene/scene_(un)select.c.s
-
-.PHONY : cl_renderer/scene/scene_(un)select.s
-
-# target to generate assembly for a file
-cl_renderer/scene/scene_(un)select.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make "CMakeFiles/rt.dir/cl_renderer/scene/scene_(un)select.c.s"
-.PHONY : cl_renderer/scene/scene_(un)select.c.s
-
 cl_renderer/scene/scene_clear.o: cl_renderer/scene/scene_clear.c.o
 
 .PHONY : cl_renderer/scene/scene_clear.o
@@ -2390,6 +2363,33 @@ cl_renderer/scene/scene_set_x.s: cl_renderer/scene/scene_set_x.c.s
 cl_renderer/scene/scene_set_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.s
 .PHONY : cl_renderer/scene/scene_set_x.c.s
+
+cl_renderer/scene/scene_un_select.o: cl_renderer/scene/scene_un_select.c.o
+
+.PHONY : cl_renderer/scene/scene_un_select.o
+
+# target to build an object file
+cl_renderer/scene/scene_un_select.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_un_select.c.o
+.PHONY : cl_renderer/scene/scene_un_select.c.o
+
+cl_renderer/scene/scene_un_select.i: cl_renderer/scene/scene_un_select.c.i
+
+.PHONY : cl_renderer/scene/scene_un_select.i
+
+# target to preprocess a source file
+cl_renderer/scene/scene_un_select.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_un_select.c.i
+.PHONY : cl_renderer/scene/scene_un_select.c.i
+
+cl_renderer/scene/scene_un_select.s: cl_renderer/scene/scene_un_select.c.s
+
+.PHONY : cl_renderer/scene/scene_un_select.s
+
+# target to generate assembly for a file
+cl_renderer/scene/scene_un_select.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/scene/scene_un_select.c.s
+.PHONY : cl_renderer/scene/scene_un_select.c.s
 
 cl_renderer/scene/scene_update.o: cl_renderer/scene/scene_update.c.o
 
@@ -7293,9 +7293,6 @@ help:
 	@echo "... cl_renderer/scene/rt_background_translate.o"
 	@echo "... cl_renderer/scene/rt_background_translate.i"
 	@echo "... cl_renderer/scene/rt_background_translate.s"
-	@echo "... cl_renderer/scene/scene_(un)select.o"
-	@echo "... cl_renderer/scene/scene_(un)select.i"
-	@echo "... cl_renderer/scene/scene_(un)select.s"
 	@echo "... cl_renderer/scene/scene_clear.o"
 	@echo "... cl_renderer/scene/scene_clear.i"
 	@echo "... cl_renderer/scene/scene_clear.s"
@@ -7323,6 +7320,9 @@ help:
 	@echo "... cl_renderer/scene/scene_set_x.o"
 	@echo "... cl_renderer/scene/scene_set_x.i"
 	@echo "... cl_renderer/scene/scene_set_x.s"
+	@echo "... cl_renderer/scene/scene_un_select.o"
+	@echo "... cl_renderer/scene/scene_un_select.i"
+	@echo "... cl_renderer/scene/scene_un_select.s"
 	@echo "... cl_renderer/scene/scene_update.o"
 	@echo "... cl_renderer/scene/scene_update.i"
 	@echo "... cl_renderer/scene/scene_update.s"

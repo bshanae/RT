@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene_set_x.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:23:08 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 15:23:09 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scene.h"
 
 void					scene_set_id(t_scene *scene)
 {
-	int 				i;
+	int					i;
 
 	i = 0;
 	while (i < RT_SCENE_CAPACITY)
@@ -14,7 +26,7 @@ void					scene_set_id(t_scene *scene)
 
 void					scene_set_name(t_scene *scene)
 {
-	int 				i[2];
+	int					i[2];
 
 	i[0] = 0;
 	while (i[0] < scene->objects_length)
@@ -23,10 +35,11 @@ void					scene_set_name(t_scene *scene)
 		while (i[1] < scene->objects_length)
 		{
 			if (i[0] != i[1] && scene->objects[i[0]].name[0] &&
-				!ft_strcmp(scene->objects[i[0]].name,scene->objects[i[1]].name))
+				!ft_strcmp(scene->objects[i[0]].name,
+						scene->objects[i[1]].name))
 			{
 				rt_raise_warning("Scene : Identical name (name = '%s')",
-					scene->objects[i[1]].name);
+						scene->objects[i[1]].name);
 				ft_bzero(scene->objects[i[1]].name, RT_NAME_SIZE);
 			}
 			i[1]++;
@@ -37,7 +50,7 @@ void					scene_set_name(t_scene *scene)
 
 void					scene_set_pair(t_scene *scene)
 {
-	int 				i;
+	int					i;
 
 	i = 0;
 	while (i < scene->objects_length)
@@ -46,8 +59,8 @@ void					scene_set_pair(t_scene *scene)
 
 void					scene_set_light(t_scene *scene)
 {
-	int 				i;
-	int 				j;
+	int					i;
+	int					j;
 
 	i = 0;
 	j = 0;
@@ -62,7 +75,7 @@ void					scene_set_light(t_scene *scene)
 
 void					scene_set_visibility(t_scene *scene)
 {
-	int 				i;
+	int					i;
 	t_object_pair		*pair;
 	t_object			*temp;
 
