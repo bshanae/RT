@@ -30,12 +30,12 @@ set(RT_GTK_INCLUDES
 	${BREW}/Cellar/atk/2.34.1/include/atk-1.0
 	${BREW}/Cellar/cairo/1.16.0_2/include/cairo
 	${BREW}/Cellar/pixman/0.38.4/include/pixman-1
-	${BREW}/Cellar/fontconfig/2.13.1/include -I/Users/ashari/.brew/opt/freetype/include/freetype2
+	${BREW}/Cellar/fontconfig/2.13.1/include -I/~/.brew/opt/freetype/include/freetype2
 	${BREW}/Cellar/libpng/1.6.37/include/libpng16
 	${BREW}/Cellar/gdk-pixbuf/2.38.2/include/gdk-pixbuf-2.0
 	${BREW}/Cellar/glib/2.62.0/include
 	${BREW}/Cellar/glib/2.62.0/include/glib-2.0
-	${BREW}/Cellar/glib/2.62.0/lib/glib-2.0/include -I/Users/ashari/.brew/opt/gettext/include
+	${BREW}/Cellar/glib/2.62.0/lib/glib-2.0/include -I/~/.brew/opt/gettext/include
 	${BREW}/Cellar/pcre/8.43/include)
 
 set(RT_GTK_LIBRARY_DIRS
