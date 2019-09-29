@@ -140,7 +140,7 @@ void	parse_plane(void *data, char *json, jsmntok_t *tokens)
 	box.v2 = (box.val_v2 ? *box.val_v2 : PLANE_NORMAL);
 	box.i1 = (box.val_i1 ? *box.val_i1 : PLANE_LIMITING);
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : PLANE_MATERIAL);
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_plane, *(RT_F4_API*)&box.v1, 0);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_plane, *(RT_F4_API*)&box.v1, *(RT_F4_API*)&box.v2, 0);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_material, box.material, scene_param_name, box.name, scene_param_texture, box.texture);
 	free(box.val_v1);
 	free(box.val_v2);

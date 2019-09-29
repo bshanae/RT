@@ -1739,43 +1739,26 @@ typedef struct 		s_camera
 	RT_F2			request_value;
 }					t_camera;
 
-// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-typedef struct 		s_texture
+static RT_F4               projection(RT_F4 point_a, RT_F4 point_b, RT_F4  direction_bc)
 {
-	char 			name[RT_TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
-	RT_F4			data[RT_TEXTURE_DATA_SIZE];
-	int 			texture_length[RT_TEXTURE_MAX_NUMBER];
-	int				width[RT_TEXTURE_MAX_NUMBER];
-	int				height[RT_TEXTURE_MAX_NUMBER];
-	int 			textures_number;
-}					t_texture;
-
-static RT_F4        get_color_from_texture(
-                    global t_texture *texture,
-                    int texture_id,
-                    RT_F *u, RT_F *v)
-{
-    global RT_F4    *pointer;
-    int             x;
-    int             y;
-
-    pointer = &texture->data[0];
-    for (int i = 0; i < texture_id; i++)
-        pointer += texture->texture_length[i];
-    x = floor(*u * (RT_F)texture->width[texture_id]);
-    y = floor((1 - *v) * (texture->height[texture_id] - 0.001));
-
-    if (x < 0) x = 0;
-    if (y < 0) y = 0;
-
-    if (x > (texture->width[texture_id] - 1))
-    	x = texture->width[texture_id] - 1;
-    if (y > (texture->height[texture_id] - 1))
-        	y = texture->height[texture_id] - 1;
-    return (pointer[y * texture->width[texture_id] + x]);
+    RT_F            cosine;
+    RT_F4           projection;
+    RT_F4           hypotenuse;
+    RT_F4           cathet_bc;
+    RT_F4           ba;
+    ba = point_a - point_b;
+    hypotenuse = length(ba);
+    cosine = dot(direction_bc, normalize(ba));
+    cathet_bc = cosine * hypotenuse;
+    projection = point_b + direction_bc * cathet_bc;
+    return(projection);
 }
-
+static void                local_default(RT_F4 *top, RT_F4 *bottom, RT_F4 *intersection)
+{
+    *top += -(*bottom);
+    *intersection += -(*bottom);
+    *bottom += -(*bottom);
+}
 static void         cylinder_texture(
                     global t_camera *camera,
                     global t_texture *texture,
@@ -1786,37 +1769,23 @@ static void         cylinder_texture(
     t_object_cylinder data;
     RT_F4           normal;
     RT_F4           top;
-    RT_F4           shift;
-    RT_F4           hit_top;
-    RT_F            cosine;
-    RT_F            hypotenuse;
-    RT_F            cathet_b;
-
     data = *(global t_object_cylinder* )object->data;
-    shift = data.bottom - 0;
-    data.bottom += -1 * shift;
-    data.top += -1 * shift;
-    intersection->hit += -1 * shift;
-    hit_top = intersection->hit - data.top;
-    hypotenuse = length(hit_top);
-    cosine = dot(data.axis, normalize(hit_top));
-    cathet_b = cosine * hypotenuse;
-    top = data.top + data.axis * cathet_b;
-    normal = normalize(intersection->hit - (top));
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
     if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = length(intersection->hit - data.bottom) / data.length; // niz
+        *v = length(intersection->hit - data.bottom) / data.length;
     else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = 1 - length(intersection->hit - data.top) / data.length; // verh
+        *v = 1 - length(intersection->hit - data.top) / data.length;
     else
-        *v = 1 - (data.radius + length(top - data.top)) / data.length; // center
+        *v = 1 - (data.radius + length(top - data.top)) / data.length;
 }
-
 static void         cone_texture(
                     global t_camera *camera,
                     global t_texture *texture,
@@ -1825,30 +1794,16 @@ static void         cone_texture(
                     RT_F *u, RT_F *v)
 {
     t_object_cone   data;
+    RT_F4           top;
     RT_F4           normal;
-    RT_F4			shift;
-    RT_F4			hit_top;
-    RT_F			cosine;
-    RT_F			hypotenuse;
-    RT_F			cathet_b;
-
     data = *(global t_object_cone* )object->data;
-	shift = data.bottom - 0;
-	data.bottom += -1 * shift;
-	data.top += -1 * shift;
-	intersection->hit += -1 * shift;
-
-	hit_top = intersection->hit - data.top;
-    hypotenuse = length(hit_top);
-    cosine = dot(data.axis, normalize(hit_top));
-    cathet_b = cosine * hypotenuse;
-	normal = normalize(intersection->hit - (data.top + data.axis * cathet_b));
-
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
-
     if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
         *v = 1 - length(intersection->hit - data.top) / data.length;
@@ -1856,61 +1811,6 @@ static void         cone_texture(
         *v = length(intersection->hit - data.bottom) / data.length;
 }
 
-static void         sphere_texture(
-					global t_camera *camera,
-                    global t_texture *texture,
-                    global t_object *object,
-                    t_intersection *intersection,
-                    RT_F *u, RT_F *v)
-{
-    t_object_sphere data;
-    RT_F4           normal;
-
-    data = *(global t_object_sphere* )object->data;
-    normal = normalize(intersection->hit - data.position);
-
-    *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
-    *v = 0.5 + asin(normal.y) / _RT_PI;
-}
-
-static void         plane_texture(
-                    global t_texture *texture,
-                    global t_object *object,
-                    t_intersection *intersection,
-                    RT_F *u, RT_F *v)
-{
-    t_object_plane   data;
-    RT_F4            vector;
-
-    data = *(global t_object_plane* )object->data;
-    vector = intersection->hit - data.position;
-
-    vector = RT_ABS(vector);
-    *u = RT_MOD((vector.x + vector.z), texture->width[object->texture_id]);
-    *u = 1 - *u / texture->width[object->texture_id];
-    *v = RT_MOD((vector.y + vector.z), texture->height[object->texture_id]);
-    *v = 1 - *v / texture->height[object->texture_id];
-}
-
-static RT_F4		object_texture(
-					global t_texture *texture,
-					global t_camera *camera,
-					global t_object *object,
-					t_intersection *intersection)
-{
-	RT_F            u;
-    RT_F            v;
-
-	if (object->type == object_type_sphere)
-            sphere_texture(camera, texture, object, intersection, &u, &v);
-	else if (object->type == object_type_cone)
-		cone_texture(camera, texture, object, intersection, &u, &v);
-	else if (object->type == object_type_cylinder)
-		cylinder_texture(camera, texture, object, intersection, &u, &v);
-	else if (object->type == object_type_plane)
-		plane_texture(texture, object, intersection, &u, &v);
-	return (get_color_from_texture(texture, object->texture_id, &u, &v));
-}
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -2038,7 +1938,14 @@ static int			scene_intersect_rm(
 			}
 		}
     	if (current_distance < RT_RM_EPSILON)
-    		return (1);
+		{
+			if (intersection->ray.t < RT_RM_EPSILON)
+			{
+				intersection->ray.t = RT_INFINITY;
+				return (0);
+			}
+			return (1);
+		}
     	intersection->ray.t += current_distance;
 		intersection->hit += intersection->ray.direction * current_distance * settings->rm_step_part;
     	if (intersection->ray.t > settings->rm_max_distance)
@@ -2451,14 +2358,12 @@ static RT_F4					illumination(
 
 	for (int i = 0; i < scene->objects_length; i++)
 	{
-
 		if (scene->objects[i].is_visible == rt_false)
         	continue ;
 		if (scene->objects[i].is_selected == rt_true)
         	continue ;
         if (scene->objects[i].type != object_type_sphere)
 			continue ;
-
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
@@ -2468,11 +2373,13 @@ static RT_F4					illumination(
 
 			k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
 			x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
+
 			if (x < sphere.radius)
 				continue;
 		}
 
 		light = *intersection;
+
 		intersection_reset(&light);
         if (0 && scene_intersect(scene, camera, &light, settings))
         {
@@ -2492,11 +2399,8 @@ static RT_F4					illumination(
 			shadow.ray.origin += shadow.ray.direction;
 
 			intersection_reset(&shadow);
-
-			if (int ii = scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
+			if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
 				continue;
-				if (!get_global_id(0))
-                    printf("%d mod: %d t %f length %f\n", ii, settings->tracing_mod == rt_tracing_rt, shadow.ray.t, length(camera->position - shadow.ray.origin));
         }
 
 		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_ILLUMINATION_POWER) * scene->objects[i].material.emission;

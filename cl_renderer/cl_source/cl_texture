@@ -35,6 +35,28 @@ static RT_F4        get_color_from_texture(
     return (pointer[y * texture->width[texture_id] + x]);
 }
 
+static RT_F4               projection(RT_F4 point_a, RT_F4 point_b, RT_F4  direction_bc)
+{
+    RT_F            cosine;
+    RT_F4           projection;
+    RT_F4           hypotenuse;
+    RT_F4           cathet_bc;
+    RT_F4           ba;
+    ba = point_a - point_b;
+    hypotenuse = length(ba);
+    cosine = dot(direction_bc, normalize(ba));
+    cathet_bc = cosine * hypotenuse;
+    projection = point_b + direction_bc * cathet_bc;
+    return(projection);
+}
+
+static void                local_default(RT_F4 *top, RT_F4 *bottom, RT_F4 *intersection)
+{
+    *top += -(*bottom);
+    *intersection += -(*bottom);
+    *bottom += -(*bottom);
+}
+
 static void         cylinder_texture(
                     global t_camera *camera,
                     global t_texture *texture,
@@ -45,35 +67,22 @@ static void         cylinder_texture(
     t_object_cylinder data;
     RT_F4           normal;
     RT_F4           top;
-    RT_F4           shift;
-    RT_F4           hit_top;
-    RT_F            cosine;
-    RT_F            hypotenuse;
-    RT_F            cathet_b;
-
     data = *(global t_object_cylinder* )object->data;
-    shift = data.bottom - 0;
-    data.bottom += -1 * shift;
-    data.top += -1 * shift;
-    intersection->hit += -1 * shift;
-    hit_top = intersection->hit - data.top;
-    hypotenuse = length(hit_top);
-    cosine = dot(data.axis, normalize(hit_top));
-    cathet_b = cosine * hypotenuse;
-    top = data.top + data.axis * cathet_b;
-    normal = normalize(intersection->hit - (top));
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
     if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = length(intersection->hit - data.bottom) / data.length; // niz
+        *v = length(intersection->hit - data.bottom) / data.length;
     else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = 1 - length(intersection->hit - data.top) / data.length; // verh
+        *v = 1 - length(intersection->hit - data.top) / data.length;
     else
-        *v = 1 - (data.radius + length(top - data.top)) / data.length; // center
+        *v = 1 - (data.radius + length(top - data.top)) / data.length;
 }
 
 static void         cone_texture(
@@ -84,30 +93,16 @@ static void         cone_texture(
                     RT_F *u, RT_F *v)
 {
     t_object_cone   data;
+    RT_F4           top;
     RT_F4           normal;
-    RT_F4			shift;
-    RT_F4			hit_top;
-    RT_F			cosine;
-    RT_F			hypotenuse;
-    RT_F			cathet_b;
-
     data = *(global t_object_cone* )object->data;
-	shift = data.bottom - 0;
-	data.bottom += -1 * shift;
-	data.top += -1 * shift;
-	intersection->hit += -1 * shift;
-
-	hit_top = intersection->hit - data.top;
-    hypotenuse = length(hit_top);
-    cosine = dot(data.axis, normalize(hit_top));
-    cathet_b = cosine * hypotenuse;
-	normal = normalize(intersection->hit - (data.top + data.axis * cathet_b));
-
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
-
     if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
         && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
         *v = 1 - length(intersection->hit - data.top) / data.length;

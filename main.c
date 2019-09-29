@@ -7,6 +7,7 @@ void				scene_test_rt(t_scene *scene);
 void				scene_test_rm(t_scene *scene);
 void				scene_test_box(t_scene *scene);
 void				scene_test_light(t_scene *scene);
+void				scene_moebius(t_scene *scene);
 
 int					main(int argc, char **argv)
 {
@@ -17,7 +18,6 @@ int					main(int argc, char **argv)
 	gui->renderer = cl_renderer_new(gui->image);
 	scene_test_box(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 100;
-	gui->renderer->data.camera->position.y = 5;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
 	cl_renderer_change_light_mod(gui->renderer, rt_light_area);
 	camera_apply(gui->renderer->data.camera);
@@ -28,6 +28,19 @@ int					main(int argc, char **argv)
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);
+}
+
+void				scene_moebius(t_scene *scene)
+{
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 10., 0.}, 3.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
+
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -200.}, (RT_F4_API){0., 0., 1.});
+	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
+
+	object_build(scene_get_space(scene), object_type_moebius, (RT_F4_API){0., 0., -100.}, 4., 2.);
+	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
 }
 
 void				scene_test_rt(t_scene *scene)
@@ -138,6 +151,11 @@ void				scene_test_box(t_scene *scene)
 
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){20., 20., 0.}, (RT_F4_API){0., 0., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cone");
+	scene_edit_param(scene, -1, scene_param_texture, "Planet");
+
+	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
+	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
+	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 }
 
 void				scene_test_light(t_scene *scene)
