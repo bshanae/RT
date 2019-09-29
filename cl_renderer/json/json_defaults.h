@@ -5,7 +5,7 @@
 
 # define GLOBAL_MATERIAL MATERIAL_WHITE
 # define GLOBAL_POSITION (t_vector3){0., 0., 0.}
-# define GLOBAL_TEXTURE "chess.jpg"
+# define GLOBAL_TEXTURE "Planet"
 
 # define SETTINGS_USE_RM 0
 # define SETTINGS_USE_DOUBLE 0
