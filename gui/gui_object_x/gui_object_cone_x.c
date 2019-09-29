@@ -35,6 +35,8 @@ void 					gui_object_cone_set
 {
 	t_object_cone		*data;
 	RT_F4_API			temp_axis;
+	RT_F				hypotenuse;
+	RT_F				height;
 
 	data = (t_object_cone *)object->data;
 	data->top.x = gui_entry_get_f(gui->top_x);
@@ -47,4 +49,7 @@ void 					gui_object_cone_set
 	temp_axis = f4_sub(data->bottom, data->top);
 	data->tangent = data->radius / f4_length(temp_axis);
 	data->axis = f4_normalize(temp_axis);
+	height = f4_length(f4_sub(data->top, data->bottom));
+	hypotenuse = RT_SQRT_API(RT_POW(height, 2.) + data->radius * data->radius);
+	data->length = hypotenuse + data->radius;
 }
