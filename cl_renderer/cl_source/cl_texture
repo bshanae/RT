@@ -89,7 +89,7 @@ static void         cone_texture(
     hypotenuse = length(hit_top);
     cosine = dot(data.axis, normalize(hit_top));
     cathet_b = cosine * hypotenuse;
-	normal = normalize(intersection->hit - (data.axis * cathet_b));
+	normal = normalize(intersection->hit - (data.top + data.axis * cathet_b));
 
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
