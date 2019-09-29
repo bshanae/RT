@@ -57,7 +57,14 @@ static int			scene_intersect_rm(
 			}
 		}
     	if (current_distance < RT_RM_EPSILON)
-    		return (1);
+		{
+			if (intersection->ray.t < RT_RM_EPSILON)
+			{
+				intersection->ray.t = RT_INFINITY;
+				return (0);
+			}
+			return (1);
+		}
     	intersection->ray.t += current_distance;
 		intersection->hit += intersection->ray.direction * current_distance * settings->rm_step_part;
     	if (intersection->ray.t > settings->rm_max_distance)

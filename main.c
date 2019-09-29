@@ -139,10 +139,6 @@ void				scene_test_box(t_scene *scene)
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){20., 20., 0.}, (RT_F4_API){0., 0., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cone");
 	scene_edit_param(scene, -1, scene_param_texture, "Planet");
-
-	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-20., -10., 0.}, (RT_F4_API){-20., 10., 0.}, 2.);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
-	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 }
 
 void				scene_test_light(t_scene *scene)
