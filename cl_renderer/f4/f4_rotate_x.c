@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   f4_rotate_x.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 12:29:05 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 12:29:07 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "f4.h"
 
 static void			f4_rotate_x(RT_F4_API *v, RT_F theta)
@@ -27,7 +39,7 @@ static void			f4_rotate_z(RT_F4_API *v, RT_F theta)
 	v->y = copy.x * RT_SIN_API(theta) + copy.y * RT_COS_API(theta);
 }
 
-RT_F4_API 			f4_rotate(
+RT_F4_API			f4_rotate(
 					RT_F4_API v,
 					t_f4_rotation_axis axis,
 					t_f4_rotation_direction direction,
