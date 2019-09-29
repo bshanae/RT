@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   object_paraboloid.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 13:11:29 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 13:11:30 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "object_interaction.h"
 
-void				    object_paraboloid_build(t_object *space, va_list *args)
+void					object_paraboloid_build(
+						t_object *space, va_list *args)
 {
 	t_object_paraboloid	*data;
 

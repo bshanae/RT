@@ -7,7 +7,6 @@ void				scene_test_rt(t_scene *scene);
 void				scene_test_rm(t_scene *scene);
 void				scene_test_box(t_scene *scene);
 void				scene_test_light(t_scene *scene);
-void				scene_test_limited(t_scene *scene);
 
 int					main(int argc, char **argv)
 {
@@ -16,7 +15,7 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	scene_test_limited(gui->renderer->data.scene);
+	scene_test_rm(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 100;
 	gui->renderer->data.camera->position.y = 5;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);

@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   object_mandelbulb.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 13:11:07 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 13:11:08 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "object_interaction.h"
 
-void						object_mandelbulb_build(t_object *space, va_list *args)
+void						object_mandelbulb_build(
+							t_object *space, va_list *args)
 {
 	t_object_mandelbulb		*data;
 

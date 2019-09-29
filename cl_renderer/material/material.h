@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   material.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 12:54:16 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 12:54:18 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MATERIAL_H
 # define MATERIAL_H
 
@@ -5,7 +17,7 @@
 # include "rt_float.h"
 # include "rt_parameters.h"
 
-typedef struct 		s_material
+typedef struct		s_material
 {
 	RT_F4_API		color;
 	RT_F4_API		emission;

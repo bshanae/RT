@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   object_perforated_cube.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 13:11:35 by ashari            #+#    #+#             */
+/*   Updated: 2019/09/29 13:11:36 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "object_interaction.h"
 
-void							object_perforated_cube_build(t_object *space, va_list *args)
+void							object_perforated_cube_build(
+								t_object *space, va_list *args)
 {
 	t_object_perforated_cube	*data;
 
