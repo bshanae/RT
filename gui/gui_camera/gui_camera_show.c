@@ -11,7 +11,6 @@ static void			static_set_filter(t_gui_camera *gui)
 		gtk_toggle_button_set_active(gui->filter_cartoon, 0);
 		gtk_widget_set_sensitive(gui->filter_cartoon_box, 0);
 	}
-
 }
 
 void 				gui_camera_show(t_gui_camera *gui)

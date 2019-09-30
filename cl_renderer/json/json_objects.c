@@ -29,18 +29,12 @@ void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 	t_cl_renderer	*r;
 
 	r = (t_cl_renderer*)data;
-	// ft_bzero(r->data.camera, sizeof(t_camera));
 	box.val_v1 = get_vector_in_object(json, tokens, "position");
 	box.val_v2 = get_vector_in_object(json, tokens, "rotation");
-	r->data.camera->position = (box.val_v1 ? *(RT_F4_API*)box.val_v1 : CAMERA_POS);
-	r->data.camera->rotation = (box.val_v2 ? *(RT_F4_API*)box.val_v2 : CAMERA_ROT);
-	r->data.camera->axis_x = CAMERA_AXIS_X;
-	r->data.camera->axis_y = CAMERA_AXIS_Y;
-	r->data.camera->axis_z = CAMERA_AXIS_Z;
-	r->data.camera->forward = CAMERA_AXIS_FORWARD;
-	r->data.camera->forward_backup = CAMERA_AXIS_FORWARDBACKUP;
-	r->data.camera->aperture_size = CAMERA_APERTURESIZE;
-	r->data.camera->focal_length = CAMERA_FOCALLENGTH;
+	if (box.val_v1)
+		r->data.camera->position = *(RT_F4_API*)box.val_v1;
+	if (box.val_v2)
+		r->data.camera->rotation = *(RT_F4_API*)box.val_v2;
 	free(box.val_v1);
 	free(box.val_v2);
 }
@@ -107,7 +101,7 @@ void	parse_direct(void *data, char *json, jsmntok_t *tokens)
 	free(box.val_s3);
 }
 
-void	parse_sphere(void *data, char *json, jsmntok_t *tokens)
+void				parse_sphere(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj			box;
 
