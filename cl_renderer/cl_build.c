@@ -1739,6 +1739,43 @@ typedef struct 		s_camera
 	RT_F2			request_value;
 }					t_camera;
 
+// cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct 		s_texture
+{
+	char 			name[RT_TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
+	RT_F4			data[RT_TEXTURE_DATA_SIZE];
+	int 			texture_length[RT_TEXTURE_MAX_NUMBER];
+	int				width[RT_TEXTURE_MAX_NUMBER];
+	int				height[RT_TEXTURE_MAX_NUMBER];
+	int 			textures_number;
+}					t_texture;
+
+static RT_F4        get_color_from_texture(
+                    global t_texture *texture,
+                    int texture_id,
+                    RT_F *u, RT_F *v)
+{
+    global RT_F4    *pointer;
+    int             x;
+    int             y;
+
+    pointer = &texture->data[0];
+    for (int i = 0; i < texture_id; i++)
+        pointer += texture->texture_length[i];
+    x = floor(*u * (RT_F)texture->width[texture_id]);
+    y = floor((1 - *v) * (texture->height[texture_id] - 0.001));
+
+    if (x < 0) x = 0;
+    if (y < 0) y = 0;
+
+    if (x > (texture->width[texture_id] - 1))
+    	x = texture->width[texture_id] - 1;
+    if (y > (texture->height[texture_id] - 1))
+        	y = texture->height[texture_id] - 1;
+    return (pointer[y * texture->width[texture_id] + x]);
+}
+
 static RT_F4               projection(RT_F4 point_a, RT_F4 point_b, RT_F4  direction_bc)
 {
     RT_F            cosine;
@@ -1753,12 +1790,14 @@ static RT_F4               projection(RT_F4 point_a, RT_F4 point_b, RT_F4  direc
     projection = point_b + direction_bc * cathet_bc;
     return(projection);
 }
+
 static void                local_default(RT_F4 *top, RT_F4 *bottom, RT_F4 *intersection)
 {
     *top += -(*bottom);
     *intersection += -(*bottom);
     *bottom += -(*bottom);
 }
+
 static void         cylinder_texture(
                     global t_camera *camera,
                     global t_texture *texture,
@@ -1786,6 +1825,7 @@ static void         cylinder_texture(
     else
         *v = 1 - (data.radius + length(top - data.top)) / data.length;
 }
+
 static void         cone_texture(
                     global t_camera *camera,
                     global t_texture *texture,
@@ -1811,6 +1851,61 @@ static void         cone_texture(
         *v = length(intersection->hit - data.bottom) / data.length;
 }
 
+static void         sphere_texture(
+					global t_camera *camera,
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    t_object_sphere data;
+    RT_F4           normal;
+
+    data = *(global t_object_sphere* )object->data;
+    normal = normalize(intersection->hit - data.position);
+
+    *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
+    *v = 0.5 + asin(normal.y) / _RT_PI;
+}
+
+static void         plane_texture(
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    t_object_plane   data;
+    RT_F4            vector;
+
+    data = *(global t_object_plane* )object->data;
+    vector = intersection->hit - data.position;
+
+    vector = RT_ABS(vector);
+    *u = RT_MOD((vector.x + vector.z), texture->width[object->texture_id]);
+    *u = 1 - *u / texture->width[object->texture_id];
+    *v = RT_MOD((vector.y + vector.z), texture->height[object->texture_id]);
+    *v = 1 - *v / texture->height[object->texture_id];
+}
+
+static RT_F4		object_texture(
+					global t_texture *texture,
+					global t_camera *camera,
+					global t_object *object,
+					t_intersection *intersection)
+{
+	RT_F            u;
+    RT_F            v;
+
+	if (object->type == object_type_sphere)
+            sphere_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_cone)
+		cone_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_cylinder)
+		cylinder_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_plane)
+		plane_texture(texture, object, intersection, &u, &v);
+	return (get_color_from_texture(texture, object->texture_id, &u, &v));
+}
 // cl_object_normal ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "rt_parameters.h"
@@ -2243,16 +2338,19 @@ static RT_F4		light_area(
 
 // cl_filter ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4		filter_stereoscopy(RT_F4 *radiance, int *filter_stereo)
+typedef enum		e_cl_stereo_type
 {
-	if (*filter_stereo == 1)
-	{
-		*filter_stereo = 2;
-		return ((RT_F4){0., radiance->y, radiance->z, 0.});
-	}
-	else
-		return ((RT_F4){radiance->x, 0., 0., 0.});
+	cl_stereo_type_a,
+	cl_stereo_type_b
+}					t_cl_stereo_type;
 
+static RT_F4		filter_stereo(RT_F4 radiance, t_cl_stereo_type type)
+{
+	if (type == cl_stereo_type_a)
+		return ((RT_F4){0., radiance.y, radiance.z, 1.});
+	else if (type == cl_stereo_type_b)
+		return ((RT_F4){radiance.x, 0., 0., 1.});
+	return ((RT_F4)0});
 }
 
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
@@ -2351,7 +2449,6 @@ static RT_F4					illumination(
 	RT_F						x;
 	RT_F4						k;
 	RT_F4						illumination;
-	t_intersection				light;
 	t_intersection              shadow;
 
 	illumination = 0.;
@@ -2378,30 +2475,13 @@ static RT_F4					illumination(
 				continue;
 		}
 
-		light = *intersection;
+		shadow.ray.origin = sphere.position;
+		shadow.ray.direction = normalize(camera->position - sphere.position);
+		shadow.ray.origin += shadow.ray.direction;
 
-		intersection_reset(&light);
-        if (0 && scene_intersect(scene, camera, &light, settings))
-        {
-			shadow.ray.origin = light.hit;
-			shadow.ray.direction = normalize(camera->position - light.hit);
-
-			intersection_reset(&shadow);
-			int i = scene_intersect(scene, camera, &shadow, settings);
-			if (shadow.ray.t < length(camera->position - light.hit))
-				continue;
-        }
-        else
-        {
-			shadow.ray.origin = sphere.position;
-			shadow.ray.direction = normalize(camera->position - sphere.position);
-
-			shadow.ray.origin += shadow.ray.direction;
-
-			intersection_reset(&shadow);
-			if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
-				continue;
-        }
+		intersection_reset(&shadow);
+		if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
+			continue;
 
 		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
@@ -2416,24 +2496,14 @@ static void					radiance_write(
 							global RT_F4 *sample_store[RT_SAMPLE_ARRAY_LENGTH],
 							int global_id,
 							RT_F4 radiance,
-							constant t_rt_settings *settings, int *filter_stereo)
+							constant t_rt_settings *settings)
 {
 	if (!settings->motion_blur)
 	{
 		if (settings->sample_count == 1)
-		{
-			if (*filter_stereo)
-				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = filter_stereoscopy(&radiance, filter_stereo);
-			else
 				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
-		}
 		else
-		{
-			if (*filter_stereo)
-				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] += filter_stereoscopy(&radiance, filter_stereo);
-			else
 				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
-		}
 	}
 	else
 	{
@@ -2587,12 +2657,18 @@ kernel void			cl_main(
 {
 	int				global_id;
 	int2			screen;
-	t_intersection	intersection;
-	int				filter_stereo;
-	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH];
 
-	filter_stereo = camera->filter_mod == rt_filter_stereo;
+	t_intersection	intersection;
+	RT_F4			radiance;
+
+	int				stereo_mod;
+	t_intersection	stereo_intersection;
+	RT_F4			stereo_radiance[2];
+
+
+
+	stereo_mod = camera->filter_mod == rt_filter_stereo;
 	sample_store_map(sample_store, sample_store_mapped, camera);
 
     global_id = get_global_id(0);
@@ -2617,19 +2693,19 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
-	radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
-	if (filter_stereo)
-	{
-		t_intersection	intersection_stereo;
 
-		intersection_stereo.ray = camera_build_ray(camera, &screen, rng_state);
-		intersection_stereo.ray.origin.x += 1;
-        radiance = radiance_trace(scene, camera, &intersection_stereo, settings, rng_state);
-        radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
-        image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), 0);
+	if (stereo_mod)
+	{
+		stereo_intersection.ray = camera_build_ray(camera, &screen, rng_state);
+		stereo_intersection.ray.origin.x += 1;
+		stereo_radiance[0] = filter_stereo(radiance, cl_stereo_type_a);
+        stereo_radiance[1] = radiance_trace(scene, camera, &stereo_intersection, settings, rng_state);
+        stereo_radiance[1] = filter_stereo(radiance, cl_stereo_type_b);
+        radiance = stereo_radiance[0] + stereo_radiance[1];
 	}
-	else
-		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
+
+	radiance_write(sample_store_mapped, global_id, radiance, settings);
+	image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
 }
 
 

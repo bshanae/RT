@@ -12,15 +12,16 @@ kernel void			cl_main(
 {
 	int				global_id;
 	int2			screen;
-	t_intersection	intersection;
-	int				filter_stereo;
-	RT_F4			radiance;
 	global RT_F4	*sample_store_mapped[RT_SAMPLE_ARRAY_LENGTH];
 
-	filter_stereo = camera->filter_mod == rt_filter_stereo;
-	sample_store_map(sample_store, sample_store_mapped, camera);
+	t_intersection	intersection;
+	RT_F4			radiance;
+
+	t_intersection	stereo_intersection;
+	RT_F4			stereo_radiance[2];
 
     global_id = get_global_id(0);
+	sample_store_map(sample_store, sample_store_mapped, camera);
 
 	if (camera->select_request)
 	{
@@ -42,17 +43,17 @@ kernel void			cl_main(
 	intersection.ray = camera_build_ray(camera, &screen, rng_state);
 
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
-	radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
-	if (filter_stereo)
-	{
-		t_intersection	intersection_stereo;
 
-		intersection_stereo.ray = camera_build_ray(camera, &screen, rng_state);
-		intersection_stereo.ray.origin.x += 1;
-        radiance = radiance_trace(scene, camera, &intersection_stereo, settings, rng_state);
-        radiance_write(sample_store_mapped, global_id, radiance, settings, &filter_stereo);
-        image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), 0);
+	if (camera->filter_mod == rt_filter_stereo)
+	{
+		stereo_intersection.ray = camera_build_ray(camera, &screen, rng_state);
+		stereo_intersection.ray.origin.x += 1;
+		stereo_radiance[0] = filter_stereo(radiance, cl_stereo_type_a);
+        stereo_radiance[1] = radiance_trace(scene, camera, &stereo_intersection, settings, rng_state);
+        stereo_radiance[1] = filter_stereo(stereo_radiance[1], cl_stereo_type_b);
+        radiance = stereo_radiance[0] + stereo_radiance[1];
 	}
-	else
-		image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
+
+	radiance_write(sample_store_mapped, global_id, radiance, settings);
+	image[global_id] = color_unpack(radiance_read(sample_store_mapped, global_id, settings), camera->filter_mod == rt_filter_sepia);
 }
