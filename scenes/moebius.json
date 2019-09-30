@@ -12,6 +12,7 @@
   {
     "type": "plane",
     "position": [0, 0, -200],
-    "normal": [0, 0, 1]
+    "normal": [0, 0, 1],
+    "texture" : "Planet"
   }
 ]
