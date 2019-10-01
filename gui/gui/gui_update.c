@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_update.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:26:00 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:26:00 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui.h"
 
-void 				gui_update(t_gui *gui)
+void				gui_update(t_gui *gui)
 {
 	gui_parser_update(gui->parser);
 	gui_camera_show(gui->camera);

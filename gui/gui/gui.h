@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui.h                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:15:31 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:16:57 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef GUI_H
 # define GUI_H
 
@@ -49,12 +61,12 @@ void				gui_resize_start(t_gui *gui);
 void				gui_resize_finish(t_gui *gui);
 
 void				gui_loop(t_gui *gui);
-void 				gui_update(t_gui *gui);
-void 				gui_connect(t_gui *gui);
-void 				gui_render(t_gui *gui);
+void				gui_update(t_gui *gui);
+void				gui_connect(t_gui *gui);
+void				gui_render(t_gui *gui);
 
-void 				gui_command_focus(t_gui *gui, GdkEventButton *event);
-void 				gui_command_select(t_gui *gui, GdkEventButton *event);
-void 				gui_command_unselect(t_gui *gui);
+void				gui_command_focus(t_gui *gui, GdkEventButton *event);
+void				gui_command_select(t_gui *gui, GdkEventButton *event);
+void				gui_command_unselect(t_gui *gui);
 
 #endif

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_icon_load_all.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:36:41 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:36:43 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_icon.h"
 
-void 				gui_icon_load_all(GtkBuilder *builder)
+void				gui_icon_load_all(GtkBuilder *builder)
 {
 	t_pair_i		size;
 

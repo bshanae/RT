@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_camera_connect.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:27:36 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:27:36 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_camera.h"
 
-void 						gui_camera_connect(t_gui_camera *camera, ...)
+void						gui_camera_connect(t_gui_camera *camera, ...)
 {
 	va_list 				args;
 

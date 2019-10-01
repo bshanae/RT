@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_commnad_x.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:18:40 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:18:40 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui.h"
 
-void 				gui_command_focus(t_gui *gui, GdkEventButton *event)
+void				gui_command_focus(t_gui *gui, GdkEventButton *event)
 {
 	gui->camera->focus_request = 0;
 	gui_queue_block(gui->queue);
@@ -12,7 +24,7 @@ void 				gui_command_focus(t_gui *gui, GdkEventButton *event)
 	gtk_widget_set_sensitive(GTK_WIDGET(gui->notebook), 1);
 }
 
-void 				gui_command_select(t_gui *gui, GdkEventButton *event)
+void				gui_command_select(t_gui *gui, GdkEventButton *event)
 {
 	gui_queue_block(gui->queue);
 	cl_renderer_camera_request_select(gui->renderer, event->x, event->y);
@@ -22,7 +34,7 @@ void 				gui_command_select(t_gui *gui, GdkEventButton *event)
 	gui_scene_edit_select(gui->scene->edit, gui->renderer->data.scene);
 }
 
-void 				gui_command_unselect(t_gui *gui)
+void				gui_command_unselect(t_gui *gui)
 {
 	gui->renderer->data.camera->select_request_object = -1;
 	scene_unselect(gui->renderer->data.scene);

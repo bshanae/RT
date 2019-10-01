@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_material_switch_mod.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:49:12 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:49:13 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_material.h"
 
-void 				gui_material_switch_mod
-					(t_gui_material *material, t_gui_material_mod mod)
+void				gui_material_switch_mod
+	(t_gui_material *material, t_gui_material_mod mod)
 {
 	material->current_mod = mod;
 	material->switcher_block = rt_true;
