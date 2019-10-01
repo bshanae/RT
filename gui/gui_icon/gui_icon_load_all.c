@@ -16,4 +16,6 @@ void 				gui_icon_load_all(GtkBuilder *builder)
 	size = (t_pair_i){14, 14};
 	gui_icon_load(builder, "icon_plus", RT_SOURCE_GUI_ICON_PLUS, size);
 	gui_icon_load(builder, "icon_minus", RT_SOURCE_GUI_ICON_MINUS, size);
+	gui_icon_load(builder, "icon_add_no", RT_SOURCE_GUI_ICON_ADD_NO, size);
+	gui_icon_load(builder, "icon_add_yes", RT_SOURCE_GUI_ICON_ADD_YES, size);
 }

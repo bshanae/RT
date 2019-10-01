@@ -16,6 +16,7 @@
 # include "rt_parameters.h"
 # include "scene_point.h"
 
+# include "error_framework.h"
 # include "object_interaction.h"
 # include "texture.h"
 
