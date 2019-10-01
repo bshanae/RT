@@ -73,7 +73,7 @@ else ()
 endif ()
 
 include_directories(
-	../21_libft/includes/
+	./libft/includes/
 	./error_framework/
 	./parameters/
 	./gui/gui/
@@ -167,7 +167,7 @@ set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_push.c
 	./gui/gui_queue/gui_queue_execute_x.c
 	./gui/gui_queue/gui_queue_start.c
-	"./gui/gui_queue/gui_queue_(un)block.c"
+	"gui/gui_queue/gui_queue_block.c"
 	./gui/gui_queue/gui_queue_wait.c
 	./gui/gui_queue/gui_queue_get_time.c)
 
@@ -256,7 +256,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
 	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
 	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
-	"gui/gui_scene_edit/gui_scene_edit_(un)select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
+	"gui/gui_scene_edit/gui_scene_edit_select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -429,7 +429,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
-	"cl_renderer/scene/scene_un_select.c"
+	"cl_renderer/scene/scene_select.c"
 	./cl_renderer/scene/scene_edit_param.c
 	./cl_renderer/scene/scene_set_x.c
 	./cl_renderer/scene/scene_find_x_by_x.c

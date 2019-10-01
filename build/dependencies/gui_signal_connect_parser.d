@@ -671,7 +671,6 @@
   ../cl_renderer/cl_renderer/cl_renderer_flag_x.h \
   ../cl_renderer/cl_renderer/../rt_settings/rt_settings.h \
   ../cl_renderer/json/json_parse.h ../cl_renderer/json/jsmn.h \
-  ../libft/includes/libft_ft_printf.h ../libft/includes/libft_vector.h \
   ../gui/gui_signal_x/gui_signal_x.h
 
 ../gui/gui_signal_connect_x/gui_signal_connect_x.h:
@@ -2053,9 +2052,5 @@
 ../cl_renderer/json/json_parse.h:
 
 ../cl_renderer/json/jsmn.h:
-
-../libft/includes/libft_ft_printf.h:
-
-../libft/includes/libft_vector.h:
 
 ../gui/gui_signal_x/gui_signal_x.h:

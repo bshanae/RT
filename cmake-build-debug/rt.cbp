@@ -64,7 +64,7 @@
 					<Add directory="/usr/local/Cellar/glib/2.62.0/lib/glib-2.0/include"/>
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./libft/includes"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./error_framework"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
@@ -146,7 +146,7 @@
 					<Add directory="/usr/local/Cellar/glib/2.62.0/lib/glib-2.0/include"/>
 					<Add directory="/usr/local/opt/gettext/include"/>
 					<Add directory="/usr/local/Cellar/pcre/8.43/include"/>
-					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/../21_libft/includes"/>
+					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./libft/includes"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./error_framework"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./parameters"/>
 					<Add directory="/Users/Vladimir/workspace/21_ray_tracer/./gui/gui"/>
@@ -457,10 +457,10 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_object_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_set_x.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_select.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_un_select.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_set_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/scene/scene_update.c">
@@ -649,7 +649,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_finish.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_(un)block.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_block.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_queue/gui_queue_delete.c">
@@ -763,9 +763,6 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_(un)select.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
 			<Option target="rt"/>
 		</Unit>
@@ -827,6 +824,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_new.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_select.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_show.c">

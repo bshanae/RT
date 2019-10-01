@@ -6,30 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../../21_libft/includes/libft_ft_printf.h
-stdarg.h
--
-libft_standart.h
-../../21_libft/includes/libft_standart.h
-libft_vector.h
-../../21_libft/includes/libft_vector.h
-
-../../21_libft/includes/libft_standart.h
-sys/types.h
--
-sys/stat.h
--
-fcntl.h
--
-stdlib.h
--
-unistd.h
--
-
-../../21_libft/includes/libft_vector.h
-libft_standart.h
-../../21_libft/includes/libft_standart.h
-
 .././cl_renderer/camera/camera.h
 rt_parameters.h
 .././cl_renderer/camera/rt_parameters.h
@@ -171,8 +147,6 @@ jsmn.h
 .././cl_renderer/json/jsmn.h
 error_framework.h
 .././cl_renderer/json/error_framework.h
-libft_ft_printf.h
-.././cl_renderer/json/libft_ft_printf.h
 material.h
 .././cl_renderer/json/material.h
 material_list.h
@@ -552,6 +526,18 @@ gui.h
 time.h
 -
 
+.././libft/includes/libft_standart.h
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdlib.h
+-
+unistd.h
+-
+
 .././parameters/rt_cl_include.h
 OpenCL/opencl.h
 -
@@ -573,50 +559,6 @@ rt_control.h
 .././parameters/rt_sources_gui.h
 
 .././parameters/rt_sources_texture.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-rt_control.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/rt_control.h
-rt_cl_include.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/rt_cl_include.h
-rt_sources_cl.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/rt_sources_cl.h
-error_framework.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/error_framework.h
-cl_program.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_program.h
-cl_arg_list.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_arg_list.h
-stdio.h
--
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_program_x.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_create_x.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_delete.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_init_device.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_log.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_new.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
-
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder_set_args.c
-cl_builder.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_builder/cl_builder.h
 
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/cl_renderer/cl_renderer.h
 rt_cl_include.h
@@ -694,6 +636,12 @@ stddef.h
 json_parse.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_parse.h
 
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_helper.c
+jsmn.h
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/jsmn.h
+json_parse.h
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_parse.h
+
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_objects.c
 json_parse.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_parse.h
@@ -707,8 +655,6 @@ jsmn.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/jsmn.h
 error_framework.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/error_framework.h
-libft_ft_printf.h
-/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/libft_ft_printf.h
 material.h
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/material.h
 material_list.h
@@ -723,6 +669,12 @@ string.h
 -
 stdlib.h
 -
+
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_worker.c
+jsmn.h
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/jsmn.h
+json_parse.h
+/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/json/json_parse.h
 
 /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/rt_settings/rt_settings.h
 rt_cl_include.h

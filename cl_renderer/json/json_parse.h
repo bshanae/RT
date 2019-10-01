@@ -6,7 +6,6 @@
 # include "jsmn.h"
 
 # include "error_framework.h"
-# include "libft_ft_printf.h"
 # include "material.h"
 # include "material_list.h"
 

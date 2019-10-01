@@ -294,7 +294,7 @@
 ../cl_renderer/disruption_x/disruption_math.c
 
 #	#################################################################	#
-#	F3																	#
+#	F2																#
 #	#################################################################	#
 
 ../cl_renderer/f2/f2_add.c
@@ -366,6 +366,7 @@
 
 ../cl_renderer/camera/camera_new.c
 ../cl_renderer/camera/camera_delete.c
+../cl_renderer/camera/camera_default.c
 ../cl_renderer/camera/camera_move.c
 ../cl_renderer/camera/camera_rotate.c
 ../cl_renderer/camera/camera_apply.c
