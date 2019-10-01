@@ -1,3 +1,5 @@
+FUNC_INFO = ${info [Libft] : $1}
+
 SRC_LIST_TEMPL = sources_list.txt
 SRC_FILES_GEN = $(shell cat $(addprefix $(1), $(SRC_LIST_TEMPL)))
 
@@ -16,6 +18,7 @@ STD_OBJ = $(call OBJ_GEN,$(STD_DIR))
 STD_INCL = ./includes/libft_standart.h
 
 NAME = libft.a
+TEMP = .temp
 
 LIB_SRC = $(STD_SRC)
 
@@ -25,21 +28,27 @@ LIB_INCL = $(STD_INCL)
 
 all : $(NAME)
 
+try_all : ${TEMP}
+
+${TEMP} : all
+	@touch ${TEMP}
+
 $(NAME) : $(LIB_OBJ) $(LIB_INCL)
-	@echo ">>> creating library <<<"
+	${call FUNC_INFO,Creating library}
 	@ar rc $(NAME) $(LIB_OBJ)
 	@ranlib $(NAME)
 
 $(STD_OBJ) : $(STD_SRC)
-	@echo ">>> compiling standart functions <<<"
+	${call FUNC_INFO,Compiling standart functions}
 	@make -C $(STD_DIR)
 
 clean : 
-	@echo ">>> deleting standart functions objects <<<"
+	${call FUNC_INFO,Deleting standart functions objects}
 	@make clean -C $(STD_DIR)
 
 fclean : clean
-	rm -rf $(NAME)
+	${call FUNC_INFO,Deleting library}
+	@rm -rf $(NAME)
 
 re : fclean $(NAME)
 

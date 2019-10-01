@@ -215,7 +215,6 @@ endef
 #	COUNT FUNCTIONS														#
 #	#################################################################	#
 
-
 define FUNC_LOAD_COUNT
 ${call FUNC_INFO,Loadind counter}
 ${eval VAR_COUNT_CURRENT = 0}
@@ -223,7 +222,7 @@ ${eval VAR_COUNT_TOTAL = 0}
 endef
 
 define FUNC_COUNT_OBJECT
-${call FUN_INFO,${shell													\
+${call FUNC_INFO,${shell													\
 	printf "[%3d%%] Building C object $1" ${VAR_COUNT_PERCENT}}}
 ${call MATH_INCR,VAR_COUNT_CURRENT}
 ${eval VAR_COUNT_PERCENT = ${call MATH_PERCENT,							\
@@ -326,7 +325,7 @@ ${call FUNC_CALL_VOID, FUNC_LOAD_PROJECT}
 ${call FUNC_CALL_VOID, FUNC_LOAD_TEMPS}
 ${call FUNC_CALL_VOID, FUNC_LOAD_COUNT}
 
-.PHONY : all report clean fclean re re_rt
+.PHONY : all report clean clean_no_extern fclean fclean_no_extern re re_no_extern
 
 all : ${VAR_PROJECT_EXE}
 
@@ -393,9 +392,7 @@ ${VAR_PROJECT_EXTERN_TARGET} :
 ${VAR_PROJECT_EXE} : ${VAR_PROJECT_EXTERN_TARGET} ${VAR_TEMPS} ${VAR_OBJECTS}
 	${call FUNC_COMPILE_EXE}
 
-clean :
-	${call FUNC_RUN_EXTERN}
-	${call FUNC_INFO,Cleaning extern}
+clean_no_extern :
 	@rm -rf ${VAR_TEMPS_FOLDER}
 	${call FUNC_INFO,Deleting temporary files}
 	${call FUNC_INFO,Deleting objects}
@@ -403,10 +400,16 @@ clean :
 	${call FUNC_INFO,Deleting dependencies}
 	@rm -rf ${VAR_DEPENDS_FOLDER}
 
+clean : clean_no_extern
+	${call FUNC_INFO,Cleaning extern}
+	${call FUNC_RUN_EXTERN}
+
 fclean : clean
 	${call FUNC_RUN_EXTERN,fclean}
+
+fclean_no_extern : clean
 
 re : fclean all
 	${call FUNC_RUN_EXTERN,re}
 
-re_rt : fclean all
+re_no_extern : fclean_no_extern all
