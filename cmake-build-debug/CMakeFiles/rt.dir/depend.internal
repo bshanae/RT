@@ -24,10 +24,10 @@ CMakeFiles/rt.dir/cl_renderer/camera/camera_default.c.o
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera.h
  /Users/Vladimir/workspace/21_ray_tracer/cl_renderer/camera/camera_default.c
 CMakeFiles/rt.dir/cl_renderer/camera/camera_delete.c.o
- ../../21_libft/includes/libft_standart.h
  .././cl_renderer/f4/f4.h
  .././cl_renderer/ray/ray.h
  .././error_framework/error_framework.h
+ .././libft/includes/libft_standart.h
  .././parameters/rt_cl_include.h
  .././parameters/rt_control.h
  .././parameters/rt_float.h

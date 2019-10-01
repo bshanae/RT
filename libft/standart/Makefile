@@ -20,11 +20,9 @@ FILES = $(shell cat $(SRC_LIST))
 
 SRC_DIR = ./sources_*/
 OBJ_DIR = ./objects/
-DEP_DIR = ./depends/
 
 SRC = $(addprefix $(SRC_DIR), $(FILES))
 OBJ = $(addprefix $(OBJ_DIR), $(FILES:.c=.o))
-DEP = $(addprefix $(DEP_DIR), $(FILES:.c=.d))
 
 INCL = -I ../includes/
 
@@ -50,10 +48,6 @@ clean :
 	@rm -rf $(OBJ_DIR)
 
 re : clean $(NAME)
-
-${DEP} :
-
-include ${wildcard ${DEP}}
 
 .PHONY : clean re
 
