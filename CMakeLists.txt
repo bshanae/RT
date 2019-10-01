@@ -467,7 +467,8 @@ set(SOURCE_CL_BUILDER
 	./cl_renderer/cl_builder/cl_builder_init_device.c
 	./cl_renderer/cl_builder/cl_builder_create_x.c
 	./cl_renderer/cl_builder/cl_builder_log.c
-	./cl_renderer/cl_builder/cl_builder_set_args.c cl_renderer/cl_builder/cl_builder_create_program_x.c)
+	./cl_renderer/cl_builder/cl_builder_set_args.c
+	./cl_renderer/cl_builder/cl_builder_create_program_x.c)
 
 set(SOURCE_CL_RT_SETTINGS
 	cl_renderer/rt_settings/rt_settings_init.c)

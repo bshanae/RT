@@ -374,7 +374,7 @@
 ../cl_renderer/camera/camera_get_step.c
 
 #	#################################################################	#
-#	CL RPOGRAM															#
+#	CL PROGRAM															#
 #	#################################################################	#
 
 ../cl_renderer/cl_program/cl_program_new.c
@@ -401,6 +401,7 @@
 ../cl_renderer/cl_builder/cl_builder_delete.c
 ../cl_renderer/cl_builder/cl_builder_init_device.c
 ../cl_renderer/cl_builder/cl_builder_create_x.c
+../cl_renderer/cl_builder/cl_builder_create_program_x.c
 ../cl_renderer/cl_builder/cl_builder_log.c
 ../cl_renderer/cl_builder/cl_builder_set_args.c
 

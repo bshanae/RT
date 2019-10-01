@@ -113,7 +113,7 @@ endef
 #	#################################################################	#
 
 define FUNC_GENERATE_OBJECT
-${patsubst %.c, %.o, ${addprefix ${VAR_OBJECTS_FOLDER}/, ${notdir $1}}}
+${patsubst %.c,%.o,${addprefix ${VAR_OBJECTS_FOLDER}/, ${notdir $1}}}
 endef
 
 define FUNC_GENERATE_OBJECT_TEMP
@@ -131,7 +131,7 @@ endef
 #	#################################################################	#
 
 define FUNC_GENERATE_DEPEND
-${patsubst %.c, %.d, ${addprefix ${VAR_DEPENDS_FOLDER}/, ${notdir $1}}}
+${patsubst %.c,%.d,${addprefix ${VAR_DEPENDS_FOLDER}/, ${notdir $1}}}
 endef
 
 define FUNC_GENERATE_DEPEND_TEMP
@@ -187,7 +187,7 @@ define FUNC_RUN_EXTERN
 ${call FUNC_INFO,Loadind extern make}
 ${if																	\
 	${VAR_PROJECT_EXTERN_DATA},											\
-	make $1 -C ${VAR_PROJECT_EXTERN_DIR}						\
+	@make $1 -C ${VAR_PROJECT_EXTERN_DIR}						\
 	,																	\
 }	
 endef
@@ -197,7 +197,7 @@ endef
 #	#################################################################	#
 
 define FUNC_GENERATE_TEMP
-${patsubst %.c, %.temp, ${addprefix ${VAR_TEMPS_FOLDER}/, ${notdir $1}}}
+${patsubst %.c,%.temp,${addprefix ${VAR_TEMPS_FOLDER}/, ${notdir $1}}}
 endef
 
 define FUNC_LOAD_TEMPS
@@ -207,6 +207,7 @@ ${eval VAR_TEMPS = ${call FUNC_ITERATE,									\
 endef
 
 define FUNC_MAKE_TEMP
+${call FUNC_INFO,Building temporary file ${call FUNC_GENERATE_TEMP, $1}}
 @touch ${call FUNC_GENERATE_TEMP, $1}
 endef
 
@@ -325,9 +326,11 @@ ${call FUNC_CALL_VOID, FUNC_LOAD_PROJECT}
 ${call FUNC_CALL_VOID, FUNC_LOAD_TEMPS}
 ${call FUNC_CALL_VOID, FUNC_LOAD_COUNT}
 
+.PHONY : all report clean fclean re re_rt
+
 all : ${VAR_PROJECT_EXE}
 
-report :
+report : ${VAR_TEMPS}
 	@echo "${COLOR_RED}\c"
 	@echo "includes = {${VAR_INCLUDES_DATA}}\n"
 	@echo "linked dirs = {${VAR_LINKS_DIRS}}\n"
@@ -345,13 +348,18 @@ report :
 	@echo "${COLOR_NONE}\c"
 
 ${VAR_TEMPS_FOLDER} :
-	@mkdir ${VAR_TEMPS_FOLDER}
 	${call FUNC_INFO,Creating folder for temporary files}
+	@mkdir ${VAR_TEMPS_FOLDER}
 
 
 ${VAR_OBJECTS_FOLDER} :
-	@mkdir ${VAR_OBJECTS_FOLDER}
 	${call FUNC_INFO,Creating folder for objects}
+	@mkdir ${VAR_OBJECTS_FOLDER}
+
+${VAR_DEPENDS_FOLDER} :
+	@mkdir ${VAR_DEPENDS_FOLDER}
+	${call FUNC_INFO,Creating folder for dependencies}
+
 
 ${VAR_TEMPS_FOLDER}/%.temp : %.c										\
 							${VAR_DEPENDS_FOLDER}/%.d					\
@@ -363,7 +371,6 @@ ${VAR_TEMPS_FOLDER}/%.temp : %.c										\
 							${VAR_TEMPS_FOLDER}
 	${call FUNC_MAKE_TEMP,$<}
 	${call MATH_INCR,VAR_COUNT_TOTAL}
-	${call FUNC_INFO,total = ${VAR_COUNT_TOTAL}}
 
 ${VAR_OBJECTS_FOLDER}/%.o : %.c											\
 							${VAR_DEPENDS_FOLDER}/%.d					\
@@ -375,10 +382,6 @@ ${VAR_OBJECTS_FOLDER}/%.o : %.c											\
 							${VAR_OBJECTS_FOLDER}						\
 							${VAR_DEPENDS_FOLDER}
 	${call FUNC_COMPILE_OBJECT,$<}
-
-${VAR_DEPENDS_FOLDER} :
-	@mkdir ${VAR_DEPENDS_FOLDER}
-	${call FUNC_INFO,Creating folder for dependencies}
 
 ${VAR_DEPENDS} :
 
@@ -392,8 +395,9 @@ ${VAR_PROJECT_EXE} : ${VAR_PROJECT_EXTERN_TARGET} ${VAR_TEMPS} ${VAR_OBJECTS}
 
 clean :
 	${call FUNC_RUN_EXTERN}
-	${call FUNC_INFO,cleaning extern}
-	${call FUNC_RUN_EXTERN}
+	${call FUNC_INFO,Cleaning extern}
+	@rm -rf ${VAR_TEMPS_FOLDER}
+	${call FUNC_INFO,Deleting temporary files}
 	${call FUNC_INFO,Deleting objects}
 	@rm -rf ${VAR_OBJECTS_FOLDER}
 	${call FUNC_INFO,Deleting dependencies}
@@ -405,4 +409,4 @@ fclean : clean
 re : fclean all
 	${call FUNC_RUN_EXTERN,re}
 
-re_rt : fclean all	
+re_rt : fclean all
