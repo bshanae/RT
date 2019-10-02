@@ -14,21 +14,6 @@
 # include <fcntl.h>
 # include <string.h>
 # include <stdlib.h>
-# include "cl_renderer.h"
-
-typedef struct	s_argb
-{
-	u_char		b;
-	u_char		g;
-	u_char		r;
-	u_char		a;
-}				t_argb;
-
-typedef union	u_color
-{
-	uint		hex;
-	t_argb		rgb;
-}				t_color2;
 
 typedef struct	s_vector3
 {
@@ -38,26 +23,41 @@ typedef struct	s_vector3
 	float       w;
 }				t_vector3;
 
-typedef struct	s_macro_hack
+typedef struct	s_parse_object
 {
-	const char	*name;
+	t_vector3	*val_v1;
+	t_vector3	*val_v2;
+	char		*val_s1;
+	char		*val_s2;
+	char		*val_s3;
+	float		*val_f1;
+	float		*val_f2;
+	int			*val_i1;
+	int			*val_i2;
+	t_vector3	v1;
+	t_vector3	v2;
+	float		f1;
+	float		f2;
+	int			i1;
+	int			i2;
+	int			i3;
+	char		*name;
 	t_material	material;
-}				t_default;
+	char		*texture;
+}				t_obj;
 
 void		json_load(void *data, const char *path);
 
 char		*read_file(const char *path);
 int			ft_strequ(char const *s1, char const *s2);
-int			ft_strnequ(char const *s1, char const *s2, size_t len);
 
 jsmntok_t	*next_item(jsmntok_t *tokens);
 char		*get_string_in_object(char *json, jsmntok_t *object, char *target);
-t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_vector3 def);
-float		get_float_in_object(char *json, jsmntok_t *object, char *target, float def);
-int			get_int_in_object(char *json, jsmntok_t *object, char *target, int def);
-int			get_bool_in_object(char *json, jsmntok_t *object, char *target, int def);
+t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target);
+float		*get_float_in_object(char *json, jsmntok_t *object, char *target);
+int			*get_int_in_object(char *json, jsmntok_t *object, char *target);
+int			*get_bool_in_object(char *json, jsmntok_t *object, char *target);
 t_material	decide_material(char *mat_name);
-void		load_shared(void *data, char *json, jsmntok_t *object, t_default def);
 
 void		parse_camera(void *data, char *json, jsmntok_t *tokens);
 void		parse_sphere(void *data, char *json, jsmntok_t *tokens);
@@ -75,7 +75,6 @@ void		parse_point(void *data, char *json, jsmntok_t *tokens);
 void		parse_direct(void *data, char *json, jsmntok_t *tokens);
 void		parse_explosion(void *data, char *json, jsmntok_t *tokens);
 void		parse_perfcube(void *data, char *json, jsmntok_t *tokens);
-void        parse_csg(void *data, char *json, jsmntok_t *tokens);
 void		parse_settings(void *data, char *json, jsmntok_t *tokens);
 
 #endif
