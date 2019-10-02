@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_image.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:37:18 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:37:21 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef GUI_IMAGE_H
 # define GUI_IMAGE_H
 
@@ -9,7 +21,7 @@
 
 # include <gtk/gtk.h>
 
-typedef struct 		s_gui_image
+typedef struct		s_gui_image
 {
 	GtkEventBox		*event_box;
 	GtkImage		*image;
@@ -24,6 +36,6 @@ typedef struct 		s_gui_image
 t_gui_image			*gui_image_new(GtkBuilder *builder);
 void				gui_image_delete(t_gui_image **image);
 
-void 				gui_image_allocate(t_gui_image *image);
+void				gui_image_allocate(t_gui_image *image);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/02 16:39:57 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:17:28 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	parse_direct(void *data, char *json, jsmntok_t *tokens)
 	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
 }
 
-void	parse_sphere(void *data, char *json, jsmntok_t *tokens)
+void				parse_sphere(void *data, char *json, jsmntok_t *tokens)
 {
 	t_vector3	pos;
 	float		r;
@@ -217,7 +217,6 @@ void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
 
 void	parse_perfcube(void *data, char *json, jsmntok_t *tokens)
 {
-	t_vector3	pos;
 	int			iter;
 
 	pos = get_vector_in_object(json, tokens, "position", PCUBE_POSITION);

@@ -6,7 +6,7 @@
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 13:33:12 by ashari            #+#    #+#             */
-/*   Updated: 2019/09/28 13:33:15 by ashari           ###   ########.fr       */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct		s_camera
 	RT_F2_API		request_value;
 }					t_camera;
 
+void 				camera_default(t_camera *camera);
 t_camera			*camera_new(INT_REF width, INT_REF height);
 void				camera_delete(t_camera **camera);
 

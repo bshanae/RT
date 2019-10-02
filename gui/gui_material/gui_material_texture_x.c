@@ -1,23 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_material_texture_x.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:49:38 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:50:10 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_material.h"
 
-void 					gui_material_texture_enable(t_gui_material *material)
+void				gui_material_texture_enable(t_gui_material *material)
 {
 	material->texture_state = rt_on;
 	gtk_stack_set_visible_child_name(material->switcher_stack, "show");
 }
 
-void 					gui_material_texture_disable(t_gui_material *material)
+void				gui_material_texture_disable(t_gui_material *material)
 {
 	material->texture_state = rt_off;
 	gtk_stack_set_visible_child_name(material->switcher_stack, "hide");
 	gui_material_switch_mod(material, gui_material_material);
 }
 
-void 					gui_material_texture_get
-						(t_gui_material *material, int id)
+void				gui_material_texture_get
+	(t_gui_material *material, int id)
 {
 	GtkTreeModel	*model;
-	int 			i;
+	int				i;
 	GtkTreeIter		iter;
 
 	model = GTK_TREE_MODEL(material->texture_list);
@@ -37,10 +49,10 @@ void 					gui_material_texture_get
 	rt_raise_warning("GUI Material : Texture not found (id = %d)", id);
 }
 
-void 					gui_material_texture_set
-						(t_gui_material *material, int *id)
+void				gui_material_texture_set
+	(t_gui_material *material, int *id)
 {
-	GtkTreeIter			iter;
+	GtkTreeIter		iter;
 
 	gtk_combo_box_get_active_iter(material->texture_combo, &iter);
 	gtk_tree_model_get(GTK_TREE_MODEL(material->texture_list),

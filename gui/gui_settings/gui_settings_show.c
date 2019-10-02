@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_settings_show.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 17:03:39 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 17:04:54 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_settings.h"
 
 void					gui_settings_show_samples(t_gui_settings *gui)
@@ -6,7 +18,7 @@ void					gui_settings_show_samples(t_gui_settings *gui)
 	gui_entry_set_i(gui->pt_samples_number, gui->ptr_settings->sample_count);
 }
 
-void 					gui_settings_show(t_gui_settings *gui)
+void					gui_settings_show(t_gui_settings *gui)
 {
 	t_rt_tracing_mod	mod;
 
@@ -25,8 +37,10 @@ void 					gui_settings_show(t_gui_settings *gui)
 		gui->ptr_settings->light_mod == rt_light_basic);
 	gtk_toggle_button_set_active(gui->light_area,
 		gui->ptr_settings->light_mod == rt_light_area);
-	gtk_switch_set_active(gui->illumination_state, gui->ptr_settings->illumination);
-	gui_entry_set_f(gui->illumination_value, gui->ptr_settings->illumination_value);
+	gtk_switch_set_active(gui->illumination_state,
+		gui->ptr_settings->illumination);
+	gui_entry_set_f(gui->illumination_value,
+		gui->ptr_settings->illumination_value);
 	gui_entry_set_i(gui->pt_samples_limit, gui->ptr_settings->sample_limit);
 	gui_entry_set_i(gui->pt_depth, gui->ptr_settings->sample_depth);
 	gtk_switch_set_active(gui->motion_blur, gui->ptr_settings->motion_blur);

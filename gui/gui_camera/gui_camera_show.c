@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_camera_show.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:31:38 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:31:38 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_camera.h"
 
-static void			static_set_filter(t_gui_camera *gui)
+static void			static_set_filter(t_gui_camera *gui, t_camera *camera)
 {
 	if (*gui->ptr_light == rt_light_basic)
 		gtk_widget_set_sensitive(gui->filter_cartoon_box, 1);
@@ -11,10 +23,17 @@ static void			static_set_filter(t_gui_camera *gui)
 		gtk_toggle_button_set_active(gui->filter_cartoon, 0);
 		gtk_widget_set_sensitive(gui->filter_cartoon_box, 0);
 	}
-
+	gtk_toggle_button_set_active(gui->filter_none,
+		camera->filter_mod == rt_filter_none);
+	gtk_toggle_button_set_active(gui->filter_cartoon,
+		camera->filter_mod == rt_filter_cartoon);
+	gtk_toggle_button_set_active(gui->filter_sepia,
+		camera->filter_mod == rt_filter_sepia);
+	gtk_toggle_button_set_active(gui->filter_stereo,
+		camera->filter_mod == rt_filter_stereo);
 }
 
-void 				gui_camera_show(t_gui_camera *gui)
+void				gui_camera_show(t_gui_camera *gui)
 {
 	t_camera		*camera;
 
@@ -28,11 +47,7 @@ void 				gui_camera_show(t_gui_camera *gui)
 	gui_entry_set_f(gui->rotation_y, camera->rotation.y);
 	gui_entry_set_f(gui->rotation_z, camera->rotation.z);
 	gtk_switch_set_state(gui->antialiasing, camera->filter_antialiasing);
-	static_set_filter(gui);
-	gtk_toggle_button_set_active(gui->filter_none,  camera->filter_mod == rt_filter_none);
-	gtk_toggle_button_set_active(gui->filter_cartoon, camera->filter_mod == rt_filter_cartoon);
-	gtk_toggle_button_set_active(gui->filter_sepia, camera->filter_mod == rt_filter_sepia);
-	gtk_toggle_button_set_active(gui->filter_stereo,  camera->filter_mod == rt_filter_stereo);
+	static_set_filter(gui, camera);
 	gtk_switch_set_state(gui->focus, camera->focus);
 	gtk_widget_set_sensitive(GTK_WIDGET(gui->focus_box), camera->focus);
 	gui_entry_set_f(gui->focus_focal_length, camera->focal_length);

@@ -1,10 +1,20 @@
-#include "gui_queue.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_queue_execute_x.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:49:09 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:51:59 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int i = 0;
+#include "gui_queue.h"
 
 void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 {
-	int 			force;
+	int				force;
 
 	force = queue->force_execute;
 	if (force)

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(RT_GTK_PKG OFF)
+set(RT_GTK_PKG ON)
 set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
@@ -73,7 +73,7 @@ else ()
 endif ()
 
 include_directories(
-	../21_libft/includes/
+	./libft/includes/
 	./error_framework/
 	./parameters/
 	./gui/gui/
@@ -167,7 +167,7 @@ set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_push.c
 	./gui/gui_queue/gui_queue_execute_x.c
 	./gui/gui_queue/gui_queue_start.c
-	"./gui/gui_queue/gui_queue_(un)block.c"
+	"gui/gui_queue/gui_queue_block.c"
 	./gui/gui_queue/gui_queue_wait.c
 	./gui/gui_queue/gui_queue_get_time.c)
 
@@ -187,7 +187,7 @@ set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_delete.c
 	./gui/gui_parser/gui_parser_update.c
 	./gui/gui_signal_connect_x/gui_signal_connect_parser.c
-	./gui/gui_queue/gui_finish.c)
+        gui/gui_queue/gui_queue_finish.c)
 
 set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
@@ -231,8 +231,8 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
-	./gui/gui_scene_common/gui_scene_common_update_x.c
-	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c)
+        gui/gui_scene_common/gui_scene_common_update_x_a.c
+	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -256,7 +256,7 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
 	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
 	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
-	"gui/gui_scene_edit/gui_scene_edit_(un)select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
+	"gui/gui_scene_edit/gui_scene_edit_select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -429,7 +429,7 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_update.c
 	./cl_renderer/scene/scene_clear.c
 	./cl_renderer/scene/camera_point_check.c
-	"cl_renderer/scene/scene_un_select.c"
+	"cl_renderer/scene/scene_select.c"
 	./cl_renderer/scene/scene_edit_param.c
 	./cl_renderer/scene/scene_set_x.c
 	./cl_renderer/scene/scene_find_x_by_x.c
@@ -445,7 +445,7 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
 	./cl_renderer/camera/camera_request_x.c
-	./cl_renderer/camera/camera_get_step.c)
+	./cl_renderer/camera/camera_get_step.c cl_renderer/camera/camera_default.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -467,7 +467,8 @@ set(SOURCE_CL_BUILDER
 	./cl_renderer/cl_builder/cl_builder_init_device.c
 	./cl_renderer/cl_builder/cl_builder_create_x.c
 	./cl_renderer/cl_builder/cl_builder_log.c
-	./cl_renderer/cl_builder/cl_builder_set_args.c cl_renderer/cl_builder/cl_builder_create_program_x.c)
+	./cl_renderer/cl_builder/cl_builder_set_args.c
+	./cl_renderer/cl_builder/cl_builder_create_program_x.c)
 
 set(SOURCE_CL_RT_SETTINGS
 	cl_renderer/rt_settings/rt_settings_init.c)

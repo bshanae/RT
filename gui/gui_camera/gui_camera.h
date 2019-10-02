@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_camera.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:27:01 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:27:02 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef GUI_CAMERA_H
 # define GUI_CAMERA_H
 
@@ -13,7 +25,7 @@
 typedef struct				s_gui_camera
 {
 	t_rt_bool				connected;
-	t_camera 				*ptr_camera;
+	t_camera				*ptr_camera;
 	t_rt_light_mod const	*ptr_light;
 	t_gui_control			control;
 	GtkEntry				*position_x;
@@ -40,9 +52,10 @@ typedef struct				s_gui_camera
 }							t_gui_camera;
 
 t_gui_camera				*gui_camera_new(GtkBuilder *builder);
-void 						gui_camera_connect(t_gui_camera *gui, ...);
-void 						gui_camera_delete(t_gui_camera **camera);
+void						gui_camera_connect(t_gui_camera *gui, ...);
+void						gui_camera_delete(t_gui_camera **camera);
 
-void 						gui_camera_show(t_gui_camera *gui);
-void 						gui_camera_apply(t_gui_camera *gui);
+void						gui_camera_show(t_gui_camera *gui);
+void						gui_camera_apply(t_gui_camera *gui);
+
 #endif

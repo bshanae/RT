@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_common_add_to_list.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:42:29 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:42:31 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_common.h"
 
 void				gui_scene_common_add_to_list
-					(GtkListStore *list, t_object *object)
+	(GtkListStore *list, t_object *object)
 {
 	GtkTreeIter		iter;
 

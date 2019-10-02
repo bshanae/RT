@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_plane_x.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:39:51 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:39:51 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_plane		gui_object_plane_init
-						(t_gui_init_plane *init, GtkBuilder *builder)
+	(t_gui_init_plane *init, GtkBuilder *builder)
 {
 	t_gui_object_plane	plane;
 
@@ -14,8 +26,8 @@ t_gui_object_plane		gui_object_plane_init
 	return (plane);
 }
 
-void 					gui_object_plane_get
-						(t_gui_object_plane *gui, t_object *object)
+void					gui_object_plane_get
+	(t_gui_object_plane *gui, t_object *object)
 {
 	t_object_plane		*data;
 
@@ -28,8 +40,8 @@ void 					gui_object_plane_get
 	gui_entry_set_f(gui->normal_z, data->normal.z);
 }
 
-void 					gui_object_plane_set
-						(t_gui_object_plane *gui, t_object *object)
+void					gui_object_plane_set
+	(t_gui_object_plane *gui, t_object *object)
 {
 	t_object_plane		*data;
 

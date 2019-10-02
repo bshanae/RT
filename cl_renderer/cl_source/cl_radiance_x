@@ -6,24 +6,14 @@ static void					radiance_write(
 							global RT_F4 *sample_store[RT_SAMPLE_ARRAY_LENGTH],
 							int global_id,
 							RT_F4 radiance,
-							constant t_rt_settings *settings, int *filter_stereo)
+							constant t_rt_settings *settings)
 {
 	if (!settings->motion_blur)
 	{
 		if (settings->sample_count == 1)
-		{
-			if (*filter_stereo)
-				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = filter_stereoscopy(&radiance, filter_stereo);
-			else
 				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
-		}
 		else
-		{
-			if (*filter_stereo)
-				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] += filter_stereoscopy(&radiance, filter_stereo);
-			else
 				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
-		}
 	}
 	else
 	{

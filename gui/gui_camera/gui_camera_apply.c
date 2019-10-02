@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_camera_apply.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:27:23 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:27:23 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_camera.h"
 
-void 				gui_camera_apply(t_gui_camera *gui)
+void				gui_camera_apply(t_gui_camera *gui)
 {
 	t_camera		*camera;
 

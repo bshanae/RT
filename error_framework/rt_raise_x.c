@@ -1,6 +1,5 @@
 #include "error_framework.h"
 
-
 void 				rt_raise_error(CHAR_REF message, ...)
 {
 	va_list 		args;

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_material_prepare.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:48:07 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:48:09 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_material.h"
 
-void 				gui_material_prepare
-					(t_gui_material *material, t_object *object)
+void				gui_material_prepare
+	(t_gui_material *material, t_object *object)
 {
 	UINT			flag;
 

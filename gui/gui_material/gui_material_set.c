@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_material_set.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/01 18:48:31 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/01 18:48:35 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_material.h"
 
 static RT_F			static_bound(RT_F value)
@@ -9,8 +21,8 @@ static RT_F			static_bound(RT_F value)
 	return (value);
 }
 
-void 				gui_material_set
-					(t_gui_material *gui, t_material *material, int *texture)
+void				gui_material_set
+	(t_gui_material *gui, t_material *material, int *texture)
 {
 	if (gui->current_mod == gui_material_texture)
 		gui_material_texture_set(gui, texture);

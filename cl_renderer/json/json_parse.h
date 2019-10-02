@@ -6,7 +6,6 @@
 # include "jsmn.h"
 
 # include "error_framework.h"
-# include "libft_ft_printf.h"
 # include "material.h"
 # include "material_list.h"
 
@@ -44,7 +43,7 @@ typedef struct	s_macro_hack
 	t_material	material;
 }				t_default;
 
-void		load_scene(void *data, const char *path);
+void		json_load(void *data, const char *path);
 
 char		*read_file(const char *path);
 int			ft_strequ(char const *s1, char const *s2);

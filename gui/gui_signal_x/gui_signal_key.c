@@ -61,8 +61,6 @@ gboolean			gui_signal_key
 	int 			image_focus;
 	gboolean 		finish_condition;
 
-
-	static int i;
 	gui = (t_gui *)ptr;
 	finish_condition = 1;
 	if (event->keyval == GDK_KEY_Escape)

@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_mandelbulb_x.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:32:08 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:32:24 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
-
 t_gui_object_mandelbulb		gui_object_mandelbulb_init
-							(t_gui_init_mandelbulb *init, GtkBuilder *builder)
+	(t_gui_init_mandelbulb *init, GtkBuilder *builder)
 {
 	t_gui_object_mandelbulb	mandelbulb;
 
@@ -12,7 +23,7 @@ t_gui_object_mandelbulb		gui_object_mandelbulb_init
 }
 
 void						gui_object_mandelbulb_get
-							(t_gui_object_mandelbulb *gui, t_object *object)
+	(t_gui_object_mandelbulb *gui, t_object *object)
 {
 	t_object_mandelbulb		*data;
 
@@ -21,8 +32,8 @@ void						gui_object_mandelbulb_get
 	gui_entry_set_f(gui->power, data->power);
 }
 
-void 						gui_object_mandelbulb_set
-							(t_gui_object_mandelbulb *gui, t_object *object)
+void						gui_object_mandelbulb_set
+	(t_gui_object_mandelbulb *gui, t_object *object)
 {
 	t_object_mandelbulb		*data;
 

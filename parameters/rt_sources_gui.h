@@ -12,5 +12,7 @@
 # define RT_SOURCE_GUI_ICON_SETTINGS	"./gui/source/icons/settings.svg"
 # define RT_SOURCE_GUI_ICON_PLUS		"./gui/source/icons/plus.svg"
 # define RT_SOURCE_GUI_ICON_MINUS		"./gui/source/icons/minus.svg"
+# define RT_SOURCE_GUI_ICON_ADD_NO		"./gui/source/icons/add_no.svg"
+# define RT_SOURCE_GUI_ICON_ADD_YES		"./gui/source/icons/add_yes.svg"
 
 #endif
