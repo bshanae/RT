@@ -15,6 +15,20 @@
 # include <string.h>
 # include <stdlib.h>
 
+typedef struct	s_argb
+{
+	u_char		b;
+	u_char		g;
+	u_char		r;
+	u_char		a;
+}				t_argb;
+
+typedef union	u_color
+{
+	uint		hex;
+	t_argb		rgb;
+}				t_color2;
+
 typedef struct	s_vector3
 {
 	float		x;
@@ -49,7 +63,7 @@ typedef struct	s_parse_object
 void		json_load(void *data, const char *path);
 
 char		*read_file(const char *path);
-int			ft_strequ(char const *s1, char const *s2);
+// int			ft_strequ(char const *s1, char const *s2);
 
 jsmntok_t	*next_item(jsmntok_t *tokens);
 char		*get_string_in_object(char *json, jsmntok_t *object, char *target);
