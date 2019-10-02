@@ -56,4 +56,6 @@ void						gui_object_cylinder_set
 	data->bottom.z = gui_entry_get_f(gui->bottom_z);
 	data->radius = gui_entry_get_f(gui->radius);
 	data->axis = f4_normalize(f4_sub(data->top, data->bottom));
+    data->length_line = f4_length(f4_sub(data->top, data->bottom));
+    data->length = data->length_line + data->radius * 2;
 }
