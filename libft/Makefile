@@ -1,55 +1,52 @@
-FUNC_INFO = ${info [Libft] : $1}
+FUNC_ITERATE = ${foreach line,$2,${call $1,${line}}}
 
-SRC_LIST_TEMPL = sources_list.txt
-SRC_FILES_GEN = $(shell cat $(addprefix $(1), $(SRC_LIST_TEMPL)))
+INCLUDES = -I ./includes
 
-SRC_DIR_GEN = $(addprefix $1, sources/)
-SRC_DIR_ADD = $(addprefix $(call SRC_DIR_GEN,$1), $2)
-SRC_GEN = $(call SRC_DIR_ADD,$1,$(call SRC_FILES_GEN,$1))
+SOURCES_DIR = ./sources
+SOURCES_LIST = ./sources_list.txt
+SOURCES = ${shell cat ${SOURCES_LIST}}
 
-OBJ_DIR_GEN = $(addprefix $1, objects/)
-OBJ_DIR_ADD = $(addprefix $(call OBJ_DIR_GEN,$1), $2)
-OBJ_GEN_PRE = $(call OBJ_DIR_ADD,$1,$(call SRC_FILES_GEN,$1))
-OBJ_GEN = $(patsubst %.c,%.o,$(call OBJ_GEN_PRE,$1))
+FUNC_GEN_OBJECT = ${patsubst %.c,%.o,${addprefix ${OBJECTS_DIR}/,${notdir $1}}}
+OBJECTS_DIR = ./objects
+OBJECTS = ${call FUNC_ITERATE,FUNC_GEN_OBJECT,${SOURCES}}
 
-STD_DIR = ./standart/
-STD_SRC = $(addprefix "./standart/sources_*/",$(call SRC_FILES_GEN,$(STD_DIR)))
-STD_OBJ = $(call OBJ_GEN,$(STD_DIR))
-STD_INCL = ./includes/libft_standart.h
+FUNC_GEN_DEPEND = ${patsubst %.c,%.d,${addprefix ${DEPENDS_DIR}/,${notdir $1}}}
+DEPENDS_DIR = ./depends
+DEPENDS = ${call FUNC_ITERATE,FUNC_GEN_DEPEND,${SOURCES}}
 
-NAME = libft.a
-TEMP = .temp
+LIB = libft.a
 
-LIB_SRC = $(STD_SRC)
+all : ${LIB}
 
-LIB_OBJ = $(STD_OBJ)
+${LIB} : ${OBJECTS} ${DEPENDS} | ${OBJECTS_DIR} ${DEPENDS_DIR}
+	@ar rc ${LIB} ${OBJECTS}
+	@ranlib ${LIB}
 
-LIB_INCL = $(STD_INCL)
+${OBJECTS_DIR} :
+	mkdir ${OBJECTS_DIR}
 
-all : $(NAME)
+${OBJECTS_DIR}/%.o : ${SOURCES_DIR}/%.c ${DEPENDS_DIR}/%.d | ${OBJECTS_DIR} ${DEPENDS_DIR}
+	gcc -MMD -MT $@ -MF ${call FUNC_GEN_DEPEND,$<} ${INCLUDES} -c $< -o $@
 
-try_all : ${TEMP}
+${DEPENDS_DIR} :
+	mkdir ${DEPENDS_DIR}
 
-${TEMP} : all
-	@touch ${TEMP}
+${DEPENDS} :
 
-$(NAME) : $(LIB_OBJ) $(LIB_INCL)
-	${call FUNC_INFO,Creating library}
-	@ar rc $(NAME) $(LIB_OBJ)
-	@ranlib $(NAME)
-
-$(STD_OBJ) : $(STD_SRC)
-	${call FUNC_INFO,Compiling standart functions}
-	@make -C $(STD_DIR)
-
-clean : 
-	${call FUNC_INFO,Deleting standart functions objects}
-	@make clean -C $(STD_DIR)
+clean :
+	rm -rf ${OBJECTS_DIR}
+	rm -rf ${DEPENDS_DIR}
 
 fclean : clean
-	${call FUNC_INFO,Deleting library}
-	@rm -rf $(NAME)
+	rm -rf ${LIB}
 
-re : fclean $(NAME)
+re : fclean all
 
-.PHONY : all clean fclean re
+report :
+	@echo "sources = {${SOURCES}}\n"
+	@echo "objects = {${OBJECTS}}\n"
+	@echo "depedns = {${DEPENDS}}\n"
+
+.PHONY : all clean fclean re report
+
+include ${wildcard ${DEPENDS}}
