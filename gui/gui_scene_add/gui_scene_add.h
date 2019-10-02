@@ -1,5 +1,17 @@
-#ifndef GUI_OBJECT_ADD_H
-# define GUI_OBJECT_ADD_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_add.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:16:44 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:17:59 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef GUI_SCENE_ADD_H
+# define GUI_SCENE_ADD_H
 
 # include "rt_parameters.h"
 
@@ -13,7 +25,7 @@
 
 # include <gtk/gtk.h>
 
-typedef struct 					s_gui_scene_add
+typedef struct					s_gui_scene_add
 {
 	t_gui_scene_common			*common;
 	GtkDialog					*dialog;
@@ -39,54 +51,53 @@ typedef struct 					s_gui_scene_add
 	t_object					temp_object;
 	GtkStack					*stack;
 	t_object_type				current_type;
-	int 						generator_next_id;
+	int							generator_next_id;
 }								t_gui_scene_add;
 
 t_gui_scene_add					*gui_scene_add_new(GtkBuilder *builder);
-void 							gui_scene_add_delete(t_gui_scene_add **object);
+void							gui_scene_add_delete(t_gui_scene_add **object);
 
-void 							gui_scene_add_init_own
+void							gui_scene_add_init_own
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_light_point
+void							gui_scene_add_init_light_point
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_light_direct
+void							gui_scene_add_init_light_direct
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_sphere
+void							gui_scene_add_init_sphere
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_plane
+void							gui_scene_add_init_plane
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_cone
+void							gui_scene_add_init_cone
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_cylinder
+void							gui_scene_add_init_cylinder
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_box
+void							gui_scene_add_init_box
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_paraboloid
+void							gui_scene_add_init_paraboloid
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_moebius
+void							gui_scene_add_init_moebius
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_limited
+void							gui_scene_add_init_limited
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_torus
+void							gui_scene_add_init_torus
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_mandelbulb
+void							gui_scene_add_init_mandelbulb
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_julia
+void							gui_scene_add_init_julia
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_p_cube
+void							gui_scene_add_init_p_cube
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_explosion
+void							gui_scene_add_init_explosion
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_csg
+void							gui_scene_add_init_csg
 								(t_gui_scene_add *add, GtkBuilder *builder);
-void 							gui_scene_add_init_material
+void							gui_scene_add_init_material
 								(t_gui_scene_add *add, GtkBuilder *builder);
 
 char							*gui_scene_add_gen_name
 								(t_gui_scene_add *add);
-void 							gui_scene_add_prepare(t_gui_scene_add *add);
+void							gui_scene_add_prepare(t_gui_scene_add *add);
 void							gui_scene_add_build_object
 								(t_gui_scene_add *add, t_object *space);
-
 
 #endif

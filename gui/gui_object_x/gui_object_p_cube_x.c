@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_p_cube_x.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:37:29 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:37:39 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_p_cube				gui_object_p_cube_init
-								(t_gui_init_p_cube *init, GtkBuilder *builder)
+	(t_gui_init_p_cube *init, GtkBuilder *builder)
 {
 	t_gui_object_p_cube			p_cube;
 
@@ -13,7 +25,7 @@ t_gui_object_p_cube				gui_object_p_cube_init
 }
 
 void							gui_object_p_cube_get
-								(t_gui_object_p_cube *gui, t_object *object)
+	(t_gui_object_p_cube *gui, t_object *object)
 {
 	t_object_perforated_cube	*data;
 
@@ -24,8 +36,8 @@ void							gui_object_p_cube_get
 	gui_entry_set_i(gui->iterations, data->iterations);
 }
 
-void 							gui_object_p_cube_set
-								(t_gui_object_p_cube *gui, t_object *object)
+void							gui_object_p_cube_set
+	(t_gui_object_p_cube *gui, t_object *object)
 {
 	t_object_perforated_cube	*data;
 

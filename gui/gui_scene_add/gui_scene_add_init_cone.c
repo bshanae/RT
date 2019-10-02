@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_add_init_cone.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:26:51 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:26:51 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_add.h"
 
-void 					gui_scene_add_init_cone
-						(t_gui_scene_add *add, GtkBuilder *builder)
+void					gui_scene_add_init_cone
+	(t_gui_scene_add *add, GtkBuilder *builder)
 {
 	t_gui_init_cone		init;
 

@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_torus_x.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:40:35 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:40:35 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
-
 t_gui_object_torus			gui_object_torus_init
-							(t_gui_init_torus *init, GtkBuilder *builder)
+	(t_gui_init_torus *init, GtkBuilder *builder)
 {
 	t_gui_object_torus		torus;
 
@@ -15,7 +26,7 @@ t_gui_object_torus			gui_object_torus_init
 }
 
 void						gui_object_torus_get
-							(t_gui_object_torus *gui, t_object *object)
+	(t_gui_object_torus *gui, t_object *object)
 {
 	t_object_torus		*data;
 
@@ -27,8 +38,8 @@ void						gui_object_torus_get
 	gui_entry_set_f(gui->width, data->t_1);
 }
 
-void 						gui_object_torus_set
-							(t_gui_object_torus *gui, t_object *object)
+void						gui_object_torus_set
+	(t_gui_object_torus *gui, t_object *object)
 {
 	t_object_torus	*data;
 

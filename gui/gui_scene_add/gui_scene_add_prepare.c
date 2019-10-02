@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_add_prepare.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:38:11 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:38:13 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_add.h"
 
 void				static_default_object(t_object *object)
@@ -7,7 +19,7 @@ void				static_default_object(t_object *object)
 	object->texture_id = -1;
 }
 
-void 				gui_scene_add_prepare(t_gui_scene_add *add)
+void				gui_scene_add_prepare(t_gui_scene_add *add)
 {
 	CHAR_REF		str;
 	GtkTreeIter		iter;

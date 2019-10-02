@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_sphere_x.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:40:14 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:40:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_sphere		gui_object_sphere_init
-						(t_gui_init_sphere *init, GtkBuilder *builder)
+	(t_gui_init_sphere *init, GtkBuilder *builder)
 {
 	t_gui_object_sphere	sphere;
 
@@ -13,7 +25,7 @@ t_gui_object_sphere		gui_object_sphere_init
 }
 
 void					gui_object_sphere_get
-						(t_gui_object_sphere *gui, t_object *object)
+	(t_gui_object_sphere *gui, t_object *object)
 {
 	t_object_sphere		*data;
 
@@ -24,8 +36,8 @@ void					gui_object_sphere_get
 	gui_entry_set_f(gui->radius, data->radius);
 }
 
-void 					gui_object_sphere_set
-						(t_gui_object_sphere *gui, t_object *object)
+void					gui_object_sphere_set
+	(t_gui_object_sphere *gui, t_object *object)
 {
 	t_object_sphere	*data;
 

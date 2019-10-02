@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_box_x.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:26:21 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:26:48 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_box			gui_object_box_init
-							(t_gui_init_box *init, GtkBuilder *builder)
+	(t_gui_init_box *init, GtkBuilder *builder)
 {
 	t_gui_object_box		box;
 
@@ -15,7 +27,7 @@ t_gui_object_box			gui_object_box_init
 }
 
 void						gui_object_box_get
-							(t_gui_object_box *gui, t_object *object)
+	(t_gui_object_box *gui, t_object *object)
 {
 	t_object_box			*data;
 
@@ -28,10 +40,10 @@ void						gui_object_box_get
 	gui_entry_set_f(gui->size_z, data->size.z);
 }
 
-void 						gui_object_box_set
-							(t_gui_object_box *gui, t_object *object)
+void						gui_object_box_set
+	(t_gui_object_box *gui, t_object *object)
 {
-	t_object_box			*data;
+	t_object_box *data;
 
 	data = (t_object_box *)object->data;
 	data->position.x = gui_entry_get_f(gui->position_x);
@@ -41,5 +53,3 @@ void 						gui_object_box_set
 	data->size.y = gui_entry_get_f(gui->size_y);
 	data->size.z = gui_entry_get_f(gui->size_z);
 }
-
-

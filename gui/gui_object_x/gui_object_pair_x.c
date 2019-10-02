@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_pair_x.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:38:55 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:38:58 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
-
 t_gui_object_pair			gui_object_pair_init
-							(t_gui_init_pair *init, GtkBuilder *builder)
+	(t_gui_init_pair *init, GtkBuilder *builder)
 {
 	t_gui_object_pair		pair;
 
@@ -14,9 +25,9 @@ t_gui_object_pair			gui_object_pair_init
 }
 
 static t_rt_bool			static_find_in_list
-							(GtkTreeModel *model, int id, GtkTreeIter *iter)
+	(GtkTreeModel *model, int id, GtkTreeIter *iter)
 {
-	int 					temp;
+	int						temp;
 
 	if (!gtk_tree_model_get_iter_first(model, iter))
 	{
@@ -37,7 +48,7 @@ static t_rt_bool			static_find_in_list
 }
 
 void						gui_object_pair_get
-							(t_gui_object_pair *gui, t_object *object)
+	(t_gui_object_pair *gui, t_object *object)
 {
 	GtkTreeIter				iter;
 	t_object_pair			*pair;
@@ -56,8 +67,8 @@ void						gui_object_pair_get
 	gtk_combo_box_set_active_iter(gui->second_combo, &iter);
 }
 
-void 						gui_object_pair_set
-							(t_gui_object_pair *gui, t_object *object)
+void						gui_object_pair_set
+	(t_gui_object_pair *gui, t_object *object)
 {
 	GtkTreeIter				iter[2];
 	t_rt_bool				result[2];

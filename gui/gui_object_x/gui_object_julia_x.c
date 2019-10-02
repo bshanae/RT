@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_julia_x.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:29:53 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:29:54 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_julia			gui_object_julia_init
-							(t_gui_init_julia *init, GtkBuilder *builder)
+	(t_gui_init_julia *init, GtkBuilder *builder)
 {
 	t_gui_object_julia		julia;
 
@@ -14,7 +26,7 @@ t_gui_object_julia			gui_object_julia_init
 }
 
 void						gui_object_julia_get
-							(t_gui_object_julia *gui, t_object *object)
+	(t_gui_object_julia *gui, t_object *object)
 {
 	t_object_julia			*data;
 
@@ -26,8 +38,8 @@ void						gui_object_julia_get
 	gui_entry_set_f(gui->value_w, data->value.w);
 }
 
-void 						gui_object_julia_set
-							(t_gui_object_julia *gui, t_object *object)
+void						gui_object_julia_set
+	(t_gui_object_julia *gui, t_object *object)
 {
 	t_object_julia			*data;
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_common.h                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:38:49 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:42:09 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef GUI_SCENE_COMMON_H
 # define GUI_SCENE_COMMON_H
 
@@ -7,7 +19,7 @@
 
 # include <gtk/gtk.h>
 
-typedef struct 		s_gui_scene_common
+typedef struct		s_gui_scene_common
 {
 	t_rt_bool		connected;
 	t_scene			*ptr_scene;
@@ -26,7 +38,7 @@ t_gui_scene_common	*gui_scene_common_new(GtkBuilder *builder);
 void				gui_scene_common_connect(t_gui_scene_common *common, ...);
 void				gui_scene_common_delete(t_gui_scene_common **common);
 
-typedef enum 		s_gui_scene_list_column
+typedef enum		e_gui_scene_list_column
 {
 	gui_list_column_id,
 	gui_list_column_name
@@ -38,19 +50,19 @@ void				gui_scene_common_gen_name
 void				gui_scene_common_add_to_list
 					(GtkListStore *list, t_object *object);
 
-void 				gui_scene_common_update_full
+void				gui_scene_common_update_full
 					(t_gui_scene_common *gui);
 void				gui_scene_common_update_limited
 					(t_gui_scene_common *gui);
 void				gui_scene_common_update_csg
 					(t_gui_scene_common *gui);
-void 				gui_scene_common_update_types
+void				gui_scene_common_update_types
 					(t_gui_scene_common *gui);
-void 				gui_scene_common_update_textures
+void				gui_scene_common_update_textures
 					(t_gui_scene_common *gui);
-void 				gui_scene_common_update_background
+void				gui_scene_common_update_background
 					(t_gui_scene_common *gui);
-void 				gui_scene_common_update_all
+void				gui_scene_common_update_all
 					(t_gui_scene_common *gui);
 
 #endif

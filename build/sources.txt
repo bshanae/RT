@@ -35,6 +35,7 @@
 ../gui/gui_queue/gui_queue_push.c
 ../gui/gui_queue/gui_queue_execute_x.c
 ../gui/gui_queue/gui_queue_start.c
+../gui/gui_queue/gui_queue_finish.c
 ../gui/gui_queue/gui_queue_block.c
 ../gui/gui_queue/gui_queue_wait.c
 ../gui/gui_queue/gui_queue_get_time.c
@@ -66,7 +67,6 @@
 ../gui/gui_parser/gui_parser_new.c
 ../gui/gui_parser/gui_parser_delete.c
 ../gui/gui_parser/gui_parser_update.c
-../gui/gui_queue/gui_finish.c
 
 #	#################################################################	#
 #	GUI CAMERA															#
@@ -127,7 +127,8 @@
 ../gui/gui_scene_common/gui_scene_common_new.c
 ../gui/gui_scene_common/gui_scene_common_delete.c
 ../gui/gui_scene_common/gui_scene_common_gen_name.c
-../gui/gui_scene_common/gui_scene_common_update_x.c
+../gui/gui_scene_common/gui_scene_common_update_x_a.c
+../gui/gui_scene_common/gui_scene_common_update_x_b.c
 ../gui/gui_scene_common/gui_scene_common_add_to_list.c
 ../gui/gui_scene_common/gui_scene_common_connect.c
 

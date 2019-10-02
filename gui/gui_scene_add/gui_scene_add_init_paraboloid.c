@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_add_init_paraboloid.c                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 16:34:37 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 16:34:37 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_add.h"
 
-void 							gui_scene_add_init_paraboloid
-								(t_gui_scene_add *edit, GtkBuilder *builder)
+void						gui_scene_add_init_paraboloid
+	(t_gui_scene_add *edit, GtkBuilder *builder)
 {
-	t_gui_init_paraboloid		init;
+	t_gui_init_paraboloid	init;
 
 	ft_strcpy(init.extremum_x, "object_add_paraboloid_extremum_x");
 	ft_strcpy(init.extremum_y, "object_add_paraboloid_extremum_y");

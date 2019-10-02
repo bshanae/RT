@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_cone_x.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:27:18 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:27:18 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_cone		gui_object_cone_init
-						(t_gui_init_cone *init, GtkBuilder *builder)
+	(t_gui_init_cone *init, GtkBuilder *builder)
 {
 	t_gui_object_cone	cone;
 
@@ -15,8 +27,8 @@ t_gui_object_cone		gui_object_cone_init
 	return (cone);
 }
 
-void 					gui_object_cone_get
-						(t_gui_object_cone *gui, t_object *object)
+void					gui_object_cone_get
+	(t_gui_object_cone *gui, t_object *object)
 {
 	t_object_cone		*data;
 
@@ -30,8 +42,8 @@ void 					gui_object_cone_get
 	gui_entry_set_f(gui->radius, data->radius);
 }
 
-void 					gui_object_cone_set
-						(t_gui_object_cone *gui, t_object *object)
+void					gui_object_cone_set
+	(t_gui_object_cone *gui, t_object *object)
 {
 	t_object_cone		*data;
 	RT_F4_API			temp_axis;

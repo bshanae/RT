@@ -648,9 +648,6 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_parser/gui_parser_update.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_queue/gui_finish.c">
-			<Option target="rt"/>
-		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_queue/gui_queue_block.c">
 			<Option target="rt"/>
 		</Unit>
@@ -658,6 +655,9 @@
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_queue/gui_queue_execute_x.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_queue/gui_queue_finish.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_queue/gui_queue_get_time.c">
@@ -762,7 +762,10 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_new.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_a.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_b.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">
