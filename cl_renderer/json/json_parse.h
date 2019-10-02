@@ -16,6 +16,20 @@
 # include <string.h>
 # include <stdlib.h>
 
+typedef struct	s_argb
+{
+	u_char		b;
+	u_char		g;
+	u_char		r;
+	u_char		a;
+}				t_argb;
+
+typedef union	u_color
+{
+	uint		hex;
+	t_argb		rgb;
+}				t_color;
+
 typedef struct	s_vector3
 {
 	float		x;
@@ -24,42 +38,26 @@ typedef struct	s_vector3
 	float       w;
 }				t_vector3;
 
-typedef struct	s_parse_object
+typedef struct	s_macro_hack
 {
-	t_vector3	*val_v1;
-	t_vector3	*val_v2;
-	char		*val_s1;
-	char		*val_s2;
-	char		*val_s3;
-	float		*val_f1;
-	float		*val_f2;
-	int			*val_i1;
-	int			*val_i2;
-	t_vector3	v1;
-	t_vector3	v2;
-	float		f1;
-	float		f2;
-	int			i1;
-	int			i2;
-	int			i3;
-	char		*name;
+	const char	*name;
 	t_material	material;
-	char		*texture;
-}				t_obj;
+}				t_default;
 
 void		load_scene(void *data, const char *path);
 
 char		*read_file(const char *path);
 int			ft_strequ(char const *s1, char const *s2);
+int			ft_strnequ(char const *s1, char const *s2, size_t len);
 
 jsmntok_t	*next_item(jsmntok_t *tokens);
 char		*get_string_in_object(char *json, jsmntok_t *object, char *target);
-t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target);
-float		*get_float_in_object(char *json, jsmntok_t *object, char *target);
-int			*get_int_in_object(char *json, jsmntok_t *object, char *target);
-int			*get_bool_in_object(char *json, jsmntok_t *object, char *target);
-int			*get_int_in_onject(char *json, jsmntok_t *object, char *target);
+t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_vector3 default);
+float		get_float_in_object(char *json, jsmntok_t *object, char *target, float default);
+int			get_int_in_object(char *json, jsmntok_t *object, char *target, int default);
+int			get_bool_in_object(char *json, jsmntok_t *object, char *target, int default);
 t_material	decide_material(char *mat_name);
+void		load_shared(void *data, char *json, jsmntok_t *object, t_default def);
 
 void		parse_camera(void *data, char *json, jsmntok_t *tokens);
 void		parse_sphere(void *data, char *json, jsmntok_t *tokens);

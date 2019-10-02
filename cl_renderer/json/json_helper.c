@@ -2,9 +2,26 @@
 #include "jsmn.h"
 #include "json_parse.h"
 
+t_material	decide_color(char *mat_name)
+{
+	t_material	res;
+	t_color		col;
+	
+	res = MATERIAL_WHITE;
+	if (ft_strnequ(mat_name, "#", 1))
+		mat_name += 1;
+	else
+		mat_name += 2;
+	col.hex = strtol(mat_name, NULL, 16);
+	res.color = (cl_float4){(float)col.rgb.r / 255.0, (float)col.rgb.g / 255.0, (float)col.rgb.b / 255.0, 1.0};
+	return (material);
+}
+
 t_material	decide_material(char *mat_name)
 {
-	if (ft_strequ(mat_name, "light"))
+	if (ft_strnequ(mat_name, "0x", 2) || ft_strnequ(mat_name, "#", 1))
+		return (decide_color(mat_name));
+	else if (ft_strequ(mat_name, "light"))
 		return (MATERIAL_LIGHT);
 	else if (ft_strequ(mat_name, "red"))
 		return (MATERIAL_RED);
@@ -96,64 +113,54 @@ char	*get_string_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-int		*get_bool_in_object(char *json, jsmntok_t *object, char *target)
+int		get_bool_in_object(char *json, jsmntok_t *object, char *target, int default)
 {
 	jsmntok_t	*pos;
 	int			*res;
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (NULL);
+		return (default);
 	if (pos->type == JSMN_PRIMITIVE && pos->size == 0)
 	{
 		if (json[pos->start] != 't' || json[pos->start] != 'f')
-			return (NULL);
-		res = rt_malloc(sizeof(int));
-		if (!res)
-			return (NULL);
-		*res = (json[pos->start] == 't' ? 1 : 0);
-		return (res);
+			return (default);
+		return (json[pos->start] == 't' ? 1 : 0);
 	}
-	return (NULL);
+	return (default);
 }
 
-float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
+float	get_float_in_object(char *json, jsmntok_t *object, char *target, float default)
 {
 	jsmntok_t	*pos;
 	float		res;
-	float		*out_f;
 	// char		*temp;	
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (NULL);
+		return (default);
 	if (token_is_number(json, pos))
 	{
 		res = atof(json + pos->start);
-		out_f = rt_malloc(sizeof(float));
-		if (!out_f)
-			return (NULL);
-		*out_f = res;
-		return (out_f);
+		return (res);
 	}
-	return (NULL);
+	return (default);
 }
 
-int		*get_int_in_object(char *json, jsmntok_t *object, char *target)
+int		get_int_in_object(char *json, jsmntok_t *object, char *target, int default)
 {
-	int		*res;
+	int		res;
 	float	*val;
 
 	val = get_float_in_object(json, object, target);
-	res = rt_malloc(sizeof(int));
-	if (!val || !res)
-		return (NULL);
-	*res = (int)*val;
+	if (!val)
+		return (default);
+	res = *val;
 	free(val);
 	return (res);
 }
 
-t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
+t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_vector3 default)
 {
 	jsmntok_t	*pos;
 	t_vector3	res;
@@ -162,7 +169,7 @@ t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (NULL);
+		return (default);
 	if (pos->type == JSMN_ARRAY && pos->size == 3)
 	{
 		if (token_is_number(json, pos + 1) && token_is_number(json, pos + 2) && token_is_number(json, pos + 3))
@@ -170,12 +177,27 @@ t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 			res.x = atof(json + pos[1].start);
 			res.y = atof(json + pos[2].start);
 			res.z = atof(json + pos[3].start);
-			out_v = rt_malloc(sizeof(t_vector3));
-			if (!out_v)
-				return (NULL);
-			*out_v = res;
-			return (out_v);
+			return (res);
 		}
 	}
-	return (NULL);
+	return (default);
+}
+
+void	load_shared(void *data, char *json, jsmntok_t *object, t_default def)
+{
+	char	*name;
+	char	*material;
+	char	*texture;
+
+	name = get_string_in_object(json, object, "name");
+	material = get_string_in_object(json, object, "material");
+	texture = get_string_in_object(json, object, "texture");
+
+	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_name, (name ? name : def.name));
+	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_material, (material ? decide_material(material) : def.material));
+	if (texture)
+		scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_texture, texture);
+	free(name);
+	free(material);
+	free(texture);
 }

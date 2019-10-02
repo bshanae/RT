@@ -84,6 +84,7 @@ void				load_scene(void *data, const char *path)
 	tokens = rt_malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
 	jsmn_parse(&parser, json, strlen(json), tokens, res);
+	// default_settings();
 	work_tokens(data, json, tokens);
 	free(tokens);
 	free(json);
