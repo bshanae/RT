@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:38:52 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,22 @@
 
 void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 {
+	t_rt_settings	*s;
 	t_obj	box;
+
+	s = &((t_cl_renderer*)data)->data.settings;
 	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
-	box.val_i2 = get_bool_in_object(json, tokens, "use double");
+	box.val_i2 = get_bool_in_object(json, tokens, "step limit");
+	box.val_f1 = get_float_in_object(json, tokens, "step part");
 	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
-	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_USE_DOUBLE);
+	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_STEP_LIMIT);
+	box.f1 = (box.val_f1 ? *box.val_f1 : SETTINGS_STEP_PART);
+	cl_renderer_change_tracing_mod(data, (box.i1 ? rt_tracing_rm : rt_tracing_rt));
+	s->rm_step_limit = box.i2;
+	s->rm_step_part = box.f1;
+	free(box.val_i1);
+	free(box.val_i2);
+	free(box.val_f1);
 }
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)
