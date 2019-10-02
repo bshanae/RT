@@ -8,7 +8,7 @@ t_material	decide_color(char *mat_name)
 	t_color2		col;
 	
 	res = MATERIAL_WHITE;
-	if (ft_strnequ(mat_name, "#", 1))
+	if (!ft_strncmp(mat_name, "#", 1))
 		mat_name += 1;
 	else
 		mat_name += 2;
