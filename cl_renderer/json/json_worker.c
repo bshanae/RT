@@ -37,9 +37,9 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 	else if (ft_strequ(type, "light direct"))
 		parse_direct(data, json, tokens);
 	else if (ft_strequ(type, "explosion"))
-		parse_direct(data, json, tokens);
+		parse_explosion(data, json, tokens);
 	else if (ft_strequ(type, "perforated cube"))
-		parse_direct(data, json, tokens);
+		parse_perfcube(data, json, tokens);
 	else if (ft_strequ(type, "settings"))
 		parse_settings(data, json, tokens);
 	free(type);
