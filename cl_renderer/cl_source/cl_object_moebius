@@ -11,26 +11,28 @@ typedef struct		            s_object_moebius
 
 // solving cubic equation //////////////////////////////////////////////////////////////////////////////////////////////
 
+// Solution via Kardano formulas http://ateist.spb.ru/mw/kardano.htm
+
 typedef struct					s_moebius_equation
 {
 	RT_F						q;
 	RT_F						r;
 	RT_F						bq;
 	RT_F						br;
+    RT_F						ba;
+    RT_F						bb;
 	RT_F						bq3;
 	RT_F						br2;
 	RT_F						cr2;
 	RT_F						cq3;
 	RT_F						sqrt_bq;
-	RT_F						sgnbr;
+	RT_F						sgn_br;
 	RT_F						ratio;
 	RT_F						theta;
 	RT_F						norm;
-	RT_F						r0;
-	RT_F						r1;
-	RT_F						r2;
-	RT_F						ba;
-	RT_F						bb;
+	RT_F						x0;
+	RT_F						x1;
+	RT_F						x2;
 	int							i;
 }								t_moebius_equation;
 
@@ -45,87 +47,87 @@ static void						ft_swap(RT_F *a, RT_F *b)
 
 static t_moebius_equation		init_structure(const RT_F *coefficients)
 {
-	t_moebius_equation			new;
+	t_moebius_equation			eq;
 
-	new.q = coefficients[2] * coefficients[2] - 3 * coefficients[1];
-	new.r = 2 * coefficients[2] * coefficients[2] * coefficients[2]
+	eq.q = coefficients[2] * coefficients[2] - 3 * coefficients[1];
+	eq.r = 2 * coefficients[2] * coefficients[2] * coefficients[2]
 		- 9 * coefficients[2] * coefficients[1] + 27 * coefficients[0];
-	new.bq = new.q / 9;
-	new.br = new.r / 54;
-	new.bq3 = new.bq * new.bq * new.bq;
-	new.br2 = new.br * new.br;
-	new.cr2 = 729 * new.r * new.r;
-	new.cq3 = 2916 * new.q * new.q * new.q;
-	new.sgnbr = new.br >= 0 ? 1 : -1;
-	new.i = 0;
-	return (new);
+	eq.bq = eq.q / 9;
+	eq.br = eq.r / 54;
+	eq.bq3 = eq.bq * eq.bq * eq.bq;
+	eq.br2 = eq.br * eq.br;
+	eq.cr2 = 729 * eq.r * eq.r;
+	eq.cq3 = 2916 * eq.q * eq.q * eq.q;
+	eq.sgn_br = eq.br >= 0 ? 1 : -1;
+	eq.i = 0;
+	return (eq);
 }
 
-static int						solve_second_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_second_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.sqrt_bq = RT_SQRT(c.bq);
-	if (c.br > 0)
+	eq.sqrt_bq = RT_SQRT(eq.bq);
+	if (eq.br > 0)
 	{
-		r[0] = -2 * c.sqrt_bq - coefficients[2] / 3;
-		r[1] = c.sqrt_bq - coefficients[2] / 3;
-		r[2] = c.sqrt_bq - coefficients[2] / 3;
+		r[0] = -2 * eq.sqrt_bq - coefficients[2] / 3;
+		r[1] = eq.sqrt_bq - coefficients[2] / 3;
+		r[2] = eq.sqrt_bq - coefficients[2] / 3;
 	}
 	else
 	{
-		r[0] = -c.sqrt_bq - coefficients[2] / 3;
-		r[1] = -c.sqrt_bq - coefficients[2] / 3;
-		r[2] = 2 * c.sqrt_bq - coefficients[2] / 3;
+		r[0] = -eq.sqrt_bq - coefficients[2] / 3;
+		r[1] = -eq.sqrt_bq - coefficients[2] / 3;
+		r[2] = 2 * eq.sqrt_bq - coefficients[2] / 3;
 	}
 	return (3);
 }
 
-static int						solve_third_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_third_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.ratio = c.sgnbr * RT_SQRT(c.br2 / c.bq3);
-	c.theta = acos(c.ratio);
-	c.norm = -2 * RT_SQRT(c.bq);
-	c.r0 = c.norm * RT_COS((RT_F)c.theta / 3) - coefficients[2] / 3;
-	c.r1 = c.norm * RT_COS((RT_F)(c.theta + 2.0 * RT_PI) / 3) - coefficients[2] / 3;
-	c.r2 = c.norm * RT_COS((RT_F)(c.theta - 2.0 * RT_PI) / 3) - coefficients[2] / 3;
-	if (c.r0 > c.r1)
-		ft_swap(&c.r0, &c.r1);
-	if (c.r1 > c.r2)
+	eq.ratio = eq.sgn_br * RT_SQRT(eq.br2 / eq.bq3);
+	eq.theta = acos(eq.ratio);
+	eq.norm = -2 * RT_SQRT(eq.bq);
+	eq.x0 = eq.norm * RT_COS((RT_F)eq.theta / 3) - coefficients[2] / 3;
+	eq.x1 = eq.norm * RT_COS((RT_F)(eq.theta + 2.0 * RT_PI) / 3) - coefficients[2] / 3;
+	eq.x2 = eq.norm * RT_COS((RT_F)(eq.theta - 2.0 * RT_PI) / 3) - coefficients[2] / 3;
+	if (eq.x0 > eq.x1)
+		ft_swap(&eq.x0, &eq.x1);
+	if (eq.x1 > eq.x2)
 	{
-		ft_swap(&c.r1, &c.r2);
-		if (c.r0 > c.r1)
-			ft_swap(&c.r0, &c.r1);
+		ft_swap(&eq.x1, &eq.x2);
+		if (eq.x0 > eq.x1)
+			ft_swap(&eq.x0, &eq.x1);
 	}
-	r[0] = c.r0;
-	r[1] = c.r1;
-	r[2] = c.r2;
+	r[0] = eq.x0;
+	r[1] = eq.x1;
+	r[2] = eq.x2;
 	return (3);
 }
 
-static int						solve_fourth_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_fourth_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.ba = -c.sgnbr * pow((RT_F)(RT_ABS(c.br) + RT_SQRT(c.br2 - c.bq3)), (RT_F)(1.0 / 3.0));
-	c.bb = c.bq / c.ba;
-	r[0] = c.ba + c.bb - coefficients[2] / 3;
+	eq.ba = -eq.sgn_br * pow((RT_F)(RT_ABS(eq.br) + RT_SQRT(eq.br2 - eq.bq3)), (RT_F)(1.0 / 3.0));
+	eq.bb = eq.bq / eq.ba;
+	r[0] = eq.ba + eq.bb - coefficients[2] / 3;
 	return (1);
 }
 
 static int						solve_moebius_equation(RT_F *coefficients, RT_F *r)
 {
-	t_moebius_equation			c;
+	t_moebius_equation			coeffs;
 
-	c = init_structure(coefficients);
-	if (c.br == 0 && c.bq == 0)
+	coeffs = init_structure(coefficients);
+	if (coeffs.br == 0 && coeffs.bq == 0)
 	{
-		while (c.i++ < 3)
-			r[c.i] = -coefficients[2] / 3;
+		while (coeffs.i++ < 3)
+			r[coeffs.i] = -coefficients[2] / 3;
 		return (3);
 	}
-	else if (c.cr2 == c.cq3)
-		return (solve_second_case(c, coefficients, r));
-	else if (c.br2 < c.bq3)
-		return (solve_third_case(c, coefficients, r));
+	else if (coeffs.cr2 == coeffs.cq3)
+		return (solve_second_case(coeffs, coefficients, r));
+	else if (coeffs.br2 < coeffs.bq3)
+		return (solve_third_case(coeffs, coefficients, r));
 	else
-		return (solve_fourth_case(c, coefficients, r));
+		return (solve_fourth_case(coeffs, coefficients, r));
 }
 
 // calculating t ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,9 +237,12 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
+	t_ray                       ray;
 
     data = *(global t_object_moebius *)object->data;
-	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
+    ray = intersection->ray;
+    ray.origin -= data.position;
+	t = calculate_moebius_t(&ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
 	intersection->ray.t = t;

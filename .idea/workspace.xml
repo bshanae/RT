@@ -13,7 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_moebius" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_object_moebius" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/moebius.json" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/moebius.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
