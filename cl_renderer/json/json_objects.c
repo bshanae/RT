@@ -12,25 +12,26 @@
 
 #include "json_parse.h"
 #include "json_defaults.h"
-#include "cl_renderer.h"
 
 //! Idk what to do w/ these
 void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj	box;
-	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
-	box.val_i2 = get_bool_in_object(json, tokens, "use double");
-	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
-	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_USE_DOUBLE);
+//	t_obj	box;
+//	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
+//	box.val_i2 = get_bool_in_object(json, tokens, "use double");
+//	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
+//	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_USE_DOUBLE);
 }
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 {
 	t_camera	*c;
-	r = ((t_cl_renderer*)data)->data.camera;
+	c = ((t_cl_renderer*)data)->data.camera;
 	// ft_bzero(r->data.camera, sizeof(t_camera));
-	c->position = get_vector_in_object(json, tokens, "position", CAMERA_POS);
-	c->rotation = get_vector_in_object(json, tokens, "rotation", CAMERA_ROT);
+	t_vector3   pos = get_vector_in_object(json, tokens, "position", CAMERA_POS);
+	t_vector3   rot = get_vector_in_object(json, tokens, "rotation", CAMERA_ROT);
+	c->position = *(cl_float4*)&pos;
+	c->rotation = *(cl_float4*)&rot;
 	c->axis_x = CAMERA_AXIS_X;
 	c->axis_y = CAMERA_AXIS_Y;
 	c->axis_z = CAMERA_AXIS_Z;
@@ -51,9 +52,9 @@ void	parse_point(void *data, char *json, jsmntok_t *tokens)
 {
 	t_vector3	pos;
 	
-	pos = get_vector_in_object(json, tokens, "position", POINT_POSITION)
+	pos = get_vector_in_object(json, tokens, "position", POINT_POSITION);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_point, *(RT_F4_API*)&pos);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){POINT_NAME, POINT_MATERIAL});
 }
 
 void	parse_direct(void *data, char *json, jsmntok_t *tokens)
@@ -62,7 +63,7 @@ void	parse_direct(void *data, char *json, jsmntok_t *tokens)
 
 	dir = get_vector_in_object(json, tokens, "direction", DIRECT_DIRECTION);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_direct, *(RT_F4_API*)&dir);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){DIRECT_NAME, DIRECT_MATERIAL});
 }
 
 void				parse_sphere(void *data, char *json, jsmntok_t *tokens)
@@ -73,7 +74,7 @@ void				parse_sphere(void *data, char *json, jsmntok_t *tokens)
 	pos = get_vector_in_object(json, tokens, "position", SPHERE_POSITION);
 	r = get_float_in_object(json, tokens, "radius", SPHERE_RADIUS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_sphere, *(RT_F4_API*)&pos, r);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){SPHERE_NAME, SPHERE_MATERIAL});
 }
 
 void	parse_plane(void *data, char *json, jsmntok_t *tokens)
@@ -86,7 +87,7 @@ void	parse_plane(void *data, char *json, jsmntok_t *tokens)
 	normal = get_vector_in_object(json, tokens, "normal", PLANE_NORMAL);
 	limiting = get_bool_in_object(json, tokens, "limiting", PLANE_LIMITING);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_plane, *(RT_F4_API*)&pos, *(RT_F4_API*)&normal, limiting);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){PLANE_NAME, PLANE_MATERIAL});
 }
 
 void	parse_cone(void *data, char *json, jsmntok_t *tokens)
@@ -99,7 +100,7 @@ void	parse_cone(void *data, char *json, jsmntok_t *tokens)
 	bot = get_vector_in_object(json, tokens, "bottom", CONE_BOTTOM);
 	r = get_float_in_object(json, tokens, "radius", CONE_RADIUS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cone, *(RT_F4_API*)&top, *(RT_F4_API*)&bot, r);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){CONE_NAME, CONE_MATERIAL});
 }
 
 void	parse_cylinder(void *data, char *json, jsmntok_t *tokens)
@@ -112,7 +113,7 @@ void	parse_cylinder(void *data, char *json, jsmntok_t *tokens)
 	bot = get_vector_in_object(json, tokens, "bottom", CYLINDER_BOTTOM);
 	r = get_float_in_object(json, tokens, "radius", CYLINDER_RADIUS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cylinder, *(RT_F4_API*)&top, *(RT_F4_API*)&bot, r);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){CYLINDER_NAME, CYLINDER_MATERIAL});
 }
 
 void	parse_box(void *data, char *json, jsmntok_t *tokens)
@@ -123,7 +124,7 @@ void	parse_box(void *data, char *json, jsmntok_t *tokens)
 	pos = get_vector_in_object(json, tokens, "position", BOX_POSITION);
 	size = get_vector_in_object(json, tokens, "size", BOX_SIZE);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_box, *(RT_F4_API*)&pos, *(RT_F4_API*)&size);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){BOX_NAME, BOX_MATERIAL});
 }
 
 void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
@@ -136,7 +137,7 @@ void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
 	axis = get_vector_in_object(json, tokens, "axis", PARABOLOID_AXIS);
 	r = get_float_in_object(json, tokens, "radius", PARABOLOID_RADIUS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_paraboloid, *(RT_F4_API*)&extremum, *(RT_F4_API*)&axis, r);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){PARABOLOID_NAME, PARABOLOID_MATERIAL});
 }
 
 void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
@@ -149,7 +150,7 @@ void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
 	r = get_float_in_object(json, tokens, "radius", MOEBIUS_RADIUS);
 	w = get_float_in_object(json, tokens, "halfwidth", MOEBIUS_HALFWIDTH);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_moebius, *(RT_F4_API*)&pos, r, w);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){MOEBIUS_NAME, MOEBIUS_MATERIAL});
 }
 
 void	parse_torus(void *data, char *json, jsmntok_t *tokens)
@@ -162,7 +163,7 @@ void	parse_torus(void *data, char *json, jsmntok_t *tokens)
 	r = get_float_in_object(json, tokens, "radius", TORUS_RADIUS);
 	w = get_float_in_object(json, tokens, "width", TORUS_WIDTH);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_torus, *(RT_F4_API*)&pos, r, w);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){TORUS_NAME, TORUS_MATERIAL});
 }
 
 void	parse_mandelbulb(void *data, char *json, jsmntok_t *tokens)
@@ -175,7 +176,7 @@ void	parse_mandelbulb(void *data, char *json, jsmntok_t *tokens)
 	iter = get_int_in_object(json, tokens, "iterations", MANDELBULB_ITERATIONS);
 	power = get_float_in_object(json, tokens, "power", MANDELBULB_POWER);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_mandelbulb, *(RT_F4_API*)&pos, iter, power);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){MANDELBULB_NAME, MANDELBULB_MATERIAL});
 }
 
 void	parse_julia(void *data, char *json, jsmntok_t *tokens)
@@ -188,7 +189,7 @@ void	parse_julia(void *data, char *json, jsmntok_t *tokens)
 	val = get_vector_in_object(json, tokens, "value", JULIA_VALUE);
 	iter = get_int_in_object(json, tokens, "iterations", JULIA_ITERATIONS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, *(RT_F4_API*)&pos, iter, *(RT_F4_API*)&val);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){JULIA_NAME, JULIA_MATERIAL});
 }
 
 void	parse_csg(void *data, char *json, jsmntok_t *tokens)
@@ -196,10 +197,10 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	int		pos_id;
 	int		neg_id;
 
-	pos_id = get_int_in_object(json, tokens, "positive", CSG_POSITIVE)
+	pos_id = get_int_in_object(json, tokens, "positive", CSG_POSITIVE);
 	neg_id = get_int_in_object(json, tokens, "negative", CSG_NEGATIVE);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_csg, pos_id, neg_id);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){CSG_NAME, CSG_MATERIAL});
 }
 
 void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
@@ -212,15 +213,16 @@ void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
 	r = get_float_in_object(json, tokens, "radius", EXPLOSION_RADIUS);
 	ampl = get_float_in_object(json, tokens, "noise amplitude", EXPLOSION_NOISE_AMPLITUDE);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_explosion, *(RT_F4_API*)&pos, r, ampl);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){EXPLOSION_NAME, EXPLOSION_MATERIAL});
 }
 
 void	parse_perfcube(void *data, char *json, jsmntok_t *tokens)
 {
 	int			iter;
+	t_vector3   pos;
 
 	pos = get_vector_in_object(json, tokens, "position", PCUBE_POSITION);
 	iter = get_int_in_object(json, tokens, "iterations", PCUBE_ITERATIONS);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_perforated_cube, *(RT_F4_API*)&pos, iter);
-	load_shared(data, json, tokens, (t_default){_NAME, _MATERIAL});
+	load_shared(data, json, tokens, (t_default){PCUBE_NAME, PCUBE_MATERIAL});
 }

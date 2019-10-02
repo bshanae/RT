@@ -9,6 +9,24 @@ void				scene_test_box(t_scene *scene);
 void				scene_test_light(t_scene *scene);
 void				scene_moebius(t_scene *scene);
 
+void				scene_explosion(t_scene *scene, t_camera *camera)
+{
+    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 10., 20.}, 3.);
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+    scene_edit_param(scene, -1, scene_param_name, "Light");
+    object_build(scene_get_space(scene), object_type_light_point, (RT_F4_API){0., 10., 30.});
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+    scene_edit_param(scene, -1, scene_param_name, "Light Point");
+    object_build(scene_get_space(scene), object_type_light_ambient, (RT_F4_API){0., 10., 0.}, 3.);
+
+   // object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -50.}, (RT_F4_API){0., 0., 1.});
+   // scene_edit_param(scene, -1, scene_param_name, "Plane Back");
+   // scene_edit_param(scene, -1, scene_param_material, MATERIAL_BLACK);
+
+    object_build(scene_get_space(scene), object_type_explosion, (RT_F4_API){0., 0., 0.}, 3., 3.);
+    camera->position.z = 20;
+}
+
 int					main(int argc, char **argv)
 {
 	t_gui			*gui;
@@ -17,9 +35,10 @@ int					main(int argc, char **argv)
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
 //	cl_renderer_load(gui->renderer, "/Users/Vladimir/workspace/21_ray_tracer/scenes/test.json");
-	scene_test_rm(gui->renderer->data.scene);
-	gui->renderer->data.camera->position.z = 10;
-	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rm);
+//	scene_test_rm(gui->renderer->data.scene);
+    scene_explosion(gui->renderer->data.scene, gui->renderer->data.camera);
+	gui->renderer->data.camera->position.z = 100;
+	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
 	cl_renderer_change_light_mod(gui->renderer, rt_light_area);
 	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);

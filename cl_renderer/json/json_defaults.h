@@ -3,6 +3,16 @@
 
 # include "json_parse.h"
 
+# define CAMERA_POS (t_vector3){0., -10., 0.}
+# define CAMERA_ROT (t_vector3){0., 0., 0.}
+# define CAMERA_AXIS_X (cl_float4){1., 0., 0., 0.}
+# define CAMERA_AXIS_Y (cl_float4){0., 1., 0., 0.}
+# define CAMERA_AXIS_Z (cl_float4){0., 0., 1., 0.}
+# define CAMERA_AXIS_FORWARD (cl_float4){0., 0., 1., 0.}
+# define CAMERA_AXIS_FORWARDBACKUP (cl_float4){0., 0., 1., 0.}
+# define CAMERA_APERTURESIZE 2.
+# define CAMERA_FOCALLENGTH 40.
+
 # define GLOBAL_MATERIAL MATERIAL_WHITE
 # define GLOBAL_POSITION (t_vector3){0., 0., 0.}
 # define SETTINGS_USE_RM 0
