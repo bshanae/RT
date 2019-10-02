@@ -7,8 +7,7 @@
 	{
 		"type": "sphere",
 		"position": [0, 10, 20],
-		"radius": 3.0,
-		"material": "light"
+		"radius": 3.0
 	},
 	{
 		"type": "light point",
