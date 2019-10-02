@@ -1,11 +1,15 @@
 #include "gui_scene_edit.h"
 
 void 				gui_scene_edit_apply
-					(t_gui_scene_edit *edit, t_object* object)
+					(t_gui_scene_edit *edit, t_scene *scene)
 {
-	ft_strcpy(object->name, gui_entry_get_str(edit->name));
-	gtk_list_store_set(edit->list, &edit->iter,
-		scene_edit_object_name, object->name, -1);
+	t_object		*object;
+
+	object = scene->objects + edit->current_id;
+	rt_assert_critical(edit->common != NULL, "GUI : Editor list ptr is NULL");
+	scene_object_rename(scene, object->id, gui_entry_get_str(edit->name));
+	gtk_list_store_set(edit->common->full, &edit->iter,
+		gui_list_column_name, object->name, -1);
 	if (object->type == object_type_light_point)
 		gui_object_light_point_set(&edit->light_point, object);
 	else if (object->type == object_type_light_direct)
@@ -24,12 +28,20 @@ void 				gui_scene_edit_apply
 		gui_object_paraboloid_set(&edit->paraboloid, object);
 	else if (object->type == object_type_moebius)
 		gui_object_moebius_set(&edit->moebius, object);
+	else if (object->type == object_type_limited)
+		gui_object_pair_set(&edit->limited, object);
 	else if (object->type == object_type_torus)
 		gui_object_torus_set(&edit->torus, object);
 	else if (object->type == object_type_mandelbulb)
 		gui_object_mandelbulb_set(&edit->mandelbulb, object);
 	else if (object->type == object_type_julia)
 		gui_object_julia_set(&edit->julia, object);
-	gui_material_set(&edit->material, &object->material);
-	gui_material_get(&edit->material, &object->material);
+	else if (object->type == object_type_perforated_cube)
+		gui_object_p_cube_set(&edit->p_cube, object);
+	else if (object->type == object_type_explosion)
+		gui_object_explosion_set(&edit->explosion, object);
+	else if (object->type == object_type_csg)
+		gui_object_pair_set(&edit->csg, object);
+	gui_material_set(&edit->material, &object->material, &object->texture_id);
+	gui_material_get(&edit->material, &object->material, &object->texture_id);
 }

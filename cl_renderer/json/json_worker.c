@@ -36,6 +36,14 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 		parse_point(data, json, tokens);
 	else if (ft_strequ(type, "light direct"))
 		parse_direct(data, json, tokens);
+	else if (ft_strequ(type, "explosion"))
+		parse_explosion(data, json, tokens);
+	else if (ft_strequ(type, "perforated cube"))
+		parse_perfcube(data, json, tokens);
+	else if (ft_strequ(type, "csg"))
+	    parse_csg(data, json, tokens);
+	else if (ft_strequ(type, "settings"))
+		parse_settings(data, json, tokens);
 	free(type);
 }
 
@@ -54,12 +62,7 @@ void				work_tokens(void *data, char *json, jsmntok_t *tokens)
 	}
 }
 
-void 				static_load_error()
-{
-	ft_printf("{red}JSON Parser : Couldn't parse file\n");
-}
-
-void				load_scene(void *data, const char *path)
+void				json_load(void *data, const char *path)
 {
 	char			*json;
 	int				res;
@@ -67,17 +70,18 @@ void				load_scene(void *data, const char *path)
 	jsmntok_t		*tokens;
 
 	if (!data || !path)
-		return (static_load_error());
+		return (rt_raise_warning("Parser : Can't parse file"));
 	json = read_file(path);
 	if (!json)
-		return (static_load_error());
+		return (rt_raise_warning("Parser : Can't parse file"));
 	jsmn_init(&parser);
 	res = jsmn_parse(&parser, json, strlen(json), NULL, 1);
 	if (res <= 0)
-		return (static_load_error());
-	tokens = malloc(sizeof(jsmntok_t) * res);
+		return (rt_raise_warning("Parser : Can't parse file"));
+	tokens = rt_malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
 	jsmn_parse(&parser, json, strlen(json), tokens, res);
+	// default_settings();
 	work_tokens(data, json, tokens);
 	free(tokens);
 	free(json);

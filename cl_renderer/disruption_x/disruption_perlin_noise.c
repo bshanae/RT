@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   disruption_perlin_noise.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 16:02:41 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "disruption.h"
 
 static RT_F2_API		compute_dot(RT_F4_API *value, double fx, double fy)
@@ -6,7 +18,8 @@ static RT_F2_API		compute_dot(RT_F4_API *value, double fx, double fy)
 	RT_F2_API			fractional_values;
 
 	integer_values = (RT_F2_API){floor(fx), floor(fy)};
-	fractional_values = (RT_F2_API){fx - integer_values.x, fy - integer_values.y};
+	fractional_values = (RT_F2_API)
+			{fx - integer_values.x, fy - integer_values.y};
 	value->x = f2_dot(hash(f2_add(integer_values, (RT_F2_API){0., 0.})),
 					f2_sub(fractional_values, (RT_F2_API){0., 0.}));
 	value->y = f2_dot(hash(f2_add(integer_values, (RT_F2_API){1., 0.})),
@@ -18,7 +31,7 @@ static RT_F2_API		compute_dot(RT_F4_API *value, double fx, double fy)
 	return (fractional_values);
 }
 
-static double 			compute_perlin_noise(double fx, double fy)
+static double			compute_perlin_noise(double fx, double fy)
 {
 	RT_F4_API			interpolation_result;
 	RT_F4_API			dot;
@@ -34,12 +47,12 @@ static double 			compute_perlin_noise(double fx, double fy)
 	return (interpolation_result.z);
 }
 
-static double 			choose_perlin_noise(double x, double y)
+static double			choose_perlin_noise(double x, double y)
 {
-	double 				amplitude;
-	double 				result;
-	double 				sum_amplitude;
-	int 				i;
+	double				amplitude;
+	double				result;
+	double				sum_amplitude;
+	int					i;
 
 	x *= 4.;
 	y *= 4.;

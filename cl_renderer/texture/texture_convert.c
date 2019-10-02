@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   texture_convert.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:23:52 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "texture.h"
 
 void				texture_convert(
@@ -5,8 +17,8 @@ void				texture_convert(
 					RT_F4_API *pointer,
 					const unsigned char *stbi_data)
 {
-	int 			pixel_index;
-	int 			size;
+	int				pixel_index;
+	int				size;
 
 	pixel_index = 0;
 	size = texture->texture_length[texture->textures_number] * TEXTURE_CHANNELS;

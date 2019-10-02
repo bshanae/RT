@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_light_point_x.c                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:31:32 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:31:49 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
 t_gui_object_light_point		gui_object_light_point_init
-								(t_gui_init_light_point *init,
-								GtkBuilder *builder)
+	(t_gui_init_light_point *init, GtkBuilder *builder)
 {
 	t_gui_object_light_point	light;
 
@@ -13,8 +24,7 @@ t_gui_object_light_point		gui_object_light_point_init
 }
 
 void							gui_object_light_point_get
-								(t_gui_object_light_point *gui,
-								t_object *object)
+	(t_gui_object_light_point *gui, t_object *object)
 {
 	t_object_light_point		*data;
 
@@ -24,9 +34,8 @@ void							gui_object_light_point_get
 	gui_entry_set_f(gui->position_z, data->position.z);
 }
 
-void 							gui_object_light_point_set
-								(t_gui_object_light_point *gui,
-								t_object *object)
+void							gui_object_light_point_set
+	(t_gui_object_light_point *gui, t_object *object)
 {
 	t_object_light_point		*data;
 

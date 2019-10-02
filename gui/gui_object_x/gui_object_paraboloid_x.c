@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_object_paraboloid_x.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/02 15:39:16 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/02 15:39:16 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_object_x.h"
 
-
 t_gui_object_paraboloid		gui_object_paraboloid_init
-							(t_gui_init_paraboloid *init, GtkBuilder *builder)
+	(t_gui_init_paraboloid *init, GtkBuilder *builder)
 {
 	t_gui_object_paraboloid	paraboloid;
 
@@ -17,7 +28,7 @@ t_gui_object_paraboloid		gui_object_paraboloid_init
 }
 
 void						gui_object_paraboloid_get
-							(t_gui_object_paraboloid *gui, t_object *object)
+	(t_gui_object_paraboloid *gui, t_object *object)
 {
 	t_object_paraboloid		*data;
 
@@ -31,8 +42,8 @@ void						gui_object_paraboloid_get
 	gui_entry_set_f(gui->radius, data->radius);
 }
 
-void 						gui_object_paraboloid_set
-							(t_gui_object_paraboloid *gui, t_object *object)
+void						gui_object_paraboloid_set
+	(t_gui_object_paraboloid *gui, t_object *object)
 {
 	t_object_paraboloid		*data;
 

@@ -11,14 +11,17 @@ void 				gui_signal_scene_edit_select
 	if (!gtk_tree_selection_get_selected(gui->scene->edit->selection,
 		&model, &gui->scene->edit->iter))
 		return ;
+	gtk_widget_set_sensitive(gui->scene->edit->remove_button, TRUE);
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
-		scene_edit_object_id, &gui->scene->edit->current_id ,-1);
+		gui_list_column_id, &gui->scene->edit->current_id , -1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 0.);
-	if (object->type >= object_type_light_ambient &&
-		object->type <= object_type_light_direct)
-		gui_scene_edit_material_color_disable(gui->scene->edit);
-	else
-		gui_scene_edit_material_color_enable(gui->scene->edit);
+	gui_control_hide(&gui->scene->edit->control);
+	gui_queue_block(gui->queue);
+	scene_select(gui->renderer->data.scene, gui->scene->edit->current_id);
+	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
+	gui_queue_execute_force(gui->queue);
+	gui_queue_unblock(gui->queue);
+	gtk_widget_set_sensitive(GTK_WIDGET(gui->notebook), 1);
 }

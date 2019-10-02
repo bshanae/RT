@@ -3,45 +3,35 @@
 #include "rt_parameters.h"
 
 static void					radiance_write(
-							global RT_F4 *sample_store[RT_CL_SAMPLE_ARRAY_LENGTH],
+							global RT_F4 *sample_store[RT_SAMPLE_ARRAY_LENGTH],
 							int global_id,
 							RT_F4 radiance,
-							constant t_cl_renderer_settings *settings, int *filter_stereo)
+							constant t_rt_settings *settings)
 {
 	if (!settings->motion_blur)
 	{
 		if (settings->sample_count == 1)
-		{
-			if (*filter_stereo)
-				sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = filter_stereoscopy(&radiance, filter_stereo);
-			else
-				sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
-		}
+				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
 		else
-		{
-			if (*filter_stereo)
-				sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] += filter_stereoscopy(&radiance, filter_stereo);
-			else
-				sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
-		}
+				sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] += radiance;
 	}
 	else
 	{
 		if (settings->motion_blur_sample_count == 1)
 		{
-			for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
+			for (int i = 0; i < RT_SAMPLE_ARRAY_LENGTH - 1; i++)
 				sample_store[i][global_id] = 0.;
         }
-        for (int i = 0; i < RT_CL_SAMPLE_ARRAY_LENGTH - 1; i++)
+        for (int i = 0; i < RT_SAMPLE_ARRAY_LENGTH - 1; i++)
         	sample_store[i][global_id] = sample_store[i + 1][global_id];
-        sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
+        sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] = radiance;
 	}
 }
 
 static RT_F4				radiance_read(
-							global RT_F4 *sample_store[RT_CL_SAMPLE_ARRAY_LENGTH],
+							global RT_F4 *sample_store[RT_SAMPLE_ARRAY_LENGTH],
 							int global_id,
-							constant t_cl_renderer_settings *settings)
+							constant t_rt_settings *settings)
 {
 	RT_F4					sum;
 	RT_F4					alpha;
@@ -49,17 +39,17 @@ static RT_F4				radiance_read(
 	int						count;
 
 	if (!settings->motion_blur)
-		return (sample_store[RT_CL_SAMPLE_ARRAY_LENGTH - 1][global_id] / settings->sample_count);
+		return (sample_store[RT_SAMPLE_ARRAY_LENGTH - 1][global_id] / settings->sample_count);
 	else
 	{
 		sum = 0.;
 		alpha = 1.;
 		i = 0;
 		count = 0;
-		for (i = RT_CL_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count <= settings->motion_blur_sample_count; i--, count++)
+		for (i = RT_SAMPLE_ARRAY_LENGTH - 1; i > -1 && count < settings->motion_blur_sample_count; i--, count++)
        	{
        		sum  += sample_store[i][global_id];
-       		alpha *= RT_CL_MOTION_BLUR_ALPHA;
+       		alpha *= RT_MOTION_BLUR_ALPHA;
        	}
        	return (sum / settings->motion_blur_sample_count);
 	}
@@ -73,7 +63,7 @@ static RT_F4				radiance_trace(
 							global t_scene *scene,
 							global t_camera *camera,
 							t_intersection *intersection,
-							constant t_cl_renderer_settings *settings,
+							constant t_rt_settings *settings,
 							global ulong *rng_state)
 {
 	RT_F4					radiance;
@@ -83,16 +73,33 @@ static RT_F4				radiance_trace(
 	RT_F					choice_value;
 	RT_F					choice_result;
 
+	RT_F4					background_f4;
+	RT_F					background_f;
+
 	radiance = (RT_F4){0.f, 0.f, 0.f, 1.f};
 	mask = 1;
+
 	for (int depth = 0; depth < settings->sample_depth; depth++)
 	{
-		radiance += illumination(scene, camera, intersection, settings);
+		if (settings->illumination)
+			radiance += illumination(scene, camera, intersection, settings);
 
 		if (!scene_intersect(scene, camera, intersection, settings))
+		{
+			if (scene->background == rt_background_none)
+				;
+			else if (scene->background == rt_background_one)
+				radiance += scene->background_color * mask;
+			else if (scene->background == rt_background_interpolation)
+			{
+				background_f4 = normalize(intersection->ray.direction);
+				background_f = (RT_F)0.5 * (background_f4.y + (RT_F)1.0);
+				radiance += mix(RT_BACKGROUND_INTER_A, RT_BACKGROUND_INTER_B, background_f) * mask;
+			}
 			break ;
+		}
 
-		if (scene->objects[intersection->object_id].is_selected)
+		if (scene->objects[intersection->object_id].is_selected == rt_true)
 			break ;
 
 		if (depth > settings->sample_depth / 2 + 1 && f4_max_component(intersection->material.color) < rng(rng_state))
@@ -100,13 +107,12 @@ static RT_F4				radiance_trace(
 
 		radiance += mask * intersection->material.emission;
 
-		if (settings->light_basic)
+		if (settings->light_mod == rt_light_basic)
 		{
-			light = light_basic(scene, camera, intersection, settings, camera->filter_cartoon);
+			light = light_basic(scene, camera, intersection, settings, camera->filter_mod == rt_filter_cartoon);
             radiance += light * mask;
 		}
-
-		if (settings->light_area)
+		else if (settings->light_mod == rt_light_area)
 		{
 			light = light_area(scene, camera, intersection, settings, rng_state);
 			radiance += light * mask * intersection->material.color;
@@ -116,7 +122,7 @@ static RT_F4				radiance_trace(
 		choice_result = RT_CHOICE_DIFFUSE;
 		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
-		else if (intersection->material.transparence == (RT_F)1. || (intersection->material.transparence > 0. && choice_value < intersection->material.transparence))
+		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency > 0. && choice_value < intersection->material.transparency))
 			choice_result = RT_CHOICE_REFRACT;
 
 		if (choice_result == RT_CHOICE_REFLECT)
@@ -128,7 +134,7 @@ static RT_F4				radiance_trace(
 		else if (choice_result == RT_CHOICE_REFRACT)
 		{
 			intersection_refract(intersection, intersection);
-			mask /= intersection->material.transparence;
+			mask /= intersection->material.transparency;
 			depth--;
 		}
 		else if (choice_result == RT_CHOICE_DIFFUSE)

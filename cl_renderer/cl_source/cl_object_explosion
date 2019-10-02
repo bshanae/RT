@@ -1,0 +1,91 @@
+ // cl_object_explosion ////////////////////////////////////////////////////////////////////////////////////////////////
+
+typedef struct			s_object_explosion
+{
+	RT_F4				position;
+	RT_F				radius;
+	RT_F				noise_amplitude;
+}						t_object_explosion;
+
+static RT_F				lerp(RT_F f0, RT_F f1, RT_F t)
+{
+	return (f0 + (f1 - f0) * RT_MAX((RT_F)0., RT_MIN((RT_F)1., t)));
+}
+
+static RT_F				hash(RT_F n)
+{
+	RT_F				x;
+
+	x = RT_SIN(n) * (RT_F)43758.5453;
+	return (x - floor(x));
+}
+
+static RT_F				noise(RT_F4 x)
+{
+	RT_F4				p;
+	RT_F4				f;
+	RT_F				n;
+
+	p = (RT_F4){floor(x.x), floor(x.y), floor(x.z), 0.};
+	f = (RT_F4){x.x - p.x, x.y - p.y, x.z - p.z, 0.};
+	f = f * dot(f, ((RT_F4){(RT_F)3., (RT_F)3., (RT_F)3., 0.} - f * (RT_F)2.));
+	n = dot(p, (RT_F4){(RT_F)1.f, (RT_F)57.f, (RT_F)113.f, 0.});
+
+	return (lerp(
+				lerp(
+					lerp(hash(n +  0.f), hash(n +  1.f), f.x),
+					lerp(hash(n + 57.f), hash(n + 58.f), f.x),
+					f.y),
+				lerp(
+					lerp(hash(n + 113.f), hash(n + 114.f), f.x),
+					lerp(hash(n + 170.f), hash(n + 171.f), f.x),
+					f.y),
+				f.z)
+			);
+	}
+
+static RT_F				brownian_motion(RT_F4 x)
+{
+	RT_F				f;
+
+	x = (RT_F4){
+		dot((RT_F4){0.,  0.8,  0.6, 0.}, x),
+		dot((RT_F4){-0.8,  0.36, -0.48, 0.}, x),
+		dot((RT_F4){-0.6, -0.48,  0.64, 0.}, x),
+		(RT_F)0.};
+
+	f = 0.;
+
+	f += (RT_F)0.5000 * noise(x);
+
+	x *= (RT_F)2.32;
+	f += (RT_F)0.2500 * noise(x);
+
+	x *= (RT_F)3.03;
+	f += (RT_F)0.1250 * noise(x);
+
+	x *= (RT_F)2.61;
+	f += (RT_F)0.0625 * noise(x);
+
+	return (f / (RT_F)0.9375);
+}
+
+static RT_F 			object_explosion_sdf(global t_object *object, t_intersection *intersection)
+{
+	t_object_explosion	data;
+	RT_F				displacement;
+
+	data = *(global t_object_explosion *)object->data;
+	displacement = (RT_F)-1. * brownian_motion(intersection->hit * data.noise_amplitude) * 1.7;
+	intersection->displacement = displacement;
+	return (length(data.position - intersection->hit) - data.radius - displacement);
+}
+
+# define EXPLOSION_COLOR		(RT_F4){.02, .02, .02, 1.}
+# define EXPLOSION_EMISSION		(RT_F4){1., 0.6, 0., 1.}
+
+static void 			object_explosion_build_material(global t_object *object, t_intersection *intersection)
+{
+	intersection->material.color = EXPLOSION_COLOR;
+	intersection->material.emission = f4_pow((RT_F)1.3 * EXPLOSION_EMISSION * RT_ABS(intersection->displacement), 8.);
+}

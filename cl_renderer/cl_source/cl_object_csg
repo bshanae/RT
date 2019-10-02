@@ -1,39 +1,38 @@
 // cl_rm_csg ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		        s_object_csg
+typedef struct 			    s_object_csg
 {
-    int     		        id_positive;
-    int     		        id_negative;
-}					        t_object_csg;
+	int     			    positive_id;
+	int     			    negative_id;
+	char 				    positive_name[64];
+	char    			    negative_name[64];
+}						    t_object_csg;
 
 static	RT_F		        csg_sdf_difference(const RT_F distance_a, const RT_F distance_b)
 {
 	return (RT_MAX(distance_a, -distance_b));
 }
 
-static RT_F			        sdf_csg_compute(global t_object *object, RT_F4 point)
+static RT_F			        sdf_csg_compute(global t_object *object, t_intersection *intersection)
 {
 	if (object->type == object_type_sphere)
-		return (sphere_sdf(object, point));
+		return (object_sphere_sdf(object, intersection));
 	else if (object->type == object_type_box)
-        return (box_sdf(object, point));
+        return (object_box_sdf(object, intersection));
     return (RT_INFINITY);
 }
 
-static RT_F 		        csg_sdf(global t_object *object, RT_F4 point)
+static RT_F 		       object_csg_sdf(global t_object *object, t_intersection *intersection)
 {
 	global t_object_csg		*data;
 	global t_object       	*scene_begin;
 	RT_F					sdf[2];
 
     data = (global t_object_csg *)object->data;
-    if (object->id < 2)
-    		return (RT_INFINITY);
+	if (data->positive_id == -1 || data->negative_id == -1)
+     	return (RT_INFINITY);
     scene_begin = object - object->id;
-    sdf[0] = sdf_csg_compute(scene_begin + data->id_positive, point);
-    sdf[1] = sdf_csg_compute(scene_begin + data->id_negative, point);
-
+    sdf[0] = sdf_csg_compute(scene_begin + data->positive_id, intersection);
+    sdf[1] = sdf_csg_compute(scene_begin + data->negative_id, intersection);
     return (csg_sdf_difference(sdf[0], sdf[1]));
 }
-
-// todo: improve csg validation

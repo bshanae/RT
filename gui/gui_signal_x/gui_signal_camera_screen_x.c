@@ -20,41 +20,34 @@ void				gui_signal_camera_screen_save
 					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
-	const char		*folder;
 	char			time[64];
 	char			path[128];
 
 	gui = (t_gui *)ptr;
 	static_get_time(time);
-	ft_strcpy(path, RT_GUI_SCREENSHOTS);
+	ft_strcpy(path, RT_SOURCE_GUI_SCREENSHOTS);
 	ft_strcat(path, time);
 	ft_strcat(path, ".jpeg");
 	if (gdk_pixbuf_save(gui->image->gdk_buffer, path, "jpeg", NULL, NULL))
 	{
-		gtk_dialog_run(gui->camera->screen_success);
-		gtk_widget_hide(GTK_WIDGET(gui->camera->screen_success));
+		gtk_label_set_text(gui->camera->screen_label,
+			"Screenshot has been saved");
+		gtk_dialog_run(gui->camera->screen_dialog);
+		gtk_widget_hide(GTK_WIDGET(gui->camera->screen_dialog));
 	}
 	else
 	{
-		gtk_dialog_run(gui->camera->screen_fail);
-		gtk_widget_hide(GTK_WIDGET(gui->camera->screen_fail));
+		gtk_label_set_text(gui->camera->screen_label, "Error occured!");
+		gtk_dialog_run(gui->camera->screen_dialog);
+		gtk_widget_hide(GTK_WIDGET(gui->camera->screen_dialog));
 	}
 }
 
-void				gui_signal_camera_screen_success_close
+void				gui_signal_camera_screen_dialog_response
 					(GtkWidget *w, gpointer p)
 {
 	t_gui			*gui;
 
 	gui = (t_gui *)p;
-	gtk_dialog_response(gui->camera->screen_success, GTK_RESPONSE_CANCEL);
-}
-
-void				gui_signal_camera_screen_fail_close
-					(GtkWidget *w, gpointer p)
-{
-	t_gui			*gui;
-
-	gui = (t_gui *)p;
-	gtk_dialog_response(gui->camera->screen_fail, GTK_RESPONSE_CANCEL);
+	gtk_dialog_response(gui->camera->screen_dialog, GTK_RESPONSE_CANCEL);
 }

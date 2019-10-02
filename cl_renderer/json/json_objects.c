@@ -6,305 +6,223 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/08/28 21:14:16 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:17:28 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "json_parse.h"
 #include "json_defaults.h"
-#include "cl_renderer.h"
+
+//! Idk what to do w/ these
+void	parse_settings(void *data, char *json, jsmntok_t *tokens)
+{
+//	t_obj	box;
+//	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
+//	box.val_i2 = get_bool_in_object(json, tokens, "use double");
+//	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
+//	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_USE_DOUBLE);
+}
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj			box;
-	t_cl_renderer	*r;
-
-	r = (t_cl_renderer*)data;
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_v2 = get_vector_in_object(json, tokens, "rotation");
-	if (box.val_v1)
-		r->data.camera->position = *(RT_F4_API*)box.val_v1;
-	else
-		r->data.camera->position = CAMERA_POS;
-	if (box.val_v2)
-		r->data.camera->rotation = *(RT_F4_API*)box.val_v2;
-	else
-		r->data.camera->rotation = CAMERA_ROT;
-	free(box.val_v1);
-	free(box.val_v2);
+	t_camera	*c;
+	c = ((t_cl_renderer*)data)->data.camera;
+	// ft_bzero(r->data.camera, sizeof(t_camera));
+	t_vector3   pos = get_vector_in_object(json, tokens, "position", CAMERA_POS);
+	t_vector3   rot = get_vector_in_object(json, tokens, "rotation", CAMERA_ROT);
+	c->position = *(cl_float4*)&pos;
+	c->rotation = *(cl_float4*)&rot;
+	c->axis_x = CAMERA_AXIS_X;
+	c->axis_y = CAMERA_AXIS_Y;
+	c->axis_z = CAMERA_AXIS_Z;
+	c->forward = CAMERA_AXIS_FORWARD;
+	c->forward_backup = CAMERA_AXIS_FORWARDBACKUP;
+	c->aperture_size = CAMERA_APERTURESIZE;
+	c->focal_length = CAMERA_FOCALLENGTH;
 }
+//!-------------------------
 
 void	parse_ambient(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
-
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : AMBIENT_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(AMBIENT_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_ambient, box.material, box.name);
-	free(box.val_s1);
-	free(box.val_s2);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_ambient);
+	load_shared(data, json, tokens, (t_default){AMBIENT_NAME, AMBIENT_MATERIAL});
 }
 
 void	parse_point(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
-
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : POINT_POSITION);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : POINT_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(POINT_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_point, box.material, *(RT_F4_API*)&box.v1, box.name);
-	free(box.val_v1);
-	free(box.val_s1);
-	free(box.val_s2);
+	t_vector3	pos;
+	
+	pos = get_vector_in_object(json, tokens, "position", POINT_POSITION);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_point, *(RT_F4_API*)&pos);
+	load_shared(data, json, tokens, (t_default){POINT_NAME, POINT_MATERIAL});
 }
 
 void	parse_direct(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	dir;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "direction");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : DIRECT_DIRECTION);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : DIRECT_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(DIRECT_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_direct, box.material, *(RT_F4_API*)&box.v1, box.name);
-	free(box.val_v1);
-	free(box.val_s1);
-	free(box.val_s2);
+	dir = get_vector_in_object(json, tokens, "direction", DIRECT_DIRECTION);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_light_direct, *(RT_F4_API*)&dir);
+	load_shared(data, json, tokens, (t_default){DIRECT_NAME, DIRECT_MATERIAL});
 }
 
-void	parse_sphere(void *data, char *json, jsmntok_t *tokens)
+void				parse_sphere(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj			box;
+	t_vector3	pos;
+	float		r;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : SPHERE_POSITION);
-	box.radius = (box.val_f ? *box.val_f : SPHERE_RADIUS);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : SPHERE_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(SPHERE_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_sphere, box.material, *(RT_F4_API*)&box.v1, box.radius, box.name);
-	free(box.val_v1);
-	free(box.val_f);
-	free(box.val_s1);
-	free(box.val_s2);
+	pos = get_vector_in_object(json, tokens, "position", SPHERE_POSITION);
+	r = get_float_in_object(json, tokens, "radius", SPHERE_RADIUS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_sphere, *(RT_F4_API*)&pos, r);
+	load_shared(data, json, tokens, (t_default){SPHERE_NAME, SPHERE_MATERIAL});
 }
 
 void	parse_plane(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	pos;
+	t_vector3	normal;
+	int			limiting;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_v2 = get_vector_in_object(json, tokens, "normal");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : PLANE_POSITION);
-	box.v2 = (box.val_v2 ? *box.val_v2 : PLANE_NORMAL);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : PLANE_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(PLANE_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_plane, box.material, *(RT_F4_API*)&box.v1, 0);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_s1);
-	free(box.val_s2);
+	pos = get_vector_in_object(json, tokens, "position", PLANE_POSITION);
+	normal = get_vector_in_object(json, tokens, "normal", PLANE_NORMAL);
+	limiting = get_bool_in_object(json, tokens, "limiting", PLANE_LIMITING);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_plane, *(RT_F4_API*)&pos, *(RT_F4_API*)&normal, limiting);
+	load_shared(data, json, tokens, (t_default){PLANE_NAME, PLANE_MATERIAL});
 }
 
 void	parse_cone(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	top;
+	t_vector3	bot;
+	float		r;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "top");
-	box.val_v2 = get_vector_in_object(json, tokens, "bottom");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : CONE_TOP);
-	box.v2 = (box.val_v2 ? *box.val_v2 : CONE_BOTTOM);
-	box.radius = (box.val_f ? *box.val_f : CONE_RADIUS);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : CONE_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CONE_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cone, box.material, *(RT_F4_API*)&box.v1, *(RT_F4_API*)&box.v2, box.radius, box.name);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_f);
-	free(box.val_s1);
-	free(box.val_s2);
+	top = get_vector_in_object(json, tokens, "top", CONE_TOP);
+	bot = get_vector_in_object(json, tokens, "bottom", CONE_BOTTOM);
+	r = get_float_in_object(json, tokens, "radius", CONE_RADIUS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cone, *(RT_F4_API*)&top, *(RT_F4_API*)&bot, r);
+	load_shared(data, json, tokens, (t_default){CONE_NAME, CONE_MATERIAL});
 }
 
 void	parse_cylinder(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	top;
+	t_vector3	bot;
+	float		r;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "top");
-	box.val_v2 = get_vector_in_object(json, tokens, "bottom");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : CYLINDER_TOP);
-	box.v2 = (box.val_v2 ? *box.val_v2 : CYLINDER_BOTTOM);
-	box.radius = (box.val_f ? *box.val_f : CYLINDER_RADIUS);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : CYLINDER_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CYLINDER_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cylinder, box.material, *(RT_F4_API*)&box.v1, *(RT_F4_API*)&box.v2, box.radius, box.name);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_f);
-	free(box.val_s1);
-	free(box.val_s2);
+	top = get_vector_in_object(json, tokens, "top", CYLINDER_TOP);
+	bot = get_vector_in_object(json, tokens, "bottom", CYLINDER_BOTTOM);
+	r = get_float_in_object(json, tokens, "radius", CYLINDER_RADIUS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_cylinder, *(RT_F4_API*)&top, *(RT_F4_API*)&bot, r);
+	load_shared(data, json, tokens, (t_default){CYLINDER_NAME, CYLINDER_MATERIAL});
 }
 
 void	parse_box(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	pos;
+	t_vector3	size;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_v2 = get_vector_in_object(json, tokens, "size");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.v1 = (box.val_v1 ? *box.val_v1 : BOX_POSITION);
-	box.v2 = (box.val_v2 ? *box.val_v2 : BOX_SIZE);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : BOX_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(BOX_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_box, box.material, *(RT_F4_API*)&box.v1, *(RT_F4_API*)&box.v2, box.name);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_s1);
-	free(box.val_s2);
+	pos = get_vector_in_object(json, tokens, "position", BOX_POSITION);
+	size = get_vector_in_object(json, tokens, "size", BOX_SIZE);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_box, *(RT_F4_API*)&pos, *(RT_F4_API*)&size);
+	load_shared(data, json, tokens, (t_default){BOX_NAME, BOX_MATERIAL});
 }
 
 void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	extremum;
+	t_vector3	axis;
+	float		r;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "extremum");
-	box.val_v2 = get_vector_in_object(json, tokens, "axis");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.v1 = (box.val_v1 ? *box.val_v1 : PARABOLOID_EXTREMUM);
-	box.v2 = (box.val_v2 ? *box.val_v2 : PARABOLOID_AXIS);
-	box.radius = (box.val_f ? *box.val_f : PARABOLOID_RADIUS);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : PARABOLOID_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(PARABOLOID_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_paraboloid, box.material, *(RT_F4_API*)&box.v1, *(RT_F4_API*)&box.v2, box.radius, box.name);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
+	extremum = get_vector_in_object(json, tokens, "extremum", PARABOLOID_EXTREMUM);
+	axis = get_vector_in_object(json, tokens, "axis", PARABOLOID_AXIS);
+	r = get_float_in_object(json, tokens, "radius", PARABOLOID_RADIUS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_paraboloid, *(RT_F4_API*)&extremum, *(RT_F4_API*)&axis, r);
+	load_shared(data, json, tokens, (t_default){PARABOLOID_NAME, PARABOLOID_MATERIAL});
 }
 
 void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	pos;
+	float		r;
+	float		w;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.val_f2 = get_float_in_object(json, tokens, "width");
-	box.v1 = (box.val_v1 ? *box.val_v1 : MOEBIUS_POSITION);
-	box.radius = (box.val_f ? *box.val_f : MOEBIUS_RADIUS);
-	box.width = (box.val_f2 ? *box.val_f2 : MOEBIUS_HALFWIDTH);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : MOEBIUS_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MOEBIUS_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_moebius, box.material, *(RT_F4_API*)&box.v1, box.radius, box.width, box.name);
-	free(box.val_v1);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
-	free(box.val_f2);
+	pos = get_vector_in_object(json, tokens, "position", MOEBIUS_POSITION);
+	r = get_float_in_object(json, tokens, "radius", MOEBIUS_RADIUS);
+	w = get_float_in_object(json, tokens, "halfwidth", MOEBIUS_HALFWIDTH);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_moebius, *(RT_F4_API*)&pos, r, w);
+	load_shared(data, json, tokens, (t_default){MOEBIUS_NAME, MOEBIUS_MATERIAL});
 }
 
 void	parse_torus(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	pos;
+	float		r;
+	float		w;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "radius");
-	box.val_f2 = get_float_in_object(json, tokens, "width");
-	box.v1 = (box.val_v1 ? *box.val_v1 : TORUS_POSITION);
-	box.radius = (box.val_f ? *box.val_f : TORUS_RADIUS);
-	box.width = (box.val_f2 ? *box.val_f2 : TORUS_WIDTH);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : TORUS_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(TORUS_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_torus, box.material, *(RT_F4_API*)&box.v1, box.radius, box.width, box.name);
-	free(box.val_v1);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
-	free(box.val_f2);
+	pos = get_vector_in_object(json, tokens, "position", TORUS_POSITION);
+	r = get_float_in_object(json, tokens, "radius", TORUS_RADIUS);
+	w = get_float_in_object(json, tokens, "width", TORUS_WIDTH);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_torus, *(RT_F4_API*)&pos, r, w);
+	load_shared(data, json, tokens, (t_default){TORUS_NAME, TORUS_MATERIAL});
 }
 
 void	parse_mandelbulb(void *data, char *json, jsmntok_t *tokens)
-{
-	t_obj		box;
+{ 
+	t_vector3	pos;
+	int			iter;
+	float		power;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "iterations");
-	box.val_f2 = get_float_in_object(json, tokens, "power");
-	box.v1 = (box.val_v1 ? *box.val_v1 : MANDELBULB_POSITION);
-	box.radius = (box.val_f && *box.val_f >= 1.f ? *box.val_f : MANDELBULB_ITERATIONS);
-	box.width = (box.val_f2 ? *box.val_f2 : MANDELBULB_POWER);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : MANDELBULB_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MANDELBULB_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_mandelbulb, box.material, *(RT_F4_API*)&box.v1, (int)box.radius, box.width, box.name);
-	free(box.val_v1);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
-	free(box.val_f2);
+	pos = get_vector_in_object(json, tokens, "position", MANDELBULB_POSITION);
+	iter = get_int_in_object(json, tokens, "iterations", MANDELBULB_ITERATIONS);
+	power = get_float_in_object(json, tokens, "power", MANDELBULB_POWER);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_mandelbulb, *(RT_F4_API*)&pos, iter, power);
+	load_shared(data, json, tokens, (t_default){MANDELBULB_NAME, MANDELBULB_MATERIAL});
 }
 
 void	parse_julia(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	t_vector3	pos;
+	t_vector3	val;
+	int			iter;
 
-	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.val_v2 = get_vector_in_object(json, tokens, "value");
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "iterations");
-	box.v1 = (box.val_v1 ? *box.val_v1 : JULIA_POSITION);
-	box.v2 = (box.val_v2 ? *box.val_v2 : JULIA_VALUE);
-	box.radius = (box.val_f && *box.val_f >= 1.f ? *box.val_f : JULIA_ITERATIONS);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : JULIA_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(JULIA_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, box.material, *(RT_F4_API*)&box.v1, (int)box.radius, *(RT_F4_API*)&box.v2, box.width, box.name);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
+	pos = get_vector_in_object(json, tokens, "position", JULIA_POSITION);
+	val = get_vector_in_object(json, tokens, "value", JULIA_VALUE);
+	iter = get_int_in_object(json, tokens, "iterations", JULIA_ITERATIONS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, *(RT_F4_API*)&pos, iter, *(RT_F4_API*)&val);
+	load_shared(data, json, tokens, (t_default){JULIA_NAME, JULIA_MATERIAL});
 }
 
 void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 {
-	t_obj		box;
+	int		pos_id;
+	int		neg_id;
 
-	box.val_s1 = get_string_in_object(json, tokens, "material");
-	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_f = get_float_in_object(json, tokens, "positive");
-	box.val_f2 = get_float_in_object(json, tokens, "negative");
-	box.radius = (box.val_f ? *box.val_f : CSG_POSITIVE);
-	box.width = (box.val_f2 ? *box.val_f2 : CSG_NEGATIVE);
-	box.material = (box.val_s1 ? decide_material(box.val_s1) : CSG_MATERIAL);
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CSG_NAME));
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, box.material, (int)box.radius, (int)box.width, box.name);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_f);
-	free(box.val_f2);
+	pos_id = get_int_in_object(json, tokens, "positive", CSG_POSITIVE);
+	neg_id = get_int_in_object(json, tokens, "negative", CSG_NEGATIVE);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_csg, pos_id, neg_id);
+	load_shared(data, json, tokens, (t_default){CSG_NAME, CSG_MATERIAL});
+}
+
+void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
+{
+	t_vector3	pos;
+	float		r;
+	float		ampl;
+
+	pos = get_vector_in_object(json, tokens, "position", EXPLOSION_POSITION);
+	r = get_float_in_object(json, tokens, "radius", EXPLOSION_RADIUS);
+	ampl = get_float_in_object(json, tokens, "noise amplitude", EXPLOSION_NOISE_AMPLITUDE);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_explosion, *(RT_F4_API*)&pos, r, ampl);
+	load_shared(data, json, tokens, (t_default){EXPLOSION_NAME, EXPLOSION_MATERIAL});
+}
+
+void	parse_perfcube(void *data, char *json, jsmntok_t *tokens)
+{
+	int			iter;
+	t_vector3   pos;
+
+	pos = get_vector_in_object(json, tokens, "position", PCUBE_POSITION);
+	iter = get_int_in_object(json, tokens, "iterations", PCUBE_ITERATIONS);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_perforated_cube, *(RT_F4_API*)&pos, iter);
+	load_shared(data, json, tokens, (t_default){PCUBE_NAME, PCUBE_MATERIAL});
 }

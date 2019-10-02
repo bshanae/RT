@@ -51,7 +51,7 @@
  ***************/
 .background {
     color: #2e3436;
-    background-color: #ededed; 
+    background-color: #ededed;
 }
 
 *:disabled {
@@ -786,8 +786,8 @@ treeview spinbutton:not(.vertical) {
  **************/
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-  min-height: 16px;
-  min-width: 16px; }
+  min-height: 18px;
+  min-width: 22px; }
 combobox button.combo:checked {
   transition: none; }
 combobox button.combo cellview:dir(ltr) {
@@ -2149,12 +2149,12 @@ treeview.view radio:checked {
 scale {
   min-height: 12px;
   min-width: 12px;
-  padding: 12px; }
+  padding: 10px; }
   scale * {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1); }
   scale slider {
-    min-height: 24px;
-    min-width: 24px;
+    min-height: 12px;
+    min-width: 12px;
     margin: -10px; }
   scale trough {
     outline-offset: 2px;
@@ -2580,7 +2580,7 @@ stacksidebar row {
   stacksidebar row > label {
     padding-left: 6px;
     padding-right: 6px; }
-separator.sidebar { 
+separator.sidebar {
     background-color: transparent; }
 
 /****************
@@ -2757,8 +2757,8 @@ colorswatch:drop(active) {
 colorswatch overlay {
   transition: box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  colorswatch overlay:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+/*  colorswatch overlay:hover {*/
+/*    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }*/
 colorswatch#add-color-button {
   border-radius: 2px 2px 0 0;
   color: #FFFFFF; }
@@ -2984,10 +2984,10 @@ stackswitcher button.text-button.circular {
   border: none;
   background-color: transparent;
 }
-      
-      
+
+
 .disk-space-display.unknown {
-  background-color: #DC502D; 
+  background-color: #DC502D;
   color: #DC502D; }
 
 .disk-space-display.used {
@@ -3594,10 +3594,10 @@ na-tray-applet {
   background-color: #ededed; }
   #caja-extra-view-widget > box > box > label {
     font-weight: bold; }
-    
+
 /********
  * Nemo *
- ********/     
+ ********/
 .nemo-window .sidebar {
   color: #2e3436;
   background-color: #ededed; }
@@ -3612,7 +3612,7 @@ na-tray-applet {
       .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover {
         color: #2e3436; }
   .nemo-window .sidebar separator {
-    background-color: transparent; }    
+    background-color: transparent; }
 
 .nemo-window .nemo-window-pane widget.entry {
   border: 1px solid;
@@ -4161,8 +4161,6 @@ these are pretty self explicative */
   font-weight: lighter;
 }
 
-
-
 entry
 {
   min-height: 21px;
@@ -4191,8 +4189,9 @@ button
   margin-bottom: 3px;
 }
 
-/*treeview.view*/
-/*{*/
-/*  border-style: dashed;*/
-/*  border-width: 1px;*/
-/*}*/
+grid
+{
+  border-style: dashed;
+  border-width: 1px;
+}
+

@@ -49,7 +49,7 @@ static RT_F4            static_get_specular_intensity
 	halfway = normalize(*light_direction + intersection->ray.direction);
 	dot_value = dot(halfway, intersection->normal);
 	if (dot_value > 0.)
-		return (RT_POW(dot_value, RT_CL_LIGHT_BASIC_BLINN));
+		return (RT_POW(dot_value, RT_LIGHT_BASIC_BLINN));
 	return (0.);
 
 }
@@ -78,7 +78,7 @@ static int				static_is_shadowed(
 						global t_scene *scene,
 						global t_camera *camera,
 						t_intersection *intersection,
-						constant t_cl_renderer_settings *settings,
+						constant t_rt_settings *settings,
 						RT_F4 *light_direction,
 						RT_F *shadow_ratio)
 {
@@ -90,8 +90,8 @@ static int				static_is_shadowed(
 	shadow.ray.direction = normalize(*light_direction);
 	if (!scene_intersect(scene, camera, &shadow, settings))
 		return (0);
-	if (shadow.material.transparence)
-		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparence;
+	if (shadow.material.transparency)
+		*shadow_ratio = default_transparence_shadow_ratio + shadow.material.transparency;
 	return (shadow.ray.t >= RT_EPSILON && shadow.ray.t <= length(*light_direction));
 }
 
@@ -99,7 +99,7 @@ static RT_F4			light_basic(
 						global t_scene *scene,
 						global t_camera *camera,
 						t_intersection *intersection,
-						constant t_cl_renderer_settings *settings,
+						constant t_rt_settings *settings,
 						int filter_cartoon_mod)
 {
 	global t_object		*object;

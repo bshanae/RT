@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   camera_apply.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 13:33:21 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "camera.h"
 
 void				camera_apply(t_camera *camera)
@@ -15,6 +27,8 @@ void				camera_apply(t_camera *camera)
 			rt_rotation_x, rt_rotation_positive, camera->rotation.x);
 		*ptr = f4_rotate(*ptr,
 			rt_rotation_y, rt_rotation_positive, camera->rotation.y);
+		*ptr = f4_rotate(*ptr,
+			rt_rotation_z, rt_rotation_positive, camera->rotation.z);
 		ptr++;
 	}
 }

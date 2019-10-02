@@ -9,7 +9,7 @@ typedef struct 					s_object_paraboloid
 	RT_F 						radius;
 }								t_object_paraboloid;
 
-static int     					paraboloid_intersect(global t_object *object, t_intersection *intersection)
+static int     					object_paraboloid_intersect(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						vector_x;
@@ -37,7 +37,7 @@ static int     					paraboloid_intersect(global t_object *object, t_intersection
 	return (1);
 }
 
-static RT_F4					paraboloid_normal(global t_object *object, t_intersection *intersection)
+static RT_F4					object_paraboloid_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_paraboloid			data;
 	RT_F4						normal;

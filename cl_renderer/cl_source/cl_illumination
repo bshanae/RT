@@ -4,38 +4,47 @@ static RT_F4					illumination(
  								global t_scene *scene,
  								global t_camera *camera,
  								t_intersection *intersection,
- 								constant t_cl_renderer_settings *settings)
+ 								constant t_rt_settings *settings)
 {
-	constant t_object_sphere	*sphere;
+	t_object_sphere				sphere;
 	RT_F						x;
-	RT_F						y;
 	RT_F4						k;
 	RT_F4						illumination;
 	t_intersection              shadow;
 
 	illumination = 0.;
-	shadow = *intersection;
 
 	for (int i = 0; i < scene->objects_length; i++)
 	{
-		if (scene->objects[i].type != object_type_sphere)
+		if (scene->objects[i].is_visible == rt_false)
+        	continue ;
+		if (scene->objects[i].is_selected == rt_true)
+        	continue ;
+        if (scene->objects[i].type != object_type_sphere)
 			continue ;
 		if (f4_max_component(scene->objects[i].material.emission) == (RT_F)0.f)
         	continue ;
 
-		sphere = (constant t_object_sphere *)scene->objects[i].data;
+		if (scene->objects[i].type == object_type_sphere)
+		{
+			sphere = *(global t_object_sphere *)scene->objects[i].data;
 
-		k = normalize(intersection->ray.direction - normalize(sphere->position - intersection->ray.origin));
-		x = dot(intersection->ray.origin - sphere->position, k) + sphere->radius;
-		y = length(sphere->position - intersection->ray.origin + k * x);
-		if (x < sphere->radius)
+			k = normalize(intersection->ray.direction - normalize(sphere.position - intersection->ray.origin));
+			x = dot(intersection->ray.origin - sphere.position, k) + sphere.radius;
+
+			if (x < sphere.radius)
+				continue;
+		}
+
+		shadow.ray.origin = sphere.position;
+		shadow.ray.direction = normalize(camera->position - sphere.position);
+		shadow.ray.origin += shadow.ray.direction;
+
+		intersection_reset(&shadow);
+		if (scene_intersect(scene, camera, &shadow, settings) && shadow.ray.t < length(camera->position - shadow.ray.origin))
 			continue;
 
-		scene_intersect(scene, camera, &shadow, settings);
-
-		if (shadow.ray.t < y * (RT_F)0.95)
-			continue;
-		illumination += RT_POW((RT_F)(settings->illumination_value * sphere->radius / x), (RT_F)5.) * scene->objects[i].material.emission;
+		illumination += RT_POW((RT_F)(settings->illumination_value * sphere.radius / x), RT_ILLUMINATION_POWER) * scene->objects[i].material.emission;
  	}
  	return (illumination);
  }

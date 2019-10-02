@@ -7,13 +7,13 @@ void				gui_signal_scene_edit_material_color
 	t_gui_color		color;
 
 	gui = (t_gui *)ptr;
-	if (gui->scene->edit->material_color_silent)
+	if (gui->scene->edit->material.color_silent)
 		return ;
 	gtk_color_button_get_rgba(gui->scene->edit->material.color_button, &color);
 	gui_entry_set_f(gui->scene->edit->material.color_r, color.red);
 	gui_entry_set_f(gui->scene->edit->material.color_g, color.green);
 	gui_entry_set_f(gui->scene->edit->material.color_b, color.blue);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+	gui_control_show(&gui->scene->edit->control);
 }
 
 void				gui_signal_scene_edit_material_emission
@@ -28,5 +28,5 @@ void				gui_signal_scene_edit_material_emission
 	gui_entry_set_f(gui->scene->edit->material.emission_r, emission.red);
 	gui_entry_set_f(gui->scene->edit->material.emission_g, emission.green);
 	gui_entry_set_f(gui->scene->edit->material.emission_b, emission.blue);
-	gtk_widget_set_opacity(GTK_WIDGET(gui->scene->edit->control), 1.);
+	gui_control_show(&gui->scene->edit->control);
 }

@@ -1,0 +1,25 @@
+// cl_camera_definition ////////////////////////////////////////////////////////////////////////////////////////////////
+
+# include "rt_parameters.h"
+
+typedef struct 		s_camera
+{
+	RT_F4			position;
+	RT_F4			rotation;
+	RT_F4			axis_x;
+	RT_F4			axis_y;
+	RT_F4			axis_z;
+	RT_F4			forward;
+	RT_F4			forward_backup;
+	int				width;
+	int				height;
+	int 			filter_antialiasing;
+	t_rt_filter_mod	filter_mod;
+	int 			focus;
+	RT_F			aperture_size;
+	RT_F			focal_length;
+	int 			focus_request;
+	int 			select_request;
+	int 			select_request_object;
+	RT_F2			request_value;
+}					t_camera;

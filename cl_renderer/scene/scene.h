@@ -1,55 +1,88 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scene.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/29 15:21:58 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCENE_H
 # define SCENE_H
 
 # include "rt_parameters.h"
 # include "scene_point.h"
 
+# include "error_framework.h"
 # include "object_interaction.h"
 # include "texture.h"
 
 # include <stdlib.h>
 
+typedef enum		e_rt_background
+{
+	rt_background_none,
+	rt_background_one,
+	rt_background_interpolation,
+	rt_background_end
+}					t_rt_background;
+
+CHAR_REF			rt_background_translate(t_rt_background i);
+
 typedef struct		s_scene
 {
-	t_object		objects[RT_CL_SCENE_CAPACITY];
+	t_object		objects[RT_SCENE_CAPACITY];
 	int				objects_length;
-	int				lights[RT_CL_SCENE_CAPACITY];
-	int 			lights_length;
+	int				lights[RT_SCENE_CAPACITY];
+	int				lights_length;
 	t_texture		texture;
+	UINT_REF		current_mod;
+	int				selected_id;
+	t_rt_background	background;
+	RT_F4_API		background_color;
 }					t_scene;
 
-t_scene				*scene_new(void);
+t_scene				*scene_new(UINT_REF mod_ptr);
 void				scene_delete(t_scene **scene);
 
-void 				scene_clear(t_scene *scene);
-void 				scene_update(t_scene *scene);
+void				scene_func_a(t_scene *scene, int i);
+
+t_object			*scene_find_object_by_id(t_scene *scene, int id);
+t_object			*scene_find_object_by_name(t_scene *scene, CHAR_REF name);
+int					scene_find_texture_by_name(t_scene *scene, CHAR_REF name);
+
+void				scene_set_id(t_scene *scene);
+void				scene_set_name(t_scene *scene);
+void				scene_set_pair(t_scene *scene);
+void				scene_set_light(t_scene *scene);
+void				scene_set_visibility(t_scene *scene);
+
+void				scene_clear(t_scene *scene);
+void				scene_update(t_scene *scene);
+
 t_object			*scene_get_space(t_scene *scene);
-void 				scene_remove_object(t_scene *scene, int object_id);
-int 				scene_point_check(t_scene *scene, const RT_F4_API *point);
+
+void				scene_object_remove
+					(t_scene *scene, int object_id);
+void				scene_object_rename
+					(t_scene *scene, int object_id, CHAR_REF name);
+
+int					scene_point_check(t_scene *scene, const RT_F4_API *point);
+
 void				scene_select(t_scene *scene, int id);
+void				scene_unselect(t_scene *scene);
 
-typedef enum		e_scene_name_flag
+typedef enum		e_scene_param
 {
-	scene_name_next,
-	scene_name_last,
-	scene_name_id,
-	scene_name_reset
-}					t_scene_name_flag;
+	scene_param_name,
+	scene_param_material,
+	scene_param_texture,
+	scene_param_end
+}					t_scene_param;
 
-void				scene_give_name
-					(t_scene *scene, CHAR_REF str, t_scene_name_flag flag, ...);
-
-typedef enum		e_scene_texture_flag
-{
-	scene_texture_next,
-	scene_texture_last,
-	scene_texture_id
-}					t_scene_texture_flag;
-
-void				scene_texture_set
-					(t_scene *scene, int texture_id, t_scene_texture_flag flag, ...);
-
-int					scene_is_valid_id(t_scene *scene, int id);
-int					scene_is_valid_content(t_scene *scene);
+void				scene_edit_param(t_scene *scene, int id, ...);
 
 #endif

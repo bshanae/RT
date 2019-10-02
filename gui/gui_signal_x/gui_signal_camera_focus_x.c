@@ -1,6 +1,6 @@
 #include "gui_signal_x.h"
 
-gboolean			gui_signal_camera_focus_enable
+gboolean			gui_signal_camera_focus_state
 					(GtkWidget *widget, gboolean state, gpointer ptr)
 {
 	t_gui			*gui;

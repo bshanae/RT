@@ -6,7 +6,7 @@ static RT_F4		light_area(
 					global t_scene *scene,
 					global t_camera *camera,
 					t_intersection *intersection_object,
-					constant t_cl_renderer_settings *settings,
+					constant t_rt_settings *settings,
 					global ulong *rng_state)
 {
 	const RT_F		default_transparence_shadow_ratio = 0.15;
@@ -31,7 +31,7 @@ static RT_F4		light_area(
 		if (f4_max_component(scene->objects[i].material.emission) == 0.f)
 			continue ;
 
-		light_position = sphere_random(scene->objects + i, rng_state);
+		light_position = object_sphere_random(scene->objects + i, rng_state);
 		light_direction = normalize(light_position - intersection_object->hit);
 
 		intersection_light.ray.origin = intersection_object->hit;
@@ -41,8 +41,8 @@ static RT_F4		light_area(
 			continue ;
 		if (intersection_light.object_id != i)
         {
-        	if (intersection_light.material.transparence)
-        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparence;
+        	if (intersection_light.material.transparency)
+        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparency;
         	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
         	continue ;
         }

@@ -1,39 +1,14 @@
 // cl_texture //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct			s_texture
+typedef struct 		s_texture
 {
-    RT_F4				data[TEXTURE_DATA_SIZE];
-    int					texture_length[TEXTURE_MAX_NUMBER];
-    int					width[TEXTURE_MAX_NUMBER];
-    int					height[TEXTURE_MAX_NUMBER];
-    int					textures_number;
-}						t_texture;
-
-typedef struct 		s_camera
-{
-	RT_F4			position;
-	RT_F4			rotation;
-	RT_F4			axis_x;
-	RT_F4			axis_y;
-	RT_F4			axis_z;
-	RT_F4			forward;
-	RT_F4			up;
-	RT_F4			right;
-	RT_F4			forward_backup;
-	int				width;
-	int				height;
-	int 			filter_antialiasing;
-	int             filter_cartoon;
-	int             filter_sepia;
-	int				filter_stereo;
-	int 			focus;
-	RT_F			aperture_size;
-	RT_F			focal_length;
-	int 			focus_request;
-	int 			select_request;
-	int 			select_request_object;
-	RT_F2			request_value;
-}					t_camera;
+	char 			name[RT_TEXTURE_MAX_NUMBER][RT_NAME_SIZE];
+	RT_F4			data[RT_TEXTURE_DATA_SIZE];
+	int 			texture_length[RT_TEXTURE_MAX_NUMBER];
+	int				width[RT_TEXTURE_MAX_NUMBER];
+	int				height[RT_TEXTURE_MAX_NUMBER];
+	int 			textures_number;
+}					t_texture;
 
 static RT_F4        get_color_from_texture(
                     global t_texture *texture,
@@ -50,16 +25,89 @@ static RT_F4        get_color_from_texture(
     x = floor(*u * (RT_F)texture->width[texture_id]);
     y = floor((1 - *v) * (texture->height[texture_id] - 0.001));
 
-    if (x < 0)
-    	x = 0;
-    if (y < 0)
-        y = 0;
+    if (x < 0) x = 0;
+    if (y < 0) y = 0;
 
     if (x > (texture->width[texture_id] - 1))
     	x = texture->width[texture_id] - 1;
     if (y > (texture->height[texture_id] - 1))
         	y = texture->height[texture_id] - 1;
     return (pointer[y * texture->width[texture_id] + x]);
+}
+
+static RT_F4               projection(RT_F4 point_a, RT_F4 point_b, RT_F4  direction_bc)
+{
+    RT_F            cosine;
+    RT_F4           projection;
+    RT_F4           hypotenuse;
+    RT_F4           cathet_bc;
+    RT_F4           ba;
+    ba = point_a - point_b;
+    hypotenuse = length(ba);
+    cosine = dot(direction_bc, normalize(ba));
+    cathet_bc = cosine * hypotenuse;
+    projection = point_b + direction_bc * cathet_bc;
+    return(projection);
+}
+
+static void                local_default(RT_F4 *top, RT_F4 *bottom, RT_F4 *intersection)
+{
+    *top += -(*bottom);
+    *intersection += -(*bottom);
+    *bottom += -(*bottom);
+}
+
+static void         cylinder_texture(
+                    global t_camera *camera,
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    t_object_cylinder data;
+    RT_F4           normal;
+    RT_F4           top;
+    data = *(global t_object_cylinder* )object->data;
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
+    if ((data.top - data.bottom).y == 0)
+        *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
+    else
+        *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
+    if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
+        *v = length(intersection->hit - data.bottom) / data.length;
+    else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
+        *v = 1 - length(intersection->hit - data.top) / data.length;
+    else
+        *v = 1 - (data.radius + length(top - data.top)) / data.length;
+}
+
+static void         cone_texture(
+                    global t_camera *camera,
+                    global t_texture *texture,
+                    global t_object *object,
+                    t_intersection *intersection,
+                    RT_F *u, RT_F *v)
+{
+    t_object_cone   data;
+    RT_F4           top;
+    RT_F4           normal;
+    data = *(global t_object_cone* )object->data;
+    local_default(&data.top, &data.bottom, &intersection->hit);
+    top = projection(intersection->hit, data.top, data.axis);
+    normal = normalize(intersection->hit - top);
+    if ((data.top - data.bottom).y == 0)
+        *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
+    else
+        *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
+    if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
+        *v = 1 - length(intersection->hit - data.top) / data.length;
+    else
+        *v = length(intersection->hit - data.bottom) / data.length;
 }
 
 static void         sphere_texture(
@@ -71,23 +119,12 @@ static void         sphere_texture(
 {
     t_object_sphere data;
     RT_F4           normal;
-    RT_F            phi;
-    RT_F            theta;
 
     data = *(global t_object_sphere* )object->data;
     normal = normalize(intersection->hit - data.position);
 
-	normal = f4_rotate(normal, rt_rotation_x, rt_rotation_positive, camera->rotation.x);
-    normal = f4_rotate(normal, rt_rotation_y, rt_rotation_positive, camera->rotation.y);
-
-    phi = acos(dot(camera->axis_z, normal));
-    theta = (acos(dot(normal, camera->axis_y) / RT_SIN(phi))) / (2 * RT_PI);
-
-    if (dot(camera->axis_x, normal) > (RT_F)0.)
-       *u = theta;
-   else
-       *u = 1 - theta;
-    *v =  phi / RT_PI;
+    *u = 0.5 + atan2(normal.z, normal.x) / (2 * _RT_PI);
+    *v = 0.5 + asin(normal.y) / _RT_PI;
 }
 
 static void         plane_texture(
@@ -96,35 +133,35 @@ static void         plane_texture(
                     t_intersection *intersection,
                     RT_F *u, RT_F *v)
 {
-   // t_object_plane    data;
-    //RT_F4            vector;
-    //RT_F4            u;
-    //RT_F4            v;
-    //RT_F2            uv;
-//
-   // data = *(global t_object_plane* )object->data;
-  //  u = cross(intersection->hit, (RT_F4){0., 1., 0., 0.});
-    //if (length(u) == (RT_F)0.)
-    //    u = cross(intersection->normal, (RT_F4){0., 0., 1., 0.});
-   //v = cross(intersection->normal, u);
-    //vector = data.position - intersection->hit;
-   //uv.x = dot(u, vector);
-   //uv.y = dot(v, vector);
-    //return (get_color_from_texture(texture, object->texture_id, &uv));
+    t_object_plane   data;
+    RT_F4            vector;
+
+    data = *(global t_object_plane* )object->data;
+    vector = intersection->hit - data.position;
+
+    vector = RT_ABS(vector);
+    *u = RT_MOD((vector.x + vector.z), texture->width[object->texture_id]);
+    *u = 1 - *u / texture->width[object->texture_id];
+    *v = RT_MOD((vector.y + vector.z), texture->height[object->texture_id]);
+    *v = 1 - *v / texture->height[object->texture_id];
 }
 
-static RT_F4        object_texture(
-                    global t_texture *texture,
-                    global t_object *object,
-                    t_intersection *intersection,
-                    global t_camera *camera)
+static RT_F4		object_texture(
+					global t_texture *texture,
+					global t_camera *camera,
+					global t_object *object,
+					t_intersection *intersection)
 {
-    RT_F            u;
+	RT_F            u;
     RT_F            v;
 
-    if (object->type == object_type_sphere)
-        sphere_texture(camera, texture, object, intersection, &u, &v);
-    else if (object->type == object_type_plane)
-        plane_texture(texture, object, intersection, &u, &v);
-    return (get_color_from_texture(texture, object->texture_id, &u, &v));
+	if (object->type == object_type_sphere)
+            sphere_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_cone)
+		cone_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_cylinder)
+		cylinder_texture(camera, texture, object, intersection, &u, &v);
+	else if (object->type == object_type_plane)
+		plane_texture(texture, object, intersection, &u, &v);
+	return (get_color_from_texture(texture, object->texture_id, &u, &v));
 }

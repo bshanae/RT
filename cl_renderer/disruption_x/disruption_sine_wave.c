@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   disruption_sine_wave.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 16:02:55 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "disruption.h"
 
 static void			recalculate_values(double *x, double *y)
@@ -6,7 +18,7 @@ static void			recalculate_values(double *x, double *y)
 	*y = *y / DISRUPTION_HEIGHT + cos(TAU);
 }
 
-RT_F4_API 			disruption_sine_wave(double x, double y)
+RT_F4_API			disruption_sine_wave(double x, double y)
 {
 	RT_F4_API		color;
 
