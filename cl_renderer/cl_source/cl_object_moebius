@@ -11,7 +11,7 @@ typedef struct		            s_object_moebius
 
 // solving cubic equation //////////////////////////////////////////////////////////////////////////////////////////////
 
-// Solution via Kardano formulas
+// Solution via Kardano formulas http://ateist.spb.ru/mw/kardano.htm
 
 typedef struct					s_moebius_equation
 {
