@@ -235,9 +235,12 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
+	t_ray                       ray;
 
     data = *(global t_object_moebius *)object->data;
-	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
+    ray = intersection->ray;
+    ray.origin -= data.position;
+	t = calculate_moebius_t(&ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
 	intersection->ray.t = t;
