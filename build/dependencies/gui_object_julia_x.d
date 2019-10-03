@@ -1,7 +1,7 @@
 ./objects/gui_object_julia_x.o: ../gui/gui_object_x/gui_object_julia_x.c \
-  ../gui/gui_object_x/gui_object_x.h ../libft/includes/libft_standart.h \
+  ../gui/gui_object_x/gui_object_x.h ../parameters/rt_float.h \
+  ../parameters/rt_control.h ../libft/includes/libft_standart.h \
   ../error_framework/error_framework.h ../gui/gui_entry/gui_entry.h \
-  ../parameters/rt_float.h ../parameters/rt_control.h \
   /usr/local/Cellar/gtk+3/3.24.11/include/gtk-3.0/gtk/gtk.h \
   /usr/local/Cellar/gtk+3/3.24.11/include/gtk-3.0/gdk/gdk.h \
   /usr/local/Cellar/gtk+3/3.24.11/include/gtk-3.0/gdk/gdkconfig.h \
@@ -653,15 +653,15 @@
 
 ../gui/gui_object_x/gui_object_x.h:
 
+../parameters/rt_float.h:
+
+../parameters/rt_control.h:
+
 ../libft/includes/libft_standart.h:
 
 ../error_framework/error_framework.h:
 
 ../gui/gui_entry/gui_entry.h:
-
-../parameters/rt_float.h:
-
-../parameters/rt_control.h:
 
 /usr/local/Cellar/gtk+3/3.24.11/include/gtk-3.0/gtk/gtk.h:
 

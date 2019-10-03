@@ -1,3 +1,4 @@
+FUNC_INFO = ${info [Libft] : $1}
 FUNC_ITERATE = ${foreach line,$2,${call $1,${line}}}
 
 INCLUDES = -I ./includes
@@ -15,30 +16,43 @@ DEPENDS_DIR = ./depends
 DEPENDS = ${call FUNC_ITERATE,FUNC_GEN_DEPEND,${SOURCES}}
 
 LIB = libft.a
+TRY = try
 
 all : ${LIB}
 
+${TRY} : all
+	@touch ${TRY}
+	@rm ${TRY}
+
+
 ${LIB} : ${OBJECTS} ${DEPENDS} | ${OBJECTS_DIR} ${DEPENDS_DIR}
+	${call FUNC_INFO,Building library}
 	@ar rc ${LIB} ${OBJECTS}
 	@ranlib ${LIB}
 
 ${OBJECTS_DIR} :
-	mkdir ${OBJECTS_DIR}
+	${call FUNC_INFO,Creating folder for objects}
+	@mkdir ${OBJECTS_DIR}
 
 ${OBJECTS_DIR}/%.o : ${SOURCES_DIR}/%.c ${DEPENDS_DIR}/%.d | ${OBJECTS_DIR} ${DEPENDS_DIR}
-	gcc -MMD -MT $@ -MF ${call FUNC_GEN_DEPEND,$<} ${INCLUDES} -c $< -o $@
+	${call FUNC_INFO,Compiling C object $<}
+	@gcc -MMD -MT $@ -MF ${call FUNC_GEN_DEPEND,$<} ${INCLUDES} -c $< -o $@
 
 ${DEPENDS_DIR} :
-	mkdir ${DEPENDS_DIR}
+	${call FUNC_INFO,Creating folder for depends}
+	@mkdir ${DEPENDS_DIR}
 
 ${DEPENDS} :
 
 clean :
-	rm -rf ${OBJECTS_DIR}
-	rm -rf ${DEPENDS_DIR}
+	${call FUNC_INFO,Deleting objects}
+	@rm -rf ${OBJECTS_DIR}
+	${call FUNC_INFO,Deleting depends}
+	@rm -rf ${DEPENDS_DIR}
 
 fclean : clean
-	rm -rf ${LIB}
+	${call FUNC_INFO,Deleting library}
+	@rm -rf ${LIB}
 
 re : fclean all
 

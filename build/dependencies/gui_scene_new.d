@@ -3,10 +3,10 @@
   ../gui/gui_scene_common/gui_scene_common.h \
   ../parameters/rt_parameters.h ../parameters/rt_control.h \
   ../cl_renderer/scene/scene.h ../cl_renderer/scene/scene_point.h \
-  ../cl_renderer/object/object_interaction.h ../parameters/rt_float.h \
   ../error_framework/error_framework.h \
-  ../libft/includes/libft_standart.h ../cl_renderer/f4/f4.h \
-  ../parameters/rt_cl_include.h \
+  ../libft/includes/libft_standart.h \
+  ../cl_renderer/object/object_interaction.h ../parameters/rt_float.h \
+  ../cl_renderer/f4/f4.h ../parameters/rt_cl_include.h \
   ../cl_renderer/object/object_definition.h \
   ../cl_renderer/material/material.h ../cl_renderer/object_x/object_x.h \
   ../cl_renderer/material/material_list.h \
@@ -667,13 +667,13 @@
 
 ../cl_renderer/scene/scene_point.h:
 
-../cl_renderer/object/object_interaction.h:
-
-../parameters/rt_float.h:
-
 ../error_framework/error_framework.h:
 
 ../libft/includes/libft_standart.h:
+
+../cl_renderer/object/object_interaction.h:
+
+../parameters/rt_float.h:
 
 ../cl_renderer/f4/f4.h:
 

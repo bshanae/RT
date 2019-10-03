@@ -387,9 +387,9 @@ ${VAR_DEPENDS} :
 include ${wildcard ${VAR_DEPENDS}}
 
 ${VAR_PROJECT_EXTERN_TARGET} :
-	${call FUNC_RUN_EXTERN,all}
+	${call FUNC_RUN_EXTERN,try}
 
-${VAR_PROJECT_EXE} : ${VAR_PROJECT_EXTERN_TARGET} ${VAR_TEMPS} ${VAR_OBJECTS} ${VAR_DEPENDS}
+${VAR_PROJECT_EXE} : ${VAR_PROJECT_EXTERN_TARGET} ${VAR_TEMPS} ${VAR_OBJECTS}
 	${call FUNC_COMPILE_EXE}
 
 clean_no_extern :
@@ -402,7 +402,7 @@ clean_no_extern :
 
 clean : clean_no_extern
 	${call FUNC_INFO,Cleaning extern}
-	${call FUNC_RUN_EXTERN}
+	${call FUNC_RUN_EXTERN,clean}
 
 fclean : clean
 	${call FUNC_RUN_EXTERN,fclean}
