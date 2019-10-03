@@ -53,6 +53,9 @@ static void				static_set_args(t_cl_renderer *renderer)
 	cl_builder_set_args(renderer->builder, renderer->args);
 }
 
+#ifndef RT_OPEN_CL_DISABLED
+
+
 t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 {
 	t_cl_renderer		*new;
@@ -60,17 +63,28 @@ t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 	new = rt_malloc(sizeof(t_cl_renderer));
 	new->image = image;
 	new->pixel_number = image->width * image->height;
-#ifndef RT_OPEN_CL_DISABLED
 	new->builder = cl_builder_new();
 	new->args = cl_arg_list_new(new->builder->context, new->builder->queue);
-#else
-	new->builder = NULL;
-	new->args = NULL;
-#endif
 	static_data_init(new);
-#ifndef RT_OPEN_CL_DISABLED
 	static_set_args(new);
-#endif
 	printf("Renderer : Ready\n\n");
 	return (new);
 }
+
+#else
+
+t_cl_renderer			*cl_renderer_new(t_gui_image *image)
+{
+	t_cl_renderer		*new;
+
+	new = rt_malloc(sizeof(t_cl_renderer));
+	new->image = image;
+	new->pixel_number = image->width * image->height;
+	new->builder = NULL;
+	new->args = NULL;
+	static_data_init(new);
+	printf("Renderer : Ready\n\n");
+	return (new);
+}
+
+#endif
