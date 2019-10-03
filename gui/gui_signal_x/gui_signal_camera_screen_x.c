@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_camera_screen_x.c                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:28:41 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:28:55 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void				static_get_time(char *destination)
@@ -5,7 +17,7 @@ void				static_get_time(char *destination)
 	time_t			time_raw;
 	struct tm		*time_info;
 
-	time (&time_raw);
+	time(&time_raw);
 	time_info = localtime(&time_raw);
 	sprintf(destination, "RT Screen Shot %d-%2d-%02d at %2d.%2d.%2d",
 			time_info->tm_year + 1900,
@@ -17,7 +29,7 @@ void				static_get_time(char *destination)
 }
 
 void				gui_signal_camera_screen_save
-					(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	char			time[64];
@@ -44,7 +56,7 @@ void				gui_signal_camera_screen_save
 }
 
 void				gui_signal_camera_screen_dialog_response
-					(GtkWidget *w, gpointer p)
+	(GtkWidget *w, gpointer p)
 {
 	t_gui			*gui;
 

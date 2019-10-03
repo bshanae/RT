@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_entry_x.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:45:04 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:45:07 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void				gui_signal_entry_launch_control_on_insert
-					(GtkEntry *entry, const char *new,
-					int length, int *position, gpointer ptr)
+	(GtkEntry *entry, const char *new, int length, int *position, gpointer ptr)
 {
 	t_gui			*gui;
-	int 			i;
+	int				i;
 
 	gui = (t_gui *)ptr;
 	i = gui_notebook_camera;
@@ -19,11 +30,11 @@ void				gui_signal_entry_launch_control_on_insert
 		gui_control_show(gui->notebook_control[i]);
 }
 
-void 				gui_signal_entry_launch_control_on_delete
-					(GtkEntry *entry, int start, int end, gpointer ptr)
+void					gui_signal_entry_launch_control_on_delete
+	(GtkEntry *entry, int start, int end, gpointer ptr)
 {
 	t_gui			*gui;
-	int 			i;
+	int				i;
 
 	gui = (t_gui *)ptr;
 	i = gui_notebook_camera;
@@ -38,10 +49,9 @@ void 				gui_signal_entry_launch_control_on_delete
 }
 
 void				gui_signal_entry_block_i
-					(GtkEntry *entry, const char *new,
-	 				int length, int *position, gpointer ptr)
+	(GtkEntry *entry, const char *new, int length, int *position, gpointer ptr)
 {
-	int 			block;
+	int				block;
 	int				i;
 
 	block = 0;
@@ -57,12 +67,11 @@ void				gui_signal_entry_block_i
 }
 
 void				gui_signal_entry_block_f
-					(GtkEntry *entry, const char *new,
-	 				int length, int *position, gpointer ptr)
+	(GtkEntry *entry, const char *new, int length, int *position, gpointer ptr)
 {
 	CHAR_REF		old;
-	int 			block;
-	int 			dot_count;
+	int				block;
+	int				dot_count;
 	int				i;
 
 	block = 0;

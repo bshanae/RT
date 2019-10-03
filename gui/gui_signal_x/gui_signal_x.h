@@ -16,7 +16,7 @@ gboolean			gui_signal_key
 
 void				gui_signal_entry_launch_control_on_insert
 					(GtkEntry *entry, const char *new,
-					int length, int *position, gpointer ptr);
+		 			int length, int *position, gpointer ptr);
 void 				gui_signal_entry_launch_control_on_delete
 					(GtkEntry *entry, int start, int end, gpointer ptr);
 void				gui_signal_entry_block_i

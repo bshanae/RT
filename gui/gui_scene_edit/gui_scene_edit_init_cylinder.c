@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_edit_init_cylinder.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:10:41 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:10:41 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_edit.h"
 
-void 					gui_scene_edit_init_cylinder
-						(t_gui_scene_edit *edit, GtkBuilder *builder)
+void					gui_scene_edit_init_cylinder
+	(t_gui_scene_edit *edit, GtkBuilder *builder)
 {
 	t_gui_init_cylinder	init;
 

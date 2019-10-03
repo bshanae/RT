@@ -1,18 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_edit_select.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:17:01 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:17:31 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_edit.h"
 
 void				gui_scene_edit_select
-					(t_gui_scene_edit *edit, t_scene *scene)
+	(t_gui_scene_edit *edit, t_scene *scene)
 {
 	GtkTreeModel	*model;
 	GtkTreeIter		iter;
-	int 			id;
+	int				id;
 
 	rt_assert_critical(edit->common != NULL, "GUI Editor : Common is NULL");
 	if (scene->selected_id == -1)
-	{
-		gui_scene_edit_unselect(edit);
 		return ;
-	}
 	gtk_widget_set_sensitive(edit->remove_button, TRUE);
 	model = GTK_TREE_MODEL(edit->common->full);
 	if (!gtk_tree_model_get_iter_first(model, &iter))

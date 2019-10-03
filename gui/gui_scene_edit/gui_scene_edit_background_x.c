@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_edit_background_x.c                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 12:54:11 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 12:54:32 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_edit.h"
 
-void 				gui_scene_edit_background_get
-					(t_gui_scene_edit *edit, t_scene *scene)
+void				gui_scene_edit_background_get
+	(t_gui_scene_edit *edit, t_scene *scene)
 {
 	GtkTreeModel	*model;
-	int 			i;
+	int				i;
 	GtkTreeIter		iter;
 
 	model = GTK_TREE_MODEL(edit->common->background);
@@ -21,17 +33,17 @@ void 				gui_scene_edit_background_get
 		if (!gtk_tree_model_iter_next(model, &iter))
 			break ;
 	}
-	rt_raise_warning("GUI Editor : background id not found");
+	rt_raise_warning("GUI Editor : Background id not found");
 }
 
-void 				gui_scene_edit_background_set
-					(t_gui_scene_edit *edit, t_scene *scene)
+void				gui_scene_edit_background_set
+	(t_gui_scene_edit *edit, t_scene *scene)
 {
-	GtkTreeIter			iter;
+	GtkTreeIter		iter;
 
 	if (gtk_combo_box_get_active_iter(edit->background_combo, &iter))
 		gtk_tree_model_get(GTK_TREE_MODEL(edit->common->background), &iter,
 			gui_list_column_id, &scene->background, -1);
 	else
-		rt_raise_warning("GUI Editor : no background selected\n");
+		rt_raise_warning("GUI Editor : No background selected\n");
 }

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_connect_all.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:22:09 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:22:11 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_connect_x.h"
 
-void 				gui_signal_connect_all(t_gui *gui)
+void				gui_signal_connect_all(t_gui *gui)
 {
 	RT_GUI_CONNECT(gui, gui_signal_exit);
 	RT_GUI_CONNECT(gui, gui_signal_key);

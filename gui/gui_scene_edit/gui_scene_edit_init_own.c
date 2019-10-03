@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_scene_edit_init_own.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:14:55 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:14:55 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_scene_edit.h"
 
-void 							gui_scene_edit_init_own
-								(t_gui_scene_edit *edit, GtkBuilder *builder)
+void					gui_scene_edit_init_own
+	(t_gui_scene_edit *edit, GtkBuilder *builder)
 {
-	t_gui_init_control			init;
+	t_gui_init_control	init;
 
 	edit->common = NULL;
 	edit->background_combo = RT_GUI_GET(builder, "scene_edit_background_combo");

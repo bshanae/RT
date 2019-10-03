@@ -68,5 +68,6 @@ void				gui_render(t_gui *gui);
 void				gui_command_focus(t_gui *gui, GdkEventButton *event);
 void				gui_command_select(t_gui *gui, GdkEventButton *event);
 void				gui_command_unselect(t_gui *gui);
+void				gui_command_move(t_gui *gui, t_rt_movement movement);
 
 #endif
