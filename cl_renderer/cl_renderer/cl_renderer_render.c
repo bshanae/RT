@@ -69,7 +69,7 @@ void				cl_renderer_render(t_cl_renderer *renderer)
 	settings = &renderer->data.settings;
 #ifndef RT_OPEN_CL_DISABLED
 	static_pre_queue(renderer);
-	if (settings->sample_count >= settings->sample_limit)
+	if (settings->sample_count > settings->sample_limit)
 		return ;
 	static_queue(renderer);
 	static_post_queue(renderer);

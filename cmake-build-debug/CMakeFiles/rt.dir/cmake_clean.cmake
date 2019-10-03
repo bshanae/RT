@@ -119,7 +119,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_reset.c.o"
   "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.o"
-  "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o"
+  "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o"
   "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_connect.c.o"
   "CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o"
