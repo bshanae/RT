@@ -13,11 +13,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_arg_list/cl_arg_list_push.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_delete.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_delete.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_builder/cl_builder_init_device.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_render.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_render.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_builder/cl_builder_init_device.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_x/gui_signal_settings_motion_blur.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_motion_blur.c" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui_signal_x/gui_signal_settings_motion_blur.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parameters/rt_control.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_control.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +226,7 @@
       <workItem from="1569939897713" duration="539000" />
       <workItem from="1569940756672" duration="885000" />
       <workItem from="1570018877623" duration="5896000" />
-      <workItem from="1570089482834" duration="1932000" />
+      <workItem from="1570089482834" duration="3317000" />
     </task>
     <servers />
   </component>

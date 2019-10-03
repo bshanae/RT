@@ -118,23 +118,23 @@ void				scene_test_box(t_scene *scene)
 	scene_edit_param(scene, -1, scene_param_name, "Sphere");
 	scene_edit_param(scene, -1, scene_param_texture, "Planet");
 
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Lower");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 50., 0.}, (RT_F4_API){0., -1., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Upper");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){50., 0., 0.}, (RT_F4_API){-1., 0., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Right");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-50., 0., 0.}, (RT_F4_API){1., 0., 0.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Left");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -50.}, (RT_F4_API){0., 0., 1.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Front");
-
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.});
-	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -50., 0.}, (RT_F4_API){0., 1., 0.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Lower");
+//
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 50., 0.}, (RT_F4_API){0., -1., 0.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Upper");
+//
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){50., 0., 0.}, (RT_F4_API){-1., 0., 0.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Right");
+//
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-50., 0., 0.}, (RT_F4_API){1., 0., 0.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Left");
+//
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -50.}, (RT_F4_API){0., 0., 1.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Front");
+//
+//	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.});
+//	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
 
 	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){20., 20., 0.}, (RT_F4_API){0., 0., 0.}, 2.);
 	scene_edit_param(scene, -1, scene_param_name, "Cone");

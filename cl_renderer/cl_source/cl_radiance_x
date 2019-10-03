@@ -84,6 +84,7 @@ static RT_F4				radiance_trace(
 		if (settings->illumination)
 			radiance += illumination(scene, camera, intersection, settings);
 
+
 		if (!scene_intersect(scene, camera, intersection, settings))
 		{
 			if (scene->background == rt_background_none)
