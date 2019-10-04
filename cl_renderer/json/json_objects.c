@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/02 21:38:52 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/04 16:40:08 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 
 	s = &((t_cl_renderer*)data)->data.settings;
 	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
-	box.val_i2 = get_bool_in_object(json, tokens, "step limit");
+	box.val_i2 = get_int_in_object(json, tokens, "step limit");
 	box.val_f1 = get_float_in_object(json, tokens, "step part");
 	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_STEP_LIMIT);
@@ -32,6 +32,18 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	free(box.val_i1);
 	free(box.val_i2);
 	free(box.val_f1);
+	box.val_i1 = get_int_in_object(json, tokens, "pt depth");
+	box.val_i2 = get_int_in_object(json, tokens, "pt sample limit");
+	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_PT_DEPTH);
+	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_PT_SAMPLE_LIMIT);
+	s->sample_depth = box.i1;
+	s->sample_limit = box.i2;
+	free(box.val_i1);
+	free(box.val_i2);
+	box.val_i1 = get_bool_in_object(json, tokens, "illumination");
+	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_ILLUMINATION_);
+	s->illumination = box.i1;
+	free(box.val_i1);
 }
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)

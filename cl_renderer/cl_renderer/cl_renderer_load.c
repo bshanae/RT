@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cl_renderer_load.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 14:02:51 by ashari            #+#    #+#             */
-/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/04 16:42:12 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void				cl_renderer_load(
 	cl_renderer_flag_set(renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(renderer, cl_flag_update_settings);
 	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
+	camera_apply(renderer->data.camera);
 }
