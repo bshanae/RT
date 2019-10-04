@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_camera_focus_x.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:28:14 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:28:16 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 gboolean			gui_signal_camera_focus_state
-					(GtkWidget *widget, gboolean state, gpointer ptr)
+	(GtkWidget *widget, gboolean state, gpointer ptr)
 {
 	t_gui			*gui;
 
@@ -15,7 +27,7 @@ gboolean			gui_signal_camera_focus_state
 }
 
 void				gui_signal_camera_focus_auto
-					(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 

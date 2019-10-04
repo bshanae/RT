@@ -290,7 +290,7 @@ set(SOURCE_GUI_SETTINGS
 	./gui/gui_settings/gui_settings_delete.c
 	./gui/gui_settings/gui_settings_reset.c
 	./gui/gui_settings/gui_settings_apply.c
-	./gui/gui_settings/gui_settings_show.c gui/gui_settings/gui_settings_connect.c)
+        gui/gui_settings/gui_settings_show_x.c gui/gui_settings/gui_settings_connect.c)
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c

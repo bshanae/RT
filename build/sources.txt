@@ -201,7 +201,7 @@
 ../gui/gui_settings/gui_settings_delete.c
 ../gui/gui_settings/gui_settings_reset.c
 ../gui/gui_settings/gui_settings_apply.c
-../gui/gui_settings/gui_settings_show.c
+../gui/gui_settings/gui_settings_show_x.c
 ../gui/gui_settings/gui_settings_connect.c
 
 #	#################################################################	#

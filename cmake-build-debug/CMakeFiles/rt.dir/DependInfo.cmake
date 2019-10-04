@@ -218,7 +218,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_delete.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_new.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_new.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_reset.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_reset.c.o"
-  "/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o"
+  "/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show_x.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_all.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_camera.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_camera.c.o"
   "/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_entry.c" "/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_signal_connect_x/gui_signal_connect_entry.c.o"

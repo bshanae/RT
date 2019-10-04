@@ -852,7 +852,7 @@
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_reset.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c">
+		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/ashari/21_ray_tracer/gui/gui_signal_connect_x/gui_signal_connect_all.c">

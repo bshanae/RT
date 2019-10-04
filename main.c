@@ -3,8 +3,6 @@
 #include "cl_renderer.h"
 #include "material_list.h"
 
-void				scene_moebius(t_scene *scene);
-
 // todo: switch off the illumination
 
 void				scene_mandelbulb(t_scene *scene, t_camera *camera);
@@ -14,25 +12,40 @@ void				scene_explosion(t_scene *scene, t_camera *camera);
 void				scene_csg(t_scene *scene, t_camera *camera);
 void				scene_box_default(t_scene *scene, t_camera *camera);
 
+void				scene_moebius(t_scene *scene);
+void				scene_spheres(t_scene *scene);
+
 int					main(int argc, char **argv)
 {
-	t_gui			*gui;
+    t_gui			*gui;
 
-	gui = gui_new(&argc, &argv);
-	gui_signal_connect_all(gui);
-	gui->renderer = cl_renderer_new(gui->image);
-	scene_box_default(gui->renderer->data.scene, gui->renderer->data.camera);
-	scene_moebius(gui->renderer->data.scene);
-	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
-	cl_renderer_change_light_mod(gui->renderer, rt_light_area);
-	camera_apply(gui->renderer->data.camera);
-	cl_renderer_camera_save(gui->renderer);
+    gui = gui_new(&argc, &argv);
+    gui_signal_connect_all(gui);
+    gui->renderer = cl_renderer_new(gui->image);
+    scene_box_default(gui->renderer->data.scene, gui->renderer->data.camera);
+    //scene_moebius(gui->renderer->data.scene);
+    scene_spheres(gui->renderer->data.scene);
+    cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
+    cl_renderer_change_light_mod(gui->renderer, rt_light_area);
+    camera_apply(gui->renderer->data.camera);
+    cl_renderer_camera_save(gui->renderer);
     scene_update(gui->renderer->data.scene);
     gui_connect(gui);
-	gui_update(gui);
-	gui_loop(gui);
-	gui_delete(&gui);
-	return (0);
+    gui_update(gui);
+    gui_loop(gui);
+    gui_delete(&gui);
+    return (0);
+}
+
+void				scene_spheres(t_scene *scene)
+{
+    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){4., 2., -84.}, 12.);
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_MIRROR);
+    scene_edit_param(scene, -1, scene_param_name, "Sphere Mirror");
+
+    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){-3., 10., -50.}, 12.);
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_GLASS);
+    scene_edit_param(scene, -1, scene_param_name, "Sphere Glass");
 }
 
 void				scene_moebius(t_scene *scene)
@@ -44,21 +57,19 @@ void				scene_moebius(t_scene *scene)
 
 void				scene_box_default(t_scene *scene, t_camera *camera)
 {
-    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){16., 40., -30.}, 3.);
-    scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
-    scene_edit_param(scene, -1, scene_param_name, "Light_Far");
-
-    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){-20., 40., -7.}, 3.);
+    object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){17., 40., -16.}, 3.);
     scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
     scene_edit_param(scene, -1, scene_param_name, "Light");
 
     object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -140.}, (RT_F4_API){0., 0., 1.});
     scene_edit_param(scene, -1, scene_param_name, "Plane Back");
 
-    object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-40., 0., 0.}, (RT_F4_API){1., 0., 0.});
+    object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-40., 0., 0.}, (RT_F4_API){-1., 0., 0.});
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_DEEP_BLUE);
     scene_edit_param(scene, -1, scene_param_name, "Plane Left");
 
     object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){40., 0., 0.}, (RT_F4_API){-1., 0., 0.});
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_NEW_BLUE);
     scene_edit_param(scene, -1, scene_param_name, "Plane Right");
 
     object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.});

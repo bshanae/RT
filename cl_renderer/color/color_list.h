@@ -28,4 +28,18 @@
 # define LIGHT_BASIC			(RT_F4_API){0.3, 0.3, 0.3, 1.}
 # define LIGHT_AMBIENT			(RT_F4_API){0.5, 0.5, 0.5, 1.}
 
+// Mountains palette
+
+// 3d4a54
+# define COLOR_DEEP_BLUE		(RT_F4_API){0.24, 0.29, 0.33, 1.}
+
+// e2eaf0
+# define COLOR_LIGHT_BLUE		(RT_F4_API){1., 0.92, 0.94, 1.}
+
+// c4c7ca
+# define COLOR_GREY				(RT_F4_API){0.77, 0.78, 0.79, 1.}
+
+// a9c8e3
+# define COLOR_NEW_BLUE			(RT_F4_API){0.66, 0.78, 0.89, 1.}
+
 #endif

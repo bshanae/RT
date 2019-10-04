@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_image_x.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:46:27 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:46:39 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 static int			static_is_left_click(GdkEventButton *event)
@@ -10,8 +22,8 @@ static int			static_is_right_click(GdkEventButton *event)
 	return (event->type == GDK_BUTTON_PRESS && event->button == 3);
 }
 
-gboolean 			gui_signal_image_click
-					(GtkWidget *widget, GdkEventButton *event, gpointer ptr)
+gboolean			gui_signal_image_click
+	(GtkWidget *widget, GdkEventButton *event, gpointer ptr)
 {
 	t_gui			*gui;
 
@@ -31,13 +43,12 @@ gboolean 			gui_signal_image_click
 }
 
 gboolean			gui_signal_image_draw
-					(GtkWidget *widget, void *cairo, gpointer ptr)
+	(GtkWidget *widget, void *cairo, gpointer ptr)
 {
 	t_gui			*gui;
 	GtkAllocation	allocation;
 
 	gui = (t_gui *)ptr;
-
 	if (gui->image->resize_request == rt_false)
 		return (FALSE);
 	gtk_widget_get_allocation(widget, &allocation);

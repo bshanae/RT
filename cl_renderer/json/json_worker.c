@@ -40,8 +40,6 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 		parse_explosion(data, json, tokens);
 	else if (ft_strequ(type, "perforated cube"))
 		parse_perfcube(data, json, tokens);
-	else if (ft_strequ(type, "csg"))
-	    parse_csg(data, json, tokens);
 	else if (ft_strequ(type, "settings"))
 		parse_settings(data, json, tokens);
 	free(type);
@@ -81,7 +79,6 @@ void				json_load(void *data, const char *path)
 	tokens = rt_malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
 	jsmn_parse(&parser, json, strlen(json), tokens, res);
-	// default_settings();
 	work_tokens(data, json, tokens);
 	free(tokens);
 	free(json);

@@ -1013,26 +1013,28 @@ typedef struct		            s_object_moebius
 
 // solving cubic equation //////////////////////////////////////////////////////////////////////////////////////////////
 
+// Solution via Kardano formulas http://ateist.spb.ru/mw/kardano.htm
+
 typedef struct					s_moebius_equation
 {
 	RT_F						q;
 	RT_F						r;
 	RT_F						bq;
 	RT_F						br;
+    RT_F						ba;
+    RT_F						bb;
 	RT_F						bq3;
 	RT_F						br2;
 	RT_F						cr2;
 	RT_F						cq3;
 	RT_F						sqrt_bq;
-	RT_F						sgnbr;
+	RT_F						sgn_br;
 	RT_F						ratio;
 	RT_F						theta;
 	RT_F						norm;
-	RT_F						r0;
-	RT_F						r1;
-	RT_F						r2;
-	RT_F						ba;
-	RT_F						bb;
+	RT_F						x0;
+	RT_F						x1;
+	RT_F						x2;
 	int							i;
 }								t_moebius_equation;
 
@@ -1047,87 +1049,87 @@ static void						ft_swap(RT_F *a, RT_F *b)
 
 static t_moebius_equation		init_structure(const RT_F *coefficients)
 {
-	t_moebius_equation			new;
+	t_moebius_equation			eq;
 
-	new.q = coefficients[2] * coefficients[2] - 3 * coefficients[1];
-	new.r = 2 * coefficients[2] * coefficients[2] * coefficients[2]
+	eq.q = coefficients[2] * coefficients[2] - 3 * coefficients[1];
+	eq.r = 2 * coefficients[2] * coefficients[2] * coefficients[2]
 		- 9 * coefficients[2] * coefficients[1] + 27 * coefficients[0];
-	new.bq = new.q / 9;
-	new.br = new.r / 54;
-	new.bq3 = new.bq * new.bq * new.bq;
-	new.br2 = new.br * new.br;
-	new.cr2 = 729 * new.r * new.r;
-	new.cq3 = 2916 * new.q * new.q * new.q;
-	new.sgnbr = new.br >= 0 ? 1 : -1;
-	new.i = 0;
-	return (new);
+	eq.bq = eq.q / 9;
+	eq.br = eq.r / 54;
+	eq.bq3 = eq.bq * eq.bq * eq.bq;
+	eq.br2 = eq.br * eq.br;
+	eq.cr2 = 729 * eq.r * eq.r;
+	eq.cq3 = 2916 * eq.q * eq.q * eq.q;
+	eq.sgn_br = eq.br >= 0 ? 1 : -1;
+	eq.i = 0;
+	return (eq);
 }
 
-static int						solve_second_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_second_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.sqrt_bq = RT_SQRT(c.bq);
-	if (c.br > 0)
+	eq.sqrt_bq = RT_SQRT(eq.bq);
+	if (eq.br > 0)
 	{
-		r[0] = -2 * c.sqrt_bq - coefficients[2] / 3;
-		r[1] = c.sqrt_bq - coefficients[2] / 3;
-		r[2] = c.sqrt_bq - coefficients[2] / 3;
+		r[0] = -2 * eq.sqrt_bq - coefficients[2] / 3;
+		r[1] = eq.sqrt_bq - coefficients[2] / 3;
+		r[2] = eq.sqrt_bq - coefficients[2] / 3;
 	}
 	else
 	{
-		r[0] = -c.sqrt_bq - coefficients[2] / 3;
-		r[1] = -c.sqrt_bq - coefficients[2] / 3;
-		r[2] = 2 * c.sqrt_bq - coefficients[2] / 3;
+		r[0] = -eq.sqrt_bq - coefficients[2] / 3;
+		r[1] = -eq.sqrt_bq - coefficients[2] / 3;
+		r[2] = 2 * eq.sqrt_bq - coefficients[2] / 3;
 	}
 	return (3);
 }
 
-static int						solve_third_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_third_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.ratio = c.sgnbr * RT_SQRT(c.br2 / c.bq3);
-	c.theta = acos(c.ratio);
-	c.norm = -2 * RT_SQRT(c.bq);
-	c.r0 = c.norm * RT_COS((RT_F)c.theta / 3) - coefficients[2] / 3;
-	c.r1 = c.norm * RT_COS((RT_F)(c.theta + 2.0 * RT_PI) / 3) - coefficients[2] / 3;
-	c.r2 = c.norm * RT_COS((RT_F)(c.theta - 2.0 * RT_PI) / 3) - coefficients[2] / 3;
-	if (c.r0 > c.r1)
-		ft_swap(&c.r0, &c.r1);
-	if (c.r1 > c.r2)
+	eq.ratio = eq.sgn_br * RT_SQRT(eq.br2 / eq.bq3);
+	eq.theta = acos(eq.ratio);
+	eq.norm = -2 * RT_SQRT(eq.bq);
+	eq.x0 = eq.norm * RT_COS((RT_F)eq.theta / 3) - coefficients[2] / 3;
+	eq.x1 = eq.norm * RT_COS((RT_F)(eq.theta + 2.0 * RT_PI) / 3) - coefficients[2] / 3;
+	eq.x2 = eq.norm * RT_COS((RT_F)(eq.theta - 2.0 * RT_PI) / 3) - coefficients[2] / 3;
+	if (eq.x0 > eq.x1)
+		ft_swap(&eq.x0, &eq.x1);
+	if (eq.x1 > eq.x2)
 	{
-		ft_swap(&c.r1, &c.r2);
-		if (c.r0 > c.r1)
-			ft_swap(&c.r0, &c.r1);
+		ft_swap(&eq.x1, &eq.x2);
+		if (eq.x0 > eq.x1)
+			ft_swap(&eq.x0, &eq.x1);
 	}
-	r[0] = c.r0;
-	r[1] = c.r1;
-	r[2] = c.r2;
+	r[0] = eq.x0;
+	r[1] = eq.x1;
+	r[2] = eq.x2;
 	return (3);
 }
 
-static int						solve_fourth_case(t_moebius_equation c, const RT_F *coefficients, RT_F *r)
+static int						solve_fourth_case(t_moebius_equation eq, const RT_F *coefficients, RT_F *r)
 {
-	c.ba = -c.sgnbr * pow((RT_F)(RT_ABS(c.br) + RT_SQRT(c.br2 - c.bq3)), (RT_F)(1.0 / 3.0));
-	c.bb = c.bq / c.ba;
-	r[0] = c.ba + c.bb - coefficients[2] / 3;
+	eq.ba = -eq.sgn_br * pow((RT_F)(RT_ABS(eq.br) + RT_SQRT(eq.br2 - eq.bq3)), (RT_F)(1.0 / 3.0));
+	eq.bb = eq.bq / eq.ba;
+	r[0] = eq.ba + eq.bb - coefficients[2] / 3;
 	return (1);
 }
 
 static int						solve_moebius_equation(RT_F *coefficients, RT_F *r)
 {
-	t_moebius_equation			c;
+	t_moebius_equation			coeffs;
 
-	c = init_structure(coefficients);
-	if (c.br == 0 && c.bq == 0)
+	coeffs = init_structure(coefficients);
+	if (coeffs.br == 0 && coeffs.bq == 0)
 	{
-		while (c.i++ < 3)
-			r[c.i] = -coefficients[2] / 3;
+		while (coeffs.i++ < 3)
+			r[coeffs.i] = -coefficients[2] / 3;
 		return (3);
 	}
-	else if (c.cr2 == c.cq3)
-		return (solve_second_case(c, coefficients, r));
-	else if (c.br2 < c.bq3)
-		return (solve_third_case(c, coefficients, r));
+	else if (coeffs.cr2 == coeffs.cq3)
+		return (solve_second_case(coeffs, coefficients, r));
+	else if (coeffs.br2 < coeffs.bq3)
+		return (solve_third_case(coeffs, coefficients, r));
 	else
-		return (solve_fourth_case(c, coefficients, r));
+		return (solve_fourth_case(coeffs, coefficients, r));
 }
 
 // calculating t ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1237,9 +1239,12 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
+	t_ray                       ray;
 
     data = *(global t_object_moebius *)object->data;
-	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
+    ray = intersection->ray;
+    ray.origin -= data.position;
+	t = calculate_moebius_t(&ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
 	intersection->ray.t = t;
@@ -1802,53 +1807,52 @@ static void         cylinder_texture(
                     global t_camera *camera,
                     global t_texture *texture,
                     global t_object *object,
-                    t_intersection *intersection,
+                    t_intersection intersection,
                     RT_F *u, RT_F *v)
 {
     t_object_cylinder data;
     RT_F4           normal;
     RT_F4           top;
     data = *(global t_object_cylinder* )object->data;
-    local_default(&data.top, &data.bottom, &intersection->hit);
-    top = projection(intersection->hit, data.top, data.axis);
-    normal = normalize(intersection->hit - top);
+    local_default(&data.top, &data.bottom, &intersection.hit);
+    top = projection(intersection.hit, data.top, data.axis);
+    normal = normalize(intersection.hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
-    if (dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
-        && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = length(intersection->hit - data.bottom) / data.length;
-    else if (dot(normalize(data.top - intersection->hit), data.axis) >= -RT_EPSILON
-        && dot(normalize(data.top - intersection->hit), data.axis) <= RT_EPSILON)
-        *v = 1 - length(intersection->hit - data.top) / data.length;
+    if (dot(normalize(data.bottom - intersection.hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.bottom - intersection.hit), data.axis) <= RT_EPSILON)
+        *v = length(intersection.hit - data.bottom) / data.length;
+    else if (dot(normalize(data.top - intersection.hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.top - intersection.hit), data.axis) <= RT_EPSILON)
+        *v = 1 - length(intersection.hit - data.top) / data.length;
     else
         *v = 1 - (data.radius + length(top - data.top)) / data.length;
 }
-
 static void         cone_texture(
                     global t_camera *camera,
                     global t_texture *texture,
                     global t_object *object,
-                    t_intersection *intersection,
+                    t_intersection intersection,
                     RT_F *u, RT_F *v)
 {
     t_object_cone   data;
     RT_F4           top;
     RT_F4           normal;
     data = *(global t_object_cone* )object->data;
-    local_default(&data.top, &data.bottom, &intersection->hit);
-    top = projection(intersection->hit, data.top, data.axis);
-    normal = normalize(intersection->hit - top);
+    local_default(&data.top, &data.bottom, &intersection.hit);
+    top = projection(intersection.hit, data.top, data.axis);
+    normal = normalize(intersection.hit - top);
     if ((data.top - data.bottom).y == 0)
         *u = 0.5 + atan2(normal.y, normal.z) / (2 * RT_PI);
     else
         *u = 0.5 + atan2(normal.z, normal.x) / (2 * RT_PI);
-    if (!(dot(normalize(data.bottom - intersection->hit), data.axis) >= -RT_EPSILON
-        && dot(normalize(data.bottom - intersection->hit), data.axis) <= RT_EPSILON))
-        *v = 1 - length(intersection->hit - data.top) / data.length;
+    if (!(dot(normalize(data.bottom - intersection.hit), data.axis) >= -RT_EPSILON
+        && dot(normalize(data.bottom - intersection.hit), data.axis) <= RT_EPSILON))
+        *v = 1 - length(intersection.hit - data.top) / data.length;
     else
-        *v = length(intersection->hit - data.bottom) / data.length;
+        *v = length(intersection.hit - data.bottom) / data.length;
 }
 
 static void         sphere_texture(
@@ -1899,9 +1903,9 @@ static RT_F4		object_texture(
 	if (object->type == object_type_sphere)
             sphere_texture(camera, texture, object, intersection, &u, &v);
 	else if (object->type == object_type_cone)
-		cone_texture(camera, texture, object, intersection, &u, &v);
+		cone_texture(camera, texture, object, *intersection, &u, &v);
 	else if (object->type == object_type_cylinder)
-		cylinder_texture(camera, texture, object, intersection, &u, &v);
+		cylinder_texture(camera, texture, object, *intersection, &u, &v);
 	else if (object->type == object_type_plane)
 		plane_texture(texture, object, intersection, &u, &v);
 	return (get_color_from_texture(texture, object->texture_id, &u, &v));
@@ -2350,7 +2354,7 @@ static RT_F4		filter_stereo(RT_F4 radiance, t_cl_stereo_type type)
 		return ((RT_F4){0., radiance.y, radiance.z, 1.});
 	else if (type == cl_stereo_type_b)
 		return ((RT_F4){radiance.x, 0., 0., 1.});
-	return ((RT_F4)0});
+	return ((RT_F4)0);
 }
 
 static void			filter_jitter(RT_F *x, global ulong *rng_state)
@@ -2574,6 +2578,7 @@ static RT_F4				radiance_trace(
 		if (settings->illumination)
 			radiance += illumination(scene, camera, intersection, settings);
 
+
 		if (!scene_intersect(scene, camera, intersection, settings))
 		{
 			if (scene->background == rt_background_none)
@@ -2662,16 +2667,11 @@ kernel void			cl_main(
 	t_intersection	intersection;
 	RT_F4			radiance;
 
-	int				stereo_mod;
 	t_intersection	stereo_intersection;
 	RT_F4			stereo_radiance[2];
 
-
-
-	stereo_mod = camera->filter_mod == rt_filter_stereo;
-	sample_store_map(sample_store, sample_store_mapped, camera);
-
     global_id = get_global_id(0);
+	sample_store_map(sample_store, sample_store_mapped, camera);
 
 	if (camera->select_request)
 	{
@@ -2687,6 +2687,8 @@ kernel void			cl_main(
 		return ;
 	}
 
+	printf("%d\n", scene->background)
+
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 
@@ -2694,13 +2696,13 @@ kernel void			cl_main(
 
 	radiance = radiance_trace(scene, camera, &intersection, settings, rng_state);
 
-	if (stereo_mod)
+	if (camera->filter_mod == rt_filter_stereo)
 	{
 		stereo_intersection.ray = camera_build_ray(camera, &screen, rng_state);
 		stereo_intersection.ray.origin.x += 1;
 		stereo_radiance[0] = filter_stereo(radiance, cl_stereo_type_a);
         stereo_radiance[1] = radiance_trace(scene, camera, &stereo_intersection, settings, rng_state);
-        stereo_radiance[1] = filter_stereo(radiance, cl_stereo_type_b);
+        stereo_radiance[1] = filter_stereo(stereo_radiance[1], cl_stereo_type_b);
         radiance = stereo_radiance[0] + stereo_radiance[1];
 	}
 

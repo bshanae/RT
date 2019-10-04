@@ -8,7 +8,7 @@ t_material	decide_color(char *mat_name)
 	t_color2		col;
 	
 	res = MATERIAL_WHITE;
-	if (ft_strnequ(mat_name, "#", 1))
+	if (!ft_strncmp(mat_name, "#", 1))
 		mat_name += 1;
 	else
 		mat_name += 2;
@@ -19,7 +19,7 @@ t_material	decide_color(char *mat_name)
 
 t_material	decide_material(char *mat_name)
 {
-	if (ft_strnequ(mat_name, "0x", 2) || ft_strnequ(mat_name, "#", 1))
+	if (!ft_strncmp(mat_name, "0x", 2) || !ft_strncmp(mat_name, "#", 1))
 		return (decide_color(mat_name));
 	else if (ft_strequ(mat_name, "light"))
 		return (MATERIAL_LIGHT);
@@ -113,51 +113,64 @@ char	*get_string_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-int		get_bool_in_object(char *json, jsmntok_t *object, char *target, int def)
+int		*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	int			*res;
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (def);
+		return (NULL);
 	if (pos->type == JSMN_PRIMITIVE && pos->size == 0)
 	{
 		if (json[pos->start] != 't' || json[pos->start] != 'f')
-			return (def);
-		return (json[pos->start] == 't' ? 1 : 0);
+			return (NULL);
+		res = rt_malloc(sizeof(int));
+		if (!res)
+			return (NULL);
+		*res = (json[pos->start] == 't' ? 1 : 0);
+		return (res);
 	}
-	return (def);
+	return (NULL);
 }
 
-float	get_float_in_object(char *json, jsmntok_t *object, char *target, float def)
+float	*get_float_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	float		res;
+	float		*out_f;
 	// char		*temp;	
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (def);
+		return (NULL);
 	if (token_is_number(json, pos))
 	{
 		res = atof(json + pos->start);
-		return (res);
+		out_f = rt_malloc(sizeof(float));
+		if (!out_f)
+			return (NULL);
+		*out_f = res;
+		return (out_f);
 	}
-	return (def);
+	return (NULL);
 }
 
-int		get_int_in_object(char *json, jsmntok_t *object, char *target, int def)
+int		*get_int_in_object(char *json, jsmntok_t *object, char *target)
 {
-	int		res;
-	float	val;
+	int		*res;
+	float	*val;
 
-	val = get_float_in_object(json, object, target, def);
-	res = val;
+	val = get_float_in_object(json, object, target);
+	res = rt_malloc(sizeof(int));
+	if (!val || !res)
+		return (NULL);
+	*res = (int)*val;
+	free(val);
 	return (res);
 }
 
-t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_vector3 def)
+t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	t_vector3	res;
@@ -166,7 +179,7 @@ t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_ve
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
-		return (def);
+		return (NULL);
 	if (pos->type == JSMN_ARRAY && pos->size == 3)
 	{
 		if (token_is_number(json, pos + 1) && token_is_number(json, pos + 2) && token_is_number(json, pos + 3))
@@ -174,27 +187,12 @@ t_vector3	get_vector_in_object(char *json, jsmntok_t *object, char *target, t_ve
 			res.x = atof(json + pos[1].start);
 			res.y = atof(json + pos[2].start);
 			res.z = atof(json + pos[3].start);
-			return (res);
+			out_v = rt_malloc(sizeof(t_vector3));
+			if (!out_v)
+				return (NULL);
+			*out_v = res;
+			return (out_v);
 		}
 	}
-	return (def);
-}
-
-void	load_shared(void *data, char *json, jsmntok_t *object, t_default def)
-{
-	char	*name;
-	char	*material;
-	char	*texture;
-
-	name = get_string_in_object(json, object, "name");
-	material = get_string_in_object(json, object, "material");
-	texture = get_string_in_object(json, object, "texture");
-
-//	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_name, (name ? name : def.name));
-//	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_material, (material ? decide_material(material) : def.material));
-//	if (texture)
-//		scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_texture, texture);
-	free(name);
-	free(material);
-	free(texture);
+	return (NULL);
 }

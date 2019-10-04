@@ -48,7 +48,7 @@ typedef enum						s_rt_filter_mod
 
 # define RT_GUI_GET					(void *)gtk_builder_get_object
 
-# define RT_GUI_WIDTH				838
+# define RT_GUI_WIDTH				840
 # define RT_GUI_HEIGHT				720
 
 # define RT_GUI_QUEUE_CEILING		10

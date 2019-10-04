@@ -6,7 +6,7 @@
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 14:03:16 by ashari            #+#    #+#             */
-/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/03 11:10:27 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,26 @@ static void			static_post_queue(t_cl_renderer *renderer)
 		renderer->image->gdk_buffer);
 }
 
+#ifndef RT_OPEN_CL_DISABLED
+
+
 void				cl_renderer_render(t_cl_renderer *renderer)
 {
 	t_rt_settings	*settings;
 
 	settings = &renderer->data.settings;
-#ifndef RT_OPEN_CL_DISABLED
 	static_pre_queue(renderer);
-	if (settings->sample_count >= settings->sample_limit)
+	if (settings->sample_count > settings->sample_limit)
 		return ;
 	static_queue(renderer);
 	static_post_queue(renderer);
-#endif
 }
+
+#else
+
+void				cl_renderer_render(t_cl_renderer *renderer)
+{
+
+}
+
+#endif

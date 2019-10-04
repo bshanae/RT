@@ -12,6 +12,8 @@
 
 #include "cl_arg_list.h"
 
+#ifndef RT_OPEN_CL_DISABLED
+
 int					cl_arg_list_push(
 					t_cl_arg_list *list,
 					void *ptr,
@@ -21,7 +23,6 @@ int					cl_arg_list_push(
 	int				i;
 	int				error;
 
-#ifndef RT_OPEN_CL_DISABLED
 	if (list->length == RT_ARGS_CAPACITY)
 		return (-1);
 	i = list->length++;
@@ -32,7 +33,17 @@ int					cl_arg_list_push(
 		type, size, NULL, &error);
 	rt_assert_critical(error == 0, "Arg List : Buffer error");
 	return (i);
-#else
-	return (-1);
-#endif
 }
+
+#else
+
+int					cl_arg_list_push(
+					t_cl_arg_list *list,
+					void *ptr,
+					u_long size,
+					cl_mem_flags type)
+{
+	return (-1);
+}
+
+#endif

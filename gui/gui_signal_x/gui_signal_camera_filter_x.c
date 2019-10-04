@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_camera_filter_x.c                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 13:27:50 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 13:27:56 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void				gui_signal_camera_filter
-					(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	t_camera		*camera;
-	int 			state[4];
+	int				state[4];
 	t_rt_filter_mod	state_i;
 
 	gui = (t_gui *)ptr;
@@ -26,5 +38,3 @@ void				gui_signal_camera_filter
 	gui_queue_push(gui->queue);
 	gui_queue_execute_force(gui->queue);
 }
-
-

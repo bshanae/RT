@@ -1617,18 +1617,18 @@ CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_apply.c -o CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.s
 
-CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o: ../gui/gui_settings/gui_settings_show.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o   -c /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c
+CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o: ../gui/gui_settings/gui_settings_show_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o   -c /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show_x.c
 
-CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c > CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.i
+CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show_x.c > CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.i
 
-CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show.c -o CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.s
+CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ashari/21_ray_tracer/gui/gui_settings/gui_settings_show_x.c -o CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.s
 
 CMakeFiles/rt.dir/gui/gui_settings/gui_settings_connect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui_settings/gui_settings_connect.c.o: ../gui/gui_settings/gui_settings_connect.c
@@ -3546,7 +3546,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o" \
 "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_reset.c.o" \
 "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.o" \
-"CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o" \
+"CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui_settings/gui_settings_connect.c.o" \
 "CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o" \
 "CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o" \
@@ -3809,7 +3809,7 @@ rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_delete.c.o
 rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_reset.c.o
 rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_apply.c.o
-rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show.c.o
+rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_show_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui_settings/gui_settings_connect.c.o
 rt: CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o

@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_key.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 15:26:45 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/03 15:26:47 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 static int			try_move_camera(t_gui *gui, int key)
 {
-	t_rt_movement		movement;
+	t_rt_movement	movement;
 
 	if (key == GDK_KEY_a || key == GDK_KEY_Cyrillic_ef)
 		movement = rt_movement_left;
@@ -19,13 +31,7 @@ static int			try_move_camera(t_gui *gui, int key)
 	else
 		return (0);
 	if (gui->renderer->data.scene->selected_id != -1)
-	{
-		gui->scene->edit->control.silent = rt_true;
-		gui_scene_edit_show(gui->scene->edit,
-			gui->renderer->data.scene->objects + gui->scene->edit->current_id);
-		cl_renderer_object_move(gui->renderer, movement);
-		gui->scene->edit->control.silent = rt_false;
-	}
+		gui_command_move(gui, movement);
 	else
 	{
 		gui_camera_show(gui->camera);
@@ -40,13 +46,17 @@ static int			try_rotate_camera(t_gui *gui, int key)
 	if (gui->renderer->data.scene->selected_id != -1)
 		return (0);
 	if (key == GDK_KEY_Left)
-		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_y,
+			rt_rotation_positive);
 	else if (key == GDK_KEY_Right)
-		cl_renderer_camera_rotate(gui->renderer,rt_rotation_y, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_y,
+			rt_rotation_negative);
 	else if (key == GDK_KEY_Up)
-		cl_renderer_camera_rotate(gui->renderer, rt_rotation_x, rt_rotation_negative);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_x,
+			rt_rotation_negative);
 	else if (key == GDK_KEY_Down)
-		cl_renderer_camera_rotate(gui->renderer,rt_rotation_x, rt_rotation_positive);
+		cl_renderer_camera_rotate(gui->renderer, rt_rotation_x,
+			rt_rotation_positive);
 	else
 		return (0);
 	gui_camera_show(gui->camera);
@@ -54,23 +64,18 @@ static int			try_rotate_camera(t_gui *gui, int key)
 	return (1);
 }
 
-gboolean			gui_signal_key
-					(GtkWidget *widget, GdkEventKey *event, gpointer ptr)
+#ifdef RT_QUEUE_AUTO
+
+static int			static_command
+	(GtkWidget *widget, GdkEventKey *event, gpointer ptr)
 {
 	t_gui			*gui;
-	int 			image_focus;
-	gboolean 		finish_condition;
 
 	gui = (t_gui *)ptr;
-	finish_condition = 1;
 	if (event->keyval == GDK_KEY_Escape)
 		gui_signal_exit(widget, ptr);
 	else if (event->keyval == GDK_KEY_Return)
-#ifdef RT_QUEUE_AUTO
 		gui->queue->block = !gui->queue->block;
-#elif defined RT_QUEUE_MANUAL
-		gui_queue_execute_force(gui->queue);
-#endif
 	else if (event->keyval == GDK_KEY_r)
 	{
 		cl_renderer_camera_reset(gui->renderer);
@@ -78,12 +83,49 @@ gboolean			gui_signal_key
 		gui_queue_execute_force(gui->queue);
 	}
 	else
-		finish_condition = 0;
-	if (finish_condition)
+		return (0);
+	return (1);
+}
+
+#elif defined RT_QUEUE_MANUAL
+
+static int			static_command
+	(GtkWidget *widget, GdkEventKey *event, gpointer ptr)
+{
+	t_gui			*gui;
+
+	gui = (t_gui *)ptr;
+	if (event->keyval == GDK_KEY_Escape)
+		gui_signal_exit(widget, ptr);
+	else if (event->keyval == GDK_KEY_Return)
+		gui_queue_execute_force(gui->queue);
+	else if (event->keyval == GDK_KEY_r)
+	{
+		cl_renderer_camera_reset(gui->renderer);
+		gui_camera_show(gui->camera);
+		gui_queue_execute_force(gui->queue);
+	}
+	else
+		return (0);
+	return (1);
+}
+
+#endif
+
+gboolean			gui_signal_key
+	(GtkWidget *widget, GdkEventKey *event, gpointer ptr)
+{
+	t_gui			*gui;
+	int				image_focus;
+
+	gui = (t_gui *)ptr;
+	if (static_command(widget, event, ptr))
 		return (FALSE);
 	image_focus = gtk_widget_is_focus(GTK_WIDGET(gui->image->event_box));
-	if (image_focus && try_move_camera(gui, event->keyval));
-	else if (image_focus && try_rotate_camera(gui, event->keyval));
+	if (image_focus && try_move_camera(gui, event->keyval))
+		;
+	else if (image_focus && try_rotate_camera(gui, event->keyval))
+		;
 	else
 		return (FALSE);
 	return (TRUE);
