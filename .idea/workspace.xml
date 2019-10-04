@@ -13,12 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/color/color_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/color/color_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/material/material_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/material/material_list.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_settinsgs_init.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parameters/rt_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/parameters/rt_parameters.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,6 +195,7 @@
       <workItem from="1567187196581" duration="5301000" />
       <workItem from="1567234053756" duration="1332000" />
       <workItem from="1567517148992" duration="5487000" />
+      <workItem from="1570177505058" duration="799000" />
     </task>
     <servers />
   </component>

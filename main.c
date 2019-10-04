@@ -22,9 +22,9 @@ int					main(int argc, char **argv)
     gui = gui_new(&argc, &argv);
     gui_signal_connect_all(gui);
     gui->renderer = cl_renderer_new(gui->image);
-    scene_box_default(gui->renderer->data.scene, gui->renderer->data.camera);
-    //scene_moebius(gui->renderer->data.scene);
-    scene_spheres(gui->renderer->data.scene);
+    //scene_box_default(gui->renderer->data.scene, gui->renderer->data.camera);
+    scene_moebius(gui->renderer->data.scene);
+    //scene_spheres(gui->renderer->data.scene);
     cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
     cl_renderer_change_light_mod(gui->renderer, rt_light_area);
     camera_apply(gui->renderer->data.camera);
@@ -50,9 +50,22 @@ void				scene_spheres(t_scene *scene)
 
 void				scene_moebius(t_scene *scene)
 {
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){-7., 32., 62.}, 3.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	scene_edit_param(scene, -1, scene_param_name, "Light");
+
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -140.}, (RT_F4_API){0., 0., 1.});
+	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_MONE_BLUE_1);
+
     object_build(scene_get_space(scene), object_type_moebius, (RT_F4_API){0., 15., -30.}, 8., 6.);
     scene_edit_param(scene, -1, scene_param_name, "Moebius Ribbon");
-    scene_edit_param(scene, -1, scene_param_material, MATERIAL_RED);
+    scene_edit_param(scene, -1, scene_param_material, MATERIAL_PINK);
+
+	// camera position 88 17 60
+	// camera rotation 0 -0.77 0.
+	// path depth 3
+	// illumination 0
 }
 
 void				scene_box_default(t_scene *scene, t_camera *camera)

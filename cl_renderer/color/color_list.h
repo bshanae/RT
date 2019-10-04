@@ -42,4 +42,13 @@
 // a9c8e3
 # define COLOR_NEW_BLUE			(RT_F4_API){0.66, 0.78, 0.89, 1.}
 
+// Impression Sunrise palette (Mone)
+
+# define COLOR_PINK		        (RT_F4_API){0.83, 0.63, 0.6, 1.}
+# define COLOR_PINK_1		    (RT_F4_API){0.82, 0.72, 0.72, 1.}
+# define COLOR_MONE_BLUE		(RT_F4_API){0.37, 0.45, 0.84, 1.}
+# define COLOR_MONE_YELLOW		(RT_F4_API){0.95, 0.74, 0.55, 1.}
+# define COLOR_MONE_BLUE_1		(RT_F4_API){0.63, 0.67, 0.79, 1.}
+
+
 #endif
