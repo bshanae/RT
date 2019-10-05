@@ -124,6 +124,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_delete.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_image/gui_image_delete.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_image/gui_image_new.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_image/gui_image_new.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_color_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_color_x.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_emission_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_emission_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_get.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_get.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_hide.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_hide.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_init.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui_material/gui_material_init.c.o"

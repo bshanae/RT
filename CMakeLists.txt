@@ -499,7 +499,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
 	${SOURCE_CL_RT_SETTINGS}
-	${SOURCE_CL_RENDERER_})
+	${SOURCE_CL_RENDERER_} gui/gui_material/gui_material_emission_x.c)
 
 add_executable(rt
 	${SOURCE_ERROR_FRAMEWORK}

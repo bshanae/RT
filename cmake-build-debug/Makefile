@@ -3363,6 +3363,33 @@ gui/gui_material/gui_material_color_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_color_x.c.s
 .PHONY : gui/gui_material/gui_material_color_x.c.s
 
+gui/gui_material/gui_material_emission_x.o: gui/gui_material/gui_material_emission_x.c.o
+
+.PHONY : gui/gui_material/gui_material_emission_x.o
+
+# target to build an object file
+gui/gui_material/gui_material_emission_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_emission_x.c.o
+.PHONY : gui/gui_material/gui_material_emission_x.c.o
+
+gui/gui_material/gui_material_emission_x.i: gui/gui_material/gui_material_emission_x.c.i
+
+.PHONY : gui/gui_material/gui_material_emission_x.i
+
+# target to preprocess a source file
+gui/gui_material/gui_material_emission_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_emission_x.c.i
+.PHONY : gui/gui_material/gui_material_emission_x.c.i
+
+gui/gui_material/gui_material_emission_x.s: gui/gui_material/gui_material_emission_x.c.s
+
+.PHONY : gui/gui_material/gui_material_emission_x.s
+
+# target to generate assembly for a file
+gui/gui_material/gui_material_emission_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_material/gui_material_emission_x.c.s
+.PHONY : gui/gui_material/gui_material_emission_x.c.s
+
 gui/gui_material/gui_material_get.o: gui/gui_material/gui_material_get.c.o
 
 .PHONY : gui/gui_material/gui_material_get.o
@@ -7566,6 +7593,9 @@ help:
 	@echo "... gui/gui_material/gui_material_color_x.o"
 	@echo "... gui/gui_material/gui_material_color_x.i"
 	@echo "... gui/gui_material/gui_material_color_x.s"
+	@echo "... gui/gui_material/gui_material_emission_x.o"
+	@echo "... gui/gui_material/gui_material_emission_x.i"
+	@echo "... gui/gui_material/gui_material_emission_x.s"
 	@echo "... gui/gui_material/gui_material_get.o"
 	@echo "... gui/gui_material/gui_material_get.i"
 	@echo "... gui/gui_material/gui_material_get.s"

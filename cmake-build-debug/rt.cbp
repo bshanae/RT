@@ -568,6 +568,9 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_color_x.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_emission_x.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_material/gui_material_get.c">
 			<Option target="rt"/>
 		</Unit>

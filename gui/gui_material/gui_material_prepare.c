@@ -12,6 +12,29 @@
 
 #include "gui_material.h"
 
+static void			static_helper(t_gui_material *material, t_object *object)
+{
+	if (object_flag_get(object) & RT_OBJECT_HAS_NO_MATERIAL)
+	{
+		gui_material_color_disable(material);
+		gui_material_emission_disable(material);
+		gui_material_special_disable(material);
+
+	}
+	else if (object_flag_get(object) & RT_OBJECT_LIGHT)
+	{
+		gui_material_color_disable(material);
+		gui_material_emission_enable(material);
+		gui_material_special_disable(material);
+	}
+	else
+	{
+		gui_material_color_enable(material);
+		gui_material_emission_enable(material);
+		gui_material_special_disable(material);
+	}
+}
+
 void				gui_material_prepare
 	(t_gui_material *material, t_object *object)
 {
@@ -26,14 +49,5 @@ void				gui_material_prepare
 	flag = !(object_flag_get(object) & RT_OBJECT_PAIR);
 	gtk_widget_set_sensitive(GTK_WIDGET(material->switcher_stack), flag);
 	gtk_widget_set_sensitive(GTK_WIDGET(material->stack), flag);
-	if (object_flag_get(object) & RT_OBJECT_LIGHT)
-	{
-		gui_material_special_disable(material);
-		gui_material_color_disable(material);
-	}
-	else
-	{
-		gui_material_special_enable(material);
-		gui_material_color_enable(material);
-	}
+	static_helper(material, object);
 }

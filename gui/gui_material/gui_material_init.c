@@ -31,6 +31,7 @@ static void			static_init_a
 	material->emission_g = RT_GUI_GET(builder, init->emission_g);
 	material->emission_b = RT_GUI_GET(builder, init->emission_b);
 	material->emission_button = RT_GUI_GET(builder, init->emission_button);
+	material->emission_box = RT_GUI_GET(builder, init->emission_box);
 	material->texture_combo = RT_GUI_GET(builder, init->texture_combo);
 	material->texture_list = RT_GUI_GET(builder, init->texture_list);
 	material->texture_state = rt_off;

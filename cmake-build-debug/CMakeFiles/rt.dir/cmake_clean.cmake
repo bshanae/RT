@@ -261,6 +261,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o"
+  "CMakeFiles/rt.dir/gui/gui_material/gui_material_emission_x.c.o"
   "rt.pdb"
   "rt"
 )
