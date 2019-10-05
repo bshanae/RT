@@ -98,7 +98,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/Vladimir/workspace/21_ray_tracer/cl_renderer/texture/texture_iter.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_assert_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_malloc.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_malloc.c.o"
-  "/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_print_error.c.o"
+  "/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_print_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_raise_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o"
   "/Users/Vladimir/workspace/21_ray_tracer/gui/gui/gui_connect.c" "/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect.c.o"

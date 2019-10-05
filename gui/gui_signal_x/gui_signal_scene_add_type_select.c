@@ -9,10 +9,10 @@ void 				gui_signal_scene_add_type_select
 
 	gui = (t_gui *)ptr;
 	add = gui->scene->add;
-	if (gui->scene->common->update_process)
-		return ;
 	rt_assert_critical(add->common != NULL,
 		"GUI Creator : gui_scene_common is NULL");
+	if (gui->scene->common->update_process)
+		return ;
 	if (!gtk_combo_box_get_active_iter(add->type_combo, &iter))
 		return (rt_raise_warning("GUI Creator : No active type"));
 	gtk_tree_model_get(GTK_TREE_MODEL(add->common->types), &iter,

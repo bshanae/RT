@@ -148,7 +148,7 @@ link_libraries("ft")
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
 	./error_framework/rt_assert_x.c
-	./error_framework/rt_malloc.c error_framework/rt_print_error.c)
+	./error_framework/rt_malloc.c error_framework/rt_print_x.c)
 
 set(SOURCE_MAIN
 	./main.c)

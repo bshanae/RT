@@ -18,7 +18,7 @@ static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
 
 	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
 		return (0);
-	return ((int)(flag & *gui->ptr_scene->current_mod));
+	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
 }
 
 void				gui_scene_common_update_full(t_gui_scene_common *gui)
@@ -44,7 +44,7 @@ static int			static_prepare_limited(t_gui_scene_common *gui)
 	t_object		temp;
 
 	rt_assert_critical(gui->connected, "GUI Common : Not connected");
-	if (*gui->ptr_scene->current_mod == RT_OBJECT_RM)
+	if (*gui->ptr_scene->tracing_mod_mask == RT_OBJECT_RM)
 		return (0);
 	gtk_list_store_clear(gui->limited_main);
 	gtk_list_store_clear(gui->limited_limit);
@@ -90,7 +90,7 @@ void				gui_scene_common_update_csg(t_gui_scene_common *gui)
 
 	rt_assert_critical(gui->connected, "GUI Common : Not connected");
 	model = GTK_TREE_MODEL(gui->full);
-	if (*gui->ptr_scene->current_mod == RT_OBJECT_RT)
+	if (*gui->ptr_scene->tracing_mod_mask == RT_OBJECT_RT)
 		return ;
 	if (!gtk_tree_model_get_iter_first(model, &iter_full))
 		return ;

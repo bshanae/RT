@@ -96,18 +96,18 @@ CMakeFiles/rt.dir/error_framework/rt_malloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/error_framework/rt_malloc.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_malloc.c -o CMakeFiles/rt.dir/error_framework/rt_malloc.c.s
 
-CMakeFiles/rt.dir/error_framework/rt_print_error.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/error_framework/rt_print_error.c.o: ../error_framework/rt_print_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/error_framework/rt_print_error.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/error_framework/rt_print_error.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c
+CMakeFiles/rt.dir/error_framework/rt_print_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/error_framework/rt_print_x.c.o: ../error_framework/rt_print_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/rt.dir/error_framework/rt_print_x.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/error_framework/rt_print_x.c.o   -c /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_x.c
 
-CMakeFiles/rt.dir/error_framework/rt_print_error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/error_framework/rt_print_error.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c > CMakeFiles/rt.dir/error_framework/rt_print_error.c.i
+CMakeFiles/rt.dir/error_framework/rt_print_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/error_framework/rt_print_x.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_x.c > CMakeFiles/rt.dir/error_framework/rt_print_x.c.i
 
-CMakeFiles/rt.dir/error_framework/rt_print_error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/error_framework/rt_print_error.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c -o CMakeFiles/rt.dir/error_framework/rt_print_error.c.s
+CMakeFiles/rt.dir/error_framework/rt_print_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/error_framework/rt_print_x.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_x.c -o CMakeFiles/rt.dir/error_framework/rt_print_x.c.s
 
 CMakeFiles/rt.dir/main.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/main.c.o: ../main.c
@@ -3468,7 +3468,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o" \
 "CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o" \
 "CMakeFiles/rt.dir/error_framework/rt_malloc.c.o" \
-"CMakeFiles/rt.dir/error_framework/rt_print_error.c.o" \
+"CMakeFiles/rt.dir/error_framework/rt_print_x.c.o" \
 "CMakeFiles/rt.dir/main.c.o" \
 "CMakeFiles/rt.dir/gui/gui/gui_new.c.o" \
 "CMakeFiles/rt.dir/gui/gui/gui_delete.c.o" \
@@ -3734,7 +3734,7 @@ rt_EXTERNAL_OBJECTS =
 rt: CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o
 rt: CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o
 rt: CMakeFiles/rt.dir/error_framework/rt_malloc.c.o
-rt: CMakeFiles/rt.dir/error_framework/rt_print_error.c.o
+rt: CMakeFiles/rt.dir/error_framework/rt_print_x.c.o
 rt: CMakeFiles/rt.dir/main.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_delete.c.o

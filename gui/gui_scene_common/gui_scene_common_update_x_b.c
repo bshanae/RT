@@ -18,7 +18,7 @@ static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
 
 	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
 		return (0);
-	return ((int)(flag & *gui->ptr_scene->current_mod));
+	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
 }
 
 void				gui_scene_common_update_types(t_gui_scene_common *gui)

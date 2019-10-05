@@ -9,6 +9,8 @@ void 				gui_signal_scene_edit_select
 	t_object		*object;
 
 	gui = (t_gui *)ptr;
+	if (gui->scene->common->update_process)
+		return ;
 	if (gui->scene->edit->selection_silent)
 		return ;
 	test = gtk_tree_selection_get_selected(gui->scene->edit->selection,

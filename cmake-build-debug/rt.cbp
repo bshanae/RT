@@ -490,7 +490,7 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_malloc.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_error.c">
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_print_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/error_framework/rt_raise_x.c">

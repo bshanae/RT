@@ -8,6 +8,7 @@
 
 # define RT_W_ERROR	1
 
+void 				rt_print_warning(CHAR_REF message, va_list args);
 void 				rt_print_error(CHAR_REF message, va_list args);
 
 void 				rt_raise_warning(CHAR_REF message, ...);

@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o"
   "CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o"
   "CMakeFiles/rt.dir/error_framework/rt_malloc.c.o"
-  "CMakeFiles/rt.dir/error_framework/rt_print_error.c.o"
+  "CMakeFiles/rt.dir/error_framework/rt_print_x.c.o"
   "CMakeFiles/rt.dir/main.c.o"
   "CMakeFiles/rt.dir/gui/gui/gui_new.c.o"
   "CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
