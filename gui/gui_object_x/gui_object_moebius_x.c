@@ -50,3 +50,13 @@ void						gui_object_moebius_set
 	data->radius = gui_entry_get_f(gui->radius);
 	data->half_width = gui_entry_get_f(gui->width) / 2.;
 }
+
+void						gui_object_moebius_clear
+	(t_gui_object_moebius *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->radius, "");
+	gtk_entry_set_text(gui->width, "");
+}

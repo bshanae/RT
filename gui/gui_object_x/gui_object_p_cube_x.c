@@ -47,3 +47,12 @@ void							gui_object_p_cube_set
 	data->position.z = gui_entry_get_f(gui->position_z);
 	data->iterations = gui_entry_get_i(gui->iterations);
 }
+
+void						gui_object_p_cube_clear
+	(t_gui_object_p_cube *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->iterations, "");
+}

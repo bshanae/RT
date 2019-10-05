@@ -44,3 +44,11 @@ void							gui_object_light_point_set
 	data->position.y = gui_entry_get_f(gui->position_y);
 	data->position.z = gui_entry_get_f(gui->position_z);
 }
+
+void						gui_object_light_point_clear
+	(t_gui_object_light_point *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+}

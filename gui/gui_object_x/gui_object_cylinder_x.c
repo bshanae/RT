@@ -15,24 +15,24 @@
 t_gui_object_cylinder		gui_object_cylinder_init
 	(t_gui_init_cylinder *init, GtkBuilder *builder)
 {
-	t_gui_object_cylinder cone;
+	t_gui_object_cylinder cylinder;
 
-	cone.top_x = GTK_ENTRY(RT_GUI_GET(builder, init->top_x));
-	cone.top_y = GTK_ENTRY(RT_GUI_GET(builder, init->top_y));
-	cone.top_z = GTK_ENTRY(RT_GUI_GET(builder, init->top_z));
-	cone.bottom_x = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_x));
-	cone.bottom_y = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_y));
-	cone.bottom_z = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_z));
-	cone.radius = GTK_ENTRY(RT_GUI_GET(builder, init->radius));
-	return (cone);
+	cylinder.top_x = GTK_ENTRY(RT_GUI_GET(builder, init->top_x));
+	cylinder.top_y = GTK_ENTRY(RT_GUI_GET(builder, init->top_y));
+	cylinder.top_z = GTK_ENTRY(RT_GUI_GET(builder, init->top_z));
+	cylinder.bottom_x = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_x));
+	cylinder.bottom_y = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_y));
+	cylinder.bottom_z = GTK_ENTRY(RT_GUI_GET(builder, init->bottom_z));
+	cylinder.radius = GTK_ENTRY(RT_GUI_GET(builder, init->radius));
+	return (cylinder);
 }
 
 void						gui_object_cylinder_get
 	(t_gui_object_cylinder *gui, t_object *object)
 {
-	t_object_cone			*data;
+	t_object_cylinder			*data;
 
-	data = (t_object_cone *)object->data;
+	data = (t_object_cylinder *)object->data;
 	gui_entry_set_f(gui->top_x, data->top.x);
 	gui_entry_set_f(gui->top_y, data->top.y);
 	gui_entry_set_f(gui->top_z, data->top.z);
@@ -58,4 +58,16 @@ void						gui_object_cylinder_set
 	data->axis = f4_normalize(f4_sub(data->top, data->bottom));
     data->length_line = f4_length(f4_sub(data->top, data->bottom));
     data->length = data->length_line + data->radius * 2;
+}
+
+void						gui_object_cylinder_clear
+	(t_gui_object_cylinder *gui)
+{
+	gtk_entry_set_text(gui->top_x, "");
+	gtk_entry_set_text(gui->top_y, "");
+	gtk_entry_set_text(gui->top_z, "");
+	gtk_entry_set_text(gui->bottom_x, "");
+	gtk_entry_set_text(gui->bottom_y, "");
+	gtk_entry_set_text(gui->bottom_z, "");
+	gtk_entry_set_text(gui->radius, "");
 }

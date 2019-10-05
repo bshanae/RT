@@ -41,3 +41,10 @@ void						gui_object_mandelbulb_set
 	data->iterations = gui_entry_get_i(gui->iterations);
 	data->power = gui_entry_get_f(gui->power);
 }
+
+void						gui_object_mandelbulb_clear
+	(t_gui_object_mandelbulb *gui)
+{
+	gtk_entry_set_text(gui->iterations, "");
+	gtk_entry_set_text(gui->power, "");
+}

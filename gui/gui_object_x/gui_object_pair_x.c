@@ -92,3 +92,13 @@ void						gui_object_pair_set
 	ft_strcpy(pair->first_name, str[0]);
 	ft_strcpy(pair->second_name, str[1]);
 }
+
+void						gui_object_pair_clear(t_gui_object_pair *gui)
+{
+	GtkTreeIter				iter;
+
+	gtk_tree_model_get_iter_first(GTK_TREE_MODEL(gui->first_list), &iter);
+	gtk_combo_box_set_active_iter(gui->first_combo, &iter);
+	gtk_tree_model_get_iter_first(GTK_TREE_MODEL(gui->second_list), &iter);
+	gtk_combo_box_set_active_iter(gui->second_combo, &iter);
+}

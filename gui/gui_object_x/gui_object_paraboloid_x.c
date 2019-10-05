@@ -56,3 +56,15 @@ void						gui_object_paraboloid_set
 	data->axis.z = gui_entry_get_f(gui->axis_z);
 	data->radius = gui_entry_get_f(gui->radius);
 }
+
+void						gui_object_paraboloid_clear
+	(t_gui_object_paraboloid *gui)
+{
+	gtk_entry_set_text(gui->extremum_x, "");
+	gtk_entry_set_text(gui->extremum_y, "");
+	gtk_entry_set_text(gui->extremum_z, "");
+	gtk_entry_set_text(gui->axis_x, "");
+	gtk_entry_set_text(gui->axis_y, "");
+	gtk_entry_set_text(gui->axis_z, "");
+	gtk_entry_set_text(gui->radius, "");
+}

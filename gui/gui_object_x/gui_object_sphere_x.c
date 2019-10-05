@@ -47,3 +47,11 @@ void					gui_object_sphere_set
 	data->position.z = gui_entry_get_f(gui->position_z);
 	data->radius = gui_entry_get_f(gui->radius);
 }
+
+void					gui_object_sphere_clear(t_gui_object_sphere *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->radius, "");
+}
