@@ -12,6 +12,21 @@
 
 #include "gui_scene_common.h"
 
+#ifndef RT_DOUBLE
+
+static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
+{
+	const UINT		flag = object_flag_get(object);
+
+	if (object->type == object_type_moebius)
+		return (0);
+	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
+		return (0);
+	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
+}
+
+#else
+
 static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
 {
 	const UINT		flag = object_flag_get(object);
@@ -20,6 +35,8 @@ static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
 		return (0);
 	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
 }
+
+#endif
 
 void				gui_scene_common_update_types(t_gui_scene_common *gui)
 {

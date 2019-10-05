@@ -239,6 +239,9 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	RT_F						t;
 	t_ray                       ray;
 
+#ifndef RT_DOUBLE
+	return (0);
+#endif
     data = *(global t_object_moebius *)object->data;
     ray = intersection->ray;
     ray.origin -= data.position;
