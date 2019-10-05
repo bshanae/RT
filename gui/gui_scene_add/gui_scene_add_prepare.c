@@ -38,7 +38,7 @@ void				gui_scene_add_prepare(t_gui_scene_add *add)
 		return ;
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter, gui_list_column_id, &type, -1);
+		gtk_tree_model_get(model, &iter, gui_list_id, &type, -1);
 		if (type == object_type_sphere)
 			break ;
 		if (!gtk_tree_model_iter_next(model, &iter))

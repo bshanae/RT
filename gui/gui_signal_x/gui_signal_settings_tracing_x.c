@@ -15,7 +15,7 @@ void 				gui_signal_settings_tracing_rt
 	gui->settings->tracing_block = rt_false;
 	gtk_stack_set_visible_child_name(gui->settings->stack, state ? "rt" : "rm");
 	cl_renderer_change_tracing_mod(gui->renderer, state ?
-												  rt_tracing_rt : rt_tracing_rm);
+	rt_tracing_rt : rt_tracing_rm);
 	gui_scene_common_update_all(gui->scene->common);
 	gui_queue_push(gui->queue);
 }

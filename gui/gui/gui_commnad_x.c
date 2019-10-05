@@ -50,7 +50,6 @@ void				gui_command_unselect(t_gui *gui)
 void				gui_command_move(t_gui *gui, t_rt_movement movement)
 {
 	gui->scene->edit->control.silent = rt_true;
-	gui->scene->edit->selection_silent = rt_true;
 	gui_scene_edit_show(gui->scene->edit,
 		gui->renderer->data.scene->objects + gui->scene->edit->current_id);
 	cl_renderer_object_move(gui->renderer, movement);

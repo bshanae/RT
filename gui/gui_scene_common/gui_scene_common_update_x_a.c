@@ -68,7 +68,7 @@ void				gui_scene_common_update_limited(t_gui_scene_common *gui)
 		return ;
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_id, &i, -1);
 		if (object_flag_get(gui->ptr_scene->objects + i) & RT_OBJECT_LIMITABLE)
 			gui_scene_common_add_to_list(gui->limited_main,
 				gui->ptr_scene->objects + i);
@@ -100,7 +100,7 @@ void				gui_scene_common_update_csg(t_gui_scene_common *gui)
 	gui_scene_common_add_to_list(gui->csg, &temp);
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_id, &i, -1);
 		if (object_flag_get(gui->ptr_scene->objects + i) & RT_OBJECT_CSG)
 			gui_scene_common_add_to_list(gui->csg, gui->ptr_scene->objects + i);
 		i++;

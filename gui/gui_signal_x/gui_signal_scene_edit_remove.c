@@ -18,7 +18,7 @@ void					gui_signal_scene_edit_remove
 		return ;
 	edit->selection_silent = rt_true;
 	scene_object_remove(gui->renderer->data.scene, edit->current_id);
-	gui_scene_common_update_all(gui->scene->common);
+	gui_scene_common_update_all_wrapped(gui->scene->common);
 	gui_scene_edit_unselect(gui->scene->edit);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);

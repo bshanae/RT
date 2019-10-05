@@ -19,6 +19,6 @@ void				gui_scene_common_add_to_list
 
 	gtk_list_store_append(list, &iter);
 	gtk_list_store_set(list, &iter,
-		gui_list_column_id, object->id,
-		gui_list_column_name, object->name, -1);
+					   gui_list_id, object->id,
+					   gui_list_name, object->name, -1);
 }

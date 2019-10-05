@@ -24,7 +24,7 @@ void				gui_scene_edit_background_get
 		return ;
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter, gui_list_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter, gui_list_id, &i, -1);
 		if (i == scene->background)
 		{
 			gtk_combo_box_set_active_iter(edit->background_combo, &iter);
@@ -43,7 +43,7 @@ void				gui_scene_edit_background_set
 
 	if (gtk_combo_box_get_active_iter(edit->background_combo, &iter))
 		gtk_tree_model_get(GTK_TREE_MODEL(edit->common->background), &iter,
-			gui_list_column_id, &scene->background, -1);
+						   gui_list_id, &scene->background, -1);
 	else
 		rt_raise_warning("GUI Editor : No background selected\n");
 }

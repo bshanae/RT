@@ -5091,6 +5091,33 @@ gui/gui_scene_common/gui_scene_common_new.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_new.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_new.c.s
 
+gui/gui_scene_common/gui_scene_common_update_wrap.o: gui/gui_scene_common/gui_scene_common_update_wrap.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_update_wrap.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_wrap.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.c.o
+
+gui/gui_scene_common/gui_scene_common_update_wrap.i: gui/gui_scene_common/gui_scene_common_update_wrap.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_update_wrap.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_wrap.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.c.i
+
+gui/gui_scene_common/gui_scene_common_update_wrap.s: gui/gui_scene_common/gui_scene_common_update_wrap.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_update_wrap.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_wrap.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_update_wrap.c.s
+
 gui/gui_scene_common/gui_scene_common_update_x_a.o: gui/gui_scene_common/gui_scene_common_update_x_a.c.o
 
 .PHONY : gui/gui_scene_common/gui_scene_common_update_x_a.o
@@ -5144,6 +5171,60 @@ gui/gui_scene_common/gui_scene_common_update_x_b.s: gui/gui_scene_common/gui_sce
 gui/gui_scene_common/gui_scene_common_update_x_b.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_b.c.s
 .PHONY : gui/gui_scene_common/gui_scene_common_update_x_b.c.s
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.o: gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.o
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.i: gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.i
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.s: gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.s
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.o: gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.o
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.o
+
+# target to build an object file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.o
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.o
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.i: gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.i
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.i
+
+# target to preprocess a source file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.i
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.i
+
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.s: gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.s
+
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.s
+
+# target to generate assembly for a file
+gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.s
+.PHONY : gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.s
 
 gui/gui_scene_edit/gui_scene_edit_apply.o: gui/gui_scene_edit/gui_scene_edit_apply.c.o
 
@@ -7677,12 +7758,21 @@ help:
 	@echo "... gui/gui_scene_common/gui_scene_common_new.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_new.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_new.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_wrap.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_wrap.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_wrap.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_a.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_a.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_a.s"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_b.o"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_b.i"
 	@echo "... gui/gui_scene_common/gui_scene_common_update_x_b.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.s"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.o"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.i"
+	@echo "... gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.s"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.o"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.i"
 	@echo "... gui/gui_scene_edit/gui_scene_edit_apply.s"

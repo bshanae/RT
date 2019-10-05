@@ -28,6 +28,6 @@ t_gui_scene_common		*gui_scene_common_new(GtkBuilder *builder)
 	new->textures = RT_GUI_GET(builder, "scene_texture_list");
 	new->background = RT_GUI_GET(builder, "scene_background_list");
 	new->reset_generator = rt_false;
-	gui_scene_common_update_background(new);
+	gui_scene_common_update_background_wrapped(new);
 	return (new);
 }

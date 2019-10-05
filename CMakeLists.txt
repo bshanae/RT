@@ -232,7 +232,7 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
         gui/gui_scene_common/gui_scene_common_update_x_a.c
-	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c)
+	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c gui/gui_scene_common/gui_scene_common_update_wrap.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c

@@ -29,7 +29,7 @@ void				gui_scene_edit_select
 		return ;
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter, gui_list_column_id, &id, -1);
+		gtk_tree_model_get(model, &iter, gui_list_id, &id, -1);
 		if (id == scene->selected_id)
 			break ;
 		if (!gtk_tree_model_iter_next(model, &iter))

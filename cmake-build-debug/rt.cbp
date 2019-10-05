@@ -760,10 +760,19 @@
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_new.c">
 			<Option target="rt"/>
 		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_wrap.c">
+			<Option target="rt"/>
+		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_a.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_b.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c">
+			<Option target="rt"/>
+		</Unit>
+		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/Vladimir/workspace/21_ray_tracer/gui/gui_scene_edit/gui_scene_edit_apply.c">

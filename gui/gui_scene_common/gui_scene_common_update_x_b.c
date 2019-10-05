@@ -37,8 +37,8 @@ void				gui_scene_common_update_types(t_gui_scene_common *gui)
 		{
 			gtk_list_store_append(gui->types, &iter_list);
 			gtk_list_store_set(gui->types, &iter_list,
-				gui_list_column_id, iter_type,
-				gui_list_column_name, object_translate(iter_type), -1);
+							   gui_list_id, iter_type,
+							   gui_list_name, object_translate(iter_type), -1);
 		}
 		iter_type++;
 	}
@@ -53,15 +53,15 @@ void				gui_scene_common_update_textures(t_gui_scene_common *gui)
 	gtk_list_store_clear(gui->textures);
 	gtk_list_store_append(gui->textures, &iter_list);
 	gtk_list_store_set(gui->textures, &iter_list,
-		gui_list_column_id, -1,
-		gui_list_column_name, "None", -1);
+					   gui_list_id, -1,
+					   gui_list_name, "None", -1);
 	i = 0;
 	while (i <= gui->ptr_scene->texture.textures_number)
 	{
 		gtk_list_store_append(gui->textures, &iter_list);
 		gtk_list_store_set(gui->textures, &iter_list,
-			gui_list_column_id, i,
-			gui_list_column_name, gui->ptr_scene->texture.name[i], -1);
+						   gui_list_id, i,
+						   gui_list_name, gui->ptr_scene->texture.name[i], -1);
 		i++;
 	}
 }
@@ -78,8 +78,8 @@ void				gui_scene_common_update_background
 	{
 		gtk_list_store_append(gui->background, &iter);
 		gtk_list_store_set(gui->background, &iter,
-			gui_list_column_id, i,
-			gui_list_column_name, rt_background_translate(i), -1);
+						   gui_list_id, i,
+						   gui_list_name, rt_background_translate(i), -1);
 		i++;
 	}
 }

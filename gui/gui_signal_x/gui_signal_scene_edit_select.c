@@ -16,7 +16,7 @@ void 				gui_signal_scene_edit_select
 	rt_assert_critical(test, "GUI Signal : Scene edit iter is invalid");
 	gtk_widget_set_sensitive(gui->scene->edit->remove_button, TRUE);
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
-		gui_list_column_id, &gui->scene->edit->current_id , -1);
+					   gui_list_id, &gui->scene->edit->current_id , -1);
 	object = gui->renderer->data.scene->objects + gui->scene->edit->current_id;
 	gui_scene_edit_show(gui->scene->edit, object);
 	gui_control_hide(&gui->scene->edit->control);
