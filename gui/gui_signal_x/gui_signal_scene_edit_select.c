@@ -4,13 +4,16 @@ void 				gui_signal_scene_edit_select
 					(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
+	int 			test;
 	GtkTreeModel	*model;
 	t_object		*object;
 
 	gui = (t_gui *)ptr;
-	if (!gtk_tree_selection_get_selected(gui->scene->edit->selection,
-		&model, &gui->scene->edit->iter))
+	if (gui->scene->edit->selection_silent)
 		return ;
+	test = gtk_tree_selection_get_selected(gui->scene->edit->selection,
+		&model, &gui->scene->edit->iter);
+	rt_assert_critical(test, "GUI Signal : Scene edit iter is invalid");
 	gtk_widget_set_sensitive(gui->scene->edit->remove_button, TRUE);
 	gtk_tree_model_get(model, &gui->scene->edit->iter,
 		gui_list_column_id, &gui->scene->edit->current_id , -1);

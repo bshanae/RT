@@ -22,7 +22,7 @@ void				cl_builder_init_device(t_cl_builder *builder)
 	builder->error = clGetPlatformIDs(1, &platform, NULL);
 	rt_assert_critical(builder->error == 0, "Builder : Platform error");
 	builder->error = clGetDeviceIDs(platform,
-		CL_DEVICE_TYPE_GPU, 1, &builder->device_id, NULL);
+		CL_DEVICE_TYPE_CPU, 1, &builder->device_id, NULL);
 	rt_assert_critical(builder->error == 0, "Builder : Device error");
 }
 

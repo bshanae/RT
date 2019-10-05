@@ -23,7 +23,7 @@ static RT_F4        get_color_from_texture(
     for (int i = 0; i < texture_id; i++)
         pointer += texture->texture_length[i];
     x = floor(*u * (RT_F)texture->width[texture_id]);
-    y = floor((1 - *v) * (texture->height[texture_id] - 0.001));
+    y = floor((1 - *v) * (texture->height[texture_id] - (RT_F)0.001));
 
     if (x < 0) x = 0;
     if (y < 0) y = 0;

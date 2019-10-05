@@ -22,6 +22,7 @@ void				gui_scene_edit_select
 	rt_assert_critical(edit->common != NULL, "GUI Editor : Common is NULL");
 	if (scene->selected_id == -1)
 		return ;
+	edit->current_id = scene->selected_id;
 	gtk_widget_set_sensitive(edit->remove_button, TRUE);
 	model = GTK_TREE_MODEL(edit->common->full);
 	if (!gtk_tree_model_get_iter_first(model, &iter))

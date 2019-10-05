@@ -36,18 +36,21 @@ void				gui_command_select(t_gui *gui, GdkEventButton *event)
 
 void				gui_command_unselect(t_gui *gui)
 {
-	gui->renderer->data.camera->select_request_object = -1;
+	gui->scene->edit->selection_silent = rt_true;
+	gui->scene->edit->current_id = -1;
 	scene_unselect(gui->renderer->data.scene);
 	gui_scene_edit_unselect(gui->scene->edit);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_camera);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_execute_force(gui->queue);
+	gui->scene->edit->selection_silent = rt_false;
 }
 
 void				gui_command_move(t_gui *gui, t_rt_movement movement)
 {
 	gui->scene->edit->control.silent = rt_true;
+	gui->scene->edit->selection_silent = rt_true;
 	gui_scene_edit_show(gui->scene->edit,
 		gui->renderer->data.scene->objects + gui->scene->edit->current_id);
 	cl_renderer_object_move(gui->renderer, movement);

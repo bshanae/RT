@@ -7,7 +7,8 @@ void				gui_signal_scene_edit_add
 	int				response;
 
 	gui = (t_gui *)ptr;
-	gui->scene->edit->control.silent = 1;
+	gui->scene->edit->control.silent = rt_true;
+	gui->scene->edit->selection_silent = rt_true;
 	gui_scene_add_prepare(gui->scene->add);
 	response = gtk_dialog_run(gui->scene->add->dialog);
 	if (response == GTK_RESPONSE_YES)
@@ -20,5 +21,6 @@ void				gui_signal_scene_edit_add
 		gui_scene_edit_unselect(gui->scene->edit);
 	}
 	gtk_widget_hide(GTK_WIDGET(gui->scene->add->dialog));
-	gui->scene->edit->control.silent = 0;
+	gui->scene->edit->control.silent = rt_false;
+	gui->scene->edit->selection_silent = rt_false;
 }

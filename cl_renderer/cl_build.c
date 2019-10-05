@@ -2687,8 +2687,6 @@ kernel void			cl_main(
 		return ;
 	}
 
-	printf("%d\n", scene->background)
-
 	screen.x = global_id % camera->width;
 	screen.y = global_id / camera->width;
 

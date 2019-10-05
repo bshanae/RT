@@ -30,6 +30,7 @@ typedef struct					s_gui_scene_edit
 	GtkStack					*stack;
 	GtkBox						*info;
 	GtkTreeSelection			*selection;
+	t_rt_bool					selection_silent;
 	int							current_id;
 	GtkTreeIter					iter;
 	GtkWidget					*remove_button;
