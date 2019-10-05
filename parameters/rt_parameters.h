@@ -62,7 +62,6 @@ typedef enum						s_rt_filter_mod
 # define RT_OBJECT_CAPACITY			64
 # define RT_SCENE_CAPACITY			32
 # define RT_OBJECT_EMPTY			"None"
-# define RT_BACKGROUND				rt_background_one
 # define RT_BACKGROUND_COLOR		(RT_F4_API){0.8, 0.8, 0.8, 1.}
 # define RT_BACKGROUND_INTER_A		(RT_F4){.5, .7, 1., 1.}
 # define RT_BACKGROUND_INTER_B		(RT_F4){1., 1., 1., 1.}
@@ -82,6 +81,10 @@ typedef enum						s_rt_filter_mod
 # define RT_ROOM					1
 
 # define RT_LIGHT_MOD				rt_light_area
+
+# define RT_LIGHT_AMBIENT_A			(RT_F4_API){0., 0., 0., 0.}
+# define RT_LIGHT_AMBIENT_B			(RT_F4_API){.15, .15, .15, 0.}
+# define RT_LIGHT_AMBIENT_C			(RT_F4_API){.2, .2, .2, 0.}
 
 # define RT_LIGHT_BASIC_BLINN		(RT_F)20.
 

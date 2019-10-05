@@ -111,11 +111,13 @@ static RT_F4				radiance_trace(
 		if (settings->light_mod == rt_light_basic)
 		{
 			light = light_basic(scene, camera, intersection, settings, camera->filter_mod == rt_filter_cartoon);
+			light = RT_MAX(light, settings->light_ambient);
             radiance += light * mask;
 		}
 		else if (settings->light_mod == rt_light_area)
 		{
 			light = light_area(scene, camera, intersection, settings, rng_state);
+			light = RT_MAX(light, settings->light_ambient);
 			radiance += light * mask * intersection->material.color;
 		}
 

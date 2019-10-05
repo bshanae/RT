@@ -24,7 +24,7 @@ t_scene				*scene_new
 	new->tracing_mod = mod_ptr;
 	new->tracing_mod_mask = mask_ptr;
 	new->selected_id = -1;
-	new->background = RT_BACKGROUND;
+	new->background = rt_background_none;
 	new->background_color = RT_BACKGROUND_COLOR;
 	return (new);
 }

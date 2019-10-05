@@ -101,8 +101,8 @@ void							gui_scene_edit_init_material
 
 void							gui_scene_edit_background_get
 								(t_gui_scene_edit *edit, t_scene *scene);
-void							gui_scene_edit_background_set
-								(t_gui_scene_edit *edit, t_scene *scene);
+int								gui_scene_edit_background_read_value
+								(t_gui_scene_edit *edit);
 
 void							gui_scene_edit_show
 								(t_gui_scene_edit *edit, t_object *object);

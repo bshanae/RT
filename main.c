@@ -15,11 +15,12 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-//	cl_renderer_load(gui->renderer, "/Users/Vladimir/workspace/21_ray_tracer/scenes/test.json");
+//	cl_renderer_load(gui->renderer, "./scenes/test.json");
     scene_test_box(gui->renderer->data.scene);
 	gui->renderer->data.camera->position.z = 100;
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
 	cl_renderer_change_light_mod(gui->renderer, rt_light_area);
+	cl_renderer_change_background(gui->renderer, rt_background_one);
 	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);
     scene_update(gui->renderer->data.scene);

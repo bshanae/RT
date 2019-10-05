@@ -24,7 +24,8 @@
 typedef struct			s_cl_renderer_settings
 {
 	t_rt_light_mod		light_mod;
-	int					illumination;
+	RT_F4_API			light_ambient;
+	t_rt_bool			illumination;
 	RT_F				illumination_value;
 	int					sample_count;
 	int					sample_limit;

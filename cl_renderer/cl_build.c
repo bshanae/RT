@@ -105,19 +105,20 @@ static RT_F4 		f4_rotate(
 
 # include "rt_parameters.h"
 
-typedef struct 			s_cl_renderer_settings
+typedef struct			s_cl_renderer_settings
 {
 	t_rt_light_mod		light_mod;
-	int 				illumination;
-	RT_F 				illumination_value;
-	int 				sample_count;
-	int 				sample_limit;
-	int 				sample_depth;
+	RT_F4				light_ambient;
+	t_rt_bool			illumination;
+	RT_F				illumination_value;
+	int					sample_count;
+	int					sample_limit;
+	int					sample_depth;
 	int					motion_blur;
 	int					motion_blur_sample_count;
 	t_rt_tracing_mod	tracing_mod;
-	uint 				tracing_mod_mask;
-	int 				rm_step_limit;
+	unit				tracing_mod_mask;
+	int					rm_step_limit;
 	RT_F				rm_step_part;
 	RT_F				rm_max_distance;
 }						t_rt_settings;
@@ -1241,6 +1242,9 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	RT_F						t;
 	t_ray                       ray;
 
+#ifndef RT_DOUBLE
+	return (0);
+#endif
     data = *(global t_object_moebius *)object->data;
     ray = intersection->ray;
     ray.origin -= data.position;
@@ -1769,7 +1773,7 @@ static RT_F4        get_color_from_texture(
     for (int i = 0; i < texture_id; i++)
         pointer += texture->texture_length[i];
     x = floor(*u * (RT_F)texture->width[texture_id]);
-    y = floor((1 - *v) * (texture->height[texture_id] - 0.001));
+    y = floor((1 - *v) * (texture->height[texture_id] - (RT_F)0.001));
 
     if (x < 0) x = 0;
     if (y < 0) y = 0;
@@ -1997,7 +2001,8 @@ typedef struct		s_scene
 	int				lights[RT_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
-	const uint		*not_used_in_kernel;
+	const int		*param_a;
+	const uint		*params_b;
 	int				selected_id;
 	t_rt_background	background;
 	RT_F4			background_color;

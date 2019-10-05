@@ -6,7 +6,8 @@ void				gui_signal_scene_edit_apply
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui_scene_edit_background_set(gui->scene->edit, gui->renderer->data.scene);
+	cl_renderer_change_background(gui->renderer,
+		gui_scene_edit_background_read_value(gui->scene->edit));
 	if (gui->scene->edit->current_id != -1)
 	{
 		gui_scene_edit_apply(gui->scene->edit, gui->renderer->data.scene);
