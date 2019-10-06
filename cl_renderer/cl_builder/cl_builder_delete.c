@@ -25,7 +25,7 @@ void				cl_builder_delete(t_cl_builder **builder)
 	*builder = NULL;
 }
 
-#elif
+#else
 
 void				cl_builder_delete(t_cl_builder **builder)
 {
