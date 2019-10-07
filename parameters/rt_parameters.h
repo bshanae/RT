@@ -82,6 +82,10 @@ typedef enum						s_rt_filter_mod
 
 # define RT_LIGHT_MOD				rt_light_area
 
+# define RT_LIGHT_AMBIENT_A			(RT_F4_API){0., 0., 0., 0.}
+# define RT_LIGHT_AMBIENT_B			(RT_F4_API){.15, .15, .15, 0.}
+# define RT_LIGHT_AMBIENT_C			(RT_F4_API){.2, .2, .2, 0.}
+
 # define RT_LIGHT_BASIC_BLINN		(RT_F)20.
 
 # define RT_LIGHT_AREA_MULTIPLIER	(RT_F)3.
@@ -92,8 +96,8 @@ typedef enum						s_rt_filter_mod
 # define RT_ILLUMINATION_VALUE		(RT_F)1.
 # define RT_ILLUMINATION_POWER		(RT_F)2.
 
-# define RT_PT_DEPTH				1
-# define RT_PT_SAMPLE_LIMIT				25
+# define RT_PT_DEPTH				3
+# define RT_PT_SAMPLE_LIMIT			25
 
 # define RT_MOTION_BLUR				0
 # define RT_MOTION_BLUR_ALPHA		(RT_F)0.7

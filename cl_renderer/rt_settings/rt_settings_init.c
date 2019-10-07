@@ -15,6 +15,7 @@
 void				cl_renderer_settings_init(t_rt_settings *settings)
 {
 	settings->light_mod = RT_LIGHT_MOD;
+	settings->light_ambient = (RT_F4_API){0., 0., 0., 0.};
 	settings->illumination = RT_ILLUMINATION;
 	settings->illumination_value = RT_ILLUMINATION_VALUE;
 	settings->sample_count = 1;

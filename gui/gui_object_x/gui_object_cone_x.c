@@ -65,3 +65,15 @@ void					gui_object_cone_set
     hypotenuse = RT_SQRT_API(RT_POW(height, 2.) + data->radius * data->radius);
     data->length = hypotenuse + data->radius;
 }
+
+void						gui_object_cone_clear
+	(t_gui_object_cone *gui)
+{
+	gtk_entry_set_text(gui->top_x, "");
+	gtk_entry_set_text(gui->top_y, "");
+	gtk_entry_set_text(gui->top_z, "");
+	gtk_entry_set_text(gui->bottom_x, "");
+	gtk_entry_set_text(gui->bottom_y, "");
+	gtk_entry_set_text(gui->bottom_z, "");
+	gtk_entry_set_text(gui->radius, "");
+}

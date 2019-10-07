@@ -64,7 +64,6 @@ static void			static_post_queue(t_cl_renderer *renderer)
 
 #ifndef RT_OPEN_CL_DISABLED
 
-
 void				cl_renderer_render(t_cl_renderer *renderer)
 {
 	t_rt_settings	*settings;

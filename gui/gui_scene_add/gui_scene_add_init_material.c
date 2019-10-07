@@ -23,10 +23,11 @@ static void				static_init_a(t_gui_init_material *init)
 	ft_strcpy(init->color_b, "scene_add_material_color_b");
 	ft_strcpy(init->color_button, "scene_add_material_color_button");
 	ft_strcpy(init->color_box, "scene_add_material_color_box");
-	ft_strcpy(init->emission_button, "scene_add_material_emission_button");
 	ft_strcpy(init->emission_r, "scene_add_material_emission_r");
 	ft_strcpy(init->emission_g, "scene_add_material_emission_g");
 	ft_strcpy(init->emission_b, "scene_add_material_emission_b");
+	ft_strcpy(init->emission_button, "scene_add_material_emission_button");
+	ft_strcpy(init->emission_box, "scene_add_material_emission_box");
 	ft_strcpy(init->texture_combo, "scene_add_material_texture_combo");
 	ft_strcpy(init->texture_list, "scene_texture_list");
 }

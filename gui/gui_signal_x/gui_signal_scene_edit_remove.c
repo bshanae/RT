@@ -5,20 +5,23 @@ void					gui_signal_scene_edit_remove
 {
 	t_gui				*gui;
 	t_gui_scene_edit	*edit;
+	int 				test;
 	int 				response;
 
 	gui = (t_gui *)ptr;
 	edit = gui->scene->edit;
-	if (!gtk_list_store_iter_is_valid(edit->common->full, &edit->iter))
-		return ;
+	test = gtk_list_store_iter_is_valid(edit->common->full, &edit->iter);
+	rt_assert_critical(test, "GUI Signal : Scene edit iter is invalid");
 	response = gtk_dialog_run(gui->scene->edit->remove_dialog);
 	gtk_widget_hide(GTK_WIDGET(gui->scene->edit->remove_dialog));
 	if (response != GTK_RESPONSE_YES)
 		return ;
+	edit->selection_silent = rt_true;
 	scene_object_remove(gui->renderer->data.scene, edit->current_id);
-	gui_scene_common_update_all(gui->scene->common);
+	gui_scene_common_update_all_wrapped(gui->scene->common);
 	gui_scene_edit_unselect(gui->scene->edit);
 	cl_renderer_flag_set(gui->renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(gui->renderer, cl_flag_reset_samples);
 	gui_queue_push(gui->queue);
+	edit->selection_silent = rt_false;
 }

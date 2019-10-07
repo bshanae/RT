@@ -53,3 +53,14 @@ void					gui_object_plane_set
 	data->normal.y = gui_entry_get_f(gui->normal_y);
 	data->normal.z = gui_entry_get_f(gui->normal_z);
 }
+
+void						gui_object_plane_clear
+	(t_gui_object_plane *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->normal_x, "");
+	gtk_entry_set_text(gui->normal_y, "");
+	gtk_entry_set_text(gui->normal_z, "");
+}

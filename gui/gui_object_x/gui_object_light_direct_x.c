@@ -44,3 +44,11 @@ void							gui_object_light_direct_set
 	data->direction.y = gui_entry_get_f(gui->direction_y);
 	data->direction.z = gui_entry_get_f(gui->direction_z);
 }
+
+void						gui_object_light_direct_clear
+	(t_gui_object_light_direct *gui)
+{
+	gtk_entry_set_text(gui->direction_x, "");
+	gtk_entry_set_text(gui->direction_y, "");
+	gtk_entry_set_text(gui->direction_z, "");
+}

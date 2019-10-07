@@ -148,7 +148,7 @@ link_libraries("ft")
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
 	./error_framework/rt_assert_x.c
-	./error_framework/rt_malloc.c error_framework/rt_print_error.c)
+	./error_framework/rt_malloc.c error_framework/rt_print_x.c)
 
 set(SOURCE_MAIN
 	./main.c)
@@ -232,7 +232,7 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
         gui/gui_scene_common/gui_scene_common_update_x_a.c
-	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c)
+	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c gui/gui_scene_common/gui_scene_common_update_wrap.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -499,7 +499,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
 	${SOURCE_CL_RT_SETTINGS}
-	${SOURCE_CL_RENDERER_})
+	${SOURCE_CL_RENDERER_} gui/gui_material/gui_material_emission_x.c)
 
 add_executable(rt
 	${SOURCE_ERROR_FRAMEWORK}

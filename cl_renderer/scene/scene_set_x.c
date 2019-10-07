@@ -85,7 +85,7 @@ void					scene_set_visibility(t_scene *scene)
 	i = 0;
 	while (i < scene->objects_length)
 	{
-		if (!(object_flag_get(scene->objects + i) & *scene->current_mod))
+		if (!(object_flag_get(scene->objects + i) & *scene->tracing_mod_mask))
 			;
 		else if (object_flag_get(scene->objects + i) & RT_OBJECT_PAIR)
 		{

@@ -15,10 +15,11 @@
 void				scene_select(t_scene *scene, int id)
 {
 	scene_unselect(scene);
+	if (id == -1)
+		return ;
 	if (!scene_find_object_by_id(scene, id))
 		return ;
-	if (id != -1)
-		scene->objects[id].is_selected = rt_true;
+	scene->objects[id].is_selected = rt_true;
 	scene->selected_id = id;
 }
 

@@ -12,14 +12,31 @@
 
 #include "gui_scene_common.h"
 
+#ifndef RT_DOUBLE
+
+static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
+{
+	const UINT		flag = object_flag_get(object);
+
+	if (object->type == object_type_moebius)
+		return (0);
+	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
+		return (0);
+	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
+}
+
+#else
+
 static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
 {
 	const UINT		flag = object_flag_get(object);
 
 	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
 		return (0);
-	return ((int)(flag & *gui->ptr_scene->current_mod));
+	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
 }
+
+#endif
 
 void				gui_scene_common_update_full(t_gui_scene_common *gui)
 {
@@ -44,7 +61,7 @@ static int			static_prepare_limited(t_gui_scene_common *gui)
 	t_object		temp;
 
 	rt_assert_critical(gui->connected, "GUI Common : Not connected");
-	if (*gui->ptr_scene->current_mod == RT_OBJECT_RM)
+	if (*gui->ptr_scene->tracing_mod_mask == RT_OBJECT_RM)
 		return (0);
 	gtk_list_store_clear(gui->limited_main);
 	gtk_list_store_clear(gui->limited_limit);
@@ -68,7 +85,7 @@ void				gui_scene_common_update_limited(t_gui_scene_common *gui)
 		return ;
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_id, &i, -1);
 		if (object_flag_get(gui->ptr_scene->objects + i) & RT_OBJECT_LIMITABLE)
 			gui_scene_common_add_to_list(gui->limited_main,
 				gui->ptr_scene->objects + i);
@@ -90,7 +107,7 @@ void				gui_scene_common_update_csg(t_gui_scene_common *gui)
 
 	rt_assert_critical(gui->connected, "GUI Common : Not connected");
 	model = GTK_TREE_MODEL(gui->full);
-	if (*gui->ptr_scene->current_mod == RT_OBJECT_RT)
+	if (*gui->ptr_scene->tracing_mod_mask == RT_OBJECT_RT)
 		return ;
 	if (!gtk_tree_model_get_iter_first(model, &iter_full))
 		return ;
@@ -100,7 +117,7 @@ void				gui_scene_common_update_csg(t_gui_scene_common *gui)
 	gui_scene_common_add_to_list(gui->csg, &temp);
 	while (1)
 	{
-		gtk_tree_model_get(model, &iter_full, gui_list_column_id, &i, -1);
+		gtk_tree_model_get(model, &iter_full, gui_list_id, &i, -1);
 		if (object_flag_get(gui->ptr_scene->objects + i) & RT_OBJECT_CSG)
 			gui_scene_common_add_to_list(gui->csg, gui->ptr_scene->objects + i);
 		i++;

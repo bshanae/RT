@@ -50,3 +50,13 @@ void						gui_object_explosion_set
 	data->radius = gui_entry_get_f(gui->radius);
 	data->noise_amplitude = gui_entry_get_f(gui->noise);
 }
+
+void						gui_object_explosion_clear
+	(t_gui_object_explosion *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->radius, "");
+	gtk_entry_set_text(gui->noise, "");
+}

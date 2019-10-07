@@ -51,6 +51,8 @@ void						gui_object_light_point_get
 							(t_gui_object_light_point *gui, t_object *object);
 void						gui_object_light_point_set
 							(t_gui_object_light_point *gui, t_object *object);
+void						gui_object_light_point_clear
+							(t_gui_object_light_point *gui);
 
 /*
 ********************************************************************************
@@ -78,6 +80,9 @@ void						gui_object_light_direct_get
 							(t_gui_object_light_direct *gui, t_object *object);
 void						gui_object_light_direct_set
 							(t_gui_object_light_direct *gui, t_object *object);
+void						gui_object_light_direct_clear
+							(t_gui_object_light_direct *gui);
+
 
 /*
 ********************************************************************************
@@ -107,6 +112,7 @@ void						gui_object_sphere_get
 							(t_gui_object_sphere *gui, t_object *object);
 void						gui_object_sphere_set
 							(t_gui_object_sphere *gui, t_object *object);
+void						gui_object_sphere_clear(t_gui_object_sphere *gui);
 
 /*
 ********************************************************************************
@@ -140,6 +146,8 @@ void						gui_object_plane_get
 							(t_gui_object_plane *gui, t_object *object);
 void						gui_object_plane_set
 							(t_gui_object_plane *gui, t_object *object);
+void						gui_object_plane_clear
+							(t_gui_object_plane *gui);
 
 /*
 ********************************************************************************
@@ -176,6 +184,8 @@ void						gui_object_cone_get
 							(t_gui_object_cone *gui, t_object *object);
 void						gui_object_cone_set
 							(t_gui_object_cone *gui, t_object *object);
+void						gui_object_cone_clear
+							(t_gui_object_cone *gui);
 
 /*
 ********************************************************************************
@@ -211,6 +221,8 @@ void						gui_object_cylinder_get
 							(t_gui_object_cylinder *gui, t_object *object);
 void						gui_object_cylinder_set
 							(t_gui_object_cylinder *gui, t_object *object);
+void						gui_object_cylinder_clear
+							(t_gui_object_cylinder *gui);
 
 /*
 ********************************************************************************
@@ -244,6 +256,8 @@ void						gui_object_box_get
 							(t_gui_object_box *gui, t_object *object);
 void						gui_object_box_set
 							(t_gui_object_box *gui, t_object *object);
+void						gui_object_box_clear
+							(t_gui_object_box *gui);
 
 /*
 ********************************************************************************
@@ -279,6 +293,8 @@ void						gui_object_paraboloid_get
 							(t_gui_object_paraboloid *gui, t_object *object);
 void						gui_object_paraboloid_set
 							(t_gui_object_paraboloid *gui, t_object *object);
+void						gui_object_paraboloid_clear
+							(t_gui_object_paraboloid *gui);
 
 /*
 ********************************************************************************
@@ -310,6 +326,8 @@ void						gui_object_moebius_get
 							(t_gui_object_moebius *gui, t_object *object);
 void						gui_object_moebius_set
 							(t_gui_object_moebius *gui, t_object *object);
+void						gui_object_moebius_clear
+							(t_gui_object_moebius *gui);
 
 /*
 ********************************************************************************
@@ -341,6 +359,8 @@ void						gui_object_torus_get
 							(t_gui_object_torus *gui, t_object *object);
 void						gui_object_torus_set
 							(t_gui_object_torus *gui, t_object *object);
+void						gui_object_torus_clear
+							(t_gui_object_torus *gui);
 
 /*
 ********************************************************************************
@@ -366,6 +386,8 @@ void						gui_object_mandelbulb_get
 							(t_gui_object_mandelbulb *gui, t_object *object);
 void						gui_object_mandelbulb_set
 							(t_gui_object_mandelbulb *gui, t_object *object);
+void						gui_object_mandelbulb_clear
+							(t_gui_object_mandelbulb *gui);
 
 /*
 ********************************************************************************
@@ -397,6 +419,8 @@ void						gui_object_julia_get
 							(t_gui_object_julia *gui, t_object *object);
 void						gui_object_julia_set
 							(t_gui_object_julia *gui, t_object *object);
+void						gui_object_julia_clear
+							(t_gui_object_julia *gui);
 
 /*
 ********************************************************************************
@@ -426,6 +450,8 @@ void						gui_object_p_cube_get
 							(t_gui_object_p_cube *gui, t_object *object);
 void						gui_object_p_cube_set
 							(t_gui_object_p_cube *gui, t_object *object);
+void						gui_object_p_cube_clear
+							(t_gui_object_p_cube *gui);
 
 /*
 ********************************************************************************
@@ -457,6 +483,8 @@ void						gui_object_explosion_get
 							(t_gui_object_explosion *gui, t_object *object);
 void						gui_object_explosion_set
 							(t_gui_object_explosion *gui, t_object *object);
+void						gui_object_explosion_clear
+							(t_gui_object_explosion *gui);
 
 /*
 ********************************************************************************
@@ -486,5 +514,6 @@ void						gui_object_pair_get
 							(t_gui_object_pair*gui, t_object *object);
 void						gui_object_pair_set
 							(t_gui_object_pair *gui, t_object *object);
+void						gui_object_pair_clear(t_gui_object_pair *gui);
 
 #endif

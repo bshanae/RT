@@ -50,3 +50,13 @@ void						gui_object_julia_set
 	data->value.z = gui_entry_get_f(gui->value_z);
 	data->value.w = gui_entry_get_f(gui->value_w);
 }
+
+void						gui_object_julia_clear
+	(t_gui_object_julia *gui)
+{
+	gtk_entry_set_text(gui->iterations, "");
+	gtk_entry_set_text(gui->value_x, "");
+	gtk_entry_set_text(gui->value_y, "");
+	gtk_entry_set_text(gui->value_z, "");
+	gtk_entry_set_text(gui->value_w, "");
+}

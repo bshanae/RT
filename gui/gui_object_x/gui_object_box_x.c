@@ -53,3 +53,14 @@ void						gui_object_box_set
 	data->size.y = gui_entry_get_f(gui->size_y);
 	data->size.z = gui_entry_get_f(gui->size_z);
 }
+
+void						gui_object_box_clear
+	(t_gui_object_box *gui)
+{
+	gtk_entry_set_text(gui->position_x, "");
+	gtk_entry_set_text(gui->position_y, "");
+	gtk_entry_set_text(gui->position_z, "");
+	gtk_entry_set_text(gui->size_x, "");
+	gtk_entry_set_text(gui->size_y, "");
+	gtk_entry_set_text(gui->size_z, "");
+}
