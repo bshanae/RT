@@ -6,6 +6,8 @@
 void				scene_cornell_box_walls(t_scene *scene);
 void				scene_cornell_box_objects(t_scene *scene, t_camera *camera);
 
+void				scene_spheres(t_scene *scene, t_camera *camera);
+
 void				scene_textures(t_scene *scene, t_camera *camera);
 
 int					main(int argc, char **argv)
@@ -15,7 +17,6 @@ int					main(int argc, char **argv)
 	gui = gui_new(&argc, &argv);
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
-	//scene_textures(gui->renderer->data.scene, gui->renderer->data.camera);
 	scene_cornell_box_objects(gui->renderer->data.scene, gui->renderer->data.camera);
 	scene_cornell_box_walls(gui->renderer->data.scene);
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
@@ -29,6 +30,24 @@ int					main(int argc, char **argv)
 	gui_loop(gui);
 	gui_delete(&gui);
 	return (0);
+}
+
+void				scene_spheres(t_scene *scene, t_camera *camera)
+{
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 50., 76.}, 3.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 0., -60.}, 10.);
+	scene_edit_param(scene, -1, scene_param_material, MATERIAL_PINK);
+	scene_edit_param(scene, -1, scene_param_name, "Sphere Center");
+
+	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){20., 0., -60.}, 7.);
+	scene_edit_param(scene, -1, scene_param_texture, "Sine");
+	scene_edit_param(scene, -1, scene_param_name, "Sphere Right");
+
+	object_build(scene_get_space(scene), object_type_limited, (RT_F4_API){20., 0., -60.}, 7.);
+	scene_edit_param(scene, -1, scene_param_texture, "Sine");
+	scene_edit_param(scene, -1, scene_param_name, "Sphere Right");
+	camera->position.z = 150;
 }
 
 void				scene_textures(t_scene *scene, t_camera *camera)
