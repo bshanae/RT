@@ -66,23 +66,65 @@
 		"size": [1, 2, 3]
 	},
 	{
-		"type": "",
-		"name": "",
-		"material": ""
+		"type": "paraboloid",
+		"name": "Parapa",
+		"material": "#300090",
+		"extremum": [1, 0, 0],
+		"axis": [0, 1, 0],
+		"radius": 3
 	},
 	{
-		"type": "",
-		"name": "",
-		"material": ""
+		"type": "moebius",
+		"name": "Super stuff",
+		"material": "#00f07a",
+		"position": [-30, 0, -5],
+		"radius": 3,
+		"half width": 0.3
 	},
 	{
-		"type": "",
-		"name": "",
-		"material": ""
+		"type": "torus",
+		"name": "DONUT",
+		"material": "#ffffff",
+		"position": [-30, 30, 0],
+		"radius": 5,
+		"width": 1
 	},
 	{
-		"type": "",
-		"name": "",
-		"material": ""
+		"type": "mandelbulb",
+		"name": "Lag 1",
+		"material": "#ff0000",
+		"position": [25, -5, -100],
+		"iterations": 5,
+		"power": 2.1
+	},
+	{
+		"type": "julia",
+		"name": "Lag 2",
+		"material": "#0000ff",
+		"position": [-25, -5, -100],
+		"value": [0.1, 0.3, 0.5, 0.5],
+		"iterations": 5
+	},
+	{
+		"commented_type": "csg",
+		"name": "CSG",
+		"material": "none lel",
+		"positive": 0,
+		"negative": 1
+	},
+	{
+		"type": "explosion",
+		"name": "BOOM",
+		"material": "#eeccaa",
+		"position": [0, -30, -100],
+		"radius": 4,
+		"noise amplitude": 1.35
+	},
+	{
+		"type": "perforated cube",
+		"name": "PCube",
+		"material": "#e0e030",
+		"position": [0, 30, -100],
+		"iterations": 4
 	}
 ]

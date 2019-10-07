@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/04 16:40:08 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/07 14:29:17 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -297,7 +297,7 @@ void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
 	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MOEBIUS_NAME));
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
 	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
-	box.val_f2 = get_float_in_object(json, tokens, "width");
+	box.val_f2 = get_float_in_object(json, tokens, "half width");
 	box.v1 = (box.val_v1 ? *box.val_v1 : MOEBIUS_POSITION);
 	box.f1 = (box.val_f1 ? *box.val_f1 : MOEBIUS_RADIUS);
 	box.f2 = (box.val_f2 ? *box.val_f2 : MOEBIUS_HALFWIDTH);
@@ -406,21 +406,21 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
 	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CSG_NAME));
-	box.val_f1 = get_float_in_object(json, tokens, "positive");
+	box.val_i1 = get_int_in_object(json, tokens, "positive");
 	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
-	box.val_f2 = get_float_in_object(json, tokens, "negative");
-	box.f1 = (box.val_f1 ? *box.val_f1 : CSG_POSITIVE);
-	box.f2 = (box.val_f2 ? *box.val_f2 : CSG_NEGATIVE);
+	box.val_i2 = get_int_in_object(json, tokens, "negative");
+	box.i1 = (box.val_i1 ? *box.val_i1 : CSG_POSITIVE);
+	box.i2 = (box.val_i2 ? *box.val_i2 : CSG_NEGATIVE);
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : CSG_MATERIAL);
-	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, (int)box.f1, (int)box.f2);
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene), object_type_julia, (int)box.i1, (int)box.i2);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_material, box.material);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_name, box.name);
 	if (box.texture) scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_texture, box.texture);
 	free(box.val_s1);
 	free(box.val_s2);
 	free(box.val_s3);
-	free(box.val_f1);
-	free(box.val_f2);
+	free(box.val_i1);
+	free(box.val_i2);
 }
 
 void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
