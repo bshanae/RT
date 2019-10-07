@@ -37,7 +37,7 @@ void				cl_renderer_change_background
 {
 	renderer->data.scene->background = background;
 	if (background == rt_background_none)
-		 renderer->data.settings.light_ambient = RT_LIGHT_AMBIENT_A;
+		renderer->data.settings.light_ambient = RT_LIGHT_AMBIENT_A;
 	else if (background == rt_background_one)
 	{
 		renderer->data.settings.illumination = rt_false;

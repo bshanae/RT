@@ -12,7 +12,7 @@
 
 #include "cl_renderer.h"
 
-# define MESSAGE	"Render : Can't move pair, because it's recursive"
+#define MESSAGE	"Render : Can't move pair, because it's recursive"
 
 static void			static_move_one(
 					t_scene *scene, t_object *object, RT_F4_API step)

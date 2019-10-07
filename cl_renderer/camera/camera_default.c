@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   camera_default.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/07 10:09:06 by ashari            #+#    #+#             */
+/*   Updated: 2019/10/07 10:09:07 by ashari           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "camera.h"
 
-void 				camera_default(t_camera *camera)
+void				camera_default(t_camera *camera)
 {
 	camera->position = (RT_F4_API){0., 0., 0.};
 	camera->rotation = (RT_F4_API){0., 0., 0.};

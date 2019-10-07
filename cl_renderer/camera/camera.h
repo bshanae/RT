@@ -46,7 +46,7 @@ typedef struct		s_camera
 	RT_F2_API		request_value;
 }					t_camera;
 
-void 				camera_default(t_camera *camera);
+void				camera_default(t_camera *camera);
 t_camera			*camera_new(INT_REF width, INT_REF height);
 void				camera_delete(t_camera **camera);
 
