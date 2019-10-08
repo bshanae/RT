@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 19:23:41 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 20:14:15 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/08 21:02:47 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ jsmntok_t	*find_by_string(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-void	free_box(t_obj *box)
+void		free_box(t_obj *box)
 {
 	(box->val_v1 ? free(box->val_v1) : 1);
 	(box->val_v2 ? free(box->val_v2) : 1);
