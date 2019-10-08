@@ -1,5 +1,17 @@
-#ifndef JSON_PARSE
-# define JSON_PARSE
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   json_parse.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/08 20:51:37 by sbosmer           #+#    #+#             */
+/*   Updated: 2019/10/08 20:51:48 by sbosmer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef JSON_PARSE_H
+# define JSON_PARSE_H
 
 # define JSMN_HEADER
 
@@ -34,7 +46,7 @@ typedef struct	s_vector3
 	float		x;
 	float		y;
 	float		z;
-	float       w;
+	float		w;
 }				t_vector3;
 
 typedef struct	s_parse_object
@@ -48,6 +60,7 @@ typedef struct	s_parse_object
 	float		*val_f2;
 	int			*val_i1;
 	int			*val_i2;
+	int			*val_i3;
 	t_vector3	v1;
 	t_vector3	v2;
 	float		f1;
@@ -60,35 +73,37 @@ typedef struct	s_parse_object
 	char		*texture;
 }				t_obj;
 
-void		json_load(void *data, const char *path);
-
-char		*read_file(const char *path);
-int			ft_strequ(char const *s1, char const *s2);
-
-jsmntok_t	*next_item(jsmntok_t *tokens);
-char		*get_string_in_object(char *json, jsmntok_t *object, char *target);
-t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target);
-float		*get_float_in_object(char *json, jsmntok_t *object, char *target);
-int			*get_int_in_object(char *json, jsmntok_t *object, char *target);
-int			*get_bool_in_object(char *json, jsmntok_t *object, char *target);
-t_material	decide_material(char *mat_name);
-
-void		parse_camera(void *data, char *json, jsmntok_t *tokens);
-void		parse_sphere(void *data, char *json, jsmntok_t *tokens);
-void		parse_plane(void *data, char *json, jsmntok_t *tokens);
-void		parse_cone(void *data, char *json, jsmntok_t *tokens);
-void		parse_cylinder(void *data, char *json, jsmntok_t *tokens);
-void		parse_box(void *data, char *json, jsmntok_t *tokens);
-void		parse_paraboloid(void *data, char *json, jsmntok_t *tokens);
-void		parse_moebius(void *data, char *json, jsmntok_t *tokens);
-void		parse_torus(void *data, char *json, jsmntok_t *tokens);
-void		parse_mandelbulb(void *data, char *json, jsmntok_t *tokens);
-void		parse_julia(void *data, char *json, jsmntok_t *tokens);
-void		parse_ambient(void *data, char *json, jsmntok_t *tokens);
-void		parse_point(void *data, char *json, jsmntok_t *tokens);
-void		parse_direct(void *data, char *json, jsmntok_t *tokens);
-void		parse_explosion(void *data, char *json, jsmntok_t *tokens);
-void		parse_perfcube(void *data, char *json, jsmntok_t *tokens);
-void		parse_settings(void *data, char *json, jsmntok_t *tokens);
+void			json_load(void *data, const char *path);
+char			*read_file(const char *path);
+int				ft_strequ(char const *s1, char const *s2);
+jsmntok_t		*next_item(jsmntok_t *tokens);
+char			*get_string_in_object(char *json, jsmntok_t *object,
+					char *target);
+t_vector3		*get_vector_in_object(char *json, jsmntok_t *object,
+					char *target);
+float			*get_float_in_object(char *json, jsmntok_t *object,
+					char *target);
+int				*get_int_in_object(char *json, jsmntok_t *object, char *target);
+int				*get_bool_in_object(char *json, jsmntok_t *object,
+					char *target);
+t_material		decide_material(char *mat_name);
+void			parse_camera(void *data, char *json, jsmntok_t *tokens);
+void			parse_sphere(void *data, char *json, jsmntok_t *tokens);
+void			parse_plane(void *data, char *json, jsmntok_t *tokens);
+void			parse_cone(void *data, char *json, jsmntok_t *tokens);
+void			parse_cylinder(void *data, char *json, jsmntok_t *tokens);
+void			parse_box(void *data, char *json, jsmntok_t *tokens);
+void			parse_paraboloid(void *data, char *json, jsmntok_t *tokens);
+void			parse_moebius(void *data, char *json, jsmntok_t *tokens);
+void			parse_torus(void *data, char *json, jsmntok_t *tokens);
+void			parse_mandelbulb(void *data, char *json, jsmntok_t *tokens);
+void			parse_julia(void *data, char *json, jsmntok_t *tokens);
+void			parse_ambient(void *data, char *json, jsmntok_t *tokens);
+void			parse_point(void *data, char *json, jsmntok_t *tokens);
+void			parse_direct(void *data, char *json, jsmntok_t *tokens);
+void			parse_explosion(void *data, char *json, jsmntok_t *tokens);
+void			parse_perfcube(void *data, char *json, jsmntok_t *tokens);
+void			parse_settings(void *data, char *json, jsmntok_t *tokens);
+void			free_box(t_obj *box);
 
 #endif

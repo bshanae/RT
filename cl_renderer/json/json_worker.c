@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   json_worker.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/08 20:53:38 by sbosmer           #+#    #+#             */
+/*   Updated: 2019/10/08 20:56:40 by sbosmer          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "jsmn.h"
 #include "json_parse.h"
 
-void				work_object(void *data, char *json, jsmntok_t *tokens)
+void	work_object(void *data, char *json, jsmntok_t *tokens)
 {
 	char			*type;
 
@@ -24,7 +36,15 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 		parse_paraboloid(data, json, tokens);
 	else if (ft_strequ(type, "moebius"))
 		parse_moebius(data, json, tokens);
-	else if (ft_strequ(type, "torus"))
+	else
+		work_object_1(data, json, tokens, type);
+	free(type);
+}
+
+void	work_object_1(void *data, char *json, jsmntok_t *tokens,
+	char *type)
+{
+	if (ft_strequ(type, "torus"))
 		parse_torus(data, json, tokens);
 	else if (ft_strequ(type, "mandelbulb"))
 		parse_mandelbulb(data, json, tokens);
@@ -42,10 +62,9 @@ void				work_object(void *data, char *json, jsmntok_t *tokens)
 		parse_perfcube(data, json, tokens);
 	else if (ft_strequ(type, "settings"))
 		parse_settings(data, json, tokens);
-	free(type);
 }
 
-void				work_tokens(void *data, char *json, jsmntok_t *tokens)
+void	work_tokens(void *data, char *json, jsmntok_t *tokens)
 {
 	int				qt;
 	const int		len = tokens[0].size;
@@ -60,7 +79,7 @@ void				work_tokens(void *data, char *json, jsmntok_t *tokens)
 	}
 }
 
-void				json_load(void *data, const char *path)
+void	json_load(void *data, const char *path)
 {
 	char			*json;
 	int				res;
