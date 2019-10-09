@@ -126,6 +126,22 @@ static void         sphere_texture(
     *v = 0.5 + asin(normal.y) / _RT_PI;
 }
 
+static RT_F         rt_mod(RT_F number, int div)
+{
+    int             tmp;
+    int             rezus;
+
+    tmp = (int)number;
+    if (tmp < 0)
+        tmp = -tmp;
+    if (tmp > div)
+        if (number < 0)
+            return ((number + tmp / div * div));
+        else
+            return ((number - tmp / div * div));
+    return (number);
+}
+
 static void         plane_texture(
                     global t_texture *texture,
                     global t_object *object,
@@ -137,12 +153,17 @@ static void         plane_texture(
 
     data = *(global t_object_plane* )object->data;
     vector = intersection->hit - data.position;
-
-    vector = RT_ABS(vector);
-    *u = RT_MOD((vector.x + vector.z), texture->width[object->texture_id]);
-    *u = 1 - *u / texture->width[object->texture_id];
-    *v = RT_MOD((vector.y + vector.z), texture->height[object->texture_id]);
-    *v = 1 - *v / texture->height[object->texture_id];
+    if (!(data.normal.z == 1 || data.normal.z == -1))
+    {
+        vector = f4_rotate(vector, rt_rotation_x, rt_rotation_positive, acos(-data.normal.x));
+        vector = f4_rotate(vector, rt_rotation_y, rt_rotation_positive, acos(-data.normal.y));
+    }
+    *u = rt_mod(vector.x, texture->width[object->texture_id]);
+    if ((*u /= texture->width[object->texture_id]) < 0)
+        *u += 1;
+    *v = rt_mod(vector.y, (int)texture->height[object->texture_id]);
+    if ((*v /= texture->height[object->texture_id]) < 0)
+        *v += 1;
 }
 
 static RT_F4		object_texture(
