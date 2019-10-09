@@ -15,6 +15,7 @@
 #include <unistd.h>
 
 #include "error_framework.h"
+#include "libft_gnl.h"
 
 int					ft_strequ(char const *s1, char const *s2)
 {
@@ -35,7 +36,7 @@ char				*read_file(const char *path)
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
 		return (NULL);
-	while (get_next_line(fd, &line))
+	while (gnl(fd, &line) > 0)
 	{
 		old_res = res;
 		res = ft_strjoin(res, line);

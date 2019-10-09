@@ -148,7 +148,8 @@ link_libraries("ft")
 set(SOURCE_ERROR_FRAMEWORK
 	./error_framework/rt_raise_x.c
 	./error_framework/rt_assert_x.c
-	./error_framework/rt_malloc.c error_framework/rt_print_x.c)
+	./error_framework/rt_malloc.c
+	./error_framework/rt_print_x.c)
 
 set(SOURCE_MAIN
 	./main.c)
@@ -159,7 +160,9 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_update.c
 	./gui/gui/gui_loop.c
 	./gui/gui/gui_render.c
-	./gui/gui/gui_resize_x.c "gui/gui/gui_commnad_x.c" gui/gui/gui_connect.c)
+	./gui/gui/gui_resize_x.c
+	./gui/gui/gui_commnad_x.c
+	./gui/gui/gui_connect.c)
 
 set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_new.c
@@ -167,7 +170,7 @@ set(SOURCE_GUI_QUEUE
 	./gui/gui_queue/gui_queue_push.c
 	./gui/gui_queue/gui_queue_execute_x.c
 	./gui/gui_queue/gui_queue_start.c
-	"gui/gui_queue/gui_queue_block.c"
+	./gui/gui_queue/gui_queue_block.c
 	./gui/gui_queue/gui_queue_wait.c
 	./gui/gui_queue/gui_queue_get_time.c)
 
@@ -187,14 +190,15 @@ set(SOURCE_GUI_PARSER
 	./gui/gui_parser/gui_parser_delete.c
 	./gui/gui_parser/gui_parser_update.c
 	./gui/gui_signal_connect_x/gui_signal_connect_parser.c
-        gui/gui_queue/gui_queue_finish.c)
+	./gui/gui_queue/gui_queue_finish.c)
 
 set(SOURCE_GUI_CAMERA
 	./gui/gui_camera/gui_camera_new.c
 	./gui/gui_camera/gui_camera_delete.c
 	./gui/gui_camera/gui_camera_show.c
 	./gui/gui_camera/gui_camera_apply.c
-	gui/gui_signal_x/gui_signal_camera_state_x.c gui/gui_camera/gui_camera_connect.c)
+	gui/gui_signal_x/gui_signal_camera_state_x.c
+	./gui/gui_camera/gui_camera_connect.c)
 
 set(SOURCE_GUI_OBJECT_X
 	./gui/gui_object_x/gui_object_light_point_x.c
@@ -222,17 +226,24 @@ set(SOURCE_GUI_MATERIAL
 	./gui/gui_material/gui_material_get.c
 	./gui/gui_material/gui_material_set.c
 	./gui/gui_material/gui_material_color_x.c
+	./gui/gui_material/gui_material_emission_x.c
 	./gui/gui_material/gui_material_switch_mod.c
 	./gui/gui_material/gui_material_texture_x.c
 	./gui/gui_material/gui_material_special_x.c
-	./gui/gui_material/gui_material_prepare.c gui/gui_material/gui_material_hide.c)
+	./gui/gui_material/gui_material_prepare.c
+	./gui/gui_material/gui_material_hide.c)
 
 set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_new.c
 	./gui/gui_scene_common/gui_scene_common_delete.c
 	./gui/gui_scene_common/gui_scene_common_gen_name.c
-        gui/gui_scene_common/gui_scene_common_update_x_a.c
-	./gui/gui_scene_common/gui_scene_common_add_to_list.c gui/gui_scene_common/gui_scene_common_connect.c gui/gui_scene_common/gui_scene_common_update_x_b.c gui/gui_scene_common/gui_scene_common_update_wrap.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c)
+	./gui/gui_scene_common/gui_scene_common_update_x_a.c
+	./gui/gui_scene_common/gui_scene_common_add_to_list.c
+	./gui/gui_scene_common/gui_scene_common_connect.c
+	./gui/gui_scene_common/gui_scene_common_update_x_b.c
+	./gui/gui_scene_common/gui_scene_common_update_wrap.c
+	./gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c
+	./gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -256,7 +267,8 @@ set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_init_limited.c
 	./gui/gui_scene_edit/gui_scene_edit_init_explosion.c
 	./gui/gui_scene_edit/gui_scene_edit_init_csg.c
-	"gui/gui_scene_edit/gui_scene_edit_select.c" gui/gui_scene_edit/gui_scene_edit_background_x.c)
+	"gui/gui_scene_edit/gui_scene_edit_select.c"
+	./gui/gui_scene_edit/gui_scene_edit_background_x.c)
 
 set(SOURCE_GUI_SCENE_ADD
 	./gui/gui_scene_add/gui_scene_add_new.c
@@ -290,7 +302,8 @@ set(SOURCE_GUI_SETTINGS
 	./gui/gui_settings/gui_settings_delete.c
 	./gui/gui_settings/gui_settings_reset.c
 	./gui/gui_settings/gui_settings_apply.c
-        gui/gui_settings/gui_settings_show_x.c gui/gui_settings/gui_settings_connect.c)
+	./gui/gui_settings/gui_settings_show_x.c
+	./gui/gui_settings/gui_settings_connect.c)
 
 set(SOURCE_GUI_IMAGE
 	./gui/gui_image/gui_image_new.c
@@ -366,7 +379,12 @@ set(SOURCE_GUI
 set(SOURCE_JSON
 	./cl_renderer/json/json_helper.c
 	./cl_renderer/json/json_worker.c
-	./cl_renderer/json/json_objects.c
+	./cl_renderer/json/json_types.c
+	./cl_renderer/json/json_material.c
+	./cl_renderer/json/json_objects_0.c
+	./cl_renderer/json/json_objects_1.c
+	./cl_renderer/json/json_objects_2.c
+	./cl_renderer/json/json_objects_3.c
 	./cl_renderer/json/readfile.c)
 
 set(SOURCE_TEXTURE
@@ -375,8 +393,7 @@ set(SOURCE_TEXTURE
 	./cl_renderer/texture/texture_data_load.c
 	./cl_renderer/texture/texture_disruptions_load.c
 	./cl_renderer/texture/texture_fill_data.c
-	./cl_renderer/texture/texture_iter.c
-	)
+	./cl_renderer/texture/texture_iter.c)
 
 set(SOURCE_DISRUPTION_X
 	./cl_renderer/disruption_x/disruption_checkerboard.c
@@ -394,10 +411,11 @@ set(SOURCE_F4
 	./cl_renderer/f4/f4_add.c
 	./cl_renderer/f4/f4_sub.c
 	./cl_renderer/f4/f4_mul.c
-	cl_renderer/f4/f4_rotate_x.c
+	./cl_renderer/f4/f4_rotate_x.c
 	./cl_renderer/f4/f4_length.c
 	./cl_renderer/f4/f4_normalize.c
-	./cl_renderer/f4/f4_dot.c cl_renderer/f4/f4_cross.c)
+	./cl_renderer/f4/f4_dot.c
+	./cl_renderer/f4/f4_cross.c)
 
 set(SOURCE_OBJECT
 	./cl_renderer/object/object_build.c
@@ -433,7 +451,8 @@ set(SOURCE_SCENE
 	./cl_renderer/scene/scene_edit_param.c
 	./cl_renderer/scene/scene_set_x.c
 	./cl_renderer/scene/scene_find_x_by_x.c
-	./cl_renderer/scene/scene_func_x.c cl_renderer/scene/rt_background_translate.c)
+	./cl_renderer/scene/scene_func_x.c
+	./cl_renderer/scene/rt_background_translate.c)
 
 set(SOURCE_RAY
 	./cl_renderer/ray/ray)
@@ -445,7 +464,8 @@ set(SOURCE_CAMERA
 	./cl_renderer/camera/camera_rotate.c
 	./cl_renderer/camera/camera_apply.c
 	./cl_renderer/camera/camera_request_x.c
-	./cl_renderer/camera/camera_get_step.c cl_renderer/camera/camera_default.c)
+	./cl_renderer/camera/camera_get_step.c
+	./cl_renderer/camera/camera_default.c)
 
 set(SOURCE_CL_PROGRAM
 	./cl_renderer/cl_program/cl_program_new.c
@@ -499,7 +519,7 @@ set(SOURCE_RENDERER
 	${SOURCE_CL_ARG_LIST}
 	${SOURCE_CL_BUILDER}
 	${SOURCE_CL_RT_SETTINGS}
-	${SOURCE_CL_RENDERER_} gui/gui_material/gui_material_emission_x.c)
+	${SOURCE_CL_RENDERER_})
 
 add_executable(rt
 	${SOURCE_ERROR_FRAMEWORK}

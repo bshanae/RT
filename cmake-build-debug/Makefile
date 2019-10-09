@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1500,32 +1500,167 @@ cl_renderer/json/json_helper.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_helper.c.s
 .PHONY : cl_renderer/json/json_helper.c.s
 
-cl_renderer/json/json_objects.o: cl_renderer/json/json_objects.c.o
+cl_renderer/json/json_material.o: cl_renderer/json/json_material.c.o
 
-.PHONY : cl_renderer/json/json_objects.o
+.PHONY : cl_renderer/json/json_material.o
 
 # target to build an object file
-cl_renderer/json/json_objects.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.o
-.PHONY : cl_renderer/json/json_objects.c.o
+cl_renderer/json/json_material.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_material.c.o
+.PHONY : cl_renderer/json/json_material.c.o
 
-cl_renderer/json/json_objects.i: cl_renderer/json/json_objects.c.i
+cl_renderer/json/json_material.i: cl_renderer/json/json_material.c.i
 
-.PHONY : cl_renderer/json/json_objects.i
+.PHONY : cl_renderer/json/json_material.i
 
 # target to preprocess a source file
-cl_renderer/json/json_objects.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.i
-.PHONY : cl_renderer/json/json_objects.c.i
+cl_renderer/json/json_material.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_material.c.i
+.PHONY : cl_renderer/json/json_material.c.i
 
-cl_renderer/json/json_objects.s: cl_renderer/json/json_objects.c.s
+cl_renderer/json/json_material.s: cl_renderer/json/json_material.c.s
 
-.PHONY : cl_renderer/json/json_objects.s
+.PHONY : cl_renderer/json/json_material.s
 
 # target to generate assembly for a file
-cl_renderer/json/json_objects.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects.c.s
-.PHONY : cl_renderer/json/json_objects.c.s
+cl_renderer/json/json_material.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_material.c.s
+.PHONY : cl_renderer/json/json_material.c.s
+
+cl_renderer/json/json_objects_0.o: cl_renderer/json/json_objects_0.c.o
+
+.PHONY : cl_renderer/json/json_objects_0.o
+
+# target to build an object file
+cl_renderer/json/json_objects_0.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_0.c.o
+.PHONY : cl_renderer/json/json_objects_0.c.o
+
+cl_renderer/json/json_objects_0.i: cl_renderer/json/json_objects_0.c.i
+
+.PHONY : cl_renderer/json/json_objects_0.i
+
+# target to preprocess a source file
+cl_renderer/json/json_objects_0.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_0.c.i
+.PHONY : cl_renderer/json/json_objects_0.c.i
+
+cl_renderer/json/json_objects_0.s: cl_renderer/json/json_objects_0.c.s
+
+.PHONY : cl_renderer/json/json_objects_0.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_objects_0.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_0.c.s
+.PHONY : cl_renderer/json/json_objects_0.c.s
+
+cl_renderer/json/json_objects_1.o: cl_renderer/json/json_objects_1.c.o
+
+.PHONY : cl_renderer/json/json_objects_1.o
+
+# target to build an object file
+cl_renderer/json/json_objects_1.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_1.c.o
+.PHONY : cl_renderer/json/json_objects_1.c.o
+
+cl_renderer/json/json_objects_1.i: cl_renderer/json/json_objects_1.c.i
+
+.PHONY : cl_renderer/json/json_objects_1.i
+
+# target to preprocess a source file
+cl_renderer/json/json_objects_1.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_1.c.i
+.PHONY : cl_renderer/json/json_objects_1.c.i
+
+cl_renderer/json/json_objects_1.s: cl_renderer/json/json_objects_1.c.s
+
+.PHONY : cl_renderer/json/json_objects_1.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_objects_1.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_1.c.s
+.PHONY : cl_renderer/json/json_objects_1.c.s
+
+cl_renderer/json/json_objects_2.o: cl_renderer/json/json_objects_2.c.o
+
+.PHONY : cl_renderer/json/json_objects_2.o
+
+# target to build an object file
+cl_renderer/json/json_objects_2.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_2.c.o
+.PHONY : cl_renderer/json/json_objects_2.c.o
+
+cl_renderer/json/json_objects_2.i: cl_renderer/json/json_objects_2.c.i
+
+.PHONY : cl_renderer/json/json_objects_2.i
+
+# target to preprocess a source file
+cl_renderer/json/json_objects_2.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_2.c.i
+.PHONY : cl_renderer/json/json_objects_2.c.i
+
+cl_renderer/json/json_objects_2.s: cl_renderer/json/json_objects_2.c.s
+
+.PHONY : cl_renderer/json/json_objects_2.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_objects_2.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_2.c.s
+.PHONY : cl_renderer/json/json_objects_2.c.s
+
+cl_renderer/json/json_objects_3.o: cl_renderer/json/json_objects_3.c.o
+
+.PHONY : cl_renderer/json/json_objects_3.o
+
+# target to build an object file
+cl_renderer/json/json_objects_3.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_3.c.o
+.PHONY : cl_renderer/json/json_objects_3.c.o
+
+cl_renderer/json/json_objects_3.i: cl_renderer/json/json_objects_3.c.i
+
+.PHONY : cl_renderer/json/json_objects_3.i
+
+# target to preprocess a source file
+cl_renderer/json/json_objects_3.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_3.c.i
+.PHONY : cl_renderer/json/json_objects_3.c.i
+
+cl_renderer/json/json_objects_3.s: cl_renderer/json/json_objects_3.c.s
+
+.PHONY : cl_renderer/json/json_objects_3.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_objects_3.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_3.c.s
+.PHONY : cl_renderer/json/json_objects_3.c.s
+
+cl_renderer/json/json_types.o: cl_renderer/json/json_types.c.o
+
+.PHONY : cl_renderer/json/json_types.o
+
+# target to build an object file
+cl_renderer/json/json_types.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_types.c.o
+.PHONY : cl_renderer/json/json_types.c.o
+
+cl_renderer/json/json_types.i: cl_renderer/json/json_types.c.i
+
+.PHONY : cl_renderer/json/json_types.i
+
+# target to preprocess a source file
+cl_renderer/json/json_types.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_types.c.i
+.PHONY : cl_renderer/json/json_types.c.i
+
+cl_renderer/json/json_types.s: cl_renderer/json/json_types.c.s
+
+.PHONY : cl_renderer/json/json_types.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_types.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_types.c.s
+.PHONY : cl_renderer/json/json_types.c.s
 
 cl_renderer/json/json_worker.o: cl_renderer/json/json_worker.c.o
 
@@ -7386,9 +7521,24 @@ help:
 	@echo "... cl_renderer/json/json_helper.o"
 	@echo "... cl_renderer/json/json_helper.i"
 	@echo "... cl_renderer/json/json_helper.s"
-	@echo "... cl_renderer/json/json_objects.o"
-	@echo "... cl_renderer/json/json_objects.i"
-	@echo "... cl_renderer/json/json_objects.s"
+	@echo "... cl_renderer/json/json_material.o"
+	@echo "... cl_renderer/json/json_material.i"
+	@echo "... cl_renderer/json/json_material.s"
+	@echo "... cl_renderer/json/json_objects_0.o"
+	@echo "... cl_renderer/json/json_objects_0.i"
+	@echo "... cl_renderer/json/json_objects_0.s"
+	@echo "... cl_renderer/json/json_objects_1.o"
+	@echo "... cl_renderer/json/json_objects_1.i"
+	@echo "... cl_renderer/json/json_objects_1.s"
+	@echo "... cl_renderer/json/json_objects_2.o"
+	@echo "... cl_renderer/json/json_objects_2.i"
+	@echo "... cl_renderer/json/json_objects_2.s"
+	@echo "... cl_renderer/json/json_objects_3.o"
+	@echo "... cl_renderer/json/json_objects_3.i"
+	@echo "... cl_renderer/json/json_objects_3.s"
+	@echo "... cl_renderer/json/json_types.o"
+	@echo "... cl_renderer/json/json_types.i"
+	@echo "... cl_renderer/json/json_types.s"
 	@echo "... cl_renderer/json/json_worker.o"
 	@echo "... cl_renderer/json/json_worker.i"
 	@echo "... cl_renderer/json/json_worker.s"

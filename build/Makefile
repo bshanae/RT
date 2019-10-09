@@ -173,11 +173,13 @@ endef
 define FUNC_LOAD_PROJECT
 ${eval VAR_PROJECT_EXE = ${call FUNC_READ_FIELD,						\
 	${VAR_PROJECT_LIST},${VAR_PROJECT_EXE_MASK}}}
-${eval VAR_PROJECT_FLAGS_OBJECT = ${call FUNC_READ_FIELD,				\
+${eval VAR_PROJECT_FLAGS_ANY += ${call FUNC_READ_FIELD,					\
+	${VAR_PROJECT_LIST},${VAR_PROJECT_FLAGS_ANY_MASK}}}
+${eval VAR_PROJECT_FLAGS_OBJECT += ${call FUNC_READ_FIELD,				\
 	${VAR_PROJECT_LIST},${VAR_PROJECT_FLAGS_OBJECT_MASK}}}
-${eval VAR_PROJECT_FLAGS_EXE = ${call FUNC_READ_FIELD,					\
+${eval VAR_PROJECT_FLAGS_EXE += ${call FUNC_READ_FIELD,					\
 	${VAR_PROJECT_LIST},${VAR_PROJECT_FLAGS_EXE_MASK}}}
-${eval VAR_PROJECT_EXTERN_DATA = ${call FUNC_READ_FIELD,				\
+${eval VAR_PROJECT_EXTERN_DATA += ${call FUNC_READ_FIELD,				\
 	${VAR_PROJECT_LIST},${VAR_PROJECT_EXTERN_MASK}}}
 ${eval VAR_PROJECT_EXTERN_TARGET = ${word 1, ${VAR_PROJECT_EXTERN_DATA}}}
 ${eval VAR_PROJECT_EXTERN_DIR = ${word 2, ${VAR_PROJECT_EXTERN_DATA}}}
@@ -245,6 +247,7 @@ ${call FUNC_COUNT_OBJECT,$1}
 	-MT ${call FUNC_GENERATE_OBJECT, $1}								\
 	-MF ${call FUNC_GENERATE_DEPEND, $1}								\
 	${VAR_INCLUDES}														\
+	${VAR_PROJECT_FLAGS_ANY}											\
 	${VAR_PROJECT_FLAGS_OBJECT}											\
 	-c $1																\
 	-o ${call FUNC_GENERATE_OBJECT, $1}
@@ -253,6 +256,7 @@ endef
 define FUNC_COMPILE_EXE
 ${call FUNC_COUNT_EXE, ${VAR_PROJECT_EXE}}
 @gcc																	\
+	${VAR_PROJECT_FLAGS_ANY}											\
 	${VAR_PROJECT_FLAGS_EXE}											\
 	${VAR_INCLUDES}														\
 	${VAR_LINKS_DIRS}													\
@@ -297,8 +301,13 @@ VAR_DEPENDS =
 VAR_PROJECT_LIST = ./project.txt
 VAR_PROJECT_PATH = ../
 
+VAR_PROJECT_TEST = test
+
 VAR_PROJECT_EXE_MASK = exe
-VAR_PROJECT_EXE = 
+VAR_PROJECT_EXE =
+
+VAR_PROJECT_FLAGS_ANY_MASK = flag_any
+VAR_PROJECT_FLAGS_ANY =
 
 VAR_PROJECT_FLAGS_OBJECT_MASK = flag_object
 VAR_PROJECT_FLAGS_OBJECT =
@@ -327,7 +336,7 @@ ${call FUNC_CALL_VOID, FUNC_LOAD_COUNT}
 
 .PHONY : all report clean clean_no_extern fclean fclean_no_extern re re_no_extern
 
-all : ${VAR_PROJECT_EXE}
+all : ${VAR_PROJECT_TEST}
 
 report : ${VAR_TEMPS}
 	@echo "${COLOR_RED}\c"
@@ -339,6 +348,7 @@ report : ${VAR_TEMPS}
 	@echo "depends = {${VAR_DEPENDS}}\n"
 	@echo "VPATH = {${VPATH}}\n"
 	@echo "exe = {${VAR_PROJECT_EXE}}\n"
+	@echo "any flags = {${VAR_PROJECT_FLAGS_ANY}}\n"
 	@echo "object flags = {${VAR_PROJECT_FLAGS_OBJECT}}\n"
 	@echo "exe flags = {${VAR_PROJECT_FLAGS_EXE}}\n"
 	@echo "extern = {${VAR_PROJECT_EXTERN_TARGET}, ${VAR_PROJECT_EXTERN_DIR}}\n"
@@ -392,6 +402,20 @@ ${VAR_PROJECT_EXTERN_TARGET} :
 ${VAR_PROJECT_EXE} : ${VAR_PROJECT_EXTERN_TARGET} ${VAR_TEMPS} ${VAR_OBJECTS}
 	${call FUNC_COMPILE_EXE}
 
+${VAR_PROJECT_TEST} : ${VAR_PROJECT_EXE}
+	@touch ${VAR_PROJECT_TEST}
+	@rm ${VAR_PROJECT_TEST}
+
+clean :
+	${call FUNC_INFO,Cleaning extern}
+	${call FUNC_RUN_EXTERN,clean}
+	@rm -rf ${VAR_TEMPS_FOLDER}
+	${call FUNC_INFO,Deleting temporary files}
+	${call FUNC_INFO,Deleting objects}
+	@rm -rf ${VAR_OBJECTS_FOLDER}
+	${call FUNC_INFO,Deleting dependencies}
+	@rm -rf ${VAR_DEPENDS_FOLDER}
+
 clean_no_extern :
 	@rm -rf ${VAR_TEMPS_FOLDER}
 	${call FUNC_INFO,Deleting temporary files}
@@ -400,16 +424,20 @@ clean_no_extern :
 	${call FUNC_INFO,Deleting dependencies}
 	@rm -rf ${VAR_DEPENDS_FOLDER}
 
-clean : clean_no_extern
+fclean : clean_no_extern
+	${call FUNC_INFO,Deleting exe}
+	@rm -f ${VAR_PROJECT_EXE}
 	${call FUNC_INFO,Cleaning extern}
-	${call FUNC_RUN_EXTERN,clean}
-
-fclean : clean
 	${call FUNC_RUN_EXTERN,fclean}
 
-fclean_no_extern : clean
 
-re : fclean all
+fclean_no_extern : clean_no_extern
+	${call FUNC_INFO,Deleting exe}
+	@rm -f ${VAR_PROJECT_EXE}
+
+re : fclean_no_extern
 	${call FUNC_RUN_EXTERN,re}
+	@make ${VAR_PROJECT_EXE}
 
-re_no_extern : fclean_no_extern all
+re_no_extern : fclean_no_extern
+	@make ${VAR_PROJECT_EXE}

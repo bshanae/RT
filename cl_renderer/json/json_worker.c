@@ -13,6 +13,8 @@
 #include "jsmn.h"
 #include "json_parse.h"
 
+void	work_object_1(void *data, char *json, jsmntok_t *tokens, char *type);
+
 void	work_object(void *data, char *json, jsmntok_t *tokens)
 {
 	char			*type;
@@ -41,8 +43,7 @@ void	work_object(void *data, char *json, jsmntok_t *tokens)
 	free(type);
 }
 
-void	work_object_1(void *data, char *json, jsmntok_t *tokens,
-	char *type)
+void	work_object_1(void *data, char *json, jsmntok_t *tokens, char *type)
 {
 	if (ft_strequ(type, "torus"))
 		parse_torus(data, json, tokens);
