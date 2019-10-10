@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(rt C)
 
-set(RT_GTK_PKG ON)
+set(RT_GTK_PKG OFF)
 set(RT_LINUX OFF)
 
 if (${RT_GTK_PKG})
@@ -48,7 +48,7 @@ set(RT_GTK_LIBRARY_DIRS
 	${BREW}/Cellar/glib/2.62.0/lib)
 
 set(RT_GTK_LIBRARIES
-	"-L/Users/ashari/.brew/opt/gettext/lib"
+	"-L/Users/dhorker/.brew/opt/gettext/lib"
 	"-lgtk-3"
 	"-lgdk-3"
 	"-framework Cocoa"

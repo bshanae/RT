@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "jsmn.h"
 #include "json_parse.h"
 
 char		*get_string_in_object(char *json, jsmntok_t *object, char *target)
