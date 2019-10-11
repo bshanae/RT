@@ -129,4 +129,7 @@ typedef enum						s_rt_filter_mod
 
 # define RT_INFINITY				INFINITY
 
+# define RT_MARK_CONTENT			"RT : %s, %d\n", __FUNCTION__, __LINE__
+# define RT_MARK					printf(RT_MARK_CONTENT);
+
 #endif

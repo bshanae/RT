@@ -32,7 +32,7 @@ int					scene_point_check(t_scene *scene, const RT_F4_API *point)
 	{
 		proceed = scene->objects[i].type == object_type_plane;
 		plane = (t_object_plane *)scene->objects[i].data;
-		if (proceed && plane->is_limiting == plane_limiting_no)
+		if (proceed && plane->is_limiting == rt_limit_no)
 			proceed = 0;
 		if (proceed && !static_point_check_one(plane, point))
 			return (SCENE_POINT_OUTSIDE);

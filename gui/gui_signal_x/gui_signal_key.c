@@ -34,8 +34,8 @@ static int			try_move_camera(t_gui *gui, int key)
 		gui_command_move(gui, movement);
 	else
 	{
-		gui_camera_show(gui->camera);
 		cl_renderer_camera_move(gui->renderer, movement);
+		gui_camera_show(gui->camera);
 	}
 	gui_queue_execute_force(gui->queue);
 	return (1);

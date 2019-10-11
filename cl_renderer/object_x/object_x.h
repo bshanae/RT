@@ -37,17 +37,17 @@ typedef struct			s_object_sphere
 	RT_F				radius;
 }						t_object_sphere;
 
-typedef enum			e_plane_limiting
+typedef enum			e_rt_limit
 {
-	plane_limiting_yes,
-	plane_limiting_no
-}						t_plane_limiting;
+	rt_limit_no,
+	rt_limit_yes
+}						t_rt_limit;
 
 typedef struct			s_object_plane
 {
 	RT_F4_API			position;
 	RT_F4_API			normal;
-	t_plane_limiting	is_limiting;
+	t_rt_limit			is_limiting;
 }						t_object_plane;
 
 typedef struct			s_object_cone

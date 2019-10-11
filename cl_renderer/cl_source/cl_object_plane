@@ -2,17 +2,17 @@
 
 #include "rt_parameters.h"
 
-typedef enum 			e_plane_limiting
+typedef enum 			e_rt_limit
 {
-	plane_limiting_yes,
-	plane_limiting_no
-}						t_plane_limiting;
+	rt_limit_no,
+	rt_limit_yes
+}						t_rt_limit;
 
 typedef struct			s_object_plane
 {
 	RT_F4				position;
 	RT_F4				normal;
-	t_plane_limiting	is_limiting;
+	t_rt_limit	is_limiting;
 }						t_object_plane;
 
 static int				object_plane_intersect(global t_object *object, t_intersection *intersection)

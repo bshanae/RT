@@ -93,18 +93,18 @@ void				scene_cornell_box_objects(t_scene *scene, t_camera *camera)
 
 void				scene_cornell_box_walls(t_scene *scene)
 {
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -140.}, (RT_F4_API){0., 0., 1.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., -140.}, (RT_F4_API){0., 0., 1.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Back");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-40., 0., 0.}, (RT_F4_API){-1., 0., 0.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){-40., 0., 0.}, (RT_F4_API){1., 0., 0.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_RED);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Left");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){40., 0., 0.}, (RT_F4_API){-1., 0., 0.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){40., 0., 0.}, (RT_F4_API){-1., 0., 0.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_BLUE);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Right");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 0., 200.}, (RT_F4_API){0., 0., -1.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Front");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 70., 0.}, (RT_F4_API){0., -1., 0.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., 70., 0.}, (RT_F4_API){0., -1., 0.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Up");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -25., 0.}, (RT_F4_API){0., 1., 0.});
+	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -25., 0.}, (RT_F4_API){0., 1., 0.}, rt_limit_yes);
 	scene_edit_param(scene, -1, scene_param_name, "Plane Down");
 }
