@@ -50,6 +50,7 @@ typedef enum						s_rt_filter_mod
 
 # define RT_GUI_WIDTH				840
 # define RT_GUI_HEIGHT				720
+# define RT_GUI_TITLE				"RT"
 
 # define RT_GUI_QUEUE_CEILING		10
 # define RT_GUI_QUEUE_PASS			5

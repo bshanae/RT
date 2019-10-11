@@ -50,6 +50,7 @@ t_gui				*gui_new(int *ac, char ***av)
 	new->builder = gtk_builder_new_from_file(RT_SOURCE_GUI_BUILD);
 	new->window = RT_GUI_GET(new->builder, "window");
 	gtk_window_set_resizable(new->window, FALSE);
+	gtk_window_set_title(new->window, RT_GUI_TITLE);
 	static_load_notebook(new);
 	new->queue = gui_queue_new(new, (void (*)(void *))gui_render);
 	gui_icon_load_all(new->builder);
