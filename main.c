@@ -50,40 +50,13 @@ void				scene_spheres(t_scene *scene, t_camera *camera)
 	camera->position.z = 150;
 }
 
-void				scene_textures(t_scene *scene, t_camera *camera)
-{
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 50., 76.}, 3.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
-	scene_edit_param(scene, -1, scene_param_name, "Light");
-	object_build(scene_get_space(scene), object_type_plane, (RT_F4_API){0., -20., 0.}, (RT_F4_API){0., 1., 0.});
-	scene_edit_param(scene, -1, scene_param_texture, "Checkerboard");
-	scene_edit_param(scene, -1, scene_param_name, "Plane");
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){0., 17., -41.}, 15.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_GLASS);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere Glass");
-	object_build(scene_get_space(scene), object_type_cone, (RT_F4_API){35., 25., -110.}, (RT_F4_API){35., -15., -110.}, 15.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_RED);
-	scene_edit_param(scene, -1, scene_param_name, "Cone");
-	object_build(scene_get_space(scene), object_type_cylinder, (RT_F4_API){-5., 45., -165.}, (RT_F4_API){10., -10., -164.}, 10.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_GREEN);
-	scene_edit_param(scene, -1, scene_param_name, "Cylinder");
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){-35., 3., -110.}, 15.);
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_BLUE);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere");
-	camera->position.x = 37;
-	camera->position.y = 20;
-	camera->position.z = 167;
-
-	// rotation 0. 0.15 0.
-}
-
 void				scene_cornell_box_objects(t_scene *scene, t_camera *camera)
 {
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){17., 40., -16.}, 3.);
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
 	scene_edit_param(scene, -1, scene_param_name, "Light");
-	object_build(scene_get_space(scene), object_type_paraboloid, (RT_F4_API){0., 12., -38.}, (RT_F4_API){0., -1., 0.}, 5.);
-	scene_edit_param(scene, -1, scene_param_name, "Sphere");
+	object_build(scene_get_space(scene), object_type_paraboloid, (RT_F4_API){10., -5., -50.}, (RT_F4_API){0., 1., 0.}, 2.);
+	scene_edit_param(scene, -1, scene_param_name, "Parab");
 	camera->position.y = 20;
 	camera->position.z = 170;
 }
