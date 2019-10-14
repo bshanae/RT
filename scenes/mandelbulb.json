@@ -1,0 +1,40 @@
+[
+	{
+		"type": "settings",
+		"use raymarching": true,
+		"step limit": 50,
+		"step part": 0.7,
+		"pt depth": 1,
+		"pt sample limit": 25,
+		"illumination": false
+	},
+	{
+		"type": "camera",
+		"position": [0, 0, 10]
+	},
+	{
+		"type": "sphere",
+		"name": "Light",
+		"position": [0, 10, 20],
+		"radius": 3,
+		"material": "light"
+	},
+	{
+		"type": "light point",
+		"name": "Light point",
+		"position": [0, 10, 30]
+	},
+	{
+		"type": "light ambient",
+		"name": "Light ambient",
+		"position": [0, 10, 0],
+		"radius": 3
+	},
+	{
+		"type": "mandelbulb",
+		"name": "Mandelbulb",
+		"position": [0, 0, 0],
+		"iterations": 5,
+		"power": 8
+	}
+]

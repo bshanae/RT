@@ -1,0 +1,57 @@
+[
+	{
+		"type": "settings",
+		"use raymarching": true,
+		"step limit": 250,
+		"step part": 1,
+		"pt depth": 2,
+		"pt sample limit": 25,
+		"illumination": false
+	},
+	{
+        "type": "camera",
+        "position": [0, 0, 90]
+    },
+	{
+        "type": "sphere",
+        "name": "Light",
+        "position": [0, 12, 60],
+        "radius": 3,
+        "material": "light"
+    },
+	{
+        "type": "light point",
+        "name": "Light point",
+        "position": [0, 12, 90]
+    },
+	{
+        "type": "light ambient",
+        "name": "Light ambient",
+        "position": [0, 10, 0],
+        "radius": 3
+    },
+	{
+        "type": "plane",
+        "name": "Plane Back",
+        "position": [0, 0, -50],
+        "normal": [0, 0, 1],
+        "material": "white"
+    },
+	{
+        "type": "sphere",
+        "name": "Sphere",
+        "position": [3, 2, 5],
+        "radius": 5
+    },
+	{
+		"type": "box",
+		"name": "Box",
+		"position": [7, 2, 3],
+		"size": [5, 5, 5]
+	},
+	{
+		"type": "csg",
+		"positive name": "Sphere",
+		"negative name": "Box"
+	}
+]

@@ -1,0 +1,58 @@
+[
+	{
+        "type": "settings",
+        "use raymarching": false,
+        "pt depth": 3,
+        "pt sample limit": 30,
+        "illumination": false
+    },
+	{
+        "type": "camera",
+        "position": [45.85, 33.76, 155.34],
+        "rotation": [0.07, 0.18, 0.0]
+    },
+	{
+        "type": "sphere",
+        "name": "Light",
+        "position": [0, 50, 76],
+        "radius": 3,
+        "material": "light"
+    },
+	{
+        "type": "plane",
+        "name": "Plane",
+        "position": [0, -20, 0],
+        "normal": [0, 1, 0],
+        "texture": "Checkerboard"
+    },
+	{
+        "type": "sphere",
+        "name": "Sphere Glass",
+        "position": [0, 17, -41],
+        "radius": 15,
+        "material": "glass"
+    },
+	{
+		"type": "cone",
+		"name": "Cone",
+		"top": [35, 25, -110],
+		"bottom": [35, -15, -110],
+		"radius": 15,
+		"material": "0xFF0000"
+	},
+	{
+		"type": "cylinder",
+		"name": "Cylinder",
+		"top": [-5, 45, -165],
+		"bottom": [10, -10, -164],
+		"radius": 10,
+		"material": "0x00FF00"
+	},
+	{
+        "type": "sphere",
+        "name": "Sphere",
+        "position": [-35, 3, -110],
+        "radius": 15,
+        "material": "0x0000FF"
+    }
+]

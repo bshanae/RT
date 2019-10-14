@@ -1,18 +1,34 @@
 [
-  {
-    "type": "camera",
-    "position": [0, 0, 100]
-  },
-  {
-    "type": "sphere",
-    "position": [0, 10, 0],
-    "material": "light",
-    "radius": 3
-  },
-  {
-    "type": "plane",
-    "position": [0, 0, -200],
-    "normal": [0, 0, 1],
-    "material" : "0xFF"
-  }
+	{
+		"type": "settings",
+		"use raymarching": false,
+		"pt depth": 3,
+		"pt sample limit": 30,
+		"illumination": false
+	},
+	{
+		"type": "camera",
+		"position": [88, 17, 60],
+		"rotation": [0, -0.77, 0],
+		"illumination": 0
+	},
+	{
+        "type": "sphere",
+        "name": "Light",
+        "position": [-7, 32, 62],
+        "radius": 3,
+        "material": "light"
+    },
+	{
+        "type": "plane",
+        "name": "Plane Back",
+        "position": [0, 0, -140],
+        "normal": [0, 0, 1]
+    },
+	{
+		"type": "moebius",
+		"name": "Moebius Ribbon",
+		"position": [0, 15, -30],
+		"radius": 8
+	}
 ]

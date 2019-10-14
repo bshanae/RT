@@ -164,6 +164,15 @@ static void         plane_texture(
     *v = rt_mod(vector.y, (int)texture->height[object->texture_id]);
     if ((*v /= texture->height[object->texture_id]) < 0)
         *v += 1;
+
+    if (*u <= 0.5)
+        *u += 0.5;
+    else
+        *u -= 0.5;
+    if (*v <= 0.5)
+        *v += 0.5;
+    else
+        *v -= 0.5;
 }
 
 static RT_F4		object_texture(
