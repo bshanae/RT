@@ -54,6 +54,8 @@ static RT_F4		object_normal_rt(
 	    return (object_cylinder_normal(object, intersection));
 	else if (object->type == object_type_box)
 		return (object_box_normal(object, intersection));
+	else if (object->type == object_type_paraboloid)
+		return (object_paraboloid_normal(object, intersection));
  	return (intersection->normal);
 }
 

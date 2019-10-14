@@ -359,15 +359,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cl_renderer/rt_settings" />
       <recent name="$PROJECT_DIR$/parameters" />
       <recent name="$PROJECT_DIR$/scenes" />
       <recent name="$PROJECT_DIR$/gui/gui_scene_add" />
       <recent name="$PROJECT_DIR$/gui/build" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gui/gui_object_add" />
     </key>
   </component>
   <component name="RunDashboard">

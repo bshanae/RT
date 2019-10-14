@@ -1914,6 +1914,15 @@ static void         plane_texture(
     *v = rt_mod(vector.y, (int)texture->height[object->texture_id]);
     if ((*v /= texture->height[object->texture_id]) < 0)
         *v += 1;
+
+    if (*u <= 0.5)
+        *u += 0.5;
+    else
+        *u -= 0.5;
+    if (*v <= 0.5)
+        *v += 0.5;
+    else
+        *v -= 0.5;
 }
 
 static RT_F4		object_texture(
@@ -1991,6 +2000,8 @@ static RT_F4		object_normal_rt(
 	    return (object_cylinder_normal(object, intersection));
 	else if (object->type == object_type_box)
 		return (object_box_normal(object, intersection));
+	else if (object->type == object_type_paraboloid)
+		return (object_box_paraboloid(object, intersection));
  	return (intersection->normal);
 }
 
@@ -2022,8 +2033,7 @@ typedef struct		s_scene
 	int				lights[RT_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
-	const int		*param_a;
-	const uint		*params_b;
+	const uchar		param_a[16];
 	int				selected_id;
 	t_rt_background	background;
 	RT_F4			background_color;
@@ -2700,9 +2710,6 @@ kernel void			cl_main(
 
     global_id = get_global_id(0);
 	sample_store_map(sample_store, sample_store_mapped, camera);
-
-	if (!global_id)
-		printf("%d\n", sceene->background);
 
 	if (camera->select_request)
 	{

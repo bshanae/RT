@@ -82,11 +82,8 @@ void				scene_cornell_box_objects(t_scene *scene, t_camera *camera)
 	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){17., 40., -16.}, 3.);
 	scene_edit_param(scene, -1, scene_param_material, MATERIAL_LIGHT);
 	scene_edit_param(scene, -1, scene_param_name, "Light");
-	object_build(scene_get_space(scene), object_type_sphere, (RT_F4_API){10., -12., -38.}, 10.);
+	object_build(scene_get_space(scene), object_type_paraboloid, (RT_F4_API){0., 12., -38.}, (RT_F4_API){0., -1., 0.}, 5.);
 	scene_edit_param(scene, -1, scene_param_name, "Sphere");
-	object_build(scene_get_space(scene), object_type_box, (RT_F4_API){-10., 1., -94.}, (RT_F4_API){35., 35., 35.});
-	scene_edit_param(scene, -1, scene_param_material, MATERIAL_MIRROR);
-	scene_edit_param(scene, -1, scene_param_name, "Box Mirror");
 	camera->position.y = 20;
 	camera->position.z = 170;
 }
