@@ -1,0 +1,82 @@
+[
+	{
+		"type" : "settings",
+		"use raymarching" : false,
+		"pt depth" : 1,
+		"pt sample limit" : 30,
+		"illumination" : false
+	},
+
+	{
+		"type" : "camera",
+		"position" : [0, 30, 160]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Back plane",
+		"position" : [0, 0, -140],
+		"normal" : [0, 0, 1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Left plane",
+		"position" : [-40, 0, 0],
+		"normal" : [-1, 0, 0],
+		"material" : "0x0C37E5"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Right plane",
+		"position" : [40, 0, 0],
+		"normal" : [-1, 0, 0],
+		"material" : "red"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Front plane",
+		"position" : [0, 0, 200],
+		"normal" : [0, 0, -1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Upper plane",
+		"position" : [0, 70, 0],
+		"normal" : [0, -1 , 0]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Lower plane",
+		"position" : [0, -25, 0],
+		"normal" : [0, 1, 0]
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Light",
+		"position" : [-20, 30, 50],
+		"radius" : 3,
+		"material" : "light"
+	},
+
+	{
+		"type" : "cylinder",
+		"name" : "Cylinder",
+		"top" : [0, 40, 0],
+		"bottom" : [0, -10, 0],
+		"radius" : 3.0
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Limiting plane",
+		"position" : [0, 0, 0],
+		"normal" : [0, 1, 0],
+		"material" : "red"
+	}
+]
