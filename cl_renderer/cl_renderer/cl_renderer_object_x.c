@@ -6,13 +6,13 @@
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 14:03:06 by ashari            #+#    #+#             */
-/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/14 12:56:07 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cl_renderer.h"
 
-#define MESSAGE	"Render : Can't move pair, because it's recursive"
+#define MESSAGE	"Renderer : Can't move pair, because it's recursive"
 
 static void			static_move_one(
 					t_scene *scene, t_object *object, RT_F4_API step)
@@ -47,6 +47,14 @@ void				cl_renderer_object_move(
 	step = camera_get_step(renderer->data.camera, movement);
 	step = f4_mul(step, RT_OBJECT_MOVE_VALUE);
 	static_move_one(renderer->data.scene, object, step);
+	cl_renderer_flag_set(renderer, cl_flag_update_scene);
+	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
+}
+
+void				cl_renderer_object_select(
+					t_cl_renderer *renderer, int id)
+{
+	scene_select(renderer->data.scene, id);
 	cl_renderer_flag_set(renderer, cl_flag_update_scene);
 	cl_renderer_flag_set(renderer, cl_flag_reset_samples);
 }

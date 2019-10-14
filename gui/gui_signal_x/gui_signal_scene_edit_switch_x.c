@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_scene_edit_switch_x.c                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 12:58:44 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 12:59:03 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void				gui_signal_scene_edit_switch_material
-					(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	t_gui_material	*material;
-	gboolean 		state;
+	gboolean		state;
 	t_object		*object;
 
 	gui = (t_gui *)ptr;
@@ -28,12 +40,12 @@ void				gui_signal_scene_edit_switch_material
 	gui_control_show(&gui->scene->edit->control);
 }
 
-void 				gui_signal_scene_edit_switch_texture
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_scene_edit_switch_texture
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	t_gui_material	*material;
-	gboolean 		state;
+	gboolean		state;
 	t_object		*object;
 
 	gui = (t_gui *)ptr;

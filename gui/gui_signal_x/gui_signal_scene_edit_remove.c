@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_scene_edit_remove.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 12:53:01 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 12:53:08 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void					gui_signal_scene_edit_remove
-						(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui				*gui;
 	t_gui_scene_edit	*edit;
-	int 				test;
-	int 				response;
+	int					test;
+	int					response;
 
 	gui = (t_gui *)ptr;
 	edit = gui->scene->edit;

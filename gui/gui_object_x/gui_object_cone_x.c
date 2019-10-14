@@ -61,12 +61,12 @@ void					gui_object_cone_set
 	temp_axis = f4_sub(data->bottom, data->top);
 	data->tangent = data->radius / f4_length(temp_axis);
 	data->axis = f4_normalize(temp_axis);
-    height = f4_length(f4_sub(data->top, data->bottom));
-    hypotenuse = RT_SQRT_API(RT_POW(height, 2.) + data->radius * data->radius);
-    data->length = hypotenuse + data->radius;
+	height = f4_length(f4_sub(data->top, data->bottom));
+	hypotenuse = RT_SQRT_API(RT_POW(height, 2.) + data->radius * data->radius);
+	data->length = hypotenuse + data->radius;
 }
 
-void						gui_object_cone_clear
+void					gui_object_cone_clear
 	(t_gui_object_cone *gui)
 {
 	gtk_entry_set_text(gui->top_x, "");

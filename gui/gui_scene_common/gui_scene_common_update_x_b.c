@@ -6,37 +6,11 @@
 /*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 16:50:39 by bshanae           #+#    #+#             */
-/*   Updated: 2019/10/02 16:51:20 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/14 13:13:48 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "gui_scene_common.h"
-
-#ifndef RT_DOUBLE
-
-static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
-{
-	const UINT		flag = object_flag_get(object);
-
-	if (object->type == object_type_moebius)
-		return (0);
-	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
-		return (0);
-	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
-}
-
-#else
-
-static int			static_check_mod(t_gui_scene_common *gui, t_object *object)
-{
-	const UINT		flag = object_flag_get(object);
-
-	if (flag & RT_OBJECT_LIGHT && *gui->ptr_light != rt_light_basic)
-		return (0);
-	return ((int)(flag & *gui->ptr_scene->tracing_mod_mask));
-}
-
-#endif
 
 void				gui_scene_common_update_types(t_gui_scene_common *gui)
 {
@@ -50,12 +24,12 @@ void				gui_scene_common_update_types(t_gui_scene_common *gui)
 	while (iter_type < object_type_end)
 	{
 		temp.type = iter_type;
-		if (static_check_mod(gui, &temp))
+		if (gui_scene_common_check_mod(gui, &temp))
 		{
 			gtk_list_store_append(gui->types, &iter_list);
 			gtk_list_store_set(gui->types, &iter_list,
-							   gui_list_id, iter_type,
-							   gui_list_name, object_translate(iter_type), -1);
+				gui_list_id, iter_type,
+				gui_list_name, object_translate(iter_type), -1);
 		}
 		iter_type++;
 	}
@@ -70,15 +44,15 @@ void				gui_scene_common_update_textures(t_gui_scene_common *gui)
 	gtk_list_store_clear(gui->textures);
 	gtk_list_store_append(gui->textures, &iter_list);
 	gtk_list_store_set(gui->textures, &iter_list,
-					   gui_list_id, -1,
-					   gui_list_name, "None", -1);
+		gui_list_id, -1,
+		gui_list_name, "None", -1);
 	i = 0;
 	while (i <= gui->ptr_scene->texture.textures_number)
 	{
 		gtk_list_store_append(gui->textures, &iter_list);
 		gtk_list_store_set(gui->textures, &iter_list,
-						   gui_list_id, i,
-						   gui_list_name, gui->ptr_scene->texture.name[i], -1);
+			gui_list_id, i,
+			gui_list_name, gui->ptr_scene->texture.name[i], -1);
 		i++;
 	}
 }
@@ -95,8 +69,8 @@ void				gui_scene_common_update_background
 	{
 		gtk_list_store_append(gui->background, &iter);
 		gtk_list_store_set(gui->background, &iter,
-						   gui_list_id, i,
-						   gui_list_name, rt_background_translate(i), -1);
+			gui_list_id, i,
+			gui_list_name, rt_background_translate(i), -1);
 		i++;
 	}
 }

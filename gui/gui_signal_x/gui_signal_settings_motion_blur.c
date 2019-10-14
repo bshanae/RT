@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_settings_motion_blur.c                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 13:00:24 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 13:00:24 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 gboolean			gui_signal_settings_motion_blur
-					(GtkWidget *widget, gboolean state, gpointer ptr)
+	(GtkWidget *widget, gboolean state, gpointer ptr)
 {
 	t_gui			*gui;
 

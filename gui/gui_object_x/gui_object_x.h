@@ -83,7 +83,6 @@ void						gui_object_light_direct_set
 void						gui_object_light_direct_clear
 							(t_gui_object_light_direct *gui);
 
-
 /*
 ********************************************************************************
 **							SPHERE

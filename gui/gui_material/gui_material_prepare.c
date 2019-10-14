@@ -19,7 +19,6 @@ static void			static_helper(t_gui_material *material, t_object *object)
 		gui_material_color_disable(material);
 		gui_material_emission_disable(material);
 		gui_material_special_disable(material);
-
 	}
 	else if (object_flag_get(object) & RT_OBJECT_LIGHT)
 	{

@@ -6,14 +6,13 @@
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/28 13:41:48 by ashari            #+#    #+#             */
-/*   Updated: 2019/10/01 18:09:14 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/14 13:43:28 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cl_arg_list.h"
 
 #ifndef RT_OPEN_CL_DISABLED
-
 
 void				cl_arg_list_delete(t_cl_arg_list **list)
 {
@@ -30,7 +29,7 @@ void				cl_arg_list_delete(t_cl_arg_list **list)
 
 void				cl_arg_list_delete(t_cl_arg_list **list)
 {
-
+	return ;
 }
 
 #endif

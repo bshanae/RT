@@ -35,14 +35,21 @@ void				gui_queue_execute(void *ptr, t_gui_queue *queue)
 	queue->free = 1;
 }
 
+#ifdef RT_QUEUE_MANUAL
+
 void				gui_queue_execute_force(t_gui_queue *queue)
 {
-#ifdef RT_QUEUE_MANUAL
 	queue->master_function(queue->master_data);
+}
+
 #elif defined RT_QUEUE_AUTO
+
+void				gui_queue_execute_force(t_gui_queue *queue)
+{
 	gui_queue_push(queue);
 	queue->force_execute = 1;
 	queue->force_finished = 0;
 	queue->pass = RT_GUI_QUEUE_PASS;
-#endif
 }
+
+#endif

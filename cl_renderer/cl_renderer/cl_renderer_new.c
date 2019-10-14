@@ -56,7 +56,6 @@ static void				static_set_args(t_cl_renderer *renderer)
 
 #ifndef RT_OPEN_CL_DISABLED
 
-
 t_cl_renderer			*cl_renderer_new(t_gui_image *image)
 {
 	t_cl_renderer		*new;

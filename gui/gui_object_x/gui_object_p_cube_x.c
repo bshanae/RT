@@ -48,7 +48,7 @@ void							gui_object_p_cube_set
 	data->iterations = gui_entry_get_i(gui->iterations);
 }
 
-void						gui_object_p_cube_clear
+void							gui_object_p_cube_clear
 	(t_gui_object_p_cube *gui)
 {
 	gtk_entry_set_text(gui->position_x, "");

@@ -95,7 +95,6 @@ void						gui_object_pair_clear(t_gui_object_pair *gui)
 	GtkTreeIter				iter[2];
 	int						result[2];
 
-
 	result[0] = gtk_tree_model_get_iter_first(
 		GTK_TREE_MODEL(gui->first_list), iter + 0);
 	result[1] = gtk_tree_model_get_iter_first(

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_settings_reset.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 13:00:37 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 13:00:37 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
-void 				gui_signal_settings_reset
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_settings_reset
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 

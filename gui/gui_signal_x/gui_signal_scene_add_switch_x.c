@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_scene_add_switch_x.c                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 12:51:09 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 12:51:22 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 void				gui_signal_scene_add_switch_material
-					(GtkWidget *widget, gpointer ptr)
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	t_gui_material	*material;
-	gboolean 		state;
+	gboolean		state;
 
 	gui = (t_gui *)ptr;
 	material = &gui->scene->add->material;
@@ -26,12 +38,12 @@ void				gui_signal_scene_add_switch_material
 		&gui->scene->add->temp_object.texture_id);
 }
 
-void 				gui_signal_scene_add_switch_texture
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_scene_add_switch_texture
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	t_gui_material	*material;
-	gboolean 		state;
+	gboolean		state;
 
 	gui = (t_gui *)ptr;
 	material = &gui->scene->add->material;

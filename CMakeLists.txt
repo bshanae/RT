@@ -243,7 +243,7 @@ set(SOURCE_GUI_SCENE_COMMON
 	./gui/gui_scene_common/gui_scene_common_update_x_b.c
 	./gui/gui_scene_common/gui_scene_common_update_wrap.c
 	./gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c
-	./gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c)
+	./gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c gui/gui_scene_common/gui_scene_common_check_mod.c)
 
 set(SOURCE_GUI_SCENE_EDIT
 	./gui/gui_scene_edit/gui_scene_edit_new.c
@@ -502,8 +502,8 @@ set(SOURCE_CL_RENDERER_
 	cl_renderer/rt_settings/rt_settings_init.c
 	./cl_renderer/cl_renderer/cl_renderer_load.c
 	./cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
-	./cl_renderer/cl_renderer/cl_renderer_object_move.c
-	cl_renderer/cl_renderer/cl_renderer_change_x.c)
+		cl_renderer/cl_renderer/cl_renderer_object_x.c
+	cl_renderer/cl_renderer/cl_renderer_change_x.c cl_renderer/cl_renderer/cl_renderer_queue_x.c)
 
 set(SOURCE_RENDERER
 	${SOURCE_F2}

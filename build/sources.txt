@@ -131,6 +131,7 @@
 ../gui/gui_scene_common/gui_scene_common_update_x_a.c
 ../gui/gui_scene_common/gui_scene_common_add_to_list.c
 ../gui/gui_scene_common/gui_scene_common_connect.c
+../gui/gui_scene_common/gui_scene_common_check_mod
 ../gui/gui_scene_common/gui_scene_common_update_x_b.c
 ../gui/gui_scene_common/gui_scene_common_update_wrap.c
 ../gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c
@@ -325,7 +326,7 @@
 ../cl_renderer/f4/f4_dot.c
 
 #	#################################################################	#
-#	OBEJCT																#
+#	OBJECT																#
 #	#################################################################	#
 
 ../cl_renderer/object/object_build.c
@@ -427,10 +428,11 @@
 
 ../cl_renderer/cl_renderer/cl_renderer_new.c
 ../cl_renderer/cl_renderer/cl_renderer_delete.c
+../cl_renderer/cl_renderer/cl_renderer_queue_x.c
 ../cl_renderer/cl_renderer/cl_renderer_render.c
 ../cl_renderer/cl_renderer/cl_renderer_camera_x.c
 ../cl_renderer/cl_renderer/cl_renderer_flag_x.c
 ../cl_renderer/cl_renderer/cl_renderer_load.c
 ../cl_renderer/cl_renderer/cl_renderer_camera_request_x.c
-../cl_renderer/cl_renderer/cl_renderer_object_move.c
+../cl_renderer/cl_renderer/cl_renderer_object_x.c
 ../cl_renderer/cl_renderer/cl_renderer_change_x.c

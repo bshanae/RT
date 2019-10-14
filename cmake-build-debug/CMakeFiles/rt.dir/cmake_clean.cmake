@@ -73,6 +73,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_wrap.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_update_x_wrapped_b.c.o"
+  "CMakeFiles/rt.dir/gui/gui_scene_common/gui_scene_common_check_mod.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_delete.c.o"
   "CMakeFiles/rt.dir/gui/gui_scene_edit/gui_scene_edit_show.c.o"
@@ -265,8 +266,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_flag_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_load.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_camera_request_x.c.o"
-  "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_move.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_object_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_change_x.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/cl_renderer/cl_renderer_queue_x.c.o"
   "rt.pdb"
   "rt"
 )

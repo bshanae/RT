@@ -14,7 +14,7 @@
 
 void						gui_camera_connect(t_gui_camera *camera, ...)
 {
-	va_list 				args;
+	va_list					args;
 
 	va_start(args, camera);
 	camera->ptr_camera = va_arg(args, t_camera *);

@@ -67,7 +67,7 @@ void				gui_scene_edit_apply
 	rt_assert_critical(edit->common != NULL, "GUI Editor : List ptr is NULL");
 	scene_object_rename(scene, object->id, gui_entry_get_str(edit->name));
 	gtk_list_store_set(edit->common->full, &edit->iter,
-					   gui_list_name, object->name, -1);
+		gui_list_name, object->name, -1);
 	if (static_apply_a(edit, object))
 		;
 	else if (static_apply_b(edit, object))

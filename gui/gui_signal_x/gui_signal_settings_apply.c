@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_settings_apply.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 12:59:24 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 12:59:24 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
-void 				gui_signal_settings_apply
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_settings_apply
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 

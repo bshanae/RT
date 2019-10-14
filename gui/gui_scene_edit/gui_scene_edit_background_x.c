@@ -45,7 +45,7 @@ int					gui_scene_edit_background_read_value
 	value = -1;
 	if (gtk_combo_box_get_active_iter(edit->background_combo, &iter))
 		gtk_tree_model_get(GTK_TREE_MODEL(edit->common->background), &iter,
-			 gui_list_id, &value, -1);
+			gui_list_id, &value, -1);
 	else
 		rt_raise_error("GUI Editor : No background selected\n");
 	return (value);

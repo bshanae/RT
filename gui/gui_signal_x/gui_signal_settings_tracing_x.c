@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_settings_tracing_x.c                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 13:01:09 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 13:01:24 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
-void 				gui_signal_settings_tracing_rt
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_settings_tracing_rt
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	gboolean		state;
@@ -20,8 +32,8 @@ void 				gui_signal_settings_tracing_rt
 	gui_queue_push(gui->queue);
 }
 
-void 				gui_signal_settings_tracing_rm
-					(GtkWidget *widget, gpointer ptr)
+void				gui_signal_settings_tracing_rm
+	(GtkWidget *widget, gpointer ptr)
 {
 	t_gui			*gui;
 	gboolean		state;
@@ -35,9 +47,7 @@ void 				gui_signal_settings_tracing_rm
 	gui->settings->tracing_block = rt_false;
 	gtk_stack_set_visible_child_name(gui->settings->stack, state ? "rm" : "rt");
 	cl_renderer_change_tracing_mod(gui->renderer, state ?
-												  rt_tracing_rm : rt_tracing_rt);
+		rt_tracing_rm : rt_tracing_rt);
 	gui_scene_common_update_all_wrapped(gui->scene->common);
 	gui_queue_push(gui->queue);
 }
-
-

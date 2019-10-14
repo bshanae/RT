@@ -56,5 +56,5 @@ void				gui_material_texture_set
 
 	gtk_combo_box_get_active_iter(material->texture_combo, &iter);
 	gtk_tree_model_get(GTK_TREE_MODEL(material->texture_list),
-					   &iter, gui_list_id, id, -1);
+		&iter, gui_list_id, id, -1);
 }

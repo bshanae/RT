@@ -6,7 +6,7 @@
 /*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 16:38:49 by bshanae           #+#    #+#             */
-/*   Updated: 2019/10/02 16:42:09 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/14 13:15:29 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,9 @@ void				gui_scene_common_gen_name
 void				gui_scene_common_add_to_list
 					(GtkListStore *list, t_object *object);
 
+int					gui_scene_common_check_mod
+					(t_gui_scene_common *gui, t_object *object);
+
 void				gui_scene_common_update_full
 					(t_gui_scene_common *gui);
 void				gui_scene_common_update_limited
@@ -66,9 +69,9 @@ void				gui_scene_common_update_background
 void				gui_scene_common_update_all
 					(t_gui_scene_common *gui);
 
-typedef	void (t_gui_scene_update_function)(t_gui_scene_common *gui);
+typedef	void		(t_gui_scene_update_function)(t_gui_scene_common *gui);
 
-void 				gui_scene_common_update_wrap
+void				gui_scene_common_update_wrap
 					(t_gui_scene_common *gui,
 					t_gui_scene_update_function *func);
 

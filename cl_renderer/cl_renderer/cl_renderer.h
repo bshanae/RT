@@ -86,11 +86,18 @@ void						cl_renderer_camera_request_focus
 							(t_cl_renderer *renderer, int x, int y);
 void						cl_renderer_camera_request_select
 							(t_cl_renderer *renderer, int x, int y);
+
 void						cl_renderer_object_move
 							(t_cl_renderer *renderer, t_rt_movement movement);
+void						cl_renderer_object_select
+							(t_cl_renderer *renderer, int id);
 
 void						cl_renderer_load
 							(t_cl_renderer *renderer, const char *path);
+
+void						cl_renderer_queue_pre(t_cl_renderer *renderer);
+void						cl_renderer_queue_in(t_cl_renderer *renderer);
+void						cl_renderer_queue_post(t_cl_renderer *renderer);
 
 void						cl_renderer_render(t_cl_renderer *renderer);
 

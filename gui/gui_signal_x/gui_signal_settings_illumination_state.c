@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gui_signal_settings_illumination_state.c           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/14 12:59:38 by bshanae           #+#    #+#             */
+/*   Updated: 2019/10/14 12:59:38 by bshanae          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gui_signal_x.h"
 
 gboolean			gui_signal_settings_illumination_state
-					(GtkSwitch *widget, gboolean state, gpointer ptr)
+	(GtkSwitch *widget, gboolean state, gpointer ptr)
 {
 	t_gui			*gui;
 
