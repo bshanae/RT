@@ -34,8 +34,8 @@ void						gui_object_torus_get
 	gui_entry_set_f(gui->position_x, data->position.x);
 	gui_entry_set_f(gui->position_y, data->position.y);
 	gui_entry_set_f(gui->position_z, data->position.z);
-	gui_entry_set_f(gui->radius, data->t_0);
-	gui_entry_set_f(gui->width, data->t_1);
+	gui_entry_set_f(gui->radius, data->radius);
+	gui_entry_set_f(gui->width, data->width);
 }
 
 void						gui_object_torus_set
@@ -47,8 +47,8 @@ void						gui_object_torus_set
 	data->position.x = gui_entry_get_f(gui->position_x);
 	data->position.y = gui_entry_get_f(gui->position_y);
 	data->position.z = gui_entry_get_f(gui->position_z);
-	data->t_0 = gui_entry_get_f(gui->radius);
-	data->t_1 = gui_entry_get_f(gui->radius);
+	data->radius = gui_entry_get_f(gui->radius);
+	data->width = gui_entry_get_f(gui->width);
 }
 
 void						gui_object_torus_clear

@@ -101,8 +101,8 @@ typedef struct			s_object_limited
 typedef struct			s_object_torus
 {
 	RT_F4_API			position;
-	RT_F				t_0;
-	RT_F				t_1;
+	RT_F				radius;
+	RT_F				width;
 }						t_object_torus;
 
 typedef struct			s_object_mandelbulb
