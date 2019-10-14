@@ -98,7 +98,7 @@ typedef enum						s_rt_filter_mod
 # define RT_ILLUMINATION_POWER		(RT_F)2.
 
 # define RT_PT_DEPTH				3
-# define RT_PT_SAMPLE_LIMIT			25
+# define RT_PT_SAMPLE_LIMIT			250
 
 # define RT_MOTION_BLUR				0
 # define RT_MOTION_BLUR_ALPHA		(RT_F)0.7

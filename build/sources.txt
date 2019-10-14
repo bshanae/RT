@@ -131,7 +131,7 @@
 ../gui/gui_scene_common/gui_scene_common_update_x_a.c
 ../gui/gui_scene_common/gui_scene_common_add_to_list.c
 ../gui/gui_scene_common/gui_scene_common_connect.c
-../gui/gui_scene_common/gui_scene_common_check_mod
+../gui/gui_scene_common/gui_scene_common_check_mod.c
 ../gui/gui_scene_common/gui_scene_common_update_x_b.c
 ../gui/gui_scene_common/gui_scene_common_update_wrap.c
 ../gui/gui_scene_common/gui_scene_common_update_x_wrapped_a.c

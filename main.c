@@ -21,7 +21,7 @@ int					main(int argc, char **argv)
 	scene_cornell_box_walls(gui->renderer->data.scene);
 	cl_renderer_change_tracing_mod(gui->renderer, rt_tracing_rt);
 	cl_renderer_change_light_mod(gui->renderer, rt_light_area);
-	cl_renderer_change_background(gui->renderer, rt_background_one);
+	cl_renderer_change_background(gui->renderer, rt_background_none);
 	camera_apply(gui->renderer->data.camera);
 	cl_renderer_camera_save(gui->renderer);
     scene_update(gui->renderer->data.scene);

@@ -117,7 +117,7 @@ typedef struct			s_cl_renderer_settings
 	int					motion_blur;
 	int					motion_blur_sample_count;
 	t_rt_tracing_mod	tracing_mod;
-	unit				tracing_mod_mask;
+	uint				tracing_mod_mask;
 	int					rm_step_limit;
 	RT_F				rm_step_part;
 	RT_F				rm_max_distance;
@@ -413,17 +413,17 @@ static RT_F 					object_sphere_sdf(global t_object *object, t_intersection *inte
 
 #include "rt_parameters.h"
 
-typedef enum 			e_plane_limiting
+typedef enum 			e_rt_limit
 {
-	plane_limiting_yes,
-	plane_limiting_no
-}						t_plane_limiting;
+	rt_limit_no,
+	rt_limit_yes
+}						t_rt_limit;
 
 typedef struct			s_object_plane
 {
 	RT_F4				position;
 	RT_F4				normal;
-	t_plane_limiting	is_limiting;
+	t_rt_limit	is_limiting;
 }						t_object_plane;
 
 static int				object_plane_intersect(global t_object *object, t_intersection *intersection)
@@ -1876,6 +1876,22 @@ static void         sphere_texture(
     *v = 0.5 + asin(normal.y) / _RT_PI;
 }
 
+static RT_F         rt_mod(RT_F number, int div)
+{
+    int             tmp;
+    int             rezus;
+
+    tmp = (int)number;
+    if (tmp < 0)
+        tmp = -tmp;
+    if (tmp > div)
+        if (number < 0)
+            return ((number + tmp / div * div));
+        else
+            return ((number - tmp / div * div));
+    return (number);
+}
+
 static void         plane_texture(
                     global t_texture *texture,
                     global t_object *object,
@@ -1887,12 +1903,17 @@ static void         plane_texture(
 
     data = *(global t_object_plane* )object->data;
     vector = intersection->hit - data.position;
-
-    vector = RT_ABS(vector);
-    *u = RT_MOD((vector.x + vector.z), texture->width[object->texture_id]);
-    *u = 1 - *u / texture->width[object->texture_id];
-    *v = RT_MOD((vector.y + vector.z), texture->height[object->texture_id]);
-    *v = 1 - *v / texture->height[object->texture_id];
+    if (!(data.normal.z == 1 || data.normal.z == -1))
+    {
+        vector = f4_rotate(vector, rt_rotation_x, rt_rotation_positive, acos(-data.normal.x));
+        vector = f4_rotate(vector, rt_rotation_y, rt_rotation_positive, acos(-data.normal.y));
+    }
+    *u = rt_mod(vector.x, texture->width[object->texture_id]);
+    if ((*u /= texture->width[object->texture_id]) < 0)
+        *u += 1;
+    *v = rt_mod(vector.y, (int)texture->height[object->texture_id]);
+    if ((*v /= texture->height[object->texture_id]) < 0)
+        *v += 1;
 }
 
 static RT_F4		object_texture(
@@ -2610,11 +2631,13 @@ static RT_F4				radiance_trace(
 		if (settings->light_mod == rt_light_basic)
 		{
 			light = light_basic(scene, camera, intersection, settings, camera->filter_mod == rt_filter_cartoon);
+			light = RT_MAX(light, settings->light_ambient);
             radiance += light * mask;
 		}
 		else if (settings->light_mod == rt_light_area)
 		{
 			light = light_area(scene, camera, intersection, settings, rng_state);
+			light = RT_MAX(light, settings->light_ambient);
 			radiance += light * mask * intersection->material.color;
 		}
 
@@ -2677,6 +2700,9 @@ kernel void			cl_main(
 
     global_id = get_global_id(0);
 	sample_store_map(sample_store, sample_store_mapped, camera);
+
+	if (!global_id)
+		printf("%d\n", sceene->background);
 
 	if (camera->select_request)
 	{

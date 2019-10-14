@@ -530,16 +530,6 @@ gui.h
 time.h
 -
 
-.././libft/includes/libft_gnl.h
-libft_standart.h
-.././libft/includes/libft_standart.h
-libft_list.h
-.././libft/includes/libft_list.h
-
-.././libft/includes/libft_list.h
-libft_standart.h
-.././libft/includes/libft_standart.h
-
 .././libft/includes/libft_standart.h
 sys/types.h
 -
@@ -5532,18 +5522,6 @@ json_parse.h
 json_parse.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/json/json_parse.h
 
-/Users/bshanae/workspace/21_ray_tracer/cl_renderer/json/readfile.c
-string.h
--
-fcntl.h
--
-unistd.h
--
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/cl_renderer/json/error_framework.h
-libft_gnl.h
-/Users/bshanae/workspace/21_ray_tracer/cl_renderer/json/libft_gnl.h
-
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/object/object_build.c
 object_interaction.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/object/object_interaction.h
@@ -5577,6 +5555,10 @@ object_flag.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/object/object_flag.h
 stdarg.h
 -
+
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/object/object_translate.c
+object_definition.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/object/object_definition.h
 
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/object_x/object_box.c
 object_interaction.h
@@ -5649,6 +5631,10 @@ libft_standart.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/rt_settings/libft_standart.h
 object_flag.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/rt_settings/object_flag.h
+
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/rt_settings/rt_settings_init.c
+rt_settings.h
+/Users/bshanae/workspace/21_ray_tracer/cl_renderer/rt_settings/rt_settings.h
 
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/scene/camera_point_check.c
 scene.h
@@ -5762,30 +5748,6 @@ texture.h
 texture.h
 /Users/bshanae/workspace/21_ray_tracer/cl_renderer/texture/texture.h
 
-/Users/bshanae/workspace/21_ray_tracer/error_framework/error_framework.h
-libft_standart.h
-/Users/bshanae/workspace/21_ray_tracer/error_framework/libft_standart.h
-stdio.h
--
-stdarg.h
--
-
-/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_assert_x.c
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/error_framework/error_framework.h
-
-/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_malloc.c
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/error_framework/error_framework.h
-
-/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_print_x.c
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/error_framework/error_framework.h
-
-/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_raise_x.c
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/error_framework/error_framework.h
-
 /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui.h
 rt_parameters.h
 /Users/bshanae/workspace/21_ray_tracer/gui/gui/rt_parameters.h
@@ -5886,21 +5848,23 @@ gtk/gtk.h
 gui_control.h
 /Users/bshanae/workspace/21_ray_tracer/gui/gui_control/gui_control.h
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/gui_entry.h
-rt_float.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/rt_float.h
-error_framework.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/error_framework.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/gui_icon.h
+rt_parameters.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/rt_parameters.h
+rt_sources_gui.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/rt_sources_gui.h
+libft_standart.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/libft_standart.h
 gtk/gtk.h
 -
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/gui_entry_get_x.c
-gui_entry.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/gui_entry.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/gui_icon_load.c
+gui_icon.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/gui_icon.h
 
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/gui_entry_set_x.c
-gui_entry.h
-/Users/bshanae/workspace/21_ray_tracer/gui/gui_entry/gui_entry.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/gui_icon_load_all.c
+gui_icon.h
+/Users/bshanae/workspace/21_ray_tracer/gui/gui_icon/gui_icon.h
 
 /Users/bshanae/workspace/21_ray_tracer/gui/gui_image/gui_image.h
 rt_parameters.h

@@ -17,8 +17,7 @@ typedef struct		s_scene
 	int				lights[RT_SCENE_CAPACITY];
 	int 			lights_length;
 	t_texture		texture;
-	const int		*param_a;
-	const uint		*params_b;
+	const uchar		param_a[16];
 	int				selected_id;
 	t_rt_background	background;
 	RT_F4			background_color;
