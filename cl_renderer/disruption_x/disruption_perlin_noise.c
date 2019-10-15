@@ -79,6 +79,6 @@ RT_F4_API				disruption_perlin_noise(double x, double y)
 	uv = (RT_F2_API){x / DISRUPTION_WIDTH, y / DISRUPTION_HEIGHT};
 	uv.x *= (double)DISRUPTION_WIDTH / DISRUPTION_HEIGHT;
 	perlin_result = choose_perlin_noise(uv.x, uv.y);
-	perlin_result = 0.3 + 0.9 * perlin_result;
+	perlin_result = 0.4 + 0.9 * perlin_result;
 	return ((RT_F4_API){perlin_result, perlin_result, perlin_result, 1.});
 }

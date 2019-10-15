@@ -2,19 +2,26 @@
   {
     "type": "settings",
     "use raymarching": false,
-    "pt depth": 3,
+    "pt depth": 2,
     "pt sample limit": 30,
     "illumination": false
   },
   {
     "type": "camera",
-    "position": [0, 30, 150]
+    "position": [0, 30, 130]
   },
   {
     "type": "sphere",
-    "name": "Light",
+    "name": "Light 1",
     "position": [29, 65, 27],
-    "radius": 3,
+    "radius": 4,
+    "material": "light"
+  },
+  {
+    "type": "sphere",
+    "name": "Light 2",
+    "position": [-53, 52, 27],
+    "radius": 4,
     "material": "light"
   },
   {
@@ -27,18 +34,58 @@
     "type": "sphere",
     "name": "Sphere 1",
     "position": [0, 30, -10],
-    "radius": 8
+    "radius": 8,
+    "texture": "Perlin Noise"
   },
   {
     "type": "sphere",
     "name": "Sphere 2",
     "position": [10, 37, -15],
-    "radius": 6
+    "radius": 8,
+    "texture": "Sine"
   },
   {
     "type": "sphere",
     "name": "Sphere 3",
-    "position": [-8, 25, 4],
-    "radius": 4
+    "position": [-8, 21, -29],
+    "radius": 4,
+    "material": "0x90caf9"
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 4",
+    "position": [-9, 36, -19],
+    "radius": 5,
+    "texture": "Perlin Noise"
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 5",
+    "position": [1, 16, -11],
+    "radius": 5,
+    "material": "0x90caf9"
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 6",
+    "position": [-15, 40, -6],
+    "radius": 2.5,
+    "material": "0x90caf9"
+  },
+  {
+    "type": "cone",
+    "name": "Cone",
+    "top": [-12, 32, 41],
+    "bottom": [-17, 22, 41],
+    "radius": 3,
+    "texture": "Sine"
+  },
+  {
+    "type": "cylinder",
+    "name": "Cylinder",
+    "top": [-6, 45, 43],
+    "bottom": [-1, 40, 43],
+    "radius": 1.5,
+    "texture": "Sine"
   }
 ]
