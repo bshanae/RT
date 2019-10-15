@@ -1,0 +1,44 @@
+[
+  {
+    "type": "settings",
+    "use raymarching": false,
+    "pt depth": 3,
+    "pt sample limit": 30,
+    "illumination": false
+  },
+  {
+    "type": "camera",
+    "position": [0, 30, 150]
+  },
+  {
+    "type": "sphere",
+    "name": "Light",
+    "position": [29, 65, 27],
+    "radius": 3,
+    "material": "light"
+  },
+  {
+    "type": "plane",
+    "name": "Plane Back",
+    "position": [0, 0, -140],
+    "normal": [0, 0, 1]
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 1",
+    "position": [0, 30, -10],
+    "radius": 8
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 2",
+    "position": [10, 37, -15],
+    "radius": 6
+  },
+  {
+    "type": "sphere",
+    "name": "Sphere 3",
+    "position": [-8, 25, 4],
+    "radius": 4
+  }
+]
