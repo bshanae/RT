@@ -23,7 +23,8 @@ void					gui_signal_scene_edit_remove
 	gui = (t_gui *)ptr;
 	edit = gui->scene->edit;
 	test = gtk_list_store_iter_is_valid(edit->common->full, &edit->iter);
-	rt_assert_critical(test, "GUI Signal : Scene edit iter is invalid");
+	if (!test)
+		return (rt_raise_warning("GUI Signal : Scene edit iter is invalid"));
 	response = gtk_dialog_run(gui->scene->edit->remove_dialog);
 	gtk_widget_hide(GTK_WIDGET(gui->scene->edit->remove_dialog));
 	if (response != GTK_RESPONSE_YES)

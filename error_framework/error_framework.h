@@ -18,7 +18,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 
-# define RT_W_ERROR	1
+# define RT_W_ERROR	0
 
 void				rt_print_warning(CHAR_REF message, va_list args);
 void				rt_print_error(CHAR_REF message, va_list args);
