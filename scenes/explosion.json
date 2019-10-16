@@ -1,40 +1,24 @@
 [
 	{
-		"type": "settings",
-		"use raymarching": true,
-		"step limit": 255,
-		"step part": 1,
-		"pt depth": 1,
-		"pt sample limit": 30,
-		"illumination": false
+		"type" : "settings",
+		"rm mod" : true,
+		"rm limit" : 255,
+		"rm part" : 1,
+		"pt depth" : 1,
+		"pt limit" : 30,
+		"background" : "none"
 	},
+
 	{
-		"type": "camera",
-		"position": [0, 0, 20]
+		"type" : "camera",
+		"position" : [0, 0, 20]
 	},
+
 	{
-        "type": "sphere",
-        "name": "Light",
-        "position": [0, 10, 20],
-        "radius": 3,
-        "material": "light"
-	},
-	{
-        "type": "light point",
-        "name": "Light point",
-        "position": [0, 10, 30]
-    },
-	{
-        "type": "light ambient",
-        "name": "Light ambient",
-        "position": [0, 10, 0],
-        "radius": 3
-    },
-	{
-		"type": "explosion",
-		"name": "Explosion",
-		"position": [0, 0, 0],
-		"radius": 3,
-		"noise amplitude": 3
+		"type" : "explosion",
+		"name" : "Explosion",
+		"position" : [0, 0, 0],
+		"radius" : 3,
+		"noise amplitude" : 3
 	}
 ]

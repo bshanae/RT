@@ -1,48 +1,32 @@
 [
 	{
-		"type": "settings",
-		"use raymarching": true,
-		"step limit": 255,
-		"step part": 0.7,
-		"pt depth": 1,
-		"pt sample limit": 25,
-		"illumination": false
+		"type" : "settings",
+		"rm mod" : true,
+		"rm limit" : 255,
+		"rm part" : 0.7,
+		"pt depth" : 1,
+		"pt limit" : 25,
+		"background"  : "none",
+		"illumination value" : 0.6
 	},
 	{
-		"type": "camera",
-		"position": [0, 0, 10]
+		"type" : "camera",
+		"position" : [0, 0, 10]
 	},
 	{
-		"type": "sphere",
-		"name": "Light",
-		"position": [0, 10, 20],
-		"radius": 3,
-		"material": "light"
+		"type" : "sphere",
+		"name" : "Light",
+		"position" : [-1, 0, 5],
+		"radius" : 0.1,
+		"material" : "light"
 	},
+
 	{
-		"type": "light point",
-		"name": "Light point",
-		"position": [0, 10, 30],
-		"material": "light"
-	},
-	{
-		"type": "light ambient",
-		"name": "Light ambient",
-		"position": [0, 10, 0],
-		"radius": 3
-	},
-	{
-		"type": "julia",
-		"name": "Julia",
-		"position": [0, 0, 0],
-		"iterations": 5,
-		"value": [0.1, 0.5, 0.8, 0.1],
-		"material": "0x116062"
-	},
-	{
-		"type": "plane",
-		"name": "Plane",
-		"position": [0, 0, -90],
-		"normal": [0, 0, 1]
+		"type" : "julia",
+		"name" : "Julia",
+		"position" : [0, 0, 0],
+		"iterations" : 5,
+		"value" : [0.1, 0.5, 0.8, 0.1],
+		"material" : "0x116062"
 	}
 ]

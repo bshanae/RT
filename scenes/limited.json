@@ -1,82 +1,97 @@
 [
 	{
 		"type" : "settings",
-		"use raymarching" : false,
+		"rm mod" : false,
 		"pt depth" : 1,
-		"pt sample limit" : 30,
+		"pt limit" : 30,
 		"illumination" : false
 	},
 
 	{
 		"type" : "camera",
-		"position" : [0, 30, 160]
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Back plane",
-		"position" : [0, 0, -140],
-		"normal" : [0, 0, 1]
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Left plane",
-		"position" : [-40, 0, 0],
-		"normal" : [-1, 0, 0],
-		"material" : "0x0C37E5"
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Right plane",
-		"position" : [40, 0, 0],
-		"normal" : [-1, 0, 0],
-		"material" : "red"
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Front plane",
-		"position" : [0, 0, 200],
-		"normal" : [0, 0, -1]
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Upper plane",
-		"position" : [0, 70, 0],
-		"normal" : [0, -1 , 0]
-	},
-
-	{
-		"type" : "plane",
-		"name" : "Lower plane",
-		"position" : [0, -25, 0],
-		"normal" : [0, 1, 0]
+		"position" : [0, 40, 200],
+		"rotation" : [0.1, 0, 0]
 	},
 
 	{
 		"type" : "sphere",
-		"name" : "Light",
+		"name" : "Light A",
+		"position" : [17, 40, -16],
+		"radius" : 3,
+		"material" : "light"
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Light B",
 		"position" : [-20, 30, 50],
 		"radius" : 3,
 		"material" : "light"
 	},
 
 	{
+		"type" : "plane",
+		"name" : "Plane Button",
+		"position" : [0, -25, 0],
+		"normal" : [0, 1, 0]
+	},
+
+	{
 		"type" : "cylinder",
 		"name" : "Cylinder",
-		"top" : [0, 40, 0],
-		"bottom" : [0, -10, 0],
-		"radius" : 3.0
+		"top" : [-8, 40, -18],
+		"bottom" : [-8, -10, -18],
+		"radius" : 4
+	},
+
+	{
+		"type" : "box",
+		"name" : "Box",
+		"position" : [-8, 0, 30],
+		"size" : [10, 10, 12]
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Sphere",
+		"position" : [15, 6, -10],
+		"radius" : 6
 	},
 
 	{
 		"type" : "plane",
-		"name" : "Limiting plane",
-		"position" : [0, 0, 0],
-		"normal" : [0, 1, 0],
+		"name" : "Limiting Plane A",
+		"position" : [-8, 0, 3],
+		"normal" : [0.1, 1, 0],
 		"material" : "red"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Limiting Plane B",
+		"position" : [0, -2, 1],
+		"normal" : [-0.5, 0.8, 0],
+		"material" : "blue"
+	},
+
+	{
+		"type" : "limited",
+		"name" : "Limited A",
+		"main" : "Cylinder",
+		"limit" : "Limiting Plane A"
+	},
+
+	{
+		"type" : "limited",
+		"name" : "Limited B",
+		"main" : "Box",
+		"limit" : "Limiting Plane A"
+	},
+
+	{
+		"type" : "limited",
+		"name" : "Limited C",
+		"main" : "Sphere",
+		"limit" : "Limiting Plane B"
 	}
 ]
