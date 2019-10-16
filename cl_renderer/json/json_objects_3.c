@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 19:50:40 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 20:50:27 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/16 20:38:55 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_s4 = get_string_in_object(json, tokens, "positive name");
 	box.val_s5 = get_string_in_object(json, tokens, "negative name");
-	(!(box.val_s4 && box.val_s5) ? free(&box) : 1);
-	if (!(box.val_s4 && box.val_s4))
+	(!(box.val_s4 && box.val_s5) ? free_box(&box) : 1);
+	if (!(box.val_s4 && box.val_s5))
 		return ;
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : CSG_MATERIAL);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
