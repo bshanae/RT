@@ -1,4 +1,4 @@
-./objects/camera_point_check.o: ../cl_renderer/scene/camera_point_check.c \
+./objects/scene_point_check.o: ../cl_renderer/scene/scene_point_check.c \
   ../cl_renderer/scene/scene.h ../parameters/rt_parameters.h \
   ../parameters/rt_control.h ../cl_renderer/scene/scene_point.h \
   ../error_framework/error_framework.h \

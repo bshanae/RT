@@ -67,7 +67,7 @@
 # define CYLINDER_TEXTURE GLOBAL_TEXTURE
 # define CYLINDER_TOP (t_vector3){0., 1., 0.}
 # define CYLINDER_BOTTOM (t_vector3){0., 0., 0.}
-# define CYLINDER_RADIUS 1.
+# define CYLINDER_RADIUS (RT_F)1.
 
 # define BOX_NAME ""
 # define BOX_MATERIAL GLOBAL_MATERIAL
@@ -80,7 +80,7 @@
 # define PARABOLOID_TEXTURE GLOBAL_TEXTURE
 # define PARABOLOID_EXTREMUM (t_vector3){0., 0., 0.}
 # define PARABOLOID_AXIS (t_vector3){0., 1., 0.}
-# define PARABOLOID_RADIUS 1.
+# define PARABOLOID_RADIUS (RT_F)1.
 
 # define MOEBIUS_NAME ""
 # define MOEBIUS_MATERIAL GLOBAL_MATERIAL

@@ -64,3 +64,13 @@
 ./sources/list_push_back.c
 ./sources/list_last.c
 ./sources/list_find.c
+./sources/btree_alloc.c
+./sources/btree_clean.c
+./sources/btree_delete.c
+./sources/btree_depth.c
+./sources/btree_find.c
+./sources/btree_infix.c
+./sources/btree_insert.c
+./sources/btree_prefix.c
+./sources/btree_suffix.c
+./sources/btree_verify.c

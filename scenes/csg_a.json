@@ -1,0 +1,48 @@
+[
+	{
+		"type" : "settings",
+		"rm mod" : true,
+		"rm limit" : 250,
+		"rm part" : 1,
+		"pt depth" : 2,
+		"pt limit" : 25,
+		"background" : "none",
+		"illumination value" : 0.6
+	},
+
+	{
+        "type" : "camera",
+        "position" : [-60, 70, 125],
+		"rotation" : [0.4, -0.4, 0]
+    },
+
+	{
+		"type" : "sphere",
+		"name" : "Light",
+		"position" : [0, 0, 0],
+		"radius" : 1,
+		"material" : "light"
+	},
+
+	{
+        "type" : "sphere",
+        "name" : "Sphere",
+        "position" : [0, 0, 0],
+        "radius" : 13
+    },
+
+	{
+		"type" : "box",
+		"name" : "Box",
+		"position" : [0, 0, 0],
+		"size" : [10, 10, 10],
+		"material" : "red"
+	},
+
+	{
+		"type" : "csg",
+		"name" : "CSG",
+		"positive" : "Box",
+		"negative" : "Sphere"
+	}
+]

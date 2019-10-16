@@ -44,12 +44,9 @@ static RT_F4		light_area(
 
 		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
-        	shadow_ratio = intersection_light.material.transparency;
-
         	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
         		continue ;
-
-        	//printf("sr : %f\n", shadow_ratio);
+			shadow_ratio = intersection_light.material.transparency;
         }
         else if (intersection_light.object_id != i)
         	continue ;
