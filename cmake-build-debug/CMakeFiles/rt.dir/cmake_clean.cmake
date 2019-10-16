@@ -226,7 +226,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o"
-  "CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/scene/scene_point_check.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_edit_param.c.o"
   "CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o"

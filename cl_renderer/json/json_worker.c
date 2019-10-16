@@ -60,6 +60,8 @@ void	work_object_1(void *data, char *json, jsmntok_t *tokens, char *type)
 		parse_perfcube(data, json, tokens);
 	else if (ft_strequ(type, "settings"))
 		parse_settings(data, json, tokens);
+	else if (ft_strequ(type, "csg"))
+		parse_csg(data, json, tokens);
 	else if (ft_strequ(type, "limited"))
 		parse_limited(data, json, tokens);
 }

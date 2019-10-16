@@ -17,10 +17,10 @@
 char		*get_raw(char *json, jsmntok_t token)
 {
 	char		*res;
-	const int	len = token.end - token.start + 1;
+	const int	len = token.end - token.start;
 
 	res = rt_malloc(sizeof(char) * (len + 1));
-	ft_strncpy(res, json + token.start, len - 1);
+	ft_strncpy(res, json + token.start, len);
 	res[len] = 0;
 	return (res);
 }
