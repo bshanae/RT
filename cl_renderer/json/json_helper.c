@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 19:23:41 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 21:02:47 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/16 18:22:03 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*get_raw(char *json, jsmntok_t token)
 	const int	len = token.end - token.start + 1;
 
 	res = rt_malloc(sizeof(char) * (len + 1));
-	ft_strncpy(res, json + token.start, len);
+	ft_strncpy(res, json + token.start, len - 1);
 	res[len] = 0;
 	return (res);
 }
