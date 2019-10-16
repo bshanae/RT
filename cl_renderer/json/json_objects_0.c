@@ -6,13 +6,32 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 20:18:14 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/16 19:47:57 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "json_parse.h"
 #include "json_defaults.h"
 #include "cl_renderer.h"
+
+void	parse_hack(t_obj *box, void *data, char *json, jsmntok_t *tokens)
+{
+	t_rt_background	bg;
+
+	box->val_s1 = get_string_in_object(json, tokens, "background");
+	if (!box->val_s1)
+		return ;
+	if (ft_strequ(box->val_s1, "none"))
+		bg = rt_background_none;
+	else if (ft_strequ(box->val_s1, "one"))
+		bg = rt_background_one;
+	else if (ft_strequ(box->val_s1, "interpolation"))
+		bg = rt_background_interpolation;
+	else
+		return ;
+	cl_renderer_change_background(data, bg);
+	free_box(box);
+}
 
 void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 {
@@ -40,7 +59,7 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	s->sample_depth = box.i1;
 	s->sample_limit = box.i2;
 	s->illumination = box.i3;
-	free_box(&box);
+	parse_hack(&box, data, json, tokens);
 }
 
 void	parse_camera(void *data, char *json, jsmntok_t *tokens)
