@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 16:06:30 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/16 19:47:57 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/16 19:58:32 by sbosmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,6 @@ void	parse_limited(void *data, char *json, jsmntok_t *tokens)
 	box.val_s4 = get_string_in_object(json, tokens, "main name");
 	box.val_s5 = get_string_in_object(json, tokens, "limit name");
 	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup("limited"));
-	// PROVERKA
 	(!(box.val_s4 && box.val_s5) ? free_box(&box) : 1);
 	if (!(box.val_s4 && box.val_s5))
 		return ;
