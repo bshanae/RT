@@ -20,7 +20,7 @@ char		*get_raw(char *json, jsmntok_t token)
 	const int	len = token.end - token.start + 1;
 
 	res = rt_malloc(sizeof(char) * (len + 1));
-	strlcpy(res, json + token.start, len);
+	ft_strncpy(res, json + token.start, len);
 	res[len] = 0;
 	return (res);
 }
@@ -83,6 +83,8 @@ void		free_box(t_obj *box)
 	(box->val_s1 ? free(box->val_s1) : 1);
 	(box->val_s2 ? free(box->val_s2) : 1);
 	(box->val_s3 ? free(box->val_s3) : 1);
+	(box->val_s4 ? free(box->val_s4) : 1);
+	(boc->val_s5 ? free(box->val_s5) : 1);
 	(box->val_f1 ? free(box->val_f1) : 1);
 	(box->val_f2 ? free(box->val_f2) : 1);
 	(box->val_i1 ? free(box->val_i1) : 1);

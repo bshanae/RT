@@ -25,9 +25,9 @@ void	parse_mandelbulb(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MANDELBULB_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(MANDELBULB_NAME));
 	box.val_i1 = get_float_in_object(json, tokens, "iterations");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_f2 = get_float_in_object(json, tokens, "power");
 	box.v1 = (box.val_v1 ? *box.val_v1 : MANDELBULB_POSITION);
 	box.i1 = (box.val_i1 && *box.val_i1 >= 1 ? *box.val_i1 :
@@ -53,9 +53,9 @@ void	parse_julia(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(JULIA_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(JULIA_NAME));
 	box.val_f1 = get_int_in_object(json, tokens, "iterations");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v1 = (box.val_v1 ? *box.val_v1 : JULIA_POSITION);
 	box.v2 = (box.val_v2 ? *box.val_v2 : JULIA_VALUE);
 	box.i1 = (box.val_i1 && *box.val_i1 >= 1 ? *box.val_i1 : JULIA_ITERATIONS);
@@ -80,15 +80,16 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CSG_NAME));
-	box.val_i1 = get_int_in_object(json, tokens, "positive");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
-	box.val_i2 = get_int_in_object(json, tokens, "negative");
-	box.i1 = (box.val_i1 ? *box.val_i1 : CSG_POSITIVE);
-	box.i2 = (box.val_i2 ? *box.val_i2 : CSG_NEGATIVE);
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(CSG_NAME));
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
+	box.val_s4 = get_string_in_object(json, tokens, "positive name");
+	box.val_s5 = get_string_in_object(json, tokens, "negative name");
+	(!(box.val_s4 && box.val_s5) ? free(&box) : 1);
+	if (!(box.val_s4 && box.val_s4))
+		return ;
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : CSG_MATERIAL);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
-		object_type_julia, (int)box.i1, (int)box.i2);
+		object_type_csg, box.val_s4, box.val_s5);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
 		scene_param_material, box.material);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
@@ -109,9 +110,9 @@ void	parse_explosion(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(EXPLOSION_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(EXPLOSION_NAME));
 	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
 	box.val_f2 = get_float_in_object(json, tokens, "noise amplitude");
 	box.material = (box.val_s1 ? decide_material(box.val_s1) :
@@ -136,9 +137,9 @@ void	parse_perfcube(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(PCUBE_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(PCUBE_NAME));
 	box.val_v1 = get_vector_in_object(json, tokens, "position");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_i1 = get_int_in_object(json, tokens, "iterations");
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : PCUBE_MATERIAL);
 	box.v1 = (box.val_v1 ? *box.val_v1 : PCUBE_POSITION);

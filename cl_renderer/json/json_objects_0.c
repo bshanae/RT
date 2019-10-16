@@ -36,10 +36,10 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	box.val_i3 = get_bool_in_object(json, tokens, "illumination");
 	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_PT_DEPTH);
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_PT_SAMPLE_LIMIT);
-	box.i3 = (box.val_i1 ? *box.val_i1 : SETTINGS_ILLUMINATION_);
+	box.i3 = (box.val_i3 ? *box.val_i3 : SETTINGS_ILLUMINATION_);
 	s->sample_depth = box.i1;
 	s->sample_limit = box.i2;
-	s->illumination = box.i1;
+	s->illumination = box.i3;
 	free_box(&box);
 }
 
@@ -63,13 +63,14 @@ void	parse_ambient(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj		box;
 
+	ft_bzero(&box, sizeof(t_obj));
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(AMBIENT_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(AMBIENT_NAME));
 	box.material = (box.val_s1 ? decide_material(box.val_s1) :
 		AMBIENT_MATERIAL);
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
 		object_type_light_ambient);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
@@ -79,7 +80,35 @@ void	parse_ambient(void *data, char *json, jsmntok_t *tokens)
 	if (box.texture)
 		scene_edit_param(((t_cl_renderer*)data)->data.scene,
 			-1, scene_param_texture, box.texture);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_s3);
+	free_box(&box);
+}
+
+void	parse_limited(void *data, char *json, jsmntok_t *tokens)
+{
+	t_obj		box;
+
+	ft_bzero(&box, sizeof(t_obj));
+	box.val_s1 = get_string_in_object(json, tokens, "material");
+	box.val_s2 = get_string_in_object(json, tokens, "name");
+	box.val_s3 = get_string_in_object(json, tokens, "texture");
+	box.val_s4 = get_string_in_object(json, tokens, "main name");
+	box.val_s5 = get_string_in_object(json, tokens, "limit name");
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup("limited"));
+	// PROVERKA
+	(!(box.val_s4 && box.val_s5) ? free_box(&box) : 1);
+	if (!(box.val_s4 && box.val_s5))
+		return ;
+	box.material = (box.val_s1 ? decide_material(box.val_s1) :
+		AMBIENT_MATERIAL);
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
+	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
+		object_type_limited, box.val_s4, box.val_s5);
+	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
+		scene_param_material, box.material);
+	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
+		scene_param_name, box.name);
+	if (box.texture)
+		scene_edit_param(((t_cl_renderer*)data)->data.scene,
+			-1, scene_param_texture, box.texture);
+	free_box(&box);
 }

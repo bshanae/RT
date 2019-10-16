@@ -60,6 +60,8 @@ void	work_object_1(void *data, char *json, jsmntok_t *tokens, char *type)
 		parse_perfcube(data, json, tokens);
 	else if (ft_strequ(type, "settings"))
 		parse_settings(data, json, tokens);
+	else if (ft_strequ(type, "limited"))
+		parse_limited(data, json, tokens);
 }
 
 void	work_tokens(void *data, char *json, jsmntok_t *tokens)
@@ -90,12 +92,12 @@ void	json_load(void *data, const char *path)
 	if (!json)
 		return (rt_raise_warning("Parser : Can't parse file"));
 	jsmn_init(&parser);
-	res = jsmn_parse(&parser, json, strlen(json), NULL, 1);
+	res = jsmn_parse(&parser, json, ft_strlen(json), NULL, 1);
 	if (res <= 0)
 		return (rt_raise_warning("Parser : Can't parse file"));
 	tokens = rt_malloc(sizeof(jsmntok_t) * res);
 	jsmn_init(&parser);
-	jsmn_parse(&parser, json, strlen(json), tokens, res);
+	jsmn_parse(&parser, json, ft_strlen(json), tokens, res);
 	work_tokens(data, json, tokens);
 	free(tokens);
 	free(json);

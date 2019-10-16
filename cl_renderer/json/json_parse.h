@@ -56,6 +56,8 @@ typedef struct	s_parse_object
 	char		*val_s1;
 	char		*val_s2;
 	char		*val_s3;
+	char		*val_s4;
+	char		*val_s5;
 	float		*val_f1;
 	float		*val_f2;
 	int			*val_i1;
@@ -110,5 +112,6 @@ void			parse_explosion(void *data, char *json, jsmntok_t *tokens);
 void			parse_perfcube(void *data, char *json, jsmntok_t *tokens);
 void			parse_settings(void *data, char *json, jsmntok_t *tokens);
 void			free_box(t_obj *box);
+void			parse_limited(void *data, char *json, jsmntok_t *tokens);
 
 #endif

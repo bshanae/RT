@@ -27,9 +27,9 @@ void	parse_cylinder(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(CYLINDER_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(CYLINDER_NAME));
 	box.v1 = (box.val_v1 ? *box.val_v1 : CYLINDER_TOP);
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v2 = (box.val_v2 ? *box.val_v2 : CYLINDER_BOTTOM);
 	box.f1 = (box.val_f1 ? *box.val_f1 : CYLINDER_RADIUS);
 	box.material = (box.val_s1 ? decide_material(box.val_s1) :
@@ -48,15 +48,16 @@ void	parse_box(void *data, char *json, jsmntok_t *tokens)
 	t_obj		box;
 	t_scene		*sc;
 
+	ft_bzero(&box, sizeof(t_obj));
 	sc = ((t_cl_renderer*)data)->data.scene;
 	box.val_v1 = get_vector_in_object(json, tokens, "position");
 	box.val_v2 = get_vector_in_object(json, tokens, "size");
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(BOX_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(BOX_NAME));
 	box.v1 = (box.val_v1 ? *box.val_v1 : BOX_POSITION);
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v2 = (box.val_v2 ? *box.val_v2 : BOX_SIZE);
 	box.material = (box.val_s1 ? decide_material(box.val_s1) : BOX_MATERIAL);
 	object_build(scene_get_space(sc),
@@ -65,11 +66,7 @@ void	parse_box(void *data, char *json, jsmntok_t *tokens)
 	scene_edit_param(sc, -1, scene_param_name, box.name);
 	if (box.texture)
 		scene_edit_param(sc, -1, scene_param_texture, box.texture);
-	free(box.val_v1);
-	free(box.val_v2);
-	free(box.val_s1);
-	free(box.val_s2);
-	free(box.val_s3);
+	free_box(&box);
 }
 
 void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
@@ -84,9 +81,9 @@ void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(PARABOLOID_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(PARABOLOID_NAME));
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v1 = (box.val_v1 ? *box.val_v1 : PARABOLOID_EXTREMUM);
 	box.v2 = (box.val_v2 ? *box.val_v2 : PARABOLOID_AXIS);
 	box.f1 = (box.val_f1 ? *box.val_f1 : PARABOLOID_RADIUS);
@@ -112,9 +109,9 @@ void	parse_moebius(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(MOEBIUS_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(MOEBIUS_NAME));
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_f2 = get_float_in_object(json, tokens, "half width");
 	box.v1 = (box.val_v1 ? *box.val_v1 : MOEBIUS_POSITION);
 	box.f1 = (box.val_f1 ? *box.val_f1 : MOEBIUS_RADIUS);
@@ -139,9 +136,9 @@ void	parse_torus(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? strdup(box.val_s2) : strdup(TORUS_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(TORUS_NAME));
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
-	box.texture = box.val_s3 ? strdup(box.val_s3) : NULL;
+	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_f2 = get_float_in_object(json, tokens, "width");
 	box.v1 = (box.val_v1 ? *box.val_v1 : TORUS_POSITION);
 	box.f1 = (box.val_f1 ? *box.val_f1 : TORUS_RADIUS);
