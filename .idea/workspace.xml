@@ -12,11 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0400b086-99bf-42a4-9964-d02cd21e9b00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scenes/cornell_default.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_helper.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_helper.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_parse.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_worker.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_worker.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cl_renderer/texture/texture_initialization.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/texture/texture_initialization.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_build.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_build.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_light_area" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_radiance_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene_x" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_scene_x" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/cl_source/cl_texture" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/cl_source/cl_texture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_defaults.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_material.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_material.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_objects_0.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_objects_0.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cl_renderer/json/json_objects_3.c" beforeDir="false" afterPath="$PROJECT_DIR$/cl_renderer/json/json_objects_3.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
@@ -24,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
@@ -111,7 +116,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_sphere.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/object_x/object_torus.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/rt_settings/rt_settings_init.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/rt_settings/rt_settings_init.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/camera_point_check.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/rt_background_translate.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_clear.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_delete.c.o" afterDir="false" />
@@ -121,6 +125,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_get_space.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_new.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_object_x.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_point_check.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_point_check.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_select.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_set_x.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/scene/scene_update.c.o" afterDir="false" />
@@ -130,7 +135,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_fill_data.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cl_renderer/texture/texture_iter.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_assert_x.c.o" afterDir="false" />
@@ -311,6 +315,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rt.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/box_default.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

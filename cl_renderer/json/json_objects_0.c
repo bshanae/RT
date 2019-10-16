@@ -25,7 +25,7 @@ void	parse_hack(t_obj *box, void *data, char *json, jsmntok_t *tokens)
 		bg = rt_background_none;
 	else if (ft_strequ(box->val_s1, "one"))
 		bg = rt_background_one;
-	else if (ft_strequ(box->val_s1, "interpolation"))
+	else if (ft_strequ(box->val_s1, "interpolated"))
 		bg = rt_background_interpolation;
 	else
 		return ;
@@ -40,9 +40,9 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 
 	ft_bzero(&box, sizeof(t_obj));
 	s = &((t_cl_renderer*)data)->data.settings;
-	box.val_i1 = get_bool_in_object(json, tokens, "use raymarching");
-	box.val_i2 = get_int_in_object(json, tokens, "step limit");
-	box.val_f1 = get_float_in_object(json, tokens, "step part");
+	box.val_i1 = get_bool_in_object(json, tokens, "rm mod");
+	box.val_i2 = get_int_in_object(json, tokens, "rm limit");
+	box.val_f1 = get_float_in_object(json, tokens, "rm part");
 	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_USE_RM);
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_STEP_LIMIT);
 	box.f1 = (box.val_f1 ? *box.val_f1 : SETTINGS_STEP_PART);
@@ -51,14 +51,17 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	s->rm_step_part = box.f1;
 	free_box(&box);
 	box.val_i1 = get_int_in_object(json, tokens, "pt depth");
-	box.val_i2 = get_int_in_object(json, tokens, "pt sample limit");
-	box.val_i3 = get_bool_in_object(json, tokens, "illumination");
+	box.val_i2 = get_int_in_object(json, tokens, "pt limit");
+	box.val_i3 = get_bool_in_object(json, tokens, "illumination mod");
+	box.val_f1 = get_float_in_object(json, tokens, "illumination value");
 	box.i1 = (box.val_i1 ? *box.val_i1 : SETTINGS_PT_DEPTH);
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_PT_SAMPLE_LIMIT);
-	box.i3 = (box.val_i3 ? *box.val_i3 : SETTINGS_ILLUMINATION_);
+	box.i3 = (box.val_i3 ? *box.val_i3 : SETTINGS_ILLUMINATION_MOD);
+	box.f1 = (box.val_f1 ? *box.val_f1 : SETTINGS_ILLUMINATION_VALUE);
 	s->sample_depth = box.i1;
 	s->sample_limit = box.i2;
 	s->illumination = box.i3;
+	s->illumination_value = box.f1;
 	parse_hack(&box, data, json, tokens);
 }
 
@@ -107,26 +110,16 @@ void	parse_limited(void *data, char *json, jsmntok_t *tokens)
 	t_obj		box;
 
 	ft_bzero(&box, sizeof(t_obj));
-	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
-	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.val_s4 = get_string_in_object(json, tokens, "main name");
-	box.val_s5 = get_string_in_object(json, tokens, "limit name");
-	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup("limited"));
+	box.val_s4 = get_string_in_object(json, tokens, "main");
+	box.val_s5 = get_string_in_object(json, tokens, "limit");
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(""));
 	(!(box.val_s4 && box.val_s5) ? free_box(&box) : 1);
 	if (!(box.val_s4 && box.val_s5))
 		return ;
-	box.material = (box.val_s1 ? decide_material(box.val_s1) :
-		AMBIENT_MATERIAL);
-	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
 		object_type_limited, box.val_s4, box.val_s5);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
-		scene_param_material, box.material);
-	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
 		scene_param_name, box.name);
-	if (box.texture)
-		scene_edit_param(((t_cl_renderer*)data)->data.scene,
-			-1, scene_param_texture, box.texture);
 	free_box(&box);
 }

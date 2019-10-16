@@ -30,7 +30,6 @@ static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersect
     result = 0;
     for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
-
     return (result != 0);
 }
 
@@ -86,6 +85,35 @@ static int			scene_intersect(
 		result = scene_intersect_rt(scene, intersection);
 	else if (settings->tracing_mod == rt_tracing_rm)
     	result = scene_intersect_rm(scene, intersection, settings);
+    else
+    	return (0);
+
+	if (result)
+	{
+		intersection->material = scene->objects[intersection->object_id].material;
+		if (settings->tracing_mod == rt_tracing_rt)
+			intersection->hit = ray_intersect(&intersection->ray);
+		if (scene->objects[intersection->object_id].texture_id != -1)
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
+		if (scene->objects[intersection->object_id].type == object_type_explosion)
+			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+	}
+	return (result);
+}
+
+static int			scene_intersect_force(
+					global t_scene *scene,
+					int object_id,
+					global t_camera *camera,
+					t_intersection *intersection,
+					constant t_rt_settings *settings)
+{
+	int				result;
+
+	intersection_reset(intersection);
+	if (settings->tracing_mod == rt_tracing_rt)
+		result = object_intersect(scene->objects + object_id, intersection);
     else
     	return (0);
 

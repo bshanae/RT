@@ -123,9 +123,9 @@ static RT_F4				radiance_trace(
 
 		choice_value = rng(rng_state);
 		choice_result = RT_CHOICE_DIFFUSE;
-		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
+		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > RT_EPSILON && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
-		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency > 0. && choice_value < intersection->material.transparency))
+		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency >RT_EPSILON  && choice_value < intersection->material.transparency))
 			choice_result = RT_CHOICE_REFRACT;
 
 		if (choice_result == RT_CHOICE_REFLECT)

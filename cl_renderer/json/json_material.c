@@ -39,6 +39,8 @@ t_material	decide_material(char *mat_name)
 		return (MATERIAL_LIGHT);
 	else if (ft_strequ(mat_name, "red"))
 		return (MATERIAL_RED);
+	else if (ft_strequ(mat_name, "blue"))
+		return (MATERIAL_BLUE);
 	else if (ft_strequ(mat_name, "green"))
 		return (MATERIAL_GREEN);
 	else if (ft_strequ(mat_name, "light basic"))

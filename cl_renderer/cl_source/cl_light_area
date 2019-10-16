@@ -39,13 +39,20 @@ static RT_F4		light_area(
 
 		if (!scene_intersect(scene, camera, &intersection_light, settings))
 			continue ;
-		if (intersection_light.object_id != i)
+
+		shadow_ratio = (RT_F)1.;
+
+		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
-        	if (intersection_light.material.transparency)
-        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparency;
-        	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
-        	continue ;
+        	shadow_ratio = intersection_light.material.transparency;
+
+        	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
+        		continue ;
+
+        	//printf("sr : %f\n", shadow_ratio);
         }
+        else if (intersection_light.object_id != i)
+        	continue ;
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
@@ -54,7 +61,7 @@ static RT_F4		light_area(
 		sphere_radius = ((constant t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
-		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
+		radiance += shadow_ratio * scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
 	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), RT_LIGHT_AREA_FLOOR));
 }

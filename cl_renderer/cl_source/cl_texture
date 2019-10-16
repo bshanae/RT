@@ -129,16 +129,18 @@ static void         sphere_texture(
 static RT_F         rt_mod(RT_F number, int div)
 {
     int             tmp;
-    int             rezus;
+    //int             rezus;
 
     tmp = (int)number;
     if (tmp < 0)
         tmp = -tmp;
     if (tmp > div)
+    {
         if (number < 0)
             return ((number + tmp / div * div));
         else
             return ((number - tmp / div * div));
+     }
     return (number);
 }
 

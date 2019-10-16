@@ -1879,16 +1879,18 @@ static void         sphere_texture(
 static RT_F         rt_mod(RT_F number, int div)
 {
     int             tmp;
-    int             rezus;
+    //int             rezus;
 
     tmp = (int)number;
     if (tmp < 0)
         tmp = -tmp;
     if (tmp > div)
+    {
         if (number < 0)
             return ((number + tmp / div * div));
         else
             return ((number - tmp / div * div));
+     }
     return (number);
 }
 
@@ -2001,7 +2003,7 @@ static RT_F4		object_normal_rt(
 	else if (object->type == object_type_box)
 		return (object_box_normal(object, intersection));
 	else if (object->type == object_type_paraboloid)
-		return (object_box_paraboloid(object, intersection));
+		return (object_paraboloid_normal(object, intersection));
  	return (intersection->normal);
 }
 
@@ -2046,7 +2048,6 @@ static int			scene_intersect_rt(global t_scene *scene, t_intersection *intersect
     result = 0;
     for (int object_i = 0; object_i < scene->objects_length; object_i++)
 		result += object_intersect(scene->objects + object_i, intersection);
-
     return (result != 0);
 }
 
@@ -2102,6 +2103,35 @@ static int			scene_intersect(
 		result = scene_intersect_rt(scene, intersection);
 	else if (settings->tracing_mod == rt_tracing_rm)
     	result = scene_intersect_rm(scene, intersection, settings);
+    else
+    	return (0);
+
+	if (result)
+	{
+		intersection->material = scene->objects[intersection->object_id].material;
+		if (settings->tracing_mod == rt_tracing_rt)
+			intersection->hit = ray_intersect(&intersection->ray);
+		if (scene->objects[intersection->object_id].texture_id != -1)
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
+		if (scene->objects[intersection->object_id].type == object_type_explosion)
+			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
+	}
+	return (result);
+}
+
+static int			scene_intersect_force(
+					global t_scene *scene,
+					int object_id,
+					global t_camera *camera,
+					t_intersection *intersection,
+					constant t_rt_settings *settings)
+{
+	int				result;
+
+	intersection_reset(intersection);
+	if (settings->tracing_mod == rt_tracing_rt)
+		result = object_intersect(scene->objects + object_od, intersection);
     else
     	return (0);
 
@@ -2356,13 +2386,20 @@ static RT_F4		light_area(
 
 		if (!scene_intersect(scene, camera, &intersection_light, settings))
 			continue ;
-		if (intersection_light.object_id != i)
+
+		shadow_ratio = (RT_F)1.;
+
+		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
-        	if (intersection_light.material.transparency)
-        		shadow_ratio = default_transparence_shadow_ratio * intersection_light.material.transparency;
-        	radiance += (RT_F4){shadow_ratio, shadow_ratio, shadow_ratio, 0.};
-        	continue ;
+        	shadow_ratio = intersection_light.material.transparency;
+
+        	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
+        		continue ;
+
+        	//printf("sr : %f\n", shadow_ratio);
         }
+        else if (intersection_light.object_id != i)
+        	continue ;
 
 		emission_intensity = dot(intersection_object->normal, intersection_light.ray.direction);
 		if (emission_intensity < 0.00001f)
@@ -2371,7 +2408,7 @@ static RT_F4		light_area(
 		sphere_radius = ((constant t_object_sphere *)scene->objects[intersection_light.object_id].data)->radius;
 		cos_a_max = RT_SQRT(1.f - (sphere_radius * sphere_radius) / length(intersection_object->hit - light_position));
 		omega = 2 * RT_PI * (1.f - cos_a_max);
-		radiance += scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
+		radiance += shadow_ratio * scene->objects[i].material.emission * emission_intensity * omega * RT_1_PI;
 	}
 	return (RT_MAX(RT_MIN(RT_LIGHT_AREA_MULTIPLIER * radiance, RT_LIGHT_AREA_CEILING), RT_LIGHT_AREA_FLOOR));
 }
@@ -2653,9 +2690,9 @@ static RT_F4				radiance_trace(
 
 		choice_value = rng(rng_state);
 		choice_result = RT_CHOICE_DIFFUSE;
-		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > 0. && choice_value < intersection->material.reflectance))
+		if (intersection->material.reflectance == (RT_F)1. || (intersection->material.reflectance > RT_EPSILON && choice_value < intersection->material.reflectance))
 			choice_result = RT_CHOICE_REFLECT;
-		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency > 0. && choice_value < intersection->material.transparency))
+		else if (intersection->material.transparency == (RT_F)1. || (intersection->material.transparency >RT_EPSILON  && choice_value < intersection->material.transparency))
 			choice_result = RT_CHOICE_REFRACT;
 
 		if (choice_result == RT_CHOICE_REFLECT)
