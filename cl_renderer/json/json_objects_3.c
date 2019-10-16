@@ -26,7 +26,7 @@ void	parse_mandelbulb(void *data, char *json, jsmntok_t *tokens)
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
 	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(MANDELBULB_NAME));
-	box.val_i1 = get_float_in_object(json, tokens, "iterations");
+	box.val_i1 = get_int_in_object(json, tokens, "iterations");
 	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.val_f2 = get_float_in_object(json, tokens, "power");
 	box.v1 = (box.val_v1 ? *box.val_v1 : MANDELBULB_POSITION);
@@ -54,7 +54,7 @@ void	parse_julia(void *data, char *json, jsmntok_t *tokens)
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
 	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(JULIA_NAME));
-	box.val_f1 = get_int_in_object(json, tokens, "iterations");
+	box.val_i1 = get_int_in_object(json, tokens, "iterations");
 	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v1 = (box.val_v1 ? *box.val_v1 : JULIA_POSITION);
 	box.v2 = (box.val_v2 ? *box.val_v2 : JULIA_VALUE);

@@ -84,7 +84,7 @@ void		free_box(t_obj *box)
 	(box->val_s2 ? free(box->val_s2) : 1);
 	(box->val_s3 ? free(box->val_s3) : 1);
 	(box->val_s4 ? free(box->val_s4) : 1);
-	(boc->val_s5 ? free(box->val_s5) : 1);
+	(box->val_s5 ? free(box->val_s5) : 1);
 	(box->val_f1 ? free(box->val_f1) : 1);
 	(box->val_f2 ? free(box->val_f2) : 1);
 	(box->val_i1 ? free(box->val_i1) : 1);
