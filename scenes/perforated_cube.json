@@ -1,49 +1,46 @@
 [
 	{
-		"type" : "settings",
-		"rm mod" : true,
-		"rm limit" : 255,
-		"rm part" : 0.7,
-		"pt depth" : 1,
-		"pt limit" : 30,
-		"illumination": false,
-		"background" : "none"
+		"type"  : "settings",
+		"rm mod"  : true,
+		"rm limit"  : 512,
+		"rm part"  : 0.7,
+		"pt depth"  : 1,
+		"pt limit"  : 25,
+		"illumination" : false,
+		"background"  : "one"
+	},
+
+	{
+		"type" : "camera",
+		"position" : [0, 0, 10]
 	},
 	{
-		"type": "camera",
-		"position": [0, 0, 10]
+		"type" : "sphere",
+		"name" : "Light",
+		"position" : [0, 10, 20],
+		"radius" : 3,
+		"material" : "light"
 	},
+
 	{
-		"type": "sphere",
-		"name": "Light",
-		"position": [0, 10, 20],
-		"radius": 3,
-		"material": "light"
+		"type" : "light point",
+		"name" : "Light point",
+		"position" : [0, 10, 30],
+		"material" : "light"
 	},
+
 	{
-		"type": "light point",
-		"name": "Light point",
-		"position": [0, 10, 30],
-		"material": "light"
+		"type" : "light ambient",
+		"name" : "Light ambient",
+		"position" : [0, 10, 0],
+		"radius" :  3
 	},
+
 	{
-		"type": "light ambient",
-		"name": "Light ambient",
-		"position": [0, 10, 0],
-		"radius":  3
-	},
-	{
-		"type": "plane",
-		"name": "Plane Back",
-		"position": [0, 0, -50],
-		"normal": [0, 0, 1],
-		"material": "black"
-	},
-	{
-		"type": "perforated cube",
-		"name": "Perforated Cube",
-		"position": [0, 0, 3],
-		"iterations": 5,
-		"material": "red"
+		"type" : "perforated cube",
+		"name" : "Perforated Cube",
+		"position" : [0, 0, 3],
+		"iterations" : 5,
+		"material" : "red"
 	}
 ]

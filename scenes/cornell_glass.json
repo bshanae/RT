@@ -3,7 +3,7 @@
         "type" : "settings",
         "rm mod" : false,
         "pt depth" : 3,
-        "pt limit" : 30,
+        "pt limit" : 250,
         "illumination mod" : true,
         "illumination value" : 0.9
     },
@@ -67,10 +67,10 @@
 
     {
         "type" : "sphere",
-        "name" : "Sphere Mirror",
+        "name" : "Sphere",
         "position" : [4, 2, -84],
         "radius" : 12,
-        "material" : "blue"
+        "material" : "0xb37f99"
     },
 
     {

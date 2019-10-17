@@ -5,7 +5,7 @@
 		"rm limit" : 255,
 		"rm part" : 0.7,
 		"pt depth" : 1,
-		"pt limit" : 25,
+		"pt limit" : 250,
 		"background"  : "none"
 	},
 	{

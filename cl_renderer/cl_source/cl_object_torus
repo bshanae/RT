@@ -17,6 +17,6 @@ static RT_F 		object_torus_sdf(global t_object *object, t_intersection *intersec
 
 	data = *(global t_object_torus *)object->data;
 	point = data.position - intersection->hit;
-	q = (RT_F2)(length(intersection->hit.xz) - data.t_0,intersection->hit.y);
+	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
 }

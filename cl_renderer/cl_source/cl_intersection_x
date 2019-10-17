@@ -52,5 +52,5 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	refracted = a + b;
 	refracted = normalize(refracted);
 	destination->ray.direction = refracted;
-	destination->ray.origin = source->hit;
+	destination->ray.origin = source->hit + destination->ray.direction * (RT_F)0.1;
 }

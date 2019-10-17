@@ -1,0 +1,82 @@
+[
+	{
+		"type" : "settings",
+		"rm mod" : false,
+		"pt depth" : 3,
+		"pt limit" : 250,
+		"illumination mod" : true,
+		"illumination value" : 0.9
+	},
+
+	{
+		"type" : "camera",
+		"position" : [0, 20, 150]
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Light",
+		"position" : [17, 40, -16],
+		"radius" : 3,
+		"material" : "light"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Back",
+		"position" : [0, 0, -140],
+		"normal" : [0, 0, 1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Left",
+		"position" : [-40, 0, 0],
+		"normal" : [1, 0, 0],
+		"material" : "blue"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Right",
+		"position" : [40, 0, 0],
+		"normal" : [-1, 0, 0],
+		"material" : "red"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Front",
+		"position" : [0, 0, 200],
+		"normal" : [0, 0, -1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Upper",
+		"position" : [0, 70, 0],
+		"normal" : [0, -1 , 0]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Button",
+		"position" : [0, -25, 0],
+		"normal" : [0, 1, 0]
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Sphere",
+		"position" : [5, 2, -75],
+		"radius" : 12
+	},
+
+	{
+		"type" : "box",
+		"name" : "Box",
+		"position" : [-14, 9, 14],
+		"size" : [15, 15, 15],
+		"material" : "mirror"
+	}
+]

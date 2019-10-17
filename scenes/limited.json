@@ -2,8 +2,8 @@
 	{
 		"type" : "settings",
 		"rm mod" : false,
-		"pt depth" : 1,
-		"pt limit" : 30,
+		"pt depth" : 3,
+		"pt limit" : 250,
 		"illumination" : false
 	},
 
