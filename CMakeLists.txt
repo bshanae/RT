@@ -122,7 +122,7 @@ else ()
 	link_directories(${RT_GTK_LIBRARY_DIRS})
 endif ()
 
-link_directories(../21_libft/)
+link_directories(./libft/)
 
 if (${RT_GTK_PKG})
 	add_definitions(${GTK3_CFLAGS_OTHER})

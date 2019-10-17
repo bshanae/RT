@@ -9,7 +9,6 @@ static RT_F4		light_area(
 					constant t_rt_settings *settings,
 					global ulong *rng_state)
 {
-	const RT_F		default_transparence_shadow_ratio = 0.15;
 	t_intersection	intersection_light;
 	RT_F4			radiance;
 	RT_F4			light_position;
@@ -44,9 +43,9 @@ static RT_F4		light_area(
 
 		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
+        	shadow_ratio = intersection_light.material.transparency;
         	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
         		continue ;
-			shadow_ratio = intersection_light.material.transparency;
         }
         else if (intersection_light.object_id != i)
         	continue ;

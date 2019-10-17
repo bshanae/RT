@@ -70,14 +70,22 @@
         "name" : "Sphere Mirror",
         "position" : [4, 2, -84],
         "radius" : 12,
-        "material" : "mirror"
+        "material" : "blue"
     },
 
     {
         "type" : "sphere",
-        "name" : "Sphere Glass",
-        "position" : [-3, 10, -50],
+        "name" : "Glass A",
+        "position" : [-7, 2, -58],
         "radius" : 12,
-        "material" : "glass"
+        "material" : "glass_a"
+    },
+
+    {
+        "type" : "sphere",
+        "name" : "Glass B",
+        "position" : [10, 10, -10],
+        "radius" : 5,
+        "material" : "glass_b"
     }
 ]

@@ -45,7 +45,7 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	m += source->ray.direction;
 	m = normalize(m);
 	sin_alpha = length(cross(source->ray.direction * -1, source->normal));
-	sin_beta = sin_alpha / 1.02;
+	sin_beta = sin_alpha / source->material.transparency_index;
 	cos_beta = RT_SQRT(1 - sin_beta * sin_beta);
 	a = source->normal * (-1 * cos_beta);
 	b = m * sin_beta;

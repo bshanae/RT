@@ -24,6 +24,7 @@ typedef struct		s_material
 	RT_F			specular;
 	RT_F			reflectance;
 	RT_F			transparency;
+	RT_F			transparency_index;
 }					t_material;
 
 #endif

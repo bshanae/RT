@@ -203,13 +203,14 @@ static t_color		color_unpack(RT_F4 source, int filter_sepia)
 
 // cl_material /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-typedef struct 		s_material
+typedef struct		s_material
 {
 	RT_F4			color;
 	RT_F4			emission;
 	RT_F			specular;
 	RT_F			reflectance;
 	RT_F			transparency;
+	RT_F			transparency_index;
 }					t_material;
 
 // cl_intersection_x ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -259,7 +260,7 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	m += source->ray.direction;
 	m = normalize(m);
 	sin_alpha = length(cross(source->ray.direction * -1, source->normal));
-	sin_beta = sin_alpha / 1.02;
+	sin_beta = sin_alpha / source->material.refraction_index;
 	cos_beta = RT_SQRT(1 - sin_beta * sin_beta);
 	a = source->normal * (-1 * cos_beta);
 	b = m * sin_beta;
@@ -1722,6 +1723,7 @@ static RT_F			object_center_shift(global t_object *object)
 		return (object_sphere_center_shift(object));
 	return (0);
 }
+
 // cl_camera_definition ////////////////////////////////////////////////////////////////////////////////////////////////
 
 # include "rt_parameters.h"
@@ -2108,13 +2110,19 @@ static int			scene_intersect(
 
 	if (result)
 	{
-		intersection->material = scene->objects[intersection->object_id].material;
+
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
+
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-		if (scene->objects[intersection->object_id].type == object_type_explosion)
-			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
+		intersection->material = scene->objects[intersection->object_id].material;
+		if (scene->objects[intersection->object_id].type == object_type_csg)
+			intersection->material = scene->objects[((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id].material;
+		else if (scene->objects[intersection->object_id].type == object_type_explosion)
+        			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);
@@ -2131,19 +2139,25 @@ static int			scene_intersect_force(
 
 	intersection_reset(intersection);
 	if (settings->tracing_mod == rt_tracing_rt)
-		result = object_intersect(scene->objects + object_od, intersection);
+		result = object_intersect(scene->objects + object_id, intersection);
     else
     	return (0);
 
 	if (result)
 	{
-		intersection->material = scene->objects[intersection->object_id].material;
+
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
+
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
+
+		if (scene->objects[intersection->object_id].type == object_type_csg)
+			intersection->object_id = ((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id;
+		intersection->material = scene->objects[intersection->object_id].material;
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
-			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+        			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);
@@ -2356,7 +2370,6 @@ static RT_F4		light_area(
 					constant t_rt_settings *settings,
 					global ulong *rng_state)
 {
-	const RT_F		default_transparence_shadow_ratio = 0.15;
 	t_intersection	intersection_light;
 	RT_F4			radiance;
 	RT_F4			light_position;
@@ -2391,12 +2404,9 @@ static RT_F4		light_area(
 
 		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
-        	shadow_ratio = intersection_light.material.transparency;
-
         	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
         		continue ;
-
-        	//printf("sr : %f\n", shadow_ratio);
+			shadow_ratio = intersection_light.material.transparency;
         }
         else if (intersection_light.object_id != i)
         	continue ;
