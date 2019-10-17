@@ -1,0 +1,89 @@
+[
+	{
+		"type" : "settings",
+		"rm mod" : false,
+		"pt depth" : 3,
+		"pt limit" : 250,
+		"background" : "none",
+		"illumination mod" : false,
+		"light mod" : "basic"
+	},
+
+	{
+		"type" : "camera",
+		"position" : [0, 20, 150]
+	},
+
+	{
+		"type" : "light point",
+		"name" : "Point 1",
+		"position" : [-35, 34, 57],
+		"material" : "light basic"
+	},
+
+	{
+		"type" : "light point",
+		"name" : "Point 2",
+		"position" : [35, 34, 57],
+		"material" : "light basic"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Back",
+		"position" : [0, 0, -140],
+		"normal" : [0, 0, 1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Left",
+		"position" : [-40, 0, 0],
+		"normal" : [1, 0, 0],
+		"material" : "green"
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Right",
+		"position" : [40, 0, 0],
+		"normal" : [-1, 0, 0],
+		"material" : "red"
+	},
+
+	{
+		"type" : "paraboloid",
+		"name" : "Paraboloid",
+		"extremum" : [14, 7, -62],
+		"axis" : [0, -1, 0],
+		"radius" : 2
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Front",
+		"position" : [0, 0, 200],
+		"normal" : [0, 0, -1]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Upper",
+		"position" : [0, 70, 0],
+		"normal" : [0, -1 , 0]
+	},
+
+	{
+		"type" : "plane",
+		"name" : "Plane Button",
+		"position" : [0, -25, 0],
+		"normal" : [0, 1, 0]
+	},
+
+	{
+		"type" : "sphere",
+		"name" : "Sphere",
+		"position" : [-22, 21, -82],
+		"radius" : 12
+	}
+]
