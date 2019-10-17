@@ -260,14 +260,14 @@ static void			intersection_refract(t_intersection *destination, const t_intersec
 	m += source->ray.direction;
 	m = normalize(m);
 	sin_alpha = length(cross(source->ray.direction * -1, source->normal));
-	sin_beta = sin_alpha / source->material.refraction_index;
+	sin_beta = sin_alpha / source->material.transparency_index;
 	cos_beta = RT_SQRT(1 - sin_beta * sin_beta);
 	a = source->normal * (-1 * cos_beta);
 	b = m * sin_beta;
 	refracted = a + b;
 	refracted = normalize(refracted);
 	destination->ray.direction = refracted;
-	destination->ray.origin = source->hit;
+	destination->ray.origin = source->hit + destination->ray.direction * (RT_F)0.1;
 }
 
 // cl_object ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -847,6 +847,7 @@ static int			object_box_intersect(global t_object *object, t_intersection *inter
 			t[0] = t[1];
 			t[1] = t_temp;
 		}
+
 		t_near = RT_MAX(t[0], t_near);
 		t_far = RT_MIN(t[1], t_far);
 		if (t_far <= t_near)
@@ -917,38 +918,37 @@ static RT_F 		object_box_sdf(global t_object *object, t_intersection *intersecti
 		+ length((RT_F4){RT_MAX(d.x, (RT_F)0.f), RT_MAX(d.y, (RT_F)0.f), RT_MAX(d.z, (RT_F)0.f), (RT_F)0.f}));
 }
 
-
 static RT_F4		object_box_normal(global t_object *object, t_intersection *intersection)
 {
 	t_object_box	data;
-    RT_F4			normal;
-    RT_F4			point;
-    RT_F			min;
-    RT_F			distance;
-
+	RT_F4			point;
+	RT_F4			normal;
+	RT_F			distance;
+	RT_F			min;
 
 	data = *(global t_object_box *)object->data;
-	normal = 0;
-	min = RT_INFINITY;
 	point = intersection->hit - data.position;
-	distance = RT_ABS(data.size.x - RT_ABS(point.x));
-    if (distance < min)
-    {
-        min = distance;
-        normal = sign(point.x) * (RT_F4){1., 0., 0., 0.};
-    }
-    distance = RT_ABS(data.size.y - RT_ABS(point.y));
-    if (distance < min)
-    {
-        min = distance;
-        normal = sign(point.y) * (RT_F4){0., 1., 0., 0.};
-    }
-    distance = RT_ABS(data.size.z - RT_ABS(point.z));
-    if (distance < min)
-    {
-        min = distance;
-        normal = sign(point.z) * (RT_F4){0., 0., 1., 0.};
-    }
+	normal  = 0;
+	min = RT_INFINITY;
+
+	distance = RT_ABS(data.size.x / (RT_F)2. - RT_ABS(point.x);
+	if (distance < min)
+	{
+		normal = sign(point.x) * (RT_F4){1., 0., 0., 0.};
+		min = distance;
+	}
+
+	distance = RT_ABS(data.size.y / (RT_F)2. - RT_ABS(point.y);
+	if (distance < min)
+	{
+		normal = sign(point.y) * (RT_F4){ 0., 1., 0., 0.};
+		min = distance;
+	}
+
+	distance = RT_ABS(data.size.z / (RT_F)2. - RT_ABS(point.z);
+	if (distance < min)
+		normal = sign(point.z) * (RT_F4){ 0., 0., 1., 0.};
+
 	return (normal);
 }
 // cl_object_paraboloid ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1241,15 +1241,12 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
-	t_ray                       ray;
 
 #ifndef RT_DOUBLE
 	return (0);
 #endif
     data = *(global t_object_moebius *)object->data;
-    ray = intersection->ray;
-    ray.origin -= data.position;
-	t = calculate_moebius_t(&ray, &data, &moebius_coefficients);
+	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
 	if (t == RT_INFINITY)
 		return (0);
 	intersection->ray.t = t;
@@ -1367,7 +1364,7 @@ static RT_F 		object_torus_sdf(global t_object *object, t_intersection *intersec
 
 	data = *(global t_object_torus *)object->data;
 	point = data.position - intersection->hit;
-	q = (RT_F2)(length(intersection->hit.xz) - data.t_0,intersection->hit.y);
+	q = (RT_F2)(length(point.xz) - data.t_0, point.y);
 	return (length(q) - data.t_1);
 }
 
@@ -2114,14 +2111,15 @@ static int			scene_intersect(
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 
+		intersection->material = scene->objects[intersection->object_id].material;
+
+		if (scene->objects[intersection->object_id].type == object_type_csg)
+			intersection->material = scene->objects[((constant t_object_csg *)scene->objects[intersection->object_id].data)->positive_id].material;
+		else if (scene->objects[intersection->object_id].type == object_type_explosion)
+        	object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
-		intersection->material = scene->objects[intersection->object_id].material;
-		if (scene->objects[intersection->object_id].type == object_type_csg)
-			intersection->material = scene->objects[((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id].material;
-		else if (scene->objects[intersection->object_id].type == object_type_explosion)
-        			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
@@ -2149,14 +2147,14 @@ static int			scene_intersect_force(
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 
-		if (scene->objects[intersection->object_id].texture_id != -1)
-			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
 		if (scene->objects[intersection->object_id].type == object_type_csg)
 			intersection->object_id = ((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id;
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
         			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
+		if (scene->objects[intersection->object_id].texture_id != -1)
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
@@ -2404,9 +2402,9 @@ static RT_F4		light_area(
 
 		if (intersection_light.object_id != i && intersection_light.material.transparency > RT_EPSILON)
         {
+        	shadow_ratio = intersection_light.material.transparency;
         	if (!scene_intersect_force(scene, i, camera, &intersection_light, settings))
         		continue ;
-			shadow_ratio = intersection_light.material.transparency;
         }
         else if (intersection_light.object_id != i)
         	continue ;
