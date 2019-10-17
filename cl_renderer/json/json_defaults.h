@@ -16,7 +16,7 @@
 # include "json_parse.h"
 
 # define GLOBAL_MATERIAL MATERIAL_WHITE
-# define GLOBAL_POSITION (t_vector3){0., 0., 0.}
+# define GLOBAL_POSITION (RT_F4_API){0., 0., 0.}
 # define GLOBAL_TEXTURE "Planet"
 
 # define SETTINGS_USE_RM 0
@@ -40,7 +40,7 @@
 # define DIRECT_NAME ""
 # define DIRECT_MATERIAL MATERIAL_LIGHT
 # define DIRECT_TEXTURE GLOBAL_TEXTURE
-# define DIRECT_DIRECTION (t_vector3){0., -1., 0.}
+# define DIRECT_DIRECTION (RT_F4_API){0., -1., 0.}
 
 # define SPHERE_NAME ""
 # define SPHERE_MATERIAL GLOBAL_MATERIAL
@@ -52,34 +52,34 @@
 # define PLANE_MATERIAL GLOBAL_MATERIAL
 # define PLANE_TEXTURE GLOBAL_TEXTURE
 # define PLANE_POSITION GLOBAL_POSITION
-# define PLANE_NORMAL (t_vector3){0., 1., 0.}
+# define PLANE_NORMAL (RT_F4_API){0., 1., 0.}
 # define PLANE_LIMITING 0
 
 # define CONE_NAME ""
 # define CONE_MATERIAL GLOBAL_MATERIAL
 # define CONE_TEXTURE GLOBAL_TEXTURE
-# define CONE_TOP (t_vector3){0., 1., 0.}
-# define CONE_BOTTOM (t_vector3){0., 0., 0.}
+# define CONE_TOP (RT_F4_API){0., 1., 0.}
+# define CONE_BOTTOM (RT_F4_API){0., 0., 0.}
 # define CONE_RADIUS (RT_F)1.
 
 # define CYLINDER_NAME ""
 # define CYLINDER_MATERIAL GLOBAL_MATERIAL
 # define CYLINDER_TEXTURE GLOBAL_TEXTURE
-# define CYLINDER_TOP (t_vector3){0., 1., 0.}
-# define CYLINDER_BOTTOM (t_vector3){0., 0., 0.}
+# define CYLINDER_TOP (RT_F4_API){0., 1., 0.}
+# define CYLINDER_BOTTOM (RT_F4_API){0., 0., 0.}
 # define CYLINDER_RADIUS (RT_F)1.
 
 # define BOX_NAME ""
 # define BOX_MATERIAL GLOBAL_MATERIAL
 # define BOX_TEXTURE GLOBAL_TEXTURE
 # define BOX_POSITION GLOBAL_POSITION
-# define BOX_SIZE (t_vector3){1., 1., 1.}
+# define BOX_SIZE (RT_F4_API){1., 1., 1.}
 
 # define PARAB_NAME ""
 # define PARABOLOID_MATERIAL GLOBAL_MATERIAL
 # define PARABOLOID_TEXTURE GLOBAL_TEXTURE
-# define PARABOLOID_EXTREMUM (t_vector3){0., 0., 0.}
-# define PARABOLOID_AXIS (t_vector3){0., 1., 0.}
+# define PARABOLOID_EXTREMUM (RT_F4_API){0., 0., 0.}
+# define PARABOLOID_AXIS (RT_F4_API){0., 1., 0.}
 # define PARABOLOID_RADIUS (RT_F)1.
 
 # define MOEBIUS_NAME ""
@@ -108,7 +108,7 @@
 # define JULIA_TEXTURE GLOBAL_TEXTURE
 # define JULIA_POSITION GLOBAL_POSITION
 # define JULIA_ITERATIONS 50
-# define JULIA_VALUE (t_vector3){.1, .3, .5, .5}
+# define JULIA_VALUE (RT_F4_API){.1, .3, .5, .5}
 
 # define CSG_NAME ""
 # define CSG_MATERIAL GLOBAL_MATERIAL

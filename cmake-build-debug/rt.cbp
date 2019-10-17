@@ -519,7 +519,7 @@
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_raise_x.c">
 			<Option target="rt"/>
 		</Unit>
-		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c">
+		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_command_x.c">
 			<Option target="rt"/>
 		</Unit>
 		<Unit filename="/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect.c">

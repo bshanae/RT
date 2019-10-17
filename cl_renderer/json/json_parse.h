@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 20:51:37 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 20:51:48 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/17 13:21:16 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,32 +41,24 @@ typedef union	u_color
 	t_argb		rgb;
 }				t_color2;
 
-typedef struct	s_vector3
-{
-	float		x;
-	float		y;
-	float		z;
-	float		w;
-}				t_vector3;
-
 typedef struct	s_parse_object
 {
-	t_vector3	*val_v1;
-	t_vector3	*val_v2;
+	RT_F4_API	*val_v1;
+	RT_F4_API	*val_v2;
 	char		*val_s1;
 	char		*val_s2;
 	char		*val_s3;
 	char		*val_s4;
 	char		*val_s5;
-	float		*val_f1;
-	float		*val_f2;
+	RT_F		*val_f1;
+	RT_F		*val_f2;
 	int			*val_i1;
 	int			*val_i2;
 	int			*val_i3;
-	t_vector3	v1;
-	t_vector3	v2;
-	float		f1;
-	float		f2;
+	RT_F4_API	v1;
+	RT_F4_API	v2;
+	RT_F		f1;
+	RT_F		f2;
 	int			i1;
 	int			i2;
 	int			i3;
@@ -86,9 +78,9 @@ void			work_object_1(void *data, char *json,
 char			*get_raw(char *json, jsmntok_t token);
 char			*get_string_in_object(char *json, jsmntok_t *object,
 					char *target);
-t_vector3		*get_vector_in_object(char *json, jsmntok_t *object,
+RT_F4_API		*get_vector_in_object(char *json, jsmntok_t *object,
 					char *target);
-float			*get_float_in_object(char *json, jsmntok_t *object,
+RT_F			*get_float_in_object(char *json, jsmntok_t *object,
 					char *target);
 int				*get_int_in_object(char *json, jsmntok_t *object, char *target);
 int				*get_bool_in_object(char *json, jsmntok_t *object,

@@ -2904,32 +2904,32 @@ error_framework/rt_raise_x.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/error_framework/rt_raise_x.c.s
 .PHONY : error_framework/rt_raise_x.c.s
 
-gui/gui/gui_commnad_x.o: gui/gui/gui_commnad_x.c.o
+gui/gui/gui_command_x.o: gui/gui/gui_command_x.c.o
 
-.PHONY : gui/gui/gui_commnad_x.o
+.PHONY : gui/gui/gui_command_x.o
 
 # target to build an object file
-gui/gui/gui_commnad_x.c.o:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o
-.PHONY : gui/gui/gui_commnad_x.c.o
+gui/gui/gui_command_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o
+.PHONY : gui/gui/gui_command_x.c.o
 
-gui/gui/gui_commnad_x.i: gui/gui/gui_commnad_x.c.i
+gui/gui/gui_command_x.i: gui/gui/gui_command_x.c.i
 
-.PHONY : gui/gui/gui_commnad_x.i
+.PHONY : gui/gui/gui_command_x.i
 
 # target to preprocess a source file
-gui/gui/gui_commnad_x.c.i:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.i
-.PHONY : gui/gui/gui_commnad_x.c.i
+gui/gui/gui_command_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_command_x.c.i
+.PHONY : gui/gui/gui_command_x.c.i
 
-gui/gui/gui_commnad_x.s: gui/gui/gui_commnad_x.c.s
+gui/gui/gui_command_x.s: gui/gui/gui_command_x.c.s
 
-.PHONY : gui/gui/gui_commnad_x.s
+.PHONY : gui/gui/gui_command_x.s
 
 # target to generate assembly for a file
-gui/gui/gui_commnad_x.c.s:
-	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s
-.PHONY : gui/gui/gui_commnad_x.c.s
+gui/gui/gui_command_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/gui/gui/gui_command_x.c.s
+.PHONY : gui/gui/gui_command_x.c.s
 
 gui/gui/gui_connect.o: gui/gui/gui_connect.c.o
 
@@ -7758,9 +7758,9 @@ help:
 	@echo "... error_framework/rt_raise_x.o"
 	@echo "... error_framework/rt_raise_x.i"
 	@echo "... error_framework/rt_raise_x.s"
-	@echo "... gui/gui/gui_commnad_x.o"
-	@echo "... gui/gui/gui_commnad_x.i"
-	@echo "... gui/gui/gui_commnad_x.s"
+	@echo "... gui/gui/gui_command_x.o"
+	@echo "... gui/gui/gui_command_x.i"
+	@echo "... gui/gui/gui_command_x.s"
 	@echo "... gui/gui/gui_connect.o"
 	@echo "... gui/gui/gui_connect.i"
 	@echo "... gui/gui/gui_connect.s"

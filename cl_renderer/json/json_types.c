@@ -6,7 +6,7 @@
 /*   By: sbosmer <sbosmer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 19:23:38 by sbosmer           #+#    #+#             */
-/*   Updated: 2019/10/08 20:53:09 by sbosmer          ###   ########.fr       */
+/*   Updated: 2019/10/17 13:22:19 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,19 @@ int			*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-float		*get_float_in_object(char *json, jsmntok_t *object, char *target)
+RT_F			*get_float_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
-	float		res;
-	float		*out_f;
+	RT_F		res;
+	RT_F		*out_f;
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
 		return (NULL);
 	if (token_is_number(json, pos))
 	{
-		res = atof(json + pos->start);
-		out_f = rt_malloc(sizeof(float));
+		res = strtod(json + pos->start, NULL);
+		out_f = rt_malloc(sizeof(RT_F));
 		if (!out_f)
 			return (NULL);
 		*out_f = res;
@@ -69,7 +69,7 @@ float		*get_float_in_object(char *json, jsmntok_t *object, char *target)
 int			*get_int_in_object(char *json, jsmntok_t *object, char *target)
 {
 	int		*res;
-	float	*val;
+	RT_F	*val;
 
 	val = get_float_in_object(json, object, target);
 	res = rt_malloc(sizeof(int));
@@ -80,11 +80,11 @@ int			*get_int_in_object(char *json, jsmntok_t *object, char *target)
 	return (res);
 }
 
-t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
+RT_F4_API	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
-	t_vector3	res;
-	t_vector3	*out_v;
+	RT_F4_API	res;
+	RT_F4_API	*out_v;
 
 	pos = find_by_string(json, object, target);
 	if (!pos)
@@ -97,7 +97,7 @@ t_vector3	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
 			res.x = atof(json + pos[1].start);
 			res.y = atof(json + pos[2].start);
 			res.z = atof(json + pos[3].start);
-			out_v = rt_malloc(sizeof(t_vector3));
+			out_v = rt_malloc(sizeof(RT_F4_API));
 			if (!out_v)
 				return (NULL);
 			*out_v = res;

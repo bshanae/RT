@@ -10,7 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"
   "CMakeFiles/rt.dir/gui/gui/gui_render.c.o"
   "CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.o"
-  "CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o"
+  "CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o"
   "CMakeFiles/rt.dir/gui/gui/gui_connect.c.o"
   "CMakeFiles/rt.dir/gui/gui_queue/gui_queue_new.c.o"
   "CMakeFiles/rt.dir/gui/gui_queue/gui_queue_delete.c.o"

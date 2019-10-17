@@ -107,7 +107,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_malloc.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_malloc.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_print_x.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_print_x.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/error_framework/rt_raise_x.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/error_framework/rt_raise_x.c.o"
-  "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o"
+  "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_command_x.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_connect.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_connect.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_delete.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_delete.c.o"
   "/Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_loop.c" "/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/rt.dir/gui/gui/gui_loop.c.o"

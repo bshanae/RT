@@ -4,10 +4,10 @@ RT :
 	@make test -C ./build
 
 RT_float :
-	@make test -C ./build VAR_PROJECT_FLAGS_ANY="-D RT_FLOAT"
+	@make re_no_extern -C ./build VAR_PROJECT_FLAGS_ANY="-D RT_FLOAT"
 
 RT_double :
-	@make test -C ./build VAR_PROJECT_FLAGS_ANY="-D RT_DOUBLE"
+	@make re_no_extern -C ./build VAR_PROJECT_FLAGS_ANY="-D RT_DOUBLE"
 
 clean :
 	@make clean -C ./build

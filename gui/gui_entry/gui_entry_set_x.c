@@ -21,7 +21,7 @@ void				gui_entry_set_f(GtkEntry *entry, RT_F value)
 {
 	static char		buffer[32];
 
-	sprintf(buffer, "%.2f", value);
+	sprintf(buffer, "%.2f", (float)value);
 	gtk_entry_set_text(entry, buffer);
 }
 

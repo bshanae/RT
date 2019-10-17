@@ -24,7 +24,7 @@ t_material	decide_color(char *mat_name)
 	else
 		mat_name += 2;
 	col.hex = strtol(mat_name, NULL, 16);
-	res.color = (cl_float4){(float)col.rgb.r / 255.0,
+	res.color = (RT_F4_API){(float)col.rgb.r / 255.0,
 		(float)col.rgb.g / 255.0,
 		(float)col.rgb.b / 255.0,
 		1.0};

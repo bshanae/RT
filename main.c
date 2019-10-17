@@ -9,6 +9,9 @@ int					main(int argc, char **argv)
 	gui_signal_connect_all(gui);
 	gui->renderer = cl_renderer_new(gui->image);
 	cl_renderer_load(gui->renderer, "./scenes/cornell.json");
+	camera_apply(gui->renderer->data.camera);
+	cl_renderer_camera_save(gui->renderer);
+    scene_update(gui->renderer->data.scene);
     gui_connect(gui);
 	gui_update(gui);
 	gui_loop(gui);

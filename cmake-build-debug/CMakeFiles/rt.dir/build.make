@@ -200,18 +200,18 @@ CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_resize_x.c -o CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.s
 
-CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o: CMakeFiles/rt.dir/flags.make
-CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o: ../gui/gui/gui_commnad_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c
+CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o: CMakeFiles/rt.dir/flags.make
+CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o: ../gui/gui/gui_command_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bshanae/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o   -c /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_command_x.c
 
-CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c > CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.i
+CMakeFiles/rt.dir/gui/gui/gui_command_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rt.dir/gui/gui/gui_command_x.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_command_x.c > CMakeFiles/rt.dir/gui/gui/gui_command_x.c.i
 
-CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_commnad_x.c -o CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.s
+CMakeFiles/rt.dir/gui/gui/gui_command_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rt.dir/gui/gui/gui_command_x.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bshanae/workspace/21_ray_tracer/gui/gui/gui_command_x.c -o CMakeFiles/rt.dir/gui/gui/gui_command_x.c.s
 
 CMakeFiles/rt.dir/gui/gui/gui_connect.c.o: CMakeFiles/rt.dir/flags.make
 CMakeFiles/rt.dir/gui/gui/gui_connect.c.o: ../gui/gui/gui_connect.c
@@ -3593,7 +3593,7 @@ rt_OBJECTS = \
 "CMakeFiles/rt.dir/gui/gui/gui_loop.c.o" \
 "CMakeFiles/rt.dir/gui/gui/gui_render.c.o" \
 "CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.o" \
-"CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o" \
+"CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o" \
 "CMakeFiles/rt.dir/gui/gui/gui_connect.c.o" \
 "CMakeFiles/rt.dir/gui/gui_queue/gui_queue_new.c.o" \
 "CMakeFiles/rt.dir/gui/gui_queue/gui_queue_delete.c.o" \
@@ -3868,7 +3868,7 @@ rt: CMakeFiles/rt.dir/gui/gui/gui_update.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_loop.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_render.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_resize_x.c.o
-rt: CMakeFiles/rt.dir/gui/gui/gui_commnad_x.c.o
+rt: CMakeFiles/rt.dir/gui/gui/gui_command_x.c.o
 rt: CMakeFiles/rt.dir/gui/gui/gui_connect.c.o
 rt: CMakeFiles/rt.dir/gui/gui_queue/gui_queue_new.c.o
 rt: CMakeFiles/rt.dir/gui/gui_queue/gui_queue_delete.c.o

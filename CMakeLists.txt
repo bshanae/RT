@@ -161,7 +161,7 @@ set(SOURCE_GUI_GUI
 	./gui/gui/gui_loop.c
 	./gui/gui/gui_render.c
 	./gui/gui/gui_resize_x.c
-	./gui/gui/gui_commnad_x.c
+        gui/gui/gui_command_x.c
 	./gui/gui/gui_connect.c)
 
 set(SOURCE_GUI_QUEUE
