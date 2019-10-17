@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Vladimir/workspace/21_ray_tracer
+CMAKE_SOURCE_DIR = /Users/ashari/21_ray_tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ashari/21_ray_tracer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Vladimir/workspace/21_ray_tracer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ashari/21_ray_tracer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1661,6 +1661,33 @@ cl_renderer/json/json_objects_3.s: cl_renderer/json/json_objects_3.c.s
 cl_renderer/json/json_objects_3.c.s:
 	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_objects_3.c.s
 .PHONY : cl_renderer/json/json_objects_3.c.s
+
+cl_renderer/json/json_parse_hack_x.o: cl_renderer/json/json_parse_hack_x.c.o
+
+.PHONY : cl_renderer/json/json_parse_hack_x.o
+
+# target to build an object file
+cl_renderer/json/json_parse_hack_x.c.o:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_parse_hack_x.c.o
+.PHONY : cl_renderer/json/json_parse_hack_x.c.o
+
+cl_renderer/json/json_parse_hack_x.i: cl_renderer/json/json_parse_hack_x.c.i
+
+.PHONY : cl_renderer/json/json_parse_hack_x.i
+
+# target to preprocess a source file
+cl_renderer/json/json_parse_hack_x.c.i:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_parse_hack_x.c.i
+.PHONY : cl_renderer/json/json_parse_hack_x.c.i
+
+cl_renderer/json/json_parse_hack_x.s: cl_renderer/json/json_parse_hack_x.c.s
+
+.PHONY : cl_renderer/json/json_parse_hack_x.s
+
+# target to generate assembly for a file
+cl_renderer/json/json_parse_hack_x.c.s:
+	$(MAKE) -f CMakeFiles/rt.dir/build.make CMakeFiles/rt.dir/cl_renderer/json/json_parse_hack_x.c.s
+.PHONY : cl_renderer/json/json_parse_hack_x.c.s
 
 cl_renderer/json/json_types.o: cl_renderer/json/json_types.c.o
 
@@ -7593,6 +7620,9 @@ help:
 	@echo "... cl_renderer/json/json_objects_3.o"
 	@echo "... cl_renderer/json/json_objects_3.i"
 	@echo "... cl_renderer/json/json_objects_3.s"
+	@echo "... cl_renderer/json/json_parse_hack_x.o"
+	@echo "... cl_renderer/json/json_parse_hack_x.i"
+	@echo "... cl_renderer/json/json_parse_hack_x.s"
 	@echo "... cl_renderer/json/json_types.o"
 	@echo "... cl_renderer/json/json_types.i"
 	@echo "... cl_renderer/json/json_types.s"

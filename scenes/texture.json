@@ -1,10 +1,11 @@
 [
-	{
-        "type": "settings",
-        "use raymarching": false,
-        "pt depth": 3,
-        "pt sample limit": 30,
-        "illumination": false
+    {
+      "type": "settings",
+      "rm mod": false,
+      "pt depth": 3,
+      "pt limit": 30,
+      "illumination": false,
+      "light mod": "basic"
     },
 	{
         "type": "camera",

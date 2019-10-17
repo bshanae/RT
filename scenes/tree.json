@@ -1,9 +1,9 @@
 [
   {
     "type": "settings",
-    "use raymarching": false,
+    "rm mod": false,
     "pt depth": 3,
-    "pt sample limit": 30,
+    "pt limit": 30,
     "illumination": false
   },
   {

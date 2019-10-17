@@ -122,7 +122,7 @@ else ()
 	link_directories(${RT_GTK_LIBRARY_DIRS})
 endif ()
 
-link_directories(../21_libft/)
+link_directories(./libft/)
 
 if (${RT_GTK_PKG})
 	add_definitions(${GTK3_CFLAGS_OTHER})
@@ -385,7 +385,7 @@ set(SOURCE_JSON
 	./cl_renderer/json/json_objects_1.c
 	./cl_renderer/json/json_objects_2.c
 	./cl_renderer/json/json_objects_3.c
-	./cl_renderer/json/readfile.c)
+	./cl_renderer/json/readfile.c cl_renderer/json/json_parse_hack_x.c)
 
 set(SOURCE_TEXTURE
 	./cl_renderer/texture/texture_initialization.c
