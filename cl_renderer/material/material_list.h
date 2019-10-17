@@ -6,7 +6,7 @@
 /*   By: ashari <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/29 12:54:22 by ashari            #+#    #+#             */
-/*   Updated: 2019/10/17 13:59:27 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/17 14:45:51 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@
 # define RT_M2					0., 0., 0., 0.,
 # define RT_M3					COLOR_BLACK, COLOR_BLACK
 
-# define MATERIAL_LIGHT			RT_M1{COLOR_BLACK, LIGHT}
-# define MATERIAL_LIGHT_BASIC	RT_M1{COLOR_BLACK, LIGHT_BASIC}
-# define MATERIAL_LIGHT_AMBIENT	RT_M1{COLOR_BLACK, LIGHT_AMBIENT}
+# define MATERIAL_LIGHT			RT_M1{COLOR_BLACK, LIGHT, RT_M2}
+# define MATERIAL_LIGHT_SOFT	RT_M1{COLOR_BLACK, LIGHT_SOFT, RT_M2}
+# define MATERIAL_LIGHT_BASIC	RT_M1{COLOR_BLACK, LIGHT_BASIC, RT_M2}
+# define MATERIAL_LIGHT_AMBIENT	RT_M1{COLOR_BLACK, LIGHT_AMBIENT, RT_M2}
 
 # define MATERIAL_WHITE			RT_M1{COLOR_WHITE, COLOR_BLACK, RT_M2}
 # define MATERIAL_BLACK			RT_M1{COLOR_BLACK, COLOR_BLACK, RT_M2}

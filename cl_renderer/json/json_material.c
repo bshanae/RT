@@ -37,6 +37,8 @@ t_material	decide_material(char *mat_name)
 		return (decide_color(mat_name));
 	else if (ft_strequ(mat_name, "light"))
 		return (MATERIAL_LIGHT);
+	else if (ft_strequ(mat_name, "light soft"))
+		return (MATERIAL_LIGHT_SOFT);
 	else if (ft_strequ(mat_name, "red"))
 		return (MATERIAL_RED);
 	else if (ft_strequ(mat_name, "blue"))
@@ -49,11 +51,11 @@ t_material	decide_material(char *mat_name)
 		return (MATERIAL_LIGHT_AMBIENT);
 	else if (ft_strequ(mat_name, "mirror"))
 		return (MATERIAL_MIRROR);
-	else if (ft_strequ(mat_name, "glass_a"))
+	else if (ft_strequ(mat_name, "glass a"))
 		return (MATERIAL_GLASS_A);
-	else if (ft_strequ(mat_name, "glass_b"))
+	else if (ft_strequ(mat_name, "glass b"))
 		return (MATERIAL_GLASS_B);
-	else if (ft_strequ(mat_name, "glass_c"))
+	else if (ft_strequ(mat_name, "glass c"))
 		return (MATERIAL_GLASS_C);
 	else
 		return (MATERIAL_WHITE);

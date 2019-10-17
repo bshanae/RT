@@ -4,6 +4,7 @@
         "rm mod" : false,
         "pt depth" : 3,
 		"pt limit" : 250,
+		"background" : "none",
         "illumination mod" : true,
         "illumination value" : 0.9
     },

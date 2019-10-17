@@ -4,6 +4,7 @@
         "rm mod" : false,
         "pt depth" : 3,
         "pt limit" : 250,
+		"background" : "none",
         "illumination mod" : true,
         "illumination value" : 0.9
     },
@@ -78,7 +79,7 @@
         "name" : "Glass A",
         "position" : [-7, 2, -58],
         "radius" : 12,
-        "material" : "glass_a"
+        "material" : "glass a"
     },
 
     {
@@ -86,6 +87,6 @@
         "name" : "Glass B",
         "position" : [10, 10, -10],
         "radius" : 5,
-        "material" : "glass_b"
+        "material" : "glass b"
     }
 ]
