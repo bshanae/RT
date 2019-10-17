@@ -81,7 +81,7 @@ void	parse_paraboloid(void *data, char *json, jsmntok_t *tokens)
 	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.val_s3 = get_string_in_object(json, tokens, "texture");
-	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(PARABOLOID_NAME));
+	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(PARAB_NAME));
 	box.val_f1 = get_float_in_object(json, tokens, "radius");
 	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
 	box.v1 = (box.val_v1 ? *box.val_v1 : PARABOLOID_EXTREMUM);

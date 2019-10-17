@@ -14,26 +14,21 @@
 #include "json_defaults.h"
 #include "cl_renderer.h"
 
-void	parse_hack(t_obj *box, void *data, char *json, jsmntok_t *tokens)
+static void		set_settings(const t_obj *box, t_rt_settings *s, int mod)
 {
-	t_rt_background	bg;
-
-	box->val_s1 = get_string_in_object(json, tokens, "background");
-	if (!box->val_s1)
+	if (!mod)
+	{
+		s->rm_step_limit = box->i2;
+		s->rm_step_part = box->f1;
 		return ;
-	if (ft_strequ(box->val_s1, "none"))
-		bg = rt_background_none;
-	else if (ft_strequ(box->val_s1, "one"))
-		bg = rt_background_one;
-	else if (ft_strequ(box->val_s1, "interpolated"))
-		bg = rt_background_interpolation;
-	else
-		return ;
-	cl_renderer_change_background(data, bg);
-	free_box(box);
+	}
+	s->sample_depth = box->i1;
+	s->sample_limit = box->i2;
+	s->illumination = box->i3;
+	s->illumination_value = box->f1;
 }
 
-void	parse_settings(void *data, char *json, jsmntok_t *tokens)
+void			parse_settings(void *data, char *json, jsmntok_t *tokens)
 {
 	t_rt_settings	*s;
 	t_obj			box;
@@ -47,8 +42,7 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_STEP_LIMIT);
 	box.f1 = (box.val_f1 ? *box.val_f1 : SETTINGS_STEP_PART);
 	cl_renderer_change_tracing_mod(data, (box.i1 ? 1 : 0));
-	s->rm_step_limit = box.i2;
-	s->rm_step_part = box.f1;
+	set_settings(&box, s, 0);
 	free_box(&box);
 	box.val_i1 = get_int_in_object(json, tokens, "pt depth");
 	box.val_i2 = get_int_in_object(json, tokens, "pt limit");
@@ -58,14 +52,12 @@ void	parse_settings(void *data, char *json, jsmntok_t *tokens)
 	box.i2 = (box.val_i2 ? *box.val_i2 : SETTINGS_PT_SAMPLE_LIMIT);
 	box.i3 = (box.val_i3 ? *box.val_i3 : SETTINGS_ILLUMINATION_MOD);
 	box.f1 = (box.val_f1 ? *box.val_f1 : SETTINGS_ILLUMINATION_VALUE);
-	s->sample_depth = box.i1;
-	s->sample_limit = box.i2;
-	s->illumination = box.i3;
-	s->illumination_value = box.f1;
-	parse_hack(&box, data, json, tokens);
+	set_settings(&box, s, 1);
+	parse_hack_0(&box, data, json, tokens);
+	parse_hack_1(&box, data, json, tokens);
 }
 
-void	parse_camera(void *data, char *json, jsmntok_t *tokens)
+void			parse_camera(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj			box;
 	t_cl_renderer	*r;
@@ -81,7 +73,7 @@ void	parse_camera(void *data, char *json, jsmntok_t *tokens)
 	free(box.val_v2);
 }
 
-void	parse_ambient(void *data, char *json, jsmntok_t *tokens)
+void			parse_ambient(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj		box;
 
@@ -105,7 +97,7 @@ void	parse_ambient(void *data, char *json, jsmntok_t *tokens)
 	free_box(&box);
 }
 
-void	parse_limited(void *data, char *json, jsmntok_t *tokens)
+void			parse_limited(void *data, char *json, jsmntok_t *tokens)
 {
 	t_obj		box;
 

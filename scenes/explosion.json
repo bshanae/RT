@@ -3,9 +3,10 @@
 		"type" : "settings",
 		"rm mod" : true,
 		"rm limit" : 255,
-		"rm part" : 1,
+		"rm part" : 0.7,
 		"pt depth" : 1,
 		"pt limit" : 30,
+		"illumination": false,
 		"background" : "none"
 	},
 

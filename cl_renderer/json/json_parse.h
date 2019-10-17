@@ -111,8 +111,12 @@ void			parse_direct(void *data, char *json, jsmntok_t *tokens);
 void			parse_explosion(void *data, char *json, jsmntok_t *tokens);
 void			parse_perfcube(void *data, char *json, jsmntok_t *tokens);
 void			parse_settings(void *data, char *json, jsmntok_t *tokens);
-void 			parse_csg(void *data, char *json, jsmntok_t *tokens);
+void			parse_csg(void *data, char *json, jsmntok_t *tokens);
 void			free_box(t_obj *box);
 void			parse_limited(void *data, char *json, jsmntok_t *tokens);
+void			parse_hack_0(t_obj *box, void *data,
+					char *json, jsmntok_t *tokens);
+void			parse_hack_1(t_obj *box, void *data,
+					char *json, jsmntok_t *tokens);
 
 #endif

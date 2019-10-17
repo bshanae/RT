@@ -1,12 +1,12 @@
 [
   {
-    "type": "settings",
-    "use raymarching": true,
-    "step limit": 250,
-    "step part": 1,
-    "pt depth": 1,
-    "pt sample limit": 25,
-    "illumination": false
+    "type" : "settings",
+    "rm mod" : true,
+    "rm limit" : 255,
+    "rm part" : 1,
+    "pt depth" : 1,
+    "pt limit" : 25,
+    "background"  : "none"
   },
   {
     "type": "camera",
@@ -33,11 +33,5 @@
     "width": 5,
     "radius": 10,
     "material": "red"
-  },
-  {
-    "type": "plane",
-    "name": "Plane",
-    "position": [0, 0, -70],
-    "normal": [0, 0, 1]
   }
 ]
