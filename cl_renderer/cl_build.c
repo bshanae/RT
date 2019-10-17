@@ -931,21 +931,21 @@ static RT_F4		object_box_normal(global t_object *object, t_intersection *interse
 	normal  = 0;
 	min = RT_INFINITY;
 
-	distance = RT_ABS(data.size.x / (RT_F)2. - RT_ABS(point.x);
+	distance = RT_ABS(data.size.x / (RT_F)2. - RT_ABS(point.x));
 	if (distance < min)
 	{
 		normal = sign(point.x) * (RT_F4){1., 0., 0., 0.};
 		min = distance;
 	}
 
-	distance = RT_ABS(data.size.y / (RT_F)2. - RT_ABS(point.y);
+	distance = RT_ABS(data.size.y / (RT_F)2. - RT_ABS(point.y));
 	if (distance < min)
 	{
 		normal = sign(point.y) * (RT_F4){ 0., 1., 0., 0.};
 		min = distance;
 	}
 
-	distance = RT_ABS(data.size.z / (RT_F)2. - RT_ABS(point.z);
+	distance = RT_ABS(data.size.z / (RT_F)2. - RT_ABS(point.z));
 	if (distance < min)
 		normal = sign(point.z) * (RT_F4){ 0., 0., 1., 0.};
 
@@ -1175,7 +1175,7 @@ static int						is_inside_moebius_strip(t_moebius_coefficients *m, RT_F4 hit)
     return (s >= -m->max && s <= m->max);
 }
 
-static RT_F						choose_equation_root(RT_F *roots, int result, t_ray *ray, t_moebius_coefficients *m)
+static RT_F						choose_equation_root(RT_F *roots, int result, const t_ray *ray, t_moebius_coefficients *m)
 {
     int							i;
     RT_F4						hit;
@@ -1212,7 +1212,7 @@ static void						init_equation_coefficients(t_moebius_coefficients *m, RT_F *coe
     coefficients[2] /= coefficients[3];
 }
 
-static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_object_moebius *data, t_ray *ray)
+static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_object_moebius *data, const t_ray *ray)
 {
 	moebius->radius = data->radius;
     moebius->ox = ray->origin.x;
@@ -1224,7 +1224,7 @@ static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_ob
     moebius->max = data->half_width;
 }
 
-static RT_F						calculate_moebius_t(t_ray *ray, t_object_moebius *data, t_moebius_coefficients *moebius)
+static RT_F						calculate_moebius_t(const t_ray *ray, t_object_moebius *data, t_moebius_coefficients *moebius)
 {
 	RT_F						coefficients[4];
     RT_F						root[3];
@@ -1236,7 +1236,7 @@ static RT_F						calculate_moebius_t(t_ray *ray, t_object_moebius *data, t_moebi
     return (choose_equation_root(root, result, ray, moebius));
 }
 
-static int     					object_moebius_intersect(global t_object *object, t_intersection *intersection)
+static int     					object_moebius_intersect(global t_object *object, const t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
@@ -1256,7 +1256,7 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 
 // calculating normal //////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4					object_moebius_normal(global t_object *object, t_intersection *intersection)
+static RT_F4					object_moebius_normal(global t_object *object, const t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
@@ -2003,6 +2003,8 @@ static RT_F4		object_normal_rt(
 		return (object_box_normal(object, intersection));
 	else if (object->type == object_type_paraboloid)
 		return (object_paraboloid_normal(object, intersection));
+	else if (object->type == object_type_moebius)
+		return (object_moebius_normal(object, intersection));
  	return (intersection->normal);
 }
 
@@ -2122,7 +2124,8 @@ static int			scene_intersect(
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
-	}
+
+}
 	return (result);
 }
 
@@ -2155,7 +2158,6 @@ static int			scene_intersect_force(
 
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);

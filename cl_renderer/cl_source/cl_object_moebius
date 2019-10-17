@@ -171,7 +171,7 @@ static int						is_inside_moebius_strip(t_moebius_coefficients *m, RT_F4 hit)
     return (s >= -m->max && s <= m->max);
 }
 
-static RT_F						choose_equation_root(RT_F *roots, int result, t_ray *ray, t_moebius_coefficients *m)
+static RT_F						choose_equation_root(RT_F *roots, int result, const t_ray *ray, t_moebius_coefficients *m)
 {
     int							i;
     RT_F4						hit;
@@ -208,7 +208,7 @@ static void						init_equation_coefficients(t_moebius_coefficients *m, RT_F *coe
     coefficients[2] /= coefficients[3];
 }
 
-static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_object_moebius *data, t_ray *ray)
+static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_object_moebius *data, const t_ray *ray)
 {
 	moebius->radius = data->radius;
     moebius->ox = ray->origin.x;
@@ -220,7 +220,7 @@ static void						init_moebius_coefficients(t_moebius_coefficients *moebius, t_ob
     moebius->max = data->half_width;
 }
 
-static RT_F						calculate_moebius_t(t_ray *ray, t_object_moebius *data, t_moebius_coefficients *moebius)
+static RT_F						calculate_moebius_t(const t_ray *ray, t_object_moebius *data, t_moebius_coefficients *moebius)
 {
 	RT_F						coefficients[4];
     RT_F						root[3];
@@ -237,13 +237,16 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;
 	RT_F						t;
+	t_ray						ray;
 
 #ifndef RT_DOUBLE
 	return (0);
 #endif
     data = *(global t_object_moebius *)object->data;
-	t = calculate_moebius_t(&intersection->ray, &data, &moebius_coefficients);
-	if (t == RT_INFINITY)
+    ray = intersection->ray;
+	ray.origin -= data.position;
+	t = calculate_moebius_t(&ray, &data, &moebius_coefficients);
+	if (t == RT_INFINITY || t >= intersection->ray.t || t <= RT_EPSILON)
 		return (0);
 	intersection->ray.t = t;
 	intersection->object_id = object->id;
@@ -252,7 +255,7 @@ static int     					object_moebius_intersect(global t_object *object, t_intersec
 
 // calculating normal //////////////////////////////////////////////////////////////////////////////////////////////////
 
-static RT_F4					object_moebius_normal(global t_object *object, t_intersection *intersection)
+static RT_F4					object_moebius_normal(global t_object *object, const t_intersection *intersection)
 {
 	t_object_moebius			data;
 	t_moebius_coefficients      moebius_coefficients;

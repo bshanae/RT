@@ -105,7 +105,8 @@ static int			scene_intersect(
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
-	}
+
+}
 	return (result);
 }
 
@@ -138,7 +139,6 @@ static int			scene_intersect_force(
 
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
 	return (result);
