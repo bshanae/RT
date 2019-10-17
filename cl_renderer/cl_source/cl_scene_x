@@ -94,14 +94,15 @@ static int			scene_intersect(
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 
+		intersection->material = scene->objects[intersection->object_id].material;
+
+		if (scene->objects[intersection->object_id].type == object_type_csg)
+			intersection->material = scene->objects[((constant t_object_csg *)scene->objects[intersection->object_id].data)->positive_id].material;
+		else if (scene->objects[intersection->object_id].type == object_type_explosion)
+        	object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
 		if (scene->objects[intersection->object_id].texture_id != -1)
 			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
-		intersection->material = scene->objects[intersection->object_id].material;
-		if (scene->objects[intersection->object_id].type == object_type_csg)
-			intersection->material = scene->objects[((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id].material;
-		else if (scene->objects[intersection->object_id].type == object_type_explosion)
-        			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}
@@ -129,14 +130,14 @@ static int			scene_intersect_force(
 		if (settings->tracing_mod == rt_tracing_rt)
 			intersection->hit = ray_intersect(&intersection->ray);
 
-		if (scene->objects[intersection->object_id].texture_id != -1)
-			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
-
 		if (scene->objects[intersection->object_id].type == object_type_csg)
 			intersection->object_id = ((t_object_csg *)scene->objects[intersection->object_id].data)->positive_id;
 		intersection->material = scene->objects[intersection->object_id].material;
 		if (scene->objects[intersection->object_id].type == object_type_explosion)
         			object_explosion_build_material(scene->objects + intersection->object_id, intersection);
+
+		if (scene->objects[intersection->object_id].texture_id != -1)
+			intersection->material.color = object_texture(&scene->texture, camera, scene->objects + intersection->object_id, intersection);
 
 		intersection->normal = object_normal(scene->objects + intersection->object_id, intersection, settings);
 	}

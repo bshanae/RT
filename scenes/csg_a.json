@@ -43,6 +43,7 @@
 		"type" : "csg",
 		"name" : "CSG",
 		"positive" : "Box",
-		"negative" : "Sphere"
+		"negative" : "Sphere",
+		"material" : "red"
 	}
 ]

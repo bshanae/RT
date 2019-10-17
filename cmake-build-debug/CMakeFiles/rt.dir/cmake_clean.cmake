@@ -192,6 +192,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rt.dir/cl_renderer/json/json_objects_2.c.o"
   "CMakeFiles/rt.dir/cl_renderer/json/json_objects_3.c.o"
   "CMakeFiles/rt.dir/cl_renderer/json/readfile.c.o"
+  "CMakeFiles/rt.dir/cl_renderer/json/json_parse_hack_x.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_initialization.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_convert.c.o"
   "CMakeFiles/rt.dir/cl_renderer/texture/texture_data_load.c.o"

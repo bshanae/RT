@@ -4,13 +4,14 @@
       "rm mod": false,
       "pt depth": 3,
       "pt limit": 30,
-      "illumination": false,
-      "light mod": "basic"
+      "illumination": false
     },
+
 	{
         "type": "camera",
         "position": [45.85, 33.76, 155.34],
         "rotation": [0.07, 0.18, 0.0]
+ ,
     },
 	{
         "type": "sphere",
@@ -19,12 +20,14 @@
         "radius": 3,
         "material": "light"
     },
+
 	{
         "type": "plane",
         "name": "Plane",
         "position": [0, -20, 0],
         "normal": [0, 1, 0],
         "texture": "Checkerboard"
+ ,
     },
 	{
         "type": "sphere",
@@ -33,6 +36,7 @@
         "radius": 15,
         "material": "glass"
     },
+
 	{
 		"type": "cone",
 		"name": "Cone",
@@ -40,7 +44,8 @@
 		"bottom": [35, -15, -110],
 		"radius": 15,
 		"material": "0xFF0000"
-	},
+	,
+    },
 	{
 		"type": "cylinder",
 		"name": "Cylinder",
@@ -49,6 +54,7 @@
 		"radius": 10,
 		"material": "0x00FF00"
 	},
+
 	{
         "type": "sphere",
         "name": "Sphere",

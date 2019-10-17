@@ -6,7 +6,7 @@
 /*   By: bshanae <bshanae@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 12:49:33 by bshanae           #+#    #+#             */
-/*   Updated: 2019/10/14 12:49:33 by bshanae          ###   ########.fr       */
+/*   Updated: 2019/10/17 11:58:08 by bshanae          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void					gui_signal_parser_load
 	t_gui			*gui;
 
 	gui = (t_gui *)ptr;
-	gui_queue_block(gui->queue);
 	cl_renderer_load(gui->renderer, gui->parser->final_path);
 	gtk_tree_selection_unselect_all(gui->parser->selection);
 	gtk_widget_set_opacity(GTK_WIDGET(gui->parser->load), 0.);
@@ -26,5 +25,4 @@ void					gui_signal_parser_load
 	gui_scene_edit_select(gui->scene->edit, gui->renderer->data.scene);
 	gui_update(gui);
 	gui_queue_execute_force(gui->queue);
-	gui_queue_unblock(gui->queue);
 }

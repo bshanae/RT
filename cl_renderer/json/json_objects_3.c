@@ -77,6 +77,7 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	t_obj		box;
 
 	ft_bzero(&box, sizeof(t_obj));
+	box.val_s1 = get_string_in_object(json, tokens, "material");
 	box.val_s2 = get_string_in_object(json, tokens, "name");
 	box.name = (box.val_s2 ? ft_strdup(box.val_s2) : ft_strdup(CSG_NAME));
 	box.texture = box.val_s3 ? ft_strdup(box.val_s3) : NULL;
@@ -85,10 +86,13 @@ void	parse_csg(void *data, char *json, jsmntok_t *tokens)
 	(!(box.val_s4 && box.val_s5) ? free(&box) : 1);
 	if (!box.val_s4)
 		return ;
+	box.material = (box.val_s1 ? decide_material(box.val_s1) :
+		EXPLOSION_MATERIAL);
 	object_build(scene_get_space(((t_cl_renderer*)data)->data.scene),
 		object_type_csg, box.val_s4, box.val_s5);
 	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1,
 		scene_param_name, box.name);
+	scene_edit_param(((t_cl_renderer*)data)->data.scene, -1, scene_param_material, box.material);
 	free_box(&box);
 }
 
