@@ -1,9 +1,7 @@
 #ifndef RT_CONTROL_H
 # define RT_CONTROL_H
 
-# define RT_OPEN_CL_CPU
-
-#  define RT_DOUBLE
+# define RT_OPEN_CL_GPU
 
 # if !defined RT_FLOAT && !defined RT_DOUBLE
 #  define RT_FLOAT
