@@ -56,5 +56,6 @@ t_material	decide_material(char *mat_name)
 	else if (ft_strequ(mat_name, "glass b"))
 		return (MATERIAL_GLASS_B);
 	else
-		return (ft_strequ(mat_name, "glass c") ? MATERIAL_GLASS_C : MATERIAL_WHITE);
+		return (ft_strequ(mat_name, "glass c")
+			? MATERIAL_GLASS_C : MATERIAL_WHITE);
 }

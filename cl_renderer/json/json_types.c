@@ -12,7 +12,8 @@
 
 #include "json_parse.h"
 
-char		*get_string_in_object(char *json, jsmntok_t *object, char *target)
+char			*get_string_in_object(char *json,
+					jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 
@@ -24,7 +25,7 @@ char		*get_string_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-int			*get_bool_in_object(char *json, jsmntok_t *object, char *target)
+int				*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	int			*res;
@@ -45,7 +46,8 @@ int			*get_bool_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-RT_F			*get_float_in_object(char *json, jsmntok_t *object, char *target)
+RT_F			*get_float_in_object(char *json,
+					jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	RT_F		res;
@@ -66,7 +68,7 @@ RT_F			*get_float_in_object(char *json, jsmntok_t *object, char *target)
 	return (NULL);
 }
 
-int			*get_int_in_object(char *json, jsmntok_t *object, char *target)
+int				*get_int_in_object(char *json, jsmntok_t *object, char *target)
 {
 	int		*res;
 	RT_F	*val;
@@ -80,7 +82,8 @@ int			*get_int_in_object(char *json, jsmntok_t *object, char *target)
 	return (res);
 }
 
-RT_F4_API	*get_vector_in_object(char *json, jsmntok_t *object, char *target)
+RT_F4_API		*get_vector_in_object(char *json,
+					jsmntok_t *object, char *target)
 {
 	jsmntok_t	*pos;
 	RT_F4_API	res;
