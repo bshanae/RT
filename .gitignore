@@ -1,3 +1,5 @@
 *.o
 *.d
 ./RT
+.DS_Store
+.idea
