@@ -1,4 +1,4 @@
-# Ray Tracer (RT)
+# RT (Ray Tracer)
 
 This ray tracer is the final project of the graphic branch at School 21 (Ecole 42).
 
